@@ -14,17 +14,16 @@ Resource    ../Resources/Utils/Common.robot
 
 
 *** Test Cases ***
+
 Menu Navigation
     [Tags]            TC01
     Begin Mobile Test Kuvera
     Skip Sliders
     Kuvera Logo Click
-    ${h0} =           Get Json Values    ${header0}
+    Move To Explore Funds
+    ${h0} =           Get Json Values    ${header0}   Resources/TestData/Headers.json
     Log To Console              ${h0}
 
 *** Variables ***
-${header0}    $.MenuHeaders[0]
-${header1}    $.MenuHeaders[1]
-${header2}    $.MenuHeaders[2]
-${header3}    $.MenuHeaders[3]
-${header4}    $.MenuHeaders[4]
+${header0}    $.MenuHeaders[0].Invest[0]
+
