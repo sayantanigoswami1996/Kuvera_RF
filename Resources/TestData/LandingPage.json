@@ -1,0 +1,100 @@
+{
+    "MenuHeaders": [{
+            "Mutual Funds": [
+                     {
+                        "ScreenTitle1": "Investments Simplified",
+                        "ScreenTitle2": "Category",
+                        "ScreenTitle3": "Equity",
+                        "ScreenTitle4": "Sub Category",
+                        "ScreenTitle5": "All"
+                    },
+                 {"watchlist-unselected-blue": [{
+                            "ScreenTitle": "Login. Start Investing.",
+                            "Button": "LOGIN"
+                    }]
+                },
+                {"Explore mutual funds": [{
+                            "ScreenTitle": "All",
+                            "Button": "Growth"
+                    }]
+                }
+             ]
+    },
+          {"Stocks": [
+                {
+                        "ScreenTitle1": "Stocks",
+                        "ScreenTitle2": "Filter",
+                        "ScreenTitle3": "Sector",
+                        "ScreenTitle4": "Industry",
+                        "ScreenTitle5": "android.view.View"
+                    },
+                 {"watchlist-unselected-blue": [{
+                            "ScreenTitle": "Login. Start Investing.",
+                            "Button": "LOGIN"
+                    }]
+                },
+                {"Explore stocks": [{
+                            "ScreenTitle":        "Gainers",
+                            "Button": "Sort"
+                    }]
+                }
+             ]
+          },
+          {"US stocks": [
+                {
+                        "ScreenTitle1": "Diversify with US stocks",
+                        "ScreenTitle2": "Filter",
+                        "ScreenTitle3": "Sector",
+                        "ScreenTitle4": "Industry",
+                        "ScreenTitle5": "android.view.View"
+                    },
+                 {"watchlist-unselected-blue": [{
+                            "ScreenTitle": "Login. Start Investing.",
+                            "Button": "LOGIN"
+                    }]
+                },
+                {"Explore US stocks": [{
+                            "ScreenTitle": "ETF",
+                            "Button": "Filter"
+                    }]
+                }
+             ]
+          },
+          {"SaveSmart": [
+                {
+                        "ScreenTitle1": "Best deposit account in India!",
+                        "ScreenTitle2": "Start SaveSmart today",
+                        "Button": "Save Now"
+                    },
+                {"Explore SaveSmart": [{
+                            "ScreenTitle": "The smart way to save!",
+                            "Button": "Save Now"
+                    }]
+                }
+             ]
+          },
+          {"Gold": [
+                {
+                        "ScreenTitle1": "Live Buy Rate",
+                        "ScreenTitle2": "Purity",
+                        "ScreenTitle3": "Partner",
+                        "Button1": "Enter Amount",
+                        "Button2": "Enter Grams",
+                        "Button3": "Buy Now",
+                        "ScreenTitle4": "Coming soon: Gold gifting & delivery."
+                    },
+                {"Explore gold option": [{
+                            "ScreenTitle1": "Buy 24K 99.9% pure digital gold - easily and securely.",
+                            "ScreenTitle2": "Buy",
+                            "ScreenTitle3": "Sell",
+                            "ScreenTitle4": "Start SIP",
+                            "ScreenTitle5": "Track",
+                            "ScreenTitle6": "Coming soon: Gold gifting & delivery.",
+                        "Button1": "Enter Amount",
+                        "Button2": "Enter Grams",
+                        "Button3": "Buy Now"
+                    }]
+                }
+             ]
+         }]
+}
