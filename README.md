@@ -37,25 +37,19 @@
  *  Chromedriver/Geckodriver
  
  #### Installation
- 
- * To install python3 (mac)
-   cmd : **$ brew install python** 
-   
-     * To check the version of python installed
-       cmd : **$ python --version**
        
  * If not python 3.x.x, Where to find my python location
    **$ which python**
    (Copy location)
-   export PATH= /your/python-location.
+   export PATH= /your/python-location
+   
 *  To install Pip for Python
    cmd : **$ python3 get-pip.py**
      * To check the version of pip installed 
        cmd : **$ pip3 --version**
-       
+    
 *  To install Robot Framework
    cmd : **$ pip install robotframework**  
-* [Visual Studio Code](https://code.visualstudio.com/download)
    
 * Seleium Library
   cmd: **$ pip install robotframework-seleniumlibrary**
@@ -69,6 +63,8 @@
   
 * To install Json Validator
   cmd : **$ pip install robotframework-jsonvalidator**
+  
+* Ubuntu - https://www.tutorialspoint.com/robot_framework/robot_framework_unix_linux_installation.htm
   
 #### Run Command Details
 
