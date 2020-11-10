@@ -1,164 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.2.2 (Python 3.9.0 on win32)" generated="20201106 16:52:15.613" rpa="false">
-<suite id="s1" name="PreLoginTests" source="D:\Kuvera_Android_Web\Kuvera_RF\Tests\Android\PreLoginTests.robot">
-<test id="s1-t1" name="Menu Navigation">
-<kw name="Begin Mobile Test Kuvera" library="Common">
-<kw name="Open Application" library="AppiumLibrary">
-<doc>Opens a new application to given Appium server.
-Capabilities of appium server, Android and iOS,
-Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
-| *Option*            | *Man.* | *Description*     |
-| remote_url          | Yes    | Appium server url |
-| alias               | no     | alias             |</doc>
+<robot generator="Robot 3.2.2 (Python 3.9.0 on win32)" generated="20201109 16:13:52.992" rpa="false">
+<suite id="s1" name="PreLoginTests" source="D:\Kuvera_Android_Web\Kuvera_RF\Tests\DesktopWeb\PreLoginTests.robot">
+<test id="s1-t1" name="Valid Login">
+<kw name="Launch URL" library="Common">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
 <arguments>
-<arg>${server}</arg>
-<arg>platformName=${platform}</arg>
-<arg>platformVersion=${platform_version}</arg>
-<arg>deviceName=${device}</arg>
-<arg>automationName=${appium}</arg>
-<arg>appActivity=${app_activity}</arg>
-<arg>appPackage=${app_package}</arg>
+<arg>${loginURL}</arg>
+<arg>${BROWSER}</arg>
 </arguments>
-<status status="PASS" starttime="20201106 16:52:16.221" endtime="20201106 16:52:30.834"></status>
+<msg timestamp="20201109 16:13:53.539" level="INFO">Opening browser 'Chrome' to base url 'https://kuvera.in/'.</msg>
+<status status="PASS" starttime="20201109 16:13:53.539" endtime="20201109 16:13:59.816"></status>
 </kw>
-<kw name="Wait For Element Visbility" library="Common">
+<kw name="Get Title" library="SeleniumLibrary">
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" starttime="20201109 16:13:59.816" endtime="20201109 16:13:59.823"></status>
+</kw>
+<status status="PASS" starttime="20201109 16:13:53.539" endtime="20201109 16:13:59.824"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20201109 16:13:59.825" endtime="20201109 16:14:03.750"></status>
+</kw>
+<kw name="Welcome Page Should Be Open" library="Common">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
 <arguments>
-<arg>${KU_slider1}</arg>
+<arg>${KU_W_Title}</arg>
 </arguments>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>${element}</arg>
-<arg>timeout=30</arg>
-</arguments>
-<status status="PASS" starttime="20201106 16:52:30.835" endtime="20201106 16:52:34.082"></status>
+<msg timestamp="20201109 16:14:03.759" level="INFO">Page title is 'Kuvera - Direct Mutual Funds | Stocks | Loans | Gold | Remit on Kuvera- Wealth Management Simplified'.</msg>
+<status status="PASS" starttime="20201109 16:14:03.751" endtime="20201109 16:14:03.760"></status>
 </kw>
-<status status="PASS" starttime="20201106 16:52:30.834" endtime="20201106 16:52:34.083"></status>
-</kw>
-<status status="PASS" starttime="20201106 16:52:16.220" endtime="20201106 16:52:34.084"></status>
-</kw>
-<kw name="Skip Sliders" library="Common">
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>${KU_slider5}</arg>
-</arguments>
-<msg timestamp="20201106 16:52:34.092" level="INFO">Clicking element 'xpath=//*[@text="Go to slide 5"]'.</msg>
-<status status="PASS" starttime="20201106 16:52:34.087" endtime="20201106 16:52:34.514"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>${KU_slider1}</arg>
-</arguments>
-<msg timestamp="20201106 16:52:34.520" level="INFO">Clicking element 'xpath=//*[@text="Go to slide 1"]'.</msg>
-<status status="PASS" starttime="20201106 16:52:34.515" endtime="20201106 16:52:35.824"></status>
-</kw>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>${KU_skip}</arg>
-</arguments>
-<status status="PASS" starttime="20201106 16:52:35.825" endtime="20201106 16:52:37.236"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>${KU_skip}</arg>
-</arguments>
-<msg timestamp="20201106 16:52:37.243" level="INFO">Clicking element 'xpath=//*[@text="Skip"]'.</msg>
-<status status="PASS" starttime="20201106 16:52:37.237" endtime="20201106 16:52:38.048"></status>
-</kw>
-<status status="PASS" starttime="20201106 16:52:34.086" endtime="20201106 16:52:38.049"></status>
+<status status="PASS" starttime="20201109 16:14:03.750" endtime="20201109 16:14:03.760"></status>
 </kw>
 <kw name="Kuvera Logo Click" library="Common">
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
 <arguments>
-<arg>${KU_logo}</arg>
+<arg>${KU_W_close}</arg>
 </arguments>
-<status status="PASS" starttime="20201106 16:52:38.052" endtime="20201106 16:52:39.513"></status>
+<msg timestamp="20201109 16:14:03.761" level="INFO">Clicking element 'xpath://button[contains(text(),'Close')]'.</msg>
+<status status="PASS" starttime="20201109 16:14:03.761" endtime="20201109 16:14:03.881"></status>
 </kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>${KU_logo}</arg>
-</arguments>
-<msg timestamp="20201106 16:52:39.522" level="INFO">Clicking element 'xpath=//*[@text='kuvera-logo-dark']'.</msg>
-<status status="PASS" starttime="20201106 16:52:39.514" endtime="20201106 16:52:40.066"></status>
-</kw>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>${KU_close}</arg>
-</arguments>
-<status status="PASS" starttime="20201106 16:52:40.067" endtime="20201106 16:52:44.116"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>${KU_close}</arg>
-</arguments>
-<msg timestamp="20201106 16:52:44.123" level="INFO">Clicking element 'xpath=//*[@text='Close']'.</msg>
-<status status="PASS" starttime="20201106 16:52:44.117" endtime="20201106 16:52:46.184"></status>
-</kw>
-<status status="PASS" starttime="20201106 16:52:38.051" endtime="20201106 16:52:46.185"></status>
+<status status="PASS" starttime="20201109 16:14:03.760" endtime="20201109 16:14:03.882"></status>
 </kw>
 <kw name="Quit Kuvera Application" library="Common">
-<kw name="Quit Application" library="AppiumLibrary">
-<doc>Quit application. Application can be quit while Appium session is kept alive.
-This keyword can be used to close application during test case or between test cases.</doc>
-<status status="PASS" starttime="20201106 16:52:46.189" endtime="20201106 16:52:46.472"></status>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20201109 16:14:03.885" endtime="20201109 16:14:07.571"></status>
 </kw>
-<status status="PASS" starttime="20201106 16:52:46.187" endtime="20201106 16:52:46.473"></status>
-</kw>
-<kw name="Get Json Values" library="Common">
-<arguments>
-<arg>${header0}</arg>
-<arg>Resources/TestData/Headers.json</arg>
-</arguments>
-<assign>
-<var>${h0}</var>
-</assign>
-<kw name="Load JSON From File" library="JSONLibrary">
-<doc>Load JSON from file.</doc>
-<arguments>
-<arg>${jsonFilePath}</arg>
-</arguments>
-<assign>
-<var>${jsonFile}</var>
-</assign>
-<msg timestamp="20201106 16:52:46.478" level="INFO">${jsonFile} = {'MenuHeaders': [{'Invest': [{'Amanzon Save &amp; Shop': [{'ScreenTitle': '4 simple steps to qualify for 3% extra for your shopping on Amazon.in', 'Button': 'Save Now'}]}, {'Gold': [{'ScreenTitle': 'Buy 2...</msg>
-<status status="PASS" starttime="20201106 16:52:46.477" endtime="20201106 16:52:46.478"></status>
-</kw>
-<kw name="Get Value From Json" library="JSONLibrary">
-<doc>Get Value From JSON using JSONPath</doc>
-<arguments>
-<arg>${jsonFile}</arg>
-<arg>${jsonPath}</arg>
-</arguments>
-<assign>
-<var>${jsonValue}</var>
-</assign>
-<msg timestamp="20201106 16:52:46.547" level="INFO">${jsonValue} = [{'Amanzon Save &amp; Shop': [{'ScreenTitle': '4 simple steps to qualify for 3% extra for your shopping on Amazon.in', 'Button': 'Save Now'}]}]</msg>
-<status status="PASS" starttime="20201106 16:52:46.479" endtime="20201106 16:52:46.547"></status>
-</kw>
-<msg timestamp="20201106 16:52:46.547" level="INFO">${h0} = [{'Amanzon Save &amp; Shop': [{'ScreenTitle': '4 simple steps to qualify for 3% extra for your shopping on Amazon.in', 'Button': 'Save Now'}]}]</msg>
-<status status="PASS" starttime="20201106 16:52:46.475" endtime="20201106 16:52:46.547"></status>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<doc>Logs the given message to the console.</doc>
-<arguments>
-<arg>${h0}</arg>
-</arguments>
-<status status="PASS" starttime="20201106 16:52:46.548" endtime="20201106 16:52:46.549"></status>
+<status status="PASS" starttime="20201109 16:14:03.884" endtime="20201109 16:14:07.571"></status>
 </kw>
 <tags>
 <tag>TC01</tag>
 </tags>
-<status status="PASS" starttime="20201106 16:52:16.218" endtime="20201106 16:52:46.550" critical="yes"></status>
+<status status="PASS" starttime="20201109 16:13:53.539" endtime="20201109 16:14:07.571" critical="yes"></status>
 </test>
-<status status="PASS" starttime="20201106 16:52:15.617" endtime="20201106 16:52:46.552"></status>
+<status status="PASS" starttime="20201109 16:13:52.992" endtime="20201109 16:14:07.571"></status>
 </suite>
 <statistics>
 <total>

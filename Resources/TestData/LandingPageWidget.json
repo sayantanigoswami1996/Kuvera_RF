@@ -45,8 +45,7 @@
                         "ScreenTitle1": "Diversify with US stocks",
                         "ScreenTitle2": "Filter",
                         "ScreenTitle3": "Sector",
-                        "ScreenTitle4": "Industry",
-                        "ScreenTitle5": "android.view.View"
+                        "ScreenTitle4": "Industry"
                     },
                  {"watchlist-unselected-blue": [{
                             "ScreenTitle": "Login. Start Investing.",
@@ -56,6 +55,16 @@
                 {"Explore US stocks": [{
                             "ScreenTitle": "ETF",
                             "Button": "Filter"
+                    }]
+                },
+                {"Start today": [{
+                            "ScreenTitle": "Login. Start Investing.",
+                            "Button": "LOGIN"
+                    }]
+                },
+                {"Explore": [{
+                            "ScreenTitle": "ETF",
+                            "Button": "Sort by"
                     }]
                 }
              ]
@@ -98,18 +107,97 @@
                             
                           "Button1": "Enter Amount",
                         "Button2": "Enter Grams",
-                        "Button3": "Buy Now"
+                        "Button3": "Buy Now",
+                        "Button4": "Add gold you already own",
+                        "Button5": "View FAQs"
+                        
+                         
                             
                     }]
                 }
              ]
-                      
+                },
+                {"Explore ELSS funds": [
+                    {
+                        "ScreenTitle": "Investor choice",
+                        "Button": "Growth"
+                        
+                        
+                    }]
+                },
+                
+                
+                {"Start harvesting": [{
+                            "ScreenTitle": "Save up to ₹10,000 in LTCG taxes every financial year with Tax Harvesting.",
+                          "Button": "Subscribe"
+                        
+                            
+                    }]
+                },
+                
+                {"Switch Today": [{
+                          "ScreenTitle": "TradeSmart",
+                          "Button": "Activate with"
+                        
+                            
+                    }]
+                },
+                
+                {"Upgrade to family account": [{
+                            "ScreenTitle": "Invest with Your Loved Ones",
+                          "Button": "Activate with"
+                        
+                            
+                    }]
+                },
+                
+                {"Consolidate & track": [{
+                            "ScreenTitle": "Login. Start Investing.",
+                          "Button": "LOGIN"
+                        
+                            
+                    }]
+                },
+                
+                {"Manage Today": [{
+                            "ScreenTitle": "Manage Account",
+                          "Button": "Add manager"
+                        
+                            
+                    }]
+                },
+                
+                {"Set a goal": [{
+                            "ScreenTitle": "SET YOUR GOAL"
+                        
+                        
+                            
+                    }]
+                },
+                
+                {"Send money": [{
+                            "ScreenTitle": "A cheaper & faster way to send money home",
+                          "Button": "Transfer now"
+                        
+                            
+                    }]
+                },
+                
+                {"Start investing": [{
+                            "ScreenTitle": "Sign Up. Start Investing."
+                    }]
+                }
           
-             
-         }]
+          
+          ]
          
          
 }
+             
+        
+         
+         
+
            
       
         
