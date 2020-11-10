@@ -71,7 +71,6 @@
   Upon installing the above-required software. Follow the below steps to trigger the execution.
   VScode Extentions: Robot Framework Intellisense FORK
   * Clone this project (git clone <projecturl.git>)
-  * Open VSCode
   * Open Project in vscode -> vscode Terminal 
    use **$robot -d Results  Tests/DesktopWeb/PreLoginTests.robot** to trigger the execution.
     
