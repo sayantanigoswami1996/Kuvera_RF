@@ -9,3 +9,10 @@
 
     * [Pre-requisites](http://github.com)
     * [Installation](http://github.com)
+    
+    
+    
+ #### About the Project
+ 
+ The scope of this project is to Automate the AUT web application Regression testing through Robot framework 
+ 
