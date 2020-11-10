@@ -25,7 +25,7 @@
  To start with this tool, some prerequisites has to be made, which are described below 👇.
  
  #### Pre-requisites
- The major softwares or tools which has to be setup in the machine to run the test script using the tool are listed down below. Please click on the each links to get the    installation guide.
+ The major softwares or tools which has to be setup in the machine to run the test script using the tool are listed down below. 
  
  *  Python- v3 and above 
  *  Visual Studio Code or any other preferred IDE 
