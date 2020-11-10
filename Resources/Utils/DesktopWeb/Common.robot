@@ -89,14 +89,14 @@ Verify Features Widgets
     Element Text Should Be          ${KU_W_startHarvest}         Start harvesting
     Element Text Should Be          ${KU_W_switchToday}            Switch Today
     Click Element                   ${KU_W_next_button} 
-    sleep    5s
-    Element Text Should Be          ${KU_W_upgrade_familyAccount}     Upgrade to family account     
-    Element Text Should Be          ${KU_W_consolidate_track}          Consolidate & track
-    Element Text Should Be          ${KU_W_manage_today}                   Manage Today
+    sleep     1s
+    Element Text Should Be          ${KU_W_upgrade_familyAccount}     Upgrade to family account 
+    Element Text Should Be          ${KU_W_consolidate_track}  Consolidate & track
+    Element Text Should Be          ${KU_W_manage_today}              Manage Today
     Click Element                   ${KU_W_next_button}
-    sleep    5s
-    Element Text Should Be          ${KU_W_set_a_goal}                Set a goal
-    Element Text Should Be          ${KU_W_send_money}                Send money
+    sleep     1s
+    Element Text Should Be          ${KU_W_set_a_goal}            Set a goal
+    Element Text Should Be          ${KU_W_send_money}            Send money
 
 Verify Summary Tab Widgets
 
@@ -116,9 +116,10 @@ Verify Summary Tab Widgets
      Element Text Should Be              ${KU_W_users_love}           Our users love us
      Element Text Should Be              ${KU_W_users_mssg}           We revolutionized the way India invests. With your feedback we are making it even better.
      Element Text Should Be              ${KU_W_earn_title}           Earn up to 1.5% more returns*
-     Element Text Should Be              ${KU_W_earn_mssg}            We pioneered commission free Direct Plan investing.
-Earn from our expertise and don't pay commission ever.
-     Element Text Should Be              ${KU_W_earn_learnLink}       Learn how!
+     Scroll Element Into View            ${KU_W_earn_mssg}
+     Element Text Should Be              ${KU_W_earn_mssg}            We pioneered commission free Direct Plan investing.\nEarn from our expertise and don't pay commission ever.
+     Element Text Should Be              ${KU_W_earn_learnLink}         Learn how!
+     Scroll Element Into View            ${KU_W_start_investButton}
      Element Text Should Be              ${KU_W_start_investButton}     Start Investing
 
  Verify Fund Houses

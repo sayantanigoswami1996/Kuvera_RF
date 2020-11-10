@@ -9,21 +9,12 @@ Suite Teardown    Close All Browsers
 
 *** Test Cases ***
 Landing Page Navigation
-  [Tags]      TC02
+    [Tags]         TC02
     Launch URL
     Maximize Browser Window
     Welcome Page Should Be Open
-    Kuvera Logo Click
-    Validate Login Button Click
-    Go Back
-    Validate SignUp Button Click
-    Go Back
-    Validate Login Link Click
-    Go Back
-    Validate SignUp Link Click 
-    Go Back
-    Quit Kuvera Application
-
+    Kuvera Web Logo Click
+    Verify Widgets  
 
 Valid Login
     [Tags]       TC01
@@ -33,14 +24,6 @@ Valid Login
     Kuvera Logo Click
     Quit Kuvera Application
 
-Menu Navigation Test
-    [Tags]         TC03
-    #Split String By Separator   Login:B-header  :
-    # Get Line From Text File
-    Launch URL
-    Maximize Browser Window
-    Welcome Page Should Be Open
-    Kuvera Web Logo Click
-    Verify Widgets   
+ 
 
 
