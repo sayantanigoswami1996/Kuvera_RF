@@ -58,18 +58,24 @@ Verify Widgets
     Wait For Element Visbility     ${KU_W_fund_list} 
     Page Should Contain Element    ${KU_W_fund_list} 
 
-Header Navigation
+Header Navigation   
     @{elem} =        Get WebElements    xpath=//div[@class='b-header__content__middle']/a
-    FOR              ${item}            IN                                                   @{elem}    
-    Sleep            5s
-    Click Element    ${item}
+        ${h1}  Get Json Values  $.MenuHeaders[0]  Resources/TestData/Headers copy.json
+        ${h2}  Get Json Values  $.MenuHeaders[1]  Resources/TestData/Headers copy.json
+        ${h3}  Get Json Values  $.MenuHeaders[2]  Resources/TestData/Headers copy.json
+        ${h4}  Get Json Values  $.MenuHeaders[3]  Resources/TestData/Headers copy.json
+        ${h5}  Get Json Values  $.MenuHeaders[4]  Resources/TestData/Headers copy.json
+
+    FOR   ${item}  IN  @{elem}  
+    Sleep   5s  
+    Click Element    ${item} 
     END
 
 Landing Page Tabs Navigation
     @{tabs} =        Get WebElements    xpath=//div[@class='b-dynamic-tab-header b-widget-tab__tab-header']
     FOR              ${item}            IN                                                                     @{tabs}    
     Sleep            5s
-    Click Element    ${item}
+    Click Element    ${item} 
     END
 
  Move To Explore Funds
@@ -77,15 +83,16 @@ Landing Page Tabs Navigation
                           Scroll Element Into View      ${KU_exploreELSS} 
 
 Split String By Adding Separator
-    [Arguments]       ${strVar}              ${delimeter}
-    ${strValue} =     String.Split String    ${strVar}       ${delimeter}
+    [Arguments]      ${strVar}              ${delimeter}
+    ${strValue} =    String.Split String    ${strVar}       ${delimeter}
 
 Get Line From Text File
-    ${textFileContent} =    Get File                          Resources/TestData/Sample.txt
-    ${fileLineCount}    Set Variable    Get Line Count  ${textFileContent}
-    Log To Console     ${fileLineCount}
-   # @{elementList} =	Get Line	${textFileContent}	
-   # Log To Console ${elementList}
+    ${textFileContent} =                Get File                        Resources/TestData/Sample.txt
+    ${element} =                        Get Line                        ${textFileContent}               0
+    ${leftValue} =                      Fetch From Left                 ${element}                       :
+    ${rightValue} =  Fetch From Right   ${element}                      :
+    Log To Console                      ${leftValue}
+    Log To Console                      ${rightValue} 
 
 
 Close Web Application
