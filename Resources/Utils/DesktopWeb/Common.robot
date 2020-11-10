@@ -3,6 +3,8 @@
 Library     JSONLibrary
 Library     JsonValidator
 Library     SeleniumLibrary
+Library     String
+Library     OperatingSystem
 Resource    ../../../AppLocators/DesktopWeb/CommonAppLocators.robot
 
 *** Keywords ***
@@ -24,12 +26,12 @@ Get Json Values
     [Return]        ${jsonValue}
 
 Verify Widgets From Json
-    ${jsonWidgetsFile}     Load JSON From File                                                 /Users/prathijamoolya/Kuvera/Automation/Kuvera_RF/Resources/TestData/Widgets.json
-    ${jsonWidgetsValue}    Get Value From Json                                                 ${jsonWidgetsFile}                                                                   $.Widgets
-      # Log To Console         ${jsonWidgetsValue} 
-    ${json_data}           Set Variable                                                        ${jsonWidgetsValue} 
-    ${json_data1}    Parse Json    ${json_data}
-    Log To Console      ${json_data1}                     
+    ${jsonWidgetsFile}     Load JSON From File    /Users/prathijamoolya/Kuvera/Automation/Kuvera_RF/Resources/TestData/Widgets.json
+    ${jsonWidgetsValue}    Get Value From Json    ${jsonWidgetsFile}                                                                   $.Widgets
+      # Log To Console         ${jsonWidgetsValue}
+    ${json_data}           Set Variable           ${jsonWidgetsValue} 
+    ${json_data1}          Parse Json             ${json_data}
+    Log To Console         ${json_data1}          
    # Page Should Contain Element        ${widget}
 
 Kuvera Web Logo Click
@@ -74,5 +76,17 @@ Landing Page Tabs Navigation
                           Wait For Element Visbility    ${KU_exploreELSS} 
                           Scroll Element Into View      ${KU_exploreELSS} 
 
+Split String By Adding Separator
+    [Arguments]       ${strVar}              ${delimeter}
+    ${strValue} =     String.Split String    ${strVar}       ${delimeter}
+
+Get Line From Text File
+    ${textFileContent} =    Get File                          Resources/TestData/Sample.txt
+    ${fileLineCount}    Set Variable    Get Line Count  ${textFileContent}
+    Log To Console     ${fileLineCount}
+   # @{elementList} =	Get Line	${textFileContent}	
+   # Log To Console ${elementList}
+
+
 Close Web Application
-    Close   Application
+    Close    Application

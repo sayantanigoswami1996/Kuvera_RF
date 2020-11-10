@@ -1,0 +1,3 @@
+Login:b-header__content__right__signin
+Signup:b-header__content__right__singup
+LanguageSwitch:b-header__content__right--language-switcher
