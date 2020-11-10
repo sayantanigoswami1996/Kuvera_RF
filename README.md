@@ -62,7 +62,7 @@
   cmd: **$ pip install robotframework-seleniumlibrary**
   
 * To install latest Chromedriver/Geckodriver
-  cmd : **$ pip install webdrivermanager**
+  cmd : **$ pip install webdrivermanager** <br />
         **webdrivermanager firefox chrome --linkpath /usr/local/bin**
         
 * To install Json Library
@@ -73,7 +73,7 @@
   
 #### Run Command Details
 
-  Upon installing the above-required software. Follow the below steps to trigger the execution.
+  Upon installing the above-required software. Follow the below steps to trigger the execution.<br />
   VScode Extentions: Robot Framework Intellisense FORK
   * Clone this project (git clone <projecturl.git>)
   * Open VSCode
