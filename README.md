@@ -3,7 +3,7 @@
 
 #### Table of Contents
 
-* [About the Project](http://github.com)
+* [About the Project](https://github.com/MoolyaSoftwareTesting/Kuvera_RF/blob/KU_RF_PE_PHASE1/README.md#about-the-project)
      * [BuiltWith](http://github.com)
 * [Getting Started](http://github.com) 
 
