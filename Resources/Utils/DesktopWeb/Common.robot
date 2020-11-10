@@ -68,7 +68,7 @@ Header Navigation
 
     FOR   ${item}  IN  @{elem}  
     Sleep   5s  
-    Click Element    ${item} 
+    #Click Element    ${item} 
     END
 
 Landing Page Tabs Navigation
