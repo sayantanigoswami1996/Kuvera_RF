@@ -19,6 +19,9 @@ Verify Page Contains Element
 Verify Page Contains Image
     [Arguments]                  ${image}
     Page Should Contain Image    ${image}
+Verify Page Contains Link
+     [Arguments]                  ${link}
+    Page Should Contain Link      ${link} 
 Scroll Untill View
     [Arguments]                 ${element}
     Scroll Element Into View    ${element}
@@ -116,7 +119,7 @@ Verify Features Widgets
 Verify Summary Tab Widgets
 
      Verify Element And Text             ${KU_W_summary_msg}          Earn up to 35% more in 20 years*
-     Page Should Contain Link            ${KU_W_summary_learn}    
+     Verify Page Contains Link            ${KU_W_summary_learn}    
      Scroll Untill View            ${KU_W_care_title}     
      Verify Element And Text             ${KU_W_care_title}           How much do we care?
      Scroll Untill View            ${KU_W_care_info_mssg}
