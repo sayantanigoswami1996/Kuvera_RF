@@ -60,9 +60,10 @@ Verify Widgets
     Element Text Should Be           ${KU_W_trans_val}           1.8 Crore
     Element Text Should Be           ${KU_W_trans_text}          Transactions
     Verify Mutual Funds Widgets 
+    Verify Fund Houses
     Verify Features Widgets 
     Verify Summary Tab Widgets
-    # Verify Fund Houses
+    
 
 
 Verify Mutual Funds Widgets  
@@ -91,7 +92,7 @@ Verify Features Widgets
     Click Element                   ${KU_W_next_button} 
     sleep     1s
     Element Text Should Be          ${KU_W_upgrade_familyAccount}     Upgrade to family account 
-    Element Text Should Be          ${KU_W_consolidate_track}  Consolidate & track
+    Element Text Should Be          ${KU_W_consolidate_track}    Consolidate & track
     Element Text Should Be          ${KU_W_manage_today}              Manage Today
     Click Element                   ${KU_W_next_button}
     sleep     1s
@@ -122,7 +123,35 @@ Verify Summary Tab Widgets
      Scroll Element Into View            ${KU_W_start_investButton}
      Element Text Should Be              ${KU_W_start_investButton}     Start Investing
 
- Verify Fund Houses
+Verify Fund Houses
+        Scroll Element Into View            ${KU_W_fundHouse_title}
+
+        #Validation of Fund Houses List on the first column
+
+        @{fundHouses_list1} =     Get WebElements      ${KU_W_fundHouses_firstColumn}
+        FOR   ${actualFndHouses_1}    IN     @{fundHouses_list1}
+        ${actualFundList1Item}  Set Variable   ${actualFndHouses_1.text}
+        END
+        FOR    ${expectedFndHousesList1}   IN      @{e_fndHouse_firstColumn}
+        ${expectedFundList1Item}  Set Variable      ${expectedFndHousesList1}
+        END
+        Should be equal    ${actualFundList1Item}   ${expectedFundList1Item}  
+
+        #Validation of Fund Houses List on the second column
+
+        @{fundHouses_list2} =     Get WebElements     ${KU_W_fundHouses_secondColumn}
+        FOR   ${actualFndHouses_2}    IN     @{fundHouses_list2}
+        ${actualFundList2Item}  Set Variable   ${actualFndHouses_2.text}
+        END
+        FOR    ${expectedFndHousesList2}   IN     @{e_fndHouse_secondColumn} 
+        ${expectedFundList2Item}  Set Variable  ${expectedFndHousesList2}
+        END
+        Should be equal    ${actualFundList2Item}   ${expectedFundList2Item} 
+
+
+     
+
+
 
 
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.2.2 (Python 3.9.0 on win32)" generated="20201110 19:18:43.208" rpa="false">
+<robot generator="Robot 3.2.2 (Python 3.9.0 on win32)" generated="20201111 14:41:49.226" rpa="false">
 <suite id="s1" name="PreLoginTests" source="D:\Kuvera_Android_Web\Kuvera_RF\Tests\DesktopWeb\PreLoginTests.robot">
 <test id="s1-t1" name="Landing Page Navigation">
 <kw name="Launch URL" library="Common">
@@ -9,14 +9,14 @@
 <arg>${loginURL}</arg>
 <arg>${BROWSER}</arg>
 </arguments>
-<msg timestamp="20201110 19:18:43.799" level="INFO">Opening browser 'Chrome' to base url 'https://kuvera.in/'.</msg>
-<status status="PASS" starttime="20201110 19:18:43.799" endtime="20201110 19:18:49.724"></status>
+<msg timestamp="20201111 14:41:49.774" level="INFO">Opening browser 'Chrome' to base url 'https://kuvera.in/'.</msg>
+<status status="PASS" starttime="20201111 14:41:49.774" endtime="20201111 14:41:55.592"></status>
 </kw>
-<status status="PASS" starttime="20201110 19:18:43.798" endtime="20201110 19:18:49.724"></status>
+<status status="PASS" starttime="20201111 14:41:49.773" endtime="20201111 14:41:55.593"></status>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20201110 19:18:49.726" endtime="20201110 19:18:52.139"></status>
+<status status="PASS" starttime="20201111 14:41:55.603" endtime="20201111 14:41:59.479"></status>
 </kw>
 <kw name="Welcome Page Should Be Open" library="Common">
 <kw name="Title Should Be" library="SeleniumLibrary">
@@ -24,10 +24,10 @@
 <arguments>
 <arg>${KU_W_title}</arg>
 </arguments>
-<msg timestamp="20201110 19:18:52.150" level="INFO">Page title is 'Kuvera - Direct Mutual Funds | Stocks | Loans | Gold | Remit on Kuvera- Wealth Management Simplified'.</msg>
-<status status="PASS" starttime="20201110 19:18:52.140" endtime="20201110 19:18:52.150"></status>
+<msg timestamp="20201111 14:41:59.486" level="INFO">Page title is 'Kuvera - Direct Mutual Funds | Stocks | Loans | Gold | Remit on Kuvera- Wealth Management Simplified'.</msg>
+<status status="PASS" starttime="20201111 14:41:59.480" endtime="20201111 14:41:59.486"></status>
 </kw>
-<status status="PASS" starttime="20201110 19:18:52.140" endtime="20201110 19:18:52.150"></status>
+<status status="PASS" starttime="20201111 14:41:59.480" endtime="20201111 14:41:59.486"></status>
 </kw>
 <kw name="Kuvera Web Logo Click" library="Common">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
@@ -35,32 +35,32 @@
 <arguments>
 <arg>${KU_W_close}</arg>
 </arguments>
-<status status="PASS" starttime="20201110 19:18:52.151" endtime="20201110 19:18:52.186"></status>
+<status status="PASS" starttime="20201111 14:41:59.487" endtime="20201111 14:41:59.525"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>${KU_W_close}</arg>
 </arguments>
-<msg timestamp="20201110 19:18:52.187" level="INFO">Clicking element 'xpath=//button[@class='button-primary b-regulatory-disclosure__btn']'.</msg>
-<status status="PASS" starttime="20201110 19:18:52.186" endtime="20201110 19:18:52.356"></status>
+<msg timestamp="20201111 14:41:59.526" level="INFO">Clicking element 'xpath=//button[@class='button-primary b-regulatory-disclosure__btn']'.</msg>
+<status status="PASS" starttime="20201111 14:41:59.525" endtime="20201111 14:41:59.587"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` is visible.</doc>
 <arguments>
 <arg>${KU_W_logo}</arg>
 </arguments>
-<status status="PASS" starttime="20201110 19:18:52.356" endtime="20201110 19:18:52.501"></status>
+<status status="PASS" starttime="20201111 14:41:59.587" endtime="20201111 14:41:59.693"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>${KU_W_logo}</arg>
 </arguments>
-<msg timestamp="20201110 19:18:52.502" level="INFO">Clicking element 'xpath=//*[@class='b-header__content__logo']'.</msg>
-<status status="PASS" starttime="20201110 19:18:52.502" endtime="20201110 19:18:52.554"></status>
+<msg timestamp="20201111 14:41:59.694" level="INFO">Clicking element 'xpath=//*[@class='b-header__content__logo']'.</msg>
+<status status="PASS" starttime="20201111 14:41:59.693" endtime="20201111 14:41:59.758"></status>
 </kw>
-<status status="PASS" starttime="20201110 19:18:52.150" endtime="20201110 19:18:52.554"></status>
+<status status="PASS" starttime="20201111 14:41:59.486" endtime="20201111 14:41:59.758"></status>
 </kw>
 <kw name="Verify Widgets" library="Common">
 <kw name="Page Should Contain Element" library="SeleniumLibrary">
@@ -68,8 +68,8 @@
 <arguments>
 <arg>${KU_W_langSwitch}</arg>
 </arguments>
-<msg timestamp="20201110 19:18:52.578" level="INFO">Current page contains element 'xpath=//div[@class='b-header__content__right--language-switcher']'.</msg>
-<status status="PASS" starttime="20201110 19:18:52.555" endtime="20201110 19:18:52.578"></status>
+<msg timestamp="20201111 14:41:59.772" level="INFO">Current page contains element 'xpath=//div[@class='b-header__content__right--language-switcher']'.</msg>
+<status status="PASS" starttime="20201111 14:41:59.759" endtime="20201111 14:41:59.773"></status>
 </kw>
 <kw name="Element Text Should Be" library="SeleniumLibrary">
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
@@ -77,8 +77,8 @@
 <arg>${KU_W_login}</arg>
 <arg>Log in</arg>
 </arguments>
-<msg timestamp="20201110 19:18:52.579" level="INFO">Verifying element 'xpath=//*[@class='b-header__content__right__signin']' contains exact text 'Log in'.</msg>
-<status status="PASS" starttime="20201110 19:18:52.578" endtime="20201110 19:18:52.611"></status>
+<msg timestamp="20201111 14:41:59.773" level="INFO">Verifying element 'xpath=//*[@class='b-header__content__right__signin']' contains exact text 'Log in'.</msg>
+<status status="PASS" starttime="20201111 14:41:59.773" endtime="20201111 14:41:59.800"></status>
 </kw>
 <kw name="Element Text Should Be" library="SeleniumLibrary">
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
@@ -86,8 +86,8 @@
 <arg>${KU_W_signup}</arg>
 <arg>Sign up</arg>
 </arguments>
-<msg timestamp="20201110 19:18:52.612" level="INFO">Verifying element 'xpath=//*[@class='b-header__content__right__singup']' contains exact text 'Sign up'.</msg>
-<status status="PASS" starttime="20201110 19:18:52.611" endtime="20201110 19:18:52.641"></status>
+<msg timestamp="20201111 14:41:59.801" level="INFO">Verifying element 'xpath=//*[@class='b-header__content__right__singup']' contains exact text 'Sign up'.</msg>
+<status status="PASS" starttime="20201111 14:41:59.800" endtime="20201111 14:41:59.827"></status>
 </kw>
 <kw name="Element Text Should Be" library="SeleniumLibrary">
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
@@ -95,8 +95,8 @@
 <arg>${KU_W_coreaua_val}</arg>
 <arg>₹ 15,000</arg>
 </arguments>
-<msg timestamp="20201110 19:18:52.642" level="INFO">Verifying element 'xpath=//div[@class='b-investment-count__count__aua__val']' contains exact text '₹ 15,000'.</msg>
-<status status="PASS" starttime="20201110 19:18:52.641" endtime="20201110 19:18:52.675"></status>
+<msg timestamp="20201111 14:41:59.827" level="INFO">Verifying element 'xpath=//div[@class='b-investment-count__count__aua__val']' contains exact text '₹ 15,000'.</msg>
+<status status="PASS" starttime="20201111 14:41:59.827" endtime="20201111 14:41:59.854"></status>
 </kw>
 <kw name="Element Text Should Be" library="SeleniumLibrary">
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
@@ -104,8 +104,8 @@
 <arg>${KU_W_coreaua_text}</arg>
 <arg>Crore AUA</arg>
 </arguments>
-<msg timestamp="20201110 19:18:52.675" level="INFO">Verifying element 'xpath=//div[@class='b-investment-count__count__aua__text']' contains exact text 'Crore AUA'.</msg>
-<status status="PASS" starttime="20201110 19:18:52.675" endtime="20201110 19:18:52.705"></status>
+<msg timestamp="20201111 14:41:59.855" level="INFO">Verifying element 'xpath=//div[@class='b-investment-count__count__aua__text']' contains exact text 'Crore AUA'.</msg>
+<status status="PASS" starttime="20201111 14:41:59.854" endtime="20201111 14:41:59.883"></status>
 </kw>
 <kw name="Element Text Should Be" library="SeleniumLibrary">
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
@@ -113,8 +113,8 @@
 <arg>${KU_W_cities_val}</arg>
 <arg>3 Lakh</arg>
 </arguments>
-<msg timestamp="20201110 19:18:52.706" level="INFO">Verifying element 'xpath=//div[@class='b-investment-count__count__cities__val']' contains exact text '3 Lakh'.</msg>
-<status status="PASS" starttime="20201110 19:18:52.705" endtime="20201110 19:18:52.736"></status>
+<msg timestamp="20201111 14:41:59.884" level="INFO">Verifying element 'xpath=//div[@class='b-investment-count__count__cities__val']' contains exact text '3 Lakh'.</msg>
+<status status="PASS" starttime="20201111 14:41:59.883" endtime="20201111 14:41:59.914"></status>
 </kw>
 <kw name="Element Text Should Be" library="SeleniumLibrary">
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
@@ -122,8 +122,8 @@
 <arg>${KU_W_cities_text}</arg>
 <arg>Goals</arg>
 </arguments>
-<msg timestamp="20201110 19:18:52.737" level="INFO">Verifying element 'xpath=//div[@class='b-investment-count__count__cities__text']' contains exact text 'Goals'.</msg>
-<status status="PASS" starttime="20201110 19:18:52.736" endtime="20201110 19:18:52.766"></status>
+<msg timestamp="20201111 14:41:59.914" level="INFO">Verifying element 'xpath=//div[@class='b-investment-count__count__cities__text']' contains exact text 'Goals'.</msg>
+<status status="PASS" starttime="20201111 14:41:59.914" endtime="20201111 14:41:59.942"></status>
 </kw>
 <kw name="Element Text Should Be" library="SeleniumLibrary">
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
@@ -131,8 +131,8 @@
 <arg>${KU_W_trans_val}</arg>
 <arg>1.8 Crore</arg>
 </arguments>
-<msg timestamp="20201110 19:18:52.767" level="INFO">Verifying element 'xpath=//div[@class='b-investment-count__count__transaction__val']' contains exact text '1.8 Crore'.</msg>
-<status status="PASS" starttime="20201110 19:18:52.766" endtime="20201110 19:18:52.796"></status>
+<msg timestamp="20201111 14:41:59.943" level="INFO">Verifying element 'xpath=//div[@class='b-investment-count__count__transaction__val']' contains exact text '1.8 Crore'.</msg>
+<status status="PASS" starttime="20201111 14:41:59.943" endtime="20201111 14:41:59.976"></status>
 </kw>
 <kw name="Element Text Should Be" library="SeleniumLibrary">
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
@@ -140,8 +140,8 @@
 <arg>${KU_W_trans_text}</arg>
 <arg>Transactions</arg>
 </arguments>
-<msg timestamp="20201110 19:18:52.797" level="INFO">Verifying element 'xpath=//div[@class='b-investment-count__count__transaction__text']' contains exact text 'Transactions'.</msg>
-<status status="PASS" starttime="20201110 19:18:52.797" endtime="20201110 19:18:52.824"></status>
+<msg timestamp="20201111 14:41:59.976" level="INFO">Verifying element 'xpath=//div[@class='b-investment-count__count__transaction__text']' contains exact text 'Transactions'.</msg>
+<status status="PASS" starttime="20201111 14:41:59.976" endtime="20201111 14:42:00.009"></status>
 </kw>
 <kw name="Verify Mutual Funds Widgets" library="Common">
 <kw name="Element Text Should Be" library="SeleniumLibrary">
@@ -150,8 +150,8 @@
 <arg>${KU_W_mf_welcomeTitle}</arg>
 <arg>Investments Simplified</arg>
 </arguments>
-<msg timestamp="20201110 19:18:52.825" level="INFO">Verifying element 'xpath=//div[@class='b-investment-simplified__title']' contains exact text 'Investments Simplified'.</msg>
-<status status="PASS" starttime="20201110 19:18:52.825" endtime="20201110 19:18:52.852"></status>
+<msg timestamp="20201111 14:42:00.011" level="INFO">Verifying element 'xpath=//div[@class='b-investment-simplified__title']' contains exact text 'Investments Simplified'.</msg>
+<status status="PASS" starttime="20201111 14:42:00.010" endtime="20201111 14:42:00.038"></status>
 </kw>
 <kw name="Element Text Should Be" library="SeleniumLibrary">
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
@@ -159,8 +159,8 @@
 <arg>${KU_W_mf_welcomeText}</arg>
 <arg>First free Direct Mutual Fund investing platform. Zero fees, higher returns.</arg>
 </arguments>
-<msg timestamp="20201110 19:18:52.854" level="INFO">Verifying element 'xpath=//div[@class='b-investment-simplified__text']' contains exact text 'First free Direct Mutual Fund investing platform. Zero fees, higher returns.'.</msg>
-<status status="PASS" starttime="20201110 19:18:52.853" endtime="20201110 19:18:52.883"></status>
+<msg timestamp="20201111 14:42:00.038" level="INFO">Verifying element 'xpath=//div[@class='b-investment-simplified__text']' contains exact text 'First free Direct Mutual Fund investing platform. Zero fees, higher returns.'.</msg>
+<status status="PASS" starttime="20201111 14:42:00.038" endtime="20201111 14:42:00.064"></status>
 </kw>
 <kw name="Element Text Should Be" library="SeleniumLibrary">
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
@@ -168,8 +168,8 @@
 <arg>${KU_W_mf_category}</arg>
 <arg>Equity</arg>
 </arguments>
-<msg timestamp="20201110 19:18:52.883" level="INFO">Verifying element 'xpath=//div[@class='b-mf-wiget__mf-category--input']' contains exact text 'Equity'.</msg>
-<status status="PASS" starttime="20201110 19:18:52.883" endtime="20201110 19:18:52.933"></status>
+<msg timestamp="20201111 14:42:00.064" level="INFO">Verifying element 'xpath=//div[@class='b-mf-wiget__mf-category--input']' contains exact text 'Equity'.</msg>
+<status status="PASS" starttime="20201111 14:42:00.064" endtime="20201111 14:42:00.099"></status>
 </kw>
 <kw name="Element Text Should Be" library="SeleniumLibrary">
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
@@ -177,8 +177,8 @@
 <arg>${KU_W_mf_subcategory}</arg>
 <arg>All</arg>
 </arguments>
-<msg timestamp="20201110 19:18:52.934" level="INFO">Verifying element 'xpath=//div[@class='b-mf-wiget__mf-subcategory--input']' contains exact text 'All'.</msg>
-<status status="PASS" starttime="20201110 19:18:52.933" endtime="20201110 19:18:52.970"></status>
+<msg timestamp="20201111 14:42:00.099" level="INFO">Verifying element 'xpath=//div[@class='b-mf-wiget__mf-subcategory--input']' contains exact text 'All'.</msg>
+<status status="PASS" starttime="20201111 14:42:00.099" endtime="20201111 14:42:00.145"></status>
 </kw>
 <kw name="Wait For Element Visbility" library="Common">
 <arguments>
@@ -190,17 +190,17 @@
 <arg>${element}</arg>
 <arg>timeout=30</arg>
 </arguments>
-<status status="PASS" starttime="20201110 19:18:52.971" endtime="20201110 19:18:52.999"></status>
+<status status="PASS" starttime="20201111 14:42:00.146" endtime="20201111 14:42:00.170"></status>
 </kw>
-<status status="PASS" starttime="20201110 19:18:52.971" endtime="20201110 19:18:52.999"></status>
+<status status="PASS" starttime="20201111 14:42:00.146" endtime="20201111 14:42:00.170"></status>
 </kw>
 <kw name="Page Should Contain Element" library="SeleniumLibrary">
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
 <arguments>
 <arg>${KU_W_fund_list}</arg>
 </arguments>
-<msg timestamp="20201110 19:18:53.023" level="INFO">Current page contains element 'xpath=//div[@class='b-fund-list__row']'.</msg>
-<status status="PASS" starttime="20201110 19:18:52.999" endtime="20201110 19:18:53.023"></status>
+<msg timestamp="20201111 14:42:00.179" level="INFO">Current page contains element 'xpath=//div[@class='b-fund-list__row']'.</msg>
+<status status="PASS" starttime="20201111 14:42:00.170" endtime="20201111 14:42:00.180"></status>
 </kw>
 <kw name="Element Text Should Be" library="SeleniumLibrary">
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
@@ -208,8 +208,8 @@
 <arg>${KU_W_loginButton}</arg>
 <arg>Log in</arg>
 </arguments>
-<msg timestamp="20201110 19:18:53.024" level="INFO">Verifying element 'xpath=//button[@class='button-primary b-login-signup__login']' contains exact text 'Log in'.</msg>
-<status status="PASS" starttime="20201110 19:18:53.024" endtime="20201110 19:18:53.063"></status>
+<msg timestamp="20201111 14:42:00.180" level="INFO">Verifying element 'xpath=//button[@class='button-primary b-login-signup__login']' contains exact text 'Log in'.</msg>
+<status status="PASS" starttime="20201111 14:42:00.180" endtime="20201111 14:42:00.211"></status>
 </kw>
 <kw name="Element Text Should Be" library="SeleniumLibrary">
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
@@ -217,64 +217,1258 @@
 <arg>${KU_W_signUpButton}</arg>
 <arg>Sign up</arg>
 </arguments>
-<msg timestamp="20201110 19:18:53.064" level="INFO">Verifying element 'xpath=//button[@class='button-primary b-login-signup__register']' contains exact text 'Sign up'.</msg>
-<status status="PASS" starttime="20201110 19:18:53.063" endtime="20201110 19:18:53.096"></status>
+<msg timestamp="20201111 14:42:00.211" level="INFO">Verifying element 'xpath=//button[@class='button-primary b-login-signup__register']' contains exact text 'Sign up'.</msg>
+<status status="PASS" starttime="20201111 14:42:00.211" endtime="20201111 14:42:00.237"></status>
 </kw>
 <kw name="Page Should Contain Image" library="SeleniumLibrary">
 <doc>Verifies image identified by ``locator`` is found from current page.</doc>
 <arguments>
 <arg>${KU_W_mf_listIcon}</arg>
 </arguments>
-<msg timestamp="20201110 19:18:53.171" level="INFO">Current page contains image 'xpath=//img[@class='b-fund-list__watchlist-icon']'.</msg>
-<status status="PASS" starttime="20201110 19:18:53.097" endtime="20201110 19:18:53.171"></status>
+<msg timestamp="20201111 14:42:00.298" level="INFO">Current page contains image 'xpath=//img[@class='b-fund-list__watchlist-icon']'.</msg>
+<status status="PASS" starttime="20201111 14:42:00.237" endtime="20201111 14:42:00.298"></status>
 </kw>
 <kw name="Scroll Element Into View" library="SeleniumLibrary">
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
 <arguments>
 <arg>${KU_W_explore_MF}</arg>
 </arguments>
-<status status="PASS" starttime="20201110 19:18:53.172" endtime="20201110 19:18:53.469"></status>
+<status status="PASS" starttime="20201111 14:42:00.298" endtime="20201111 14:42:00.625"></status>
 </kw>
 <kw name="Page Should Contain Element" library="SeleniumLibrary">
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
 <arguments>
 <arg>${KU_W_explore_MF}</arg>
 </arguments>
-<msg timestamp="20201110 19:18:53.480" level="INFO">Current page contains element 'xpath=//a[@class='b-funds-list__explore-fund']'.</msg>
-<status status="PASS" starttime="20201110 19:18:53.470" endtime="20201110 19:18:53.480"></status>
+<msg timestamp="20201111 14:42:00.634" level="INFO">Current page contains element 'xpath=//a[@class='b-funds-list__explore-fund']'.</msg>
+<status status="PASS" starttime="20201111 14:42:00.625" endtime="20201111 14:42:00.634"></status>
 </kw>
 <kw name="Scroll Element Into View" library="SeleniumLibrary">
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
 <arguments>
 <arg>${KU_W_android_image}</arg>
 </arguments>
-<status status="PASS" starttime="20201110 19:18:53.480" endtime="20201110 19:18:53.766"></status>
+<status status="PASS" starttime="20201111 14:42:00.634" endtime="20201111 14:42:00.945"></status>
 </kw>
 <kw name="Page Should Contain Image" library="SeleniumLibrary">
 <doc>Verifies image identified by ``locator`` is found from current page.</doc>
 <arguments>
 <arg>${KU_W_android_image}</arg>
 </arguments>
-<msg timestamp="20201110 19:18:53.783" level="INFO">Current page contains image 'xpath=//img[@class='b-mobile-first__img-android']'.</msg>
-<status status="PASS" starttime="20201110 19:18:53.767" endtime="20201110 19:18:53.783"></status>
+<msg timestamp="20201111 14:42:00.962" level="INFO">Current page contains image 'xpath=//img[@class='b-mobile-first__img-android']'.</msg>
+<status status="PASS" starttime="20201111 14:42:00.945" endtime="20201111 14:42:00.963"></status>
 </kw>
 <kw name="Page Should Contain Image" library="SeleniumLibrary">
 <doc>Verifies image identified by ``locator`` is found from current page.</doc>
 <arguments>
 <arg>${KU_W_apple_image}</arg>
 </arguments>
-<msg timestamp="20201110 19:18:53.806" level="INFO">Current page contains image 'xpath=//img[@class='b-mobile-first__img-apple']'.</msg>
-<status status="PASS" starttime="20201110 19:18:53.784" endtime="20201110 19:18:53.807"></status>
+<msg timestamp="20201111 14:42:00.988" level="INFO">Current page contains image 'xpath=//img[@class='b-mobile-first__img-apple']'.</msg>
+<status status="PASS" starttime="20201111 14:42:00.963" endtime="20201111 14:42:00.988"></status>
 </kw>
 <kw name="Page Should Contain Element" library="SeleniumLibrary">
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
 <arguments>
 <arg>${KU_W_faqbot_icon}</arg>
 </arguments>
-<msg timestamp="20201110 19:18:53.827" level="INFO">Current page contains element 'xpath=//div[@class='faq-bot-button ']'.</msg>
-<status status="PASS" starttime="20201110 19:18:53.807" endtime="20201110 19:18:53.827"></status>
+<msg timestamp="20201111 14:42:01.006" level="INFO">Current page contains element 'xpath=//div[@class='faq-bot-button ']'.</msg>
+<status status="PASS" starttime="20201111 14:42:00.988" endtime="20201111 14:42:01.006"></status>
 </kw>
-<status status="PASS" starttime="20201110 19:18:52.825" endtime="20201110 19:18:53.827"></status>
+<status status="PASS" starttime="20201111 14:42:00.010" endtime="20201111 14:42:01.007"></status>
+</kw>
+<kw name="Verify Fund Houses" library="Common">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>${KU_W_fundHouse_title}</arg>
+</arguments>
+<status status="PASS" starttime="20201111 14:42:01.008" endtime="20201111 14:42:01.307"></status>
+</kw>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<arguments>
+<arg>${KU_W_fundHouses_firstColumn}</arg>
+</arguments>
+<assign>
+<var>@{fundHouses_list1}</var>
+</assign>
+<msg timestamp="20201111 14:42:01.329" level="INFO">@{fundHouses_list1} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="8b0df0627d42062b5cc61aeb217e6e59", element="96a2e656-8ca9-4f26-860b-d04bb03ab4ae")&gt; | &lt;selenium.webdriver.remote.webelement.WebElement (ses...</msg>
+<status status="PASS" starttime="20201111 14:42:01.307" endtime="20201111 14:42:01.329"></status>
+</kw>
+<kw name="${actualFndHouses_1} IN [ @{fundHouses_list1} ]" type="for">
+<kw name="${actualFndHouses_1} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;8b0df0627d42062b5cc61aeb217e6e59&quot;, element=&quot;96a2e656-8ca9-4f26-860b-d04bb03ab4ae&quot;)&gt;" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${actualFndHouses_1.text}</arg>
+</arguments>
+<assign>
+<var>${actualFundList1Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:01.351" level="INFO">${actualFundList1Item} = ADITYA BIRLA SUN LIFE</msg>
+<status status="PASS" starttime="20201111 14:42:01.329" endtime="20201111 14:42:01.351"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:01.329" endtime="20201111 14:42:01.351"></status>
+</kw>
+<kw name="${actualFndHouses_1} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;8b0df0627d42062b5cc61aeb217e6e59&quot;, element=&quot;05ce5035-0123-4865-a96c-01fe02e4a770&quot;)&gt;" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${actualFndHouses_1.text}</arg>
+</arguments>
+<assign>
+<var>${actualFundList1Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:01.373" level="INFO">${actualFundList1Item} = AXIS</msg>
+<status status="PASS" starttime="20201111 14:42:01.352" endtime="20201111 14:42:01.373"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:01.351" endtime="20201111 14:42:01.373"></status>
+</kw>
+<kw name="${actualFndHouses_1} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;8b0df0627d42062b5cc61aeb217e6e59&quot;, element=&quot;f2c8199b-c122-48f3-9fc8-2195aebbe1e8&quot;)&gt;" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${actualFndHouses_1.text}</arg>
+</arguments>
+<assign>
+<var>${actualFundList1Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:01.405" level="INFO">${actualFundList1Item} = BARODA</msg>
+<status status="PASS" starttime="20201111 14:42:01.374" endtime="20201111 14:42:01.405"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:01.374" endtime="20201111 14:42:01.405"></status>
+</kw>
+<kw name="${actualFndHouses_1} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;8b0df0627d42062b5cc61aeb217e6e59&quot;, element=&quot;8ce4853f-6bb4-4fc0-ae21-0d94c0f6dc0d&quot;)&gt;" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${actualFndHouses_1.text}</arg>
+</arguments>
+<assign>
+<var>${actualFundList1Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:01.423" level="INFO">${actualFundList1Item} = BHARTI AXA</msg>
+<status status="PASS" starttime="20201111 14:42:01.405" endtime="20201111 14:42:01.423"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:01.405" endtime="20201111 14:42:01.423"></status>
+</kw>
+<kw name="${actualFndHouses_1} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;8b0df0627d42062b5cc61aeb217e6e59&quot;, element=&quot;06dd61ae-4087-4874-a78b-c28952d923f7&quot;)&gt;" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${actualFndHouses_1.text}</arg>
+</arguments>
+<assign>
+<var>${actualFundList1Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:01.439" level="INFO">${actualFundList1Item} = BNP PARIBAS</msg>
+<status status="PASS" starttime="20201111 14:42:01.423" endtime="20201111 14:42:01.439"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:01.423" endtime="20201111 14:42:01.439"></status>
+</kw>
+<kw name="${actualFndHouses_1} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;8b0df0627d42062b5cc61aeb217e6e59&quot;, element=&quot;addede74-0a84-4579-8b40-d9c3579530b1&quot;)&gt;" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${actualFndHouses_1.text}</arg>
+</arguments>
+<assign>
+<var>${actualFundList1Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:01.454" level="INFO">${actualFundList1Item} = CANARA ROBECO</msg>
+<status status="PASS" starttime="20201111 14:42:01.440" endtime="20201111 14:42:01.454"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:01.439" endtime="20201111 14:42:01.454"></status>
+</kw>
+<kw name="${actualFndHouses_1} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;8b0df0627d42062b5cc61aeb217e6e59&quot;, element=&quot;ff3fede5-ff9b-4da5-aafb-a33134dc184d&quot;)&gt;" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${actualFndHouses_1.text}</arg>
+</arguments>
+<assign>
+<var>${actualFundList1Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:01.474" level="INFO">${actualFundList1Item} = DSP</msg>
+<status status="PASS" starttime="20201111 14:42:01.454" endtime="20201111 14:42:01.474"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:01.454" endtime="20201111 14:42:01.474"></status>
+</kw>
+<kw name="${actualFndHouses_1} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;8b0df0627d42062b5cc61aeb217e6e59&quot;, element=&quot;0a16a2ca-295e-413d-9700-9d5e271ab010&quot;)&gt;" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${actualFndHouses_1.text}</arg>
+</arguments>
+<assign>
+<var>${actualFundList1Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:01.489" level="INFO">${actualFundList1Item} = EDELWEISS</msg>
+<status status="PASS" starttime="20201111 14:42:01.474" endtime="20201111 14:42:01.489"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:01.474" endtime="20201111 14:42:01.489"></status>
+</kw>
+<kw name="${actualFndHouses_1} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;8b0df0627d42062b5cc61aeb217e6e59&quot;, element=&quot;fa983459-6e92-44cd-b838-eba3a973c326&quot;)&gt;" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${actualFndHouses_1.text}</arg>
+</arguments>
+<assign>
+<var>${actualFundList1Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:01.514" level="INFO">${actualFundList1Item} = ESSEL</msg>
+<status status="PASS" starttime="20201111 14:42:01.489" endtime="20201111 14:42:01.514"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:01.489" endtime="20201111 14:42:01.514"></status>
+</kw>
+<kw name="${actualFndHouses_1} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;8b0df0627d42062b5cc61aeb217e6e59&quot;, element=&quot;f0ec2508-deb8-4506-ba85-5167029e7a20&quot;)&gt;" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${actualFndHouses_1.text}</arg>
+</arguments>
+<assign>
+<var>${actualFundList1Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:01.538" level="INFO">${actualFundList1Item} = FRANKLIN TEMPLETON</msg>
+<status status="PASS" starttime="20201111 14:42:01.514" endtime="20201111 14:42:01.538"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:01.514" endtime="20201111 14:42:01.538"></status>
+</kw>
+<kw name="${actualFndHouses_1} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;8b0df0627d42062b5cc61aeb217e6e59&quot;, element=&quot;152421df-d302-4916-ac64-22d737c8fc4b&quot;)&gt;" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${actualFndHouses_1.text}</arg>
+</arguments>
+<assign>
+<var>${actualFundList1Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:01.557" level="INFO">${actualFundList1Item} = HDFC</msg>
+<status status="PASS" starttime="20201111 14:42:01.538" endtime="20201111 14:42:01.557"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:01.538" endtime="20201111 14:42:01.557"></status>
+</kw>
+<kw name="${actualFndHouses_1} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;8b0df0627d42062b5cc61aeb217e6e59&quot;, element=&quot;90da5a90-3fa2-4137-8736-7f96bd7175fb&quot;)&gt;" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${actualFndHouses_1.text}</arg>
+</arguments>
+<assign>
+<var>${actualFundList1Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:01.845" level="INFO">${actualFundList1Item} = HSBC</msg>
+<status status="PASS" starttime="20201111 14:42:01.557" endtime="20201111 14:42:01.845"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:01.557" endtime="20201111 14:42:01.845"></status>
+</kw>
+<kw name="${actualFndHouses_1} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;8b0df0627d42062b5cc61aeb217e6e59&quot;, element=&quot;e7141137-9f05-49dc-8efe-bf2575a34fd5&quot;)&gt;" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${actualFndHouses_1.text}</arg>
+</arguments>
+<assign>
+<var>${actualFundList1Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:01.944" level="INFO">${actualFundList1Item} = ICICI PRUDENTIAL</msg>
+<status status="PASS" starttime="20201111 14:42:01.846" endtime="20201111 14:42:01.944"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:01.845" endtime="20201111 14:42:01.944"></status>
+</kw>
+<kw name="${actualFndHouses_1} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;8b0df0627d42062b5cc61aeb217e6e59&quot;, element=&quot;a8d487f6-6673-4b10-9c82-f92da9089b17&quot;)&gt;" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${actualFndHouses_1.text}</arg>
+</arguments>
+<assign>
+<var>${actualFundList1Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:01.961" level="INFO">${actualFundList1Item} = IDBI</msg>
+<status status="PASS" starttime="20201111 14:42:01.944" endtime="20201111 14:42:01.961"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:01.944" endtime="20201111 14:42:01.961"></status>
+</kw>
+<kw name="${actualFndHouses_1} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;8b0df0627d42062b5cc61aeb217e6e59&quot;, element=&quot;a79f6967-c18b-492e-9a1b-d70b22ec9c2b&quot;)&gt;" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${actualFndHouses_1.text}</arg>
+</arguments>
+<assign>
+<var>${actualFundList1Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:01.970" level="INFO">${actualFundList1Item} = IDFC</msg>
+<status status="PASS" starttime="20201111 14:42:01.962" endtime="20201111 14:42:01.970"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:01.961" endtime="20201111 14:42:01.970"></status>
+</kw>
+<kw name="${actualFndHouses_1} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;8b0df0627d42062b5cc61aeb217e6e59&quot;, element=&quot;90b8383a-9f72-46a2-944a-9bc7e1af5c6b&quot;)&gt;" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${actualFndHouses_1.text}</arg>
+</arguments>
+<assign>
+<var>${actualFundList1Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:01.986" level="INFO">${actualFundList1Item} = IIFL</msg>
+<status status="PASS" starttime="20201111 14:42:01.970" endtime="20201111 14:42:01.986"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:01.970" endtime="20201111 14:42:01.986"></status>
+</kw>
+<kw name="${actualFndHouses_1} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;8b0df0627d42062b5cc61aeb217e6e59&quot;, element=&quot;df122f52-4e9e-45ce-a622-118b34af8b48&quot;)&gt;" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${actualFndHouses_1.text}</arg>
+</arguments>
+<assign>
+<var>${actualFundList1Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:02.002" level="INFO">${actualFundList1Item} = INDIA BULLS</msg>
+<status status="PASS" starttime="20201111 14:42:01.986" endtime="20201111 14:42:02.002"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:01.986" endtime="20201111 14:42:02.002"></status>
+</kw>
+<kw name="${actualFndHouses_1} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;8b0df0627d42062b5cc61aeb217e6e59&quot;, element=&quot;34da83d4-8745-4189-9507-cbe8213b85d2&quot;)&gt;" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${actualFndHouses_1.text}</arg>
+</arguments>
+<assign>
+<var>${actualFundList1Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:02.017" level="INFO">${actualFundList1Item} = INVESCO</msg>
+<status status="PASS" starttime="20201111 14:42:02.002" endtime="20201111 14:42:02.017"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:02.002" endtime="20201111 14:42:02.017"></status>
+</kw>
+<kw name="${actualFndHouses_1} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;8b0df0627d42062b5cc61aeb217e6e59&quot;, element=&quot;82c09638-c4be-49d7-82db-50bd6b8c2a5b&quot;)&gt;" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${actualFndHouses_1.text}</arg>
+</arguments>
+<assign>
+<var>${actualFundList1Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:02.033" level="INFO">${actualFundList1Item} = ITI</msg>
+<status status="PASS" starttime="20201111 14:42:02.017" endtime="20201111 14:42:02.033"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:02.017" endtime="20201111 14:42:02.033"></status>
+</kw>
+<kw name="${actualFndHouses_1} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;8b0df0627d42062b5cc61aeb217e6e59&quot;, element=&quot;f83c5039-e2dc-46f2-a30f-72a0d825b6e3&quot;)&gt;" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${actualFndHouses_1.text}</arg>
+</arguments>
+<assign>
+<var>${actualFundList1Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:02.048" level="INFO">${actualFundList1Item} = JM FINANCIAL</msg>
+<status status="PASS" starttime="20201111 14:42:02.033" endtime="20201111 14:42:02.048"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:02.033" endtime="20201111 14:42:02.048"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:01.329" endtime="20201111 14:42:02.048"></status>
+</kw>
+<kw name="${expectedFndHousesList1} IN [ @{e_fndHouse_firstColumn} ]" type="for">
+<kw name="${expectedFndHousesList1} = Create List" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${expectedFndHousesList1}</arg>
+</arguments>
+<assign>
+<var>${expectedFundList1Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:02.048" level="INFO">${expectedFundList1Item} = Create List</msg>
+<status status="PASS" starttime="20201111 14:42:02.048" endtime="20201111 14:42:02.048"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:02.048" endtime="20201111 14:42:02.048"></status>
+</kw>
+<kw name="${expectedFndHousesList1} = ADITYA BIRLA SUN LIFE" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${expectedFndHousesList1}</arg>
+</arguments>
+<assign>
+<var>${expectedFundList1Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:02.048" level="INFO">${expectedFundList1Item} = ADITYA BIRLA SUN LIFE</msg>
+<status status="PASS" starttime="20201111 14:42:02.048" endtime="20201111 14:42:02.048"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:02.048" endtime="20201111 14:42:02.048"></status>
+</kw>
+<kw name="${expectedFndHousesList1} = AXIS" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${expectedFndHousesList1}</arg>
+</arguments>
+<assign>
+<var>${expectedFundList1Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:02.048" level="INFO">${expectedFundList1Item} = AXIS</msg>
+<status status="PASS" starttime="20201111 14:42:02.048" endtime="20201111 14:42:02.048"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:02.048" endtime="20201111 14:42:02.048"></status>
+</kw>
+<kw name="${expectedFndHousesList1} = BARODA" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${expectedFndHousesList1}</arg>
+</arguments>
+<assign>
+<var>${expectedFundList1Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:02.048" level="INFO">${expectedFundList1Item} = BARODA</msg>
+<status status="PASS" starttime="20201111 14:42:02.048" endtime="20201111 14:42:02.048"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:02.048" endtime="20201111 14:42:02.048"></status>
+</kw>
+<kw name="${expectedFndHousesList1} = BHARTI AXA" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${expectedFndHousesList1}</arg>
+</arguments>
+<assign>
+<var>${expectedFundList1Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:02.048" level="INFO">${expectedFundList1Item} = BHARTI AXA</msg>
+<status status="PASS" starttime="20201111 14:42:02.048" endtime="20201111 14:42:02.048"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:02.048" endtime="20201111 14:42:02.048"></status>
+</kw>
+<kw name="${expectedFndHousesList1} = BNP PARIBAS" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${expectedFndHousesList1}</arg>
+</arguments>
+<assign>
+<var>${expectedFundList1Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:02.048" level="INFO">${expectedFundList1Item} = BNP PARIBAS</msg>
+<status status="PASS" starttime="20201111 14:42:02.048" endtime="20201111 14:42:02.048"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:02.048" endtime="20201111 14:42:02.048"></status>
+</kw>
+<kw name="${expectedFndHousesList1} = CANARA ROBECO" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${expectedFndHousesList1}</arg>
+</arguments>
+<assign>
+<var>${expectedFundList1Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:02.048" level="INFO">${expectedFundList1Item} = CANARA ROBECO</msg>
+<status status="PASS" starttime="20201111 14:42:02.048" endtime="20201111 14:42:02.048"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:02.048" endtime="20201111 14:42:02.048"></status>
+</kw>
+<kw name="${expectedFndHousesList1} = DSP" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${expectedFndHousesList1}</arg>
+</arguments>
+<assign>
+<var>${expectedFundList1Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:02.048" level="INFO">${expectedFundList1Item} = DSP</msg>
+<status status="PASS" starttime="20201111 14:42:02.048" endtime="20201111 14:42:02.048"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:02.048" endtime="20201111 14:42:02.048"></status>
+</kw>
+<kw name="${expectedFndHousesList1} = EDELWEISS" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${expectedFndHousesList1}</arg>
+</arguments>
+<assign>
+<var>${expectedFundList1Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:02.048" level="INFO">${expectedFundList1Item} = EDELWEISS</msg>
+<status status="PASS" starttime="20201111 14:42:02.048" endtime="20201111 14:42:02.048"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:02.048" endtime="20201111 14:42:02.048"></status>
+</kw>
+<kw name="${expectedFndHousesList1} = ESSEL" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${expectedFndHousesList1}</arg>
+</arguments>
+<assign>
+<var>${expectedFundList1Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:02.048" level="INFO">${expectedFundList1Item} = ESSEL</msg>
+<status status="PASS" starttime="20201111 14:42:02.048" endtime="20201111 14:42:02.048"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:02.048" endtime="20201111 14:42:02.048"></status>
+</kw>
+<kw name="${expectedFndHousesList1} = FRANKLIN TEMPLETON" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${expectedFndHousesList1}</arg>
+</arguments>
+<assign>
+<var>${expectedFundList1Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:02.048" level="INFO">${expectedFundList1Item} = FRANKLIN TEMPLETON</msg>
+<status status="PASS" starttime="20201111 14:42:02.048" endtime="20201111 14:42:02.048"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:02.048" endtime="20201111 14:42:02.048"></status>
+</kw>
+<kw name="${expectedFndHousesList1} = HDFC" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${expectedFndHousesList1}</arg>
+</arguments>
+<assign>
+<var>${expectedFundList1Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:02.064" level="INFO">${expectedFundList1Item} = HDFC</msg>
+<status status="PASS" starttime="20201111 14:42:02.064" endtime="20201111 14:42:02.064"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:02.048" endtime="20201111 14:42:02.064"></status>
+</kw>
+<kw name="${expectedFndHousesList1} = HSBC" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${expectedFndHousesList1}</arg>
+</arguments>
+<assign>
+<var>${expectedFundList1Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:02.064" level="INFO">${expectedFundList1Item} = HSBC</msg>
+<status status="PASS" starttime="20201111 14:42:02.064" endtime="20201111 14:42:02.064"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:02.064" endtime="20201111 14:42:02.064"></status>
+</kw>
+<kw name="${expectedFndHousesList1} = ICICI" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${expectedFndHousesList1}</arg>
+</arguments>
+<assign>
+<var>${expectedFundList1Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:02.064" level="INFO">${expectedFundList1Item} = ICICI</msg>
+<status status="PASS" starttime="20201111 14:42:02.064" endtime="20201111 14:42:02.064"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:02.064" endtime="20201111 14:42:02.064"></status>
+</kw>
+<kw name="${expectedFndHousesList1} = PRUDENTIAL" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${expectedFndHousesList1}</arg>
+</arguments>
+<assign>
+<var>${expectedFundList1Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:02.064" level="INFO">${expectedFundList1Item} = PRUDENTIAL</msg>
+<status status="PASS" starttime="20201111 14:42:02.064" endtime="20201111 14:42:02.064"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:02.064" endtime="20201111 14:42:02.064"></status>
+</kw>
+<kw name="${expectedFndHousesList1} = IDBI" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${expectedFndHousesList1}</arg>
+</arguments>
+<assign>
+<var>${expectedFundList1Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:02.064" level="INFO">${expectedFundList1Item} = IDBI</msg>
+<status status="PASS" starttime="20201111 14:42:02.064" endtime="20201111 14:42:02.064"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:02.064" endtime="20201111 14:42:02.064"></status>
+</kw>
+<kw name="${expectedFndHousesList1} = IDFC" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${expectedFndHousesList1}</arg>
+</arguments>
+<assign>
+<var>${expectedFundList1Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:02.064" level="INFO">${expectedFundList1Item} = IDFC</msg>
+<status status="PASS" starttime="20201111 14:42:02.064" endtime="20201111 14:42:02.064"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:02.064" endtime="20201111 14:42:02.064"></status>
+</kw>
+<kw name="${expectedFndHousesList1} = IIFL" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${expectedFndHousesList1}</arg>
+</arguments>
+<assign>
+<var>${expectedFundList1Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:02.064" level="INFO">${expectedFundList1Item} = IIFL</msg>
+<status status="PASS" starttime="20201111 14:42:02.064" endtime="20201111 14:42:02.064"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:02.064" endtime="20201111 14:42:02.064"></status>
+</kw>
+<kw name="${expectedFndHousesList1} = INDIA BULLS" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${expectedFndHousesList1}</arg>
+</arguments>
+<assign>
+<var>${expectedFundList1Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:02.064" level="INFO">${expectedFundList1Item} = INDIA BULLS</msg>
+<status status="PASS" starttime="20201111 14:42:02.064" endtime="20201111 14:42:02.064"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:02.064" endtime="20201111 14:42:02.064"></status>
+</kw>
+<kw name="${expectedFndHousesList1} = INVESCO" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${expectedFndHousesList1}</arg>
+</arguments>
+<assign>
+<var>${expectedFundList1Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:02.064" level="INFO">${expectedFundList1Item} = INVESCO</msg>
+<status status="PASS" starttime="20201111 14:42:02.064" endtime="20201111 14:42:02.064"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:02.064" endtime="20201111 14:42:02.064"></status>
+</kw>
+<kw name="${expectedFndHousesList1} = ITI" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${expectedFndHousesList1}</arg>
+</arguments>
+<assign>
+<var>${expectedFundList1Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:02.064" level="INFO">${expectedFundList1Item} = ITI</msg>
+<status status="PASS" starttime="20201111 14:42:02.064" endtime="20201111 14:42:02.064"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:02.064" endtime="20201111 14:42:02.064"></status>
+</kw>
+<kw name="${expectedFndHousesList1} = JM FINANCIAL" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${expectedFndHousesList1}</arg>
+</arguments>
+<assign>
+<var>${expectedFundList1Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:02.064" level="INFO">${expectedFundList1Item} = JM FINANCIAL</msg>
+<status status="PASS" starttime="20201111 14:42:02.064" endtime="20201111 14:42:02.064"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:02.064" endtime="20201111 14:42:02.064"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:02.048" endtime="20201111 14:42:02.064"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${actualFundList1Item}</arg>
+<arg>${expectedFundList1Item}</arg>
+</arguments>
+<status status="PASS" starttime="20201111 14:42:02.064" endtime="20201111 14:42:02.064"></status>
+</kw>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<arguments>
+<arg>${KU_W_fundHouses_secondColumn}</arg>
+</arguments>
+<assign>
+<var>@{fundHouses_list2}</var>
+</assign>
+<msg timestamp="20201111 14:42:02.080" level="INFO">@{fundHouses_list2} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="8b0df0627d42062b5cc61aeb217e6e59", element="9427bb5f-8148-4b16-8178-a6cb218945d7")&gt; | &lt;selenium.webdriver.remote.webelement.WebElement (ses...</msg>
+<status status="PASS" starttime="20201111 14:42:02.064" endtime="20201111 14:42:02.080"></status>
+</kw>
+<kw name="${actualFndHouses_2} IN [ @{fundHouses_list2} ]" type="for">
+<kw name="${actualFndHouses_2} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;8b0df0627d42062b5cc61aeb217e6e59&quot;, element=&quot;9427bb5f-8148-4b16-8178-a6cb218945d7&quot;)&gt;" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${actualFndHouses_2.text}</arg>
+</arguments>
+<assign>
+<var>${actualFundList2Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:02.095" level="INFO">${actualFundList2Item} = KOTAK</msg>
+<status status="PASS" starttime="20201111 14:42:02.080" endtime="20201111 14:42:02.095"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:02.080" endtime="20201111 14:42:02.095"></status>
+</kw>
+<kw name="${actualFndHouses_2} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;8b0df0627d42062b5cc61aeb217e6e59&quot;, element=&quot;0ef8cc9b-0551-4eef-b1b9-d65fc3fa10b9&quot;)&gt;" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${actualFndHouses_2.text}</arg>
+</arguments>
+<assign>
+<var>${actualFundList2Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:02.111" level="INFO">${actualFundList2Item} = L&amp;T</msg>
+<status status="PASS" starttime="20201111 14:42:02.095" endtime="20201111 14:42:02.111"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:02.095" endtime="20201111 14:42:02.111"></status>
+</kw>
+<kw name="${actualFndHouses_2} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;8b0df0627d42062b5cc61aeb217e6e59&quot;, element=&quot;c4b54446-33b5-4469-9566-98a86b61ce0f&quot;)&gt;" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${actualFndHouses_2.text}</arg>
+</arguments>
+<assign>
+<var>${actualFundList2Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:02.135" level="INFO">${actualFundList2Item} = LIC</msg>
+<status status="PASS" starttime="20201111 14:42:02.111" endtime="20201111 14:42:02.135"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:02.111" endtime="20201111 14:42:02.136"></status>
+</kw>
+<kw name="${actualFndHouses_2} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;8b0df0627d42062b5cc61aeb217e6e59&quot;, element=&quot;b25d296d-444c-4026-8639-f45c2d8a9ba0&quot;)&gt;" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${actualFndHouses_2.text}</arg>
+</arguments>
+<assign>
+<var>${actualFundList2Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:02.153" level="INFO">${actualFundList2Item} = MAHINDRA</msg>
+<status status="PASS" starttime="20201111 14:42:02.136" endtime="20201111 14:42:02.153"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:02.136" endtime="20201111 14:42:02.153"></status>
+</kw>
+<kw name="${actualFndHouses_2} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;8b0df0627d42062b5cc61aeb217e6e59&quot;, element=&quot;ef02049b-a7a0-4659-9dbc-cbc560f843a2&quot;)&gt;" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${actualFndHouses_2.text}</arg>
+</arguments>
+<assign>
+<var>${actualFundList2Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:02.168" level="INFO">${actualFundList2Item} = MIRAE ASSET</msg>
+<status status="PASS" starttime="20201111 14:42:02.153" endtime="20201111 14:42:02.168"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:02.153" endtime="20201111 14:42:02.168"></status>
+</kw>
+<kw name="${actualFndHouses_2} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;8b0df0627d42062b5cc61aeb217e6e59&quot;, element=&quot;7b0cb839-6375-492e-89b9-f7253d33c4a0&quot;)&gt;" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${actualFndHouses_2.text}</arg>
+</arguments>
+<assign>
+<var>${actualFundList2Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:02.188" level="INFO">${actualFundList2Item} = MOTILAL OSWAL</msg>
+<status status="PASS" starttime="20201111 14:42:02.168" endtime="20201111 14:42:02.188"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:02.168" endtime="20201111 14:42:02.188"></status>
+</kw>
+<kw name="${actualFndHouses_2} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;8b0df0627d42062b5cc61aeb217e6e59&quot;, element=&quot;5819d4b4-a6ea-42d3-9f60-84d2ab261462&quot;)&gt;" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${actualFndHouses_2.text}</arg>
+</arguments>
+<assign>
+<var>${actualFundList2Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:02.203" level="INFO">${actualFundList2Item} = NIPPON INDIA</msg>
+<status status="PASS" starttime="20201111 14:42:02.188" endtime="20201111 14:42:02.203"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:02.188" endtime="20201111 14:42:02.203"></status>
+</kw>
+<kw name="${actualFndHouses_2} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;8b0df0627d42062b5cc61aeb217e6e59&quot;, element=&quot;f6a88c05-ab0b-4e93-a2d1-eb59331585f7&quot;)&gt;" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${actualFndHouses_2.text}</arg>
+</arguments>
+<assign>
+<var>${actualFundList2Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:02.220" level="INFO">${actualFundList2Item} = PGIM INDIA</msg>
+<status status="PASS" starttime="20201111 14:42:02.203" endtime="20201111 14:42:02.220"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:02.203" endtime="20201111 14:42:02.220"></status>
+</kw>
+<kw name="${actualFndHouses_2} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;8b0df0627d42062b5cc61aeb217e6e59&quot;, element=&quot;98e0fbd6-3feb-4dd9-8a79-c9c9da539919&quot;)&gt;" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${actualFndHouses_2.text}</arg>
+</arguments>
+<assign>
+<var>${actualFundList2Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:02.235" level="INFO">${actualFundList2Item} = PPFAS</msg>
+<status status="PASS" starttime="20201111 14:42:02.221" endtime="20201111 14:42:02.235"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:02.220" endtime="20201111 14:42:02.235"></status>
+</kw>
+<kw name="${actualFndHouses_2} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;8b0df0627d42062b5cc61aeb217e6e59&quot;, element=&quot;05003383-7777-4474-829b-1b9a17d476af&quot;)&gt;" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${actualFndHouses_2.text}</arg>
+</arguments>
+<assign>
+<var>${actualFundList2Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:02.250" level="INFO">${actualFundList2Item} = PRINCIPAL</msg>
+<status status="PASS" starttime="20201111 14:42:02.235" endtime="20201111 14:42:02.250"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:02.235" endtime="20201111 14:42:02.250"></status>
+</kw>
+<kw name="${actualFndHouses_2} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;8b0df0627d42062b5cc61aeb217e6e59&quot;, element=&quot;c2d464c2-f8e3-4dc3-bb42-3828bb5c3521&quot;)&gt;" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${actualFndHouses_2.text}</arg>
+</arguments>
+<assign>
+<var>${actualFundList2Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:02.265" level="INFO">${actualFundList2Item} = QUANT</msg>
+<status status="PASS" starttime="20201111 14:42:02.250" endtime="20201111 14:42:02.265"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:02.250" endtime="20201111 14:42:02.265"></status>
+</kw>
+<kw name="${actualFndHouses_2} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;8b0df0627d42062b5cc61aeb217e6e59&quot;, element=&quot;e71ae48e-5623-469c-bd81-6e96fac198af&quot;)&gt;" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${actualFndHouses_2.text}</arg>
+</arguments>
+<assign>
+<var>${actualFundList2Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:02.280" level="INFO">${actualFundList2Item} = QUANTUM</msg>
+<status status="PASS" starttime="20201111 14:42:02.266" endtime="20201111 14:42:02.280"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:02.266" endtime="20201111 14:42:02.280"></status>
+</kw>
+<kw name="${actualFndHouses_2} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;8b0df0627d42062b5cc61aeb217e6e59&quot;, element=&quot;0392635b-33aa-4bf7-894f-cb72a5c4a03c&quot;)&gt;" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${actualFndHouses_2.text}</arg>
+</arguments>
+<assign>
+<var>${actualFundList2Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:02.294" level="INFO">${actualFundList2Item} = SBI</msg>
+<status status="PASS" starttime="20201111 14:42:02.280" endtime="20201111 14:42:02.294"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:02.280" endtime="20201111 14:42:02.294"></status>
+</kw>
+<kw name="${actualFndHouses_2} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;8b0df0627d42062b5cc61aeb217e6e59&quot;, element=&quot;543853b3-1d1c-4e0b-9f51-46b535bd8956&quot;)&gt;" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${actualFndHouses_2.text}</arg>
+</arguments>
+<assign>
+<var>${actualFundList2Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:02.317" level="INFO">${actualFundList2Item} = SUNDARAM</msg>
+<status status="PASS" starttime="20201111 14:42:02.295" endtime="20201111 14:42:02.317"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:02.295" endtime="20201111 14:42:02.317"></status>
+</kw>
+<kw name="${actualFndHouses_2} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;8b0df0627d42062b5cc61aeb217e6e59&quot;, element=&quot;ac99e040-a94e-48a9-9d84-ec395f1fbc59&quot;)&gt;" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${actualFndHouses_2.text}</arg>
+</arguments>
+<assign>
+<var>${actualFundList2Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:02.333" level="INFO">${actualFundList2Item} = TATA</msg>
+<status status="PASS" starttime="20201111 14:42:02.317" endtime="20201111 14:42:02.333"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:02.317" endtime="20201111 14:42:02.333"></status>
+</kw>
+<kw name="${actualFndHouses_2} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;8b0df0627d42062b5cc61aeb217e6e59&quot;, element=&quot;ed2762cb-7391-4564-b1bb-873dfcb5ae08&quot;)&gt;" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${actualFndHouses_2.text}</arg>
+</arguments>
+<assign>
+<var>${actualFundList2Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:02.348" level="INFO">${actualFundList2Item} = TAURUS</msg>
+<status status="PASS" starttime="20201111 14:42:02.333" endtime="20201111 14:42:02.348"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:02.333" endtime="20201111 14:42:02.348"></status>
+</kw>
+<kw name="${actualFndHouses_2} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;8b0df0627d42062b5cc61aeb217e6e59&quot;, element=&quot;81538dae-3a61-4aba-9489-7ef54552bd6b&quot;)&gt;" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${actualFndHouses_2.text}</arg>
+</arguments>
+<assign>
+<var>${actualFundList2Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:02.362" level="INFO">${actualFundList2Item} = UNION</msg>
+<status status="PASS" starttime="20201111 14:42:02.348" endtime="20201111 14:42:02.362"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:02.348" endtime="20201111 14:42:02.362"></status>
+</kw>
+<kw name="${actualFndHouses_2} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;8b0df0627d42062b5cc61aeb217e6e59&quot;, element=&quot;64b061cf-76d4-49ab-8990-126c3325cb37&quot;)&gt;" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${actualFndHouses_2.text}</arg>
+</arguments>
+<assign>
+<var>${actualFundList2Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:02.377" level="INFO">${actualFundList2Item} = UTI</msg>
+<status status="PASS" starttime="20201111 14:42:02.363" endtime="20201111 14:42:02.377"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:02.363" endtime="20201111 14:42:02.377"></status>
+</kw>
+<kw name="${actualFndHouses_2} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;8b0df0627d42062b5cc61aeb217e6e59&quot;, element=&quot;df46060f-c69b-436d-bf23-a96a3feb12ed&quot;)&gt;" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${actualFndHouses_2.text}</arg>
+</arguments>
+<assign>
+<var>${actualFundList2Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:02.392" level="INFO">${actualFundList2Item} = YES</msg>
+<status status="PASS" starttime="20201111 14:42:02.378" endtime="20201111 14:42:02.392"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:02.377" endtime="20201111 14:42:02.392"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:02.080" endtime="20201111 14:42:02.392"></status>
+</kw>
+<kw name="${expectedFndHousesList2} IN [ @{e_fndHouse_secondColumn} ]" type="for">
+<kw name="${expectedFndHousesList2} = Create List" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${expectedFndHousesList2}</arg>
+</arguments>
+<assign>
+<var>${expectedFundList2Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:02.393" level="INFO">${expectedFundList2Item} = Create List</msg>
+<status status="PASS" starttime="20201111 14:42:02.392" endtime="20201111 14:42:02.393"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:02.392" endtime="20201111 14:42:02.393"></status>
+</kw>
+<kw name="${expectedFndHousesList2} = KOTAK" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${expectedFndHousesList2}</arg>
+</arguments>
+<assign>
+<var>${expectedFundList2Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:02.393" level="INFO">${expectedFundList2Item} = KOTAK</msg>
+<status status="PASS" starttime="20201111 14:42:02.393" endtime="20201111 14:42:02.393"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:02.393" endtime="20201111 14:42:02.393"></status>
+</kw>
+<kw name="${expectedFndHousesList2} = L&amp;T" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${expectedFndHousesList2}</arg>
+</arguments>
+<assign>
+<var>${expectedFundList2Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:02.394" level="INFO">${expectedFundList2Item} = L&amp;T</msg>
+<status status="PASS" starttime="20201111 14:42:02.394" endtime="20201111 14:42:02.394"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:02.393" endtime="20201111 14:42:02.394"></status>
+</kw>
+<kw name="${expectedFndHousesList2} = LIC" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${expectedFndHousesList2}</arg>
+</arguments>
+<assign>
+<var>${expectedFundList2Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:02.394" level="INFO">${expectedFundList2Item} = LIC</msg>
+<status status="PASS" starttime="20201111 14:42:02.394" endtime="20201111 14:42:02.394"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:02.394" endtime="20201111 14:42:02.395"></status>
+</kw>
+<kw name="${expectedFndHousesList2} = MAHINDRA" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${expectedFndHousesList2}</arg>
+</arguments>
+<assign>
+<var>${expectedFundList2Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:02.395" level="INFO">${expectedFundList2Item} = MAHINDRA</msg>
+<status status="PASS" starttime="20201111 14:42:02.395" endtime="20201111 14:42:02.395"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:02.395" endtime="20201111 14:42:02.395"></status>
+</kw>
+<kw name="${expectedFndHousesList2} = MIRAE ASSET" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${expectedFndHousesList2}</arg>
+</arguments>
+<assign>
+<var>${expectedFundList2Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:02.396" level="INFO">${expectedFundList2Item} = MIRAE ASSET</msg>
+<status status="PASS" starttime="20201111 14:42:02.395" endtime="20201111 14:42:02.396"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:02.395" endtime="20201111 14:42:02.396"></status>
+</kw>
+<kw name="${expectedFndHousesList2} = MOTILAL OSWAL" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${expectedFndHousesList2}</arg>
+</arguments>
+<assign>
+<var>${expectedFundList2Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:02.396" level="INFO">${expectedFundList2Item} = MOTILAL OSWAL</msg>
+<status status="PASS" starttime="20201111 14:42:02.396" endtime="20201111 14:42:02.396"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:02.396" endtime="20201111 14:42:02.396"></status>
+</kw>
+<kw name="${expectedFndHousesList2} = NIPPON INDIA" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${expectedFndHousesList2}</arg>
+</arguments>
+<assign>
+<var>${expectedFundList2Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:02.397" level="INFO">${expectedFundList2Item} = NIPPON INDIA</msg>
+<status status="PASS" starttime="20201111 14:42:02.397" endtime="20201111 14:42:02.397"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:02.396" endtime="20201111 14:42:02.397"></status>
+</kw>
+<kw name="${expectedFndHousesList2} = PGIM INDIA" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${expectedFndHousesList2}</arg>
+</arguments>
+<assign>
+<var>${expectedFundList2Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:02.398" level="INFO">${expectedFundList2Item} = PGIM INDIA</msg>
+<status status="PASS" starttime="20201111 14:42:02.397" endtime="20201111 14:42:02.398"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:02.397" endtime="20201111 14:42:02.398"></status>
+</kw>
+<kw name="${expectedFndHousesList2} = PPFAS" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${expectedFndHousesList2}</arg>
+</arguments>
+<assign>
+<var>${expectedFundList2Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:02.398" level="INFO">${expectedFundList2Item} = PPFAS</msg>
+<status status="PASS" starttime="20201111 14:42:02.398" endtime="20201111 14:42:02.398"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:02.398" endtime="20201111 14:42:02.398"></status>
+</kw>
+<kw name="${expectedFndHousesList2} = PRINCIPAL" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${expectedFndHousesList2}</arg>
+</arguments>
+<assign>
+<var>${expectedFundList2Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:02.399" level="INFO">${expectedFundList2Item} = PRINCIPAL</msg>
+<status status="PASS" starttime="20201111 14:42:02.399" endtime="20201111 14:42:02.399"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:02.398" endtime="20201111 14:42:02.399"></status>
+</kw>
+<kw name="${expectedFndHousesList2} = QUANT" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${expectedFndHousesList2}</arg>
+</arguments>
+<assign>
+<var>${expectedFundList2Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:02.399" level="INFO">${expectedFundList2Item} = QUANT</msg>
+<status status="PASS" starttime="20201111 14:42:02.399" endtime="20201111 14:42:02.399"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:02.399" endtime="20201111 14:42:02.399"></status>
+</kw>
+<kw name="${expectedFndHousesList2} = QUANTUM" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${expectedFndHousesList2}</arg>
+</arguments>
+<assign>
+<var>${expectedFundList2Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:02.400" level="INFO">${expectedFundList2Item} = QUANTUM</msg>
+<status status="PASS" starttime="20201111 14:42:02.400" endtime="20201111 14:42:02.400"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:02.400" endtime="20201111 14:42:02.400"></status>
+</kw>
+<kw name="${expectedFndHousesList2} = SBI" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${expectedFndHousesList2}</arg>
+</arguments>
+<assign>
+<var>${expectedFundList2Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:02.401" level="INFO">${expectedFundList2Item} = SBI</msg>
+<status status="PASS" starttime="20201111 14:42:02.400" endtime="20201111 14:42:02.401"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:02.400" endtime="20201111 14:42:02.401"></status>
+</kw>
+<kw name="${expectedFndHousesList2} = SUNDARAM" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${expectedFndHousesList2}</arg>
+</arguments>
+<assign>
+<var>${expectedFundList2Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:02.401" level="INFO">${expectedFundList2Item} = SUNDARAM</msg>
+<status status="PASS" starttime="20201111 14:42:02.401" endtime="20201111 14:42:02.401"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:02.401" endtime="20201111 14:42:02.401"></status>
+</kw>
+<kw name="${expectedFndHousesList2} = TATA" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${expectedFndHousesList2}</arg>
+</arguments>
+<assign>
+<var>${expectedFundList2Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:02.402" level="INFO">${expectedFundList2Item} = TATA</msg>
+<status status="PASS" starttime="20201111 14:42:02.402" endtime="20201111 14:42:02.402"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:02.402" endtime="20201111 14:42:02.402"></status>
+</kw>
+<kw name="${expectedFndHousesList2} = TAURUS" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${expectedFndHousesList2}</arg>
+</arguments>
+<assign>
+<var>${expectedFundList2Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:02.403" level="INFO">${expectedFundList2Item} = TAURUS</msg>
+<status status="PASS" starttime="20201111 14:42:02.402" endtime="20201111 14:42:02.403"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:02.402" endtime="20201111 14:42:02.403"></status>
+</kw>
+<kw name="${expectedFndHousesList2} = UNION" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${expectedFndHousesList2}</arg>
+</arguments>
+<assign>
+<var>${expectedFundList2Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:02.403" level="INFO">${expectedFundList2Item} = UNION</msg>
+<status status="PASS" starttime="20201111 14:42:02.403" endtime="20201111 14:42:02.403"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:02.403" endtime="20201111 14:42:02.403"></status>
+</kw>
+<kw name="${expectedFndHousesList2} = UTI" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${expectedFndHousesList2}</arg>
+</arguments>
+<assign>
+<var>${expectedFundList2Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:02.404" level="INFO">${expectedFundList2Item} = UTI</msg>
+<status status="PASS" starttime="20201111 14:42:02.403" endtime="20201111 14:42:02.404"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:02.403" endtime="20201111 14:42:02.404"></status>
+</kw>
+<kw name="${expectedFndHousesList2} = YES" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${expectedFndHousesList2}</arg>
+</arguments>
+<assign>
+<var>${expectedFundList2Item}</var>
+</assign>
+<msg timestamp="20201111 14:42:02.404" level="INFO">${expectedFundList2Item} = YES</msg>
+<status status="PASS" starttime="20201111 14:42:02.404" endtime="20201111 14:42:02.404"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:02.404" endtime="20201111 14:42:02.404"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:02.392" endtime="20201111 14:42:02.404"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${actualFundList2Item}</arg>
+<arg>${expectedFundList2Item}</arg>
+</arguments>
+<status status="PASS" starttime="20201111 14:42:02.405" endtime="20201111 14:42:02.405"></status>
+</kw>
+<status status="PASS" starttime="20201111 14:42:01.007" endtime="20201111 14:42:02.405"></status>
 </kw>
 <kw name="Verify Features Widgets" library="Common">
 <kw name="Scroll Element Into View" library="SeleniumLibrary">
@@ -282,7 +1476,7 @@
 <arguments>
 <arg>${KU_W_exploreELSS}</arg>
 </arguments>
-<status status="PASS" starttime="20201110 19:18:53.828" endtime="20201110 19:18:54.131"></status>
+<status status="PASS" starttime="20201111 14:42:02.406" endtime="20201111 14:42:02.690"></status>
 </kw>
 <kw name="Element Text Should Be" library="SeleniumLibrary">
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
@@ -290,8 +1484,8 @@
 <arg>${KU_W_exploreELSS}</arg>
 <arg>Explore ELSS funds</arg>
 </arguments>
-<msg timestamp="20201110 19:18:54.132" level="INFO">Verifying element 'xpath=//button[contains(text(),'Explore ELSS funds')]' contains exact text 'Explore ELSS funds'.</msg>
-<status status="PASS" starttime="20201110 19:18:54.132" endtime="20201110 19:18:54.159"></status>
+<msg timestamp="20201111 14:42:02.690" level="INFO">Verifying element 'xpath=//button[contains(text(),'Explore ELSS funds')]' contains exact text 'Explore ELSS funds'.</msg>
+<status status="PASS" starttime="20201111 14:42:02.690" endtime="20201111 14:42:02.712"></status>
 </kw>
 <kw name="Element Text Should Be" library="SeleniumLibrary">
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
@@ -299,8 +1493,8 @@
 <arg>${KU_W_startHarvest}</arg>
 <arg>Start harvesting</arg>
 </arguments>
-<msg timestamp="20201110 19:18:54.160" level="INFO">Verifying element 'xpath=//button[contains(text(),'Start harvesting')]' contains exact text 'Start harvesting'.</msg>
-<status status="PASS" starttime="20201110 19:18:54.159" endtime="20201110 19:18:54.187"></status>
+<msg timestamp="20201111 14:42:02.713" level="INFO">Verifying element 'xpath=//button[contains(text(),'Start harvesting')]' contains exact text 'Start harvesting'.</msg>
+<status status="PASS" starttime="20201111 14:42:02.712" endtime="20201111 14:42:02.740"></status>
 </kw>
 <kw name="Element Text Should Be" library="SeleniumLibrary">
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
@@ -308,24 +1502,24 @@
 <arg>${KU_W_switchToday}</arg>
 <arg>Switch Today</arg>
 </arguments>
-<msg timestamp="20201110 19:18:54.187" level="INFO">Verifying element 'xpath=//button[contains(text(),'Switch Today')]' contains exact text 'Switch Today'.</msg>
-<status status="PASS" starttime="20201110 19:18:54.187" endtime="20201110 19:18:54.214"></status>
+<msg timestamp="20201111 14:42:02.740" level="INFO">Verifying element 'xpath=//button[contains(text(),'Switch Today')]' contains exact text 'Switch Today'.</msg>
+<status status="PASS" starttime="20201111 14:42:02.740" endtime="20201111 14:42:02.767"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>${KU_W_next_button}</arg>
 </arguments>
-<msg timestamp="20201110 19:18:54.215" level="INFO">Clicking element 'xpath=//div[@class='b-feature-card-list__btns__next b-feature-card-list__btns__next--active']'.</msg>
-<status status="PASS" starttime="20201110 19:18:54.214" endtime="20201110 19:18:54.277"></status>
+<msg timestamp="20201111 14:42:02.767" level="INFO">Clicking element 'xpath=//div[@class='b-feature-card-list__btns__next b-feature-card-list__btns__next--active']'.</msg>
+<status status="PASS" starttime="20201111 14:42:02.767" endtime="20201111 14:42:02.833"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg timestamp="20201110 19:18:55.278" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20201110 19:18:54.278" endtime="20201110 19:18:55.278"></status>
+<msg timestamp="20201111 14:42:03.835" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20201111 14:42:02.834" endtime="20201111 14:42:03.835"></status>
 </kw>
 <kw name="Element Text Should Be" library="SeleniumLibrary">
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
@@ -333,8 +1527,8 @@
 <arg>${KU_W_upgrade_familyAccount}</arg>
 <arg>Upgrade to family account</arg>
 </arguments>
-<msg timestamp="20201110 19:18:55.279" level="INFO">Verifying element 'xpath=//button[contains(text(),'Upgrade to family account')]' contains exact text 'Upgrade to family account'.</msg>
-<status status="PASS" starttime="20201110 19:18:55.279" endtime="20201110 19:18:55.339"></status>
+<msg timestamp="20201111 14:42:03.835" level="INFO">Verifying element 'xpath=//button[contains(text(),'Upgrade to family account')]' contains exact text 'Upgrade to family account'.</msg>
+<status status="PASS" starttime="20201111 14:42:03.835" endtime="20201111 14:42:03.865"></status>
 </kw>
 <kw name="Element Text Should Be" library="SeleniumLibrary">
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
@@ -342,8 +1536,8 @@
 <arg>${KU_W_consolidate_track}</arg>
 <arg>Consolidate &amp; track</arg>
 </arguments>
-<msg timestamp="20201110 19:18:55.340" level="INFO">Verifying element 'xpath=//button[contains(text(),'Consolidate &amp; track')]' contains exact text 'Consolidate &amp; track'.</msg>
-<status status="PASS" starttime="20201110 19:18:55.340" endtime="20201110 19:18:55.382"></status>
+<msg timestamp="20201111 14:42:03.865" level="INFO">Verifying element 'xpath=//button[contains(text(),'Consolidate &amp; track')]' contains exact text 'Consolidate &amp; track'.</msg>
+<status status="PASS" starttime="20201111 14:42:03.865" endtime="20201111 14:42:03.893"></status>
 </kw>
 <kw name="Element Text Should Be" library="SeleniumLibrary">
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
@@ -351,24 +1545,24 @@
 <arg>${KU_W_manage_today}</arg>
 <arg>Manage Today</arg>
 </arguments>
-<msg timestamp="20201110 19:18:55.383" level="INFO">Verifying element 'xpath=//button[contains(text(),'Manage Today')]' contains exact text 'Manage Today'.</msg>
-<status status="PASS" starttime="20201110 19:18:55.382" endtime="20201110 19:18:55.424"></status>
+<msg timestamp="20201111 14:42:03.893" level="INFO">Verifying element 'xpath=//button[contains(text(),'Manage Today')]' contains exact text 'Manage Today'.</msg>
+<status status="PASS" starttime="20201111 14:42:03.893" endtime="20201111 14:42:03.919"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>${KU_W_next_button}</arg>
 </arguments>
-<msg timestamp="20201110 19:18:55.425" level="INFO">Clicking element 'xpath=//div[@class='b-feature-card-list__btns__next b-feature-card-list__btns__next--active']'.</msg>
-<status status="PASS" starttime="20201110 19:18:55.425" endtime="20201110 19:18:55.490"></status>
+<msg timestamp="20201111 14:42:03.920" level="INFO">Clicking element 'xpath=//div[@class='b-feature-card-list__btns__next b-feature-card-list__btns__next--active']'.</msg>
+<status status="PASS" starttime="20201111 14:42:03.919" endtime="20201111 14:42:03.967"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg timestamp="20201110 19:18:56.492" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20201110 19:18:55.490" endtime="20201110 19:18:56.492"></status>
+<msg timestamp="20201111 14:42:04.969" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20201111 14:42:03.967" endtime="20201111 14:42:04.969"></status>
 </kw>
 <kw name="Element Text Should Be" library="SeleniumLibrary">
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
@@ -376,8 +1570,8 @@
 <arg>${KU_W_set_a_goal}</arg>
 <arg>Set a goal</arg>
 </arguments>
-<msg timestamp="20201110 19:18:56.492" level="INFO">Verifying element 'xpath=//button[contains(text(),'Set a goal')]' contains exact text 'Set a goal'.</msg>
-<status status="PASS" starttime="20201110 19:18:56.492" endtime="20201110 19:18:56.520"></status>
+<msg timestamp="20201111 14:42:04.969" level="INFO">Verifying element 'xpath=//button[contains(text(),'Set a goal')]' contains exact text 'Set a goal'.</msg>
+<status status="PASS" starttime="20201111 14:42:04.969" endtime="20201111 14:42:04.997"></status>
 </kw>
 <kw name="Element Text Should Be" library="SeleniumLibrary">
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
@@ -385,10 +1579,10 @@
 <arg>${KU_W_send_money}</arg>
 <arg>Send money</arg>
 </arguments>
-<msg timestamp="20201110 19:18:56.521" level="INFO">Verifying element 'xpath=//button[contains(text(),'Send money')]' contains exact text 'Send money'.</msg>
-<status status="PASS" starttime="20201110 19:18:56.520" endtime="20201110 19:18:56.551"></status>
+<msg timestamp="20201111 14:42:04.998" level="INFO">Verifying element 'xpath=//button[contains(text(),'Send money')]' contains exact text 'Send money'.</msg>
+<status status="PASS" starttime="20201111 14:42:04.997" endtime="20201111 14:42:05.024"></status>
 </kw>
-<status status="PASS" starttime="20201110 19:18:53.828" endtime="20201110 19:18:56.552"></status>
+<status status="PASS" starttime="20201111 14:42:02.406" endtime="20201111 14:42:05.024"></status>
 </kw>
 <kw name="Verify Summary Tab Widgets" library="Common">
 <kw name="Element Text Should Be" library="SeleniumLibrary">
@@ -397,23 +1591,23 @@
 <arg>${KU_W_summary_msg}</arg>
 <arg>Earn up to 35% more in 20 years*</arg>
 </arguments>
-<msg timestamp="20201110 19:18:56.553" level="INFO">Verifying element 'xpath=//div[@class='b-feature-summary__percent__summary__msg__heading']' contains exact text 'Earn up to 35% more in 20 years*'.</msg>
-<status status="PASS" starttime="20201110 19:18:56.552" endtime="20201110 19:18:56.581"></status>
+<msg timestamp="20201111 14:42:05.025" level="INFO">Verifying element 'xpath=//div[@class='b-feature-summary__percent__summary__msg__heading']' contains exact text 'Earn up to 35% more in 20 years*'.</msg>
+<status status="PASS" starttime="20201111 14:42:05.025" endtime="20201111 14:42:05.052"></status>
 </kw>
 <kw name="Page Should Contain Link" library="SeleniumLibrary">
 <doc>Verifies link identified by ``locator`` is found from current page.</doc>
 <arguments>
 <arg>${KU_W_summary_learn}</arg>
 </arguments>
-<msg timestamp="20201110 19:18:56.600" level="INFO">Current page contains link 'xpath=//a[@class='b-feature-summary__percent__summary__learn']'.</msg>
-<status status="PASS" starttime="20201110 19:18:56.582" endtime="20201110 19:18:56.600"></status>
+<msg timestamp="20201111 14:42:05.071" level="INFO">Current page contains link 'xpath=//a[@class='b-feature-summary__percent__summary__learn']'.</msg>
+<status status="PASS" starttime="20201111 14:42:05.053" endtime="20201111 14:42:05.071"></status>
 </kw>
 <kw name="Scroll Element Into View" library="SeleniumLibrary">
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
 <arguments>
 <arg>${KU_W_care_title}</arg>
 </arguments>
-<status status="PASS" starttime="20201110 19:18:56.600" endtime="20201110 19:18:56.895"></status>
+<status status="PASS" starttime="20201111 14:42:05.071" endtime="20201111 14:42:05.357"></status>
 </kw>
 <kw name="Element Text Should Be" library="SeleniumLibrary">
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
@@ -421,15 +1615,15 @@
 <arg>${KU_W_care_title}</arg>
 <arg>How much do we care?</arg>
 </arguments>
-<msg timestamp="20201110 19:18:56.896" level="INFO">Verifying element 'xpath=//div[@class='b-care__title']' contains exact text 'How much do we care?'.</msg>
-<status status="PASS" starttime="20201110 19:18:56.895" endtime="20201110 19:18:56.927"></status>
+<msg timestamp="20201111 14:42:05.358" level="INFO">Verifying element 'xpath=//div[@class='b-care__title']' contains exact text 'How much do we care?'.</msg>
+<status status="PASS" starttime="20201111 14:42:05.358" endtime="20201111 14:42:05.412"></status>
 </kw>
 <kw name="Scroll Element Into View" library="SeleniumLibrary">
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
 <arguments>
 <arg>${KU_W_care_info_mssg}</arg>
 </arguments>
-<status status="PASS" starttime="20201110 19:18:56.927" endtime="20201110 19:18:57.202"></status>
+<status status="PASS" starttime="20201111 14:42:05.413" endtime="20201111 14:42:05.695"></status>
 </kw>
 <kw name="Element Text Should Be" library="SeleniumLibrary">
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
@@ -437,16 +1631,16 @@
 <arg>${KU_W_care_info_mssg}</arg>
 <arg>Our CEO, Gaurav Rastogi, invites you to share your questions, comments or feedback. Email him</arg>
 </arguments>
-<msg timestamp="20201110 19:18:57.203" level="INFO">Verifying element 'xpath=//div[@class='b-care__info__message']' contains exact text 'Our CEO, Gaurav Rastogi, invites you to share your questions, comments or feedback. Email him'.</msg>
-<status status="PASS" starttime="20201110 19:18:57.202" endtime="20201110 19:18:57.228"></status>
+<msg timestamp="20201111 14:42:05.697" level="INFO">Verifying element 'xpath=//div[@class='b-care__info__message']' contains exact text 'Our CEO, Gaurav Rastogi, invites you to share your questions, comments or feedback. Email him'.</msg>
+<status status="PASS" starttime="20201111 14:42:05.696" endtime="20201111 14:42:05.762"></status>
 </kw>
 <kw name="Page Should Contain Element" library="SeleniumLibrary">
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
 <arguments>
 <arg>${KU_W_advice_Title}</arg>
 </arguments>
-<msg timestamp="20201110 19:18:57.242" level="INFO">Current page contains element 'xpath=//div[@class='b-why-kuvera__content__messages__grid1__advice__title']'.</msg>
-<status status="PASS" starttime="20201110 19:18:57.228" endtime="20201110 19:18:57.242"></status>
+<msg timestamp="20201111 14:42:05.778" level="INFO">Current page contains element 'xpath=//div[@class='b-why-kuvera__content__messages__grid1__advice__title']'.</msg>
+<status status="PASS" starttime="20201111 14:42:05.762" endtime="20201111 14:42:05.778"></status>
 </kw>
 <kw name="Element Text Should Be" library="SeleniumLibrary">
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
@@ -454,8 +1648,8 @@
 <arg>${KU_W_advice_content}</arg>
 <arg>Our team’s successful money management experience, applied strategies and real-time data-driven approach ensure our recommendations are rooted in reality.</arg>
 </arguments>
-<msg timestamp="20201110 19:18:57.243" level="INFO">Verifying element 'xpath=//div[@class='b-why-kuvera__content__messages__grid1__advice__content']' contains exact text 'Our team’s successful money management experience, applied strategies and real-time data-driven approach ensure our recommendations are rooted in reality.'.</msg>
-<status status="PASS" starttime="20201110 19:18:57.243" endtime="20201110 19:18:57.281"></status>
+<msg timestamp="20201111 14:42:05.779" level="INFO">Verifying element 'xpath=//div[@class='b-why-kuvera__content__messages__grid1__advice__content']' contains exact text 'Our team’s successful money management experience, applied strategies and real-time data-driven approach ensure our recommendations are rooted in reality.'.</msg>
+<status status="PASS" starttime="20201111 14:42:05.778" endtime="20201111 14:42:05.807"></status>
 </kw>
 <kw name="Element Text Should Be" library="SeleniumLibrary">
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
@@ -463,15 +1657,15 @@
 <arg>${KU_W_advice_team}</arg>
 <arg>More about our team</arg>
 </arguments>
-<msg timestamp="20201110 19:18:57.282" level="INFO">Verifying element 'xpath=//a[@class='b-why-kuvera__content__messages__grid1__advice__team']' contains exact text 'More about our team'.</msg>
-<status status="PASS" starttime="20201110 19:18:57.281" endtime="20201110 19:18:57.323"></status>
+<msg timestamp="20201111 14:42:05.808" level="INFO">Verifying element 'xpath=//a[@class='b-why-kuvera__content__messages__grid1__advice__team']' contains exact text 'More about our team'.</msg>
+<status status="PASS" starttime="20201111 14:42:05.807" endtime="20201111 14:42:05.835"></status>
 </kw>
 <kw name="Scroll Element Into View" library="SeleniumLibrary">
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
 <arguments>
 <arg>${KU_W_why_startInvesing}</arg>
 </arguments>
-<status status="PASS" starttime="20201110 19:18:57.323" endtime="20201110 19:18:57.612"></status>
+<status status="PASS" starttime="20201111 14:42:05.835" endtime="20201111 14:42:06.125"></status>
 </kw>
 <kw name="Element Text Should Be" library="SeleniumLibrary">
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
@@ -479,23 +1673,23 @@
 <arg>${KU_W_why_startInvesing}</arg>
 <arg>Start investing</arg>
 </arguments>
-<msg timestamp="20201110 19:18:57.613" level="INFO">Verifying element 'xpath=//button[@class='button-primary b-why-kuvera__btn']' contains exact text 'Start investing'.</msg>
-<status status="PASS" starttime="20201110 19:18:57.612" endtime="20201110 19:18:57.636"></status>
+<msg timestamp="20201111 14:42:06.127" level="INFO">Verifying element 'xpath=//button[@class='button-primary b-why-kuvera__btn']' contains exact text 'Start investing'.</msg>
+<status status="PASS" starttime="20201111 14:42:06.126" endtime="20201111 14:42:06.175"></status>
 </kw>
 <kw name="Page Should Contain Element" library="SeleniumLibrary">
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
 <arguments>
 <arg>${KU_W_happyUsers}</arg>
 </arguments>
-<msg timestamp="20201110 19:18:57.655" level="INFO">Current page contains element 'xpath=//div[@class='b-users__happy-user']'.</msg>
-<status status="PASS" starttime="20201110 19:18:57.637" endtime="20201110 19:18:57.655"></status>
+<msg timestamp="20201111 14:42:06.191" level="INFO">Current page contains element 'xpath=//div[@class='b-users__happy-user']'.</msg>
+<status status="PASS" starttime="20201111 14:42:06.176" endtime="20201111 14:42:06.191"></status>
 </kw>
 <kw name="Scroll Element Into View" library="SeleniumLibrary">
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
 <arguments>
 <arg>${KU_W_users_love}</arg>
 </arguments>
-<status status="PASS" starttime="20201110 19:18:57.655" endtime="20201110 19:18:57.945"></status>
+<status status="PASS" starttime="20201111 14:42:06.191" endtime="20201111 14:42:06.474"></status>
 </kw>
 <kw name="Element Text Should Be" library="SeleniumLibrary">
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
@@ -503,8 +1697,8 @@
 <arg>${KU_W_users_love}</arg>
 <arg>Our users love us</arg>
 </arguments>
-<msg timestamp="20201110 19:18:57.946" level="INFO">Verifying element 'xpath=//div[@class='b-users__love']' contains exact text 'Our users love us'.</msg>
-<status status="PASS" starttime="20201110 19:18:57.945" endtime="20201110 19:18:57.968"></status>
+<msg timestamp="20201111 14:42:06.476" level="INFO">Verifying element 'xpath=//div[@class='b-users__love']' contains exact text 'Our users love us'.</msg>
+<status status="PASS" starttime="20201111 14:42:06.475" endtime="20201111 14:42:06.539"></status>
 </kw>
 <kw name="Element Text Should Be" library="SeleniumLibrary">
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
@@ -512,8 +1706,8 @@
 <arg>${KU_W_users_mssg}</arg>
 <arg>We revolutionized the way India invests. With your feedback we are making it even better.</arg>
 </arguments>
-<msg timestamp="20201110 19:18:57.969" level="INFO">Verifying element 'xpath=//div[@class='b-users__message']' contains exact text 'We revolutionized the way India invests. With your feedback we are making it even better.'.</msg>
-<status status="PASS" starttime="20201110 19:18:57.968" endtime="20201110 19:18:58.000"></status>
+<msg timestamp="20201111 14:42:06.539" level="INFO">Verifying element 'xpath=//div[@class='b-users__message']' contains exact text 'We revolutionized the way India invests. With your feedback we are making it even better.'.</msg>
+<status status="PASS" starttime="20201111 14:42:06.539" endtime="20201111 14:42:06.569"></status>
 </kw>
 <kw name="Element Text Should Be" library="SeleniumLibrary">
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
@@ -521,15 +1715,15 @@
 <arg>${KU_W_earn_title}</arg>
 <arg>Earn up to 1.5% more returns*</arg>
 </arguments>
-<msg timestamp="20201110 19:18:58.001" level="INFO">Verifying element 'xpath=//div[@class='b-earn__text-content__title']' contains exact text 'Earn up to 1.5% more returns*'.</msg>
-<status status="PASS" starttime="20201110 19:18:58.001" endtime="20201110 19:18:58.028"></status>
+<msg timestamp="20201111 14:42:06.570" level="INFO">Verifying element 'xpath=//div[@class='b-earn__text-content__title']' contains exact text 'Earn up to 1.5% more returns*'.</msg>
+<status status="PASS" starttime="20201111 14:42:06.569" endtime="20201111 14:42:06.597"></status>
 </kw>
 <kw name="Scroll Element Into View" library="SeleniumLibrary">
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
 <arguments>
 <arg>${KU_W_earn_mssg}</arg>
 </arguments>
-<status status="PASS" starttime="20201110 19:18:58.028" endtime="20201110 19:18:58.312"></status>
+<status status="PASS" starttime="20201111 14:42:06.597" endtime="20201111 14:42:06.927"></status>
 </kw>
 <kw name="Element Text Should Be" library="SeleniumLibrary">
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
@@ -537,9 +1731,9 @@
 <arg>${KU_W_earn_mssg}</arg>
 <arg>We pioneered commission free Direct Plan investing.\nEarn from our expertise and don't pay commission ever.</arg>
 </arguments>
-<msg timestamp="20201110 19:18:58.313" level="INFO">Verifying element 'xpath=//div[@class='b-earn__text-content__message']' contains exact text 'We pioneered commission free Direct Plan investing.
+<msg timestamp="20201111 14:42:06.929" level="INFO">Verifying element 'xpath=//div[@class='b-earn__text-content__message']' contains exact text 'We pioneered commission free Direct Plan investing.
 Earn from our expertise and don't pay commission ever.'.</msg>
-<status status="PASS" starttime="20201110 19:18:58.312" endtime="20201110 19:18:58.335"></status>
+<status status="PASS" starttime="20201111 14:42:06.928" endtime="20201111 14:42:06.966"></status>
 </kw>
 <kw name="Element Text Should Be" library="SeleniumLibrary">
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
@@ -547,15 +1741,15 @@ Earn from our expertise and don't pay commission ever.'.</msg>
 <arg>${KU_W_earn_learnLink}</arg>
 <arg>Learn how!</arg>
 </arguments>
-<msg timestamp="20201110 19:18:58.336" level="INFO">Verifying element 'xpath=//a[@class='b-earn__text-content__learn']' contains exact text 'Learn how!'.</msg>
-<status status="PASS" starttime="20201110 19:18:58.335" endtime="20201110 19:18:58.363"></status>
+<msg timestamp="20201111 14:42:06.968" level="INFO">Verifying element 'xpath=//a[@class='b-earn__text-content__learn']' contains exact text 'Learn how!'.</msg>
+<status status="PASS" starttime="20201111 14:42:06.966" endtime="20201111 14:42:07.001"></status>
 </kw>
 <kw name="Scroll Element Into View" library="SeleniumLibrary">
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
 <arguments>
 <arg>${KU_W_start_investButton}</arg>
 </arguments>
-<status status="PASS" starttime="20201110 19:18:58.363" endtime="20201110 19:18:58.645"></status>
+<status status="PASS" starttime="20201111 14:42:07.001" endtime="20201111 14:42:07.293"></status>
 </kw>
 <kw name="Element Text Should Be" library="SeleniumLibrary">
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
@@ -563,23 +1757,23 @@ Earn from our expertise and don't pay commission ever.'.</msg>
 <arg>${KU_W_start_investButton}</arg>
 <arg>Start Investing</arg>
 </arguments>
-<msg timestamp="20201110 19:18:58.645" level="INFO">Verifying element 'xpath=//button[@class='button-primary b-start-invest__text-content__btn']' contains exact text 'Start Investing'.</msg>
-<status status="PASS" starttime="20201110 19:18:58.645" endtime="20201110 19:18:58.668"></status>
+<msg timestamp="20201111 14:42:07.295" level="INFO">Verifying element 'xpath=//button[@class='button-primary b-start-invest__text-content__btn']' contains exact text 'Start Investing'.</msg>
+<status status="PASS" starttime="20201111 14:42:07.294" endtime="20201111 14:42:07.343"></status>
 </kw>
-<status status="PASS" starttime="20201110 19:18:56.552" endtime="20201110 19:18:58.669"></status>
+<status status="PASS" starttime="20201111 14:42:05.024" endtime="20201111 14:42:07.343"></status>
 </kw>
-<status status="PASS" starttime="20201110 19:18:52.554" endtime="20201110 19:18:58.669"></status>
+<status status="PASS" starttime="20201111 14:41:59.759" endtime="20201111 14:42:07.343"></status>
 </kw>
 <tags>
 <tag>TC02</tag>
 </tags>
-<status status="PASS" starttime="20201110 19:18:43.797" endtime="20201110 19:18:58.669" critical="yes"></status>
+<status status="PASS" starttime="20201111 14:41:49.771" endtime="20201111 14:42:07.345" critical="yes"></status>
 </test>
 <kw name="Close All Browsers" library="SeleniumLibrary" type="teardown">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20201110 19:18:58.672" endtime="20201110 19:19:01.656"></status>
+<status status="PASS" starttime="20201111 14:42:07.349" endtime="20201111 14:42:09.577"></status>
 </kw>
-<status status="PASS" starttime="20201110 19:18:43.209" endtime="20201110 19:19:01.657"></status>
+<status status="PASS" starttime="20201111 14:41:49.229" endtime="20201111 14:42:09.577"></status>
 </suite>
 <statistics>
 <total>

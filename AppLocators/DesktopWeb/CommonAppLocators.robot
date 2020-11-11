@@ -2,6 +2,10 @@
 #Desired Capabilities
 ${loginURL}    https://kuvera.in/
 ${BROWSER}     Chrome
+@{e_fndHouse_firstColumn} =    Create List    ADITYA BIRLA SUN LIFE     AXIS     BARODA      BHARTI AXA  BNP PARIBAS   CANARA ROBECO   DSP   EDELWEISS   ESSEL   FRANKLIN TEMPLETON   HDFC   HSBC   ICICI    PRUDENTIAL   IDBI   IDFC   IIFL   INDIA BULLS   INVESCO   ITI   JM FINANCIAL   
+@{e_fndHouse_secondColumn} =    Create List   KOTAK   L&T   LIC   MAHINDRA    MIRAE ASSET     MOTILAL OSWAL    NIPPON INDIA    PGIM INDIA    PPFAS   PRINCIPAL    QUANT   QUANTUM    SBI    SUNDARAM   TATA   TAURUS    UNION    UTI   YES 
+      
+    
 
 #Application Locator 'KU_<locatorName>'
 # Kuvera :: Wealth Management Simplified
@@ -54,5 +58,51 @@ ${KU_W_earn_title} =                xpath=//div[@class='b-earn__text-content__ti
 ${KU_W_earn_mssg} =                 xpath=//div[@class='b-earn__text-content__message']
 ${KU_W_earn_learnLink} =            xpath=//a[@class='b-earn__text-content__learn']
 ${KU_W_start_investButton} =        xpath=//button[@class='button-primary b-start-invest__text-content__btn']
+${KU_W_fundHouse_title} =           xpath=//div[@class='b-fund-house__info__title1']
+${KU_W_fundHouse_subtitle} =        xpath=//div[@class='b-fund-house__info__title2']
+${KU_W_ab_fundHouse} =              xpath=//a[contains(text(),'ADITYA BIRLA SUN LIFE')]
+${KU_W_axis_fundHouse} =            xpath=//a[contains(text(),'AXIS')]
+${KU_W_fundHouse_title} =           xpath=//div[@class='b-fund-house__info__title1']
+${KU_W_fundHouse_subtitle} =        xpath=//div[@class='b-fund-house__info__title2']
+${KU_W_fundHouses_firstColumn} =    xpath=//div[@class='b-fund-house__list__column']/a
+${KU_W_fundHouses_secondColumn} =    xpath=//div[@class='b-fund-house__list__column b-fund-house__list__column--col2']/a
+
+
+      
+      
+      
+           
+      
+      
+      
+      
+      
+      
+
+       
+      
+      
+       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
 
                              
