@@ -9,6 +9,20 @@ Resource    ../../../AppLocators/DesktopWeb/CommonAppLocators.robot
 
 *** Keywords ***
 
+
+Verify Element And Text
+    [Arguments]               ${element}    ${text}
+    Element Text Should Be    ${element}    ${text}
+Verify Page Contains Element
+    [Arguments]                    ${element}
+    Page Should Contain Element    ${element}
+Verify Page Contains Image
+    [Arguments]                  ${image}
+    Page Should Contain Image    ${image}
+Scroll Untill View
+    [Arguments]                 ${element}
+    Scroll Element Into View    ${element}
+
 Wait For Element Visbility
     [Arguments]                      ${element}
     Wait Until Element Is Visible    ${element}    timeout=30
@@ -32,7 +46,7 @@ Verify Widgets From Json
     ${json_data}           Set Variable           ${jsonWidgetsValue} 
     ${json_data1}          Parse Json             ${json_data}
     Log To Console         ${json_data1}          
-   # Page Should Contain Element        ${widget}
+   # Verify Page Contains Element        ${widget}
 
 Kuvera Web Logo Click
     Wait Until Element Is Visible    ${KU_W_close}
@@ -50,15 +64,15 @@ Reading CSV File
     END 
 
 Verify Widgets
-    Page Should Contain Element      ${KU_W_langSwitch}
-    Element Text Should Be           ${KU_W_login}               Log in
-    Element Text Should Be           ${KU_W_signup}              Sign up
-    Element Text Should Be           ${KU_W_coreaua_val}         ₹ 15,000
-    Element Text Should Be           ${KU_W_coreaua_text}        Crore AUA     
-    Element Text Should Be           ${KU_W_cities_val}          3 Lakh
-    Element Text Should Be           ${KU_W_cities_text}         Goals
-    Element Text Should Be           ${KU_W_trans_val}           1.8 Crore
-    Element Text Should Be           ${KU_W_trans_text}          Transactions
+    Verify Page Contains Element      ${KU_W_langSwitch}
+    Verify Element And Text           ${KU_W_login}               Log in
+    Verify Element And Text          ${KU_W_signup}              Sign up
+    Verify Element And Text          ${KU_W_coreaua_val}         ₹ 15,000
+    Verify Element And Text          ${KU_W_coreaua_text}        Crore AUA     
+    Verify Element And Text          ${KU_W_cities_val}          3 Lakh
+    Verify Element And Text          ${KU_W_cities_text}         Goals
+    Verify Element And Text          ${KU_W_trans_val}           1.8 Crore
+    Verify Element And Text          ${KU_W_trans_text}          Transactions
     Verify Mutual Funds Widgets 
     Verify Fund Houses
     Verify Features Widgets 
@@ -67,64 +81,64 @@ Verify Widgets
 
 
 Verify Mutual Funds Widgets  
-    Element Text Should Be          ${KU_W_mf_welcomeTitle}     Investments Simplified
-    Element Text Should Be          ${KU_W_mf_welcomeText}      First free Direct Mutual Fund investing platform. Zero fees, higher returns.
-    Element Text Should Be          ${KU_W_mf_category}         Equity
-    Element Text Should Be          ${KU_W_mf_subcategory}      All 
+    Verify Element And Text         ${KU_W_mf_welcomeTitle}     Investments Simplified
+    Verify Element And Text         ${KU_W_mf_welcomeText}      First free Direct Mutual Fund investing platform. Zero fees, higher returns.
+    Verify Element And Text         ${KU_W_mf_category}         Equity
+    Verify Element And Text         ${KU_W_mf_subcategory}      All 
     Wait For Element Visbility      ${KU_W_fund_list} 
-    Page Should Contain Element     ${KU_W_fund_list} 
-    Element Text Should Be          ${KU_W_loginButton}         Log in
-    Element Text Should Be          ${KU_W_signUpButton}        Sign up
-    Page Should Contain Image       ${KU_W_mf_listIcon}
-    Scroll Element Into View        ${KU_W_explore_MF}
-    Page Should Contain Element     ${KU_W_explore_MF}
-    Scroll Element Into View        ${KU_W_android_image}
-    Page Should Contain Image       ${KU_W_android_image}
-    Page Should Contain Image       ${KU_W_apple_image}
-    Page Should Contain Element     ${KU_W_faqbot_icon}
+    Verify Page Contains Element     ${KU_W_fund_list} 
+    Verify Element And Text         ${KU_W_loginButton}         Log in
+    Verify Element And Text         ${KU_W_signUpButton}        Sign up
+    Verify Page Contains Image       ${KU_W_mf_listIcon}
+    Scroll Untill View        ${KU_W_explore_MF}
+    Verify Page Contains Element     ${KU_W_explore_MF}
+    Scroll Untill View        ${KU_W_android_image}
+    Verify Page Contains Image       ${KU_W_android_image}
+    Verify Page Contains Image     ${KU_W_apple_image}
+    Verify Page Contains Element     ${KU_W_faqbot_icon}
     
 Verify Features Widgets
     
-    Scroll Element Into View        ${KU_W_exploreELSS}
-    Element Text Should Be          ${KU_W_exploreELSS}            Explore ELSS funds
-    Element Text Should Be          ${KU_W_startHarvest}         Start harvesting
-    Element Text Should Be          ${KU_W_switchToday}            Switch Today
+    Scroll Untill View        ${KU_W_exploreELSS}
+    Verify Element And Text         ${KU_W_exploreELSS}            Explore ELSS funds
+    Verify Element And Text         ${KU_W_startHarvest}         Start harvesting
+    Verify Element And Text         ${KU_W_switchToday}            Switch Today
     Click Element                   ${KU_W_next_button} 
     sleep     1s
-    Element Text Should Be          ${KU_W_upgrade_familyAccount}     Upgrade to family account 
-    Element Text Should Be          ${KU_W_consolidate_track}    Consolidate & track
-    Element Text Should Be          ${KU_W_manage_today}              Manage Today
+    Verify Element And Text         ${KU_W_upgrade_familyAccount}     Upgrade to family account 
+    Verify Element And Text         ${KU_W_consolidate_track}    Consolidate & track
+    Verify Element And Text         ${KU_W_manage_today}              Manage Today
     Click Element                   ${KU_W_next_button}
     sleep     1s
-    Element Text Should Be          ${KU_W_set_a_goal}            Set a goal
-    Element Text Should Be          ${KU_W_send_money}            Send money
+    Verify Element And Text         ${KU_W_set_a_goal}            Set a goal
+    Verify Element And Text         ${KU_W_send_money}            Send money
 
 Verify Summary Tab Widgets
 
-     Element Text Should Be              ${KU_W_summary_msg}          Earn up to 35% more in 20 years*
+     Verify Element And Text             ${KU_W_summary_msg}          Earn up to 35% more in 20 years*
      Page Should Contain Link            ${KU_W_summary_learn}    
-     Scroll Element Into View            ${KU_W_care_title}     
-     Element Text Should Be              ${KU_W_care_title}           How much do we care?
-     Scroll Element Into View            ${KU_W_care_info_mssg}
-     Element Text Should Be              ${KU_W_care_info_mssg}       Our CEO, Gaurav Rastogi, invites you to share your questions, comments or feedback. Email him
-     Page Should Contain Element         ${KU_W_advice_Title}          
-     Element Text Should Be              ${KU_W_advice_content}       Our team’s successful money management experience, applied strategies and real-time data-driven approach ensure our recommendations are rooted in reality.
-     Element Text Should Be              ${KU_W_advice_team}          More about our team
-     Scroll Element Into View            ${KU_W_why_startInvesing}
-     Element Text Should Be              ${KU_W_why_startInvesing}       Start investing
-     Page Should Contain Element         ${KU_W_happyUsers}  
-     Scroll Element Into View            ${KU_W_users_love}
-     Element Text Should Be              ${KU_W_users_love}           Our users love us
-     Element Text Should Be              ${KU_W_users_mssg}           We revolutionized the way India invests. With your feedback we are making it even better.
-     Element Text Should Be              ${KU_W_earn_title}           Earn up to 1.5% more returns*
-     Scroll Element Into View            ${KU_W_earn_mssg}
-     Element Text Should Be              ${KU_W_earn_mssg}            We pioneered commission free Direct Plan investing.\nEarn from our expertise and don't pay commission ever.
-     Element Text Should Be              ${KU_W_earn_learnLink}         Learn how!
-     Scroll Element Into View            ${KU_W_start_investButton}
-     Element Text Should Be              ${KU_W_start_investButton}     Start Investing
+     Scroll Untill View            ${KU_W_care_title}     
+     Verify Element And Text             ${KU_W_care_title}           How much do we care?
+     Scroll Untill View            ${KU_W_care_info_mssg}
+     Verify Element And Text             ${KU_W_care_info_mssg}       Our CEO, Gaurav Rastogi, invites you to share your questions, comments or feedback. Email him
+     Verify Page Contains Element         ${KU_W_advice_Title}          
+     Verify Element And Text             ${KU_W_advice_content}       Our team’s successful money management experience, applied strategies and real-time data-driven approach ensure our recommendations are rooted in reality.
+     Verify Element And Text             ${KU_W_advice_team}          More about our team
+     Scroll Untill View            ${KU_W_why_startInvesing}
+     Verify Element And Text             ${KU_W_why_startInvesing}       Start investing
+     Verify Page Contains Element         ${KU_W_happyUsers}  
+     Scroll Untill View            ${KU_W_users_love}
+     Verify Element And Text             ${KU_W_users_love}           Our users love us
+     Verify Element And Text             ${KU_W_users_mssg}           We revolutionized the way India invests. With your feedback we are making it even better.
+     Verify Element And Text             ${KU_W_earn_title}           Earn up to 1.5% more returns*
+     Scroll Untill View            ${KU_W_earn_mssg}
+     Verify Element And Text             ${KU_W_earn_mssg}            We pioneered commission free Direct Plan investing.\nEarn from our expertise and don't pay commission ever.
+     Verify Element And Text             ${KU_W_earn_learnLink}         Learn how!
+     Scroll Untill View            ${KU_W_start_investButton}
+     Verify Element And Text             ${KU_W_start_investButton}     Start Investing
 
 Verify Fund Houses
-        Scroll Element Into View            ${KU_W_fundHouse_title}
+        Scroll Untill View            ${KU_W_fundHouse_title}
 
         #Validation of Fund Houses List on the first column
 
@@ -173,7 +187,7 @@ Landing Page Tabs Navigation
 
  Move To Explore Funds
                           Wait For Element Visbility    ${KU_exploreELSS} 
-                          Scroll Element Into View      ${KU_exploreELSS} 
+                          Scroll Untill View      ${KU_exploreELSS} 
 
 Split String By Adding Separator
     [Arguments]       ${strVar}              ${delimeter}
