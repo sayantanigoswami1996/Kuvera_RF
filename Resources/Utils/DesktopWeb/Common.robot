@@ -78,9 +78,8 @@ Header Navigation
 
     FOR               ${item}                      IN                @{elem}    
     Sleep             5s                           
-    Run keyword If    ['${item.text}'] == ${h1}    Log To Console    ${h1}
-    ELSE 
-    Click Element     ${item} 
+    Run keyword If    ['${item.text}'] == ${h1}    Click Element  ${item}
+    ...  ELSE  Click Element  ${item}
     END
 
 Verify Widgets
@@ -164,11 +163,13 @@ Verify Fund Houses
     FOR                         ${actualFndHouses_1}         IN                                @{fundHouses_list1}
     ${actualFundList1Item}      Set Variable                 ${actualFndHouses_1.text}
     END
+
     FOR                         ${expectedFndHousesList1}    IN                                @{e_fndHouse_firstColumn}
     ${expectedFundList1Item}    Set Variable                 ${expectedFndHousesList1}
     END
     Should be equal             ${actualFundList1Item}       ${expectedFundList1Item}          
-
+    
+    #Lists Should Be Equal    ${fundHouses_list1}    ${List_Of_States_USA-Temp}
     #Validation of Fund Houses List on the second column
 
     @{fundHouses_list2} =       Get WebElements              ${KU_W_fundHouses_secondColumn}
@@ -205,7 +206,6 @@ Get Line From Text File
     Log To Console          ${rightValue} 
     #${uiElement} =  xpath=//*[@class='${rightValue}']
     #Verify Element And Text    ${uiElement}           ${leftValue}
-
 
 Close Web Application
     Close    Application
