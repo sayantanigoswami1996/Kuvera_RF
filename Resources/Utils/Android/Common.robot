@@ -7,9 +7,6 @@ Resource    ../../AppLocators/CommonAppLocators.robot
 
 *** Keywords ***
 
-Wait For Element Visbility
-    [Arguments]                      ${element}
-    Wait Until Element Is Visible    ${element}    timeout=30
 
 Begin Mobile Test Kuvera
                       Open Application                  ${server}                       platformName=${platform}    platformVersion=${platform_version}    deviceName=${device}    automationName=${appium}    appActivity=${app_activity}    appPackage=${app_package}
