@@ -89,9 +89,9 @@ Verify Mutual Funds Widgets
     Wait For Element Visbility  ${KU_W_fund_list} 
     Verify Page Contains Element  ${KU_W_fund_list} 
     Verify Element And Text   ${KU_W_loginButton}  ${e_login}
-    Verify Element And Text   ${KU_W_signUpButton} ${e_signup}
+    Verify Element And Text   ${KU_W_signUpButton}  ${e_signup}
     Verify Element And Text   ${KU_W_coreaua_val}  ${e_coreAUAValue}
-    Verify Element And Text   ${KU_W_coreaua_text} ${e_coreAUAText}       
+    Verify Element And Text   ${KU_W_coreaua_text}  ${e_coreAUAText}       
     Verify Element And Text   ${KU_W_cities_val}  ${e_citiesValue} 
     Verify Element And Text   ${KU_W_cities_text}  ${e_citiesText}
     Verify Element And Text   ${KU_W_trans_val}  ${e_transValue}
@@ -148,13 +148,13 @@ Verify Fund Houses
     Scroll Element Into View  ${KU_W_fundHouse_title}
     #Validation of Fund Houses List on the first column
 
-    @{fundHouses_list1} = Get WebElements  ${KU_W_fundHouses_firstColumn}
-    FOR ${actualFndHouses_1}  IN  @{fundHouses_list1}
-    ${actualFundList1Item}    Set Variable  ${actualFndHouses_1.text}
+    @{fundHouses_list1} =  Get WebElements  ${KU_W_fundHouses_firstColumn}
+    FOR  ${actualFndHouses_1}  IN  @{fundHouses_list1}
+        ${actualFundList1Item}  Set Variable  ${actualFndHouses_1.text}
     END
 
     FOR  ${expectedFndHousesList1}  IN  @{e_fndHouse_firstColumn}
-    ${expectedFundList1Item}  Set Variable  ${expectedFndHousesList1}
+        ${expectedFundList1Item}  Set Variable  ${expectedFndHousesList1}
     END
     Should be equal  ${actualFundList1Item}  ${expectedFundList1Item}     
 
@@ -162,12 +162,12 @@ Verify Fund Houses
     #Validation of Fund Houses List on the second column
 
     @{fundHouses_list2} =  Get WebElements  ${KU_W_fundHouses_secondColumn}
-    FOR ${actualFndHouses_2} IN  @{fundHouses_list2}
-    ${actualFundList2Item}  Set Variable  ${actualFndHouses_2.text}
+    FOR  ${actualFndHouses_2}  IN  @{fundHouses_list2}
+        ${actualFundList2Item}  Set Variable  ${actualFndHouses_2.text}
     END
 
     FOR  ${expectedFndHousesList2}  IN  @{e_fndHouse_secondColumn} 
-    ${expectedFundList2Item}  Set Variable  ${expectedFndHousesList2}
+        ${expectedFundList2Item}  Set Variable  ${expectedFndHousesList2}
     END
     Should be equal  ${actualFundList2Item}  ${expectedFundList2Item} 
 
