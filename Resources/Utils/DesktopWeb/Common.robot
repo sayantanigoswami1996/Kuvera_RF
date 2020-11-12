@@ -49,7 +49,6 @@ Verify Widgets From Json
     ${jsonWidgetsFile}     Load JSON From File    /Users/prathijamoolya/Kuvera/Automation/Kuvera_RF/Resources/TestData/Widgets.json
     ${jsonWidgetsValue}    Get Value From Json    ${jsonWidgetsFile}                                                                   $.Widgets
     ${json_data}           Set Variable           ${jsonWidgetsValue} 
-    ${json_data1}          Parse Json             ${json_data}
     Log To Console         ${json_data1}          
     # Verify Page Contains Element        ${widget}
 
@@ -58,15 +57,6 @@ Kuvera Web Logo Click
     Click Element                    ${KU_W_close}
     Wait Until Element Is Visible    ${KU_W_logo}
     Click Element                    ${KU_W_logo}
-
-Reading CSV File
-    [Arguments]                      ${CSVFilePath}
-    @{widget}                        Read CSV File     ${CSVFilePath}
-    FOR                              ${widget} IN      @{widget}
-    Sleep                            3s
-    Page Should Contain ${widget}
-    Log To Console                   ${widget}
-    END 
 
 Header Navigation
     @{elem} =    Get WebElements    ${KU_W_headers}
@@ -180,32 +170,6 @@ Verify Fund Houses
     ${expectedFundList2Item}    Set Variable                 ${expectedFndHousesList2}
     END
     Should be equal             ${actualFundList2Item}       ${expectedFundList2Item} 
-
-
-Landing Page Tabs Navigation
-    @{tabs} =        Get WebElements    xpath=//div[@class='b-dynamic-tab-header b-widget-tab__tab-header']
-    FOR              ${item}            IN                                                                     @{tabs}    
-    Sleep            5s
-    Click Element    ${item} 
-    END
-
- Move To Explore Funds
-                          Wait For Element Visbility    ${KU_exploreELSS} 
-                          Scroll Untill View            ${KU_exploreELSS} 
-
-Split String By Adding Separator
-    [Arguments]      ${strVar}              ${delimeter}
-    ${strValue} =    String.Split String    ${strVar}       ${delimeter}
-
-Get Line From Text File
-    ${textFileContent} =    Get File            Resources/TestData/Sample.txt
-    ${element} =            Get Line            ${textFileContent}               0
-    ${leftValue} =          Fetch From Left     ${element}                       :
-    ${rightValue} =         Fetch From Right    ${element}                       :
-    Log To Console          ${leftValue}
-    Log To Console          ${rightValue} 
-    #${uiElement} =  xpath=//*[@class='${rightValue}']
-    #Verify Element And Text    ${uiElement}           ${leftValue}
 
 Close Web Application
     Close    Application
