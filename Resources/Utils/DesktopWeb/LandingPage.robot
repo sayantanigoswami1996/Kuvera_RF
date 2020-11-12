@@ -31,20 +31,24 @@ Verify Texts On Loan Landing Page
   Verify Element and Text  ${KU_W_loanCalculatorTitle}  ${e_loan_calculatorTitleText}
    
 
-  #Validation of List of Text Under Loan Calculator Block
+#Validation of List of Text Under Loan Calculator Block
 
-  # @{textListItems} =  Get WebElements     ${KU_W_loanCalculatorMsgList}
-  #       FOR   ${actualLoanCalcultorsLists}     IN      @{textListItems} 
-  #       ${actualLoanCalculatorListsItem}   Set Variable    ${actualLoanCalcultorsLists.text}
-  #       Log To Console   ${actualLoanCalculatorListsItem}
-  #       END
-  #       FOR   ${expectedLoanCalcultorsLists}     IN       @{e_loan_calculatorMsgListItem}
-  #       ${expectedLoanCalculatorListsItem}    Set Variable    ${expectedLoanCalcultorsLists}
-  #       Log To Console    ${expectedLoanCalculatorListsItem} 
-  #       END
-  #       Should Be Equal   ${actualLoanCalculatorListsItem}   ${expectedLoanCalculatorListsItem}
+  @{textListItems} =  Get WebElements  ${KU_W_loanCalculatorMsgList}
+        FOR   ${actualLoanCalcultorsLists}  IN  @{textListItems} 
+        ${actualLoanCalculatorListsItem}  Set Variable  ${actualLoanCalcultorsLists.text}
+        Log To Console  ${actualLoanCalculatorListsItem}
+        END 
+        ${actual_json_object} =  Convert String to JSON  ${actualLoanCalculatorListsItem}
+        Log To Console  ${actual_json_object}
+        ${expected_json_object}=  Get Json Values  D:\Kuvera_Android_Web\Kuvera_RF\Resources\TestData\AffordableLoan.json
+
+        FOR  ${expectedLoanCalcultorsLists}  IN  @{e_loan_calculatorMsgListItem}
+        ${expectedLoanCalculatorListsItem}  Set Variable  ${expectedLoanCalcultorsLists}
+        Log To Console  ${expectedLoanCalculatorListsItem} 
+        END
+        Should Be Equal  ${actualLoanCalculatorListsItem}  ${expectedLoanCalculatorListsItem}
    
-  #Highly Fexible 
+   #Highly Fexible 
 
    Scroll Untill View  ${KU_W_highlyFlexibleTitle}
    Verify Element and Text  ${KU_W_highlyFlexibleTitle}  ${e_loan_highlyFlexibleTitle}

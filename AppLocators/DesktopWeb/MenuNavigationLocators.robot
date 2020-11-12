@@ -1,6 +1,6 @@
 *** Variables ***
 
-@{e_loan_calculatorMsgListItem} =  Create List  up to 80% of your mutual fund portfolio.   MF units remain secure with the fund house.     No fixed loan period. A 1yr loan auto renews on the 12th month.     Loan starting from ₹25,000 up to ₹10cr.   Full disclosure. No hidden fees.
+@{e_loan_calculatorMsgListItem} =  Create List  up to 80% of your mutual fund portfolio.   MF units remain secure with the fund house.     No fixed loan period. A 1yr loan auto renews on the 12th month.     Loan starting from ₹25,000 up to ₹10cr.  Full disclosure. No hidden fees.
 
 #Application Expected Values 'e_<variableName>'
 #Loan Navigation Page Variables

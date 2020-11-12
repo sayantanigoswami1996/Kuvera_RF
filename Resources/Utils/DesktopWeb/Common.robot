@@ -158,7 +158,6 @@ Verify Fund Houses
     END
     Should be equal  ${actualFundList1Item}  ${expectedFundList1Item}     
 
-    #Lists Should Be Equal    ${fundHouses_list1}    ${List_Of_States_USA-Temp}
     #Validation of Fund Houses List on the second column
 
     @{fundHouses_list2} =  Get WebElements  ${KU_W_fundHouses_secondColumn}
