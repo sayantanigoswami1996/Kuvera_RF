@@ -1,6 +1,8 @@
 # Kuvera_RF
 ### Kuvera Automation Project - RobotFramework
 
+### Desktop Web Automation Setup
+
 #### Table of Contents
 
 * [About the Project](https://github.com/MoolyaSoftwareTesting/Kuvera_RF/blob/KU_RF_PE_PHASE1/README.md#about-the-project)
@@ -27,7 +29,6 @@
  #### Pre-requisites
  The major softwares or tools which has to be setup in the machine to run the test script using the tool are listed down below.
  *  Python- v3 and above 
- *  Visual Studio Code or any other preferred IDE 
  *  Pip
  *  Robot Framework
  *  Selenium
@@ -37,59 +38,48 @@
  *  Chromedriver/Geckodriver
  
  #### Installation
+ 
+ * [To install python3 for Ubuntu](https://phoenixnap.com/kb/how-to-install-python-3-ubuntu)
+   
+     * To check the version of python installed
+       cmd : **python --version**
        
  * If not python 3.x.x, Where to find my python location
-   **$ which python**
+   **which python**
    (Copy location)
-   export PATH= /your/python-location
+   export PATH= /your/python-location.
    
-*  To install Pip for Python
-   cmd : **$ python3 get-pip.py**
+*  [Install Pip for Python](https://www.tutorialspoint.com/robot_framework/robot_framework_unix_linux_installation.htm)
+   cmd : **python3 get-pip.py**
      * To check the version of pip installed 
-       cmd : **$ pip3 --version**
-    
-*  To install Robot Framework
-   cmd : **$ pip install robotframework**  
-   
-* Seleium Library
-  cmd: **$ pip install robotframework-seleniumlibrary**
+       cmd : **pip3 --version**
+       
+*  [Install Robot Framework](https://www.tutorialspoint.com/robot_framework/robot_framework_unix_linux_installation.htm)
+   cmd : **pip install robotframework**  
+
+* [Seleium Library](https://pypi.org/project/robotframework-seleniumlibrary/)
+  cmd: **pip install robotframework-seleniumlibrary**
   
-* To install latest Chromedriver/Geckodriver
-  cmd : **$ pip install webdrivermanager**
+* [Install latest Chromedriver/Geckodriver](https://robotframework.org/SeleniumLibrary/)
+  cmd : **pip install webdrivermanager**
         **webdrivermanager firefox chrome --linkpath /usr/local/bin**
         
-* To install Json Library
-  cmd : **$ pip install robotframework-jsonlibrary**
+* [Install Json Library](https://pypi.org/project/robotframework-jsonlibrary/)
+  cmd : **pip install robotframework-jsonlibrary**
   
-* To install Json Validator
-  cmd : **$ pip install robotframework-jsonvalidator**
-  
-* Ubuntu - https://www.tutorialspoint.com/robot_framework/robot_framework_unix_linux_installation.htm
+* [Install Json Validator](https://pypi.org/project/robotframework-jsonvalidator/)
+  cmd : **pip install robotframework-jsonvalidator**
   
 #### Run Command Details
 
-  Upon installing the above-required software. Follow the below steps to trigger the execution.
-  VScode Extentions: Robot Framework Intellisense FORK
-  * Clone this project (git clone <projecturl.git>)
-  * Open Project in vscode -> vscode Terminal 
-   use **$robot -d Results  Tests/DesktopWeb/PreLoginTests.robot** to trigger the execution.
+  Upon installing the above-required software. Follow the below steps to trigger the execution for web :
+  
+  * Navigate to the respective project directory folde where the project has been cloned using **(git clone <projecturl.git>)** and placed from GitHub.
+  * Launch command prompt
+  * Provide the command as **robot -d Results  Tests/DesktopWeb/PreLoginTests.robot**
+  
     
  #### Execution Results 
  Find the Execution result under ../results/report.html
   
         
-        
-        
-        
-
-
-   
-
-   
-   
-                           
-   
-    
- 
- 
- 
