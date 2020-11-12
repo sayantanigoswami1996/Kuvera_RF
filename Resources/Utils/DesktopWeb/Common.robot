@@ -11,6 +11,7 @@ Resource    ../../../AppLocators/DesktopWeb/CommonAppLocators.robot
 
 Launch URL
     Open Browser    ${loginURL}    ${BROWSER}
+     Maximize Browser Window
 
 Welcome Page Should Be Open
     Title Should Be    ${KU_W_title}

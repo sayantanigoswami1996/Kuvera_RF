@@ -10,6 +10,5 @@ Suite Teardown    Close All Browsers
 *** Test Cases ***
 Landing Page Widgets Verfication Test
     Kuvera Web Logo Click
-    Header Navigation
-    #Verify Widgets
+    Verify Widgets
     
