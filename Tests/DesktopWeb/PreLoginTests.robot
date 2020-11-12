@@ -8,6 +8,7 @@ Suite Teardown    Close All Browsers
 
 #robot -d Results Tests/DesktopWeb/PreLoginTests.robot
 
+<<<<<<< HEAD
 *** Test Cases ***
 Menu Navigation
     [Tags]         TC03
@@ -33,4 +34,15 @@ Valid Login
 
  
 
+=======
+Suite Setup      Launch URL 
+Suite Teardown    Close All Browsers
 
+#robot -d Results Tests/DesktopWeb/PreLoginTests.robot
+>>>>>>> KU_RF_PE_PHASE1
+
+*** Test Cases ***
+Landing Page Widgets Verfication Test
+    Kuvera Web Logo Click
+    Verify Widgets
+    
