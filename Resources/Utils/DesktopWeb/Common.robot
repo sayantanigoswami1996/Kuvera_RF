@@ -49,17 +49,9 @@ Get Json Values
 Verify Widgets From Json
     ${jsonWidgetsFile}     Load JSON From File    /Users/prathijamoolya/Kuvera/Automation/Kuvera_RF/Resources/TestData/Widgets.json
     ${jsonWidgetsValue}    Get Value From Json    ${jsonWidgetsFile}                                                                   $.Widgets
-<<<<<<< HEAD
-      # Log To Console         ${jsonWidgetsValue}
-    ${json_data}           Set Variable           ${jsonWidgetsValue} 
-    ${json_data1}          Parse Json             ${json_data}
-    Log To Console         ${json_data1}          
-   # Verify Page Contains Element        ${widget}
-=======
     ${json_data}           Set Variable           ${jsonWidgetsValue} 
     Log To Console         ${json_data1}          
     # Verify Page Contains Element        ${widget}
->>>>>>> KU_RF_PE_PHASE1
 
 Kuvera Web Logo Click
     Wait Until Element Is Visible    ${KU_W_close}
