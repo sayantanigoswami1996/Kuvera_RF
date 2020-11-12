@@ -152,7 +152,7 @@ Verify Fund Houses
         FOR    ${expectedFndHousesList1}   IN      @{e_fndHouse_firstColumn}
         ${expectedFundList1Item}  Set Variable      ${expectedFndHousesList1}
         END
-        Should be equal    ${actualFundList1Item}   ${expectedFundList1Item}  
+        Should Be Equal    ${actualFundList1Item}   ${expectedFundList1Item}  
 
         #Validation of Fund Houses List on the second column
 
@@ -163,7 +163,7 @@ Verify Fund Houses
         FOR    ${expectedFndHousesList2}   IN     @{e_fndHouse_secondColumn} 
         ${expectedFundList2Item}  Set Variable  ${expectedFndHousesList2}
         END
-        Should be equal    ${actualFundList2Item}   ${expectedFundList2Item} 
+        Should Be Equal   ${actualFundList2Item}   ${expectedFundList2Item} 
 
 
      
