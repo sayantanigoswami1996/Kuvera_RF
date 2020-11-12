@@ -4,8 +4,40 @@ ${loginURL}    https://kuvera.in/
 ${BROWSER}     Chrome
 
 #Application Expected Values 'KU_<locatorName>'
-${e_login} =                    Log in 
-${e_signup} =                   Sign up 
+${e_login} =                      Log in 
+${e_signup} =                     Sign up 
+${e_mfWelcomeTitle} =             Investments Simplified
+${e_mf_welcomeText} =             First free Direct Mutual Fund investing platform. Zero fees, higher returns.
+${e_mfCategory} =                 Equity
+${e_mfSubCategory} =              All
+${e_startInvestingBtn} =          Start Investing
+${e_exploreELSSfundsBtn} =        Explore ELSS funds
+${e_startHarvestingBtn} =         Start harvesting
+${e_switchTodayBtn} =             Switch Today
+${e_upgradeFamilyAccountBtn} =    Upgrade to family account
+${e_consolidateTrackBtn} =        Consolidate & track
+${e_manageTodayBtn} =             Manage Today
+${e_setAGoalBtn} =                Set a goal
+${e_sendMoneyBtn} =               Send money
+${e_summaryHeader} =              Earn up to 35% more in 20 years*
+${e_careTitle} =                  How much do we care?
+${e_careInfoMsg} =                Our CEO, Gaurav Rastogi, invites you to share your questions, comments or feedback. Email him
+${e_adviceContent} =              Our team’s successful money management experience, applied strategies and real-time data-driven approach ensure our recommendations are rooted in reality.
+${e_adviceTeam} =                 More about our team
+${e_emailLink} =                  Email him
+${e_usersLove} =                  Our users love us
+${e_usersMsg} =                   We revolutionized the way India invests. With your feedback we are making it even better.
+${e_earnTitle} =                  Earn up to 1.5% more returns*
+${e_earnMsg} =                    We pioneered commission free Direct Plan investing.\nEarn from our expertise and don't pay commission ever.
+${e_earnLearnLink} =              Learn how!
+${e_coreAUAValue} =               ₹ 15,000
+${e_coreAUAText} =                Crore AUA       
+${e_citiesValue} =                3 Lakh
+${e_citiesText} =                 Goals
+${e_transValue} =                 1.8 Crore
+${e_transText} =                  Transactions
+
+
 @{e_fndHouse_firstColumn} =     Create List    ADITYA BIRLA SUN LIFE    AXIS    BARODA    BHARTI AXA    BNP PARIBAS    CANARA ROBECO    DSP             EDELWEISS     ESSEL    FRANKLIN TEMPLETON    HDFC     HSBC       ICICI    PRUDENTIAL    IDBI    IDFC      IIFL     INDIA BULLS    INVESCO    ITI    JM FINANCIAL    
 @{e_fndHouse_secondColumn} =    Create List    KOTAK                    L&T     LIC       MAHINDRA      MIRAE ASSET    MOTILAL OSWAL    NIPPON INDIA    PGIM INDIA    PPFAS    PRINCIPAL             QUANT    QUANTUM    SBI      SUNDARAM      TATA    TAURUS    UNION    UTI            YES 
 
@@ -15,7 +47,7 @@ ${e_signup} =                   Sign up
 ${KU_W_title}            Kuvera - Direct Mutual Funds | Stocks | Loans | Gold | Remit on Kuvera- Wealth Management Simplified
 ${KU_W_logo} =           xpath=//*[@class='b-header__content__logo']
 ${KU_W_close} =          xpath=//button[@class='button-primary b-regulatory-disclosure__btn']
-${KU_W_headers} =       xpath=//*[@class='b-header__content__middle']
+${KU_W_headers} =        xpath=//*[@class='b-header__content__middle']
 ${KU_W_exploreELSS} =    xpath=//button[contains(text(),'Explore ELSS funds')]
 ${KU_W_login} =          xpath=//*[@class='b-header__content__right__signin']
 ${KU_W_signup} =         xpath=//*[@class='b-header__content__right__singup']
@@ -51,8 +83,8 @@ ${KU_W_send_money} =               xpath=//button[contains(text(),'Send money')]
 ${KU_W_summary_msg} =              xpath=//div[@class='b-feature-summary__percent__summary__msg__heading']
 ${KU_W_summary_learn} =            xpath=//a[@class='b-feature-summary__percent__summary__learn']
 ${KU_W_care_title} =               xpath=//div[@class='b-care__title']
-${KU_W_care_info_mssg} =           xpath=//div[@class='b-care__info__message']
-${KU_W_care_info_email} =          xpath=//a[@class='b-care__info__email']
+${KU_W_care_info_msg} =            xpath=//div[@class='b-care__info__message']
+${KU_W_careInfoEmailLink} =        xpath=//a[@class='b-care__info__email']
 ${KU_W_advice_Title} =             xpath=//div[@class='b-why-kuvera__content__messages__grid1__advice__title']
 ${KU_W_advice_content} =           xpath=//div[@class='b-why-kuvera__content__messages__grid1__advice__content']
 ${KU_W_advice_team} =              xpath=//a[@class='b-why-kuvera__content__messages__grid1__advice__team']
@@ -60,9 +92,9 @@ ${KU_W_why_startInvesing} =        xpath=//button[@class='button-primary b-why-k
 
 ${KU_W_happyUsers} =                 xpath=//div[@class='b-users__happy-user']
 ${KU_W_users_love} =                 xpath=//div[@class='b-users__love']
-${KU_W_users_mssg} =                 xpath=//div[@class='b-users__message']
+${KU_W_users_msg} =                  xpath=//div[@class='b-users__message']
 ${KU_W_earn_title} =                 xpath=//div[@class='b-earn__text-content__title']
-${KU_W_earn_mssg} =                  xpath=//div[@class='b-earn__text-content__message']
+${KU_W_earn_msg} =                   xpath=//div[@class='b-earn__text-content__message']
 ${KU_W_earn_learnLink} =             xpath=//a[@class='b-earn__text-content__learn']
 ${KU_W_start_investButton} =         xpath=//button[@class='button-primary b-start-invest__text-content__btn']
 ${KU_W_fundHouse_title} =            xpath=//div[@class='b-fund-house__info__title1']

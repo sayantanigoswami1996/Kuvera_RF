@@ -35,6 +35,10 @@ Scroll Untill View
     [Arguments]                 ${element}     
     Scroll Element Into View    ${element} 
 
+Verify Page Contains Link
+    [Arguments]                 ${link}      ${text}
+    Page Should Contain Link    ${link}      ${text}
+
 Get Json Values
     [Arguments]     ${jsonPath}            ${jsonFilePath}
     ${jsonFile}     Load JSON From File    ${jsonFilePath}
@@ -66,11 +70,11 @@ Reading CSV File
 
 Header Navigation
     @{elem} =    Get WebElements    ${KU_W_headers}
-    ${h1}        Get Json Values    $.MenuHeaders[0]                                     Resources/TestData/Headers.json
-    ${h2}        Get Json Values    $.MenuHeaders[1]                                     Resources/TestData/Headers.json
-    ${h3}        Get Json Values    $.MenuHeaders[2]                                     Resources/TestData/Headers.json
-    ${h4}        Get Json Values    $.MenuHeaders[3]                                     Resources/TestData/Headers.json
-    ${h5}        Get Json Values    $.MenuHeaders[4]                                     Resources/TestData/Headers.json
+    ${h1}        Get Json Values    $.MenuHeaders[0]    Resources/TestData/Headers.json
+    ${h2}        Get Json Values    $.MenuHeaders[1]    Resources/TestData/Headers.json
+    ${h3}        Get Json Values    $.MenuHeaders[2]    Resources/TestData/Headers.json
+    ${h4}        Get Json Values    $.MenuHeaders[3]    Resources/TestData/Headers.json
+    ${h5}        Get Json Values    $.MenuHeaders[4]    Resources/TestData/Headers.json
 
     FOR               ${item}                      IN                @{elem}    
     Sleep             5s                           
@@ -88,15 +92,21 @@ Verify Widgets
 Verify Mutual Funds Widgets
     Verify Page Contains Element    ${KU_W_langSwitch}
     Verify Element And Text         ${KU_W_login}              ${e_login}
-    Verify Element And Text         ${KU_W_signup}             Sign up
-    Verify Element And Text         ${KU_W_mf_welcomeTitle}    Investments Simplified
-    Verify Element And Text         ${KU_W_mf_welcomeText}     First free Direct Mutual Fund investing platform. Zero fees, higher returns.
-    Verify Element And Text         ${KU_W_mf_category}        Equity
-    Verify Element And Text         ${KU_W_mf_subcategory}     All 
+    Verify Element And Text         ${KU_W_signup}             ${e_signup}
+    Verify Element And Text         ${KU_W_mf_welcomeTitle}    ${e_mfWelcomeTitle}
+    Verify Element And Text         ${KU_W_mf_welcomeText}     ${e_mf_welcomeText}
+    Verify Element And Text         ${KU_W_mf_category}        ${e_mfCategory} 
+    Verify Element And Text         ${KU_W_mf_subcategory}     ${e_mfSubCategory}
     Wait For Element Visbility      ${KU_W_fund_list} 
     Verify Page Contains Element    ${KU_W_fund_list} 
-    Verify Element And Text         ${KU_W_loginButton}        Log in
-    Verify Element And Text         ${KU_W_signUpButton}       Sign up
+    Verify Element And Text         ${KU_W_loginButton}        ${e_login}
+    Verify Element And Text         ${KU_W_signUpButton}       ${e_signup}
+    Verify Element And Text           ${KU_W_coreaua_val}         ${e_coreAUAValue}
+    Verify Element And Text           ${KU_W_coreaua_text}        ${e_coreAUAText}     
+    Verify Element And Text           ${KU_W_cities_val}          ${e_citiesValue} 
+    Verify Element And Text           ${KU_W_cities_text}         ${e_citiesText}
+    Verify Element And Text           ${KU_W_trans_val}           ${e_transValue}
+    Verify Element And Text           ${KU_W_trans_text}          ${e_transText}
     Verify Page Contains Image      ${KU_W_mf_listIcon}
     Scroll Element Into View        ${KU_W_explore_MF}
     Verify Page Contains Element    ${KU_W_explore_MF}
@@ -108,45 +118,47 @@ Verify Mutual Funds Widgets
 Verify Features Widgets
 
     Scroll Element Into View    ${KU_W_exploreELSS}
-    Verify Element And Text     ${KU_W_exploreELSS}              Explore ELSS funds
-    Verify Element And Text     ${KU_W_startHarvest}             Start harvesting
-    Verify Element And Text     ${KU_W_switchToday}              Switch Today
+    Verify Element And Text     ${KU_W_exploreELSS}              ${e_exploreELSSfundsBtn}
+    Verify Element And Text     ${KU_W_startHarvest}             ${e_startHarvestingBtn} 
+    Verify Element And Text     ${KU_W_switchToday}              ${e_switchTodayBtn}
     Click Element               ${KU_W_next_button} 
     sleep                       1s
-    Verify Element And Text     ${KU_W_upgrade_familyAccount}    Upgrade to family account 
-    Verify Element And Text     ${KU_W_consolidate_track}        Consolidate & track
-    Verify Element And Text     ${KU_W_manage_today}             Manage Today
+    Verify Element And Text     ${KU_W_upgrade_familyAccount}    ${e_upgradeFamilyAccountBtn}
+    Verify Element And Text     ${KU_W_consolidate_track}        ${e_consolidateTrackBtn}
+    Verify Element And Text     ${KU_W_manage_today}             ${e_manageTodayBtn}
     Click Element               ${KU_W_next_button}
     sleep                       1s
-    Verify Element And Text     ${KU_W_set_a_goal}               Set a goal
-    Verify Element And Text     ${KU_W_send_money}               Send money
+    Verify Element And Text     ${KU_W_set_a_goal}               ${e_setAGoalBtn} 
+    Verify Element And Text     ${KU_W_send_money}               ${e_sendMoneyBtn}
 
 Verify Summary Tab Widgets
-    Verify Element And Text         ${KU_W_summary_msg}           Earn up to 35% more in 20 years*
+    Verify Element And Text         ${KU_W_summary_msg}           ${e_summaryHeader}
     Page Should Contain Link        ${KU_W_summary_learn}         
     Scroll Element Into View        ${KU_W_care_title}            
-    Verify Element And Text         ${KU_W_care_title}            How much do we care?
-    Scroll Element Into View        ${KU_W_care_info_mssg}
-    Verify Element And Text         ${KU_W_care_info_mssg}        Our CEO, Gaurav Rastogi, invites you to share your questions, comments or feedback. Email him
+    Verify Element And Text         ${KU_W_care_title}            ${e_careTitle}
+    Scroll Element Into View        ${KU_W_care_info_msg}
+    Verify Element And Text         ${KU_W_care_info_msg}         ${e_careInfoMsg} 
+    Verify Page Contains Link       ${KU_W_careInfoEmailLink}     ${e_emailLink}
     Verify Page Contains Element    ${KU_W_advice_Title}          
-    Verify Element And Text         ${KU_W_advice_content}        Our team’s successful money management experience, applied strategies and real-time data-driven approach ensure our recommendations are rooted in reality.
-    Verify Element And Text         ${KU_W_advice_team}           More about our team
+    Verify Element And Text         ${KU_W_advice_content}        ${e_adviceContent} 
+    Verify Page Contains Link       ${KU_W_advice_team}           ${e_careTitle}
     Scroll Element Into View        ${KU_W_why_startInvesing}
-    Verify Element And Text         ${KU_W_why_startInvesing}     Start investing
+    # Below 'Start investing' should be changed to ${e_startInvestingBtn} once bug is fixed
+    Verify Element And Text         ${KU_W_why_startInvesing}     Start investing 
     Verify Page Contains Element    ${KU_W_happyUsers}            
     Scroll Element Into View        ${KU_W_users_love}
-    Verify Element And Text         ${KU_W_users_love}            Our users love us
-    Verify Element And Text         ${KU_W_users_mssg}            We revolutionized the way India invests. With your feedback we are making it even better.
-    Verify Element And Text         ${KU_W_earn_title}            Earn up to 1.5% more returns*
-    Scroll Element Into View        ${KU_W_earn_mssg}
-    Verify Element And Text         ${KU_W_earn_mssg}             We pioneered commission free Direct Plan investing.\nEarn from our expertise and don't pay commission ever.
-    Verify Element And Text         ${KU_W_earn_learnLink}        Learn how!
+    Verify Element And Text         ${KU_W_users_love}            ${e_usersLove}
+    Verify Element And Text         ${KU_W_users_msg}             ${e_usersMsg}
+    Verify Element And Text         ${KU_W_earn_title}            ${e_earnTitle} 
+    Scroll Element Into View        ${KU_W_earn_msg}
+    Verify Element And Text         ${KU_W_earn_msg}              ${e_earnMsg} 
+    Verify Element And Text         ${KU_W_earn_learnLink}        ${e_earnLearnLink} 
     Scroll Element Into View        ${KU_W_start_investButton}
-    Verify Element And Text         ${KU_W_start_investButton}    Start Investing
+    Verify Element And Text         ${KU_W_start_investButton}    ${e_startInvestingBtn}
 
 Verify Fund Houses
     Scroll Element Into View    ${KU_W_fundHouse_title}
-        #Validation of Fund Houses List on the first column
+    #Validation of Fund Houses List on the first column
 
     @{fundHouses_list1} =       Get WebElements              ${KU_W_fundHouses_firstColumn}
     FOR                         ${actualFndHouses_1}         IN                                @{fundHouses_list1}
@@ -157,7 +169,7 @@ Verify Fund Houses
     END
     Should be equal             ${actualFundList1Item}       ${expectedFundList1Item}          
 
-        #Validation of Fund Houses List on the second column
+    #Validation of Fund Houses List on the second column
 
     @{fundHouses_list2} =       Get WebElements              ${KU_W_fundHouses_secondColumn}
     FOR                         ${actualFndHouses_2}         IN                                 @{fundHouses_list2}

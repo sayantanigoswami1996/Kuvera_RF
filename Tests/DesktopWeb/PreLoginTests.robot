@@ -1,7 +1,6 @@
 *** Settings ***
 Library     SeleniumLibrary
 Resource    ../../Resources/Utils/DesktopWeb/Common.robot
-Resource    ../../Resources/Features/LandingPage.robot
 
 Suite Setup      Launch URL 
 Suite Teardown    Close All Browsers
@@ -11,6 +10,6 @@ Suite Teardown    Close All Browsers
 *** Test Cases ***
 Landing Page Widgets Verfication Test
     Kuvera Web Logo Click
-    Header Navigation
+   # Header Navigation
     Verify Widgets
     
