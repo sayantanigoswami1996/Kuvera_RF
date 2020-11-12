@@ -5,6 +5,7 @@ Library     JsonValidator
 Library     SeleniumLibrary
 Library     String
 Library     OperatingSystem
+Library     Collections
 Resource    ../../../AppLocators/DesktopWeb/CommonAppLocators.robot
 
 *** Keywords ***
@@ -146,9 +147,9 @@ Verify Summary Tab Widgets
 
 Verify Fund Houses
     Scroll Element Into View  ${KU_W_fundHouse_title}
-    #Validation of Fund Houses List on the first column
-
+    
     @{fundHouses_list1} =  Get WebElements  ${KU_W_fundHouses_firstColumn}
+    #Validation of Fund Houses List on the first column
     FOR  ${actualFndHouses_1}  IN  @{fundHouses_list1}
         ${actualFundList1Item}  Set Variable  ${actualFndHouses_1.text}
     END
@@ -158,7 +159,6 @@ Verify Fund Houses
     END
     Should be equal  ${actualFundList1Item}  ${expectedFundList1Item}     
 
-    #Lists Should Be Equal    ${fundHouses_list1}    ${List_Of_States_USA-Temp}
     #Validation of Fund Houses List on the second column
 
     @{fundHouses_list2} =  Get WebElements  ${KU_W_fundHouses_secondColumn}
