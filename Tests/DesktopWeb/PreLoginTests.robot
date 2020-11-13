@@ -2,9 +2,10 @@
 Library     SeleniumLibrary
 Resource    ../../Resources/Utils/DesktopWeb/Common.robot
 Resource    ../../Resources/Utils/DesktopWeb/LandingPage.robot
+Resource    ../../Resources/Utils/DesktopWeb/Loans.robot
 
 Suite Setup  Launch URL 
-Suite Teardown   Close All Browsers
+Suite Teardown  Close All Browsers
 
 #robot -d Results Tests/DesktopWeb/PreLoginTests.robot
 
@@ -14,7 +15,6 @@ Landing Page Widgets Verification Test
     Kuvera Web Logo Click
     Verify Widgets
 Menu Navigation Verification Test
-     [Tags]  TC02
-     Kuvera Web Logo Click
-     Verify Loan Menu Navigation
-    
+    [Tags]  TC02
+    Kuvera Web Logo Click
+    Verify Loan Page

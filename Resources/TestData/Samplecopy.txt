@@ -1,3 +1,0 @@
-UIElementText1:Class
-UIElementText2:Class
-UIElementText3:Class

@@ -9,96 +9,102 @@ Resource    ../../../Resources/Utils/DesktopWeb/Common.robot
 
 *** Keywords ***
 
-Verify Loan Menu Navigation
-  Verify Loan Landing Page Navigation
-  Verify Texts On Loan Landing Page   
+Verify Widgets
+  Verify Mutual Funds Widgets 
+  Verify Fund Houses
+  Verify Features Widgets 
+  Verify Summary Tab Widgets
+
+Verify Mutual Funds Widgets
+  Verify Language Switch , Login and Signup Link
+  Verify Element And Text  ${KU_W_mf_welcomeTitle}  ${e_mfWelcomeTitle}
+  Verify Element And Text  ${KU_W_mf_welcomeText}  ${e_mf_welcomeText}
+  Verify Element And Text  ${KU_W_mf_category}  ${e_mfCategory} 
+  Verify Element And Text  ${KU_W_mf_subcategory}  ${e_mfSubCategory}
+  Wait For Element Visbility  ${KU_W_fund_list} 
+  Verify Page Contains Element  ${KU_W_fund_list} 
+  Verify Element And Text  ${KU_W_loginButton}  ${e_login}
+  Verify Element And Text  ${KU_W_signUpButton}  ${e_signup}
+  Verify Element And Text  ${KU_W_coreaua_val}  ${e_coreAUAValue}
+  Verify Element And Text  ${KU_W_coreaua_text}  ${e_coreAUAText}       
+  Verify Element And Text  ${KU_W_cities_val}  ${e_citiesValue} 
+  Verify Element And Text  ${KU_W_cities_text}  ${e_citiesText}
+  Verify Element And Text  ${KU_W_trans_val}  ${e_transValue}
+  Verify Element And Text  ${KU_W_trans_text}  ${e_transText}
+  Verify Page Contains Image  ${KU_W_mf_listIcon}
+  Scroll Element Into View  ${KU_W_explore_MF}
+  Verify Page Contains Element  ${KU_W_explore_MF}
+  Verify Google Play & Apple Store Icons
+  Verify Page Contains Element  ${KU_W_faqbot_icon}
+
+Verify Features Widgets
+  Scroll Element Into View  ${KU_W_exploreELSS}
+  Verify Element And Text  ${KU_W_exploreELSS}  ${e_exploreELSSfundsBtn}
+  Verify Element And Text  ${KU_W_startHarvest}  ${e_startHarvestingBtn} 
+  Verify Element And Text  ${KU_W_switchToday}  ${e_switchTodayBtn}
+  Click Element               ${KU_W_next_button} 
+  sleep  1s
+  Verify Element And Text  ${KU_W_upgrade_familyAccount}    ${e_upgradeFamilyAccountBtn}
+  Verify Element And Text  ${KU_W_consolidate_track}  ${e_consolidateTrackBtn}
+  Verify Element And Text  ${KU_W_manage_today}  ${e_manageTodayBtn}
+  Click Element  ${KU_W_next_button}
+  sleep  1s
+  Verify Element And Text  ${KU_W_set_a_goal}  ${e_setAGoalBtn} 
+  Verify Element And Text  ${KU_W_send_money}  ${e_sendMoneyBtn}
+
+Verify Summary Tab Widgets
+  Verify Element And Text  ${KU_W_summary_msg}  ${e_summaryHeader}
+  Page Should Contain Link  ${KU_W_summary_learn}         
+  Scroll Element Into View  ${KU_W_care_title}            
+  Verify Element And Text  ${KU_W_care_title}  ${e_careTitle}
+  Scroll Element Into View  ${KU_W_care_info_msg}
+  Verify Element And Text  ${KU_W_care_info_msg}  ${e_careInfoMsg} 
+  Verify Page Contains Link  ${KU_W_careInfoEmailLink}  ${e_emailLink}
+  Verify Page Contains Element  ${KU_W_advice_Title}          
+  Verify Element And Text  ${KU_W_advice_content}  ${e_adviceContent} 
+  Verify Page Contains Link  ${KU_W_advice_team}  ${e_careTitle}
+  Scroll Element Into View  ${KU_W_why_startInvesing}
+  # Below 'Start investing' should be changed to ${e_startInvestingBtn} once bug is fixed
+  Verify Element And Text  ${KU_W_why_startInvesing}     Start investing 
+  Verify Page Contains Element  ${KU_W_happyUsers}            
+  Scroll Element Into View  ${KU_W_users_love}
+  Verify Element And Text  ${KU_W_users_love}  ${e_usersLove}
+  Verify Element And Text  ${KU_W_users_msg}  ${e_usersMsg}
+  Verify Element And Text  ${KU_W_earn_title}  ${e_earnTitle} 
+  Scroll Element Into View  ${KU_W_earn_msg}
+  Verify Element And Text  ${KU_W_earn_msg}  ${e_earnMsg} 
+  Verify Element And Text  ${KU_W_earn_learnLink}  ${e_earnLearnLink} 
+  Scroll Element Into View  ${KU_W_start_investButton}
+  Verify Element And Text  ${KU_W_start_investButton}  ${e_startInvestingBtn}
+
+Verify Fund Houses
+  Scroll Element Into View  ${KU_W_fundHouse_title}
+    
+  @{fundHouses_list1} =  Get WebElements  ${KU_W_fundHouses_firstColumn}
+  #Validation of Fund Houses List on the first column
+  FOR  ${actualFndHouses_1}  IN  @{fundHouses_list1}
+  ${actualFundList1Item}  Set Variable  ${actualFndHouses_1.text}
+  END
+
+  FOR  ${expectedFndHousesList1}  IN  @{e_fndHouse_firstColumn}
+  ${expectedFundList1Item}  Set Variable  ${expectedFndHousesList1}
+  END
+  Should be equal  ${actualFundList1Item}  ${expectedFundList1Item}     
+
+  #Validation of Fund Houses List on the second column
+
+  @{fundHouses_list2} =  Get WebElements  ${KU_W_fundHouses_secondColumn}
+  FOR  ${actualFndHouses_2}  IN  @{fundHouses_list2}
+  ${actualFundList2Item}  Set Variable  ${actualFndHouses_2.text}
+  END
+
+  FOR  ${expectedFndHousesList2}  IN  @{e_fndHouse_secondColumn} 
+  ${expectedFundList2Item}  Set Variable  ${expectedFndHousesList2}
+  END
+  Should be equal  ${actualFundList2Item}  ${expectedFundList2Item} 
 
 
-Verify Loan Landing Page Navigation
-  Click Element  ${KU_W_loanLink}
-  Wait For Element Visbility  ${KU_W_loanHeaderTitle}  
-  Verify Element And Text  ${KU_W_loanHeaderTitle}  ${e_loan_headerTitleText}
-  Verify Element And Text  ${KU_W_loanHeaderMsg}  ${e_loan_headerMsgText} 
-  Verify Element And Text  ${KU_W_loanCheckEligibility}  ${e_loan_checkElibilityBtnText} 
-  Click Element  ${KU_W_loanCheckEligibility}    
-  Wait For Element Visbility  ${KU_W_loginPageTitle}  
-  Verify Element And Text  ${KU_W_loginPageTitle}     ${e_loginPage}
-  Go Back
-  Wait For Element Visbility  ${KU_W_loanCalculatorTitle}   
-
-Verify Texts On Loan Landing Page    
-  Scroll Untill View  ${KU_W_loanCalculatorTitle}
-  Verify Element and Text  ${KU_W_loanCalculatorTitle}  ${e_loan_calculatorTitleText}
-   
-
-#Validation of List of Text Under Loan Calculator Block
-
-  @{textListItems} =  Get WebElements  ${KU_W_loanCalculatorMsgList}
-        FOR   ${actualLoanCalcultorsLists}  IN  @{textListItems} 
-        ${actualLoanCalculatorListsItem}  Set Variable  ${actualLoanCalcultorsLists.text}
-        Log To Console  ${actualLoanCalculatorListsItem}
-        END 
-        ${actual_json_object} =  Convert String to JSON  ${actualLoanCalculatorListsItem}
-        Log To Console  ${actual_json_object}
-        ${expected_json_object}=  Get Json Values  D:\Kuvera_Android_Web\Kuvera_RF\Resources\TestData\AffordableLoan.json
-
-        FOR  ${expectedLoanCalcultorsLists}  IN  @{e_loan_calculatorMsgListItem}
-        ${expectedLoanCalculatorListsItem}  Set Variable  ${expectedLoanCalcultorsLists}
-        Log To Console  ${expectedLoanCalculatorListsItem} 
-        END
-        Should Be Equal  ${actualLoanCalculatorListsItem}  ${expectedLoanCalculatorListsItem}
-   
-   #Highly Fexible 
-
-   Scroll Untill View  ${KU_W_highlyFlexibleTitle}
-   Verify Element and Text  ${KU_W_highlyFlexibleTitle}  ${e_loan_highlyFlexibleTitle}
-   Verify Element and Text  ${KU_W_highlyFlexibleMsg}   ${e_loan_highlyFlexibleMsg}
-
-   #Pay What You Use
-
-   Scroll Untill View  ${KU_W_payForWhatYouUseTitle}
-   Verify Element and Text  ${KU_W_payForWhatYouUseTitle}  ${e_loan_payForWhatYouUseText}
-   Verify Element and Text  ${KU_W_payForWhatYouUseMsg}  ${e_loan_payForWhatYouUseMsgText}
-   
-  # Instant Approval 
-
-   Wait For Element Visbility  ${KU_W_loanRedemptionTitle} 
-   Verify Element and Text  ${KU_W_loanRedemptionTitle}   ${e_loan_redemptionTitleText}
-   Verify Element and Text  ${KU_W_loanRedemptionMsg}   ${e_loan_redemptionMsgText}
-
-
-  # Super Affordable
-
-   Wait For Element Visbility  ${KU_W_saveSuperAffordableTitle}  
-   Scroll Untill View  ${KU_W_saveSuperAffordableTitle}
-   Verify Element and Text  ${KU_W_saveSuperAffordableTitle}  ${e_loan_saveSuperAffordableTitleText} 
-   Verify Element and Text  ${KU_W_saveSuperAffordableMsg}  ${e_loan_saveSuperAffordableMsgText}
-   
-  #Easy Start Saver
-   
-   Wait For Element Visbility  ${KU_W_startSaveTitle}  
-   Scroll Untill View  ${KU_W_startSaveTitle} 
-   Verify Element and Text  ${KU_W_startSaveTitle}   ${e_loan_startSaveTitleText} 
-   Verify Element and Text  ${KU_W_startSaveMsg}   ${e_loan_startSaveMsgText}  
-   Verify Page Contains Image  ${KU_W_flowchartImage1}
-   Verify Element and Text  ${KU_W_image1Description}  ${e_loan_startSaveImage1Text}
-   Verify Page Contains Image  ${KU_W_flowchartImage2} 
-   Verify Element and Text  ${KU_W_image2Description}  ${e_loan_startSaveImage2Text}
-   Verify Page Contains Image  ${KU_W_flowchartImage3} 
-   Verify Element and Text  ${KU_W_image3Description}  ${e_loan_startSaveImage3Text}
-   Verify Page Contains Image  ${KU_W_flowchartImage4} 
-   Verify Element and Text  ${KU_W_image4Description}  ${e_loan_startSaveImage4Text}
-
-   #Get Loan Against MF
-
-   Wait For Element Visbility  ${KU_W_getLoanAgainstMF}  
-   Scroll Untill View   ${KU_W_getLoanAgainstMF}
-   Verify Element and Text  ${KU_W_getLoanAgainstMF}   ${e_loan_getLoanAgainstMFText} 
-   Verify Element and Text  ${KU_W_getLoanAgainstMFMsg}   ${e_loan_getLoanAgainstMFMsgText}
-   Scroll Untill View   ${KU_W_startSaveCheckEligibilityBtn}
-   Verify Element and Text  ${KU_W_startSaveCheckEligibilityBtn}  ${e_loan_startSaveCheckEligibiliyText}
-   
-
+    
 
 
 

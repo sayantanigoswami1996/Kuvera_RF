@@ -2,10 +2,6 @@
 #Desired Capabilities
 ${loginURL}    https://kuvera.in/
 ${BROWSER}     Chrome
-@{e_fndHouse_firstColumn} =    Create List    ADITYA BIRLA SUN LIFE     AXIS     BARODA      BHARTI AXA  BNP PARIBAS   CANARA ROBECO   DSP   EDELWEISS   ESSEL   FRANKLIN TEMPLETON   HDFC   HSBC   ICICI    PRUDENTIAL   IDBI   IDFC   IIFL   INDIA BULLS   INVESCO   ITI   JM FINANCIAL   
-@{e_fndHouse_secondColumn} =    Create List   KOTAK   L&T   LIC   MAHINDRA    MIRAE ASSET     MOTILAL OSWAL    NIPPON INDIA    PGIM INDIA    PPFAS   PRINCIPAL    QUANT   QUANTUM    SBI    SUNDARAM   TATA   TAURUS    UNION    UTI   YES 
-      
-    
 
 #Application Expected Values 'e_<VariableName>'
 ${e_login} =  Log in 
