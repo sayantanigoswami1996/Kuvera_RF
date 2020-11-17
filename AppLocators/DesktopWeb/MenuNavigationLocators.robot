@@ -36,20 +36,21 @@ ${e_loan_startSaveCheckEligibiliyText} =  Check your eligibility
 ${e_remit_screenTitle} =  A cheaper & faster way to send money home
 ${e_remit_screenTitleDesc} =  Now invest easily through Kuvera, or send money to your loved ones. With our partner TransferWise, you can transfer money to India for the lowest-cost. It is simple and faster than any traditional provider.
 ${e_remit_transferNowBtn} =  Transer now
-${e_remit_whyTransferWiseList} =  Why TransferWise?  No hidden fees  Up to 8x cheaper than banks  Trusted by 7 million users  Fast way to send money  Mid-market exchange rate
+#${e_remit_whyTransferWiseList} =  Why TransferWise?  No hidden fees  Up to 8x cheaper than banks  Trusted by 7 million users  Fast way to send money  Mid-market exchange rate
 ${e_remit_transferWiseSignupTitle} =  Transfer Money Online | Send Money Abroad with TransferWise - Sign up
 ${e_remit_transferWiseCross-borderTitle} =  Making cross-border investments with Kuvera seamless and easy | TransferWise - TransferWise
+@{e_remit_whyTransferWiseList} =  No hidden fees  Up to 8x cheaper than banks  Trusted by 7 million users  Fast way to send money  Mid-market exchange rate
 
 #Application Locator 'KU_<locatorName>'
 #Kuvera :: Wealth Management Simplified
 #Loan Navigation Page
-${KU_W_loanLink} =  xpath=//a[@class='b-header__content__las']
 ${KU_W_loanHeaderTitle} =  xpath=//div[@class='b-header__title']
 ${KU_W_loanHeaderMsg} =  xpath=//div[contains(text(),'Let your investments work for you. The only loan a')]
 ${KU_W_loanCheckEligibility} =  class=b-state-save-btn__text
 ${KU_W_loginPageTitle} =  xpath=//div[contains(text(),'Login. Start Investing.')]
+${KU_W_loanLink} =  xpath=//a[@class='b-header__content__las']
 ${KU_W_loanCalculatorTitle} =  xpath=//div[@class='b-calculator__text-content']/div[1]
-${KU_W_loanCalculatorMsgList} =  xpath=//div[@class='b-calculator__text-content']/div[2]
+${KU_W_loanCalculatorMsgList} =  xpath=//ul[@class='b-calculator__list']/li
 ${KU_W_highlyFlexibleTitle} =  xpath=//div[@class='b-withdraw-30min__title']  
 ${KU_W_highlyFlexibleMsg} =  xpath=//div[@class='b-withdraw-30min__msg']/p
 ${KU_W_payForWhatYouUseTitle} =  xpath=(//div[@class='b-sleep__text-content']/div)[1] 
@@ -96,10 +97,4 @@ ${KU_W_remit_calculatorTarget} =  xpath=//*[@id="tw-calculator-target"]
       
       
       
-      
-      
-      
-      
-
-
                              

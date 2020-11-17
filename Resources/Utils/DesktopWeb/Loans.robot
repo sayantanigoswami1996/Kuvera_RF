@@ -21,11 +21,9 @@ Verify Loan Page
   Scroll Untill View  ${KU_W_loanCalculatorTitle}
   Verify Element and Text  ${KU_W_loanCalculatorTitle}  ${e_loan_calculatorTitleText}
    
-
-#Validation of List of Text Under Loan Calculator Block
-  @{actualListItems} =  Get WebElements  ${KU_W_loanCalculatorMsgList}
-  
-  #Compare Lists  ${actualListItems}  ${e_loan_calculatorMsgListItem}
+  #Validation of List of Text Under Loan Calculator Block
+  @{actualListItems} =  Get WebElements  ${KU_W_loanCalculatorMsgList} 
+  Compare Lists  ${actualListItems}  ${e_loan_calculatorMsgListItem}
 
   #Highly Fexible 
   Scroll Untill View  ${KU_W_highlyFlexibleTitle}

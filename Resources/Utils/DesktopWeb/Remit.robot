@@ -24,9 +24,13 @@ Verify Remit Page
     Verify Element And Text  ${KU_W_remit_screenTitleDesc}  ${e_remit_screenTitleDesc}
     # Verify transerwise next steps 
     Verify Transfer Now 
-
     Scroll Untill View  ${KU_W_remit_whyTransferWise}
     Scroll Untill View  ${KU_W_remit_knowMoreBtn}
+    @{actualListItems} =  Get WebElements  ${KU_W_remit_whyTransferWiseList} 
+    Compare Lists  ${actualListItems}  ${e_remit_whyTransferWiseList}
+    Click Element  ${KU_W_remit_knowMoreBtn}
+    Switch To Window Verify Title And Close  ${e_remit_transferWiseCross-borderTitle}
+
     # Verify Third party - Transferwise redirection
     Switch To Frame  ${KU_W_remit_calculator_iFrame}
     Sleep  3s
@@ -34,8 +38,8 @@ Verify Remit Page
     Scroll Untill View  ${KU_W_remit_calculatorTarget}
     Verify Page Contains Element  ${KU_W_remit_calculatorTarget}
     Switch To Window Verify Title And Close  ${e_remit_transferWiseSignupTitle} 
-    Click Element  ${KU_W_remit_knowMoreBtn}
-    Switch To Window Verify Title And Close  ${e_remit_transferWiseCross-borderTitle}
+
     Scroll Untill View  ${KU_W_remit_transferNowBtn}
     Verify Page Contains Element  ${KU_W_transferWiseVideo}
+    # Verify transerwise next steps 
     Verify Transfer Now 
