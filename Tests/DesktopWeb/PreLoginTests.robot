@@ -21,6 +21,6 @@ Landing Page Widgets Verification Test
 Menu Navigation Verification Test
     [Tags]  TC02
     Kuvera Web Logo Click
-    # Verify Loan Page
-    # Verify Insure Page
+    Verify Loan Page
     Verify Remit Page
+    Verify Insure Page
