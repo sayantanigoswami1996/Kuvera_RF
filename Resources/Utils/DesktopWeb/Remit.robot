@@ -24,7 +24,7 @@ Verify Remit Page
     Verify Element And Text  ${KU_W_remit_screenTitle}  ${e_remit_screenTitle} 
     Verify Element And Text  ${KU_W_remit_screenTitleDesc}  ${e_remit_screenTitleDesc}
     # Verify transerwise next steps 
-    Verify Transfer Now 
+    Verify Transfer Now   ${KU_W_remit_transferNowBtn}
     Scroll Untill View  ${KU_W_remit_whyTransferWise}
     Scroll Untill View  ${KU_W_remit_knowMoreBtn}
     @{actualListItems} =  Get WebElements  ${KU_W_remit_whyTransferWiseList} 
@@ -43,5 +43,5 @@ Verify Remit Page
     Scroll Untill View  ${KU_W_remit_transferNoBottomBtn} 
     Verify Page Contains Element  ${KU_W_transferWiseVideo}
     # Verify transerwise next steps 
-    Verify Transfer Now 
+    Verify Transfer Now  ${KU_W_remit_transferNoBottomBtn}
     
