@@ -84,6 +84,7 @@ Verify Fund Houses
   Compare Lists  ${fundHouses_list1}  ${e_fndHouse_firstColumn}
   #Validation of Fund Houses List on the second column
   @{fundHouses_list2} =  Get WebElements  ${KU_W_fundHouses_secondColumn}
+<<<<<<< HEAD
   Compare Lists  ${fundHouses_list2}  ${e_fndHouse_secondColumn}
 
 
@@ -95,3 +96,6 @@ Verify Fund Houses
 
   
 
+=======
+  Compare Lists  ${fundHouses_list2}  ${e_fndHouse_secondColumn}
+>>>>>>> KU_RF_PE_PHASE1

@@ -1,6 +1,6 @@
 *** Variables ***
 #Desired Capabilities
-${loginURL}    https://kuvera.in/
+${URL}    https://kuvera.in/
 ${BROWSER}     Chrome
 
 #Application Expected Values 'e_<VariableName>'

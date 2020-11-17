@@ -10,7 +10,7 @@ Resource    ../../../AppLocators/DesktopWeb/CommonAppLocators.robot
 
 *** Keywords ***
 Launch URL
-    Open Browser  ${loginURL}  ${BROWSER}
+    Open Browser  ${URL}  ${BROWSER}  alias=Kuvera
     Maximize Browser Window
 
 Welcome Page Should Be Open
@@ -39,6 +39,30 @@ Scroll Untill View
 Verify Page Contains Link
     [Arguments]  ${link}  ${text}
     Page Should Contain Link  ${link}  ${text}
+
+Compare Lists 
+    [Arguments]  ${actualList}   ${expectedList}
+    #Get list item from actual list
+    FOR  ${actualListItems}  IN  @{actualList}
+    ${actualListItem}  Set Variable  ${actualListItems.text}
+    END
+    #Get list item from expected list
+    FOR  ${expectedListItems}  IN  @{expectedList}
+    ${expectedListItem}  Set Variable  ${expectedListItems}
+    END
+    #Compare two list items
+    Should Be Equal  ${actualListItem}  ${expectedListItem}  
+
+Switch To Window Verify Title And Close
+    [Arguments]  ${title}
+    Switch Window  locator=NEW
+    Title Should Be  ${title}
+    Close Window
+    Switch Window  browser=Kuvera
+
+Switch To Frame
+    [Arguments]  ${element}
+    Select Frame  ${element}
 
 Get Json Values
     [Arguments]  ${jsonPath}  ${jsonFilePath}
@@ -90,19 +114,20 @@ Compare Lists
     Should Be Equal  ${actualListItem}  ${expectedListItem}    
 
 Header Navigation
+    ${invest}  Get Json Values  $.MenuHeaders[0]  Resources/TestData/Headers.json
+    ${loans}  Get Json Values  $.MenuHeaders[1]  Resources/TestData/Headers.json
+    ${insure}  Get Json Values  $.MenuHeaders[2]  Resources/TestData/Headers.json
+    ${remit}  Get Json Values  $.MenuHeaders[3]  Resources/TestData/Headers.json
+    ${features}  Get Json Values  $.MenuHeaders[4]  Resources/TestData/Headers.json
+
     @{elem} =  Get WebElements  ${KU_W_headers}
-    ${h1}  Get Json Values  $.MenuHeaders[0]  Resources/TestData/Headers.json
-    ${h2}  Get Json Values  $.MenuHeaders[1]  Resources/TestData/Headers.json
-    ${h3}  Get Json Values  $.MenuHeaders[2]  Resources/TestData/Headers.json
-    ${h4}  Get Json Values  $.MenuHeaders[3]  Resources/TestData/Headers.json
-    ${h5}  Get Json Values  $.MenuHeaders[4]  Resources/TestData/Headers.json
 
-    FOR  ${item}  IN  @{elem}    
-    Wait For Element Visbility  ${item}                        
-    Run keyword If  ['${item.text}'] == ${h1}  Click Element  ${item}
-    ...   ELSE  Click Element  ${item}
+    FOR  ${item}  IN  @{elem}       
+    ${header}  Set Variable  ${item.text}     
+    Sleep  3s              
+    Run keyword If  ['${header}'] == ${invest}  Log To Console  PENDING
+    ...   ELSE  Log To Console  InProgress
     END
-
 
 Close Web Application
     Close All Browsers
