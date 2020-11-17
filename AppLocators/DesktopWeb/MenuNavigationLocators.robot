@@ -29,7 +29,22 @@ ${e_loan_getLoanAgainstMFText} =  Get loan against Mutual Funds
 ${e_loan_getLoanAgainstMFMsgText} =  An affordable, quick, and flexible loan. All paperless.
 ${e_loan_startSaveCheckEligibiliyText} =  Check your eligibility
 
-#Insure Page Variables
+#Insure Navigation Page Variables
+${e_insure_headerTitleText} =  Fair and friendly health insurance is here
+${e_insure_headerMsgText} =  ₹50L cover starting at ₹900/month*. Secure your loved ones today.
+${e_insure_T&CText} =  *T&C apply
+${e_insure_checkPremiumBtnText} =  Check premium
+${e_insure_costDetailsHeaderText} =  We understand cost
+${e_insure_treatmentTitleText} =  Treatment
+${e_insure_treatmentCostTitleText} =  Est.Cost
+${e_insure_covid19TitleText} =  COVID-19
+${e_insure_covid19CostText} =  ₹8L
+${e_insure_cancerCareTitleText} =  Cancer care
+${e_insure_cancerCareCostText} =  ₹25L
+${e_insure_openHeartSurgeryTitleText} =  Open heart surgery
+${e_insure_openHeartSurgeryCostText} =  ₹20L
+${e_insure_kneeReplacementTitleText} =  Knee replacement
+${e_insure_kneeReplacementCostText} =  ₹4.5L
 
 
 #Remit Page Expected Data
@@ -72,16 +87,38 @@ ${KU_W_image4Description} =  xpath=(//div[@class='b-flow-chart__description'])[4
 ${KU_W_getLoanAgainstMF} =  xpath=//div[@class='b-start-save b-kuvera-get-loan']/div[1]/div[1]
 ${KU_W_getLoanAgainstMFMsg} =  xpath=//div[@class='b-start-save b-kuvera-get-loan']/div[1]/div[2]
 ${KU_W_startSaveCheckEligibilityBtn} =  xpath=//button[@class='button-primary b-start-save__btn b-start-save__btn-desktop']
+  
+#Insure Navigation Page  
+${KU_W_insureLink} =  xpath=//a[@class='b-header__content__insure']
+${KU_W_insureHeaderTitle} =  xpath=(//div[@class='b-health-insurance-landing__title--main'])[1]
+${KU_W_insureHeaderMsg} =  xpath=(//div[@class='b-health-insurance-landing__title--text'])[1]
+${KU_W_termsAndConditions} =  xpath=//span[@class='b-health-insurance-landing__term-condition']
+${KU_W_checkPremiumBtn} =  xpath=(//div[@class='b-health-insurance-landing__cta']/button)[1]
+${KU_W_costDetailsHeaderTitle} =  xpath=//div[@class='b-health-insurance-landing__cost-details--table__text']
+${KU_W_treatmentTitle} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__treatment'])[1]
+${KU_W_treatmentCostTitle} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__cost'])[1]
 
-#Insure Page    
-      
+${KU_W_covid19Cost} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__cost'])[2]
+${KU_W_cancerCareCost} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__cost'])[3]
+${KU_W_OpenHeartSurgeryCost} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__cost'])[4]
+${KU_W_kneeReplacementCost} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__cost'])[5]
+
+${KU_W_covid19Title} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__treatment'])[2]
+${KU_W_cancerCareTitle} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__treatment'])[3]
+${KU_W_heartSurgeryTitle} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__treatment'])[4]
+${KU_W_kneeReplacmentTitle} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__treatment'])[5]
+
+${KU_W_covid19Image} =  xpath=(//img[@class='b-health-insurance-landing__cost-details--img'])[1] 
+${KU_W_cancerCareImage} =  xpath=(//img[@class='b-health-insurance-landing__cost-details--img'])[2] 
+${KU_W_openHeartSurgeryImage} =  xpath=(//img[@class='b-health-insurance-landing__cost-details--img'])[3] 
+${KU_W_kneeReplacementImage} =  xpath=(//img[@class='b-health-insurance-landing__cost-details--img'])[4] 
       
       
 #Remit Page    
 ${KU_W_remit_Link} =  xpath=//a[@class='b-header__content__remit']
 ${KU_W_remit_screenTitle} =  xpath=//*[@class='b-introduction__desc__title']
 ${KU_W_remit_screenTitleDesc} =  xpath=//*[@class='b-introduction__desc__content']      
-${KU_W_remit_transferNowBtn} =  xpath=//button[@class='button-primary b-introduction__btn-transfer__item']      
+${KU_W_remit_transferNowTopBtn} =  xpath=//button[@class='button-primary b-introduction__btn-transfer__item']      
 ${KU_W_remit_whyTransferWise} =  xpath=//*[@class='b-why-transferwise b-transferwise__calculator-why__item__content']/div    
 ${KU_W_remit_whyTransferWiseList} =  xpath=//*[@class='b-why-transferwise__list']/div     
 ${KU_W_transferWiseStepsModal} =  xpath=//*[@class='b-transferwise-transfer-step__title__items__1']
@@ -93,8 +130,5 @@ ${KU_W_remit_calculator_iFrame} =  xpath=//iFrame[@class='b-calculator__iframe-t
 ${KU_W_remit_sendMoneyBtn} =  xpath=(//button[@type='button'])[3]      
 ${KU_W_remit_knowMoreBtn} =  xpath=//button[@class='button-primary b-why-transferwise__btn-know-more']  
 ${KU_W_remit_calculatorTarget} =  xpath=//*[@id="tw-calculator-target"]
-
-      
-      
-      
-                             
+${KU_W_remit_transferNoBottomBtn} =  xpath=//button[@class='button-primary b-how__btn-transfer']
+    
