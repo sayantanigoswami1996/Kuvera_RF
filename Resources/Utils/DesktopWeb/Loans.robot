@@ -10,6 +10,7 @@ Resource    ../../../Resources/Utils/DesktopWeb/Common.robot
 *** Keywords ***
 
 Verify Loan Page
+
   Click Element  ${KU_W_loanLink}
   Wait For Element Visbility  ${KU_W_loanHeaderTitle}  
   Verify Element And Text  ${KU_W_loanHeaderTitle}  ${e_loan_headerTitleText}

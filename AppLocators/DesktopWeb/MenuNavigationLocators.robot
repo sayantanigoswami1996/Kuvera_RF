@@ -48,7 +48,35 @@ ${e_insure_openHeartSurgeryTitleText} =  Open heart surgery
 ${e_insure_openHeartSurgeryCostText} =  ₹20L
 ${e_insure_kneeReplacementTitleText} =  Knee replacement
 ${e_insure_kneeReplacementCostText} =  ₹4.5L
+${e_insure_grpHealthInsuranceTitleText} =  Thus we built a Group health insurance with Bharti AXA GIC
+${e_insure_grpHealthInsuranceSubTitleText} =  that works for you and your loved ones by keeping:
+${e_insure_covid19CardText} =  COVID-19 protection
+${e_insure_covid19MsgText} =   Corona treatment covered after 30 days of policy issuance.
+${e_insure_roomrentCardText} =  No room rent capping
+${e_insure_roomrentMsgText} =  Get a single A/C room across all hospitals chains in India.
+${e_insure_treatmentCappingCardText} =  No treatment capping
+${e_insure_treatmentCappingMsgText} =  There is no capping on any specific treatment. Everything is up to sum insured.
+${e_insure_copaymentCardText} =   No co-payment
+${e_insure_copaymentMsgText} =  You don’t have to shell anything on any treatment. Absolutely zero cost sharing.
+${e_insure_30daySettlementCardText} =  30-day settlement guarantee
+${e_insure_30daySettlementMsgText} =  Get paid within 30 days of claim acceptance or get 2% above current bank rate interest till it is settled. 
+${e_insure_ayushCoveredCardText} =  AYUSH covered
+${e_insure_ayushCoveredMsgText} =  Ayurveda, Yoga and Naturopathy, Unani, Siddha and Homeopathy covered up to full sum insured. 
+${e_insure_lowWaitingPeriodCardText} =  Lowest waiting period 
+${e_insure_lowWaitingPeriodMsgText} =  Get your pre-existing and specific illness covered within 2 years.
+${e_insure_dailyExpenseCardText} =  Daily cash expenses
+${e_insure_dailyExpenseMsgText} =  Get up to ₹10k a day to cover out of pocket expenses during hospitalisation.
+${e_insure_dedicatedSupportCardText} =  Dedicated support 
+${e_insure_dedicatedSupportMsgText} =  Get year-round dedicated support. 
 
+${e_insure_trustedPartnerTitleText} =  Trusted partner
+${e_insure_trustedPartnerSubTitleText} =  With a 97% Claim settlement ratio, we’ve partnered with the best.
+${e_insure_flexibleCoverageTitleText} =  Flexible coverage
+${e_insure_flexibleCoevrageSubTitleText} =  Pick a Base/SuperTop-up/Daily-cash or all 3. Coverage from ₹3L to ₹75L.
+${e_insure_saveTaxTitleText} =  Save up to ₹1 lakh in tax
+${e_insure_saveTaxSubTitleText} =  Claim tax under section 80D.
+${e_insure_healthCoverTitleText} =  Health cover that’s right for you.
+${e_insure_checkPremiumBtn2Text} =  Check premium
  
     
 
@@ -115,6 +143,39 @@ ${KU_W_covid19Image} =  xpath=(//img[@class='b-health-insurance-landing__cost-de
 ${KU_W_cancerCareImage} =  xpath=(//img[@class='b-health-insurance-landing__cost-details--img'])[2] 
 ${KU_W_openHeartSurgeryImage} =  xpath=(//img[@class='b-health-insurance-landing__cost-details--img'])[3] 
 ${KU_W_kneeReplacementImage} =  xpath=(//img[@class='b-health-insurance-landing__cost-details--img'])[4] 
+
+${KU_W_groupHealthInsuranceTitle} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--brief']/div)[1] 
+${KU_W_grpHealthInsurranceSubTitle} =  xpath=(//div[@class='b-health-insurance-landing__title--text'])[2]
+${KU_W_insurancePolicyLists} =  xpath=//ul[@class='b-health-insurance-landing__policy-list']/li 
+
+${KU_W_covid19CardTitle} =  xpath=(//div[@class='b-feature-card__title'])[1]
+${KU_W_covid19Msg} =  xpath=(//div[@class='b-feature-card__msg'])[1]
+${KU_W_roomrentCardTitle} =  xpath=(//div[@class='b-feature-card__title'])[2] 
+${KU_W_roomrentMsg} =  xpath=(//div[@class='b-feature-card__msg'])[2] 
+${KU_W_treatmentCappingCardTitle} =  xpath=(//div[@class='b-feature-card__title'])[3] 
+${KU_W_treatmentCappingMsg} =  xpath=(//div[@class='b-feature-card__msg'])[3] 
+${KU_W_copaymentCardTitle} =  xpath=(//div[@class='b-feature-card__title'])[4] 
+${KU_W_copaymentMsg} =  xpath=(//div[@class='b-feature-card__msg'])[4]
+${KU_W_30daySettlemenCardTitle} =  xpath=(//div[@class='b-feature-card__title'])[5] 
+${KU_W_30daySettlemenMsg} =  xpath=(//div[@class='b-feature-card__msg'])[5]
+${KU_W_ayushCoveredCardTitle} =  xpath=(//div[@class='b-feature-card__title'])[6] 
+${KU_W_ayushCoveredMsg} =  xpath=(//div[@class='b-feature-card__msg'])[6] 
+${KU_W_lowWaitingPeriodCardTitle} =  xpath=(//div[@class='b-feature-card__title'])[7] 
+${KU_W_lowWaitingPeriodMsg} =  xpath=(//div[@class='b-feature-card__msg'])[7]
+${KU_W_dailyExpenseCardTitle} =  xpath=(//div[@class='b-feature-card__title'])[8]
+${KU_W_dailyExpenseMsg} =  xpath=(//div[@class='b-feature-card__msg'])[8]
+${KU_W_dedicatedSupportCardTitle} =  xpath=(//div[@class='b-feature-card__title'])[9] 
+${KU_W_dedicatedSupportMsg} =  xpath=(//div[@class='b-feature-card__msg'])[9]
+${KU_W_sliderButton} =  xpath=//div[@class='b-slide-card-list__btns__next b-slide-card-list__btns__next--active']
+
+${KU_W_trustedPartnerTitle} =  xpath=(//div[@class='b-health-insurance-landing__insurance-brief__row--items__content']/div)[1] 
+${KU_W_trustedPartnerSubTitle} =  xpath=(//div[@class='b-health-insurance-landing__insurance-brief--subheading'])[1] 
+${KU_W_flexibleCoverageTitle} =  xpath=(//div[@class='b-health-insurance-landing__insurance-brief__row--items__content']/div)[3]
+${KU_W_flexibleCoverageSubtitle} =  xpath=(//div[@class='b-health-insurance-landing__insurance-brief--subheading'])[2] 
+${KU_W_saveTaxTitle} =  xpath=(//div[@class='b-health-insurance-landing__title--main'])[6]
+${KU_W_saveTaxSubTitle} =  xpath=(//div[@class='b-health-insurance-landing__insurance-brief--subheading'])[3]
+${KU_W_healthCoverTitle} =  xpath=//div[@class='b-health-insurance-landing__healthcare-cover--wrapper']/div 
+${KU_W_checkPremiumBtn2Title} =  xpath=(//button[@class='button-primary'])[2]
 
 
 

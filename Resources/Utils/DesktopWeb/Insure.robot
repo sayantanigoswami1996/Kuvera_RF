@@ -44,6 +44,65 @@ Verify Insure Page
   Verify Page Contains Image  ${KU_W_openHeartSurgeryImage}
   Verify Page Contains Image  ${KU_W_kneeReplacementImage}
 
+  #Group Health Insurance 
+  Scroll Untill View  ${KU_W_groupHealthInsuranceTitle}
+  Verify Element and Text  ${KU_W_groupHealthInsuranceTitle}  ${e_insure_grpHealthInsuranceTitleText} 
+  Page Should Contain  ${e_insure_grpHealthInsuranceSubTitleText}
+  @{actualInsurancePolicyList} =  Get WebElements  ${KU_W_insurancePolicyLists}
+  Compare Lists  ${actualInsurancePolicyList}  ${e_insure_policyListItem}
+
+  #Feature Card
+  Scroll Untill View  ${KU_W_covid19CardTitle}
+  Verify Element and Text  ${KU_W_covid19CardTitle}  ${e_insure_covid19CardText} 
+  Verify Element and Text  ${KU_W_covid19Msg}  ${e_insure_covid19MsgText}
+
+  Verify Element and Text  ${KU_W_roomrentCardTitle}  ${e_insure_roomrentCardText}
+  Verify Element and Text  ${KU_W_roomrentMsg}  ${e_insure_roomrentMsgText} 
+  Verify Element and Text  ${KU_W_treatmentCappingCardTitle}  ${e_insure_treatmentCappingCardText}
+  Verify Element and Text  ${KU_W_treatmentCappingMsg}  ${e_insure_treatmentCappingMsgText}
+  Verify Element and Text  ${KU_W_copaymentCardTitle}  ${e_insure_copaymentCardText}
+  Verify Element and Text  ${KU_W_copaymentMsg}  ${e_insure_copaymentMsgText}
+  Click Element  ${KU_W_sliderButton}
+  sleep   1s
+  Verify Element and Text  ${KU_W_30daySettlemenCardTitle}  ${e_insure_30daySettlementCardText}
+  Verify Element and Text  ${KU_W_30daySettlemenMsg}  ${e_insure_30daySettlementMsgText}
+  Verify Element and Text  ${KU_W_ayushCoveredCardTitle}   ${e_insure_ayushCoveredCardText}
+  Verify Element and Text  ${KU_W_ayushCoveredMsg}  ${e_insure_ayushCoveredMsgText}
+  Verify Element and Text  ${KU_W_lowWaitingPeriodCardTitle}  ${e_insure_lowWaitingPeriodCardText}
+  Verify Element and Text  ${KU_W_lowWaitingPeriodMsg}   ${e_insure_lowWaitingPeriodMsgText}
+  Click Element  ${KU_W_sliderButton}
+  sleep   1s
+  Verify Element and Text  ${KU_W_dailyExpenseCardTitle}   ${e_insure_dailyExpenseCardText}
+  Verify Element and Text  ${KU_W_dailyExpenseMsg}  ${e_insure_dailyExpenseMsgText} 
+  Verify Element and Text  ${KU_W_dedicatedSupportCardTitle}  ${e_insure_dedicatedSupportCardText}
+  Verify Element and Text  ${KU_W_dedicatedSupportMsg}  ${e_insure_dedicatedSupportMsgText}
+
+  #Trusted Partner
+  Scroll Untill View  ${KU_W_trustedPartnerTitle}
+  Verify Element and Text  ${KU_W_trustedPartnerTitle}  ${e_insure_trustedPartnerTitleText}
+  Verify Element and Text  ${KU_W_trustedPartnerSubTitle}   ${e_insure_trustedPartnerSubTitleText}
+
+  #Flexible Coverage 
+  Wait For Element Visbility  ${KU_W_flexibleCoverageTitle} 
+  Scroll Untill View  ${KU_W_flexibleCoverageTitle} 
+  Verify Element and Text  ${KU_W_flexibleCoverageTitle}   ${e_insure_flexibleCoverageTitleText}
+  Verify Element and Text  ${KU_W_flexibleCoverageSubtitle}  ${e_insure_flexibleCoevrageSubTitleText}
+
+  #Save Tax 
+  Wait For Element Visbility  ${KU_W_saveTaxTitle}
+  Scroll Untill View  ${KU_W_saveTaxTitle} 
+  Verify Element and Text  ${KU_W_saveTaxTitle}  ${e_insure_saveTaxTitleText}  
+  Verify Element and Text  ${KU_W_saveTaxSubTitle}  ${e_insure_saveTaxSubTitleText} 
+
+  #Health Cover
+  Wait For Element Visbility  ${KU_W_healthCoverTitle}  
+  Scroll Untill View  ${KU_W_healthCoverTitle}  
+  Verify Element and Text  ${KU_W_healthCoverTitle}  ${e_insure_healthCoverTitleText} 
+  Verify Element and Text  ${KU_W_checkPremiumBtn2Title}  ${e_insure_checkPremiumBtn2Text}  
+  Click Element  ${KU_W_checkPremiumBtn2Title}
+  Verify Login Page
+  Verify Google Play & Apple Store Icons
+  Go Back
  
  
  
