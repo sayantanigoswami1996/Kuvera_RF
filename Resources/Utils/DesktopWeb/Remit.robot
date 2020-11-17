@@ -45,3 +45,4 @@ Verify Remit Page
     Verify Page Contains Element  ${KU_W_transferWiseVideo}
     # Verify transerwise next steps 
     Verify Transfer Now   ${KU_W_remit_transferNoBottomBtn}
+    Go Back

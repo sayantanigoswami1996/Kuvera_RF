@@ -48,7 +48,6 @@ ${e_insure_openHeartSurgeryTitleText} =  Open heart surgery
 ${e_insure_openHeartSurgeryCostText} =  ₹20L
 ${e_insure_kneeReplacementTitleText} =  Knee replacement
 ${e_insure_kneeReplacementCostText} =  ₹4.5L
-<<<<<<< HEAD
 ${e_insure_grpHealthInsuranceTitleText} =  Thus we built a Group health insurance with Bharti AXA GIC
 ${e_insure_grpHealthInsuranceSubTitleText} =  that works for you and your loved ones by keeping:
 ${e_insure_covid19CardText} =  COVID-19 protection
@@ -69,8 +68,6 @@ ${e_insure_dailyExpenseCardText} =  Daily cash expenses
 ${e_insure_dailyExpenseMsgText} =  Get up to ₹10k a day to cover out of pocket expenses during hospitalisation.
 ${e_insure_dedicatedSupportCardText} =  Dedicated support 
 ${e_insure_dedicatedSupportMsgText} =  Get year-round dedicated support. 
-=======
->>>>>>> KU_RF_PE_PHASE1
 
 ${e_insure_trustedPartnerTitleText} =  Trusted partner
 ${e_insure_trustedPartnerSubTitleText} =  With a 97% Claim settlement ratio, we’ve partnered with the best.
@@ -132,7 +129,6 @@ ${KU_W_costDetailsHeaderTitle} =  xpath=//div[@class='b-health-insurance-landing
 ${KU_W_treatmentTitle} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__treatment'])[1]
 ${KU_W_treatmentCostTitle} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__cost'])[1]
 
-<<<<<<< HEAD
 #Insure Navigation Page  
 ${KU_W_insureLink} =  xpath=//a[@class='b-header__content__insure']
 ${KU_W_insureHeaderTitle} =  xpath=(//div[@class='b-health-insurance-landing__title--main'])[1]
@@ -143,8 +139,6 @@ ${KU_W_costDetailsHeaderTitle} =  xpath=//div[@class='b-health-insurance-landing
 ${KU_W_treatmentTitle} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__treatment'])[1]
 ${KU_W_treatmentCostTitle} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__cost'])[1]
 
-=======
->>>>>>> KU_RF_PE_PHASE1
 ${KU_W_covid19Cost} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__cost'])[2]
 ${KU_W_cancerCareCost} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__cost'])[3]
 ${KU_W_OpenHeartSurgeryCost} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__cost'])[4]
@@ -159,7 +153,6 @@ ${KU_W_covid19Image} =  xpath=(//img[@class='b-health-insurance-landing__cost-de
 ${KU_W_cancerCareImage} =  xpath=(//img[@class='b-health-insurance-landing__cost-details--img'])[2] 
 ${KU_W_openHeartSurgeryImage} =  xpath=(//img[@class='b-health-insurance-landing__cost-details--img'])[3] 
 ${KU_W_kneeReplacementImage} =  xpath=(//img[@class='b-health-insurance-landing__cost-details--img'])[4] 
-<<<<<<< HEAD
 
 ${KU_W_groupHealthInsuranceTitle} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--brief']/div)[1] 
 ${KU_W_grpHealthInsurranceSubTitle} =  xpath=(//div[@class='b-health-insurance-landing__title--text'])[2]
@@ -194,10 +187,6 @@ ${KU_W_saveTaxSubTitle} =  xpath=(//div[@class='b-health-insurance-landing__insu
 ${KU_W_healthCoverTitle} =  xpath=//div[@class='b-health-insurance-landing__healthcare-cover--wrapper']/div 
 ${KU_W_checkPremiumBtn2Title} =  xpath=(//button[@class='button-primary'])[2]
 
-=======
-      
-      
->>>>>>> KU_RF_PE_PHASE1
 #Remit Page    
 ${KU_W_remit_Link} =  xpath=//a[@class='b-header__content__remit']
 ${KU_W_remit_screenTitle} =  xpath=//*[@class='b-introduction__desc__title']
@@ -215,7 +204,6 @@ ${KU_W_remit_sendMoneyBtn} =  xpath=(//button[@type='button'])[3]
 ${KU_W_remit_knowMoreBtn} =  xpath=//button[@class='button-primary b-why-transferwise__btn-know-more']  
 ${KU_W_remit_calculatorTarget} =  xpath=//*[@id="tw-calculator-target"]
 ${KU_W_remit_transferNoBottomBtn} =  xpath=//button[@class='button-primary b-how__btn-transfer']
-<<<<<<< HEAD
 
 
 
@@ -239,6 +227,3 @@ ${KU_W_remit_transferNoBottomBtn} =  xpath=//button[@class='button-primary b-how
       
       
                              
-=======
-    
->>>>>>> KU_RF_PE_PHASE1
