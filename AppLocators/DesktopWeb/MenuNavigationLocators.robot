@@ -13,12 +13,7 @@ ${e_loan_headerMsgText} =  Let your investments work for you. The only loan acco
 ${e_loan_checkElibilityBtnText} =  Check your eligibility
 ${e_loginPage} =  Login. Start Investing.
 ${e_loan_calculatorTitleText} =  An affordable loan
-<<<<<<< HEAD
 ${e_loan_calculatorSubTitleText} =  up to 80% of your mutual fund portfolio.   
-=======
-@{e_loan_calculatorMsgList} =  up to 80% of your mutual fund portfolio.  MF units remain secure with the fund house.  No fixed loan period. A 1yr loan auto renews on the 12th month.  Loan starting from ₹25,000 up to ₹10cr.  
-
->>>>>>> KU_RF_PE_PHASE1
 ${e_loan_highlyFlexibleTitle} =  Highly flexible
 ${e_loan_highlyFlexibleMsg} =  Repay your outstanding loan, in full or in parts, anytime during the loan period.
 ${e_loan_payForWhatYouUseText} =  Pay for what you use
@@ -37,7 +32,6 @@ ${e_loan_getLoanAgainstMFText} =  Get loan against Mutual Funds
 ${e_loan_getLoanAgainstMFMsgText} =  An affordable, quick, and flexible loan. All paperless.
 ${e_loan_startSaveCheckEligibiliyText} =  Check your eligibility
 
-<<<<<<< HEAD
 #Insure Navigation Page Variables
 ${e_insure_headerTitleText} =  Fair and friendly health insurance is here
 ${e_insure_headerMsgText} =  ₹50L cover starting at ₹900/month*. Secure your loved ones today.
@@ -83,18 +77,6 @@ ${e_insure_saveTaxTitleText} =  Save up to ₹1 lakh in tax
 ${e_insure_saveTaxSubTitleText} =  Claim tax under section 80D.
 ${e_insure_healthCoverTitleText} =  Health cover that’s right for you.
 ${e_insure_checkPremiumBtn2Text} =  Check premium
- 
-    
-
-
-
-
-
-
-=======
-#Insure Page Variables
->>>>>>> KU_RF_PE_PHASE1
-
 
 #Remit Page Expected Data
 ${e_remit_screenTitle} =  A cheaper & faster way to send money home
@@ -137,7 +119,6 @@ ${KU_W_getLoanAgainstMF} =  xpath=//div[@class='b-start-save b-kuvera-get-loan']
 ${KU_W_getLoanAgainstMFMsg} =  xpath=//div[@class='b-start-save b-kuvera-get-loan']/div[1]/div[2]
 ${KU_W_startSaveCheckEligibilityBtn} =  xpath=//button[@class='button-primary b-start-save__btn b-start-save__btn-desktop']
 
-<<<<<<< HEAD
 #Insure Navigation Page  
 ${KU_W_insureLink} =  xpath=//a[@class='b-header__content__insure']
 ${KU_W_insureHeaderTitle} =  xpath=(//div[@class='b-health-insurance-landing__title--main'])[1]
@@ -196,30 +177,6 @@ ${KU_W_saveTaxSubTitle} =  xpath=(//div[@class='b-health-insurance-landing__insu
 ${KU_W_healthCoverTitle} =  xpath=//div[@class='b-health-insurance-landing__healthcare-cover--wrapper']/div 
 ${KU_W_checkPremiumBtn2Title} =  xpath=(//button[@class='button-primary'])[2]
 
-
-
-
-
-
-
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-=======
-#Insure Page    
-      
-      
-      
 #Remit Page    
 ${KU_W_remit_Link} =  xpath=//a[@class='b-header__content__remit']
 ${KU_W_remit_screenTitle} =  xpath=//*[@class='b-introduction__desc__title']
@@ -237,7 +194,24 @@ ${KU_W_remit_sendMoneyBtn} =  xpath=(//button[@type='button'])[3]
 ${KU_W_remit_knowMoreBtn} =  xpath=//button[@class='button-primary b-why-transferwise__btn-know-more']  
 ${KU_W_remit_calculatorTarget} =  xpath=//*[@id="tw-calculator-target"]
 
->>>>>>> KU_RF_PE_PHASE1
+
+
+
+
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       
       
       

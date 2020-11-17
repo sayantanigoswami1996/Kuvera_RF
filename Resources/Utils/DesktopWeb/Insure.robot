@@ -101,6 +101,8 @@ Verify Insure Page
   Verify Element and Text  ${KU_W_checkPremiumBtn2Title}  ${e_insure_checkPremiumBtn2Text}  
   Click Element  ${KU_W_checkPremiumBtn2Title}
   Verify Login Page
+  
+  #Verify the Google Play & Apple Store icons
   Verify Google Play & Apple Store Icons
   Go Back
  

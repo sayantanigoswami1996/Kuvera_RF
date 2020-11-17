@@ -21,19 +21,15 @@ Verify Loan Page
   Wait For Element Visbility  ${KU_W_loanCalculatorTitle}     
   Scroll Untill View  ${KU_W_loanCalculatorTitle}
   Verify Element and Text  ${KU_W_loanCalculatorTitle}  ${e_loan_calculatorTitleText}
-<<<<<<< HEAD
   Page Should Contain  ${e_loan_calculatorSubTitleText} 
   #Validation of List of Text Under Loan Calculator Block
   @{actualListItems} =  Get WebElements  ${KU_W_loanCalculatorMsgList} 
   Compare Lists  ${actualListItems}  ${e_loan_calculatorMsgListItem}
   
-=======
-   
   #Validation of List of Text Under Loan Calculator Block
   @{actualListItems} =  Get WebElements  ${KU_W_loanCalculatorMsgList} 
   Compare Lists  ${actualListItems}  ${e_loan_calculatorMsgListItem}
 
->>>>>>> KU_RF_PE_PHASE1
   #Highly Fexible 
   Scroll Untill View  ${KU_W_highlyFlexibleTitle}
   Verify Element and Text  ${KU_W_highlyFlexibleTitle}  ${e_loan_highlyFlexibleTitle}
@@ -49,10 +45,6 @@ Verify Loan Page
   Verify Element and Text  ${KU_W_loanRedemptionTitle}   ${e_loan_redemptionTitleText}
   Verify Element and Text  ${KU_W_loanRedemptionMsg}   ${e_loan_redemptionMsgText}
 
-<<<<<<< HEAD
-
-=======
->>>>>>> KU_RF_PE_PHASE1
   #Super Affordable
   Wait For Element Visbility  ${KU_W_saveSuperAffordableTitle}  
   Scroll Untill View  ${KU_W_saveSuperAffordableTitle}
@@ -80,18 +72,10 @@ Verify Loan Page
   Verify Element and Text  ${KU_W_getLoanAgainstMFMsg}   ${e_loan_getLoanAgainstMFMsgText}
   Scroll Untill View   ${KU_W_startSaveCheckEligibilityBtn}
   Verify Element and Text  ${KU_W_startSaveCheckEligibilityBtn}  ${e_loan_startSaveCheckEligibiliyText}
-<<<<<<< HEAD
-
-  Verify Google Play & Apple Store Icons
-  Go Back
-   
-
-=======
   
   #Verify the Google Play & Apple Store icons
   Verify Google Play & Apple Store Icons
   Go Back
->>>>>>> KU_RF_PE_PHASE1
  
   
 
