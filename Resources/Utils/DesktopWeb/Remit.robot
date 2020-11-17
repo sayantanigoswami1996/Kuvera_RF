@@ -9,9 +9,8 @@ Resource    ../../../Resources/Utils/DesktopWeb/Common.robot
 
 ***Keywords***
 Verify Transfer Now 
-    
-    Click Element  ${KU_W_remit_transferNowBtn}
-    sleep   1s
+    [Arguments]  ${element}
+    Click Button  ${element}
     Verify Element And Text  ${KU_W_transferWiseStepsModal}  Next steps
     Wait For Element Visbility  ${KU_W_transferWiseNextStepsContinueBtn}
     Click Element  ${KU_W_transferWiseNextStepsContinueBtn}
@@ -41,8 +40,8 @@ Verify Remit Page
     Verify Page Contains Element  ${KU_W_remit_calculatorTarget}
     Switch To Window Verify Title And Close  ${e_remit_transferWiseSignupTitle} 
 
-    # Scroll Untill View  ${KU_W_remit_transferNowBtn}
-    # Verify Page Contains Element  ${KU_W_transferWiseVideo}
-    # # Verify transerwise next steps 
-    # Verify Transfer Now 
-    # Go Back
+    Scroll Untill View  ${KU_W_remit_transferNoBottomBtn} 
+    Verify Page Contains Element  ${KU_W_transferWiseVideo}
+    # Verify transerwise next steps 
+    Verify Transfer Now 
+    
