@@ -3,6 +3,7 @@ Library     SeleniumLibrary
 Resource    ../../Resources/Utils/DesktopWeb/Common.robot
 Resource    ../../Resources/Utils/DesktopWeb/LandingPage.robot
 Resource    ../../Resources/Utils/DesktopWeb/Loans.robot
+Resource    ../../Resources/Utils/DesktopWeb/Insure.robot
 
 Suite Setup  Launch URL 
 Suite Teardown  Close All Browsers
@@ -18,3 +19,4 @@ Menu Navigation Verification Test
     [Tags]  TC02
     Kuvera Web Logo Click
     Verify Loan Page
+    Verify Insure Page

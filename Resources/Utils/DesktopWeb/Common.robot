@@ -69,10 +69,25 @@ Verify Google Play & Apple Store Icons
     Verify Page Contains Image  ${KU_W_android_image}
     Verify Page Contains Image  ${KU_W_apple_image}
 
-Verify Language Switch , Login and Signup Link
+Verify Language Switch Login And Signup Link
     Verify Page Contains Element  ${KU_W_langSwitch}
     Verify Element And Text  ${KU_W_login}  ${e_login}
     Verify Element And Text  ${KU_W_signup}  ${e_signup}
+
+Compare Lists
+    [Arguments]  ${actualList}   ${expectedList}
+    #Get list item from actual list
+    FOR  ${actualListItems}  IN  @{actualList}
+    ${actualListItem}  Set Variable  ${actualListItems.text}
+    Log To Console  ${actualListItem}
+    END
+    #Get list item from expected list
+    FOR  ${expectedListItems}  IN  @{expectedList}
+    ${expectedListItem}  Set Variable  ${expectedListItems}
+    Log To Console  ${expectedListItem}
+    END
+    #Compare two list items
+    Should Be Equal  ${actualListItem}  ${expectedListItem}    
 
 Header Navigation
     @{elem} =  Get WebElements  ${KU_W_headers}
