@@ -1,9 +1,9 @@
 *** Variables ***
 #Desired Capabilities
-${loginURL}    https://kuvera.in/
+${URL}    https://kuvera.in/
 ${BROWSER}     Chrome
 
-#Application Expected Values 'KU_<locatorName>'
+#Application Expected Values 'e_<VariableName>'
 ${e_login} =  Log in 
 ${e_signup} =  Sign up 
 ${e_mfWelcomeTitle} =  Investments Simplified

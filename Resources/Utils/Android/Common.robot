@@ -3,7 +3,7 @@
 Library     JSONLibrary
 Library     JsonValidator
 Library     AppiumLibrary
-Resource    ../../AppLocators/CommonAppLocators.robot
+Resource   ../../../AppLocators/Android/CommonAppLocators.robot
 
 *** Keywords ***
 
@@ -31,13 +31,13 @@ Kuvera Logo Click
     Wait Until Element Is Visible    ${KU_close}
     Click Element                    ${KU_close}
 
-Move To Explore Funds
-    Get Source
-    Swipe By Percent    50                    80    50    60
-    Get Source
-    sleep       10
-    Get Source
-    Click Button          Explore ELSS funds
+# Move To Explore Funds
+#     Get Source
+#     Swipe By Percent    50                    80    50    60
+#     Get Source
+#     sleep       10
+#     Get Source
+#     Click Button          Explore ELSS funds
 
 
 Quit Kuvera Application
