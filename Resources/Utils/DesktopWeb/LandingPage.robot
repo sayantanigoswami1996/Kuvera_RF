@@ -42,12 +42,12 @@ Verify Features Widgets
   Verify Element And Text  ${KU_W_exploreELSS}  ${e_exploreELSSfundsBtn}
   Verify Element And Text  ${KU_W_startHarvest}  ${e_startHarvestingBtn} 
   Verify Element And Text  ${KU_W_switchToday}  ${e_switchTodayBtn}
-  Click Element               ${KU_W_next_button} 
+  #Click Element  ${KU_W_next_button} 
   sleep  1s
   Verify Element And Text  ${KU_W_upgrade_familyAccount}    ${e_upgradeFamilyAccountBtn}
   Verify Element And Text  ${KU_W_consolidate_track}  ${e_consolidateTrackBtn}
   Verify Element And Text  ${KU_W_manage_today}  ${e_manageTodayBtn}
-  Click Element  ${KU_W_next_button}
+
   sleep  1s
   Verify Element And Text  ${KU_W_set_a_goal}  ${e_setAGoalBtn} 
   Verify Element And Text  ${KU_W_send_money}  ${e_sendMoneyBtn}
