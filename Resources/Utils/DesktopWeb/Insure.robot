@@ -17,8 +17,8 @@ Verify Insure Page
   Verify Element And Text  ${KU_W_termsAndConditions}  ${e_insure_T&CText}  
   Verify Element And Text  ${KU_W_checkPremiumBtn}  ${e_insure_checkPremiumBtnText}  
   Wait For Element Visbility  ${KU_W_checkPremiumBtn} 
-  # Click Element  ${KU_W_checkPremiumBtn} 
-  # Verify Login Page
+  Click Element  ${KU_W_checkPremiumBtn} 
+  Verify Login Page
   Wait For Element Visbility  ${KU_W_costDetailsHeaderTitle}     
   Scroll Untill View  ${KU_W_costDetailsHeaderTitle}
   Verify Element and Text  ${KU_W_costDetailsHeaderTitle}  ${e_insure_costDetailsHeaderText}

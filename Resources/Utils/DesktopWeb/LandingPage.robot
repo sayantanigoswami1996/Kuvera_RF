@@ -25,7 +25,7 @@ Verify Mutual Funds Widgets
   Verify Page Contains Element  ${KU_W_fund_list} 
   Verify Element And Text  ${KU_W_loginButton}  ${e_login}
   Verify Element And Text  ${KU_W_signUpButton}  ${e_signup}
-  Verify Element And Text  ${KU_W_coreaua_val}  ${e_coreAUAValue}
+  #Verify Element And Text  ${KU_W_coreaua_val}  ${e_coreAUAValue}
   Verify Element And Text  ${KU_W_coreaua_text}  ${e_coreAUAText}       
   Verify Element And Text  ${KU_W_cities_val}  ${e_citiesValue} 
   Verify Element And Text  ${KU_W_cities_text}  ${e_citiesText}
