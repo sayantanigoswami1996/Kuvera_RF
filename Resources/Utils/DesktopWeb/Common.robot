@@ -11,8 +11,8 @@ Resource    ../../../AppLocators/DesktopWeb/CommonAppLocators.robot
 *** Keywords ***
 Launch URL
     Open Browser  ${URL}  ${BROWSER}  alias=Kuvera
-    Maximize Browser Window
-    #Set Window Size  ${1920}  ${1080}
+   # Maximize Browser Window
+    Set Window Size  ${1366}  ${768}
 
 Welcome Page Should Be Open
     Title Should Be  ${KU_W_title}
