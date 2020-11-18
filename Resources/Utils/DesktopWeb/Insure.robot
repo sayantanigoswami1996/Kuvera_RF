@@ -100,7 +100,8 @@ Verify PreLogin Insure Page
   Wait For Element Visbility  ${KU_W_healthCoverTitle}  
   Scroll Untill View  ${KU_W_healthCoverTitle}  
   Verify Element and Text  ${KU_W_healthCoverTitle}  ${e_insure_healthCoverTitleText} 
-  Verify Element and Text  ${KU_W_checkPremiumBtn2Title}  ${e_insure_checkPremiumBtn2Text}  
+  Verify Element and Text  ${KU_W_checkPremiumBtn2Title}  ${e_insure_checkPremiumBtn2Text}
+  Wait For Element Visbility  ${KU_W_checkPremiumBtn2Title}
   Click Element  ${KU_W_checkPremiumBtn2Title}
   Verify Login Page
   

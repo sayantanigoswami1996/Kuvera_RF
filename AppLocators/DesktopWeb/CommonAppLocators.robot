@@ -31,7 +31,7 @@ ${e_usersMsg} =   We revolutionized the way India invests. With your feedback we
 ${e_earnTitle} =  Earn up to 1.5% more returns*
 ${e_earnMsg} =  We pioneered commission free Direct Plan investing.\nEarn from our expertise and don't pay commission ever.
 ${e_earnLearnLink} =   Learn how!
-${e_coreAUAValue} =  ₹ 15,000
+${e_coreAUAValue} =  ₹ 16,000
 ${e_coreAUAText} =  Crore AUA       
 ${e_citiesValue} =  3 Lakh
 ${e_citiesText} =   Goals
@@ -48,6 +48,7 @@ ${e_transText} =  Transactions
 ${KU_W_title}=  Kuvera - Direct Mutual Funds | Stocks | Loans | Gold | Remit on Kuvera- Wealth Management Simplified
 ${KU_W_logo} =  xpath=//*[@class='b-header__content__logo']
 ${KU_W_close} =  xpath=//button[@class='button-primary b-regulatory-disclosure__btn']
+${KU_W_bannerFrame} =  id=p9e7d2f05349193e9421e568b092da688e5010650-container
 ${KU_W_bannerCloseBtn} =  (//*[@class='icon-close'])[2]
 ${KU_W_menu} =  xpath=//*[@class='b-header__content']
 ${KU_W_headers} =  xpath=//*[@class='b-header__content__middle']/a
