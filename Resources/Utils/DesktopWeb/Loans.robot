@@ -77,7 +77,6 @@ Verify PreLogin Loan Page
   
   #Verify the Google Play & Apple Store icons
   Verify Google Play & Apple Store Icons
-  Go Back
  
   
 

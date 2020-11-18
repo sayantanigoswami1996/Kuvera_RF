@@ -20,4 +20,8 @@ Landing Page Widgets Verification And Header Navigation Test
     Kuvera Web Logo Click
     Close Banner 
     Verify Widgets
+<<<<<<< HEAD
     Header Navigation
+=======
+    Header Navigation
+>>>>>>> KU_RF_PE_PHASE1

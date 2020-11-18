@@ -17,15 +17,14 @@ Verify Transfer Now
     Switch To Window Verify Title And Close  ${e_remit_transferWiseSignupTitle} 
 
 
-Verify PreLogin Remit Page
-    Click Element  ${KU_W_menu}
+Verify Remit Page
     Click Element  ${KU_W_remit_Link}
     Verify Language Switch Login And Signup Link
     Wait For Element Visbility  ${KU_W_remit_screenTitle}
     Verify Element And Text  ${KU_W_remit_screenTitle}  ${e_remit_screenTitle} 
     Verify Element And Text  ${KU_W_remit_screenTitleDesc}  ${e_remit_screenTitleDesc}
     # Verify transerwise next steps 
-    Verify Transfer Now  ${KU_W_remit_transferNowTopBtn}
+    #Verify Transfer Now  ${KU_W_remit_transferNowTopBtn}
     Scroll Untill View  ${KU_W_remit_whyTransferWise}
     Scroll Untill View  ${KU_W_remit_knowMoreBtn}
     @{actualListItems} =  Get WebElements  ${KU_W_remit_whyTransferWiseList} 
@@ -42,7 +41,6 @@ Verify PreLogin Remit Page
     Switch To Window Verify Title And Close  ${e_remit_transferWiseSignupTitle} 
 
     Scroll Untill View  ${KU_W_remit_transferNoBottomBtn}
-    Verify Page Contains Element  ${KU_W_transferWiseVideo}
     # Verify transerwise next steps 
     Verify Transfer Now   ${KU_W_remit_transferNoBottomBtn}
     Go Back

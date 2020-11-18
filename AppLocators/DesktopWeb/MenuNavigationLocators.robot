@@ -102,7 +102,7 @@ ${e_feature_helpTradeSmartDesc3Text} =  We take care of all complexities. 1 year
 #Application Locator 'KU_<locatorName>'
 #Kuvera :: Wealth Management Simplified
 #Loan Navigation Page
-${KU_W_loanLink} =  xpath=//a[@class='b-header__content__las']
+${KU_W_loanLink} =  xpath=//a[contains(text(),'Loans')]
 ${KU_W_loanHeaderTitle} =  xpath=//div[@class='b-header__title']
 ${KU_W_loanHeaderMsg} =  xpath=//div[contains(text(),'Let your investments work for you. The only loan a')]
 ${KU_W_loanCheckEligibility} =  class=b-state-save-btn__text
@@ -132,11 +132,11 @@ ${KU_W_getLoanAgainstMFMsg} =  xpath=//div[@class='b-start-save b-kuvera-get-loa
 ${KU_W_startSaveCheckEligibilityBtn} =  xpath=//button[@class='button-primary b-start-save__btn b-start-save__btn-desktop']
   
 #Insure Navigation Page  
-${KU_W_insureLink} =  xpath=//a[@class='b-header__content__insure']
+${KU_W_insureLink} =  xpath=//a[contains(text(),'Insure')]
 ${KU_W_insureHeaderTitle} =  xpath=(//div[@class='b-health-insurance-landing__title--main'])[1]
 ${KU_W_insureHeaderMsg} =  xpath=(//div[@class='b-health-insurance-landing__title--text'])[1]
 ${KU_W_termsAndConditions} =  xpath=//span[@class='b-health-insurance-landing__term-condition']
-${KU_W_checkPremiumBtn} =  xpath=(//div[@class='b-health-insurance-landing__cta']/button)[1]
+${KU_W_checkPremiumBtn} =  xpath=//button[@class='button-primary']
 ${KU_W_costDetailsHeaderTitle} =  xpath=//div[@class='b-health-insurance-landing__cost-details--table__text']
 ${KU_W_treatmentTitle} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__treatment'])[1]
 ${KU_W_treatmentCostTitle} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__cost'])[1]
@@ -190,10 +190,10 @@ ${KU_W_healthCoverTitle} =  xpath=//div[@class='b-health-insurance-landing__heal
 ${KU_W_checkPremiumBtn2Title} =  xpath=(//button[@class='button-primary'])[2]
 
 #Remit Page    
-${KU_W_remit_Link} =  xpath=//a[@class='b-header__content__remit']
+${KU_W_remit_Link} =  xpath=//a[contains(text(),'Remit')]
 ${KU_W_remit_screenTitle} =  xpath=//*[@class='b-introduction__desc__title']
 ${KU_W_remit_screenTitleDesc} =  xpath=//*[@class='b-introduction__desc__content']      
-${KU_W_remit_transferNowTopBtn} =  xpath=//button[@class='button-primary b-introduction__desc__btn-transfer__item']      
+${KU_W_remit_transferNowTopBtn} =  xpath=//*[@class='b-introduction__desc__btn-transfer']      
 ${KU_W_remit_whyTransferWise} =  xpath=//*[@class='b-why-transferwise b-transferwise__calculator-why__item__content']/div    
 ${KU_W_remit_whyTransferWiseList} =  xpath=//*[@class='b-why-transferwise__list']/div     
 ${KU_W_transferWiseStepsModal} =  xpath=//*[@class='b-transferwise-transfer-step__title__items__1']
