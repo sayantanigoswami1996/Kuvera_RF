@@ -95,6 +95,7 @@ Kuvera Web Logo Click
     Click Element  ${KU_W_close}
     Wait Until Element Is Visible  ${KU_W_logo}
     Click Element  ${KU_W_logo}
+    Sleep  10s
 
 Verify Login Page
     Wait For Element Visbility  ${KU_W_loginPageTitle}

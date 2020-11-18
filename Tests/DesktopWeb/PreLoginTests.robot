@@ -13,7 +13,7 @@ Suite Teardown  Close All Browsers
 #To run spefici test: robot -d Results  -i TC01  Tests/DesktopWeb/PreLoginTests.robot
 
 *** Test Cases ***
-Landing Page Widgets Verification And Header Navigation Test
+Landing Page Widgets Verification Test
     [Tags]  TC01
     Kuvera Web Logo Click
     Close Banner 

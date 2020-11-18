@@ -118,7 +118,7 @@ ${KU_W_kneeReplacementImage} =  xpath=(//img[@class='b-health-insurance-landing_
 ${KU_W_remit_Link} =  xpath=//a[contains(text(),'Remit')]
 ${KU_W_remit_screenTitle} =  xpath=//*[@class='b-introduction__desc__title']
 ${KU_W_remit_screenTitleDesc} =  xpath=//*[@class='b-introduction__desc__content']      
-${KU_W_remit_transferNowTopBtn} =  xpath=//button[@class='button-primary b-introduction__btn-transfer__item']      
+${KU_W_remit_transferNowTopBtn} =  xpath=//*[@class='b-introduction__desc__btn-transfer']      
 ${KU_W_remit_whyTransferWise} =  xpath=//*[@class='b-why-transferwise b-transferwise__calculator-why__item__content']/div    
 ${KU_W_remit_whyTransferWiseList} =  xpath=//*[@class='b-why-transferwise__list']/div     
 ${KU_W_transferWiseStepsModal} =  xpath=//*[@class='b-transferwise-transfer-step__title__items__1']
