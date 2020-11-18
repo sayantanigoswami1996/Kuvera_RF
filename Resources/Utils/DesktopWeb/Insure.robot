@@ -9,13 +9,7 @@ Resource    ../../../Resources/Utils/DesktopWeb/Common.robot
 
 *** Keywords ***
 
-<<<<<<< HEAD
-Verify PreLogin Insure Page
-  
-  
-=======
 Verify Insure Page
->>>>>>> KU_RF_PE_PHASE1
   Click Element  ${KU_W_insureLink}
   Verify Language Switch Login And Signup Link
   Wait For Element Visbility  ${KU_W_insureHeaderTitle}  
