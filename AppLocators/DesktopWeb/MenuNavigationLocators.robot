@@ -3,7 +3,7 @@
 @{e_loan_calculatorMsgListItem} =  Create List  MF units remain secure with the fund house.  No fixed loan period. A 1yr loan auto renews on the 12th month.     Loan starting from ₹25,000 up to ₹10cr.  Full disclosure. No hidden fees.
 @{e_insure_treatmentListItem} =  Create List  COVID-19  Cancer care  Open heart surgery  Knee replacement
 @{e_insure_policyListItem} =  Create List  Policy wording simple.  Premium cost low.  Year round support.
-
+@{e_remit_whyTransferWiseList} =  No hidden fees  Up to 8x cheaper than banks  Trusted by 7 million users  Fast way to send money  Mid-market exchange rate
 
 
 #Application Expected Values 'e_<variableName>'
@@ -82,19 +82,31 @@ ${e_insure_checkPremiumBtn2Text} =  Check premium
 ${e_remit_screenTitle} =  A cheaper & faster way to send money home
 ${e_remit_screenTitleDesc} =  Now invest easily through Kuvera, or send money to your loved ones. With our partner TransferWise, you can transfer money to India for the lowest-cost. It is simple and faster than any traditional provider.
 ${e_remit_transferNowBtn} =  Transer now
-#${e_remit_whyTransferWiseList} =  Why TransferWise?  No hidden fees  Up to 8x cheaper than banks  Trusted by 7 million users  Fast way to send money  Mid-market exchange rate
 ${e_remit_transferWiseSignupTitle} =  Transfer Money Online | Send Money Abroad with TransferWise - Sign up
 ${e_remit_transferWiseCross-borderTitle} =  Making cross-border investments with Kuvera seamless and easy | TransferWise - TransferWise
-@{e_remit_whyTransferWiseList} =  No hidden fees  Up to 8x cheaper than banks  Trusted by 7 million users  Fast way to send money  Mid-market exchange rate
+
+#Feature-TradeSmart Page 
+${e_feature_tradeSmartTitleText} =  TradeSmart
+${e_feature_tradeSmartSubHeaderDesc} =  A switch or redeem order involves costs – taxes on short & long-term capital gains and exit load. TradeSmart shows you the optimal amount you can switch or redeem with the least tax and exit load.
+${e_feature_tradeSmartActivationTitle} =  Activate once, use forever!
+${e_feature_tradeSmartActivationSubTitle} =  Use 300 coins to activate TradeSmart, and use it forever.
+${e_feature_helpTradeSmartTitleText} =  We help you trade smart
+${e_feature_helpTradeSmartDesc1Text} =  See regular plan units as they become available to switch to direct plans with the least tax and exit load impact. Switching to Direct has never been easier or cheaper.
+${e_feature_helpTradeSmartDesc2Text} =  See optimal number of fund units to switch or redeem before you transact. Make better decisions.
+${e_feature_helpTradeSmartDesc3Text} =  We take care of all complexities. 1 year STCG for equity, 3 year for debt, indexation for debt, lock-in for ELSS schemes etc. We optimize over it all.
+
+
+
+
 
 #Application Locator 'KU_<locatorName>'
 #Kuvera :: Wealth Management Simplified
 #Loan Navigation Page
+${KU_W_loanLink} =  xpath=//a[@class='b-header__content__las']
 ${KU_W_loanHeaderTitle} =  xpath=//div[@class='b-header__title']
 ${KU_W_loanHeaderMsg} =  xpath=//div[contains(text(),'Let your investments work for you. The only loan a')]
 ${KU_W_loanCheckEligibility} =  class=b-state-save-btn__text
 ${KU_W_loginPageTitle} =  xpath=//div[contains(text(),'Login. Start Investing.')]
-${KU_W_loanLink} =  xpath=//a[@class='b-header__content__las']
 ${KU_W_loanCalculatorTitle} =  xpath=//div[@class='b-calculator__text-content']/div[1]
 ${KU_W_loanCalculatorMsgList} =  xpath=//ul[@class='b-calculator__list']/li
 ${KU_W_highlyFlexibleTitle} =  xpath=//div[@class='b-withdraw-30min__title']  
@@ -204,6 +216,24 @@ ${KU_W_remit_sendMoneyBtn} =  xpath=(//button[@type='button'])[3]
 ${KU_W_remit_knowMoreBtn} =  xpath=//button[@class='button-primary b-why-transferwise__btn-know-more']  
 ${KU_W_remit_calculatorTarget} =  xpath=//*[@id="tw-calculator-target"]
 ${KU_W_remit_transferNoBottomBtn} =  xpath=//button[@class='button-primary b-how__btn-transfer']
+
+
+#Feature-TradeSmart
+${KU_W_featureLink} =  xpath=//a[contains(text(),'Features')]
+${KU_W_feature_tradeSmartLink} =  xpath=//a[contains(text(),'TradeSmart')]
+${KU_W_feature_tradeSmartTitle} =  xpath=//div[@class='b-trade-smart__header__desc__title'] 
+${KU_W_feature_tradeSmartSubHeaderTitle} =  xpath=//div[@class='b-trade-smart__header__desc__content']
+${KU_W_feature_tradeSmartActivationTitle} =  xpath=//div[@class='b-trade-smart__header__desc__activate-title']
+${KU_W_feature_tradeSmartActivationMSg} =  xpath=//div[@class='b-trade-smart__header__desc__activate-desc']
+${KU_W_feature_tradeSmartActivateBtn} =  xpath=//button[@class='button-primary b-trade-smart__header__desc__activate-btn']
+${KU_W_feature_helpTradeSmartTitle} =  xpath=//div[@class='b-trade-smart__help-title']
+${KU_W_feature_helpTradeSmart1Msg} =  xpath=//div[@class='b-trade-smart__help-desc']/div[1] 
+${KU_W_feature_helpTradeSmart2Msg} =  xpath=//div[@class='b-trade-smart__help-desc']/div[2]
+${KU_W_feature_helpTradeSmart3Msg} =  xpath=//div[@class='b-trade-smart__help-desc']/div[3]
+
+
+
+
 
 
 

@@ -9,9 +9,11 @@ Resource    ../../../Resources/Utils/DesktopWeb/Common.robot
 
 *** Keywords ***
 
-Verify Loan Page
-
+Verify PreLogin Loan Page
+  
+  
   Click Element  ${KU_W_loanLink}
+  Verify Language Switch Login And Signup Link
   Wait For Element Visbility  ${KU_W_loanHeaderTitle}  
   Verify Element And Text  ${KU_W_loanHeaderTitle}  ${e_loan_headerTitleText}
   Verify Element And Text  ${KU_W_loanHeaderMsg}  ${e_loan_headerMsgText} 

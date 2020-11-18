@@ -96,7 +96,13 @@ Verify Google Play & Apple Store Icons
 Verify Language Switch Login And Signup Link
     Verify Page Contains Element  ${KU_W_langSwitch}
     Verify Element And Text  ${KU_W_login}  ${e_login}
-    Verify Element And Text  ${KU_W_signup}  ${e_signup}   
+    Verify Element And Text  ${KU_W_signup}  ${e_signup}
+
+Verify Page Contains Button
+    [Arguments]  ${button}
+    Page Should Contain Button  ${button}
+
+
     
 Header Navigation
     ${invest}  Get Json Values  $.MenuHeaders[0]  Resources/TestData/Headers.json

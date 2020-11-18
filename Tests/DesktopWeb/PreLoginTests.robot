@@ -5,6 +5,8 @@ Resource    ../../Resources/Utils/DesktopWeb/LandingPage.robot
 Resource    ../../Resources/Utils/DesktopWeb/Loans.robot
 Resource    ../../Resources/Utils/DesktopWeb/Insure.robot
 Resource    ../../Resources/Utils/DesktopWeb/Remit.robot
+Resource    ../../Resources/Utils/DesktopWeb/Features-TradeSmart.robot
+
 
 Suite Setup  Launch URL 
 Suite Teardown  Close All Browsers
@@ -21,6 +23,7 @@ Landing Page Widgets Verification Test
 Menu Navigation Verification Test
     [Tags]  TC02
     Kuvera Web Logo Click
-    Verify Loan Page
-    Verify Remit Page
-    Verify Insure Page
+    Verify PreLogin Loan Page
+    Verify PreLogin Remit Page
+    Verify PreLogin Insure Page
+    Verify PreLogin TradeSmart Page
