@@ -43,7 +43,7 @@ Verify Insure Page
   Scroll Untill View  ${KU_W_openHeartSurgeryImage}
   Verify Page Contains Image  ${KU_W_openHeartSurgeryImage}
   Verify Page Contains Image  ${KU_W_kneeReplacementImage}
-
+  
  
  
  

@@ -89,7 +89,7 @@ ${KU_W_getLoanAgainstMFMsg} =  xpath=//div[@class='b-start-save b-kuvera-get-loa
 ${KU_W_startSaveCheckEligibilityBtn} =  xpath=//button[@class='button-primary b-start-save__btn b-start-save__btn-desktop']
   
 #Insure Navigation Page  
-${KU_W_insureLink} =  xpath=//a[@class='b-header__content__insure']
+${KU_W_insureLink} =  xpath=//a[contains(text(),'Insure')]
 ${KU_W_insureHeaderTitle} =  xpath=(//div[@class='b-health-insurance-landing__title--main'])[1]
 ${KU_W_insureHeaderMsg} =  xpath=(//div[@class='b-health-insurance-landing__title--text'])[1]
 ${KU_W_termsAndConditions} =  xpath=//span[@class='b-health-insurance-landing__term-condition']
@@ -115,7 +115,7 @@ ${KU_W_kneeReplacementImage} =  xpath=(//img[@class='b-health-insurance-landing_
       
       
 #Remit Page    
-${KU_W_remit_Link} =  xpath=//a[@class='b-header__content__remit']
+${KU_W_remit_Link} =  xpath=//a[contains(text(),'Remit')]
 ${KU_W_remit_screenTitle} =  xpath=//*[@class='b-introduction__desc__title']
 ${KU_W_remit_screenTitleDesc} =  xpath=//*[@class='b-introduction__desc__content']      
 ${KU_W_remit_transferNowTopBtn} =  xpath=//button[@class='button-primary b-introduction__btn-transfer__item']      

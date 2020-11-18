@@ -16,11 +16,14 @@ Suite Teardown  Close All Browsers
 Landing Page Widgets Verification Test
     [Tags]  TC01
     Kuvera Web Logo Click
-    Verify Widgets
+    #Verify Widgets
+    Header Navigation
 
 Menu Navigation Verification Test
     [Tags]  TC02
     Kuvera Web Logo Click
-    #Verify Loan Page
-    #Verify Remit Page
+    Close Banner 
+   # Header Navigation
+    Verify Loan Page
     Verify Insure Page
+    Verify Remit Page

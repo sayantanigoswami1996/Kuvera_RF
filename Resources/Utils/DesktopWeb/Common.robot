@@ -12,6 +12,7 @@ Resource    ../../../AppLocators/DesktopWeb/CommonAppLocators.robot
 Launch URL
     Open Browser  ${URL}  ${BROWSER}  alias=Kuvera
     Maximize Browser Window
+    #Set Window Size  ${1920}  ${1080}
 
 Welcome Page Should Be Open
     Title Should Be  ${KU_W_title}
@@ -64,6 +65,18 @@ Switch To Frame
     [Arguments]  ${element}
     Select Frame  ${element}
 
+Get List Count
+    [Arguments]  ${list}
+    ${listCount}  Get Length  ${list}
+    [Return]  ${listCount}
+
+Close Banner 
+    Wait For Element Visbility  ${KU_W_bannerFrame}
+    Switch To Frame  ${KU_W_bannerFrame}
+    Wait For Element Visbility  ${KU_W_bannerCloseBtn}
+    Click Element  ${KU_W_bannerCloseBtn}
+    Unselect Frame
+
 Get Json Values
     [Arguments]  ${jsonPath}  ${jsonFilePath}
     ${jsonFile}  Load JSON From File  ${jsonFilePath}
@@ -104,14 +117,20 @@ Header Navigation
     ${insure}  Get Json Values  $.MenuHeaders[2]  Resources/TestData/Headers.json
     ${remit}  Get Json Values  $.MenuHeaders[3]  Resources/TestData/Headers.json
     ${features}  Get Json Values  $.MenuHeaders[4]  Resources/TestData/Headers.json
-
+  
     @{elem} =  Get WebElements  ${KU_W_headers}
+    ${count}  Get List Count  ${elem}
 
+   
+    ${index} =  Set Variable  1
     FOR  ${item}  IN  @{elem}       
+    Exit For Loop If  ${index} > ${count}
+    ${ele} =  xpath =  //div[@class='b-header__content__middle']/a[" + j + "]
     ${header}  Set Variable  ${item.text}     
     Sleep  3s              
     Run keyword If  ['${header}'] == ${invest}  Log To Console  PENDING
     ...   ELSE  Log To Console  InProgress
+    ${index} =  Evaluate  ${index} + 1
     END
 
 Close Web Application
