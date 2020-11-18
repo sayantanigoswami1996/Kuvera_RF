@@ -11,7 +11,7 @@ Resource    ../../../AppLocators/DesktopWeb/CommonAppLocators.robot
 *** Keywords ***
 Launch URL
     Open Browser  ${URL}  ${BROWSER}  alias=Kuvera
-   # Maximize Browser Window
+    # Maximize Browser Window
     Set Window Size  ${1366}  ${768}
 
 Welcome Page Should Be Open
@@ -125,9 +125,9 @@ Header Navigation
         ${cds_text} =  Get Text  xpath=//div[@class='b-header__content__middle']/a[${j}]
         Log to console  ${cds_text}
         Run keyword If  ['${cds_text}'] == ${invest}  Log To Console  PENDING
-        ...    ELSE IF  ['${cds_text}'] == ${loans}  Verify Loan Page
-        ...    ELSE IF  ['${cds_text}'] == ${insure}  Verify Insure Page
-        ...    ELSE IF  ['${cds_text}'] == ${remit}  Verify Remit Page
+        ...    ELSE IF  ['${cds_text}'] == ${loans}  Verify PreLogin Loan Page
+        ...    ELSE IF  ['${cds_text}'] == ${insure}  Verify PreLogin Insure Page
+        ...    ELSE IF  ['${cds_text}'] == ${remit}  Verify PreLogin Remit Page
         ...    ELSE  Log To Console  test
     END
 

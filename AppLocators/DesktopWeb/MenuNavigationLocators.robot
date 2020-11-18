@@ -1,16 +1,16 @@
 *** Variables ***
-
-@{e_loan_calculatorMsgListItem} =  Create List  up to 80% of your mutual fund portfolio.   MF units remain secure with the fund house.     No fixed loan period. A 1yr loan auto renews on the 12th month.     Loan starting from ₹25,000 up to ₹10cr.  Full disclosure. No hidden fees.
-
 #Application Expected Values 'e_<variableName>'
-#Loan Navigation Page Variables
+
+# Loan Navigation Page Variables
+# Loans Lists
+@{e_loan_calculatorMsgListItem} =  MF units remain secure with the fund house.     No fixed loan period. A 1yr loan auto renews on the 12th month.     Loan starting from ₹25,000 up to ₹10cr.  Full disclosure. No hidden fees.
+
 ${e_loan_headerTitleText} =  Get an instant loan backed by your portfolio
 ${e_loan_headerMsgText} =  Let your investments work for you. The only loan account you'll ever need.
 ${e_loan_checkElibilityBtnText} =  Check your eligibility
 ${e_loginPage} =  Login. Start Investing.
 ${e_loan_calculatorTitleText} =  An affordable loan
-@{e_loan_calculatorMsgList} =  up to 80% of your mutual fund portfolio.  MF units remain secure with the fund house.  No fixed loan period. A 1yr loan auto renews on the 12th month.  Loan starting from ₹25,000 up to ₹10cr.  
-
+${e_loan_calculatorSubTitleText} =  up to 80% of your mutual fund portfolio.
 ${e_loan_highlyFlexibleTitle} =  Highly flexible
 ${e_loan_highlyFlexibleMsg} =  Repay your outstanding loan, in full or in parts, anytime during the loan period.
 ${e_loan_payForWhatYouUseText} =  Pay for what you use
@@ -29,7 +29,11 @@ ${e_loan_getLoanAgainstMFText} =  Get loan against Mutual Funds
 ${e_loan_getLoanAgainstMFMsgText} =  An affordable, quick, and flexible loan. All paperless.
 ${e_loan_startSaveCheckEligibiliyText} =  Check your eligibility
 
-#Insure Navigation Page Variables
+# Insure Navigation Page Variables
+# Insure Lists 
+@{e_insure_treatmentListItem} =  Create List  COVID-19  Cancer care  Open heart surgery  Knee replacement
+@{e_insure_policyListItem} =  Create List  Policy wording simple.  Premium cost low.  Year round support.
+
 ${e_insure_headerTitleText} =  Fair and friendly health insurance is here
 ${e_insure_headerMsgText} =  ₹50L cover starting at ₹900/month*. Secure your loved ones today.
 ${e_insure_T&CText} =  *T&C apply
@@ -45,20 +49,46 @@ ${e_insure_openHeartSurgeryTitleText} =  Open heart surgery
 ${e_insure_openHeartSurgeryCostText} =  ₹20L
 ${e_insure_kneeReplacementTitleText} =  Knee replacement
 ${e_insure_kneeReplacementCostText} =  ₹4.5L
+${e_insure_grpHealthInsuranceTitleText} =  Thus we built a Group health insurance with Bharti AXA GIC
+${e_insure_grpHealthInsuranceSubTitleText} =  that works for you and your loved ones by keeping:
+${e_insure_covid19CardText} =  COVID-19 protection
+${e_insure_covid19MsgText} =   Corona treatment covered after 30 days of policy issuance.
+${e_insure_roomrentCardText} =  No room rent capping
+${e_insure_roomrentMsgText} =  Get a single A/C room across all hospitals chains in India.
+${e_insure_treatmentCappingCardText} =  No treatment capping
+${e_insure_treatmentCappingMsgText} =  There is no capping on any specific treatment. Everything is up to sum insured.
+${e_insure_copaymentCardText} =   No co-payment
+${e_insure_copaymentMsgText} =  You don’t have to shell anything on any treatment. Absolutely zero cost sharing.
+${e_insure_30daySettlementCardText} =  30-day settlement guarantee
+${e_insure_30daySettlementMsgText} =  Get paid within 30 days of claim acceptance or get 2% above current bank rate interest till it is settled. 
+${e_insure_ayushCoveredCardText} =  AYUSH covered
+${e_insure_ayushCoveredMsgText} =  Ayurveda, Yoga and Naturopathy, Unani, Siddha and Homeopathy covered up to full sum insured. 
+${e_insure_lowWaitingPeriodCardText} =  Lowest waiting period 
+${e_insure_lowWaitingPeriodMsgText} =  Get your pre-existing and specific illness covered within 2 years.
+${e_insure_dailyExpenseCardText} =  Daily cash expenses
+${e_insure_dailyExpenseMsgText} =  Get up to ₹10k a day to cover out of pocket expenses during hospitalisation.
+${e_insure_dedicatedSupportCardText} =  Dedicated support 
+${e_insure_dedicatedSupportMsgText} =  Get year-round dedicated support. 
+${e_insure_trustedPartnerTitleText} =  Trusted partner
+${e_insure_trustedPartnerSubTitleText} =  With a 97% Claim settlement ratio, we’ve partnered with the best.
+${e_insure_flexibleCoverageTitleText} =  Flexible coverage
+${e_insure_flexibleCoevrageSubTitleText} =  Pick a Base/SuperTop-up/Daily-cash or all 3. Coverage from ₹3L to ₹75L.
+${e_insure_saveTaxTitleText} =  Save up to ₹1 lakh in tax
+${e_insure_saveTaxSubTitleText} =  Claim tax under section 80D.
+${e_insure_healthCoverTitleText} =  Health cover that’s right for you.
+${e_insure_checkPremiumBtn2Text} =  Check premium
 
+# Remit Page Expected Data
+# Remit Lists
+@{e_remit_whyTransferWiseList} =  No hidden fees  Up to 8x cheaper than banks  Trusted by 7 million users  Fast way to send money  Mid-market exchange rate
 
-#Remit Page Expected Data
 ${e_remit_screenTitle} =  A cheaper & faster way to send money home
 ${e_remit_screenTitleDesc} =  Now invest easily through Kuvera, or send money to your loved ones. With our partner TransferWise, you can transfer money to India for the lowest-cost. It is simple and faster than any traditional provider.
 ${e_remit_transferNowBtn} =  Transer now
-#${e_remit_whyTransferWiseList} =  Why TransferWise?  No hidden fees  Up to 8x cheaper than banks  Trusted by 7 million users  Fast way to send money  Mid-market exchange rate
 ${e_remit_transferWiseSignupTitle} =  Transfer Money Online | Send Money Abroad with TransferWise - Sign up
 ${e_remit_transferWiseCross-borderTitle} =  Making cross-border investments with Kuvera seamless and easy | TransferWise - TransferWise
-@{e_remit_whyTransferWiseList} =  No hidden fees  Up to 8x cheaper than banks  Trusted by 7 million users  Fast way to send money  Mid-market exchange rate
 
-#Application Locator 'KU_<locatorName>'
-#Kuvera :: Wealth Management Simplified
-#Loan Navigation Page
+# Loan Navigation Page
 ${KU_W_loanLink} =  xpath=//a[contains(text(),'Loans')]
 ${KU_W_loanHeaderTitle} =  xpath=//div[@class='b-header__title']
 ${KU_W_loanHeaderMsg} =  xpath=//div[contains(text(),'Let your investments work for you. The only loan a')]
@@ -88,6 +118,7 @@ ${KU_W_getLoanAgainstMF} =  xpath=//div[@class='b-start-save b-kuvera-get-loan']
 ${KU_W_getLoanAgainstMFMsg} =  xpath=//div[@class='b-start-save b-kuvera-get-loan']/div[1]/div[2]
 ${KU_W_startSaveCheckEligibilityBtn} =  xpath=//button[@class='button-primary b-start-save__btn b-start-save__btn-desktop']
   
+# Insure Navigation Page  
 #Insure Navigation Page  
 ${KU_W_insureLink} =  xpath=//a[contains(text(),'Insure')]
 ${KU_W_insureHeaderTitle} =  xpath=(//div[@class='b-health-insurance-landing__title--main'])[1]
@@ -97,28 +128,54 @@ ${KU_W_checkPremiumBtn} =  xpath=//button[@class='button-primary']
 ${KU_W_costDetailsHeaderTitle} =  xpath=//div[@class='b-health-insurance-landing__cost-details--table__text']
 ${KU_W_treatmentTitle} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__treatment'])[1]
 ${KU_W_treatmentCostTitle} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__cost'])[1]
-
 ${KU_W_covid19Cost} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__cost'])[2]
 ${KU_W_cancerCareCost} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__cost'])[3]
 ${KU_W_OpenHeartSurgeryCost} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__cost'])[4]
 ${KU_W_kneeReplacementCost} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__cost'])[5]
-
 ${KU_W_covid19Title} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__treatment'])[2]
 ${KU_W_cancerCareTitle} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__treatment'])[3]
 ${KU_W_heartSurgeryTitle} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__treatment'])[4]
 ${KU_W_kneeReplacmentTitle} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__treatment'])[5]
-
 ${KU_W_covid19Image} =  xpath=(//img[@class='b-health-insurance-landing__cost-details--img'])[1] 
 ${KU_W_cancerCareImage} =  xpath=(//img[@class='b-health-insurance-landing__cost-details--img'])[2] 
 ${KU_W_openHeartSurgeryImage} =  xpath=(//img[@class='b-health-insurance-landing__cost-details--img'])[3] 
 ${KU_W_kneeReplacementImage} =  xpath=(//img[@class='b-health-insurance-landing__cost-details--img'])[4] 
-      
-      
-#Remit Page    
+${KU_W_groupHealthInsuranceTitle} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--brief']/div)[1] 
+${KU_W_grpHealthInsurranceSubTitle} =  xpath=(//div[@class='b-health-insurance-landing__title--text'])[2]
+${KU_W_insurancePolicyLists} =  xpath=//ul[@class='b-health-insurance-landing__policy-list']/li 
+${KU_W_covid19CardTitle} =  xpath=(//div[@class='b-feature-card__title'])[1]
+${KU_W_covid19Msg} =  xpath=(//div[@class='b-feature-card__msg'])[1]
+${KU_W_roomrentCardTitle} =  xpath=(//div[@class='b-feature-card__title'])[2] 
+${KU_W_roomrentMsg} =  xpath=(//div[@class='b-feature-card__msg'])[2] 
+${KU_W_treatmentCappingCardTitle} =  xpath=(//div[@class='b-feature-card__title'])[3] 
+${KU_W_treatmentCappingMsg} =  xpath=(//div[@class='b-feature-card__msg'])[3] 
+${KU_W_copaymentCardTitle} =  xpath=(//div[@class='b-feature-card__title'])[4] 
+${KU_W_copaymentMsg} =  xpath=(//div[@class='b-feature-card__msg'])[4]
+${KU_W_30daySettlemenCardTitle} =  xpath=(//div[@class='b-feature-card__title'])[5] 
+${KU_W_30daySettlemenMsg} =  xpath=(//div[@class='b-feature-card__msg'])[5]
+${KU_W_ayushCoveredCardTitle} =  xpath=(//div[@class='b-feature-card__title'])[6] 
+${KU_W_ayushCoveredMsg} =  xpath=(//div[@class='b-feature-card__msg'])[6] 
+${KU_W_lowWaitingPeriodCardTitle} =  xpath=(//div[@class='b-feature-card__title'])[7] 
+${KU_W_lowWaitingPeriodMsg} =  xpath=(//div[@class='b-feature-card__msg'])[7]
+${KU_W_dailyExpenseCardTitle} =  xpath=(//div[@class='b-feature-card__title'])[8]
+${KU_W_dailyExpenseMsg} =  xpath=(//div[@class='b-feature-card__msg'])[8]
+${KU_W_dedicatedSupportCardTitle} =  xpath=(//div[@class='b-feature-card__title'])[9] 
+${KU_W_dedicatedSupportMsg} =  xpath=(//div[@class='b-feature-card__msg'])[9]
+${KU_W_sliderButton} =  xpath=//div[@class='b-slide-card-list__btns__next b-slide-card-list__btns__next--active']
+${KU_W_trustedPartnerTitle} =  xpath=(//div[@class='b-health-insurance-landing__insurance-brief__row--items__content']/div)[1] 
+${KU_W_trustedPartnerSubTitle} =  xpath=(//div[@class='b-health-insurance-landing__insurance-brief--subheading'])[1] 
+${KU_W_flexibleCoverageTitle} =  xpath=(//div[@class='b-health-insurance-landing__insurance-brief__row--items__content']/div)[3]
+${KU_W_flexibleCoverageSubtitle} =  xpath=(//div[@class='b-health-insurance-landing__insurance-brief--subheading'])[2] 
+${KU_W_saveTaxTitle} =  xpath=(//div[@class='b-health-insurance-landing__title--main'])[6]
+${KU_W_saveTaxSubTitle} =  xpath=(//div[@class='b-health-insurance-landing__insurance-brief--subheading'])[3]
+${KU_W_healthCoverTitle} =  xpath=//div[@class='b-health-insurance-landing__healthcare-cover--wrapper']/div 
+${KU_W_checkPremiumBtn2Title} =  xpath=(//button[@class='button-primary'])[2]
+       
+# Remit Page    
 ${KU_W_remit_Link} =  xpath=//a[contains(text(),'Remit')]
 ${KU_W_remit_screenTitle} =  xpath=//*[@class='b-introduction__desc__title']
 ${KU_W_remit_screenTitleDesc} =  xpath=//*[@class='b-introduction__desc__content']      
-${KU_W_remit_transferNowTopBtn} =  xpath=//*[@class='b-introduction__desc__btn-transfer']      
+${KU_W_remit_transferNowTopBtn} =  xpath=//*[@class='button-primary b-introduction__btn-transfer__item']      
 ${KU_W_remit_whyTransferWise} =  xpath=//*[@class='b-why-transferwise b-transferwise__calculator-why__item__content']/div    
 ${KU_W_remit_whyTransferWiseList} =  xpath=//*[@class='b-why-transferwise__list']/div     
 ${KU_W_transferWiseStepsModal} =  xpath=//*[@class='b-transferwise-transfer-step__title__items__1']

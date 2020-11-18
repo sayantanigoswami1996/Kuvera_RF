@@ -1,10 +1,10 @@
 *** Variables ***
-#Desired Capabilities
+# Desired Capabilities
 ${URL}    https://kuvera.in/
-#For headless chrome use: ${BROWSER}     headlesschrome
-${BROWSER}     headlesschrome
+# For headless chrome use: ${BROWSER}     headlesschrome
+${BROWSER}     Chrome
 
-#Application Expected Values 'e_<VariableName>'
+# Application Expected Values 'e_<VariableName>'
 ${e_login} =  Log in 
 ${e_signup} =  Sign up 
 ${e_mfWelcomeTitle} =  Investments Simplified
@@ -31,19 +31,16 @@ ${e_usersMsg} =   We revolutionized the way India invests. With your feedback we
 ${e_earnTitle} =  Earn up to 1.5% more returns*
 ${e_earnMsg} =  We pioneered commission free Direct Plan investing.\nEarn from our expertise and don't pay commission ever.
 ${e_earnLearnLink} =   Learn how!
-${e_coreAUAValue} =  ₹ 16,000
+${e_coreAUAValue} =  ₹ 15,000
 ${e_coreAUAText} =  Crore AUA       
 ${e_citiesValue} =  3 Lakh
 ${e_citiesText} =   Goals
 ${e_transValue} =   1.8 Crore
 ${e_transText} =  Transactions
 
-
 @{e_fndHouse_firstColumn} =  Create List    ADITYA BIRLA SUN LIFE  AXIS  BARODA  BHARTI AXA  BNP PARIBAS  CANARA ROBECO  DSP  EDELWEISS  ESSEL  FRANKLIN TEMPLETON    HDFC  HSBC  ICICI  PRUDENTIAL  IDBI  IDFC  IIFL  INDIA BULLS  INVESCO  ITI  JM FINANCIAL    
 @{e_fndHouse_secondColumn} =  Create List    KOTAK  L&T  LIC  MAHINDRA  MIRAE ASSET  MOTILAL OSWAL  NIPPON INDIA  PGIM INDIA  PPFAS    PRINCIPAL  QUANT  QUANTUM  SBI  SUNDARAM  TATA  TAURUS  UNION  UTI  YES 
 
-
-#Application Locator 'KU_<locatorName>'
 # Kuvera :: Wealth Management Simplified
 ${KU_W_title}=  Kuvera - Direct Mutual Funds | Stocks | Loans | Gold | Remit on Kuvera- Wealth Management Simplified
 ${KU_W_logo} =  xpath=//*[@class='b-header__content__logo']
