@@ -71,7 +71,7 @@ Get List Count
     [Return]  ${listCount}
 
 Close Banner 
-    Wait For Element Visbility  ${KU_W_bannerFrame}
+    Wait Until Element Is Visible  ${KU_W_bannerFrame}  timeout=30
     Switch To Frame  ${KU_W_bannerFrame}
     Wait For Element Visbility  ${KU_W_bannerCloseBtn}
     Click Element  ${KU_W_bannerCloseBtn}
@@ -85,7 +85,7 @@ Get Json Values
 
 Verify Widgets From Json
     ${jsonWidgetsFile}  Load JSON From File  /Users/prathijamoolya/Kuvera/Automation/Kuvera_RF/Resources/TestData/Widgets.json
-    ${jsonWidgetsValue}  Get Value From Json  ${jsonWidgetsFile}                                                                   $.Widgets
+    ${jsonWidgetsValue}  Get Value From Json  ${jsonWidgetsFile}  $.Widgets
     ${json_data}  Set Variable  ${jsonWidgetsValue} 
     Log To Console  ${json_data1}          
     # Verify Page Contains Element        ${widget}
@@ -118,19 +118,16 @@ Header Navigation
     ${remit}  Get Json Values  $.MenuHeaders[3]  Resources/TestData/Headers.json
     ${features}  Get Json Values  $.MenuHeaders[4]  Resources/TestData/Headers.json
   
-    @{elem} =  Get WebElements  ${KU_W_headers}
-    ${count}  Get List Count  ${elem}
+    ${elem} =  Get Element Count  ${KU_W_headers}
 
-   
-    ${index} =  Set Variable  1
-    FOR  ${item}  IN  @{elem}       
-    Exit For Loop If  ${index} > ${count}
-    ${ele} =  xpath =  //div[@class='b-header__content__middle']/a[" + j + "]
-    ${header}  Set Variable  ${item.text}     
-    Sleep  3s              
-    Run keyword If  ['${header}'] == ${invest}  Log To Console  PENDING
-    ...   ELSE  Log To Console  InProgress
-    ${index} =  Evaluate  ${index} + 1
+    FOR  ${j}  IN RANGE  1  ${elem}+1
+        ${cds_text} =  Get Text  xpath=//div[@class='b-header__content__middle']/a[${j}]
+        Log to console  ${cds_text}
+        Run keyword If  ['${cds_text}'] == ${invest}  Log To Console  PENDING
+        ...    ELSE IF  ['${cds_text}'] == ${loans}  Verify Loan Page
+        ...    ELSE IF  ['${cds_text}'] == ${insure}  Verify Insure Page
+        ...    ELSE IF  ['${cds_text}'] == ${remit}  Verify Remit Page
+        ...    ELSE  Log To Console  test
     END
 
 Close Web Application

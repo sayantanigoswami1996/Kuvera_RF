@@ -10,15 +10,15 @@ Resource    ../../../Resources/Utils/DesktopWeb/Common.robot
 *** Keywords ***
 
 Verify Insure Page
-  
   Click Element  ${KU_W_insureLink}
   Wait For Element Visbility  ${KU_W_insureHeaderTitle}  
   Verify Element And Text  ${KU_W_insureHeaderTitle}  ${e_insure_headerTitleText} 
   Verify Element And Text  ${KU_W_insureHeaderMsg}  ${e_insure_headerMsgText}
   Verify Element And Text  ${KU_W_termsAndConditions}  ${e_insure_T&CText}  
   Verify Element And Text  ${KU_W_checkPremiumBtn}  ${e_insure_checkPremiumBtnText}  
-  Click Element  ${KU_W_checkPremiumBtn} 
-  Verify Login Page
+  Wait For Element Visbility  ${KU_W_checkPremiumBtn} 
+  # Click Element  ${KU_W_checkPremiumBtn} 
+  # Verify Login Page
   Wait For Element Visbility  ${KU_W_costDetailsHeaderTitle}     
   Scroll Untill View  ${KU_W_costDetailsHeaderTitle}
   Verify Element and Text  ${KU_W_costDetailsHeaderTitle}  ${e_insure_costDetailsHeaderText}

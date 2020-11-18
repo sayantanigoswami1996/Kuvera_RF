@@ -59,11 +59,11 @@ ${e_remit_transferWiseCross-borderTitle} =  Making cross-border investments with
 #Application Locator 'KU_<locatorName>'
 #Kuvera :: Wealth Management Simplified
 #Loan Navigation Page
+${KU_W_loanLink} =  xpath=//a[contains(text(),'Loans')]
 ${KU_W_loanHeaderTitle} =  xpath=//div[@class='b-header__title']
 ${KU_W_loanHeaderMsg} =  xpath=//div[contains(text(),'Let your investments work for you. The only loan a')]
 ${KU_W_loanCheckEligibility} =  class=b-state-save-btn__text
 ${KU_W_loginPageTitle} =  xpath=//div[contains(text(),'Login. Start Investing.')]
-${KU_W_loanLink} =  xpath=//a[@class='b-header__content__las']
 ${KU_W_loanCalculatorTitle} =  xpath=//div[@class='b-calculator__text-content']/div[1]
 ${KU_W_loanCalculatorMsgList} =  xpath=//ul[@class='b-calculator__list']/li
 ${KU_W_highlyFlexibleTitle} =  xpath=//div[@class='b-withdraw-30min__title']  
@@ -93,7 +93,7 @@ ${KU_W_insureLink} =  xpath=//a[contains(text(),'Insure')]
 ${KU_W_insureHeaderTitle} =  xpath=(//div[@class='b-health-insurance-landing__title--main'])[1]
 ${KU_W_insureHeaderMsg} =  xpath=(//div[@class='b-health-insurance-landing__title--text'])[1]
 ${KU_W_termsAndConditions} =  xpath=//span[@class='b-health-insurance-landing__term-condition']
-${KU_W_checkPremiumBtn} =  xpath=(//div[@class='b-health-insurance-landing__cta']/button)[1]
+${KU_W_checkPremiumBtn} =  xpath=//button[@class='button-primary']
 ${KU_W_costDetailsHeaderTitle} =  xpath=//div[@class='b-health-insurance-landing__cost-details--table__text']
 ${KU_W_treatmentTitle} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__treatment'])[1]
 ${KU_W_treatmentCostTitle} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__cost'])[1]
