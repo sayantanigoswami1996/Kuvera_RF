@@ -9,21 +9,22 @@ Resource    ../../../Resources/Utils/DesktopWeb/Common.robot
 
 ***Keywords***
 Verify Transfer Now 
-    Click Button  ${KU_W_remit_transferNowBtn}
+    [Arguments]  ${element}
+    Click Button  ${element}
     Verify Element And Text  ${KU_W_transferWiseStepsModal}  Next steps
     Wait For Element Visbility  ${KU_W_transferWiseNextStepsContinueBtn}
     Click Element  ${KU_W_transferWiseNextStepsContinueBtn}
     Switch To Window Verify Title And Close  ${e_remit_transferWiseSignupTitle} 
 
-
-Verify Remit Page
-    Click Link  ${KU_W_remit_Link}
+Verify PreLogin Remit Page
+    Click Element  ${KU_W_remit_Link}
     Verify Language Switch Login And Signup Link
     Wait For Element Visbility  ${KU_W_remit_screenTitle}
     Verify Element And Text  ${KU_W_remit_screenTitle}  ${e_remit_screenTitle} 
     Verify Element And Text  ${KU_W_remit_screenTitleDesc}  ${e_remit_screenTitleDesc}
+
     # Verify transerwise next steps 
-    Verify Transfer Now 
+    Verify Transfer Now  ${KU_W_remit_transferNowTopBtn}
     Scroll Untill View  ${KU_W_remit_whyTransferWise}
     Scroll Untill View  ${KU_W_remit_knowMoreBtn}
     @{actualListItems} =  Get WebElements  ${KU_W_remit_whyTransferWiseList} 
@@ -39,7 +40,6 @@ Verify Remit Page
     Verify Page Contains Element  ${KU_W_remit_calculatorTarget}
     Switch To Window Verify Title And Close  ${e_remit_transferWiseSignupTitle} 
 
-    Scroll Untill View  ${KU_W_remit_transferNowBtn}
-    Verify Page Contains Element  ${KU_W_transferWiseVideo}
+    Scroll Untill View  ${KU_W_remit_transferNoBottomBtn}
     # Verify transerwise next steps 
-    Verify Transfer Now 
+    Verify Transfer Now   ${KU_W_remit_transferNoBottomBtn}

@@ -1,9 +1,12 @@
 *** Variables ***
-#Desired Capabilities
+# Desired Capabilities
 ${URL}    https://kuvera.in/
-${BROWSER}     Chrome
+# For headless chrome use: ${BROWSER}     headlesschrome
+${BROWSER}  headlesschrome
+
 
 #Application Expected Values 'e_<VariableName>'
+>>>>>>> 14ad689e1b87a92cddca678a7c25e5a9d6c0f1f9
 ${e_login} =  Log in 
 ${e_signup} =  Sign up 
 ${e_mfWelcomeTitle} =  Investments Simplified
@@ -37,17 +40,16 @@ ${e_citiesText} =   Goals
 ${e_transValue} =   1.8 Crore
 ${e_transText} =  Transactions
 
+@{e_fndHouse_firstColumn} =  ADITYA BIRLA SUN LIFE  AXIS  BARODA  BHARTI AXA  BNP PARIBAS  CANARA ROBECO  DSP  EDELWEISS  ESSEL  FRANKLIN TEMPLETON    HDFC  HSBC  ICICI  PRUDENTIAL  IDBI  IDFC  IIFL  INDIA BULLS  INVESCO  ITI  JM FINANCIAL    
+@{e_fndHouse_secondColumn} =  KOTAK  L&T  LIC  MAHINDRA  MIRAE ASSET  MOTILAL OSWAL  NIPPON INDIA  PGIM INDIA  PPFAS    PRINCIPAL  QUANT  QUANTUM  SBI  SUNDARAM  TATA  TAURUS  UNION  UTI  YES 
 
-@{e_fndHouse_firstColumn} =  Create List    ADITYA BIRLA SUN LIFE  AXIS  BARODA  BHARTI AXA  BNP PARIBAS  CANARA ROBECO  DSP  EDELWEISS  ESSEL  FRANKLIN TEMPLETON    HDFC  HSBC  ICICI  PRUDENTIAL  IDBI  IDFC  IIFL  INDIA BULLS  INVESCO  ITI  JM FINANCIAL    
-@{e_fndHouse_secondColumn} =  Create List    KOTAK  L&T  LIC  MAHINDRA  MIRAE ASSET  MOTILAL OSWAL  NIPPON INDIA  PGIM INDIA  PPFAS    PRINCIPAL  QUANT  QUANTUM  SBI  SUNDARAM  TATA  TAURUS  UNION  UTI  YES 
-
-
-#Application Locator 'KU_<locatorName>'
 # Kuvera :: Wealth Management Simplified
 ${KU_W_title}=  Kuvera - Direct Mutual Funds | Stocks | Loans | Gold | Remit on Kuvera- Wealth Management Simplified
 ${KU_W_logo} =  xpath=//*[@class='b-header__content__logo']
 ${KU_W_close} =  xpath=//button[@class='button-primary b-regulatory-disclosure__btn']
-${KU_W_bannerCloseBtn} =  (//*[@class='icon-close'])[2]
+${KU_W_bannerFrame} =  id=p9e7d2f05349193e9421e568b092da688e5010650-container
+${KU_W_bannerCloseBtn} =  xpath=(//*[@class='icon-close'])[2]
+${KU_W_menu} =  xpath=//*[@class='b-header__content']
 ${KU_W_headers} =  xpath=//*[@class='b-header__content__middle']/a
 ${KU_W_exploreELSS} =  xpath=//button[contains(text(),'Explore ELSS funds')]
 ${KU_W_login} =  xpath=//*[@class='b-header__content__right__signin']

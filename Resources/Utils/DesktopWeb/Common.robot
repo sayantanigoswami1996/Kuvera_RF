@@ -11,7 +11,9 @@ Resource    ../../../AppLocators/DesktopWeb/CommonAppLocators.robot
 *** Keywords ***
 Launch URL
     Open Browser  ${URL}  ${BROWSER}  alias=Kuvera
-    Maximize Browser Window
+    # Maximize Browser Window
+    Set Window Size  ${1366}  ${768}
+    Reload Page
 
 Welcome Page Should Be Open
     Title Should Be  ${KU_W_title}
@@ -42,6 +44,17 @@ Verify Page Contains Link
 
 Compare Lists 
     [Arguments]  ${actualList}   ${expectedList}
+<<<<<<< HEAD
+    # Get list item from actual list
+    FOR  ${actualListItems}  IN  @{actualList}
+    ${actualListItem}  Set Variable  ${actualListItems.text}
+    END
+    # Get list item from expected list
+    FOR  ${expectedListItems}  IN  @{expectedList}
+    ${expectedListItem}  Set Variable  ${expectedListItems}
+    END
+    # Compare two list items
+=======
     #Get list item from actual list
     FOR  ${actualListItems}  IN  @{actualList}
     ${actualListItem}  Set Variable  ${actualListItems.text}
@@ -51,6 +64,7 @@ Compare Lists
     ${expectedListItem}  Set Variable  ${expectedListItems}
     END
     #Compare two list items
+>>>>>>> 14ad689e1b87a92cddca678a7c25e5a9d6c0f1f9
     Should Be Equal  ${actualListItem}  ${expectedListItem}  
 
 Switch To Window Verify Title And Close
@@ -64,6 +78,21 @@ Switch To Frame
     [Arguments]  ${element}
     Select Frame  ${element}
 
+<<<<<<< HEAD
+Get List Count
+    [Arguments]  ${list}
+    ${listCount}  Get Length  ${list}
+    [Return]  ${listCount}
+
+Close Banner 
+    Wait Until Element Is Visible  ${KU_W_bannerFrame}  timeout=30
+    Switch To Frame  ${KU_W_bannerFrame}
+    Wait For Element Visbility  ${KU_W_bannerCloseBtn}
+    Click Element  ${KU_W_bannerCloseBtn}
+    Unselect Frame
+
+=======
+>>>>>>> 14ad689e1b87a92cddca678a7c25e5a9d6c0f1f9
 Get Json Values
     [Arguments]  ${jsonPath}  ${jsonFilePath}
     ${jsonFile}  Load JSON From File  ${jsonFilePath}
@@ -72,7 +101,7 @@ Get Json Values
 
 Verify Widgets From Json
     ${jsonWidgetsFile}  Load JSON From File  /Users/prathijamoolya/Kuvera/Automation/Kuvera_RF/Resources/TestData/Widgets.json
-    ${jsonWidgetsValue}  Get Value From Json  ${jsonWidgetsFile}                                                                   $.Widgets
+    ${jsonWidgetsValue}  Get Value From Json  ${jsonWidgetsFile}  $.Widgets
     ${json_data}  Set Variable  ${jsonWidgetsValue} 
     Log To Console  ${json_data1}          
     # Verify Page Contains Element        ${widget}
@@ -82,6 +111,7 @@ Kuvera Web Logo Click
     Click Element  ${KU_W_close}
     Wait Until Element Is Visible  ${KU_W_logo}
     Click Element  ${KU_W_logo}
+    Sleep  10s
 
 Verify Login Page
     Wait For Element Visbility  ${KU_W_loginPageTitle}
@@ -92,6 +122,31 @@ Verify Google Play & Apple Store Icons
     Scroll Element Into View  ${KU_W_android_image}
     Verify Page Contains Image  ${KU_W_android_image}
     Verify Page Contains Image  ${KU_W_apple_image}
+<<<<<<< HEAD
+
+Verify Language Switch Login And Signup Link
+    Verify Page Contains Element  ${KU_W_langSwitch}
+    Verify Element And Text  ${KU_W_login}  ${e_login}
+    Verify Element And Text  ${KU_W_signup}  ${e_signup}
+
+Header Navigation
+    ${invest}  Get Json Values  $.MenuHeaders[0]  Resources/TestData/Headers.json
+    ${loans}  Get Json Values  $.MenuHeaders[1]  Resources/TestData/Headers.json
+    ${insure}  Get Json Values  $.MenuHeaders[2]  Resources/TestData/Headers.json
+    ${remit}  Get Json Values  $.MenuHeaders[3]  Resources/TestData/Headers.json
+    ${features}  Get Json Values  $.MenuHeaders[4]  Resources/TestData/Headers.json
+  
+    ${elem} =  Get Element Count  ${KU_W_headers}
+
+    FOR  ${j}  IN RANGE  1  ${elem}+1
+        ${cds_text} =  Get Text  xpath=//div[@class='b-header__content__middle']/a[${j}]
+        #Log to console  ${cds_text}
+        Run keyword If  ['${cds_text}'] == ${invest}  Log To Console  PENDING
+        ...    ELSE IF  ['${cds_text}'] == ${loans}  Verify PreLogin Loan Page
+        ...    ELSE IF  ['${cds_text}'] == ${insure}  Verify PreLogin Insure Page
+        ...    ELSE IF  ['${cds_text}'] == ${remit}  Verify PreLogin Remit Page
+        ...    ELSE  Log To Console  test
+=======
 
 Verify Language Switch Login And Signup Link
     Verify Page Contains Element  ${KU_W_langSwitch}
@@ -112,6 +167,7 @@ Header Navigation
     Sleep  3s              
     Run keyword If  ['${header}'] == ${invest}  Log To Console  PENDING
     ...   ELSE  Log To Console  InProgress
+>>>>>>> 14ad689e1b87a92cddca678a7c25e5a9d6c0f1f9
     END
 
 Close Web Application

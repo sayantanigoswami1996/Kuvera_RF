@@ -1,5 +1,8 @@
 *** Settings ***
+<<<<<<< HEAD
+=======
 
+>>>>>>> 14ad689e1b87a92cddca678a7c25e5a9d6c0f1f9
 Library     JSONLibrary
 Library     JsonValidator
 Library     SeleniumLibrary
@@ -9,8 +12,9 @@ Resource    ../../../Resources/Utils/DesktopWeb/Common.robot
 
 *** Keywords ***
 
-Verify Loan Page
+Verify PreLogin Loan Page
   Click Element  ${KU_W_loanLink}
+  Verify Language Switch Login And Signup Link
   Wait For Element Visbility  ${KU_W_loanHeaderTitle}  
   Verify Element And Text  ${KU_W_loanHeaderTitle}  ${e_loan_headerTitleText}
   Verify Element And Text  ${KU_W_loanHeaderMsg}  ${e_loan_headerMsgText} 
@@ -20,7 +24,13 @@ Verify Loan Page
   Wait For Element Visbility  ${KU_W_loanCalculatorTitle}     
   Scroll Untill View  ${KU_W_loanCalculatorTitle}
   Verify Element and Text  ${KU_W_loanCalculatorTitle}  ${e_loan_calculatorTitleText}
-   
+
+  Page Should Contain  ${e_loan_calculatorSubTitleText} 
+
+  #Validation of List of Text Under Loan Calculator Block
+  @{actualListItems} =  Get WebElements  ${KU_W_loanCalculatorMsgList} 
+  Compare Lists  ${actualListItems}  ${e_loan_calculatorMsgListItem}
+
   #Validation of List of Text Under Loan Calculator Block
   @{actualListItems} =  Get WebElements  ${KU_W_loanCalculatorMsgList} 
   Compare Lists  ${actualListItems}  ${e_loan_calculatorMsgListItem}
@@ -34,7 +44,11 @@ Verify Loan Page
   Scroll Untill View  ${KU_W_payForWhatYouUseTitle}
   Verify Element and Text  ${KU_W_payForWhatYouUseTitle}  ${e_loan_payForWhatYouUseText}
   Verify Element and Text  ${KU_W_payForWhatYouUseMsg}  ${e_loan_payForWhatYouUseMsgText}
+<<<<<<< HEAD
+
+=======
    
+>>>>>>> 14ad689e1b87a92cddca678a7c25e5a9d6c0f1f9
   #Instant Approval 
   Wait For Element Visbility  ${KU_W_loanRedemptionTitle} 
   Verify Element and Text  ${KU_W_loanRedemptionTitle}   ${e_loan_redemptionTitleText}
@@ -45,7 +59,10 @@ Verify Loan Page
   Scroll Untill View  ${KU_W_saveSuperAffordableTitle}
   Verify Element and Text  ${KU_W_saveSuperAffordableTitle}  ${e_loan_saveSuperAffordableTitleText} 
   Verify Element and Text  ${KU_W_saveSuperAffordableMsg}  ${e_loan_saveSuperAffordableMsgText}
+<<<<<<< HEAD
+=======
   
+>>>>>>> 14ad689e1b87a92cddca678a7c25e5a9d6c0f1f9
   #Easy Start Saver
   Wait For Element Visbility  ${KU_W_startSaveTitle}  
   Scroll Untill View  ${KU_W_startSaveTitle} 
@@ -69,6 +86,9 @@ Verify Loan Page
   Verify Element and Text  ${KU_W_startSaveCheckEligibilityBtn}  ${e_loan_startSaveCheckEligibiliyText}
   
   #Verify the Google Play & Apple Store icons
+<<<<<<< HEAD
+  Verify Google Play & Apple Store Icons
+=======
   Verify Google Play & Apple Store Icons
   Go Back
  
@@ -76,3 +96,4 @@ Verify Loan Page
 
   
 
+>>>>>>> 14ad689e1b87a92cddca678a7c25e5a9d6c0f1f9
