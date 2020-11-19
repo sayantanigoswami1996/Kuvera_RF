@@ -27,7 +27,6 @@ ${e_loan_getLoanAgainstMFText} =  Get loan against Mutual Funds
 ${e_loan_getLoanAgainstMFMsgText} =  An affordable, quick, and flexible loan. All paperless.
 ${e_loan_startSaveCheckEligibiliyText} =  Check your eligibility
 
-
 # Insure List
 @{e_insure_treatmentListItem} =  COVID-19  Cancer care  Open heart surgery  Knee replacement
 @{e_insure_policyListItem} =  Policy wording simple.  Premium cost low.  Year round support.
@@ -96,6 +95,14 @@ ${e_feature_helpTradeSmartTitleText} =  We help you trade smart
 ${e_feature_helpTradeSmartDesc1Text} =  See regular plan units as they become available to switch to direct plans with the least tax and exit load impact. Switching to Direct has never been easier or cheaper.
 ${e_feature_helpTradeSmartDesc2Text} =  See optimal number of fund units to switch or redeem before you transact. Make better decisions.
 ${e_feature_helpTradeSmartDesc3Text} =  We take care of all complexities. 1 year STCG for equity, 3 year for debt, indexation for debt, lock-in for ELSS schemes etc. We optimize over it all.
+
+# Feature-Family Account Navigation Page 
+${e_feature_fa_screenTitle} =  Invest with Your Loved Ones
+${e_feature_fa_screenContent} =  Just Sign up with one account, and manage investment for your relatives and family members. Multiple accounts under same login. All in one place. Even Joint Account too!
+${e_activateWithBtn} =  Activate with 200
+
+# Button 
+${KU_W_button} =  (//button[@class='button-primary'])[1]
 
 # Application Locator 'KU_<locatorName>'
 # Loan Navigation Page
@@ -217,30 +224,9 @@ ${KU_W_feature_helpTradeSmartTitle} =  xpath=//div[@class='b-trade-smart__help-t
 ${KU_W_feature_helpTradeSmart1Msg} =  xpath=//div[@class='b-trade-smart__help-desc']/div[1] 
 ${KU_W_feature_helpTradeSmart2Msg} =  xpath=//div[@class='b-trade-smart__help-desc']/div[2]
 ${KU_W_feature_helpTradeSmart3Msg} =  xpath=//div[@class='b-trade-smart__help-desc']/div[3]
+                                                                                              
 
-
-
-
-
-
-
-
-
-
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-                             
+# Feature-Family Account
+${KU_W_feature_familyAccountLink} =  xpath=//a[contains(text(),'Family Account')]   
+${KU_W_feature_fa_screenTitle} =  xpath=//h1[@class='b-family-account__what__heading']
+${KU_W_feature_fa_screenContent} =  xpath=//div[@class='b-family-account__what__des']

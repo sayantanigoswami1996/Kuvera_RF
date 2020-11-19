@@ -1,4 +1,5 @@
 *** Settings ***
+
 Library     JSONLibrary
 Library     JsonValidator
 Library     SeleniumLibrary
@@ -6,8 +7,7 @@ Resource    ../../../AppLocators/DesktopWeb/MenuNavigationLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/CommonAppLocators.robot
 Resource    ../../../Resources/Utils/DesktopWeb/Common.robot
 
-*** Keywords ***
-
+** Keywords ***
 Verify PreLogin TradeSmart Page
     Click Element  ${KU_W_featureLink} 
     Wait For Element Visbility  ${KU_W_feature_tradeSmartLink}
@@ -29,4 +29,8 @@ Verify PreLogin TradeSmart Page
     Scroll Untill View  ${KU_W_feature_helpTradeSmart3Msg} 
     Verify Element and Text  ${KU_W_feature_helpTradeSmart2Msg}  ${e_feature_helpTradeSmartDesc2Text}
     Verify Element and Text  ${KU_W_feature_helpTradeSmart3Msg}  ${e_feature_helpTradeSmartDesc3Text}
-    
+
+
+
+
+

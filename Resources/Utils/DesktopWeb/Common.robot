@@ -92,7 +92,6 @@ Verify Language Switch Login And Signup Link
     Verify Page Contains Element  ${KU_W_langSwitch}
     Verify Element And Text  ${KU_W_login}  ${e_login}
     Verify Element And Text  ${KU_W_signup}  ${e_signup}
-
 Verify Page Contains Button
     [Arguments]  ${button}
     Page Should Contain Button  ${button}
@@ -102,6 +101,7 @@ Header Navigation
     ${insure}  Get Json Values  $.MenuHeaders[2]  Resources/TestData/Headers.json
     ${remit}  Get Json Values  $.MenuHeaders[3]  Resources/TestData/Headers.json
     ${features}  Get Json Values  $.MenuHeaders[4]  Resources/TestData/Headers.json
+    
     ${elem} =  Get Element Count  ${KU_W_headers}
     FOR  ${j}  IN RANGE  1  ${elem}+1
         ${cds_text} =  Get Text  xpath=//div[@class='b-header__content__middle']/a[${j}]
