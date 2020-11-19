@@ -72,7 +72,7 @@ Get List Count
     [Return]  ${listCount}
 
 Close Banner 
-    Wait Until Element Is Visible  ${KU_W_bannerFrame}  timeout=30
+    Wait Until Element Is Visible  ${KU_W_bannerFrame}  timeout=50
     Switch To Frame  ${KU_W_bannerFrame}
     Wait For Element Visbility  ${KU_W_bannerCloseBtn}
     Click Element  ${KU_W_bannerCloseBtn}
