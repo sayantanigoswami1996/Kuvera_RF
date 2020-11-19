@@ -20,3 +20,4 @@ Landing Page Widgets Verification Test
     Close Banner 
     Verify Widgets
     Header Navigation
+

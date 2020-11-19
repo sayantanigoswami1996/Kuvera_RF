@@ -42,6 +42,7 @@ Verify Features Widgets
   Verify Element And Text  ${KU_W_exploreELSS}  ${e_exploreELSSfundsBtn}
   Verify Element And Text  ${KU_W_startHarvest}  ${e_startHarvestingBtn} 
   Verify Element And Text  ${KU_W_switchToday}  ${e_switchTodayBtn}
+
   Click Element  ${KU_W_next_button} 
   sleep  1s
   Verify Element And Text  ${KU_W_upgrade_familyAccount}    ${e_upgradeFamilyAccountBtn}

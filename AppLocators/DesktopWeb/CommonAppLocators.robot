@@ -4,7 +4,9 @@ ${URL}    https://kuvera.in/
 # For headless chrome use: ${BROWSER}     headlesschrome
 ${BROWSER}  headlesschrome
 
-# Application Expected Values 'e_<VariableName>'
+
+#Application Expected Values 'e_<VariableName>'
+>>>>>>> 14ad689e1b87a92cddca678a7c25e5a9d6c0f1f9
 ${e_login} =  Log in 
 ${e_signup} =  Sign up 
 ${e_mfWelcomeTitle} =  Investments Simplified
