@@ -16,10 +16,10 @@ Verify PreLogin Insure Page
   Verify Element And Text  ${KU_W_insureHeaderTitle}  ${e_insure_headerTitleText} 
   Verify Element And Text  ${KU_W_insureHeaderMsg}  ${e_insure_headerMsgText}
   Verify Element And Text  ${KU_W_termsAndConditions}  ${e_insure_T&CText}  
-  Verify Element And Text  ${KU_W_checkPremiumBtn}  ${e_insure_checkPremiumBtnText}  
-  Wait For Element Visbility  ${KU_W_checkPremiumBtn} 
+  Verify Element And Text  ${KU_W_checkPremiumBtn1}  ${e_insure_checkPremiumBtnText}  
+  Wait For Element Visbility  ${KU_W_checkPremiumBtn1}
   sleep   1s
-  Click Button  ${KU_W_checkPremiumBtn} 
+  Click Button  ${KU_W_checkPremiumBtn1} 
   Verify Login Page
   Wait For Element Visbility  ${KU_W_costDetailsHeaderTitle}     
   Scroll Untill View  ${KU_W_costDetailsHeaderTitle}
@@ -100,9 +100,9 @@ Verify PreLogin Insure Page
   Wait For Element Visbility  ${KU_W_healthCoverTitle}  
   Scroll Untill View  ${KU_W_healthCoverTitle}  
   Verify Element and Text  ${KU_W_healthCoverTitle}  ${e_insure_healthCoverTitleText} 
-  Verify Element and Text  ${KU_W_checkPremiumBtn2Title}  ${e_insure_checkPremiumBtn2Text}
-  Wait For Element Visbility  ${KU_W_checkPremiumBtn2Title}
-  Click Button  ${KU_W_checkPremiumBtn2Title}
+  Verify Element and Text  ${KU_W_checkPremiumBtn2}  ${e_insure_checkPremiumBtn2Text}
+  Wait For Element Visbility  ${KU_W_checkPremiumBtn2}
+  Click Button  ${KU_W_checkPremiumBtn2} 
   Verify Login Page
   
   # Verify the Google Play & Apple Store icons

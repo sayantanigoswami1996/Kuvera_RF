@@ -88,22 +88,32 @@ ${e_remit_transferWiseSignupTitle} =  Transfer Money Online | Send Money Abroad 
 ${e_remit_transferWiseCross-borderTitle} =  Making cross-border investments with Kuvera seamless and easy | TransferWise - TransferWise
 
 # Feature-TradeSmart Navigation Page Variables
-${e_feature_tradeSmartTitleText} =  TradeSmart
-${e_feature_tradeSmartSubHeaderDesc} =  A switch or redeem order involves costs – taxes on short & long-term capital gains and exit load. TradeSmart shows you the optimal amount you can switch or redeem with the least tax and exit load.
-${e_feature_tradeSmartActivationTitle} =  Activate once, use forever!
-${e_feature_tradeSmartActivationSubTitle} =  Use 300 coins to activate TradeSmart, and use it forever.
+${e_feature_ts_titleText} =  TradeSmart
+${e_feature_ts_subHeaderDesc} =  A switch or redeem order involves costs – taxes on short & long-term capital gains and exit load. TradeSmart shows you the optimal amount you can switch or redeem with the least tax and exit load.
+${e_feature_ts_activationTitle} =  Activate once, use forever!
+${e_feature_ts_activationSubTitle} =  Use 300 coins to activate TradeSmart, and use it forever.
+${e_ts_activateBtnText} =  Activate with 300
 ${e_feature_helpTradeSmartTitleText} =  We help you trade smart
 ${e_feature_helpTradeSmartDesc1Text} =  See regular plan units as they become available to switch to direct plans with the least tax and exit load impact. Switching to Direct has never been easier or cheaper.
 ${e_feature_helpTradeSmartDesc2Text} =  See optimal number of fund units to switch or redeem before you transact. Make better decisions.
 ${e_feature_helpTradeSmartDesc3Text} =  We take care of all complexities. 1 year STCG for equity, 3 year for debt, indexation for debt, lock-in for ELSS schemes etc. We optimize over it all.
 
+# Feature-Family Account Navigation Page 
+${e_feature_fa_screenTitle} =  Invest with Your Loved Ones
+${e_feature_fa_screenContent} =  Just Sign up with one account, and manage investment for your relatives and family members. Multiple accounts under same login. All in one place. Even Joint Account too!
+${e_activateWithBtn} =  Activate with 200
+
 # Feature-ManageAccount Navigation Page Variables
 ${e_feature_manageAccountTitleText} =  Manage Account
 ${e_feature_manageAccountDesc1Text} =  Add your financial advisor as a Manager to your Kuvera account and let them guide your investments.
 ${e_feature_manageAccountDesc2Text} =  You retain full access to your account. All transactions would be validated & approved by you via OTP.
-${e_feature_addManagerBtnText} =  Add manager
+${e_feature_addManagerBtnText} =  Add  manager
 
 # Application Locator 'KU_<locatorName>'
+
+# Button 
+${KU_W_button} =  xpath=(//button[@class='button-primary'])[1]
+
 # Loan Navigation Page
 ${KU_W_loanLink} =  xpath=//a[contains(text(),'Loans')]
 ${KU_W_loanHeaderTitle} =  xpath=//div[@class='b-header__title']
@@ -139,7 +149,7 @@ ${KU_W_insureLink} =  xpath=//a[contains(text(),'Insure')]
 ${KU_W_insureHeaderTitle} =  xpath=(//div[@class='b-health-insurance-landing__title--main'])[1]
 ${KU_W_insureHeaderMsg} =  xpath=(//div[@class='b-health-insurance-landing__title--text'])[1]
 ${KU_W_termsAndConditions} =  xpath=//span[@class='b-health-insurance-landing__term-condition']
-${KU_W_checkPremiumBtn} =  xpath=(//button[@class='button-primary'])[1]
+${KU_W_checkPremiumBtn1} =  xpath=(//button[@class='button-primary'])[1]
 ${KU_W_costDetailsHeaderTitle} =  xpath=//div[@class='b-health-insurance-landing__cost-details--table__text']
 ${KU_W_treatmentTitle} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__treatment'])[1]
 ${KU_W_treatmentCostTitle} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__cost'])[1]
@@ -190,7 +200,7 @@ ${KU_W_flexibleCoverageSubtitle} =  xpath=(//div[@class='b-health-insurance-land
 ${KU_W_saveTaxTitle} =  xpath=(//div[@class='b-health-insurance-landing__title--main'])[6]
 ${KU_W_saveTaxSubTitle} =  xpath=(//div[@class='b-health-insurance-landing__insurance-brief--subheading'])[3]
 ${KU_W_healthCoverTitle} =  xpath=//div[@class='b-health-insurance-landing__healthcare-cover--wrapper']/div 
-${KU_W_checkPremiumBtn2Title} =  xpath=(//button[@class='button-primary'])[2]
+${KU_W_checkPremiumBtn2} =  xpath=(//button[@class='button-primary'])[2]
 
 # Remit Page    
 ${KU_W_remit_Link} =  xpath=//a[contains(text(),'Remit')]
@@ -213,23 +223,29 @@ ${KU_W_remit_transferNoBottomBtn} =  xpath=//button[@class='button-primary b-how
 
 # Feature-TradeSmart Page
 ${KU_W_featureLink} =  xpath=//a[contains(text(),'Features')]
-${KU_W_feature_tradeSmartLink} =  xpath=//a[contains(text(),'TradeSmart')]
-${KU_W_feature_tradeSmartTitle} =  xpath=//div[@class='b-trade-smart__header__desc__title'] 
-${KU_W_feature_tradeSmartSubHeaderTitle} =  xpath=//div[@class='b-trade-smart__header__desc__content']
-${KU_W_feature_tradeSmartActivationTitle} =  xpath=//div[@class='b-trade-smart__header__desc__activate-title']
-${KU_W_feature_tradeSmartActivationMSg} =  xpath=//div[@class='b-trade-smart__header__desc__activate-desc']
-${KU_W_feature_tradeSmartActivateBtn} =  xpath=//button[@class='button-primary b-trade-smart__header__desc__activate-btn']
+${KU_W_feature_ts_link} =  xpath=//a[contains(text(),'TradeSmart')]
+${KU_W_feature_ts_title} =  xpath=//div[@class='b-trade-smart__header__desc__title'] 
+${KU_W_feature_ts_subHeaderTitle} =  xpath=//div[@class='b-trade-smart__header__desc__content']
+${KU_W_feature_ts_activationTitle} =  xpath=//div[@class='b-trade-smart__header__desc__activate-title']
+${KU_W_feature_ts_activationMsg} =  xpath=//div[@class='b-trade-smart__header__desc__activate-desc']
+${KU_W_feature_ts_activateBtn} =  xpath=//button[@class='button-primary b-trade-smart__header__desc__activate-btn']
+${KU_W_feature_ts_coinImage} =  xpath=//img[@class='b-trade-smart__header__desc__activate-btn__coin-icon']
 ${KU_W_feature_helpTradeSmartTitle} =  xpath=//div[@class='b-trade-smart__help-title']
 ${KU_W_feature_helpTradeSmart1Msg} =  xpath=//div[@class='b-trade-smart__help-desc']/div[1] 
 ${KU_W_feature_helpTradeSmart2Msg} =  xpath=//div[@class='b-trade-smart__help-desc']/div[2]
 ${KU_W_feature_helpTradeSmart3Msg} =  xpath=//div[@class='b-trade-smart__help-desc']/div[3]
+
+# Feature-Family Account
+${KU_W_feature_familyAccountLink} =  xpath=//a[contains(text(),'Family Account')]   
+${KU_W_feature_fa_screenTitle} =  xpath=//h1[@class='b-family-account__what__heading']
+${KU_W_feature_fa_screenContent} =  xpath=//div[@class='b-family-account__what__des']
 
 # Feature-ManageAccount Page
 ${KU_W_feature_manageAccountLink} =  xpath=//a[contains(text(),'Manage Account')]
 ${KU_W_feature_manageAccountTitle} =  xpath=//div[@class='b-manage-account__what']/h1
 ${KU_W_feature_manageAccountDesc1} =  xpath=(//div[@class='b-manage-account__what__des'])[1]
 ${KU_W_feature_manageAccountDesc2} =  xpath=(//div[@class='b-manage-account__what__des'])[2]
-${KU_W_feature_addManagerBtn} =  xpath=//button[@class='button-primary']
+
 
 
 
