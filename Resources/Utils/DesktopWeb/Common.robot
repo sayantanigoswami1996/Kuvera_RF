@@ -13,6 +13,7 @@ Launch URL
     Open Browser  ${URL}  ${BROWSER}  alias=Kuvera
     # Maximize Browser Window
     Set Window Size  ${1366}  ${768}
+    Reload Page
 
 Welcome Page Should Be Open
     Title Should Be  ${KU_W_title}
@@ -43,15 +44,15 @@ Verify Page Contains Link
 
 Compare Lists 
     [Arguments]  ${actualList}   ${expectedList}
-    #Get list item from actual list
+    # Get list item from actual list
     FOR  ${actualListItems}  IN  @{actualList}
     ${actualListItem}  Set Variable  ${actualListItems.text}
     END
-    #Get list item from expected list
+    # Get list item from expected list
     FOR  ${expectedListItems}  IN  @{expectedList}
     ${expectedListItem}  Set Variable  ${expectedListItems}
     END
-    #Compare two list items
+    # Compare two list items
     Should Be Equal  ${actualListItem}  ${expectedListItem}  
 
 Switch To Window Verify Title And Close
@@ -123,7 +124,7 @@ Header Navigation
 
     FOR  ${j}  IN RANGE  1  ${elem}+1
         ${cds_text} =  Get Text  xpath=//div[@class='b-header__content__middle']/a[${j}]
-        Log to console  ${cds_text}
+        #Log to console  ${cds_text}
         Run keyword If  ['${cds_text}'] == ${invest}  Log To Console  PENDING
         ...    ELSE IF  ['${cds_text}'] == ${loans}  Verify PreLogin Loan Page
         ...    ELSE IF  ['${cds_text}'] == ${insure}  Verify PreLogin Insure Page
