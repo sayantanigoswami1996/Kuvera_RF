@@ -22,7 +22,7 @@
  
  * [Python](https://www.python.org/)
  * [Selenium](https://www.selenium.dev/)
- * [Appium](http://appium.io/downloads.html)(http://appium.io/)
+ * [Appium](http://appium.io/downloads.html)
  
  #### Getting Started
  To start with this tool, some prerequisites has to be made, which are described below 👇.
