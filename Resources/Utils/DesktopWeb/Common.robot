@@ -11,8 +11,9 @@ Resource    ../../../AppLocators/DesktopWeb/CommonAppLocators.robot
 *** Keywords ***
 Launch URL
     Open Browser  ${URL}  ${BROWSER}  alias=Kuvera
-    Maximize Browser Window
-    #Set Window Size  ${1920}  ${1080}
+    # Maximize Browser Window
+    Set Window Size  ${1366}  ${768}
+    Reload Page
 
 Welcome Page Should Be Open
     Title Should Be  ${KU_W_title}
@@ -74,9 +75,10 @@ Close Banner
     Wait Until Element Is Visible  ${KU_W_bannerFrame}  timeout=30
     Switch To Frame  ${KU_W_bannerFrame}
     Wait For Element Visbility  ${KU_W_bannerCloseBtn}
+    sleep  1s
     Click Element  ${KU_W_bannerCloseBtn}
     Unselect Frame
-
+>
 Get Json Values
     [Arguments]  ${jsonPath}  ${jsonFilePath}
     ${jsonFile}  Load JSON From File  ${jsonFilePath}
@@ -114,28 +116,27 @@ Verify Language Switch Login And Signup Link
 
 Verify Page Contains Button
     [Arguments]  ${button}
-    Page Should Contain Button  ${button}
+    Page Should Contain Button  ${button}    
 
-
-    
 Header Navigation
     ${invest}  Get Json Values  $.MenuHeaders[0]  Resources/TestData/Headers.json
     ${loans}  Get Json Values  $.MenuHeaders[1]  Resources/TestData/Headers.json
     ${insure}  Get Json Values  $.MenuHeaders[2]  Resources/TestData/Headers.json
     ${remit}  Get Json Values  $.MenuHeaders[3]  Resources/TestData/Headers.json
     ${features}  Get Json Values  $.MenuHeaders[4]  Resources/TestData/Headers.json
-  
+    
     ${elem} =  Get Element Count  ${KU_W_headers}
 
     FOR  ${j}  IN RANGE  1  ${elem}+1
         ${cds_text} =  Get Text  xpath=//div[@class='b-header__content__middle']/a[${j}]
-        Log to console  ${cds_text}
+        #Log to console  ${cds_text}
         Run keyword If  ['${cds_text}'] == ${invest}  Log To Console  PENDING
-        ...    ELSE IF  ['${cds_text}'] == ${loans}  Verify Loan Page
-        ...    ELSE IF  ['${cds_text}'] == ${insure}  Verify Insure Page
-        ...    ELSE IF  ['${cds_text}'] == ${remit}  Verify Remit Page
-        ...    ELSE  Log To Console  test
-    END
+            ...  ELSE IF  ['${cds_text}'] == ${loans}  Verify PreLogin Loan Page
+            ...  ELSE IF  ['${cds_text}'] == ${insure}  Verify PreLogin Insure Page
+            ...  ELSE IF  ['${cds_text}'] == ${remit}  Verify PreLogin Remit Page
+        ...      ELSE IF  ['${cds_text}'] == ${features}  Verify PreLogin TradeSmart Page
+        ...      ELSE  Log To Console  test
+      END
 
 Close Web Application
     Close All Browsers

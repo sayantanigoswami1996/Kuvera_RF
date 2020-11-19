@@ -9,7 +9,7 @@ Resource    ../../../Resources/Utils/DesktopWeb/Common.robot
 
 *** Keywords ***
 
-Verify Insure Page
+Verify PreLogin Insure Page
   Click Element  ${KU_W_insureLink}
   Verify Language Switch Login And Signup Link
   Wait For Element Visbility  ${KU_W_insureHeaderTitle}  
@@ -18,13 +18,14 @@ Verify Insure Page
   Verify Element And Text  ${KU_W_termsAndConditions}  ${e_insure_T&CText}  
   Verify Element And Text  ${KU_W_checkPremiumBtn}  ${e_insure_checkPremiumBtnText}  
   Wait For Element Visbility  ${KU_W_checkPremiumBtn} 
-  # Click Element  ${KU_W_checkPremiumBtn} 
-  # Verify Login Page
+  sleep   1s
+  Click Button  ${KU_W_checkPremiumBtn} 
+  Verify Login Page
   Wait For Element Visbility  ${KU_W_costDetailsHeaderTitle}     
   Scroll Untill View  ${KU_W_costDetailsHeaderTitle}
   Verify Element and Text  ${KU_W_costDetailsHeaderTitle}  ${e_insure_costDetailsHeaderText}
 
-  #Treatment and Cost    
+  # Treatment and Cost    
   Scroll Untill View  ${KU_W_treatmentTitle} 
   Verify Element and Text  ${KU_W_treatmentTitle}  ${e_insure_treatmentTitleText} 
   Verify Element and Text  ${KU_W_treatmentCostTitle}  ${e_insure_treatmentCostTitleText} 
@@ -45,14 +46,14 @@ Verify Insure Page
   Verify Page Contains Image  ${KU_W_openHeartSurgeryImage}
   Verify Page Contains Image  ${KU_W_kneeReplacementImage}
 
-  #Group Health Insurance 
+  # Group Health Insurance 
   Scroll Untill View  ${KU_W_groupHealthInsuranceTitle}
   Verify Element and Text  ${KU_W_groupHealthInsuranceTitle}  ${e_insure_grpHealthInsuranceTitleText} 
   Page Should Contain  ${e_insure_grpHealthInsuranceSubTitleText}
   @{actualInsurancePolicyList} =  Get WebElements  ${KU_W_insurancePolicyLists}
   Compare Lists  ${actualInsurancePolicyList}  ${e_insure_policyListItem}
 
-  #Feature Card
+  # Feature Card
   Scroll Untill View  ${KU_W_covid19CardTitle}
   Verify Element and Text  ${KU_W_covid19CardTitle}  ${e_insure_covid19CardText} 
   Verify Element and Text  ${KU_W_covid19Msg}  ${e_insure_covid19MsgText}
@@ -78,36 +79,35 @@ Verify Insure Page
   Verify Element and Text  ${KU_W_dedicatedSupportCardTitle}  ${e_insure_dedicatedSupportCardText}
   Verify Element and Text  ${KU_W_dedicatedSupportMsg}  ${e_insure_dedicatedSupportMsgText}
 
-  #Trusted Partner
+  # Trusted Partner
   Scroll Untill View  ${KU_W_trustedPartnerTitle}
   Verify Element and Text  ${KU_W_trustedPartnerTitle}  ${e_insure_trustedPartnerTitleText}
   Verify Element and Text  ${KU_W_trustedPartnerSubTitle}   ${e_insure_trustedPartnerSubTitleText}
 
-  #Flexible Coverage 
+  # Flexible Coverage 
   Wait For Element Visbility  ${KU_W_flexibleCoverageTitle} 
   Scroll Untill View  ${KU_W_flexibleCoverageTitle} 
   Verify Element and Text  ${KU_W_flexibleCoverageTitle}   ${e_insure_flexibleCoverageTitleText}
   Verify Element and Text  ${KU_W_flexibleCoverageSubtitle}  ${e_insure_flexibleCoevrageSubTitleText}
 
-  #Save Tax 
+  # Save Tax 
   Wait For Element Visbility  ${KU_W_saveTaxTitle}
   Scroll Untill View  ${KU_W_saveTaxTitle} 
   Verify Element and Text  ${KU_W_saveTaxTitle}  ${e_insure_saveTaxTitleText}  
   Verify Element and Text  ${KU_W_saveTaxSubTitle}  ${e_insure_saveTaxSubTitleText} 
 
-  #Health Cover
+  # Health Cover
   Wait For Element Visbility  ${KU_W_healthCoverTitle}  
   Scroll Untill View  ${KU_W_healthCoverTitle}  
   Verify Element and Text  ${KU_W_healthCoverTitle}  ${e_insure_healthCoverTitleText} 
   Verify Element and Text  ${KU_W_checkPremiumBtn2Title}  ${e_insure_checkPremiumBtn2Text}
   Wait For Element Visbility  ${KU_W_checkPremiumBtn2Title}
-  Click Element  ${KU_W_checkPremiumBtn2Title}
+  Click Button  ${KU_W_checkPremiumBtn2Title}
   Verify Login Page
   
-  #Verify the Google Play & Apple Store icons
+  # Verify the Google Play & Apple Store icons
   Verify Google Play & Apple Store Icons
-  Go Back
-  sleep  1s
+ 
  
  
   

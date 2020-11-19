@@ -5,7 +5,8 @@ Resource    ../../Resources/Utils/DesktopWeb/LandingPage.robot
 Resource    ../../Resources/Utils/DesktopWeb/Loans.robot
 Resource    ../../Resources/Utils/DesktopWeb/Insure.robot
 Resource    ../../Resources/Utils/DesktopWeb/Remit.robot
-Resource    ../../Resources/Utils/DesktopWeb/Features-TradeSmart.robot
+Resource    ../../Resources/Utils/DesktopWeb/Features_TradeSmart.robot
+Resource    ../../Resources/Utils/DesktopWeb/Features_ManageAccount.robot
 
 
 Suite Setup  Launch URL 
@@ -20,8 +21,5 @@ Landing Page Widgets Verification And Header Navigation Test
     Kuvera Web Logo Click
     Close Banner 
     Verify Widgets
-<<<<<<< HEAD
     Header Navigation
-=======
-    Header Navigation
->>>>>>> KU_RF_PE_PHASE1
+    Verify PreLogin ManageAccount Page

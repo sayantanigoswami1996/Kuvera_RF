@@ -1,13 +1,8 @@
 *** Variables ***
-
-@{e_loan_calculatorMsgListItem} =  Create List  MF units remain secure with the fund house.  No fixed loan period. A 1yr loan auto renews on the 12th month.     Loan starting from ₹25,000 up to ₹10cr.  Full disclosure. No hidden fees.
-@{e_insure_treatmentListItem} =  Create List  COVID-19  Cancer care  Open heart surgery  Knee replacement
-@{e_insure_policyListItem} =  Create List  Policy wording simple.  Premium cost low.  Year round support.
-@{e_remit_whyTransferWiseList} =  No hidden fees  Up to 8x cheaper than banks  Trusted by 7 million users  Fast way to send money  Mid-market exchange rate
-
-
-#Application Expected Values 'e_<variableName>'
-#Loan Navigation Page Variables
+# Application Expected Values 'e_<variableName>'
+# Loan List 
+@{e_loan_calculatorMsgListItem} =  MF units remain secure with the fund house.  No fixed loan period. A 1yr loan auto renews on the 12th month.     Loan starting from ₹25,000 up to ₹10cr.  Full disclosure. No hidden fees.
+# Loan Navigation Page Variables
 ${e_loan_headerTitleText} =  Get an instant loan backed by your portfolio
 ${e_loan_headerMsgText} =  Let your investments work for you. The only loan account you'll ever need.
 ${e_loan_checkElibilityBtnText} =  Check your eligibility
@@ -32,7 +27,12 @@ ${e_loan_getLoanAgainstMFText} =  Get loan against Mutual Funds
 ${e_loan_getLoanAgainstMFMsgText} =  An affordable, quick, and flexible loan. All paperless.
 ${e_loan_startSaveCheckEligibiliyText} =  Check your eligibility
 
-#Insure Navigation Page Variables
+
+# Insure List
+@{e_insure_treatmentListItem} =  COVID-19  Cancer care  Open heart surgery  Knee replacement
+@{e_insure_policyListItem} =  Policy wording simple.  Premium cost low.  Year round support.
+
+# Insure Navigation Page Variables
 ${e_insure_headerTitleText} =  Fair and friendly health insurance is here
 ${e_insure_headerMsgText} =  ₹50L cover starting at ₹900/month*. Secure your loved ones today.
 ${e_insure_T&CText} =  *T&C apply
@@ -78,14 +78,16 @@ ${e_insure_saveTaxSubTitleText} =  Claim tax under section 80D.
 ${e_insure_healthCoverTitleText} =  Health cover that’s right for you.
 ${e_insure_checkPremiumBtn2Text} =  Check premium
 
-#Remit Page Expected Data
+# Remit List 
+@{e_remit_whyTransferWiseList} =  No hidden fees  Up to 8x cheaper than banks  Trusted by 7 million users  Fast way to send money  Mid-market exchange rate
+# Remit Navigation Page Variables
 ${e_remit_screenTitle} =  A cheaper & faster way to send money home
 ${e_remit_screenTitleDesc} =  Now invest easily through Kuvera, or send money to your loved ones. With our partner TransferWise, you can transfer money to India for the lowest-cost. It is simple and faster than any traditional provider.
 ${e_remit_transferNowBtn} =  Transer now
 ${e_remit_transferWiseSignupTitle} =  Transfer Money Online | Send Money Abroad with TransferWise - Sign up
 ${e_remit_transferWiseCross-borderTitle} =  Making cross-border investments with Kuvera seamless and easy | TransferWise - TransferWise
 
-#Feature-TradeSmart Page 
+# Feature-TradeSmart Navigation Page Variables
 ${e_feature_tradeSmartTitleText} =  TradeSmart
 ${e_feature_tradeSmartSubHeaderDesc} =  A switch or redeem order involves costs – taxes on short & long-term capital gains and exit load. TradeSmart shows you the optimal amount you can switch or redeem with the least tax and exit load.
 ${e_feature_tradeSmartActivationTitle} =  Activate once, use forever!
@@ -95,13 +97,14 @@ ${e_feature_helpTradeSmartDesc1Text} =  See regular plan units as they become av
 ${e_feature_helpTradeSmartDesc2Text} =  See optimal number of fund units to switch or redeem before you transact. Make better decisions.
 ${e_feature_helpTradeSmartDesc3Text} =  We take care of all complexities. 1 year STCG for equity, 3 year for debt, indexation for debt, lock-in for ELSS schemes etc. We optimize over it all.
 
+# Feature-ManageAccount Navigation Page Variables
+${e_feature_manageAccountTitleText} =  Manage Account
+${e_feature_manageAccountDesc1Text} =  Add your financial advisor as a Manager to your Kuvera account and let them guide your investments.
+${e_feature_manageAccountDesc2Text} =  You retain full access to your account. All transactions would be validated & approved by you via OTP.
+${e_feature_addManagerBtnText} =  Add manager
 
-
-
-
-#Application Locator 'KU_<locatorName>'
-#Kuvera :: Wealth Management Simplified
-#Loan Navigation Page
+# Application Locator 'KU_<locatorName>'
+# Loan Navigation Page
 ${KU_W_loanLink} =  xpath=//a[contains(text(),'Loans')]
 ${KU_W_loanHeaderTitle} =  xpath=//div[@class='b-header__title']
 ${KU_W_loanHeaderMsg} =  xpath=//div[contains(text(),'Let your investments work for you. The only loan a')]
@@ -131,12 +134,12 @@ ${KU_W_getLoanAgainstMF} =  xpath=//div[@class='b-start-save b-kuvera-get-loan']
 ${KU_W_getLoanAgainstMFMsg} =  xpath=//div[@class='b-start-save b-kuvera-get-loan']/div[1]/div[2]
 ${KU_W_startSaveCheckEligibilityBtn} =  xpath=//button[@class='button-primary b-start-save__btn b-start-save__btn-desktop']
   
-#Insure Navigation Page  
+# Insure Navigation Page  
 ${KU_W_insureLink} =  xpath=//a[contains(text(),'Insure')]
 ${KU_W_insureHeaderTitle} =  xpath=(//div[@class='b-health-insurance-landing__title--main'])[1]
 ${KU_W_insureHeaderMsg} =  xpath=(//div[@class='b-health-insurance-landing__title--text'])[1]
 ${KU_W_termsAndConditions} =  xpath=//span[@class='b-health-insurance-landing__term-condition']
-${KU_W_checkPremiumBtn} =  xpath=//button[@class='button-primary']
+${KU_W_checkPremiumBtn} =  xpath=(//button[@class='button-primary'])[1]
 ${KU_W_costDetailsHeaderTitle} =  xpath=//div[@class='b-health-insurance-landing__cost-details--table__text']
 ${KU_W_treatmentTitle} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__treatment'])[1]
 ${KU_W_treatmentCostTitle} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__cost'])[1]
@@ -189,11 +192,11 @@ ${KU_W_saveTaxSubTitle} =  xpath=(//div[@class='b-health-insurance-landing__insu
 ${KU_W_healthCoverTitle} =  xpath=//div[@class='b-health-insurance-landing__healthcare-cover--wrapper']/div 
 ${KU_W_checkPremiumBtn2Title} =  xpath=(//button[@class='button-primary'])[2]
 
-#Remit Page    
+# Remit Page    
 ${KU_W_remit_Link} =  xpath=//a[contains(text(),'Remit')]
 ${KU_W_remit_screenTitle} =  xpath=//*[@class='b-introduction__desc__title']
 ${KU_W_remit_screenTitleDesc} =  xpath=//*[@class='b-introduction__desc__content']      
-${KU_W_remit_transferNowTopBtn} =  xpath=//*[@class='b-introduction__desc__btn-transfer']      
+${KU_W_remit_transferNowTopBtn} =  xpath=//*[@class='button-primary b-introduction__btn-transfer__item']      
 ${KU_W_remit_whyTransferWise} =  xpath=//*[@class='b-why-transferwise b-transferwise__calculator-why__item__content']/div    
 ${KU_W_remit_whyTransferWiseList} =  xpath=//*[@class='b-why-transferwise__list']/div     
 ${KU_W_transferWiseStepsModal} =  xpath=//*[@class='b-transferwise-transfer-step__title__items__1']
@@ -208,7 +211,7 @@ ${KU_W_remit_calculatorTarget} =  xpath=//*[@id="tw-calculator-target"]
 ${KU_W_remit_transferNoBottomBtn} =  xpath=//button[@class='button-primary b-how__btn-transfer']
 
 
-#Feature-TradeSmart
+# Feature-TradeSmart Page
 ${KU_W_featureLink} =  xpath=//a[contains(text(),'Features')]
 ${KU_W_feature_tradeSmartLink} =  xpath=//a[contains(text(),'TradeSmart')]
 ${KU_W_feature_tradeSmartTitle} =  xpath=//div[@class='b-trade-smart__header__desc__title'] 
@@ -220,6 +223,16 @@ ${KU_W_feature_helpTradeSmartTitle} =  xpath=//div[@class='b-trade-smart__help-t
 ${KU_W_feature_helpTradeSmart1Msg} =  xpath=//div[@class='b-trade-smart__help-desc']/div[1] 
 ${KU_W_feature_helpTradeSmart2Msg} =  xpath=//div[@class='b-trade-smart__help-desc']/div[2]
 ${KU_W_feature_helpTradeSmart3Msg} =  xpath=//div[@class='b-trade-smart__help-desc']/div[3]
+
+# Feature-ManageAccount Page
+${KU_W_feature_manageAccountLink} =  xpath=//a[contains(text(),'Manage Account')]
+${KU_W_feature_manageAccountTitle} =  xpath=//div[@class='b-manage-account__what']/h1
+${KU_W_feature_manageAccountDesc1} =  xpath=(//div[@class='b-manage-account__what__des'])[1]
+${KU_W_feature_manageAccountDesc2} =  xpath=(//div[@class='b-manage-account__what__des'])[2]
+${KU_W_feature_addManagerBtn} =  xpath=//button[@class='button-primary']
+
+
+
 
 
 
