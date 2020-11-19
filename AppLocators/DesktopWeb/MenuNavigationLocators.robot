@@ -30,7 +30,6 @@ ${e_loan_getLoanAgainstMFText} =  Get loan against Mutual Funds
 ${e_loan_getLoanAgainstMFMsgText} =  An affordable, quick, and flexible loan. All paperless.
 ${e_loan_startSaveCheckEligibiliyText} =  Check your eligibility
 
-<<<<<<< HEAD
 # Insure Navigation Page Variables
 # Insure Lists 
 @{e_insure_treatmentListItem} =  Create List  COVID-19  Cancer care  Open heart surgery  Knee replacement
@@ -92,31 +91,10 @@ ${e_remit_transferWiseCross-borderTitle} =  Making cross-border investments with
 
 # Loan Navigation Page
 ${KU_W_loanLink} =  xpath=//a[contains(text(),'Loans')]
-=======
-#Insure Page Variables
-
-
-#Remit Page Expected Data
-${e_remit_screenTitle} =  A cheaper & faster way to send money home
-${e_remit_screenTitleDesc} =  Now invest easily through Kuvera, or send money to your loved ones. With our partner TransferWise, you can transfer money to India for the lowest-cost. It is simple and faster than any traditional provider.
-${e_remit_transferNowBtn} =  Transer now
-#${e_remit_whyTransferWiseList} =  Why TransferWise?  No hidden fees  Up to 8x cheaper than banks  Trusted by 7 million users  Fast way to send money  Mid-market exchange rate
-${e_remit_transferWiseSignupTitle} =  Transfer Money Online | Send Money Abroad with TransferWise - Sign up
-${e_remit_transferWiseCross-borderTitle} =  Making cross-border investments with Kuvera seamless and easy | TransferWise - TransferWise
-@{e_remit_whyTransferWiseList} =  No hidden fees  Up to 8x cheaper than banks  Trusted by 7 million users  Fast way to send money  Mid-market exchange rate
-
-#Application Locator 'KU_<locatorName>'
-#Kuvera :: Wealth Management Simplified
-#Loan Navigation Page
->>>>>>> 14ad689e1b87a92cddca678a7c25e5a9d6c0f1f9
 ${KU_W_loanHeaderTitle} =  xpath=//div[@class='b-header__title']
 ${KU_W_loanHeaderMsg} =  xpath=//div[contains(text(),'Let your investments work for you. The only loan a')]
 ${KU_W_loanCheckEligibility} =  class=b-state-save-btn__text
 ${KU_W_loginPageTitle} =  xpath=//div[contains(text(),'Login. Start Investing.')]
-<<<<<<< HEAD
-=======
-${KU_W_loanLink} =  xpath=//a[@class='b-header__content__las']
->>>>>>> 14ad689e1b87a92cddca678a7c25e5a9d6c0f1f9
 ${KU_W_loanCalculatorTitle} =  xpath=//div[@class='b-calculator__text-content']/div[1]
 ${KU_W_loanCalculatorMsgList} =  xpath=//ul[@class='b-calculator__list']/li
 ${KU_W_highlyFlexibleTitle} =  xpath=//div[@class='b-withdraw-30min__title']  
@@ -140,15 +118,13 @@ ${KU_W_image4Description} =  xpath=(//div[@class='b-flow-chart__description'])[4
 ${KU_W_getLoanAgainstMF} =  xpath=//div[@class='b-start-save b-kuvera-get-loan']/div[1]/div[1]
 ${KU_W_getLoanAgainstMFMsg} =  xpath=//div[@class='b-start-save b-kuvera-get-loan']/div[1]/div[2]
 ${KU_W_startSaveCheckEligibilityBtn} =  xpath=//button[@class='button-primary b-start-save__btn b-start-save__btn-desktop']
-<<<<<<< HEAD
   
-# Insure Navigation Page  
-#Insure Navigation Page  
+# Insure Navigation Page   
 ${KU_W_insureLink} =  xpath=//a[contains(text(),'Insure')]
 ${KU_W_insureHeaderTitle} =  xpath=(//div[@class='b-health-insurance-landing__title--main'])[1]
 ${KU_W_insureHeaderMsg} =  xpath=(//div[@class='b-health-insurance-landing__title--text'])[1]
 ${KU_W_termsAndConditions} =  xpath=//span[@class='b-health-insurance-landing__term-condition']
-${KU_W_checkPremiumBtn} =  xpath=//button[@class='button-primary']
+${KU_W_checkPremiumBtn} =  xpath=(//button[contains(text(),'Check premium')])[1]
 ${KU_W_costDetailsHeaderTitle} =  xpath=//div[@class='b-health-insurance-landing__cost-details--table__text']
 ${KU_W_treatmentTitle} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__treatment'])[1]
 ${KU_W_treatmentCostTitle} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__cost'])[1]
@@ -200,18 +176,6 @@ ${KU_W_remit_Link} =  xpath=//a[contains(text(),'Remit')]
 ${KU_W_remit_screenTitle} =  xpath=//*[@class='b-introduction__desc__title']
 ${KU_W_remit_screenTitleDesc} =  xpath=//*[@class='b-introduction__desc__content']      
 ${KU_W_remit_transferNowTopBtn} =  xpath=//*[@class='button-primary b-introduction__btn-transfer__item']      
-=======
-
-#Insure Page    
-      
-      
-      
-#Remit Page    
-${KU_W_remit_Link} =  xpath=//a[@class='b-header__content__remit']
-${KU_W_remit_screenTitle} =  xpath=//*[@class='b-introduction__desc__title']
-${KU_W_remit_screenTitleDesc} =  xpath=//*[@class='b-introduction__desc__content']      
-${KU_W_remit_transferNowBtn} =  xpath=//button[@class='button-primary b-introduction__btn-transfer__item']      
->>>>>>> 14ad689e1b87a92cddca678a7c25e5a9d6c0f1f9
 ${KU_W_remit_whyTransferWise} =  xpath=//*[@class='b-why-transferwise b-transferwise__calculator-why__item__content']/div    
 ${KU_W_remit_whyTransferWiseList} =  xpath=//*[@class='b-why-transferwise__list']/div     
 ${KU_W_transferWiseStepsModal} =  xpath=//*[@class='b-transferwise-transfer-step__title__items__1']
@@ -223,13 +187,5 @@ ${KU_W_remit_calculator_iFrame} =  xpath=//iFrame[@class='b-calculator__iframe-t
 ${KU_W_remit_sendMoneyBtn} =  xpath=(//button[@type='button'])[3]      
 ${KU_W_remit_knowMoreBtn} =  xpath=//button[@class='button-primary b-why-transferwise__btn-know-more']  
 ${KU_W_remit_calculatorTarget} =  xpath=//*[@id="tw-calculator-target"]
-<<<<<<< HEAD
 ${KU_W_remit_transferNoBottomBtn} =  xpath=//button[@class='button-primary b-how__btn-transfer']
     
-=======
-
-      
-      
-      
-                             
->>>>>>> 14ad689e1b87a92cddca678a7c25e5a9d6c0f1f9

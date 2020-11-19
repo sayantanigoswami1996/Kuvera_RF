@@ -10,6 +10,7 @@ Resource    ../../../Resources/Utils/DesktopWeb/Common.robot
 ***Keywords***
 Verify Transfer Now 
     [Arguments]  ${element}
+    sleep  1s
     Click Button  ${element}
     Verify Element And Text  ${KU_W_transferWiseStepsModal}  Next steps
     Wait For Element Visbility  ${KU_W_transferWiseNextStepsContinueBtn}
@@ -24,6 +25,7 @@ Verify PreLogin Remit Page
     Verify Element And Text  ${KU_W_remit_screenTitleDesc}  ${e_remit_screenTitleDesc}
 
     # Verify transerwise next steps 
+   
     Verify Transfer Now  ${KU_W_remit_transferNowTopBtn}
     Scroll Untill View  ${KU_W_remit_whyTransferWise}
     Scroll Untill View  ${KU_W_remit_knowMoreBtn}

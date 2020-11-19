@@ -8,8 +8,8 @@ Resource    ../../../AppLocators/DesktopWeb/CommonAppLocators.robot
 Resource    ../../../Resources/Utils/DesktopWeb/Common.robot
 
 *** Keywords ***
-
 Verify PreLogin Insure Page
+
   Click Element  ${KU_W_insureLink}
   Verify Language Switch Login And Signup Link
   Wait For Element Visbility  ${KU_W_insureHeaderTitle}  
@@ -17,8 +17,9 @@ Verify PreLogin Insure Page
   Verify Element And Text  ${KU_W_insureHeaderMsg}  ${e_insure_headerMsgText}
   Verify Element And Text  ${KU_W_termsAndConditions}  ${e_insure_T&CText}  
   Verify Element And Text  ${KU_W_checkPremiumBtn}  ${e_insure_checkPremiumBtnText}  
-  Wait For Element Visbility  ${KU_W_checkPremiumBtn} 
-  Click Element  ${KU_W_checkPremiumBtn} 
+  # Wait For Element Visbility  ${KU_W_checkPremiumBtn} 
+  sleep  1s
+  Click Button  ${KU_W_checkPremiumBtn} 
   Verify Login Page
   Wait For Element Visbility  ${KU_W_costDetailsHeaderTitle}     
   Scroll Untill View  ${KU_W_costDetailsHeaderTitle}
@@ -93,7 +94,7 @@ Verify PreLogin Insure Page
   Verify Element and Text  ${KU_W_healthCoverTitle}  ${e_insure_healthCoverTitleText} 
   Verify Element and Text  ${KU_W_checkPremiumBtn2Title}  ${e_insure_checkPremiumBtn2Text}
   Wait For Element Visbility  ${KU_W_checkPremiumBtn2Title}
-  Click Element  ${KU_W_checkPremiumBtn2Title}
+  Click Button  ${KU_W_checkPremiumBtn2Title}
   Verify Login Page
   # Verify the Google Play & Apple Store icons
   Verify Google Play & Apple Store Icons
