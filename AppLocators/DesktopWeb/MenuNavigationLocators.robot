@@ -86,6 +86,20 @@ ${e_remit_transferNowBtn} =  Transer now
 ${e_remit_transferWiseSignupTitle} =  Transfer Money Online | Send Money Abroad with TransferWise - Sign up
 ${e_remit_transferWiseCross-borderTitle} =  Making cross-border investments with Kuvera seamless and easy | TransferWise - TransferWise
 
+# Feature - Set a Gaol
+${e_feature_sg_screenTitle} =  SET YOUR GOAL
+${e_feature_sg_screenSubTitle} =  We'll help you bring your dreams to life.
+${e_feature_sg_content} =  Setting a financial goal is the first step to making your dreams a reality. Investing regularly is the next. We make it really simple for you, and we’re with you every step of the way. Simply choose your goal to get started.
+${e_feature_sg_ownAHome} =  OWN A HOME
+${e_feature_sg_buyACar} =  BUY A CAR
+${e_feature_sg_saveTax} =  SAVE TAX
+${e_feature_sg_retireEasy} =  RETIRE EASY
+${e_feature_sg_25thAnniversary} =  25TH ANNIVERSARY
+${e_feature_sg_foreignVacation} =  FOREIGN VACATION
+${e_feature_sg_educateMyChild} =  EDUCATE MY CHILD
+${e_feature_sg_createMyOwn} =  CREATE MY OWN
+
+
 # Feature-TradeSmart Navigation Page 
 ${e_feature_tradeSmartTitleText} =  TradeSmart
 ${e_feature_tradeSmartSubHeaderDesc} =  A switch or redeem order involves costs – taxes on short & long-term capital gains and exit load. TradeSmart shows you the optimal amount you can switch or redeem with the least tax and exit load.
@@ -211,8 +225,29 @@ ${KU_W_remit_knowMoreBtn} =  xpath=//button[@class='button-primary b-why-transfe
 ${KU_W_remit_calculatorTarget} =  xpath=//*[@id="tw-calculator-target"]
 ${KU_W_remit_transferNoBottomBtn} =  xpath=//button[@class='button-primary b-how__btn-transfer']
 
+# Feature 
+${KU_W_featureSubList} =  xpath=//a[contains(text(),'Set a Goal')]
+
+# Feature - Set a Goal
+${KU_W_feature_setAGoalLink} =  xpath=//a[contains(text(),'Set a Goal')]
+${KU_W_feature_sg_screenTitle} =  xpath=//*[@class='goals-index col-sm-4']/h2
+${KU_W_feature_sg_screenSubTitle} =  xpath=//*[@class='goals-index col-sm-4']/h1
+${KU_W_feature_sg_content} =  xpath=//p[@class='hidden-xs']
+${KU_W_feature_sg_ownAHome} =  xpath=(//p[@class='card-title'])[1]
+${KU_W_feature_sg_buyACar} =  xpath=(//p[@class='card-title'])[2]
+${KU_W_feature_sg_saveTax} =  xpath=(//p[@class='card-title'])[3]
+${KU_W_feature_sg_retireEasy} =  xpath=(//p[@class='card-title'])[4]
+${KU_W_feature_sg_25thAnniversary} =  xpath=(//p[@class='card-title'])[5]
+${KU_W_feature_sg_foreignVacation} =  xpath=(//p[@class='card-title'])[6]
+${KU_W_feature_sg_educateMyChild} =  xpath=(//p[@class='card-title'])[7]
+${KU_W_feature_sg_createMyOwn} =  xpath=(//p[@class='card-title'])[8]
+${KU_W_feature_sg_questionScreen} =  xpath=//*[@id="title-box"]
+${KU_W_feature_sg_goalName} =  xpath=//*[@id="title-box"]/h2
+${KU_W_feature_sg_} =  xpath=//*[@class='']
+${KU_W_feature_sg_} =  xpath=//*[@class='']
 
 # Feature-TradeSmart
+${KU_W_featureSubList} =  xpath=//*[@class='b-header__sub-content__feature']/a
 ${KU_W_featureLink} =  xpath=//a[contains(text(),'Features')]
 ${KU_W_feature_tradeSmartLink} =  xpath=//a[contains(text(),'TradeSmart')]
 ${KU_W_feature_tradeSmartTitle} =  xpath=//div[@class='b-trade-smart__header__desc__title'] 
