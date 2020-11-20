@@ -109,6 +109,34 @@ ${e_feature_manageAccountDesc1Text} =  Add your financial advisor as a Manager t
 ${e_feature_manageAccountDesc2Text} =  You retain full access to your account. All transactions would be validated & approved by you via OTP.
 ${e_feature_addManagerBtnText} =  Add  manager
 
+# Feature-Tax Harvesting Navigation Page Variables
+${e_feature_th_TitleText} =  Save up to ₹10,000 in LTCG taxes every financial year with Tax Harvesting.
+${e_feature_th_subTitleText} =  Minimise your long term tax impact by realising up to ₹1 Lakh of Long Term Capital Gain (LTCG) every financial year with no tax.
+${e_feature_th_subscribeBtnText} =  Subscribe 499 / FY
+${e_feature_whatIsTHTitleText} =  What is Tax Harvesting?
+${e_feature_th_definitionText} =  Long-term gains from equity funds are taxed at 10%. Tax Harvesting is a technique that reduces this impact. It utilises the ₹1 Lakh annual LTCG exemption by selling and buying back part of your investment such that you “realise” gains every year. Learn more
+${e_feature_th_learnMoreLnkTxt} =  Learn more
+${e_feature_th_learnMoreTitle} =  Tax Harvesting can save up to ₹10,000 in LTCG taxes every year! - Kuvera
+${e_feature_th_assumptionText} =  Let’s say your investment yields gains of ₹1L every year. After 3 years, the gains are ₹3L and you decide to sell.
+${e_feature_withTHTitleText} =  With Tax Harvesting
+${e_feature_withoutTHTitleText} =  Without Tax Harvesting
+${e_feature_th_tableRow1Text} =  Pre-tax Gains\n₹3.0L\n₹3.0L
+${e_feature_th_tableRow2Text} =  Taxable Gains\n(minus 1L exempt)\n₹2.0L\nNIL
+${e_feature_th_tableRow3Text} =  LTCG tax @10%\n₹0.2L\nNIL
+${e_feature_th_tableSumupRowText} =  In-hand gains\n₹2.8L\n₹3.0L
+${e_feature_th_workCardTitleText1} =  Receive  timely recommendations       
+${e_feature_th_workCardTitleText2} =  Follow the transaction recommended
+${e_feature_th_workCardTitleText3} =  Congrats, you’ve reduced your tax impact!
+${e_feature_th_workCardDescText1} =  We monitor your portfolio, and recommend a transaction when applicable.  
+${e_feature_th_workCardDescText2} =  You initiate the transaction. To minimise NAV impact, we advise buying and selling the fund(s) on the same day.  
+${e_feature_th_workCardDescText3} =  Sit back and enjoy the fruits of Tax Harvesting.  
+${e_feature_th_pricingTitleText} =  Pricing 
+${e_feature_th_coinAmount} =  499 
+${e_feature_th_yearText} =  per financial year
+${e_feature_th_checkDescText1} =  Receive timely recommendations to harvest tax  
+${e_feature_th_checkDescText2} =  View history of tax harvested each financial year  
+${e_feature_th_checkDescText3} =  Automatic calculation of tax harvested on any sell transaction  
+${e_feature_th_startHarvestText} =  The time is ripe! Start harvesting today.  
 # Application Locator 'KU_<locatorName>'
 
 # Button 
@@ -246,8 +274,44 @@ ${KU_W_feature_manageAccountTitle} =  xpath=//div[@class='b-manage-account__what
 ${KU_W_feature_manageAccountDesc1} =  xpath=(//div[@class='b-manage-account__what__des'])[1]
 ${KU_W_feature_manageAccountDesc2} =  xpath=(//div[@class='b-manage-account__what__des'])[2]
 
-
-
+# Feature-TaxHarvesting Page
+${KU_W_feature_taxHarvestingLink} =  xpath=//a[contains(text(),'Tax Harvesting')]
+${KU_W_feature_th_screenTitle} =  xpath=//div[@class='paras-about-tax-harvesting']/h3
+${KU_W_feature_th_screenContent} =  xpath=//p[@class='minimise-impact-text']
+${KU_W_feature_th_coinImage1} =  xpath=(//img[@class='btn-coin-icon'])[1]
+${KU_W_feature_whatIsTHTitle} =  xpath=//div[@class='what-is-tax-harvesting-ans']/h4
+${KU_W_feature_th_definition} =   xpath=//p[@class='what-is-tax-harvesting-para']
+${KU_W_feature_th_learnMoreLink} =  xpath=//a[@class='link learn-more-tax-harvesting']
+${KU_W_feature_th_assumptions} =  xpath=//h3[@class='tax-harvesting-assumption']
+${KU_W_feature_th_satusIconimage} =  xpath=//img[@class='normal-status-icon']
+${KU_W_feature_withoutTHTitle} =  xpath=(//div[@class='text-container'])[1]
+${KU_W_feature_withTHTitle} =  xpath=(//div[@class='text-container'])[2]
+${KU_W_feature_th_assumptions} =  xpath=//h3[@class='tax-harvesting-assumption']
+${KU_W_feature_tHTableRow1} =  xpath=(//div[@class='table-intermediate-container']/div)[1]
+${KU_W_feature_tHTableRow2} =  xpath=(//div[@class='table-intermediate-container']/div)[2]
+${KU_W_feature_tHTableRow3} =  xpath=(//div[@class='table-intermediate-container']/div)[3]
+${KU_W_feature_tHTableSumupRow} =  xpath=//div[@class='tax-harvesting-table-sumup-container']/div
+${KU_W_feature_th_workCardHeading1} =  xpath=(//p[@class='how-tax-harvesting-works-card-heading'])[1]
+${KU_W_feature_th_workCardHeading2} =  xpath=(//p[@class='how-tax-harvesting-works-card-heading'])[2]
+${KU_W_feature_th_workCardHeading3} =  xpath=(//p[@class='how-tax-harvesting-works-card-heading'])[3]
+${KU_W_feature_th_workCardDesc1} =  xpath=(//p[@class='how-tax-harvesting-works-card-text'])[1]
+${KU_W_feature_th_workCardDesc2} =  xpath=(//p[@class='how-tax-harvesting-works-card-text'])[2]
+${KU_W_feature_th_workCardDesc3} =  xpath=(//p[@class='how-tax-harvesting-works-card-text'])[3]
+${KU_W_feature_th_subscribe2Btn} =  xpath=(//button[@class='button-primary'])[2]
+${KU_W_feature_th_coinImage2} =  xpath=(//img[@class='btn-coin-icon'])[2]
+${KU_W_feature_th_pricingTite} =  xpath=//h1[@class='pricing-heading']
+${KU_W_feature_th_pricingcoinIcon} =  xpath=//img[@class='coin-icon']
+${KU_W_feature_th_pricingcoinAmt} =  xpath=//div[@class='coin-count-container']/h2
+${KU_W_feature_th_pricingPerYear} =  xpath=//p[@class='per-year']
+${KU_W_feature_th_pricingcheckIcon1} =  xpath=(//img[@class='check-icon'])[1]
+${KU_W_feature_th_pricingcheckIcon2} =  xpath=(//img[@class='check-icon'])[2]
+${KU_W_feature_th_pricingcheckIcon3} =  xpath=(//img[@class='check-icon'])[3]
+${KU_W_feature_th_pricingcheckDesc1} =  xpath=(//p[@class='check-label'])[1]
+${KU_W_feature_th_pricingcheckDesc2} =  xpath=(//p[@class='check-label'])[2]
+${KU_W_feature_th_pricingcheckDesc3} =  xpath=(//p[@class='check-label'])[3]
+${KU_W_feature_th_startHarvestTitle} =  xpath=//h2[@class='start-harvesting-today-heading']
+${KU_W_feature_th_coinImage3} =  xpath=(//img[@class='btn-coin-icon'])[3]
+${KU_W_feature_th_subscribe3Btn} =  xpath=(//button[@class='button-primary'])[3]
 
 
 

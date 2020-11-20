@@ -9,8 +9,9 @@ Resource    ../../../Resources/Utils/DesktopWeb/Common.robot
 
 *** Keywords ***
 
-Verify PreLogin Family Account Page 
-    Click Element  ${KU_W_featureLink} 
+Verify PreLogin Family Account Page
+
+    # Click Element  ${KU_W_featureLink} 
     Wait For Element Visbility  ${KU_W_feature_familyAccountLink}
     Click Element  ${KU_W_feature_familyAccountLink}
     Wait For Element Visbility  ${KU_W_feature_fa_screenTitle}

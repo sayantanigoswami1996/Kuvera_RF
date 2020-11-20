@@ -7,6 +7,7 @@ Library     String
 Library     OperatingSystem
 Library     Collections
 Resource    ../../../AppLocators/DesktopWeb/CommonAppLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/MenuNavigationLocators.robot
 
 *** Keywords ***
 Launch URL
@@ -119,24 +120,48 @@ Verify Page Contains Button
     Page Should Contain Button  ${button}    
 
 Header Navigation
-    ${invest}  Get Json Values  $.MenuHeaders[0]  Resources/TestData/Headers.json
-    ${loans}  Get Json Values  $.MenuHeaders[1]  Resources/TestData/Headers.json
-    ${insure}  Get Json Values  $.MenuHeaders[2]  Resources/TestData/Headers.json
-    ${remit}  Get Json Values  $.MenuHeaders[3]  Resources/TestData/Headers.json
-    ${features}  Get Json Values  $.MenuHeaders[4]  Resources/TestData/Headers.json
-    
+    ${invest}  Get Json Values  $.MenuHeaders.h0  Resources/TestData/Headers.json
+    ${loans}  Get Json Values  $.MenuHeaders.h1  Resources/TestData/Headers.json
+    ${insure}  Get Json Values  $.MenuHeaders.h2  Resources/TestData/Headers.json
+    ${remit}  Get Json Values  $.MenuHeaders.h3  Resources/TestData/Headers.json
+    ${features}  Get Json Values  $.MenuHeaders.h4  Resources/TestData/Headers.json
     ${elem} =  Get Element Count  ${KU_W_headers}
-
     FOR  ${j}  IN RANGE  1  ${elem}+1
-        ${cds_text} =  Get Text  xpath=//div[@class='b-header__content__middle']/a[${j}]
-        #Log to console  ${cds_text}
-        Run keyword If  ['${cds_text}'] == ${invest}  Log To Console  PENDING
-            ...  ELSE IF  ['${cds_text}'] == ${loans}  Verify PreLogin Loan Page
-            ...  ELSE IF  ['${cds_text}'] == ${insure}  Verify PreLogin Insure Page
-            ...  ELSE IF  ['${cds_text}'] == ${remit}  Verify PreLogin Remit Page
-        ...      ELSE IF  ['${cds_text}'] == ${features}  Verify PreLogin TradeSmart Page
-        ...      ELSE  Log To Console  test
-      END
+        ${headers} =  Get Text  xpath=//div[@class='b-header__content__middle']/a[${j}]
+        Log to console  ${headers}
+        Run keyword If  ['${headers}'] == ${invest}  Log To Console  PENDING
+        ...    ELSE IF  ['${headers}'] == ${loans}   Verify PreLogin Loan Page
+        ...    ELSE IF  ['${headers}'] == ${insure}  Verify PreLogin Insure Page
+        ...    ELSE IF  ['${headers}'] == ${remit}  Verify PreLogin Remit Page
+        # ...    ELSE IF  ['${headers}'] == ${features}  Feature Sub Header Navigation
+        ...    ELSE   Feature Sub Header Navigation
+    END
+Feature Sub Header Navigation
+    Log To Console  InFeatures
+    ${setAGoal}  Get Json Values  $.MenuHeaders.h4.fsh0  Resources/TestData/Headers.json
+    ${tradeSmart}  Get Json Values  $.MenuHeaders.h4.fsh1  Resources/TestData/Headers.json
+    ${familyAccount}  Get Json Values  $.MenuHeaders.h4.fsh2  Resources/TestData/Headers.json
+    ${manageAccount}  Get Json Values  $.MenuHeaders.h4.fsh3  Resources/TestData/Headers.json
+    ${taxHarvesting}  Get Json Values  $.MenuHeaders.h4.fsh4  Resources/TestData/Headers.json
+    ${savesTaxes}  Get Json Values  $.MenuHeaders.h4.fsh5  Resources/TestData/Headers.json
+    ${consolidate}  Get Json Values  $.MenuHeaders.h4.fsh6  Resources/TestData/Headers.json
+    sleep  5s
+    Click Element  ${KU_W_featureLink}
+    ${element} =  Get Element Count  ${KU_W_featureSubList}
+    Log To Console  ${element}
+    FOR  ${k}  IN RANGE  1  ${element}+1
+        ${subHeaders} =  Get Text   xpath=//div[@class='b-header__sub-content__feature']/a[${k}]
+        Log to console  ${subHeaders}
+        Run keyword If  ['${subHeaders}'] == ${setAGoal}   Log To Console   Pending
+        ...    ELSE IF  ['${subHeaders}'] == ${tradeSmart}   Verify PreLogin TradeSmart Page     
+        ...    ELSE IF  ['${subHeaders}'] == ${familyAccount}   Verify PreLogin Family Account Page
+        ...    ELSE IF  ['${subHeaders}'] == ${manageAccount}  Verify PreLogin Manage Account Page
+        ...    ELSE IF  ['${subHeaders}'] == ${taxHarvesting}  Verify PreLogin Tax Harvesting Page
+        ...    ELSE IF  ['${subHeaders}'] == ${savesTaxes}  Log To Console  PENDING
+        ...    ELSE IF  ['${subHeaders}'] == ${consolidate}  Log To Console  PENDING
+        ...    ELSE Log To Console test
+        
+    END
 
 Close Web Application
     Close All Browsers

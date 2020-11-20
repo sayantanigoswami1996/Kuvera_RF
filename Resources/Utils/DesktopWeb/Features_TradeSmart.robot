@@ -11,7 +11,7 @@ Resource    ../../../Resources/Utils/DesktopWeb/Common.robot
 
 Verify PreLogin TradeSmart Page
 
-  Click Element  ${KU_W_featureLink} 
+  # Click Element  ${KU_W_featureLink} 
   Wait For Element Visbility  ${KU_W_feature_ts_link}
   Click Element  ${KU_W_feature_ts_link}
   Verify Language Switch Login And Signup Link
@@ -34,6 +34,7 @@ Verify PreLogin TradeSmart Page
   Verify Element and Text  ${KU_W_feature_helpTradeSmart2Msg}  ${e_feature_helpTradeSmartDesc2Text}
   Verify Element and Text  ${KU_W_feature_helpTradeSmart3Msg}  ${e_feature_helpTradeSmartDesc3Text}
   
+  Sleep   10s
   
   
 

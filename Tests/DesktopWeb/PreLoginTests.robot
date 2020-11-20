@@ -8,6 +8,7 @@ Resource    ../../Resources/Utils/DesktopWeb/Remit.robot
 Resource    ../../Resources/Utils/DesktopWeb/Features_TradeSmart.robot
 Resource    ../../Resources/Utils/DesktopWeb/Features_FamilyAccount.robot
 Resource    ../../Resources/Utils/DesktopWeb/Features_ManageAccount.robot
+Resource    ../../Resources/Utils/DesktopWeb/Features_TaxHarvesting.robot
 
 Suite Setup  Launch URL 
 Suite Teardown  Close All Browsers
@@ -20,7 +21,7 @@ Landing Page Widgets Verification And Header Navigation Test
     [Tags]  TC01
     Kuvera Web Logo Click
     Close Banner 
-    Verify Widgets
+    # Verify Widgets
     Header Navigation
 
 Features Header Navigation Test
@@ -30,3 +31,4 @@ Features Header Navigation Test
     Verify PreLogin TradeSmart Page
     Verify PreLogin Family Account Page 
     Verify PreLogin Manage Account Page
+    Verify PreLogin Tax Harvesting Page

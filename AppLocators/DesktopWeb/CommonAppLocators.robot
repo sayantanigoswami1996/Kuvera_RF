@@ -45,6 +45,7 @@ ${e_transText} =  Transactions
 
 #Application Locator 'KU_<locatorName>'
 # Kuvera :: Wealth Management Simplified
+${KU_W_featureSubList} =  xpath=//*[@class='b-header__sub-content__feature']/a
 ${KU_W_title}=  Kuvera - Direct Mutual Funds | Stocks | Loans | Gold | Remit on Kuvera- Wealth Management Simplified
 ${KU_W_logo} =  xpath=//*[@class='b-header__content__logo']
 ${KU_W_close} =  xpath=//button[@class='button-primary b-regulatory-disclosure__btn']
