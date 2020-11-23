@@ -70,7 +70,12 @@ Get List Count
     ${listCount}  Get Length  ${list}
     [Return]  ${listCount}
 
+Kuvera Web Close Regulatory Disclosure 
+    Wait Until Element Is Visible  ${KU_W_close}
+    Click Element  ${KU_W_close}
+    
 Close Banner
+    Sleep  15s
     Wait Until Element Is Visible  ${KU_W_bannerFrame}  timeout=30
     Switch To Frame  ${KU_W_bannerFrame}
     Wait For Element Visbility  ${KU_W_bannerCloseBtn}
@@ -89,12 +94,6 @@ Verify Widgets From Json
     ${json_data}  Set Variable  ${jsonWidgetsValue}
     Log To Console  ${json_data1}
     # Verify Page Contains Element        ${widget}
-Kuvera Web Logo Click
-    Wait Until Element Is Visible  ${KU_W_close}
-    Click Element  ${KU_W_close}
-    Wait Until Element Is Visible  ${KU_W_logo}
-    Click Element  ${KU_W_logo}
-    Sleep  15s
 
 Verify Login Page
     Wait For Element Visbility  ${KU_W_loginPageTitle}
@@ -127,7 +126,7 @@ Header Navigation
         ${headers} =  Get Text  xpath=//div[@class='b-header__content__middle']/a[${j}]
         Log to console  ${headers}
         Run keyword If  ['${headers}'] == ${invest}  Log To Console  PENDING
-        ...    ELSE IF  ['${headers}'] == ${loans}   Verify PreLogin Loan Page
+        ...    ELSE IF  ['${headers}'] == ${loans}   Verify PreLogin Loans Page
         ...    ELSE IF  ['${headers}'] == ${insure}  Verify PreLogin Insure Page
         ...    ELSE IF  ['${headers}'] == ${remit}  Verify PreLogin Remit Page
         ...    ELSE  Feature Sub Header Navigation
@@ -144,12 +143,11 @@ Feature Sub Header Navigation
     ${consolidate}  Get Json Values  $.MenuHeaders.h4.fsh3  Resources/TestData/Headers.json
 
     Log To Console  ${setAGoal}  
-    Click Element  ${KU_W_featureLink} 
-    ${element} =  Get Element Count  ${KU_W_featureSubList}
-    Log To Console  ${element}
     FOR  ${k}  IN RANGE  1  7
         Log To Console  InsideForLoop
-        Sleep  10s
+        Wait For Element Visbility  ${KU_W_featureLink}
+        Click Element  ${KU_W_featureLink} 
+        Sleep  2s
         ${subHeaders} =  Get Text  xpath=//div[@class='b-header__sub-content__feature']/a[${k}]
         Log to console  ${subHeaders}
         Run keyword If  ['${subHeaders}'] == ${setAGoal}  Verify PreLogin Set A Goal Page

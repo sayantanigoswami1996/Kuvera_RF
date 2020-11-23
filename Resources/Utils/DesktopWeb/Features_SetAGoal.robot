@@ -13,7 +13,7 @@ Verify Questionnaire
    
 
 Verify PreLogin Set A Goal Page
-    Click Element  ${KU_W_featureLink} 
+    #Click Element  ${KU_W_featureLink} 
     Wait For Element Visbility  ${KU_W_feature_setAGoalLink}
     Click Element  ${KU_W_feature_setAGoalLink}
     Wait For Element Visbility  ${KU_W_feature_sg_screenTitle}
@@ -29,6 +29,9 @@ Verify PreLogin Set A Goal Page
     Verify Element And Text  ${KU_W_feature_sg_foreignVacation}  ${e_feature_sg_foreignVacation}
     Verify Element And Text  ${KU_W_feature_sg_educateMyChild}  ${e_feature_sg_educateMyChild}
     Verify Element And Text  ${KU_W_feature_sg_createMyOwn}  ${e_feature_sg_createMyOwn}
-    Wait For Element Visbility  ${KU_W_feature_sg_ownAHome}
-    Click Element  ${KU_W_feature_sg_ownAHome}
-    Verify Questionnaire  
+    Go Back
+    #Kuvera Web Close Regulatory Disclosure
+    #Switch To Frame  ${KU_W_feature_sg_titleBoxSection}
+    #Wait For Element Visbility  ${KU_W_feature_sg_closeBtn}
+    #Click Button  ${KU_W_feature_sg_closeBtn}
+    #Verify Questionnaire  

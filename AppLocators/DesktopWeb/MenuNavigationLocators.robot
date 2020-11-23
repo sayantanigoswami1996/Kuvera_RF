@@ -242,8 +242,9 @@ ${KU_W_feature_sg_foreignVacation} =  xpath=(//p[@class='card-title'])[6]
 ${KU_W_feature_sg_educateMyChild} =  xpath=(//p[@class='card-title'])[7]
 ${KU_W_feature_sg_createMyOwn} =  xpath=(//p[@class='card-title'])[8]
 ${KU_W_feature_sg_questionScreen} =  xpath=//*[@id="title-box"]
+${KU_W_feature_sg_titleBoxSection} =  id=p9e7d2f05349193e9421e568b092da688e5010650-container
 ${KU_W_feature_sg_goalName} =  xpath=//*[@id="title-box"]/h2
-${KU_W_feature_sg_} =  xpath=//*[@class='']
+${KU_W_feature_sg_closeBtn} =  xpath=//div[@class='header-actions close-nav']//img
 ${KU_W_feature_sg_} =  xpath=//*[@class='']
 
 # Feature-TradeSmart

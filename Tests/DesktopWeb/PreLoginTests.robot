@@ -20,14 +20,14 @@ Suite Teardown  Close All Browsers
 *** Test Cases ***
 Landing Page Widgets Verification And Header Navigation Test
     [Tags]  TC01
-    Kuvera Web Logo Click
+    Kuvera Web Close Regulatory Disclosure 
     Close Banner 
     #Verify Widgets
     Header Navigation
 
 Features Header Navigation Test
     [Tags]  TC02
-    Kuvera Web Logo Click
+    Kuvera Web Close Regulatory Disclosure 
     #Verify PreLogin TradeSmart Page
     #Verify PreLogin Family Account Page 
     Verify PreLogin Set A Goal Page 

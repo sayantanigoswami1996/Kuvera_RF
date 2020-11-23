@@ -8,8 +8,8 @@ Resource    ../../../AppLocators/DesktopWeb/CommonAppLocators.robot
 Resource    ../../../Resources/Utils/DesktopWeb/Common.robot
 
 ** Keywords ***
+
 Verify PreLogin TradeSmart Page
-    Click Element  ${KU_W_featureLink} 
     Wait For Element Visbility  ${KU_W_feature_tradeSmartLink}
     Click Element  ${KU_W_feature_tradeSmartLink}
     Verify Language Switch Login And Signup Link

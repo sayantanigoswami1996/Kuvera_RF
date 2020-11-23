@@ -8,7 +8,6 @@ Resource    ../../../Resources/Utils/DesktopWeb/Common.robot
 *** Keywords ***
 
 Verify PreLogin Family Account Page 
-    Click Element  ${KU_W_featureLink} 
     Verify Language Switch Login And Signup Link
     Wait For Element Visbility  ${KU_W_feature_familyAccountLink}
     Click Element  ${KU_W_feature_familyAccountLink}

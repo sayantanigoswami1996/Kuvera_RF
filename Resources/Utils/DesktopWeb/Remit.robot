@@ -18,6 +18,7 @@ Verify Transfer Now
     Switch To Window Verify Title And Close  ${e_remit_transferWiseSignupTitle} 
 
 Verify PreLogin Remit Page
+    Wait For Element Visbility  ${KU_W_remit_Link}
     Click Element  ${KU_W_remit_Link}
     Verify Language Switch Login And Signup Link
     Wait For Element Visbility  ${KU_W_remit_screenTitle}
