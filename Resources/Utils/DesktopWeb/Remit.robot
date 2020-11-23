@@ -24,9 +24,6 @@ Verify PreLogin Remit Page
     Wait For Element Visbility  ${KU_W_remit_screenTitle}
     Verify Element And Text  ${KU_W_remit_screenTitle}  ${e_remit_screenTitle} 
     Verify Element And Text  ${KU_W_remit_screenTitleDesc}  ${e_remit_screenTitleDesc}
-
-    # Verify transerwise next steps 
-   
     Verify Transfer Now  ${KU_W_remit_transferNowTopBtn}
     Scroll Untill View  ${KU_W_remit_whyTransferWise}
     Scroll Untill View  ${KU_W_remit_knowMoreBtn}
@@ -37,12 +34,11 @@ Verify PreLogin Remit Page
 
     # Verify Third party - Transferwise redirection
     Switch To Frame  ${KU_W_remit_calculator_iFrame}
-    Sleep  3s
+    Sleep  1s
     Click Button  Send money
     Scroll Untill View  ${KU_W_remit_calculatorTarget}
     Verify Page Contains Element  ${KU_W_remit_calculatorTarget}
     Switch To Window Verify Title And Close  ${e_remit_transferWiseSignupTitle} 
 
     Scroll Untill View  ${KU_W_remit_transferNoBottomBtn}
-    # Verify transerwise next steps 
     Verify Transfer Now   ${KU_W_remit_transferNoBottomBtn}

@@ -6,7 +6,6 @@
 ${e_loan_headerTitleText} =  Get an instant loan backed by your portfolio
 ${e_loan_headerMsgText} =  Let your investments work for you. The only loan account you'll ever need.
 ${e_loan_checkElibilityBtnText} =  Check your eligibility
-${e_loginPage} =  Login. Start Investing.
 ${e_loan_calculatorTitleText} =  An affordable loan
 ${e_loan_calculatorSubTitleText} =  up to 80% of your mutual fund portfolio.   
 ${e_loan_highlyFlexibleTitle} =  Highly flexible
@@ -90,14 +89,22 @@ ${e_remit_transferWiseCross-borderTitle} =  Making cross-border investments with
 ${e_feature_sg_screenTitle} =  SET YOUR GOAL
 ${e_feature_sg_screenSubTitle} =  We'll help you bring your dreams to life.
 ${e_feature_sg_content} =  Setting a financial goal is the first step to making your dreams a reality. Investing regularly is the next. We make it really simple for you, and we’re with you every step of the way. Simply choose your goal to get started.
-${e_feature_sg_ownAHome} =  OWN A HOME
-${e_feature_sg_buyACar} =  BUY A CAR
-${e_feature_sg_saveTax} =  SAVE TAX
-${e_feature_sg_retireEasy} =  RETIRE EASY
-${e_feature_sg_25thAnniversary} =  25TH ANNIVERSARY
-${e_feature_sg_foreignVacation} =  FOREIGN VACATION
-${e_feature_sg_educateMyChild} =  EDUCATE MY CHILD
-${e_feature_sg_createMyOwn} =  CREATE MY OWN
+${e_feature_sg_Q1} =  Hi there! What’s your name?
+${e_feature_sg_Q2} =  And what’s your age?
+${e_feature_sg_Q3} =  How much does your dream home cost today?
+${e_feature_sg_Q4} =  In how many years do you want to buy this home?
+${e_feature_sg_Q5} =  Will you be taking a home loan?
+${e_feature_sg_Q6} =  How much will you make as downpayment?
+${e_feature_sg_Q7} =  How much can you invest upfront? 
+${e_feature_sg_A1_userName} =  Test
+${e_feature_sg_A2_userAge} =  27 
+${e_feature_sg_A3_homeCost} =  5000000
+${e_feature_sg_A4_goalDuration} =  2
+${e_feature_sg_A6_downPayment} =  15
+${e_feature_sg_A7_upFront} =  5000
+${e_feature_sg_almostDone} =  Almost done! Let’s personalise your plan.
+${e_feature_sg_seeYourPlan} =  SEE YOUR PLAN
+${e_feature_sg_getThisPlan} =  GET THIS PLAN
 
 
 # Feature-TradeSmart Navigation Page 
@@ -124,7 +131,6 @@ ${KU_W_loanLink} =  xpath=//a[contains(text(),'Loans')]
 ${KU_W_loanHeaderTitle} =  xpath=//div[@class='b-header__title']
 ${KU_W_loanHeaderMsg} =  xpath=//div[contains(text(),'Let your investments work for you. The only loan a')]
 ${KU_W_loanCheckEligibility} =  class=b-state-save-btn__text
-${KU_W_loginPageTitle} =  xpath=//div[contains(text(),'Login. Start Investing.')]
 ${KU_W_loanCalculatorTitle} =  xpath=//div[@class='b-calculator__text-content']/div[1]
 ${KU_W_loanCalculatorMsgList} =  xpath=//ul[@class='b-calculator__list']/li
 ${KU_W_highlyFlexibleTitle} =  xpath=//div[@class='b-withdraw-30min__title']  
@@ -230,6 +236,7 @@ ${KU_W_featureSubList} =  xpath=//a[contains(text(),'Set a Goal')]
 
 # Feature - Set a Goal
 ${KU_W_feature_setAGoalLink} =  xpath=//a[contains(text(),'Set a Goal')]
+${KU_W_feature_goalsList} =  xpath=//*[@class='card set-goal-own-a-home']/p
 ${KU_W_feature_sg_screenTitle} =  xpath=//*[@class='goals-index col-sm-4']/h2
 ${KU_W_feature_sg_screenSubTitle} =  xpath=//*[@class='goals-index col-sm-4']/h1
 ${KU_W_feature_sg_content} =  xpath=//p[@class='hidden-xs']
@@ -241,11 +248,30 @@ ${KU_W_feature_sg_25thAnniversary} =  xpath=(//p[@class='card-title'])[5]
 ${KU_W_feature_sg_foreignVacation} =  xpath=(//p[@class='card-title'])[6]
 ${KU_W_feature_sg_educateMyChild} =  xpath=(//p[@class='card-title'])[7]
 ${KU_W_feature_sg_createMyOwn} =  xpath=(//p[@class='card-title'])[8]
-${KU_W_feature_sg_questionScreen} =  xpath=//*[@id="title-box"]
+${KU_W_feature_sg_questionScreen} =  id=title-box
 ${KU_W_feature_sg_titleBoxSection} =  id=p9e7d2f05349193e9421e568b092da688e5010650-container
 ${KU_W_feature_sg_goalName} =  xpath=//*[@id="title-box"]/h2
 ${KU_W_feature_sg_closeBtn} =  xpath=//div[@class='header-actions close-nav']//img
-${KU_W_feature_sg_} =  xpath=//*[@class='']
+${KU_W_feature_sg_Q1} =  xpath=(//p[@class='question'])[1]
+${KU_W_feature_sg_Q2} =  xpath=(//p[@class='question'])[2]
+${KU_W_feature_sg_Q3} =  xpath=(//p[@class='question'])[3]
+${KU_W_feature_sg_Q4} =  xpath=(//p[@class='question'])[4]
+${KU_W_feature_sg_Q5} =  xpath=(//p[@class='question'])[5]
+${KU_W_feature_sg_Q6} =  xpath=(//p[@class='question'])[6]
+${KU_W_feature_sg_Q7} =  xpath=(//p[@class='question'])[7]
+${KU_W_feature_sg_Q1_userName} =  xpath=//input[@name='username']
+${KU_W_feature_sg_Q2_userAge} =  xpath=//input[@name='userage']
+${KU_W_feature_sg_Q3_homeCost} =  xpath=//input[@name='costofhome']
+${KU_W_feature_sg_Q4_goalDuration} =  xpath=//input[@name='goalduration']
+${KU_W_feature_sg_Q5_yes} =  xpath=//button[@class='btn btn-lg btn-custom btn-custom-yes']
+${KU_W_feature_sg_Q5_no} =  xpath=//button[@class='btn btn-lg btn-custom btn-custom-no btn-danger']
+${KU_W_feature_sg_Q6_downPayment} =  xpath=//input[@name='downpayment']
+${KU_W_feature_sg_A7_upFront} =  xpath=//input[@name='upfront']
+${KU_W_feature_sg_almostDone} =  xpath=//div[@class='risk-profile-heading']/h2
+${KU_W_feature_sg_continue} =  xpath=//button[@class='btn in-btn']
+${KU_W_feature_sg_investmentSummary} =  xpath=//*[@class='investment-summary']
+${KU_W_feature_sg_seeYourPlan} =  xpath=//button[@class='btn in-btn']
+${KU_W_feature_sg_getThisPlan} =  xpath=//button[@class='btn in-btn hidden-xs']
 
 # Feature-TradeSmart
 ${KU_W_featureSubList} =  xpath=//*[@class='b-header__sub-content__feature']/a

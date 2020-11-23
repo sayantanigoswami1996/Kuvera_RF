@@ -1,0 +1,13 @@
+{
+    "Questionnaire":{
+        "Own A Home":{
+        "q1":"Hi there! What’s your name?",
+        "q2":"And what’s your age?",
+        "q3":"How much does your dream home cost today?",
+        "q4":"In how many years do you want to buy this home?",
+        "q5":"Will you be taking a home loan?",
+        "q6":"How much will you make as downpayment?",
+        "q7":"How much can you invest upfront?"
+        }
+    }
+}

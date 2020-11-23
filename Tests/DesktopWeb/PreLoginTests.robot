@@ -13,9 +13,7 @@ Suite Setup  Launch URL
 Suite Teardown  Close All Browsers
 
 #To run all tests: robot -d Results Tests/DesktopWeb/PreLoginTests.robot
-#To run spefici test: robot --variable URL:https://kuvera.in/ --variable BROWSER:headlesschrome -d Results  -i TC02  Tests/DesktopWeb/PreLoginTests.robot
-
-
+#To run specific test: robot --variable URL:https://kuvera.in/ --variable BROWSER:headlesschrome -d Results  -i TC02  Tests/DesktopWeb/PreLoginTests.robot
 
 *** Test Cases ***
 Landing Page Widgets Verification And Header Navigation Test
