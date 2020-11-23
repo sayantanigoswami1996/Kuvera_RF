@@ -1,0 +1,63 @@
+{
+    "Questionnaire":{
+        "Own A Home":{
+        "q1":"Hi there! What’s your name?",
+        "q2":"And what’s your age?",
+        "q3":"How much does your dream home cost today?",
+        "q4":"In how many years do you want to buy this home?",
+        "q5":"Will you be taking a home loan?",
+        "q6":"How much will you make as downpayment?",
+        "q7":"How much can you invest upfront?"
+        },
+        "Buy a Car":{
+        "q1":"Hi there! What’s your name?",
+        "q2":"And what’s your age?",
+        "q3":"How much does your dream car cost today?",
+        "q4":"In how many years do you want to buy this car?",
+        "q5":"How much can you invest upfront?"
+        },
+        "Save Tax":{
+        "q1":"Hi there! What’s your name?",
+        "q2":"And what’s your age?",
+        "q3":"How much do you want to invest monthly?",
+        "q4":"For how long do you want to invest?",
+        "q5":"Enter a amount you can invest upfront, else enter 0."
+        },
+        "Retire Easy":{
+        "q1":"Hi there! What’s your name?",
+        "q2":"And what’s your age?",
+        "q3":"What are your current monthly expenses?",
+        "q4":"At what Age you want to Retire (Min Age: 13)?",
+        "q5":"Enter a amount you can invest upfront, else enter 0."
+        },
+        "25th Anniversary":{
+        "q1":"Hi there! What’s your name?",
+        "q2":"And what’s your age?",
+        "q3":"How much would your anniversary celebration cost today?",
+        "q4":"In how many years do you plan for this event?",
+        "q5":"How much can you invest upfront?"
+        },
+        "Foreign Vacation":{
+        "q1":"Hi there! What’s your name?",
+        "q2":"And what’s your age?",
+        "q3":"How much does your dream vacation cost today?",
+        "q4":"In how many years do you plan to go for this vacation?",
+        "q5":"How much can you invest upfront?"
+        },
+        "Educate My Child":{
+        "q1":"Hi there! What’s your name?",
+        "q2":"And what’s your age?",
+        "q3":"In today's terms how much you want to save for your kids education?",
+        "q4":"In how many years do you want to reach this goal?",
+        "q5":"How much can you invest upfront?"
+        },
+        "My Goal":{
+        "q1":"Hi there! What’s your name?",
+        "q2":"And what’s your age?",
+        "q3":"Give this goal a unique name.",
+        "q4":"What is the present value of your goal?",
+        "q5":"In how many years do you want to achieve this goal?",
+        "q6":"How much can you invest upfront?"
+        }
+    }
+}

@@ -1,12 +1,9 @@
 ﻿*** Variables ***
-#Desired Capabilities
-# ${URL}    https://kuvera.in/
-#For headless chrome use: ${BROWSER}     headlesschrome
-# ${BROWSER}     Chrome
-
 #Application Expected Values 'e_<VariableName>'
 ${e_login} =  Log in 
+${e_loginPageTitle} =  Login. Start Investing.
 ${e_signup} =  Sign up 
+${e_signupPageTitle} =  Sign Up. Start Investing.
 ${e_mfWelcomeTitle} =  Investments Simplified
 ${e_mf_welcomeText} =  First free Direct Mutual Fund investing platform. Zero fees, higher returns.
 ${e_mfCategory} =   Equity
@@ -54,8 +51,10 @@ ${KU_W_bannerCloseBtn} =  xpath=(//*[@class='icon-close'])[2]
 ${KU_W_menu} =  xpath=//*[@class='b-header__content']
 ${KU_W_headers} =  xpath=//*[@class='b-header__content__middle']/a
 ${KU_W_exploreELSS} =  xpath=//button[contains(text(),'Explore ELSS funds')]
-${KU_W_login} =  xpath=//*[@class='b-header__content__right__signin']
+${KU_W_login} =  xpath=//*[@class='b-header__content__right__signin']	
+${KU_W_loginPageTitle} =  xpath=//div[contains(text(),'Login. Start Investing.')]
 ${KU_W_signup} =   xpath=//*[@class='b-header__content__right__singup']
+${KU_W_signupPageTitle} =  xpath=//div[contains(text(),'Sign Up. Start Investing.')]
 
 ${KU_W_langSwitch} =  xpath=//div[@class='b-header__content__right--language-switcher']
 ${KU_W_mf_category} =   xpath=//div[@class='b-mf-wiget__mf-category--input']

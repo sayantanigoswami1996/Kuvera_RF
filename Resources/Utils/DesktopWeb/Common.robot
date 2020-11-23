@@ -100,7 +100,12 @@ Kuvera Web Close Regulatory Disclosure
     
 Verify Login Page
     Wait For Element Visbility  ${KU_W_loginPageTitle}
-    Verify Element And Text  ${KU_W_loginPageTitle}  ${e_loginPage}
+    Verify Element And Text  ${KU_W_loginPageTitle}  ${e_loginPageTitle}
+    Go Back
+
+Verify Signup Page
+    Wait For Element Visbility  ${KU_W_signupPageTitle}
+    Verify Element And Text  ${KU_W_signupPageTitle}  ${e_signupPageTitle}
     Go Back
 
 Verify Google Play & Apple Store Icons
