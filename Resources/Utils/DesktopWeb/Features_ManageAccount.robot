@@ -10,8 +10,7 @@ Resource    ../../../Resources/Utils/DesktopWeb/Common.robot
 *** Keywords ***
 
 Verify PreLogin Manage Account Page
-
-  Click Element  ${KU_W_featureLink} 
+ 
   Wait For Element Visbility  ${KU_W_feature_manageAccountLink}
   Click Element  ${KU_W_feature_manageAccountLink}
   Verify Language Switch Login And Signup Link

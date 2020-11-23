@@ -73,6 +73,7 @@ Get List Count
     [Return]  ${listCount}
 
 Close Banner 
+    Sleep  10s
     Wait Until Element Is Visible  ${KU_W_bannerFrame}  timeout=30
     Switch To Frame  ${KU_W_bannerFrame}
     Wait For Element Visbility  ${KU_W_bannerCloseBtn}
@@ -93,13 +94,10 @@ Verify Widgets From Json
     Log To Console  ${json_data1}          
     # Verify Page Contains Element        ${widget}
 
-Kuvera Web Logo Click
+Kuvera Web Close Regulatory Disclosure
     Wait Until Element Is Visible  ${KU_W_close}
     Click Element  ${KU_W_close}
-    Wait Until Element Is Visible  ${KU_W_logo}
-    Click Element  ${KU_W_logo}
-    Sleep  10s
-
+    
 Verify Login Page
     Wait For Element Visbility  ${KU_W_loginPageTitle}
     Verify Element And Text  ${KU_W_loginPageTitle}  ${e_loginPage}
@@ -125,17 +123,18 @@ Header Navigation
     ${insure}  Get Json Values  $.MenuHeaders.h2  Resources/TestData/Headers.json
     ${remit}  Get Json Values  $.MenuHeaders.h3  Resources/TestData/Headers.json
     ${features}  Get Json Values  $.MenuHeaders.h4  Resources/TestData/Headers.json
+    
     ${elem} =  Get Element Count  ${KU_W_headers}
     FOR  ${j}  IN RANGE  1  ${elem}+1
         ${headers} =  Get Text  xpath=//div[@class='b-header__content__middle']/a[${j}]
         Log to console  ${headers}
         Run keyword If  ['${headers}'] == ${invest}  Log To Console  PENDING
-        ...    ELSE IF  ['${headers}'] == ${loans}   Verify PreLogin Loan Page
+        ...    ELSE IF  ['${headers}'] == ${loans}   Verify PreLogin Loans Page
         ...    ELSE IF  ['${headers}'] == ${insure}  Verify PreLogin Insure Page
         ...    ELSE IF  ['${headers}'] == ${remit}  Verify PreLogin Remit Page
-        # ...    ELSE IF  ['${headers}'] == ${features}  Feature Sub Header Navigation
-        ...    ELSE   Feature Sub Header Navigation
+        ...    ELSE  Feature Sub Header Navigation
     END
+
 Feature Sub Header Navigation
     Log To Console  InFeatures
     ${setAGoal}  Get Json Values  $.MenuHeaders.h4.fsh0  Resources/TestData/Headers.json
@@ -145,23 +144,26 @@ Feature Sub Header Navigation
     ${taxHarvesting}  Get Json Values  $.MenuHeaders.h4.fsh4  Resources/TestData/Headers.json
     ${savesTaxes}  Get Json Values  $.MenuHeaders.h4.fsh5  Resources/TestData/Headers.json
     ${consolidate}  Get Json Values  $.MenuHeaders.h4.fsh6  Resources/TestData/Headers.json
-    sleep  5s
-    Click Element  ${KU_W_featureLink}
-    ${element} =  Get Element Count  ${KU_W_featureSubList}
-    Log To Console  ${element}
-    FOR  ${k}  IN RANGE  1  ${element}+1
-        ${subHeaders} =  Get Text   xpath=//div[@class='b-header__sub-content__feature']/a[${k}]
+
+    Log To Console  ${setAGoal}  
+    FOR  ${k}  IN RANGE  1  7
+        Log To Console  InsideForLoop
+        Wait For Element Visbility  ${KU_W_featureLink}
+        Click Element  ${KU_W_featureLink} 
+        Sleep  5s
+        ${subHeaders} =  Get Text  xpath=//div[@class='b-header__sub-content__feature']/a[${k}]
         Log to console  ${subHeaders}
-        Run keyword If  ['${subHeaders}'] == ${setAGoal}   Log To Console   Pending
-        ...    ELSE IF  ['${subHeaders}'] == ${tradeSmart}   Verify PreLogin TradeSmart Page     
-        ...    ELSE IF  ['${subHeaders}'] == ${familyAccount}   Verify PreLogin Family Account Page
+        Run keyword If  ['${subHeaders}'] == ${setAGoal}  Verify PreLogin Set A Goal Page
+        ...    ELSE IF  ['${subHeaders}'] == ${tradeSmart}   Verify PreLogin TradeSmart Page
+        ...    ELSE IF  ['${subHeaders}'] == ${familyAccount}  Verify PreLogin Family Account Page 
         ...    ELSE IF  ['${subHeaders}'] == ${manageAccount}  Verify PreLogin Manage Account Page
         ...    ELSE IF  ['${subHeaders}'] == ${taxHarvesting}  Verify PreLogin Tax Harvesting Page
-        ...    ELSE IF  ['${subHeaders}'] == ${savesTaxes}  Log To Console  PENDING
+        ...    ELSE IF  ['${subHeaders}'] == ${savesTaxes}  Verify PreLogin Save Taxes Page
         ...    ELSE IF  ['${subHeaders}'] == ${consolidate}  Log To Console  PENDING
-        ...    ELSE Log To Console test
-        
+        ...    ELSE  Log To Console  Test
     END
 
+
+    
 Close Web Application
     Close All Browsers

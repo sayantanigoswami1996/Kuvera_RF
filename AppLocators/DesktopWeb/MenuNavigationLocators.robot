@@ -87,6 +87,19 @@ ${e_remit_transferNowBtn} =  Transer now
 ${e_remit_transferWiseSignupTitle} =  Transfer Money Online | Send Money Abroad with TransferWise - Sign up
 ${e_remit_transferWiseCross-borderTitle} =  Making cross-border investments with Kuvera seamless and easy | TransferWise - TransferWise
 
+# Feature - Set a Gaol
+${e_feature_sg_screenTitle} =  SET YOUR GOAL
+${e_feature_sg_screenSubTitle} =  We'll help you bring your dreams to life.
+${e_feature_sg_content} =  Setting a financial goal is the first step to making your dreams a reality. Investing regularly is the next. We make it really simple for you, and we’re with you every step of the way. Simply choose your goal to get started.
+${e_feature_sg_ownAHome} =  OWN A HOME
+${e_feature_sg_buyACar} =  BUY A CAR
+${e_feature_sg_saveTax} =  SAVE TAX
+${e_feature_sg_retireEasy} =  RETIRE EASY
+${e_feature_sg_25thAnniversary} =  25TH ANNIVERSARY
+${e_feature_sg_foreignVacation} =  FOREIGN VACATION
+${e_feature_sg_educateMyChild} =  EDUCATE MY CHILD
+${e_feature_sg_createMyOwn} =  CREATE MY OWN
+
 # Feature-TradeSmart Navigation Page Variables
 ${e_feature_ts_titleText} =  TradeSmart
 ${e_feature_ts_subHeaderDesc} =  A switch or redeem order involves costs – taxes on short & long-term capital gains and exit load. TradeSmart shows you the optimal amount you can switch or redeem with the least tax and exit load.
@@ -137,6 +150,29 @@ ${e_feature_th_checkDescText1} =  Receive timely recommendations to harvest tax
 ${e_feature_th_checkDescText2} =  View history of tax harvested each financial year  
 ${e_feature_th_checkDescText3} =  Automatic calculation of tax harvested on any sell transaction  
 ${e_feature_th_startHarvestText} =  The time is ripe! Start harvesting today.  
+
+# Features-Save Taxes Navigation Page Variables
+${e_feature_st_screenTitleText} =  Top rated tax saving funds  
+${e_feature_st_screenContentText} =  Funds that feature in “Best Tax Saving Mutual Fund” lists across the web.
+${e_feature_st_taxHeadingText} =  Save Taxes.  
+${e_feature_st_taxDescText} =  Tax Saving ELSS Mutual Funds can help save upto ₹ 46,350 in taxes 
+${e_feature_st_commissionHeadingText} =  Save Commissions.  
+${e_feature_st_commissionDescText} =  We are a Direct Plan platform. You save upto 1.5% per year in commission
+${e_feature_st_feesHeadingText} =  Save Fees. 
+${e_feature_st_feesDescText} =  We are free. No investment fees whatsover. It doesn't get better than this.
+${e_feature_st_fundingTitleText} =  How the ‘Tax Saving Funds’ work
+${e_feature_st_fundingDescText} =  Investments in Tax Saving Mutual Funds (also called ELSS funds) are eligible as deductions under Section 80C of the Income Tax Act. You can invest up to Rs 1.5 lakhs in eligible investments. At the highest tax bracket this would lead to a tax saving of Rs 46,350. There is a lock-in of 3 years, during which time you cannot redeem your investment.
+${e_feature_st_learnHowLinkText} =  Learn how!
+${e_feature_st_pageTitleText} =  Tax Archives - Kuvera            
+${e_feature_st_investmentText} =  Investment
+${e_feature_st_lockInText} =  Lock In 
+${e_feature_st_historicalReturnsText} =  Historical Returns 
+${e_feature_st_tableRow1Text} =  Tax Saving Funds 3 Years  17 - 24%
+${e_feature_st_tableRow2Text} =  Life Insurance  5 Years  0-6%
+${e_feature_st_tableRow3Text} =  PPF  15 Years  8.5%
+${e_feature_st_tableRow4Text} =  NSC  5/10 Years  8.5%
+${e_feature_st_tableRow5Text} =  FD  5 Years  9.0%
+
 # Application Locator 'KU_<locatorName>'
 
 # Button 
@@ -248,10 +284,31 @@ ${KU_W_remit_knowMoreBtn} =  xpath=//button[@class='button-primary b-why-transfe
 ${KU_W_remit_calculatorTarget} =  xpath=//*[@id="tw-calculator-target"]
 ${KU_W_remit_transferNoBottomBtn} =  xpath=//button[@class='button-primary b-how__btn-transfer']
 
+# Feature 
+${KU_W_featureSubList} =  xpath=//a[contains(text(),'Set a Goal')]
+
+# Feature - Set a Goal
+${KU_W_feature_setAGoalLink} =  xpath=//a[contains(text(),'Set a Goal')]
+${KU_W_feature_sg_screenTitle} =  xpath=//*[@class='goals-index col-sm-4']/h2
+${KU_W_feature_sg_screenSubTitle} =  xpath=//*[@class='goals-index col-sm-4']/h1
+${KU_W_feature_sg_content} =  xpath=//p[@class='hidden-xs']
+${KU_W_feature_sg_ownAHome} =  xpath=(//p[@class='card-title'])[1]
+${KU_W_feature_sg_buyACar} =  xpath=(//p[@class='card-title'])[2]
+${KU_W_feature_sg_saveTax} =  xpath=(//p[@class='card-title'])[3]
+${KU_W_feature_sg_retireEasy} =  xpath=(//p[@class='card-title'])[4]
+${KU_W_feature_sg_25thAnniversary} =  xpath=(//p[@class='card-title'])[5]
+${KU_W_feature_sg_foreignVacation} =  xpath=(//p[@class='card-title'])[6]
+${KU_W_feature_sg_educateMyChild} =  xpath=(//p[@class='card-title'])[7]
+${KU_W_feature_sg_createMyOwn} =  xpath=(//p[@class='card-title'])[8]
+${KU_W_feature_sg_questionScreen} =  xpath=//*[@id="title-box"]
+${KU_W_feature_sg_titleBoxSection} =  id=p9e7d2f05349193e9421e568b092da688e5010650-container
+${KU_W_feature_sg_goalName} =  xpath=//*[@id="title-box"]/h2
+${KU_W_feature_sg_closeBtn} =  xpath=//div[@class='header-actions close-nav']
+${KU_W_feature_sg_} =  xpath=//*[@class='']
 
 # Feature-TradeSmart Page
 ${KU_W_featureLink} =  xpath=//a[contains(text(),'Features')]
-${KU_W_feature_ts_link} =  xpath=//a[contains(text(),'TradeSmart')]
+${KU_W_feature_ts_Link} =  xpath=//a[contains(text(),'TradeSmart')]
 ${KU_W_feature_ts_title} =  xpath=//div[@class='b-trade-smart__header__desc__title'] 
 ${KU_W_feature_ts_subHeaderTitle} =  xpath=//div[@class='b-trade-smart__header__desc__content']
 ${KU_W_feature_ts_activationTitle} =  xpath=//div[@class='b-trade-smart__header__desc__activate-title']
@@ -262,9 +319,11 @@ ${KU_W_feature_helpTradeSmartTitle} =  xpath=//div[@class='b-trade-smart__help-t
 ${KU_W_feature_helpTradeSmart1Msg} =  xpath=//div[@class='b-trade-smart__help-desc']/div[1] 
 ${KU_W_feature_helpTradeSmart2Msg} =  xpath=//div[@class='b-trade-smart__help-desc']/div[2]
 ${KU_W_feature_helpTradeSmart3Msg} =  xpath=//div[@class='b-trade-smart__help-desc']/div[3]
+${KU_W_feature_aboutUs} =  xpath=(//ul[@class='list-unstyled']/li)[1]
+
 
 # Feature-Family Account
-${KU_W_feature_familyAccountLink} =  xpath=//a[contains(text(),'Family Account')]   
+${KU_W_feature_familyAccountLink} =  xpath=//a[contains(text(),'Family Account')]  
 ${KU_W_feature_fa_screenTitle} =  xpath=//h1[@class='b-family-account__what__heading']
 ${KU_W_feature_fa_screenContent} =  xpath=//div[@class='b-family-account__what__des']
 
@@ -312,6 +371,33 @@ ${KU_W_feature_th_pricingcheckDesc3} =  xpath=(//p[@class='check-label'])[3]
 ${KU_W_feature_th_startHarvestTitle} =  xpath=//h2[@class='start-harvesting-today-heading']
 ${KU_W_feature_th_coinImage3} =  xpath=(//img[@class='btn-coin-icon'])[3]
 ${KU_W_feature_th_subscribe3Btn} =  xpath=(//button[@class='button-primary'])[3]
+
+#Feature-SaveTaxes Page
+${KU_W_feature_saveTaxesLink} =  xpath=(//a[contains(text(),'Save Taxes')])[1]
+${KU_W_feature_st_screenTitle} =  xpath=//div[@class='b-tax-saver-info__top-funds__heading']
+${KU_W_feature_st_screenContent} =  xpath=//div[@class='b-tax-saver-info__top-funds__exp']
+${KU_W_feature_saveTaxesHeading} =  xpath=(//div[@class='b-tax-saver-info__save__heading'])[1]
+${KU_W_feature_saveCommissionHeading} =  xpath=(//div[@class='b-tax-saver-info__save__heading'])[2]
+${KU_W_feature_saveFeesHeading} =  xpath=(//div[@class='b-tax-saver-info__save__heading'])[3]
+${KU_W_feature_saveTaxesDesc} =  xpath=(//div[@class='b-tax-saver-info__save__des'])[1]
+${KU_W_feature_saveCommissionDesc} =  xpath=(//div[@class='b-tax-saver-info__save__des'])[2]
+${KU_W_feature_saveFeesDesc} =  xpath=(//div[@class='b-tax-saver-info__save__des'])[3]
+${KU_W_feature_st_watchlistBtn} =  xpath=(//div[@class='b-fund-list__watchlist']/img)[1]
+${KU_W_feature_st_fundingTitle} =  xpath=//div[@class='b-tax-saver-details__working__heading']
+${KU_W_feature_st_fundingDesc} =  xpath=//div[@class='b-tax-saver-details__working__text']
+${KU_W_feature_st_learnHowLink} =  xpath=//a[@class='b-tax-saver-details__working__learn-how']
+${KU_W_feature_st_investmentTitle} =  xpath=//th[contains(text(),'Investment')]
+${KU_W_feature_st_lockInTitle} =  xpath=//th[contains(text(),'Lock In')]
+${KU_W_feature_st_historicalReturnsTitle} =  xpath=//th[contains(text(),'Historical Returns')]
+${KU_W_feature_st_tableRow1} =  xpath=//tr[@class='b-tax-saver-row']
+${KU_W_feature_st_tableRow2} =  xpath= //tbody/tr[2]
+${KU_W_feature_st_tableRow3} =  xpath= //tbody/tr[3]
+${KU_W_feature_st_tableRow4} =  xpath= //tbody/tr[4]
+${KU_W_feature_st_tableRow5} =  xpath= //tbody/tr[5]
+
+ 
+ 
+
 
 
 

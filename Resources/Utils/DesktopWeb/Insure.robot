@@ -18,7 +18,7 @@ Verify PreLogin Insure Page
   Verify Element And Text  ${KU_W_termsAndConditions}  ${e_insure_T&CText}  
   Verify Element And Text  ${KU_W_checkPremiumBtn1}  ${e_insure_checkPremiumBtnText}  
   Wait For Element Visbility  ${KU_W_checkPremiumBtn1}
-  sleep   1s
+  Sleep   1s
   Click Button  ${KU_W_checkPremiumBtn1} 
   Verify Login Page
   Wait For Element Visbility  ${KU_W_costDetailsHeaderTitle}     
@@ -65,7 +65,7 @@ Verify PreLogin Insure Page
   Verify Element and Text  ${KU_W_copaymentCardTitle}  ${e_insure_copaymentCardText}
   Verify Element and Text  ${KU_W_copaymentMsg}  ${e_insure_copaymentMsgText}
   Click Element  ${KU_W_sliderButton}
-  sleep   1s
+  Sleep   1s
   Verify Element and Text  ${KU_W_30daySettlemenCardTitle}  ${e_insure_30daySettlementCardText}
   Verify Element and Text  ${KU_W_30daySettlemenMsg}  ${e_insure_30daySettlementMsgText}
   Verify Element and Text  ${KU_W_ayushCoveredCardTitle}   ${e_insure_ayushCoveredCardText}
@@ -73,7 +73,7 @@ Verify PreLogin Insure Page
   Verify Element and Text  ${KU_W_lowWaitingPeriodCardTitle}  ${e_insure_lowWaitingPeriodCardText}
   Verify Element and Text  ${KU_W_lowWaitingPeriodMsg}   ${e_insure_lowWaitingPeriodMsgText}
   Click Element  ${KU_W_sliderButton}
-  sleep   1s
+  Sleep   1s
   Verify Element and Text  ${KU_W_dailyExpenseCardTitle}   ${e_insure_dailyExpenseCardText}
   Verify Element and Text  ${KU_W_dailyExpenseMsg}  ${e_insure_dailyExpenseMsgText} 
   Verify Element and Text  ${KU_W_dedicatedSupportCardTitle}  ${e_insure_dedicatedSupportCardText}
