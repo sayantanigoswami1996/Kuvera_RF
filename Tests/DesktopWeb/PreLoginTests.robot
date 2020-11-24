@@ -32,6 +32,4 @@ Features Header Navigation Test
     Close Banner 
     #Verify PreLogin TradeSmart Page
     #Verify PreLogin Family Account Page 
-    Verify PreLogin Set A Goal Page 
-   
-
+    Verify PreLogin Set A Goal Page
