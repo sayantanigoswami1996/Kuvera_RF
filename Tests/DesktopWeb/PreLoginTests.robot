@@ -11,7 +11,7 @@ Resource    ../../Resources/Utils/DesktopWeb/Features_FamilyAccount.robot
 Resource    ../../Resources/Utils/DesktopWeb/Features_ManageAccount.robot
 Resource    ../../Resources/Utils/DesktopWeb/Features_TaxHarvesting.robot
 Resource    ../../Resources/Utils/DesktopWeb/Features_SaveTaxes.robot
-
+Resource    ../../Resources/Utils/DesktopWeb/Features_Consolidate.robot
 Suite Setup  Launch URL 
 Suite Teardown  Close All Browsers
 
@@ -30,9 +30,5 @@ Features Header Navigation Test
     [Tags]  TC02
     Kuvera Web Close Regulatory Disclosure
     Close Banner 
-    Verify PreLogin Set A Goal Page
-    # Verify PreLogin TradeSmart Page
-    # Verify PreLogin Family Account Page 
-    # Verify PreLogin Manage Account Page
-    # Verify PreLogin Tax Harvesting Page
-    # Verify PreLogin Save Taxes Page
+    Verify PreLogin Consolidate Page
+    # Verify PreLogin Set A Goal Page

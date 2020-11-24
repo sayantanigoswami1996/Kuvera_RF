@@ -86,7 +86,7 @@ ${e_remit_transferNowBtn} =  Transer now
 ${e_remit_transferWiseSignupTitle} =  Transfer Money Online | Send Money Abroad with TransferWise - Sign up
 ${e_remit_transferWiseCross-borderTitle} =  Making cross-border investments with Kuvera seamless and easy | TransferWise - TransferWise
 
-# Feature - Set a Gaol
+# Feature - Set a Goal
 ${e_feature_sg_screenTitle} =  SET YOUR GOAL
 ${e_feature_sg_screenSubTitle} =  We'll help you bring your dreams to life.
 ${e_feature_sg_content} =  Setting a financial goal is the first step to making your dreams a reality. Investing regularly is the next. We make it really simple for you, and we’re with you every step of the way. Simply choose your goal to get started.
@@ -106,6 +106,14 @@ ${e_feature_sg_A7_upFront} =  5000
 ${e_feature_sg_almostDone} =  Almost done! Let’s personalise your plan.
 ${e_feature_sg_seeYourPlan} =  SEE YOUR PLAN
 ${e_feature_sg_getThisPlan} =  GET THIS PLAN
+
+${e_feature_sg_buyaCar_Q3} =  How much does your dream car cost today?
+${e_feature_sg_A3_carCost} =  6000000
+${e_feature_sg_buyAcar_Q4} =  In how many years do you want to buy this car?
+${e_feature_sg__saveTax_Q3} =  How much do you want to invest monthly?
+${e_feature_sg_A3_monthlyInvestment} =  10000
+${e_feature_sg_saveTax_Q4} =  For how long do you want to invest?
+${e_feature_sg_saveTax_Q5} =  Enter a amount you can invest upfront, else enter 0.
 
 # Feature-TradeSmart Navigation Page Variables
 ${e_feature_ts_titleText} =  TradeSmart
@@ -180,6 +188,16 @@ ${e_feature_st_tableRow3Text} =  PPF  15 Years  8.5%
 ${e_feature_st_tableRow4Text} =  NSC  5/10 Years  8.5%
 ${e_feature_st_tableRow5Text} =  FD  5 Years  9.0%
 
+#Features- Consolidate Navigatio Page Variables
+${e_feature_cd_pageHeaderText} =  Informed, disciplined investing grows your money, long-term 
+${e_feature_cd_subHeaderText} =  Follow a structured approach and invest regularly, for the long-haul. This is the best way to grow your wealth over time
+${e_feature_cd_setAGoalTitleText} =  DREAMS DO COME TRUE  
+${e_feature_cd_setAGoalSubTitle} =  Make your goals a reality
+${e_feature_cd_setAGoalDescTitle} =   A new car, owning your own home, sending your kids to study abroad - you may have many reasons to invest. We help you build investment action plans that’ll help you make enough to make these goals a reality. More about goal-based investing
+${e_feature_cd_goalBsdInvestingLinkText} =  More about goal-based investing
+${e_feature_cd_financialSuccessTitleText} =  3 Steps To Financial Success Using Goal-Based Investing - Kuvera
+${e_feature_cd_setAGoalBtnText} =  SET A GOAL
+
 # Application Locator 'KU_<locatorName>'
 
 # Button 
@@ -190,7 +208,6 @@ ${KU_W_loanLink} =  xpath=//a[contains(text(),'Loans')]
 ${KU_W_loanHeaderTitle} =  xpath=//div[@class='b-header__title']
 ${KU_W_loanHeaderMsg} =  xpath=//div[contains(text(),'Let your investments work for you. The only loan a')]
 ${KU_W_loanCheckEligibility} =  class=b-state-save-btn__text
-${KU_W_loginPageTitle} =  xpath=//div[contains(text(),'Login. Start Investing.')]
 ${KU_W_loanCalculatorTitle} =  xpath=//div[@class='b-calculator__text-content']/div[1]
 ${KU_W_loanCalculatorMsgList} =  xpath=//ul[@class='b-calculator__list']/li
 ${KU_W_highlyFlexibleTitle} =  xpath=//div[@class='b-withdraw-30min__title']  
@@ -292,12 +309,11 @@ ${KU_W_remit_calculatorTarget} =  xpath=//*[@id="tw-calculator-target"]
 ${KU_W_remit_transferNoBottomBtn} =  xpath=//button[@class='button-primary b-how__btn-transfer']
 
 # Feature 
-${KU_W_featureSubList} =  xpath=//a[contains(text(),'Set a Goal')]
+${KU_W_featureSubList} =  xpath=//div[@class='b-header__sub-content']/div/a
 
 # Feature - Set a Goal
-# Feature - Set a Goal
 ${KU_W_feature_setAGoalLink} =  xpath=//a[contains(text(),'Set a Goal')]
-${KU_W_feature_goalsList} =  xpath=//*[@class='card set-goal-own-a-home']/p
+${KU_W_feature_goalsList} =  xpath=//*[@class='cards']/a/p
 ${KU_W_feature_sg_screenTitle} =  xpath=//*[@class='goals-index col-sm-4']/h2
 ${KU_W_feature_sg_screenSubTitle} =  xpath=//*[@class='goals-index col-sm-4']/h1
 ${KU_W_feature_sg_content} =  xpath=//p[@class='hidden-xs']
@@ -312,7 +328,6 @@ ${KU_W_feature_sg_createMyOwn} =  xpath=(//p[@class='card-title'])[8]
 ${KU_W_feature_sg_questionScreen} =  id=title-box
 ${KU_W_feature_sg_titleBoxSection} =  id=p9e7d2f05349193e9421e568b092da688e5010650-container
 ${KU_W_feature_sg_goalName} =  xpath=//*[@id="title-box"]/h2
-${KU_W_feature_sg_closeBtn} =  xpath=//div[@class='header-actions close-nav']//img
 ${KU_W_feature_sg_Q1} =  xpath=(//p[@class='question'])[1]
 ${KU_W_feature_sg_Q2} =  xpath=(//p[@class='question'])[2]
 ${KU_W_feature_sg_Q3} =  xpath=(//p[@class='question'])[3]
@@ -333,8 +348,9 @@ ${KU_W_feature_sg_continue} =  xpath=//button[@class='btn in-btn']
 ${KU_W_feature_sg_investmentSummary} =  xpath=//*[@class='investment-summary']
 ${KU_W_feature_sg_seeYourPlan} =  xpath=//button[@class='btn in-btn']
 ${KU_W_feature_sg_getThisPlan} =  xpath=//button[@class='btn in-btn hidden-xs']
-${KU_W_feature_sg_closeBtn} =  xpath=//div[@class='header-actions close-nav']
-
+${KU_W_feature_sg_closeBtn} =  xpath=//a[@class='header-actions close-nav close-btn active']
+${KU_W_feature_sg_Q3_carCost} =  xpath=//input[@name='costtoday'] 
+${KU_W_feature_sg_Q3_monthlyInvestment} =  xpath=//input[@name='sip']
 
 # Feature-TradeSmart Page
 ${KU_W_featureLink} =  xpath=//a[contains(text(),'Features')]
@@ -424,6 +440,17 @@ ${KU_W_feature_st_tableRow2} =  xpath= //tbody/tr[2]
 ${KU_W_feature_st_tableRow3} =  xpath= //tbody/tr[3]
 ${KU_W_feature_st_tableRow4} =  xpath= //tbody/tr[4]
 ${KU_W_feature_st_tableRow5} =  xpath= //tbody/tr[5]
+
+# Features-Consolidate Page
+${KU_W_feature_consolidateLink} =  xpath=//a[contains(text(),'Consolidate')]
+${KU_W_feature_cd_pageHeader} =  xpath=//header[@class='page-heading']/h1
+${KU_W_feature_cd_pageSubHeader} =  xpath=//header[@class='page-heading']/p
+${KU_W_feature_setAGoalPageTitle} =  xpath=(//div[contains(@class,'why-invest-text')]/h4)[1]
+${KU_W_feature_setAGoalPageSubTitle} =  xpath=(//div[contains(@class,'why-invest-text')]/h3)[1]
+${KU_W_feature_setAGoalPageDesc} =  xpath=//div[@class='set-a-goal-text']/p
+${KU_W_feature_goalBasedInvestingLink} =  xpath=//a[contains(text(),'More about goal-based investing')]
+${KU_W_feature_setAGoalBtn} =  xpath=(//button[@class='btn in-btn'])[1]
+${KU_W_feature_entryHeaderTitle} =  xpath=//h1[@class='entry-title post-title']
 
  
  

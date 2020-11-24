@@ -77,7 +77,6 @@ Close Banner
     Wait Until Element Is Visible  ${KU_W_bannerFrame}  timeout=30
     Switch To Frame  ${KU_W_bannerFrame}
     Wait For Element Visbility  ${KU_W_bannerCloseBtn}
-    sleep  1s
     Click Element  ${KU_W_bannerCloseBtn}
     Unselect Frame
 >
@@ -106,7 +105,10 @@ Verify Login Page
 Verify Signup Page
     Wait For Element Visbility  ${KU_W_signupPageTitle}
     Verify Element And Text  ${KU_W_signupPageTitle}  ${e_signupPageTitle}
-    Go Back
+
+Kuvera Web Logo Click	
+    Wait For Element Visbility  ${KU_W_logo}	
+    Click Element  ${KU_W_logo}    
 
 Verify Google Play & Apple Store Icons
     Scroll Element Into View  ${KU_W_android_image}
