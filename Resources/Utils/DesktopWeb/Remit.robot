@@ -7,7 +7,8 @@ Resource    ../../../AppLocators/DesktopWeb/MenuNavigationLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/CommonAppLocators.robot
 Resource    ../../../Resources/Utils/DesktopWeb/Common.robot
 
-***Keywords***
+*** Keywords ***
+
 Verify Transfer Now 
     [Arguments]  ${element}
     sleep  1s
@@ -42,5 +43,3 @@ Verify PreLogin Remit Page
 
     Scroll Untill View  ${KU_W_remit_transferNoBottomBtn}
     Verify Transfer Now   ${KU_W_remit_transferNoBottomBtn}
-    Go Back
-    

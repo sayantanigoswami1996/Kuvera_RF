@@ -1,4 +1,5 @@
 *** Settings ***
+
 Library     JSONLibrary
 Library     JsonValidator
 Library     SeleniumLibrary
@@ -6,8 +7,10 @@ Library     String
 Library     OperatingSystem
 Library     Collections
 Resource    ../../../AppLocators/DesktopWeb/CommonAppLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/MenuNavigationLocators.robot
 
 *** Keywords ***
+
 Launch URL
     Open Browser  ${URL}  ${BROWSER}  alias=Kuvera
     Maximize Browser Window
@@ -105,7 +108,6 @@ Kuvera Web Logo Click
     Wait For Element Visbility  ${KU_W_logo}
     Click Element  ${KU_W_logo}
 
-
 Verify Google Play & Apple Store Icons
     Scroll Element Into View  ${KU_W_android_image}
     Verify Page Contains Image  ${KU_W_android_image}
@@ -126,7 +128,6 @@ Header Navigation
     ${insure}  Get Json Values  $.MenuHeaders.h2  Resources/TestData/Headers.json
     ${remit}  Get Json Values  $.MenuHeaders.h3  Resources/TestData/Headers.json
     ${features}  Get Json Values  $.MenuHeaders.h4  Resources/TestData/Headers.json
-    
     ${elem} =  Get Element Count  ${KU_W_headers}
     FOR  ${j}  IN RANGE  1  ${elem}+1
         ${headers} =  Get Text  xpath=//div[@class='b-header__content__middle']/a[${j}]
@@ -144,27 +145,26 @@ Feature Sub Header Navigation
     ${tradeSmart}  Get Json Values  $.MenuHeaders.h4.fsh1  Resources/TestData/Headers.json
     ${familyAccount}  Get Json Values  $.MenuHeaders.h4.fsh2  Resources/TestData/Headers.json
     ${manageAccount}  Get Json Values  $.MenuHeaders.h4.fsh3  Resources/TestData/Headers.json
-    ${taxHarvesting}  Get Json Values  $.MenuHeaders.h4.fsh2  Resources/TestData/Headers.json
-    ${savesTaxes}  Get Json Values  $.MenuHeaders.h4.fsh3  Resources/TestData/Headers.json
-    ${consolidate}  Get Json Values  $.MenuHeaders.h4.fsh3  Resources/TestData/Headers.json
-
+    ${taxHarvesting}  Get Json Values  $.MenuHeaders.h4.fsh4  Resources/TestData/Headers.json
+    ${savesTaxes}  Get Json Values  $.MenuHeaders.h4.fsh5  Resources/TestData/Headers.json
+    ${consolidate}  Get Json Values  $.MenuHeaders.h4.fsh6  Resources/TestData/Headers.json
     Log To Console  ${setAGoal}  
     FOR  ${k}  IN RANGE  1  7
         Log To Console  InsideForLoop
         Wait For Element Visbility  ${KU_W_featureLink}
         Click Element  ${KU_W_featureLink} 
-        Sleep  2s
+        Sleep  3s
         ${subHeaders} =  Get Text  xpath=//div[@class='b-header__sub-content__feature']/a[${k}]
         Log to console  ${subHeaders}
         Run keyword If  ['${subHeaders}'] == ${setAGoal}  Verify PreLogin Set A Goal Page
         ...    ELSE IF  ['${subHeaders}'] == ${tradeSmart}   Verify PreLogin TradeSmart Page
         ...    ELSE IF  ['${subHeaders}'] == ${familyAccount}  Verify PreLogin Family Account Page 
-        ...    ELSE IF  ['${subHeaders}'] == ${manageAccount}  Log To Console  PENDING
-        ...    ELSE IF  ['${subHeaders}'] == ${taxHarvesting}  Log To Console  PENDING
-        ...    ELSE IF  ['${subHeaders}'] == ${savesTaxes}  Log To Console  PENDING
+        ...    ELSE IF  ['${subHeaders}'] == ${manageAccount}  Verify PreLogin Manage Account Page
+        ...    ELSE IF  ['${subHeaders}'] == ${taxHarvesting}  Verify PreLogin Tax Harvesting Page
+        ...    ELSE IF  ['${subHeaders}'] == ${savesTaxes}  Verify PreLogin Save Taxes Page
         ...    ELSE IF  ['${subHeaders}'] == ${consolidate}  Log To Console  PENDING
         ...    ELSE  Log To Console  Test
     END
-
+    
 Close Web Application
     Close All Browser

@@ -1,4 +1,5 @@
-*** Variables ***
+*** Variables *** 
+
 # Application Expected Values 'e_<variableName>'
 # Loan List 
 @{e_loan_calculatorMsgListItem} =  MF units remain secure with the fund house.  No fixed loan period. A 1yr loan auto renews on the 12th month.     Loan starting from ₹25,000 up to ₹10cr.  Full disclosure. No hidden fees.
@@ -85,21 +86,7 @@ ${e_remit_transferNowBtn} =  Transer now
 ${e_remit_transferWiseSignupTitle} =  Transfer Money Online | Send Money Abroad with TransferWise - Sign up
 ${e_remit_transferWiseCross-borderTitle} =  Making cross-border investments with Kuvera seamless and easy | TransferWise - TransferWise
 
-#Feature-TradeSmart Page 
-${e_feature_tradeSmartTitleText} =  TradeSmart
-${e_feature_tradeSmartSubHeaderDesc} =  A switch or redeem order involves costs – taxes on short & long-term capital gains and exit load. TradeSmart shows you the optimal amount you can switch or redeem with the least tax and exit load.
-${e_feature_tradeSmartActivationTitle} =  Activate once, use forever!
-${e_feature_tradeSmartActivationSubTitle} =  Use 300 coins to activate TradeSmart, and use it forever.
-${e_feature_helpTradeSmartTitleText} =  We help you trade smart
-${e_feature_helpTradeSmartDesc1Text} =  See regular plan units as they become available to switch to direct plans with the least tax and exit load impact. Switching to Direct has never been easier or cheaper.
-${e_feature_helpTradeSmartDesc2Text} =  See optimal number of fund units to switch or redeem before you transact. Make better decisions.
-${e_feature_helpTradeSmartDesc3Text} =  We take care of all complexities. 1 year STCG for equity, 3 year for debt, indexation for debt, lock-in for ELSS schemes etc. We optimize over it all.
-
-
-
-
-
-# Feature - Set a Gaol
+# Feature - Set a Goal
 ${e_feature_sg_screenTitle} =  SET YOUR GOAL
 ${e_feature_sg_screenSubTitle} =  We'll help you bring your dreams to life.
 ${e_feature_sg_content} =  Setting a financial goal is the first step to making your dreams a reality. Investing regularly is the next. We make it really simple for you, and we’re with you every step of the way. Simply choose your goal to get started.
@@ -120,12 +107,20 @@ ${e_feature_sg_almostDone} =  Almost done! Let’s personalise your plan.
 ${e_feature_sg_seeYourPlan} =  SEE YOUR PLAN
 ${e_feature_sg_getThisPlan} =  GET THIS PLAN
 
+${e_feature_sg_buyaCar_Q3} =  How much does your dream car cost today?
+${e_feature_sg_A3_carCost} =  6000000
+${e_feature_sg_buyAcar_Q4} =  In how many years do you want to buy this car?
+${e_feature_sg__saveTax_Q3} =  How much do you want to invest monthly?
+${e_feature_sg_A3_monthlyInvestment} =  10000
+${e_feature_sg_saveTax_Q4} =  For how long do you want to invest?
+${e_feature_sg_saveTax_Q5} =  Enter a amount you can invest upfront, else enter 0.
 
-# Feature-TradeSmart Navigation Page 
-${e_feature_tradeSmartTitleText} =  TradeSmart
-${e_feature_tradeSmartSubHeaderDesc} =  A switch or redeem order involves costs – taxes on short & long-term capital gains and exit load. TradeSmart shows you the optimal amount you can switch or redeem with the least tax and exit load.
-${e_feature_tradeSmartActivationTitle} =  Activate once, use forever!
-${e_feature_tradeSmartActivationSubTitle} =  Use 300 coins to activate TradeSmart, and use it forever.
+# Feature-TradeSmart Navigation Page Variables
+${e_feature_ts_titleText} =  TradeSmart
+${e_feature_ts_subHeaderDesc} =  A switch or redeem order involves costs – taxes on short & long-term capital gains and exit load. TradeSmart shows you the optimal amount you can switch or redeem with the least tax and exit load.
+${e_feature_ts_activationTitle} =  Activate once, use forever!
+${e_feature_ts_activationSubTitle} =  Use 300 coins to activate TradeSmart, and use it forever.
+${e_ts_activateBtnText} =  Activate with 300
 ${e_feature_helpTradeSmartTitleText} =  We help you trade smart
 ${e_feature_helpTradeSmartDesc1Text} =  See regular plan units as they become available to switch to direct plans with the least tax and exit load impact. Switching to Direct has never been easier or cheaper.
 ${e_feature_helpTradeSmartDesc2Text} =  See optimal number of fund units to switch or redeem before you transact. Make better decisions.
@@ -136,10 +131,77 @@ ${e_feature_fa_screenTitle} =  Invest with Your Loved Ones
 ${e_feature_fa_screenContent} =  Just Sign up with one account, and manage investment for your relatives and family members. Multiple accounts under same login. All in one place. Even Joint Account too!
 ${e_activateWithBtn} =  Activate with 200
 
-# Button 
-${KU_W_button} =  (//button[@class='button-primary'])[1]
+# Feature-ManageAccount Navigation Page Variables
+${e_feature_manageAccountTitleText} =  Manage Account
+${e_feature_manageAccountDesc1Text} =  Add your financial advisor as a Manager to your Kuvera account and let them guide your investments.
+${e_feature_manageAccountDesc2Text} =  You retain full access to your account. All transactions would be validated & approved by you via OTP.
+${e_feature_addManagerBtnText} =  Add  manager
+
+# Feature-Tax Harvesting Navigation Page Variables
+${e_feature_th_TitleText} =  Save up to ₹10,000 in LTCG taxes every financial year with Tax Harvesting.
+${e_feature_th_subTitleText} =  Minimise your long term tax impact by realising up to ₹1 Lakh of Long Term Capital Gain (LTCG) every financial year with no tax.
+${e_feature_th_subscribeBtnText} =  Subscribe 499 / FY
+${e_feature_whatIsTHTitleText} =  What is Tax Harvesting?
+${e_feature_th_definitionText} =  Long-term gains from equity funds are taxed at 10%. Tax Harvesting is a technique that reduces this impact. It utilises the ₹1 Lakh annual LTCG exemption by selling and buying back part of your investment such that you “realise” gains every year. Learn more
+${e_feature_th_learnMoreLnkTxt} =  Learn more
+${e_feature_th_learnMoreTitle} =  Tax Harvesting can save up to ₹10,000 in LTCG taxes every year! - Kuvera
+${e_feature_th_assumptionText} =  Let’s say your investment yields gains of ₹1L every year. After 3 years, the gains are ₹3L and you decide to sell.
+${e_feature_withTHTitleText} =  With Tax Harvesting
+${e_feature_withoutTHTitleText} =  Without Tax Harvesting
+${e_feature_th_tableRow1Text} =  Pre-tax Gains\n₹3.0L\n₹3.0L
+${e_feature_th_tableRow2Text} =  Taxable Gains\n(minus 1L exempt)\n₹2.0L\nNIL
+${e_feature_th_tableRow3Text} =  LTCG tax @10%\n₹0.2L\nNIL
+${e_feature_th_tableSumupRowText} =  In-hand gains\n₹2.8L\n₹3.0L
+${e_feature_th_workCardTitleText1} =  Receive  timely recommendations       
+${e_feature_th_workCardTitleText2} =  Follow the transaction recommended
+${e_feature_th_workCardTitleText3} =  Congrats, you’ve reduced your tax impact!
+${e_feature_th_workCardDescText1} =  We monitor your portfolio, and recommend a transaction when applicable.  
+${e_feature_th_workCardDescText2} =  You initiate the transaction. To minimise NAV impact, we advise buying and selling the fund(s) on the same day.  
+${e_feature_th_workCardDescText3} =  Sit back and enjoy the fruits of Tax Harvesting.  
+${e_feature_th_pricingTitleText} =  Pricing 
+${e_feature_th_coinAmount} =  499 
+${e_feature_th_yearText} =  per financial year
+${e_feature_th_checkDescText1} =  Receive timely recommendations to harvest tax  
+${e_feature_th_checkDescText2} =  View history of tax harvested each financial year  
+${e_feature_th_checkDescText3} =  Automatic calculation of tax harvested on any sell transaction  
+${e_feature_th_startHarvestText} =  The time is ripe! Start harvesting today.  
+
+# Features-Save Taxes Navigation Page Variables
+${e_feature_st_screenTitleText} =  Top rated tax saving funds  
+${e_feature_st_screenContentText} =  Funds that feature in “Best Tax Saving Mutual Fund” lists across the web.
+${e_feature_st_taxHeadingText} =  Save Taxes.  
+${e_feature_st_taxDescText} =  Tax Saving ELSS Mutual Funds can help save upto ₹ 46,350 in taxes 
+${e_feature_st_commissionHeadingText} =  Save Commissions.  
+${e_feature_st_commissionDescText} =  We are a Direct Plan platform. You save upto 1.5% per year in commission
+${e_feature_st_feesHeadingText} =  Save Fees. 
+${e_feature_st_feesDescText} =  We are free. No investment fees whatsover. It doesn't get better than this.
+${e_feature_st_fundingTitleText} =  How the ‘Tax Saving Funds’ work
+${e_feature_st_fundingDescText} =  Investments in Tax Saving Mutual Funds (also called ELSS funds) are eligible as deductions under Section 80C of the Income Tax Act. You can invest up to Rs 1.5 lakhs in eligible investments. At the highest tax bracket this would lead to a tax saving of Rs 46,350. There is a lock-in of 3 years, during which time you cannot redeem your investment.
+${e_feature_st_learnHowLinkText} =  Learn how!
+${e_feature_st_pageTitleText} =  Tax Archives - Kuvera            
+${e_feature_st_investmentText} =  Investment
+${e_feature_st_lockInText} =  Lock In 
+${e_feature_st_historicalReturnsText} =  Historical Returns 
+${e_feature_st_tableRow1Text} =  Tax Saving Funds 3 Years  17 - 24%
+${e_feature_st_tableRow2Text} =  Life Insurance  5 Years  0-6%
+${e_feature_st_tableRow3Text} =  PPF  15 Years  8.5%
+${e_feature_st_tableRow4Text} =  NSC  5/10 Years  8.5%
+${e_feature_st_tableRow5Text} =  FD  5 Years  9.0%
+
+#Features- Consolidate Navigatio Page Variables
+${e_feature_cd_pageHeaderText} =  Informed, disciplined investing grows your money, long-term 
+${e_feature_cd_subHeaderText} =  Follow a structured approach and invest regularly, for the long-haul. This is the best way to grow your wealth over time
+${e_feature_cd_setAGoalTitleText} =  DREAMS DO COME TRUE  
+${e_feature_cd_setAGoalSubTitle} =  Make your goals a reality
+${e_feature_cd_setAGoalDescTitle} =   A new car, owning your own home, sending your kids to study abroad - you may have many reasons to invest. We help you build investment action plans that’ll help you make enough to make these goals a reality. More about goal-based investing
+${e_feature_cd_goalBsdInvestingLinkText} =  More about goal-based investing
+${e_feature_cd_financialSuccessTitleText} =  3 Steps To Financial Success Using Goal-Based Investing - Kuvera
+${e_feature_cd_setAGoalBtnText} =  SET A GOAL
 
 # Application Locator 'KU_<locatorName>'
+# Button 
+${KU_W_button} =  xpath=(//button[@class='button-primary'])[1]
+
 # Loan Navigation Page
 ${KU_W_loanLink} =  xpath=//a[contains(text(),'Loans')]
 ${KU_W_loanHeaderTitle} =  xpath=//div[@class='b-header__title']
@@ -174,7 +236,7 @@ ${KU_W_insureLink} =  xpath=//a[contains(text(),'Insure')]
 ${KU_W_insureHeaderTitle} =  xpath=(//div[@class='b-health-insurance-landing__title--main'])[1]
 ${KU_W_insureHeaderMsg} =  xpath=(//div[@class='b-health-insurance-landing__title--text'])[1]
 ${KU_W_termsAndConditions} =  xpath=//span[@class='b-health-insurance-landing__term-condition']
-${KU_W_checkPremiumBtn} =  xpath=(//button[@class='button-primary'])[1]
+${KU_W_checkPremiumBtn1} =  xpath=(//button[@class='button-primary'])[1]
 ${KU_W_costDetailsHeaderTitle} =  xpath=//div[@class='b-health-insurance-landing__cost-details--table__text']
 ${KU_W_treatmentTitle} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__treatment'])[1]
 ${KU_W_treatmentCostTitle} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__cost'])[1]
@@ -225,7 +287,7 @@ ${KU_W_flexibleCoverageSubtitle} =  xpath=(//div[@class='b-health-insurance-land
 ${KU_W_saveTaxTitle} =  xpath=(//div[@class='b-health-insurance-landing__title--main'])[6]
 ${KU_W_saveTaxSubTitle} =  xpath=(//div[@class='b-health-insurance-landing__insurance-brief--subheading'])[3]
 ${KU_W_healthCoverTitle} =  xpath=//div[@class='b-health-insurance-landing__healthcare-cover--wrapper']/div 
-${KU_W_checkPremiumBtn2Title} =  xpath=(//button[@class='button-primary'])[2]
+${KU_W_checkPremiumBtn2} =  xpath=(//button[@class='button-primary'])[2]
 
 # Remit Page    
 ${KU_W_remit_Link} =  xpath=//a[contains(text(),'Remit')]
@@ -246,7 +308,7 @@ ${KU_W_remit_calculatorTarget} =  xpath=//*[@id="tw-calculator-target"]
 ${KU_W_remit_transferNoBottomBtn} =  xpath=//button[@class='button-primary b-how__btn-transfer']
 
 # Feature 
-${KU_W_featureSubList} =  xpath=//a[contains(text(),'Set a Goal')]
+${KU_W_featureSubList} =  xpath=//div[@class='b-header__sub-content']/div/a
 
 # Feature - Set a Goal
 ${KU_W_feature_setAGoalLink} =  xpath=//a[contains(text(),'Set a Goal')]
@@ -265,7 +327,6 @@ ${KU_W_feature_sg_createMyOwn} =  xpath=(//p[@class='card-title'])[8]
 ${KU_W_feature_sg_questionScreen} =  id=title-box
 ${KU_W_feature_sg_titleBoxSection} =  id=p9e7d2f05349193e9421e568b092da688e5010650-container
 ${KU_W_feature_sg_goalName} =  xpath=//*[@id="title-box"]/h2
-${KU_W_feature_sg_closeBtn} =  xpath=//div[@class='header-actions close-nav']//img
 ${KU_W_feature_sg_Q1} =  xpath=(//p[@class='question'])[1]
 ${KU_W_feature_sg_Q2} =  xpath=(//p[@class='question'])[2]
 ${KU_W_feature_sg_Q3} =  xpath=(//p[@class='question'])[3]
@@ -286,21 +347,110 @@ ${KU_W_feature_sg_continue} =  xpath=//button[@class='btn in-btn']
 ${KU_W_feature_sg_investmentSummary} =  xpath=//*[@class='investment-summary']
 ${KU_W_feature_sg_seeYourPlan} =  xpath=//button[@class='btn in-btn']
 ${KU_W_feature_sg_getThisPlan} =  xpath=//button[@class='btn in-btn hidden-xs']
+${KU_W_feature_sg_closeBtn} =  xpath=//a[@class='header-actions close-nav close-btn active']
+${KU_W_feature_sg_Q3_carCost} =  xpath=//input[@name='costtoday'] 
+${KU_W_feature_sg_Q3_monthlyInvestment} =  xpath=//input[@name='sip']
 
-# Feature-TradeSmart
-${KU_W_featureSubList} =  xpath=//div[@class='b-header__sub-content']/div/a
+# Feature-TradeSmart Page
 ${KU_W_featureLink} =  xpath=//a[contains(text(),'Features')]
-${KU_W_feature_tradeSmartLink} =  xpath=//a[contains(text(),'TradeSmart')]
-${KU_W_feature_tradeSmartTitle} =  xpath=//div[@class='b-trade-smart__header__desc__title'] 
-${KU_W_feature_tradeSmartSubHeaderTitle} =  xpath=//div[@class='b-trade-smart__header__desc__content']
-${KU_W_feature_tradeSmartActivationTitle} =  xpath=//div[@class='b-trade-smart__header__desc__activate-title']
-${KU_W_feature_tradeSmartActivationMSg} =  xpath=//div[@class='b-trade-smart__header__desc__activate-desc']
-${KU_W_feature_tradeSmartActivateBtn} =  xpath=//button[@class='button-primary b-trade-smart__header__desc__activate-btn']
+${KU_W_feature_ts_Link} =  xpath=//a[contains(text(),'TradeSmart')]
+${KU_W_feature_ts_title} =  xpath=//div[@class='b-trade-smart__header__desc__title'] 
+${KU_W_feature_ts_subHeaderTitle} =  xpath=//div[@class='b-trade-smart__header__desc__content']
+${KU_W_feature_ts_activationTitle} =  xpath=//div[@class='b-trade-smart__header__desc__activate-title']
+${KU_W_feature_ts_activationMsg} =  xpath=//div[@class='b-trade-smart__header__desc__activate-desc']
+${KU_W_feature_ts_activateBtn} =  xpath=//button[@class='button-primary b-trade-smart__header__desc__activate-btn']
+${KU_W_feature_ts_coinImage} =  xpath=//img[@class='b-trade-smart__header__desc__activate-btn__coin-icon']
 ${KU_W_feature_helpTradeSmartTitle} =  xpath=//div[@class='b-trade-smart__help-title']
 ${KU_W_feature_helpTradeSmart1Msg} =  xpath=//div[@class='b-trade-smart__help-desc']/div[1] 
 ${KU_W_feature_helpTradeSmart2Msg} =  xpath=//div[@class='b-trade-smart__help-desc']/div[2]
 ${KU_W_feature_helpTradeSmart3Msg} =  xpath=//div[@class='b-trade-smart__help-desc']/div[3]
-                                                                                              
+${KU_W_feature_aboutUs} =  xpath=(//ul[@class='list-unstyled']/li)[1]
+
+
+# Feature-Family Account
+${KU_W_feature_familyAccountLink} =  xpath=//a[contains(text(),'Family Account')]  
+${KU_W_feature_fa_screenTitle} =  xpath=//h1[@class='b-family-account__what__heading']
+${KU_W_feature_fa_screenContent} =  xpath=//div[@class='b-family-account__what__des']
+
+# Feature-ManageAccount Page
+${KU_W_feature_manageAccountLink} =  xpath=//a[contains(text(),'Manage Account')]
+${KU_W_feature_manageAccountTitle} =  xpath=//div[@class='b-manage-account__what']/h1
+${KU_W_feature_manageAccountDesc1} =  xpath=(//div[@class='b-manage-account__what__des'])[1]
+${KU_W_feature_manageAccountDesc2} =  xpath=(//div[@class='b-manage-account__what__des'])[2]
+
+# Feature-TaxHarvesting Page
+${KU_W_feature_taxHarvestingLink} =  xpath=//a[contains(text(),'Tax Harvesting')]
+${KU_W_feature_th_screenTitle} =  xpath=//div[@class='paras-about-tax-harvesting']/h3
+${KU_W_feature_th_screenContent} =  xpath=//p[@class='minimise-impact-text']
+${KU_W_feature_th_coinImage1} =  xpath=(//img[@class='btn-coin-icon'])[1]
+${KU_W_feature_whatIsTHTitle} =  xpath=//div[@class='what-is-tax-harvesting-ans']/h4
+${KU_W_feature_th_definition} =   xpath=//p[@class='what-is-tax-harvesting-para']
+${KU_W_feature_th_learnMoreLink} =  xpath=//a[@class='link learn-more-tax-harvesting']
+${KU_W_feature_th_assumptions} =  xpath=//h3[@class='tax-harvesting-assumption']
+${KU_W_feature_th_satusIconimage} =  xpath=//img[@class='normal-status-icon']
+${KU_W_feature_withoutTHTitle} =  xpath=(//div[@class='text-container'])[1]
+${KU_W_feature_withTHTitle} =  xpath=(//div[@class='text-container'])[2]
+${KU_W_feature_th_assumptions} =  xpath=//h3[@class='tax-harvesting-assumption']
+${KU_W_feature_tHTableRow1} =  xpath=(//div[@class='table-intermediate-container']/div)[1]
+${KU_W_feature_tHTableRow2} =  xpath=(//div[@class='table-intermediate-container']/div)[2]
+${KU_W_feature_tHTableRow3} =  xpath=(//div[@class='table-intermediate-container']/div)[3]
+${KU_W_feature_tHTableSumupRow} =  xpath=//div[@class='tax-harvesting-table-sumup-container']/div
+${KU_W_feature_th_workCardHeading1} =  xpath=(//p[@class='how-tax-harvesting-works-card-heading'])[1]
+${KU_W_feature_th_workCardHeading2} =  xpath=(//p[@class='how-tax-harvesting-works-card-heading'])[2]
+${KU_W_feature_th_workCardHeading3} =  xpath=(//p[@class='how-tax-harvesting-works-card-heading'])[3]
+${KU_W_feature_th_workCardDesc1} =  xpath=(//p[@class='how-tax-harvesting-works-card-text'])[1]
+${KU_W_feature_th_workCardDesc2} =  xpath=(//p[@class='how-tax-harvesting-works-card-text'])[2]
+${KU_W_feature_th_workCardDesc3} =  xpath=(//p[@class='how-tax-harvesting-works-card-text'])[3]
+${KU_W_feature_th_subscribe2Btn} =  xpath=(//button[@class='button-primary'])[2]
+${KU_W_feature_th_coinImage2} =  xpath=(//img[@class='btn-coin-icon'])[2]
+${KU_W_feature_th_pricingTite} =  xpath=//h1[@class='pricing-heading']
+${KU_W_feature_th_pricingcoinIcon} =  xpath=//img[@class='coin-icon']
+${KU_W_feature_th_pricingcoinAmt} =  xpath=//div[@class='coin-count-container']/h2
+${KU_W_feature_th_pricingPerYear} =  xpath=//p[@class='per-year']
+${KU_W_feature_th_pricingcheckIcon1} =  xpath=(//img[@class='check-icon'])[1]
+${KU_W_feature_th_pricingcheckIcon2} =  xpath=(//img[@class='check-icon'])[2]
+${KU_W_feature_th_pricingcheckIcon3} =  xpath=(//img[@class='check-icon'])[3]
+${KU_W_feature_th_pricingcheckDesc1} =  xpath=(//p[@class='check-label'])[1]
+${KU_W_feature_th_pricingcheckDesc2} =  xpath=(//p[@class='check-label'])[2]
+${KU_W_feature_th_pricingcheckDesc3} =  xpath=(//p[@class='check-label'])[3]
+${KU_W_feature_th_startHarvestTitle} =  xpath=//h2[@class='start-harvesting-today-heading']
+${KU_W_feature_th_coinImage3} =  xpath=(//img[@class='btn-coin-icon'])[3]
+${KU_W_feature_th_subscribe3Btn} =  xpath=(//button[@class='button-primary'])[3]
+
+# Feature-SaveTaxes Page
+${KU_W_feature_saveTaxesLink} =  xpath=(//a[contains(text(),'Save Taxes')])[1]
+${KU_W_feature_st_screenTitle} =  xpath=//div[@class='b-tax-saver-info__top-funds__heading']
+${KU_W_feature_st_screenContent} =  xpath=//div[@class='b-tax-saver-info__top-funds__exp']
+${KU_W_feature_saveTaxesHeading} =  xpath=(//div[@class='b-tax-saver-info__save__heading'])[1]
+${KU_W_feature_saveCommissionHeading} =  xpath=(//div[@class='b-tax-saver-info__save__heading'])[2]
+${KU_W_feature_saveFeesHeading} =  xpath=(//div[@class='b-tax-saver-info__save__heading'])[3]
+${KU_W_feature_saveTaxesDesc} =  xpath=(//div[@class='b-tax-saver-info__save__des'])[1]
+${KU_W_feature_saveCommissionDesc} =  xpath=(//div[@class='b-tax-saver-info__save__des'])[2]
+${KU_W_feature_saveFeesDesc} =  xpath=(//div[@class='b-tax-saver-info__save__des'])[3]
+${KU_W_feature_st_watchlistBtn} =  xpath=(//div[@class='b-fund-list__watchlist']/img)[1]
+${KU_W_feature_st_fundingTitle} =  xpath=//div[@class='b-tax-saver-details__working__heading']
+${KU_W_feature_st_fundingDesc} =  xpath=//div[@class='b-tax-saver-details__working__text']
+${KU_W_feature_st_learnHowLink} =  xpath=//a[@class='b-tax-saver-details__working__learn-how']
+${KU_W_feature_st_investmentTitle} =  xpath=//th[contains(text(),'Investment')]
+${KU_W_feature_st_lockInTitle} =  xpath=//th[contains(text(),'Lock In')]
+${KU_W_feature_st_historicalReturnsTitle} =  xpath=//th[contains(text(),'Historical Returns')]
+${KU_W_feature_st_tableRow1} =  xpath=//tr[@class='b-tax-saver-row']
+${KU_W_feature_st_tableRow2} =  xpath= //tbody/tr[2]
+${KU_W_feature_st_tableRow3} =  xpath= //tbody/tr[3]
+${KU_W_feature_st_tableRow4} =  xpath= //tbody/tr[4]
+${KU_W_feature_st_tableRow5} =  xpath= //tbody/tr[5]
+
+# Features-Consolidate Page
+${KU_W_feature_consolidateLink} =  xpath=//a[contains(text(),'Consolidate')]
+${KU_W_feature_cd_pageHeader} =  xpath=//header[@class='page-heading']/h1
+${KU_W_feature_cd_pageSubHeader} =  xpath=//header[@class='page-heading']/p
+${KU_W_feature_setAGoalPageTitle} =  xpath=(//div[contains(@class,'why-invest-text')]/h4)[1]
+${KU_W_feature_setAGoalPageSubTitle} =  xpath=(//div[contains(@class,'why-invest-text')]/h3)[1]
+${KU_W_feature_setAGoalPageDesc} =  xpath=//div[@class='set-a-goal-text']/p
+${KU_W_feature_goalBasedInvestingLink} =  xpath=//a[contains(text(),'More about goal-based investing')]
+${KU_W_feature_setAGoalBtn} =  xpath=(//button[@class='btn in-btn'])[1]
+${KU_W_feature_entryHeaderTitle} =  xpath=//h1[@class='entry-title post-title']
+
 
 # Feature-Family Account
 ${KU_W_feature_familyAccountLink} =  xpath=//a[contains(text(),'Family Account')]   
