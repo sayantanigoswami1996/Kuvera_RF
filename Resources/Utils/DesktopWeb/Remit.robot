@@ -42,3 +42,5 @@ Verify PreLogin Remit Page
 
     Scroll Untill View  ${KU_W_remit_transferNoBottomBtn}
     Verify Transfer Now   ${KU_W_remit_transferNoBottomBtn}
+    Go Back
+    
