@@ -53,7 +53,6 @@ ${KU_W_loginPageTitle} =  xpath=//div[contains(text(),'Login. Start Investing.')
 ${KU_W_login} =  xpath=//*[@class='b-header__content__right__signin']
 ${KU_W_signupPageTitle} =  xpath=//div[contains(text(),'Sign Up. Start Investing.')]
 ${KU_W_signup} =   xpath=//*[@class='b-header__content__right__singup']
-
 ${KU_W_langSwitch} =  xpath=//div[@class='b-header__content__right--language-switcher']
 ${KU_W_mf_category} =   xpath=//div[@class='b-mf-wiget__mf-category--input']
 ${KU_W_mf_subcategory} =  xpath=//div[@class='b-mf-wiget__mf-subcategory--input']

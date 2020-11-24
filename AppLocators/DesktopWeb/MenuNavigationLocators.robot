@@ -236,7 +236,7 @@ ${KU_W_featureSubList} =  xpath=//a[contains(text(),'Set a Goal')]
 
 # Feature - Set a Goal
 ${KU_W_feature_setAGoalLink} =  xpath=//a[contains(text(),'Set a Goal')]
-${KU_W_feature_goalsList} =  xpath=//*[@class='card set-goal-own-a-home']/p
+${KU_W_feature_goalsList} =  xpath=//*[@class='cards']/a/p
 ${KU_W_feature_sg_screenTitle} =  xpath=//*[@class='goals-index col-sm-4']/h2
 ${KU_W_feature_sg_screenSubTitle} =  xpath=//*[@class='goals-index col-sm-4']/h1
 ${KU_W_feature_sg_content} =  xpath=//p[@class='hidden-xs']
@@ -274,7 +274,7 @@ ${KU_W_feature_sg_seeYourPlan} =  xpath=//button[@class='btn in-btn']
 ${KU_W_feature_sg_getThisPlan} =  xpath=//button[@class='btn in-btn hidden-xs']
 
 # Feature-TradeSmart
-${KU_W_featureSubList} =  xpath=//*[@class='b-header__sub-content__feature']/a
+${KU_W_featureSubList} =  xpath=//div[@class='b-header__sub-content']/div/a
 ${KU_W_featureLink} =  xpath=//a[contains(text(),'Features')]
 ${KU_W_feature_tradeSmartLink} =  xpath=//a[contains(text(),'TradeSmart')]
 ${KU_W_feature_tradeSmartTitle} =  xpath=//div[@class='b-trade-smart__header__desc__title'] 

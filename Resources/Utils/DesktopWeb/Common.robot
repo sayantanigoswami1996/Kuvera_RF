@@ -43,15 +43,15 @@ Verify Page Contains Link
 
 Compare Lists
     [Arguments]  ${actualList}   ${expectedList}
-    #Get list item from actual list
+    # Get list item from actual list
     FOR  ${actualListItems}  IN  @{actualList}
     ${actualListItem}  Set Variable  ${actualListItems.text}
     END
-    #Get list item from expected list
+    # Get list item from expected list
     FOR  ${expectedListItems}  IN  @{expectedList}
     ${expectedListItem}  Set Variable  ${expectedListItems}
     END
-    #Compare two list items
+    # Compare two list items
     Should Be Equal  ${actualListItem}  ${expectedListItem}
 
 Switch To Window Verify Title And Close
@@ -88,12 +88,9 @@ Get Json Values
     ${jsonValue}  Get Value From Json  ${jsonFile}  ${jsonPath}
     [Return]  ${jsonValue}
 
-Verify Widgets From Json
-    ${jsonWidgetsFile}  Load JSON From File  /Users/prathijamoolya/Kuvera/Automation/Kuvera_RF/Resources/TestData/Widgets.json
-    ${jsonWidgetsValue}  Get Value From Json  ${jsonWidgetsFile}  $.Widgets
-    ${json_data}  Set Variable  ${jsonWidgetsValue}
-    Log To Console  ${json_data1}
-    # Verify Page Contains Element        ${widget}
+Press Enter Key
+    [Arguments]  ${element}  
+    Press Keys  ${element}  ENTER
 
 Verify Login Page
     Wait For Element Visbility  ${KU_W_loginPageTitle}
@@ -103,7 +100,11 @@ Verify Login Page
 Verify Signup Page
     Wait For Element Visbility  ${KU_W_signupPageTitle}
     Verify Element And Text  ${KU_W_signupPageTitle}  ${e_signupPageTitle}
-    Go Back
+
+Kuvera Web Logo Click
+    Wait For Element Visbility  ${KU_W_logo}
+    Click Element  ${KU_W_logo}
+
 
 Verify Google Play & Apple Store Icons
     Scroll Element Into View  ${KU_W_android_image}
