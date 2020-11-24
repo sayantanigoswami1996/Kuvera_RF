@@ -1,5 +1,4 @@
 *** Variables ***
-# Desired Capabilities
 
 #Application Expected Values 'e_<VariableName>'
 ${e_login} =  Log in 
@@ -30,7 +29,7 @@ ${e_usersMsg} =   We revolutionized the way India invests. With your feedback we
 ${e_earnTitle} =  Earn up to 1.5% more returns*
 ${e_earnMsg} =  We pioneered commission free Direct Plan investing.\nEarn from our expertise and don't pay commission ever.
 ${e_earnLearnLink} =   Learn how!
-${e_coreAUAValue} =  ₹ 16,000
+${e_coreAUAValue} =  ₹ 15,000
 ${e_coreAUAText} =  Crore AUA       
 ${e_citiesValue} =  3 Lakh
 ${e_citiesText} =   Goals
