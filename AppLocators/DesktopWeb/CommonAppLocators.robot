@@ -1,5 +1,5 @@
 ﻿*** Variables ***
-#Application Expected Values 'e_<VariableName>'
+# Application Expected Values 'e_<VariableName>'
 ${e_login} =  Log in 
 ${e_loginPageTitle} =  Login. Start Investing.
 ${e_signup} =  Sign up 
@@ -40,7 +40,7 @@ ${e_transText} =  Transactions
 @{e_fndHouse_secondColumn} =  KOTAK  L&T  LIC  MAHINDRA  MIRAE ASSET  MOTILAL OSWAL  NIPPON INDIA  PGIM INDIA  PPFAS    PRINCIPAL  QUANT  QUANTUM  SBI  SUNDARAM  TATA  TAURUS  UNION  UTI  YES 
 
 
-#Application Locator 'KU_<locatorName>'
+# Application Locator 'KU_<locatorName>'
 # Kuvera :: Wealth Management Simplified
 ${KU_W_title}=  Kuvera - Direct Mutual Funds | Stocks | Loans | Gold | Remit on Kuvera- Wealth Management Simplified
 ${KU_W_logo} =  xpath=//*[@class='b-header__content__logo']

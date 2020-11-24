@@ -8,7 +8,8 @@ Resource    ../../../AppLocators/DesktopWeb/CommonAppLocators.robot
 Resource    ../../../Resources/Utils/DesktopWeb/Common.robot
 
 ***Keywords***
-Verify Transfer Now 
+Verify Transfer Now
+
     [Arguments]  ${element}
     Click Button  ${element}
     Verify Element And Text  ${KU_W_transferWiseStepsModal}  Next steps

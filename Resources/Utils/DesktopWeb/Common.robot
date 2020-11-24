@@ -77,6 +77,7 @@ Close Banner
     Wait Until Element Is Visible  ${KU_W_bannerFrame}  timeout=30
     Switch To Frame  ${KU_W_bannerFrame}
     Wait For Element Visbility  ${KU_W_bannerCloseBtn}
+    Sleep   1s
     Click Element  ${KU_W_bannerCloseBtn}
     Unselect Frame
 >
@@ -166,7 +167,7 @@ Feature Sub Header Navigation
         ...    ELSE IF  ['${subHeaders}'] == ${manageAccount}  Verify PreLogin Manage Account Page
         ...    ELSE IF  ['${subHeaders}'] == ${taxHarvesting}  Verify PreLogin Tax Harvesting Page
         ...    ELSE IF  ['${subHeaders}'] == ${savesTaxes}  Verify PreLogin Save Taxes Page
-        ...    ELSE IF  ['${subHeaders}'] == ${consolidate}  Log To Console  PENDING
+        ...    ELSE IF  ['${subHeaders}'] == ${consolidate}  Verify PreLogin Consolidate Page
         ...    ELSE  Log To Console  Test
     END
 

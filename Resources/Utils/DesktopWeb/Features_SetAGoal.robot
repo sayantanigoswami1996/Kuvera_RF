@@ -89,16 +89,17 @@ Verify Own A Home Questionnaire
     Wait For Element Visbility  ${KU_W_feature_sg_investmentSummary}
     Verify Page Contains Element  ${KU_W_feature_sg_investmentSummary}
     
-    Wait For Element Visbility  ${KU_W_feature_sg_seeYourPlan}
-    Verify Element And Text  ${KU_W_feature_sg_seeYourPlan}  ${e_feature_sg_seeYourPlan}
-    Click Button  ${KU_W_feature_sg_seeYourPlan}
+    Click Element  ${KU_W_feature_sg_closeBtn}
+    # Wait For Element Visbility  ${KU_W_feature_sg_seeYourPlan}
+    # Verify Element And Text  ${KU_W_feature_sg_seeYourPlan}  ${e_feature_sg_seeYourPlan}
+    # Click Button  ${KU_W_feature_sg_seeYourPlan}
 
-    Wait For Element Visbility  ${KU_W_feature_sg_getThisPlan}
-    Scroll Untill View  ${KU_W_feature_sg_getThisPlan}
-    Verify Element And Text  ${KU_W_feature_sg_getThisPlan}  ${e_feature_sg_getThisPlan}
-    Click Button  ${KU_W_feature_sg_getThisPlan}
+    # Wait For Element Visbility  ${KU_W_feature_sg_getThisPlan}
+    # Scroll Untill View  ${KU_W_feature_sg_getThisPlan}
+    # Verify Element And Text  ${KU_W_feature_sg_getThisPlan}  ${e_feature_sg_getThisPlan}
+    # Click Button  ${KU_W_feature_sg_getThisPlan}
 
-    Verify Signup Page
+    # Verify Signup Page
 
 Verify Buy A Car Questionnaire
     ${query1}  Get Json Values  $.Questionnaire..q1  Resources/TestData/Questionnaire.json 
@@ -132,17 +133,19 @@ Verify Buy A Car Questionnaire
     Click Button  ${KU_W_feature_sg_continue}
     Wait For Element Visbility  ${KU_W_feature_sg_investmentSummary}
     Verify Page Contains Element  ${KU_W_feature_sg_investmentSummary}
+
+    Click Element  ${KU_W_feature_sg_closeBtn}
     
-    Wait For Element Visbility  ${KU_W_feature_sg_seeYourPlan}
-    Verify Element And Text  ${KU_W_feature_sg_seeYourPlan}  ${e_feature_sg_seeYourPlan}
-    Click Button  ${KU_W_feature_sg_seeYourPlan}
+    # Wait For Element Visbility  ${KU_W_feature_sg_seeYourPlan}
+    # Verify Element And Text  ${KU_W_feature_sg_seeYourPlan}  ${e_feature_sg_seeYourPlan}
+    # Click Button  ${KU_W_feature_sg_seeYourPlan}
 
-    Wait For Element Visbility  ${KU_W_feature_sg_getThisPlan}
-    Scroll Untill View  ${KU_W_feature_sg_getThisPlan}
-    Verify Element And Text  ${KU_W_feature_sg_getThisPlan}  ${e_feature_sg_getThisPlan}
-    Click Button  ${KU_W_feature_sg_getThisPlan}
+    # Wait For Element Visbility  ${KU_W_feature_sg_getThisPlan}
+    # Scroll Untill View  ${KU_W_feature_sg_getThisPlan}
+    # Verify Element And Text  ${KU_W_feature_sg_getThisPlan}  ${e_feature_sg_getThisPlan}
+    # Click Button  ${KU_W_feature_sg_getThisPlan}
 
-    Verify Signup Page
+    # Verify Signup Page
 
 
 Verify Save Tax Questionnaire
@@ -177,17 +180,19 @@ Verify Save Tax Questionnaire
     Click Button  ${KU_W_feature_sg_continue}
     Wait For Element Visbility  ${KU_W_feature_sg_investmentSummary}
     Verify Page Contains Element  ${KU_W_feature_sg_investmentSummary}
+
+    Click Element  ${KU_W_feature_sg_closeBtn}
     
-    Wait For Element Visbility  ${KU_W_feature_sg_seeYourPlan}
-    Verify Element And Text  ${KU_W_feature_sg_seeYourPlan}  ${e_feature_sg_seeYourPlan}
-    Click Button  ${KU_W_feature_sg_seeYourPlan}
+    # Wait For Element Visbility  ${KU_W_feature_sg_seeYourPlan}
+    # Verify Element And Text  ${KU_W_feature_sg_seeYourPlan}  ${e_feature_sg_seeYourPlan}
+    # Click Button  ${KU_W_feature_sg_seeYourPlan}
 
-    Wait For Element Visbility  ${KU_W_feature_sg_getThisPlan}
-    Scroll Untill View  ${KU_W_feature_sg_getThisPlan}
-    Verify Element And Text  ${KU_W_feature_sg_getThisPlan}  ${e_feature_sg_getThisPlan}
-    Click Button  ${KU_W_feature_sg_getThisPlan}
+    # Wait For Element Visbility  ${KU_W_feature_sg_getThisPlan}
+    # Scroll Untill View  ${KU_W_feature_sg_getThisPlan}
+    # Verify Element And Text  ${KU_W_feature_sg_getThisPlan}  ${e_feature_sg_getThisPlan}
+    # Click Button  ${KU_W_feature_sg_getThisPlan}
 
-    Verify Signup Page
+    # Verify Signup Page
 
 Verify PreLogin Set A Goal Page
     # Log To Console   ${GOAL}
