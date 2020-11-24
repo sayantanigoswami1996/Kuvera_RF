@@ -196,7 +196,7 @@ Verify Save Tax Questionnaire
 
 Verify PreLogin Set A Goal Page
     # Log To Console   ${GOAL}
-    Click Element  ${KU_W_featureLink} 
+    # Click Element  ${KU_W_featureLink} 
     Wait For Element Visbility  ${KU_W_feature_setAGoalLink}
     Click Element  ${KU_W_feature_setAGoalLink}
     Wait For Element Visbility  ${KU_W_feature_sg_screenTitle}
@@ -204,6 +204,6 @@ Verify PreLogin Set A Goal Page
     Verify Element And Text  ${KU_W_feature_sg_screenSubTitle}  ${e_feature_sg_screenSubTitle}
     Verify Element And Text  ${KU_W_feature_sg_content}  ${e_feature_sg_content}
     Sleep  2s
-    # Click Element  ${KU_W_feature_sg_closeBtn} 
+    
     Get All Goals And Verify
-   
+    Click Element   xpath=//div[@class='header-actions close-nav']//img 

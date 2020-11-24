@@ -8,7 +8,6 @@ Resource    ../../../AppLocators/DesktopWeb/CommonAppLocators.robot
 Resource    ../../../Resources/Utils/DesktopWeb/Common.robot
 
 *** Keywords ***
-
 Verify PreLogin Manage Account Page
  
     Wait For Element Visbility  ${KU_W_feature_manageAccountLink}
@@ -22,9 +21,3 @@ Verify PreLogin Manage Account Page
     Verify Element And Text  ${KU_W_button}  ${e_feature_addManagerBtnText}
     Click Button  ${KU_W_button}
     Verify Login Page
-
-  
-  
-
-  
-

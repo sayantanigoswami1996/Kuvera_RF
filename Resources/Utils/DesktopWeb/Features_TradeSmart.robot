@@ -8,7 +8,6 @@ Resource    ../../../AppLocators/DesktopWeb/CommonAppLocators.robot
 Resource    ../../../Resources/Utils/DesktopWeb/Common.robot
 
 *** Keywords ***
-
 Verify PreLogin TradeSmart Page
 
     Wait For Element Visbility  ${KU_W_feature_ts_link}
@@ -33,8 +32,3 @@ Verify PreLogin TradeSmart Page
     Verify Element and Text  ${KU_W_feature_helpTradeSmart2Msg}  ${e_feature_helpTradeSmartDesc2Text}
     Verify Element and Text  ${KU_W_feature_helpTradeSmart3Msg}  ${e_feature_helpTradeSmartDesc3Text}
     Scroll Untill View   ${KU_W_feature_aboutUs}
-  
-  
-
-  
-

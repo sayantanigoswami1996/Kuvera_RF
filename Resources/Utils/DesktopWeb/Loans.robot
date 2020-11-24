@@ -8,7 +8,6 @@ Resource    ../../../AppLocators/DesktopWeb/CommonAppLocators.robot
 Resource    ../../../Resources/Utils/DesktopWeb/Common.robot
 
 *** Keywords ***
-
 Verify PreLogin Loans Page
 
     Click Element  ${KU_W_loanLink}
@@ -76,8 +75,3 @@ Verify PreLogin Loans Page
 
     # Verify the Google Play & Apple Store icons
     Verify Google Play & Apple Store Icons
- 
-  
-
-  
-

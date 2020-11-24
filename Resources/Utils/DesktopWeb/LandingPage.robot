@@ -8,7 +8,6 @@ Resource    ../../../AppLocators/DesktopWeb/CommonAppLocators.robot
 Resource    ../../../Resources/Utils/DesktopWeb/Common.robot
 
 *** Keywords ***
-
 Verify Widgets
 
         Verify Mutual Funds Widgets 
@@ -39,7 +38,8 @@ Verify Mutual Funds Widgets
     Verify Google Play & Apple Store Icons
     Verify Page Contains Element  ${KU_W_faqbot_icon}
 
-    Verify Features Widgets
+Verify Features Widgets
+
     Scroll Element Into View  ${KU_W_exploreELSS}
     Verify Element And Text  ${KU_W_exploreELSS}  ${e_exploreELSSfundsBtn}
     Verify Element And Text  ${KU_W_startHarvest}  ${e_startHarvestingBtn} 
@@ -89,13 +89,3 @@ Verify Fund Houses
     # Validation of Fund Houses List on the second column
     @{fundHouses_list2} =  Get WebElements  ${KU_W_fundHouses_secondColumn}
     Compare Lists  ${fundHouses_list2}  ${e_fndHouse_secondColumn}
-
-
-
-
-
-   
-  
-
-  
-

@@ -6,7 +6,6 @@ Resource    ../../../AppLocators/DesktopWeb/CommonAppLocators.robot
 Resource    ../../../Resources/Utils/DesktopWeb/Common.robot
 
 *** Keywords ***
-
 Verify PreLogin Consolidate Page
 
         Click Element  ${KU_W_featureLink}
@@ -31,9 +30,4 @@ Verify PreLogin Consolidate Page
         Verify Element And Text  ${KU_W_feature_sg_screenTitle}  ${e_feature_sg_screenTitle}
         Go Back
 
-        # Save Tax Goal
-
-    
-
-
-    
+        # Save Tax Goal   

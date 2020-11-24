@@ -452,34 +452,3 @@ ${KU_W_feature_goalBasedInvestingLink} =  xpath=//a[contains(text(),'More about 
 ${KU_W_feature_setAGoalBtn} =  xpath=(//button[@class='btn in-btn'])[1]
 ${KU_W_feature_entryHeaderTitle} =  xpath=//h1[@class='entry-title post-title']
 
- 
- 
-
-
-
-
-
-
-
-
-
-
-
-
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-                             

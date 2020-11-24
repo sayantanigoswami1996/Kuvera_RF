@@ -8,7 +8,6 @@ Resource    ../../../AppLocators/DesktopWeb/CommonAppLocators.robot
 Resource    ../../../Resources/Utils/DesktopWeb/Common.robot
 
 *** Keywords ***
-
 Verify Subscribe Button
 
     [Arguments]  ${buttonTitle}  ${buttonText}  ${coinImage}
@@ -79,24 +78,3 @@ Verify PreLogin Tax Harvesting Page
     # Start Harevesting Today
     Verify Element And Text  ${KU_W_feature_th_startHarvestTitle}  ${e_feature_th_startHarvestText}
     Verify Subscribe Button  ${KU_W_feature_th_subscribe3Btn}  ${e_feature_th_subscribeBtnText}  ${KU_W_feature_th_coinImage3}
-
-
-
-
-    
-   
-  
-
-
-  
-  
-
-
- 
- 
-
-  
-  
-
-  
-

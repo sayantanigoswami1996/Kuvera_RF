@@ -5,8 +5,7 @@ Resource    ../../../AppLocators/DesktopWeb/MenuNavigationLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/CommonAppLocators.robot
 Resource    ../../../Resources/Utils/DesktopWeb/Common.robot
 
-*** Keywords ***
-
+*** Keywords **
 Verify PreLogin Family Account Page 
 
     Wait For Element Visbility  ${KU_W_feature_familyAccountLink}

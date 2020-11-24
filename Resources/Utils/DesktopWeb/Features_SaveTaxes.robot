@@ -8,7 +8,6 @@ Resource    ../../../AppLocators/DesktopWeb/CommonAppLocators.robot
 Resource    ../../../Resources/Utils/DesktopWeb/Common.robot
 
 *** Keywords ***
-
 Verify PreLogin Save Taxes Page
 
     Wait For Element Visbility  ${KU_W_feature_saveTaxesLink}
@@ -43,8 +42,10 @@ Verify PreLogin Save Taxes Page
     Verify Element And Text  ${KU_W_feature_st_fundingTitle}  ${e_feature_st_fundingTitleText}
     Verify Element And Text  ${KU_W_feature_st_fundingDesc}  ${e_feature_st_fundingDescText}
     Verify Page Contains Link  ${KU_W_feature_st_learnHowLink}  ${e_feature_st_learnHowLinkText}
+    Sleep  3s
     Click Element  ${KU_W_feature_st_learnHowLink}
     Switch To Window Verify Title And Close   ${e_feature_st_pageTitleText} 
+    Sleep   3s
 
     # Table Content
     Scroll Untill View  ${KU_W_feature_st_investmentTitle} 
@@ -58,4 +59,3 @@ Verify PreLogin Save Taxes Page
     Scroll Untill View  ${KU_W_feature_st_tableRow4}
     Verify Element And Text  ${KU_W_feature_st_tableRow4}  ${e_feature_st_tableRow4Text}
     Verify Element And Text  ${KU_W_feature_st_tableRow5}  ${e_feature_st_tableRow5Text}
-

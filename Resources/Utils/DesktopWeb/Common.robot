@@ -154,7 +154,7 @@ Feature Sub Header Navigation
     ${consolidate}  Get Json Values  $.MenuHeaders.h4.fsh6  Resources/TestData/Headers.json
 
     Log To Console  ${setAGoal}  
-    FOR  ${k}  IN RANGE  1  7
+    FOR  ${k}  IN RANGE  1  8
         Log To Console  InsideForLoop
         Wait For Element Visbility  ${KU_W_featureLink}
         Click Element  ${KU_W_featureLink} 
