@@ -15,7 +15,7 @@ Resource    ../../Resources/Utils/DesktopWeb/Features_SaveTaxes.robot
 Suite Setup  Launch URL 
 Suite Teardown  Close All Browsers
 
-#To run all tests: robot -d Results Tests/DesktopWeb/PreLoginTests.robot
+#To run all tests: robot --variable URL:https://kuvera.in/ --variable BROWSER:headlesschrome -d Results Tests/DesktopWeb/PreLoginTests.robot
 #To run specific test: robot --variable URL:https://kuvera.in/ --variable BROWSER:headlesschrome -d Results  -i TC02  Tests/DesktopWeb/PreLoginTests.robot
 
 *** Test Cases ***
@@ -23,7 +23,7 @@ Landing Page Widgets Verification And Header Navigation Test
     [Tags]  TC01
     Kuvera Web Close Regulatory Disclosure 
     Close Banner 
-    #Verify Widgets
+    Verify Widgets
     Header Navigation
 
 Features Header Navigation Test

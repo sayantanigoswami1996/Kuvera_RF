@@ -13,14 +13,14 @@ Resource    ../../../AppLocators/DesktopWeb/MenuNavigationLocators.robot
 
 Launch URL
     Open Browser  ${URL}  ${BROWSER}  alias=Kuvera
-    Maximize Browser Window
-    #Set Window Size  ${1366}  ${768}
-    #Reload Page
+    #Maximize Browser Window
+    Set Window Size  ${1366}  ${768}
+    Reload Page
 
 Welcome Page Should Be Open
     Title Should Be  ${KU_W_title}
 
-Wait For Element Visbility
+Wait For Element Visibility
     [Arguments]  ${element}
     Wait Until Element Is Visible  ${element}  timeout=50
 
@@ -43,6 +43,10 @@ Scroll Untill View
 Verify Page Contains Link
     [Arguments]  ${link}  ${text}
     Page Should Contain Link  ${link}  ${text}
+
+Verify Page Contains Button
+    [Arguments]  ${button}
+    Page Should Contain Button  ${button}
 
 Compare Lists
     [Arguments]  ${actualList}   ${expectedList}
@@ -74,6 +78,8 @@ Get List Count
     [Return]  ${listCount}
 
 Kuvera Web Close Regulatory Disclosure 
+    Wait Until Element Is Visible  ${KU_W_regulatoryDisclosure}
+    Verify Element And Text  ${KU_W_regulatoryDisclosure}  ${e_regulatoryDisclosure}
     Wait Until Element Is Visible  ${KU_W_close}
     Click Element  ${KU_W_close}
     
@@ -81,7 +87,7 @@ Close Banner
     Sleep  15s
     Wait Until Element Is Visible  ${KU_W_bannerFrame}  timeout=30
     Switch To Frame  ${KU_W_bannerFrame}
-    Wait For Element Visbility  ${KU_W_bannerCloseBtn}
+    Wait For Element Visibility  ${KU_W_bannerCloseBtn}
     Click Element  ${KU_W_bannerCloseBtn}
     Unselect Frame
 
@@ -96,16 +102,16 @@ Press Enter Key
     Press Keys  ${element}  ENTER
 
 Verify Login Page
-    Wait For Element Visbility  ${KU_W_loginPageTitle}
+    Wait For Element Visibility  ${KU_W_loginPageTitle}
     Verify Element And Text  ${KU_W_loginPageTitle}  ${e_loginPageTitle}
     Go Back
 
 Verify Signup Page
-    Wait For Element Visbility  ${KU_W_signupPageTitle}
+    Wait For Element Visibility  ${KU_W_signupPageTitle}
     Verify Element And Text  ${KU_W_signupPageTitle}  ${e_signupPageTitle}
 
 Kuvera Web Logo Click
-    Wait For Element Visbility  ${KU_W_logo}
+    Wait For Element Visibility  ${KU_W_logo}
     Click Element  ${KU_W_logo}
 
 Verify Google Play & Apple Store Icons
@@ -117,10 +123,6 @@ Verify Language Switch Login And Signup Link
     Verify Page Contains Element  ${KU_W_langSwitch}
     Verify Element And Text  ${KU_W_login}  ${e_login}
     Verify Element And Text  ${KU_W_signup}  ${e_signup}
-
-Verify Page Contains Button
-    [Arguments]  ${button}
-    Page Should Contain Button  ${button}
 
 Header Navigation
     ${invest}  Get Json Values  $.MenuHeaders.h0  Resources/TestData/Headers.json
@@ -151,7 +153,7 @@ Feature Sub Header Navigation
     Log To Console  ${setAGoal}  
     FOR  ${k}  IN RANGE  1  7
         Log To Console  InsideForLoop
-        Wait For Element Visbility  ${KU_W_featureLink}
+        Wait For Element Visibility  ${KU_W_featureLink}
         Click Element  ${KU_W_featureLink} 
         Sleep  3s
         ${subHeaders} =  Get Text  xpath=//div[@class='b-header__sub-content__feature']/a[${k}]

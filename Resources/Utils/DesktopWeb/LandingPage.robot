@@ -21,7 +21,7 @@ Verify Mutual Funds Widgets
     Verify Element And Text  ${KU_W_mf_welcomeText}  ${e_mf_welcomeText}
     Verify Element And Text  ${KU_W_mf_category}  ${e_mfCategory} 
     Verify Element And Text  ${KU_W_mf_subcategory}  ${e_mfSubCategory}
-    Wait For Element Visbility  ${KU_W_fund_list} 
+    Wait For Element Visibility  ${KU_W_fund_list} 
     Verify Page Contains Element  ${KU_W_fund_list} 
     Verify Element And Text  ${KU_W_loginButton}  ${e_login}
     Verify Element And Text  ${KU_W_signUpButton}  ${e_signup}
