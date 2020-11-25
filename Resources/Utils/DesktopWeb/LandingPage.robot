@@ -8,21 +8,20 @@ Resource    ../../../AppLocators/DesktopWeb/CommonAppLocators.robot
 Resource    ../../../Resources/Utils/DesktopWeb/Common.robot
 
 *** Keywords ***
-Verify Widgets
 
+Verify Widgets
         Verify Mutual Funds Widgets 
         Verify Fund Houses
         Verify Features Widgets 
         Verify Summary Tab Widgets
 
 Verify Mutual Funds Widgets
-
     Verify Language Switch Login And Signup Link
     Verify Element And Text  ${KU_W_mf_welcomeTitle}  ${e_mfWelcomeTitle}
     Verify Element And Text  ${KU_W_mf_welcomeText}  ${e_mf_welcomeText}
     Verify Element And Text  ${KU_W_mf_category}  ${e_mfCategory} 
     Verify Element And Text  ${KU_W_mf_subcategory}  ${e_mfSubCategory}
-    Wait For Element Visbility  ${KU_W_fund_list} 
+    Wait For Element Visibility  ${KU_W_fund_list} 
     Verify Page Contains Element  ${KU_W_fund_list} 
     Verify Element And Text  ${KU_W_loginButton}  ${e_login}
     Verify Element And Text  ${KU_W_signUpButton}  ${e_signup}
@@ -39,7 +38,6 @@ Verify Mutual Funds Widgets
     Verify Page Contains Element  ${KU_W_faqbot_icon}
 
 Verify Features Widgets
-
     Scroll Element Into View  ${KU_W_exploreELSS}
     Verify Element And Text  ${KU_W_exploreELSS}  ${e_exploreELSSfundsBtn}
     Verify Element And Text  ${KU_W_startHarvest}  ${e_startHarvestingBtn} 
@@ -55,7 +53,6 @@ Verify Features Widgets
     Verify Element And Text  ${KU_W_send_money}  ${e_sendMoneyBtn}
 
 Verify Summary Tab Widgets
-
     Verify Element And Text  ${KU_W_summary_msg}  ${e_summaryHeader}
     Page Should Contain Link  ${KU_W_summary_learn}         
     Scroll Element Into View  ${KU_W_care_title}            
@@ -81,7 +78,6 @@ Verify Summary Tab Widgets
     Verify Element And Text  ${KU_W_start_investButton}  ${e_startInvestingBtn}
 
 Verify Fund Houses
-
     Scroll Element Into View  ${KU_W_fundHouse_title}
     @{fundHouses_list1} =  Get WebElements  ${KU_W_fundHouses_firstColumn}
     # Validation of Fund Houses List on the first column

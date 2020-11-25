@@ -8,20 +8,20 @@ Resource    ../../../AppLocators/DesktopWeb/CommonAppLocators.robot
 Resource    ../../../Resources/Utils/DesktopWeb/Common.robot
 
 *** Keywords ***
-Verify PreLogin Insure Page
 
+Verify PreLogin Insure Page
     Click Element  ${KU_W_insureLink}
     Verify Language Switch Login And Signup Link
-    Wait For Element Visbility  ${KU_W_insureHeaderTitle}  
+    Wait For Element Visibility  ${KU_W_insureHeaderTitle}  
     Verify Element And Text  ${KU_W_insureHeaderTitle}  ${e_insure_headerTitleText} 
     Verify Element And Text  ${KU_W_insureHeaderMsg}  ${e_insure_headerMsgText}
     Verify Element And Text  ${KU_W_termsAndConditions}  ${e_insure_T&CText}  
     Verify Element And Text  ${KU_W_checkPremiumBtn1}  ${e_insure_checkPremiumBtnText}  
-    Wait For Element Visbility  ${KU_W_checkPremiumBtn1}
+    Wait For Element Visibility  ${KU_W_checkPremiumBtn1}
     Sleep   1s
     Click Button  ${KU_W_checkPremiumBtn1} 
     Verify Login Page
-    Wait For Element Visbility  ${KU_W_costDetailsHeaderTitle}     
+    Wait For Element Visibility  ${KU_W_costDetailsHeaderTitle}     
     Scroll Untill View  ${KU_W_costDetailsHeaderTitle}
     Verify Element and Text  ${KU_W_costDetailsHeaderTitle}  ${e_insure_costDetailsHeaderText}
 
@@ -85,23 +85,23 @@ Verify PreLogin Insure Page
     Verify Element and Text  ${KU_W_trustedPartnerSubTitle}   ${e_insure_trustedPartnerSubTitleText}
 
     # Flexible Coverage 
-    Wait For Element Visbility  ${KU_W_flexibleCoverageTitle} 
+    Wait For Element Visibility  ${KU_W_flexibleCoverageTitle} 
     Scroll Untill View  ${KU_W_flexibleCoverageTitle} 
     Verify Element and Text  ${KU_W_flexibleCoverageTitle}   ${e_insure_flexibleCoverageTitleText}
     Verify Element and Text  ${KU_W_flexibleCoverageSubtitle}  ${e_insure_flexibleCoevrageSubTitleText}
 
     # Save Tax 
-    Wait For Element Visbility  ${KU_W_saveTaxTitle}
+    Wait For Element Visibility  ${KU_W_saveTaxTitle}
     Scroll Untill View  ${KU_W_saveTaxTitle} 
     Verify Element and Text  ${KU_W_saveTaxTitle}  ${e_insure_saveTaxTitleText}  
     Verify Element and Text  ${KU_W_saveTaxSubTitle}  ${e_insure_saveTaxSubTitleText} 
 
     # Health Cover
-    Wait For Element Visbility  ${KU_W_healthCoverTitle}  
+    Wait For Element Visibility  ${KU_W_healthCoverTitle}  
     Scroll Untill View  ${KU_W_healthCoverTitle}  
     Verify Element and Text  ${KU_W_healthCoverTitle}  ${e_insure_healthCoverTitleText} 
     Verify Element and Text  ${KU_W_checkPremiumBtn2}  ${e_insure_checkPremiumBtn2Text}
-    Wait For Element Visbility  ${KU_W_checkPremiumBtn2}
+    Wait For Element Visibility  ${KU_W_checkPremiumBtn2}
     Click Button  ${KU_W_checkPremiumBtn2} 
     Verify Login Page
 

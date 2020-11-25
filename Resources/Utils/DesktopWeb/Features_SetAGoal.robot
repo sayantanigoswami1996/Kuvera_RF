@@ -7,15 +7,12 @@ Resource    ../../../Resources/Utils/DesktopWeb/Common.robot
 
    
 *** Keywords ***
-Press Enter Key
-    [Arguments]  ${element}  
-    Press Keys  ${element}  ENTER
 
 Navigate To Feature Goals
-    Wait For Element Visbility  ${KU_W_logo_signup}
+    Wait For Element Visibility  ${KU_W_logo_signup}
     Click Element  ${KU_W_logo_signup}
     Click Element  ${KU_W_featureLink}
-    Wait For Element Visbility  ${KU_W_feature_setAGoalLink}
+    Wait For Element Visibility  ${KU_W_feature_setAGoalLink}
     Click Element  ${KU_W_feature_setAGoalLink}
 
 Get All Goals And Verify
@@ -45,7 +42,7 @@ Get All Goals And Verify
     END
 
 Enter Name And Age
-    Wait For Element Visbility  ${KU_W_feature_sg_questionScreen}
+    Wait For Element Visibility  ${KU_W_feature_sg_questionScreen}
     Verify Element And Text  ${KU_W_feature_sg_Q1}  ${e_feature_sg_Q1}
     Press Keys  ${KU_W_feature_sg_Q1_userName}   CTRL+A+BACKSPACE
     sleep  2s  
@@ -60,9 +57,8 @@ Enter Name And Age
 
 
 Verify Own A Home Questionnaire
-
     Log To Console  QScreen 
-    Wait For Element Visbility  ${KU_W_feature_sg_ownAHome}
+    Wait For Element Visibility  ${KU_W_feature_sg_ownAHome}
     Click Element  ${KU_W_feature_sg_ownAHome}
     Enter Name And Age  
 
@@ -87,14 +83,14 @@ Verify Own A Home Questionnaire
 
     Verify Element And Text  ${KU_W_feature_sg_almostDone}  ${e_feature_sg_almostDone}
     Click Button  ${KU_W_feature_sg_continue}
-    Wait For Element Visbility  ${KU_W_feature_sg_investmentSummary}
+    Wait For Element Visibility  ${KU_W_feature_sg_investmentSummary}
     Verify Page Contains Element  ${KU_W_feature_sg_investmentSummary}
 
-    Wait For Element Visbility  ${KU_W_feature_sg_seeYourPlan}
+    Wait For Element Visibility  ${KU_W_feature_sg_seeYourPlan}
     Verify Element And Text  ${KU_W_feature_sg_seeYourPlan}  ${e_feature_sg_seeYourPlan}
     Click Button  ${KU_W_feature_sg_seeYourPlan}
 
-    Wait For Element Visbility  ${KU_W_feature_sg_getThisPlan}
+    Wait For Element Visibility  ${KU_W_feature_sg_getThisPlan}
     Scroll Untill View  ${KU_W_feature_sg_getThisPlan}
     Verify Element And Text  ${KU_W_feature_sg_getThisPlan}  ${e_feature_sg_getThisPlan}
     Click Button  ${KU_W_feature_sg_getThisPlan}
@@ -103,9 +99,8 @@ Verify Own A Home Questionnaire
     Navigate To Feature Goals
 
 Verify Buy A Car Questionnaire
-
     Log To Console  QScreen 
-    Wait For Element Visbility  ${KU_W_feature_sg_buyACar}
+    Wait For Element Visibility  ${KU_W_feature_sg_buyACar}
     Click Element  ${KU_W_feature_sg_buyACar}
     Enter Name And Age  
 
@@ -126,14 +121,14 @@ Verify Buy A Car Questionnaire
 
     Verify Element And Text  ${KU_W_feature_sg_almostDone}  ${e_feature_sg_almostDone}
     Click Button  ${KU_W_feature_sg_continue}
-    Wait For Element Visbility  ${KU_W_feature_sg_investmentSummary}
+    Wait For Element Visibility  ${KU_W_feature_sg_investmentSummary}
     Verify Page Contains Element  ${KU_W_feature_sg_investmentSummary}
     
-    Wait For Element Visbility  ${KU_W_feature_sg_seeYourPlan}
+    Wait For Element Visibility  ${KU_W_feature_sg_seeYourPlan}
     Verify Element And Text  ${KU_W_feature_sg_seeYourPlan}  ${e_feature_sg_seeYourPlan}
     Click Button  ${KU_W_feature_sg_seeYourPlan}
 
-    Wait For Element Visbility  ${KU_W_feature_sg_getThisPlan}
+    Wait For Element Visibility  ${KU_W_feature_sg_getThisPlan}
     Scroll Untill View  ${KU_W_feature_sg_getThisPlan}
     Verify Element And Text  ${KU_W_feature_sg_getThisPlan}  ${e_feature_sg_getThisPlan}
     Click Button  ${KU_W_feature_sg_getThisPlan}
@@ -141,9 +136,8 @@ Verify Buy A Car Questionnaire
     Navigate To Feature Goals    
 
 Verify Save Tax Questionnaire
-   
     Log To Console  QScreen 
-    Wait For Element Visbility  ${KU_W_feature_sg_saveTax}
+    Wait For Element Visibility  ${KU_W_feature_sg_saveTax}
     Click Element  ${KU_W_feature_sg_saveTax}
     Enter Name And Age  
 
@@ -164,14 +158,14 @@ Verify Save Tax Questionnaire
 
     Verify Element And Text  ${KU_W_feature_sg_almostDone}  ${e_feature_sg_almostDone}
     Click Button  ${KU_W_feature_sg_continue}
-    Wait For Element Visbility  ${KU_W_feature_sg_investmentSummary}
+    Wait For Element Visibility  ${KU_W_feature_sg_investmentSummary}
     Verify Page Contains Element  ${KU_W_feature_sg_investmentSummary}
 
-    Wait For Element Visbility  ${KU_W_feature_sg_seeYourPlan}
+    Wait For Element Visibility  ${KU_W_feature_sg_seeYourPlan}
     Verify Element And Text  ${KU_W_feature_sg_seeYourPlan}  ${e_feature_sg_seeYourPlan}
     Click Button  ${KU_W_feature_sg_seeYourPlan}
 
-    Wait For Element Visbility  ${KU_W_feature_sg_getThisPlan}
+    Wait For Element Visibility  ${KU_W_feature_sg_getThisPlan}
     Scroll Untill View  ${KU_W_feature_sg_getThisPlan}
     Verify Element And Text  ${KU_W_feature_sg_getThisPlan}  ${e_feature_sg_getThisPlan}
     Click Button  ${KU_W_feature_sg_getThisPlan}
@@ -179,11 +173,10 @@ Verify Save Tax Questionnaire
     Navigate To Feature Goals
 
 Verify PreLogin Set A Goal Page
-    # Log To Console   ${GOAL}
     # Click Element  ${KU_W_featureLink} 
-    Wait For Element Visbility  ${KU_W_feature_setAGoalLink}
+    Wait For Element Visibility  ${KU_W_feature_setAGoalLink}
     Click Element  ${KU_W_feature_setAGoalLink}
-    Wait For Element Visbility  ${KU_W_feature_sg_screenTitle}
+    Wait For Element Visibility  ${KU_W_feature_sg_screenTitle}
     Verify Element And Text  ${KU_W_feature_sg_screenTitle}  ${e_feature_sg_screenTitle}
     Verify Element And Text  ${KU_W_feature_sg_screenSubTitle}  ${e_feature_sg_screenSubTitle}
     Verify Element And Text  ${KU_W_feature_sg_content}  ${e_feature_sg_content}

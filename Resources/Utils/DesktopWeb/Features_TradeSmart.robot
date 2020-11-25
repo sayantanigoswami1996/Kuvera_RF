@@ -8,19 +8,20 @@ Resource    ../../../AppLocators/DesktopWeb/CommonAppLocators.robot
 Resource    ../../../Resources/Utils/DesktopWeb/Common.robot
 
 *** Keywords ***
-Verify PreLogin TradeSmart Page
 
-    Wait For Element Visbility  ${KU_W_feature_ts_link}
+Verify PreLogin TradeSmart Page
+    Wait For Element Visibility  ${KU_W_feature_ts_link}
     Click Element  ${KU_W_feature_ts_link}
     Verify Language Switch Login And Signup Link
-    Wait For Element Visbility  ${KU_W_feature_ts_title} 
+    Wait For Element Visibility  ${KU_W_feature_ts_title} 
     Verify Element And Text  ${KU_W_feature_ts_title}  ${e_feature_ts_titleText}
     Verify Element And Text  ${KU_W_feature_ts_subHeaderTitle}   ${e_feature_ts_subHeaderDesc} 
     Verify Element And Text  ${KU_W_feature_ts_activationTitle}  ${e_feature_ts_activationTitle}
     Verify Element And Text  ${KU_W_feature_ts_activationMsg}    ${e_feature_ts_activationSubTitle}
     Scroll Untill View  ${KU_W_feature_ts_activateBtn} 
     Verify Element And Text  ${KU_W_feature_ts_activateBtn}  ${e_ts_activateBtnText}
-    Verify Page Contains Image    ${KU_W_feature_ts_coinImage}
+    Verify Page Contains Image  ${KU_W_feature_ts_coinImage}
+    Wait For Element Visibility  ${KU_W_feature_ts_activateBtn} 
     Click Button  ${KU_W_feature_ts_activateBtn} 
     Verify Login Page
 

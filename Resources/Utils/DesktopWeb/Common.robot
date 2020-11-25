@@ -19,7 +19,7 @@ Launch URL
 Welcome Page Should Be Open
     Title Should Be  ${KU_W_title}
 
-Wait For Element Visbility
+Wait For Element Visibility
     [Arguments]  ${element}
     Wait Until Element Is Visible  ${element}  timeout=30
 
@@ -73,15 +73,15 @@ Get List Count
     ${listCount}  Get Length  ${list}
     [Return]  ${listCount}
 
-Close Banner 
+Close Hello Bar 
     Sleep  10s
     Wait Until Element Is Visible  ${KU_W_bannerFrame}  timeout=30
     Switch To Frame  ${KU_W_bannerFrame}
-    Wait For Element Visbility  ${KU_W_bannerCloseBtn}
+    Wait For Element Visibility  ${KU_W_bannerCloseBtn}
     Sleep   1s
     Click Element  ${KU_W_bannerCloseBtn}
     Unselect Frame
->
+
 Get Json Values
     [Arguments]  ${jsonPath}  ${jsonFilePath}
     ${jsonFile}  Load JSON From File  ${jsonFilePath}
@@ -102,16 +102,16 @@ Kuvera Web Close Regulatory Disclosure
     Click Element  ${KU_W_close}
     
 Verify Login Page
-    Wait For Element Visbility  ${KU_W_loginPageTitle}
+    Wait For Element Visibility  ${KU_W_loginPageTitle}
     Verify Element And Text  ${KU_W_loginPageTitle}  ${e_loginPageTitle}
     Go Back
 
 Verify Signup Page
-    Wait For Element Visbility  ${KU_W_signupPageTitle}
+    Wait For Element Visibility  ${KU_W_signupPageTitle}
     Verify Element And Text  ${KU_W_signupPageTitle}  ${e_signupPageTitle}
 
 Kuvera Web Logo Click	
-    Wait For Element Visbility  ${KU_W_logo}	
+    Wait For Element Visibility  ${KU_W_logo}	
     Click Element  ${KU_W_logo}    
 
 Verify Google Play & Apple Store Icons
@@ -127,6 +127,10 @@ Verify Language Switch Login And Signup Link
 Verify Page Contains Button
     [Arguments]  ${button}
     Page Should Contain Button  ${button}    
+
+Press Enter Key
+    [Arguments]  ${element}  
+    Press Keys  ${element}  ENTER
 
 Header Navigation
     ${invest}  Get Json Values  $.MenuHeaders.h0  Resources/TestData/Headers.json
@@ -159,7 +163,7 @@ Feature Sub Header Navigation
     Log To Console  ${setAGoal}  
     FOR  ${k}  IN RANGE  1  8
         Log To Console  InsideForLoop
-        Wait For Element Visbility  ${KU_W_featureLink}
+        Wait For Element Visibility  ${KU_W_featureLink}
         Click Element  ${KU_W_featureLink} 
         Sleep  5s
         ${subHeaders} =  Get Text  xpath=//div[@class='b-header__sub-content__feature']/a[${k}]
@@ -173,8 +177,6 @@ Feature Sub Header Navigation
         ...    ELSE IF  ['${subHeaders}'] == ${consolidate}  Verify PreLogin Consolidate Page
         ...    ELSE  Log To Console  Test
     END
-
-
-    
+   
 Close Web Application
     Close All Browsers
