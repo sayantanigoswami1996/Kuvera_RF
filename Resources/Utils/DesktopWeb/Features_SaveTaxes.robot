@@ -43,10 +43,12 @@ Verify PreLogin Save Taxes Page
     Verify Element And Text  ${KU_W_feature_st_fundingDesc}  ${e_feature_st_fundingDescText}
     Verify Page Contains Link  ${KU_W_feature_st_learnHowLink}  ${e_feature_st_learnHowLinkText}
     Sleep  3s
+    Wait For Element Visbility  ${KU_W_feature_st_learnHowLink}
     Click Element  ${KU_W_feature_st_learnHowLink}
     Switch To Window Verify Title And Close   ${e_feature_st_pageTitleText} 
     Sleep   3s
-
+    Wait For Element Visbility  ${KU_W_feature_st_investmentTitle}
+    
     # Table Content
     Scroll Untill View  ${KU_W_feature_st_investmentTitle} 
     Verify Element And Text  ${KU_W_feature_st_investmentTitle}  ${e_feature_st_investmentText}

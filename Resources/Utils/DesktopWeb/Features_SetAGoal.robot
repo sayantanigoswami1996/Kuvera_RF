@@ -11,6 +11,13 @@ Press Enter Key
     [Arguments]  ${element}  
     Press Keys  ${element}  ENTER
 
+Navigate To Feature Goals
+    Wait For Element Visbility  ${KU_W_logo_signup}
+    Click Element  ${KU_W_logo_signup}
+    Click Element  ${KU_W_featureLink}
+    Wait For Element Visbility  ${KU_W_feature_setAGoalLink}
+    Click Element  ${KU_W_feature_setAGoalLink}
+
 Get All Goals And Verify
     ${goal1}  Get Json Values  $.Goals.g1  Resources/TestData/Goals.json
     ${goal2}  Get Json Values  $.Goals.g2  Resources/TestData/Goals.json
@@ -53,13 +60,7 @@ Enter Name And Age
 
 
 Verify Own A Home Questionnaire
-    ${query1}  Get Json Values  $.Questionnaire..q1  Resources/TestData/Questionnaire.json 
-    ${query2}  Get Json Values  $.Questionnaire..q2  Resources/TestData/Questionnaire.json 
-    ${query3}  Get Json Values  $.Questionnaire..q3  Resources/TestData/Questionnaire.json 
-    ${query4}  Get Json Values  $.Questionnaire..q4  Resources/TestData/Questionnaire.json 
-    ${query5}  Get Json Values  $.Questionnaire..q5  Resources/TestData/Questionnaire.json 
-    ${query6}  Get Json Values  $.Questionnaire..q6  Resources/TestData/Questionnaire.json 
-    Sleep  2s
+
     Log To Console  QScreen 
     Wait For Element Visbility  ${KU_W_feature_sg_ownAHome}
     Click Element  ${KU_W_feature_sg_ownAHome}
@@ -88,27 +89,21 @@ Verify Own A Home Questionnaire
     Click Button  ${KU_W_feature_sg_continue}
     Wait For Element Visbility  ${KU_W_feature_sg_investmentSummary}
     Verify Page Contains Element  ${KU_W_feature_sg_investmentSummary}
-    
-    Click Element  ${KU_W_feature_sg_closeBtn}
-    # Wait For Element Visbility  ${KU_W_feature_sg_seeYourPlan}
-    # Verify Element And Text  ${KU_W_feature_sg_seeYourPlan}  ${e_feature_sg_seeYourPlan}
-    # Click Button  ${KU_W_feature_sg_seeYourPlan}
 
-    # Wait For Element Visbility  ${KU_W_feature_sg_getThisPlan}
-    # Scroll Untill View  ${KU_W_feature_sg_getThisPlan}
-    # Verify Element And Text  ${KU_W_feature_sg_getThisPlan}  ${e_feature_sg_getThisPlan}
-    # Click Button  ${KU_W_feature_sg_getThisPlan}
+    Wait For Element Visbility  ${KU_W_feature_sg_seeYourPlan}
+    Verify Element And Text  ${KU_W_feature_sg_seeYourPlan}  ${e_feature_sg_seeYourPlan}
+    Click Button  ${KU_W_feature_sg_seeYourPlan}
 
-    # Verify Signup Page
+    Wait For Element Visbility  ${KU_W_feature_sg_getThisPlan}
+    Scroll Untill View  ${KU_W_feature_sg_getThisPlan}
+    Verify Element And Text  ${KU_W_feature_sg_getThisPlan}  ${e_feature_sg_getThisPlan}
+    Click Button  ${KU_W_feature_sg_getThisPlan}
+
+    Verify Signup Page
+    Navigate To Feature Goals
 
 Verify Buy A Car Questionnaire
-    ${query1}  Get Json Values  $.Questionnaire..q1  Resources/TestData/Questionnaire.json 
-    ${query2}  Get Json Values  $.Questionnaire..q2  Resources/TestData/Questionnaire.json 
-    ${query3}  Get Json Values  $.Questionnaire..q3  Resources/TestData/Questionnaire.json 
-    ${query4}  Get Json Values  $.Questionnaire..q4  Resources/TestData/Questionnaire.json 
-    ${query5}  Get Json Values  $.Questionnaire..q5  Resources/TestData/Questionnaire.json 
-    ${query6}  Get Json Values  $.Questionnaire..q6  Resources/TestData/Questionnaire.json 
-    Sleep  2s
+
     Log To Console  QScreen 
     Wait For Element Visbility  ${KU_W_feature_sg_buyACar}
     Click Element  ${KU_W_feature_sg_buyACar}
@@ -133,29 +128,20 @@ Verify Buy A Car Questionnaire
     Click Button  ${KU_W_feature_sg_continue}
     Wait For Element Visbility  ${KU_W_feature_sg_investmentSummary}
     Verify Page Contains Element  ${KU_W_feature_sg_investmentSummary}
-
-    Click Element  ${KU_W_feature_sg_closeBtn}
     
-    # Wait For Element Visbility  ${KU_W_feature_sg_seeYourPlan}
-    # Verify Element And Text  ${KU_W_feature_sg_seeYourPlan}  ${e_feature_sg_seeYourPlan}
-    # Click Button  ${KU_W_feature_sg_seeYourPlan}
+    Wait For Element Visbility  ${KU_W_feature_sg_seeYourPlan}
+    Verify Element And Text  ${KU_W_feature_sg_seeYourPlan}  ${e_feature_sg_seeYourPlan}
+    Click Button  ${KU_W_feature_sg_seeYourPlan}
 
-    # Wait For Element Visbility  ${KU_W_feature_sg_getThisPlan}
-    # Scroll Untill View  ${KU_W_feature_sg_getThisPlan}
-    # Verify Element And Text  ${KU_W_feature_sg_getThisPlan}  ${e_feature_sg_getThisPlan}
-    # Click Button  ${KU_W_feature_sg_getThisPlan}
-
-    # Verify Signup Page
-
+    Wait For Element Visbility  ${KU_W_feature_sg_getThisPlan}
+    Scroll Untill View  ${KU_W_feature_sg_getThisPlan}
+    Verify Element And Text  ${KU_W_feature_sg_getThisPlan}  ${e_feature_sg_getThisPlan}
+    Click Button  ${KU_W_feature_sg_getThisPlan}
+    Verify Signup Page
+    Navigate To Feature Goals    
 
 Verify Save Tax Questionnaire
-    ${query1}  Get Json Values  $.Questionnaire..q1  Resources/TestData/Questionnaire.json 
-    ${query2}  Get Json Values  $.Questionnaire..q2  Resources/TestData/Questionnaire.json 
-    ${query3}  Get Json Values  $.Questionnaire..q3  Resources/TestData/Questionnaire.json 
-    ${query4}  Get Json Values  $.Questionnaire..q4  Resources/TestData/Questionnaire.json 
-    ${query5}  Get Json Values  $.Questionnaire..q5  Resources/TestData/Questionnaire.json 
-    ${query6}  Get Json Values  $.Questionnaire..q6  Resources/TestData/Questionnaire.json 
-    Sleep  2s
+   
     Log To Console  QScreen 
     Wait For Element Visbility  ${KU_W_feature_sg_saveTax}
     Click Element  ${KU_W_feature_sg_saveTax}
@@ -163,17 +149,17 @@ Verify Save Tax Questionnaire
 
     Verify Element And Text  ${KU_W_feature_sg_Q3}  ${e_feature_sg__saveTax_Q3}
     Clear Element Text   ${KU_W_feature_sg_Q3_monthlyInvestment} 
-    Input Text  ${KU_W_feature_sg_Q3_monthlyInvestment}   ${e_feature_sg_A3_monthlyInvestment}  clear=True
+    Input Text  ${KU_W_feature_sg_Q3_monthlyInvestment}   ${e_feature_sg_A3_monthlyInvestment}
     Press Enter Key  ${KU_W_feature_sg_Q3_monthlyInvestment}  
     
     Verify Element And Text  ${KU_W_feature_sg_Q4}  ${e_feature_sg_saveTax_Q4}
     Clear Element Text   ${KU_W_feature_sg_Q4_goalDuration} 
-    Input Text  ${KU_W_feature_sg_Q4_goalDuration}  ${e_feature_sg_A4_goalDuration}  clear=True
+    Input Text  ${KU_W_feature_sg_Q4_goalDuration}  ${e_feature_sg_A4_goalDuration}
     Press Enter Key  ${KU_W_feature_sg_Q4_goalDuration}
 
     Verify Element And Text  ${KU_W_feature_sg_Q5}  ${e_feature_sg_saveTax_Q5}
     Clear Element Text   ${KU_W_feature_sg_A7_upFront} 
-    Input Text  ${KU_W_feature_sg_A7_upFront}  ${e_feature_sg_A7_upFront}  clear=True
+    Input Text  ${KU_W_feature_sg_A7_upFront}  ${e_feature_sg_A7_upFront}
     Press Enter Key  ${KU_W_feature_sg_A7_upFront}
 
     Verify Element And Text  ${KU_W_feature_sg_almostDone}  ${e_feature_sg_almostDone}
@@ -181,18 +167,16 @@ Verify Save Tax Questionnaire
     Wait For Element Visbility  ${KU_W_feature_sg_investmentSummary}
     Verify Page Contains Element  ${KU_W_feature_sg_investmentSummary}
 
-    Click Element  ${KU_W_feature_sg_closeBtn}
-    
-    # Wait For Element Visbility  ${KU_W_feature_sg_seeYourPlan}
-    # Verify Element And Text  ${KU_W_feature_sg_seeYourPlan}  ${e_feature_sg_seeYourPlan}
-    # Click Button  ${KU_W_feature_sg_seeYourPlan}
+    Wait For Element Visbility  ${KU_W_feature_sg_seeYourPlan}
+    Verify Element And Text  ${KU_W_feature_sg_seeYourPlan}  ${e_feature_sg_seeYourPlan}
+    Click Button  ${KU_W_feature_sg_seeYourPlan}
 
-    # Wait For Element Visbility  ${KU_W_feature_sg_getThisPlan}
-    # Scroll Untill View  ${KU_W_feature_sg_getThisPlan}
-    # Verify Element And Text  ${KU_W_feature_sg_getThisPlan}  ${e_feature_sg_getThisPlan}
-    # Click Button  ${KU_W_feature_sg_getThisPlan}
-
-    # Verify Signup Page
+    Wait For Element Visbility  ${KU_W_feature_sg_getThisPlan}
+    Scroll Untill View  ${KU_W_feature_sg_getThisPlan}
+    Verify Element And Text  ${KU_W_feature_sg_getThisPlan}  ${e_feature_sg_getThisPlan}
+    Click Button  ${KU_W_feature_sg_getThisPlan}
+    Verify Signup Page
+    Navigate To Feature Goals
 
 Verify PreLogin Set A Goal Page
     # Log To Console   ${GOAL}
@@ -204,6 +188,5 @@ Verify PreLogin Set A Goal Page
     Verify Element And Text  ${KU_W_feature_sg_screenSubTitle}  ${e_feature_sg_screenSubTitle}
     Verify Element And Text  ${KU_W_feature_sg_content}  ${e_feature_sg_content}
     Sleep  2s
-    
     Get All Goals And Verify
-    Click Element   xpath=//div[@class='header-actions close-nav']//img 
+    Click Element  ${KU_W_feature_sg_homePageCancelBtn} 

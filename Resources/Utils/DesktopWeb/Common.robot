@@ -61,6 +61,7 @@ Switch To Window Verify Title And Close
     Switch Window  locator=NEW
     Title Should Be  ${title}
     Close Window
+    Sleep  2s
     Switch Window  browser=Kuvera
 
 Switch To Frame
@@ -95,6 +96,8 @@ Verify Widgets From Json
     # Verify Page Contains Element        ${widget}
 
 Kuvera Web Close Regulatory Disclosure
+    Wait Until Element Is Visible  ${KU_W_regulatoryDisclosure}
+    Verify Element And Text  ${KU_W_regulatoryDisclosure}  ${e_regulatoryDisclosure}
     Wait Until Element Is Visible  ${KU_W_close}
     Click Element  ${KU_W_close}
     

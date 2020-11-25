@@ -1,5 +1,7 @@
 ﻿*** Variables ***
 # Application Expected Values 'e_<VariableName>'
+${e_title} =  Kuvera - Direct Mutual Funds | Stocks | Loans | Gold | Remit on Kuvera- Wealth Management Simplified
+${e_regulatoryDisclosure} =  Regulatory Disclosure
 ${e_login} =  Log in 
 ${e_loginPageTitle} =  Login. Start Investing.
 ${e_signup} =  Sign up 
@@ -42,7 +44,9 @@ ${e_transText} =  Transactions
 
 # Application Locator 'KU_<locatorName>'
 # Kuvera :: Wealth Management Simplified
-${KU_W_title}=  Kuvera - Direct Mutual Funds | Stocks | Loans | Gold | Remit on Kuvera- Wealth Management Simplified
+${KU_W_regulatoryDisclosure} =  xpath=//h1[@class='b-regulatory-disclosure__heading'] 
+${KU_W_logo_signup} =  xpath=//a[@class='navbar-brand active']/img
+# ${KU_W_title}=  Kuvera - Direct Mutual Funds | Stocks | Loans | Gold | Remit on Kuvera- Wealth Management Simplified
 ${KU_W_logo} =  xpath=//*[@class='b-header__content__logo']
 ${KU_W_close} =  xpath=//button[@class='button-primary b-regulatory-disclosure__btn']
 ${KU_W_bannerFrame} =  xpath=//iframe[contains(@class,'hellobar hb-animateIn')]

@@ -193,10 +193,18 @@ ${e_feature_cd_pageHeaderText} =  Informed, disciplined investing grows your mon
 ${e_feature_cd_subHeaderText} =  Follow a structured approach and invest regularly, for the long-haul. This is the best way to grow your wealth over time
 ${e_feature_cd_setAGoalTitleText} =  DREAMS DO COME TRUE  
 ${e_feature_cd_setAGoalSubTitle} =  Make your goals a reality
-${e_feature_cd_setAGoalDescTitle} =   A new car, owning your own home, sending your kids to study abroad - you may have many reasons to invest. We help you build investment action plans that’ll help you make enough to make these goals a reality. More about goal-based investing
+${e_feature_cd_setAGoalDescText} =   A new car, owning your own home, sending your kids to study abroad - you may have many reasons to invest. We help you build investment action plans that’ll help you make enough to make these goals a reality. More about goal-based investing
 ${e_feature_cd_goalBsdInvestingLinkText} =  More about goal-based investing
 ${e_feature_cd_financialSuccessTitleText} =  3 Steps To Financial Success Using Goal-Based Investing - Kuvera
 ${e_feature_cd_setAGoalBtnText} =  SET A GOAL
+${e_feature_cd_saveTaxGoalTitleText} =  TAX-SAVER OPTIONS
+${e_feature_cd_saveTaxSubTitleText} =  Save on Tax
+${e_feature_cd_saveTaxGoalDescText} =  Lowest lock-ins. Simple withdrawals. No taxes on redemption. Potentially better returns. ELSS mutual funds can be a better option than traditional tax-saving measures like tax-saver FDs and PPF. More on why ELSS is better
+${e_feature_cd_ELSSLinkText} =  More on why ELSS is better
+${e_feature_cd_saveTaxBtnText} =  SET A ‘SAVE TAX’ GOAL
+${e_feature_cd_ELSSTitleText} =  Why is ELSS better than other tax saving investments? - Kuvera
+${e_feature_cd_saveTaxPageText} =  Save Tax
+
 
 # Application Locator 'KU_<locatorName>'
 
@@ -351,6 +359,8 @@ ${KU_W_feature_sg_getThisPlan} =  xpath=//button[@class='btn in-btn hidden-xs']
 ${KU_W_feature_sg_closeBtn} =  xpath=//a[@class='header-actions close-nav close-btn active']
 ${KU_W_feature_sg_Q3_carCost} =  xpath=//input[@name='costtoday'] 
 ${KU_W_feature_sg_Q3_monthlyInvestment} =  xpath=//input[@name='sip']
+${KU_W_feature_sg_homePageCancelBtn} =  xpath=//div[@class='header-actions close-nav']//img 
+
 
 # Feature-TradeSmart Page
 ${KU_W_featureLink} =  xpath=//a[contains(text(),'Features')]
@@ -445,10 +455,16 @@ ${KU_W_feature_st_tableRow5} =  xpath= //tbody/tr[5]
 ${KU_W_feature_consolidateLink} =  xpath=//a[contains(text(),'Consolidate')]
 ${KU_W_feature_cd_pageHeader} =  xpath=//header[@class='page-heading']/h1
 ${KU_W_feature_cd_pageSubHeader} =  xpath=//header[@class='page-heading']/p
-${KU_W_feature_setAGoalPageTitle} =  xpath=(//div[contains(@class,'why-invest-text')]/h4)[1]
-${KU_W_feature_setAGoalPageSubTitle} =  xpath=(//div[contains(@class,'why-invest-text')]/h3)[1]
-${KU_W_feature_setAGoalPageDesc} =  xpath=//div[@class='set-a-goal-text']/p
+${KU_W_feature_setAGoalTitle} =  xpath=(//div[contains(@class,'why-invest-text')]/h4)[1]
+${KU_W_feature_setAGoalSubTitle} =  xpath=(//div[contains(@class,'why-invest-text')]/h3)[1]
+${KU_W_feature_setAGoalDesc} =  xpath=//div[@class='set-a-goal-text']/p
 ${KU_W_feature_goalBasedInvestingLink} =  xpath=//a[contains(text(),'More about goal-based investing')]
 ${KU_W_feature_setAGoalBtn} =  xpath=(//button[@class='btn in-btn'])[1]
-${KU_W_feature_entryHeaderTitle} =  xpath=//h1[@class='entry-title post-title']
+${KU_W_feature_saveTaxGoalTitle} =  xpath=(//div[contains(@class,'why-invest-text')]/h4)[2]
+${KU_W_feature_saveTaxGoalSubTitle} =  xpath=(//div[contains(@class,'why-invest-text')]/h3)[2]
+${KU_W_feature_saveTaxGoalDesc} =  xpath=(//div[contains(@class,'why-invest-text')]/p)[1]
+${KU_W_feature_ELSSLink} =  xpath=//a[contains(.,'More on why ELSS is better')]
+${KU_W_feature_saveTaxGoalBtn} =  xpath=(//button[@class='btn in-btn'])[2]
+${KU_W_feature_saveTaxPageTitle} =  xpath=//h2[contains(.,'Save Tax')]
+
 
