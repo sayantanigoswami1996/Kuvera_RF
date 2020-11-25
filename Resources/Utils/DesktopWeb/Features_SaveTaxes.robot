@@ -10,10 +10,10 @@ Resource    ../../../Resources/Utils/DesktopWeb/Common.robot
 *** Keywords ***
 
 Verify PreLogin Save Taxes Page
-    Wait For Element Visbility  ${KU_W_feature_saveTaxesLink}
+    Wait For Element Visibility  ${KU_W_feature_saveTaxesLink}
     Click Element  ${KU_W_feature_saveTaxesLink}
     Verify Language Switch Login And Signup Link
-    Wait For Element Visbility  ${KU_W_feature_st_screenTitle}  
+    Wait For Element Visibility  ${KU_W_feature_st_screenTitle}  
     Verify Element And Text  ${KU_W_feature_st_screenTitle}  ${e_feature_st_screenTitleText}
     Verify Element And Text  ${KU_W_feature_st_screenContent}  ${e_feature_st_screenContentText}
 
@@ -43,11 +43,11 @@ Verify PreLogin Save Taxes Page
     Verify Element And Text  ${KU_W_feature_st_fundingDesc}  ${e_feature_st_fundingDescText}
     Verify Page Contains Link  ${KU_W_feature_st_learnHowLink}  ${e_feature_st_learnHowLinkText}
     Sleep  3s
-    Wait For Element Visbility  ${KU_W_feature_st_learnHowLink}
+    Wait For Element Visibility  ${KU_W_feature_st_learnHowLink}
     Click Element  ${KU_W_feature_st_learnHowLink}
     Switch To Window Verify Title And Close   ${e_feature_st_pageTitleText} 
     Sleep   3s
-    Wait For Element Visbility  ${KU_W_feature_st_investmentTitle}
+    Wait For Element Visibility  ${KU_W_feature_st_investmentTitle}
     
     # Table Content
     Scroll Untill View  ${KU_W_feature_st_investmentTitle} 

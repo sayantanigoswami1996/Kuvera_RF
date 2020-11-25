@@ -18,10 +18,10 @@ Verify Subscribe Button
     Verify Login Page
 
 Verify PreLogin Tax Harvesting Page
-    Wait For Element Visbility  ${KU_W_feature_taxHarvestingLink}
+    Wait For Element Visibility  ${KU_W_feature_taxHarvestingLink}
     Click Element  ${KU_W_feature_taxHarvestingLink}
     Verify Language Switch Login And Signup Link
-    Wait For Element Visbility  ${KU_W_feature_th_screenTitle}   
+    Wait For Element Visibility  ${KU_W_feature_th_screenTitle}   
     Verify Element And Text  ${KU_W_feature_th_screenTitle}  ${e_feature_th_TitleText} 
     Verify Element And Text  ${KU_W_feature_th_screenContent}  ${e_feature_th_subTitleText} 
     Verify Subscribe Button  ${KU_W_button}   ${e_feature_th_subscribeBtnText}  ${KU_W_feature_th_coinImage1}
@@ -32,11 +32,11 @@ Verify PreLogin Tax Harvesting Page
     Verify Element And Text  ${KU_W_feature_th_definition}  ${e_feature_th_definitionText}
     Verify Page Contains Link  ${KU_W_feature_th_learnMoreLink}  ${e_feature_th_learnMoreLnkTxt} 
     Scroll Untill View  ${KU_W_feature_th_learnMoreLink}
-    Wait For Element Visbility    ${KU_W_feature_th_learnMoreLink}
+    Wait For Element Visibility    ${KU_W_feature_th_learnMoreLink}
     # Sleep   3s
     Click Element  ${KU_W_feature_th_learnMoreLink}
     Switch To Window Verify Title And Close  ${e_feature_th_learnMoreTitle} 
-    Wait For Element Visbility  ${KU_W_feature_th_assumptions}
+    Wait For Element Visibility  ${KU_W_feature_th_assumptions}
     # Sleep   3s
     Verify Element And Text  ${KU_W_feature_th_assumptions}  ${e_feature_th_assumptionText} 
     Verify Element And Text  ${KU_W_feature_whatIsTHTitle}  ${e_feature_whatIsTHTitleText}
