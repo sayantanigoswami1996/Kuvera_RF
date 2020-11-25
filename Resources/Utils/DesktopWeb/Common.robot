@@ -72,12 +72,12 @@ Get List Count
     [Return]  ${listCount}
 
 Close Banner 
-    Wait Until Element Is Visible  ${KU_W_bannerFrame}  timeout=30
+    Wait Until Element Is Visible  ${KU_W_bannerFrame}  timeout=50
     Switch To Frame  ${KU_W_bannerFrame}
     Wait For Element Visbility  ${KU_W_bannerCloseBtn}
     Click Element  ${KU_W_bannerCloseBtn}
     Unselect Frame
->
+
 Get Json Values
     [Arguments]  ${jsonPath}  ${jsonFilePath}
     ${jsonFile}  Load JSON From File  ${jsonFilePath}
@@ -114,22 +114,22 @@ Verify Language Switch Login And Signup Link
     Verify Element And Text  ${KU_W_signup}  ${e_signup}
 
 Header Navigation
-    ${invest}  Get Json Values  $.MenuHeaders[0]  Resources/TestData/Headers.json
-    ${loans}  Get Json Values  $.MenuHeaders[1]  Resources/TestData/Headers.json
-    ${insure}  Get Json Values  $.MenuHeaders[2]  Resources/TestData/Headers.json
-    ${remit}  Get Json Values  $.MenuHeaders[3]  Resources/TestData/Headers.json
-    ${features}  Get Json Values  $.MenuHeaders[4]  Resources/TestData/Headers.json
+    ${invest}  Get Json Values  $.MenuHeaders.h0  Resources/TestData/Headers.json
+    ${loans}  Get Json Values  $.MenuHeaders.h1  Resources/TestData/Headers.json
+    ${insure}  Get Json Values  $.MenuHeaders.h2  Resources/TestData/Headers.json
+    ${remit}  Get Json Values  $.MenuHeaders.h3  Resources/TestData/Headers.json
+    ${features}  Get Json Values  $.MenuHeaders.h4  Resources/TestData/Headers.json
   
     ${elem} =  Get Element Count  ${KU_W_headers}
 
     FOR  ${j}  IN RANGE  1  ${elem}+1
-        ${cds_text} =  Get Text  xpath=//div[@class='b-header__content__middle']/a[${j}]
-        #Log to console  ${cds_text}
-        Run keyword If  ['${cds_text}'] == ${invest}  Log To Console  PENDING
-        ...    ELSE IF  ['${cds_text}'] == ${loans}  Verify PreLogin Loan Page
-        ...    ELSE IF  ['${cds_text}'] == ${insure}  Verify PreLogin Insure Page
-        ...    ELSE IF  ['${cds_text}'] == ${remit}  Verify PreLogin Remit Page
-        ...    ELSE  Log To Console  test
+        ${headers} =  Get Text  xpath=//div[@class='b-header__content__middle']/a[${j}]
+        Log to console  ${headers}
+        Run keyword If  ['${headers}'] == ${invest}  Log To Console  PENDING
+        ...    ELSE IF  ['${headers}'] == ${loans}  Verify PreLogin Loan Page
+        ...    ELSE IF  ['${headers}'] == ${insure}  Verify PreLogin Insure Page
+        ...    ELSE IF  ['${headers}'] == ${remit}  Verify PreLogin Remit Page
+        ...    ELSE  Get Features SubHeaders
       END
 
 Close Web Application

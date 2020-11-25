@@ -9,9 +9,8 @@ Resource    ../../Resources/Utils/DesktopWeb/Remit.robot
 Suite Setup  Launch URL 
 Suite Teardown  Close All Browsers
 
-# To run all tests: robot -d Results Tests/DesktopWeb/PreLoginTests.robot
-# To run specific test: robot -d Results  -i TC01  Tests/DesktopWeb/PreLoginTests.robot
-
+# To run all tests: robot --variable URL:https://kuvera.in/ --variable BROWSER:headlesschrome -d Results  Tests/DesktopWeb/PreLoginTests.robot
+# To run specific test: robot --variable URL:https://kuvera.in/ --variable BROWSER:headlesschrome -d Results  -i TC01  Tests/DesktopWeb/PreLoginTests.robot
 
 *** Test Cases ***
 Landing Page Widgets Verification Test
@@ -20,4 +19,3 @@ Landing Page Widgets Verification Test
     Close Banner 
     Verify Widgets
     Header Navigation
-
