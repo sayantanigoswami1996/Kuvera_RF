@@ -83,7 +83,7 @@ Kuvera Web Close Regulatory Disclosure
     Wait Until Element Is Visible  ${KU_W_close}
     Click Element  ${KU_W_close}
     
-Close Banner
+Close Hello Bar
     Sleep  15s
     Wait Until Element Is Visible  ${KU_W_bannerFrame}  timeout=30
     Switch To Frame  ${KU_W_bannerFrame}
