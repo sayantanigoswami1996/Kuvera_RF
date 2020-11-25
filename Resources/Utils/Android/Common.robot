@@ -7,7 +7,6 @@ Resource   ../../../AppLocators/Android/CommonAppLocators.robot
 
 *** Keywords ***
 
-
 Begin Mobile Test Kuvera
                       Open Application                  ${server}                       platformName=${platform}    platformVersion=${platform_version}    deviceName=${device}    automationName=${appium}    appActivity=${app_activity}    appPackage=${app_package}
                       Wait For Element Visbility        ${KU_slider1}

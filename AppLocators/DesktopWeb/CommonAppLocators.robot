@@ -1,13 +1,12 @@
 *** Variables ***
-# Desired Capabilities
-${URL}    https://kuvera.in/
-# For headless chrome use: ${BROWSER}     headlesschrome
-${BROWSER}   headlesschrome
 
-
-#Application Expected Values 'e_<VariableName>'
+# Application Expected Values 'e_<VariableName>'
+${e_title} =  Kuvera - Direct Mutual Funds | Stocks | Loans | Gold | Remit on Kuvera- Wealth Management Simplified
+${e_regulatoryDisclosure} =  Regulatory Disclosure
 ${e_login} =  Log in 
+${e_loginPageTitle} =  Login. Start Investing.
 ${e_signup} =  Sign up 
+${e_signupPageTitle} =  Sign Up. Start Investing.
 ${e_mfWelcomeTitle} =  Investments Simplified
 ${e_mf_welcomeText} =  First free Direct Mutual Fund investing platform. Zero fees, higher returns.
 ${e_mfCategory} =   Equity
@@ -43,17 +42,19 @@ ${e_transText} =  Transactions
 @{e_fndHouse_secondColumn} =  KOTAK  L&T  LIC  MAHINDRA  MIRAE ASSET  MOTILAL OSWAL  NIPPON INDIA  PGIM INDIA  PPFAS    PRINCIPAL  QUANT  QUANTUM  SBI  SUNDARAM  TATA  TAURUS  UNION  UTI  YES 
 
 # Kuvera :: Wealth Management Simplified
-${KU_W_title}=  Kuvera - Direct Mutual Funds | Stocks | Loans | Gold | Remit on Kuvera- Wealth Management Simplified
+${KU_W_regulatoryDisclosure} =  xpath=//h1[@class='b-regulatory-disclosure__heading']
 ${KU_W_logo} =  xpath=//*[@class='b-header__content__logo']
+${KU_W_logo_signup} =  xpath=//a[@class='navbar-brand active']/img
 ${KU_W_close} =  xpath=//button[@class='button-primary b-regulatory-disclosure__btn']
-${KU_W_bannerFrame} =  id=p9e7d2f05349193e9421e568b092da688e5010650-container
+${KU_W_bannerFrame} =  xpath=//iframe[contains(@class,'hellobar hb-animateIn')]
 ${KU_W_bannerCloseBtn} =  xpath=(//*[@class='icon-close'])[2]
 ${KU_W_menu} =  xpath=//*[@class='b-header__content']
 ${KU_W_headers} =  xpath=//*[@class='b-header__content__middle']/a
 ${KU_W_exploreELSS} =  xpath=//button[contains(text(),'Explore ELSS funds')]
+${KU_W_loginPageTitle} =  xpath=//div[contains(text(),'Login. Start Investing.')]
 ${KU_W_login} =  xpath=//*[@class='b-header__content__right__signin']
+${KU_W_signupPageTitle} =  xpath=//div[contains(text(),'Sign Up. Start Investing.')]
 ${KU_W_signup} =   xpath=//*[@class='b-header__content__right__singup']
-
 ${KU_W_langSwitch} =  xpath=//div[@class='b-header__content__right--language-switcher']
 ${KU_W_mf_category} =   xpath=//div[@class='b-mf-wiget__mf-category--input']
 ${KU_W_mf_subcategory} =  xpath=//div[@class='b-mf-wiget__mf-subcategory--input']
