@@ -22,7 +22,6 @@
  
  * [Python](https://www.python.org/)
  * [Selenium](https://www.selenium.dev/)
- * [Appium](http://appium.io/downloads.html)
  
  #### Getting Started
  To start with this tool, some prerequisites has to be made, which are described below 👇.
@@ -33,9 +32,7 @@
  *  Pip
  *  Robot Framework
  *  Selenium
- *  Appium
  *  robotframework-seleniumlibrary
- *  robotframework-appiumlibrary
  *  robotframework-jsonlibrary
  *  robotframework-jsonvalidator
  *  Chromedriver/Geckodriver
@@ -62,9 +59,6 @@
 
 * [Seleium Library](https://pypi.org/project/robotframework-seleniumlibrary/)
   cmd: **pip install robotframework-seleniumlibrary**
-  
-* [Appium Library](https://pypi.org/project/robotframework-appiumlibrary/)  
-  cmd: **pip install robotframework-appiumlibrary**
   
 * [Install latest Chromedriver/Geckodriver](https://robotframework.org/SeleniumLibrary/)
   cmd : **pip install webdrivermanager**

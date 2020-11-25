@@ -1,9 +1,49 @@
 {
-    "MenuHeaders": [
-            "Invest",
-            "Loans": 
-            "Insure": 
-            
+    "MenuHeaders": [{
+            "Invest": [{
+                "Amanzon Save & Shop": [{
+                        "ScreenTitle": "4 simple steps to qualify for 3% extra for your shopping on Amazon.in",
+                        "Button": "Save Now"
+                    }]
+                },
+                {"Gold": [{
+                            "ScreenTitle": "Buy 24K 99.9% pure digital gold - easily and securely.",
+                            "Button": "Buy Now"
+                    }]
+                },
+                {"Mutual Funds": [{
+                            "ScreenTitle": "",
+                            "Button": ""
+                    }]
+                },
+                {"SaveSmart": [{
+                            "ScreenTitle": "Start SaveSmart today",
+                            "Button": "Save now"
+                    }]
+                },
+                {"Stocks": [{
+                            "ScreenTitle": "",
+                            "Button": ""
+                    }]
+                },
+                {"US stocks": [{
+                            "ScreenTitle": "Diversify with US stocks",
+                            "Button1": "Start today",
+                            "Button2": "Explore",
+                            "Button3": "Start today"
+                    }]
+                }
+            ]
+        },
+            {"Loans": {"ScreenTitle": "Get an instant loan backed by your portfolio",
+                        "Button":"Check your eligibility"
+                    }
+            },
+            {"Insure": {
+                    "ScreenTitle": "Fair and friendly health insurance is here",
+                    "Button":"Check premium"
+                    }
+            },
             {"Remit":{
                     "ScreenTitle": "A cheaper & faster way to send money home",
                     "Button":"Transfer now"

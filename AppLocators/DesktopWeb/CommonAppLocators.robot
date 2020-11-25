@@ -1,4 +1,9 @@
 *** Variables ***
+# Desired Capabilities
+${URL}    https://kuvera.in/
+# For headless chrome use: ${BROWSER}     headlesschrome
+${BROWSER}   headlesschrome
+
 
 #Application Expected Values 'e_<VariableName>'
 ${e_login} =  Log in 
