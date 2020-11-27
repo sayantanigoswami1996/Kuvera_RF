@@ -12,6 +12,7 @@ Resource    ../../../Resources/Utils/DesktopWeb/Common.robot
 Verify Transfer Now 
     [Arguments]  ${element}
     sleep  1s
+    Wait For Element Visibility  ${element}
     Click Button  ${element}
     Verify Element And Text  ${KU_W_transferWiseStepsModal}  Next steps
     Wait For Element Visibility  ${KU_W_transferWiseNextStepsContinueBtn}

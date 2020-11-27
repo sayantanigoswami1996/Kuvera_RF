@@ -1,11 +1,6 @@
 *** Settings ***
 
-Library     JSONLibrary
-Library     JsonValidator
 Library     SeleniumLibrary
-Resource    ../../../AppLocators/DesktopWeb/MenuNavigationLocators.robot
-Resource    ../../../AppLocators/DesktopWeb/CommonAppLocators.robot
-Resource    ../../../Resources/Utils/DesktopWeb/Common.robot
 
 *** Keywords ***
 
@@ -34,7 +29,3 @@ Verify PreLogin TradeSmart Page
   Verify Element and Text  ${KU_W_feature_helpTradeSmart3Msg}  ${e_feature_helpTradeSmartDesc3Text}
   Scroll Untill View   ${KU_W_feature_aboutUs}
   
-  
-
-  
-

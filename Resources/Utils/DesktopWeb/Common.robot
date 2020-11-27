@@ -101,6 +101,10 @@ Press Enter Key
     [Arguments]  ${element}  
     Press Keys  ${element}  ENTER
 
+Clear Text Field
+    [Arguments]  ${element}
+    Press Keys  ${element}  CTRL+A+BACKSPACE   
+
 Verify Login Page
     Wait For Element Visibility  ${KU_W_loginPageTitle}
     Verify Element And Text  ${KU_W_loginPageTitle}  ${e_loginPageTitle}
