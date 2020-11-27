@@ -103,7 +103,7 @@ Press Enter Key
 
 Clear Text Field
     [Arguments]  ${element}
-    Press Keys  ${element}  CTRL+A+BACKSPACE   
+    Clear Element Text  ${element} 
 
 Verify Login Page
     Wait For Element Visibility  ${KU_W_loginPageTitle}

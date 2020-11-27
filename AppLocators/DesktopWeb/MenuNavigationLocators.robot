@@ -102,6 +102,18 @@ ${e_feature_sg2_userAge} =  30
 ${e_feature_sg2_cost} =  4200000
 ${e_feature_sg2_goalDuration} =  5
 ${e_feature_sg2_investUpfront} =  1000
+# Goal - Save Tax
+${e_feature_sg3_userAge} =  25
+${e_feature_sg3_montlyInvest} =  4200000
+${e_feature_sg3_goalDuration} =  7
+${e_feature_sg3_investUpfront} =  500
+# Goal - Retire Easy
+${e_feature_sg4_userAge} =  25
+${e_feature_sg4_montlyExpense} =  57000
+${e_feature_sg4_retireAge} =  60
+${e_feature_sg4_investUpfront} =  3800
+
+
 
 
 
@@ -344,7 +356,10 @@ ${KU_W_feature_sg_seeYourPlan} =  xpath=//button[@class='btn in-btn']
 ${KU_W_feature_sg_getThisPlan} =  xpath=//button[@class='btn in-btn hidden-xs']
 ${KU_W_feature_sg_closeBtn} =  xpath=//a[@class='header-actions close-nav close-btn active']
 ${KU_W_feature_sg_carCostTxt} =  xpath=//input[@name='costtoday'] 
-${KU_W_feature_sg_Q3_monthlyInvestment} =  xpath=//input[@name='sip']
+${KU_W_feature_sg_monthlyInvestTxt} =  xpath=//input[@name='sip']
+${KU_W_feature_sg_monthlyExpenseTxt} =  xpath=//input[@name='expense']
+${KU_W_feature_sg_retireAgeTxt} =  xpath=//input[@name='retireage']
+
 
 # Feature-TradeSmart Page
 ${KU_W_featureLink} =  xpath=//a[contains(text(),'Features')]
