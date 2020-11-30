@@ -33,8 +33,8 @@ ${e_loan_startSaveCheckEligibiliyText} =  Check your eligibility
 
 # Insure Navigation Page Variables
 ${e_insure_headerTitleText} =  Fair and friendly health insurance is here
-${e_insure_headerMsgText} =  ₹50L cover starting at ₹900/month*. Secure your loved ones today.
-${e_insure_T&CText} =  *T&C apply
+${e_insure_headerMsgText} =  ₹50L cover starting at ₹900/month. Secure your loved ones today. T&C apply
+${e_insure_T&CText} =  T&C apply
 ${e_insure_checkPremiumBtnText} =  Check premium
 ${e_insure_costDetailsHeaderText} =  We understand cost
 ${e_insure_treatmentTitleText} =  Treatment
@@ -83,8 +83,8 @@ ${e_insure_checkPremiumBtn2Text} =  Check premium
 ${e_remit_screenTitle} =  A cheaper & faster way to send money home
 ${e_remit_screenTitleDesc} =  Now invest easily through Kuvera, or send money to your loved ones. With our partner TransferWise, you can transfer money to India for the lowest-cost. It is simple and faster than any traditional provider.
 ${e_remit_transferNowBtn} =  Transer now
-${e_remit_transferWiseSignupTitle} =  Transfer Money Online | Send Money Abroad with TransferWise - Sign up
 ${e_remit_transferWiseCross-borderTitle} =  Making cross-border investments with Kuvera seamless and easy | TransferWise - TransferWise
+${e_remit_transferWiseSignUpTitle} =  Transfer Money Online | Send Money Abroad with TransferWise - Sign up
 
 # Feature - Set a Goal
 ${e_feature_sg_screenTitle} =  SET YOUR GOAL
