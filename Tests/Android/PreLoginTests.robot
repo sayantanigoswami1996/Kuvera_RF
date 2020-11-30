@@ -2,11 +2,7 @@
 Library     OperatingSystem
 Library     JSONLibrary
 Library     JsonValidator
-<<<<<<< HEAD
-Resource    ../../Resources/Utils/Android/Common.robot
-=======
 Resource    ../Resources/Utils/Android/Common.robot
->>>>>>> KU_RF_PE_PHASE1
 
 #Suite Setup       Begin Mobile Test Kuvera
 #Suite Teardown    Close Kuvera Application
@@ -24,12 +20,7 @@ Menu Navigation
     Begin Mobile Test Kuvera
     Skip Sliders
     Kuvera Logo Click
-<<<<<<< HEAD
-    Quit Kuvera Application
-    # Move To Explore Funds
-=======
    # Move To Explore Funds
->>>>>>> KU_RF_PE_PHASE1
     ${h0} =           Get Json Values    ${header0}   Resources/TestData/Headers.json
     Log To Console              ${h0}
 

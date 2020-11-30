@@ -33,8 +33,8 @@ ${e_loan_startSaveCheckEligibiliyText} =  Check your eligibility
 
 # Insure Navigation Page Variables
 ${e_insure_headerTitleText} =  Fair and friendly health insurance is here
-${e_insure_headerMsgText} =  ₹50L cover starting at ₹900/month*. Secure your loved ones today.
-${e_insure_T&CText} =  *T&C apply
+${e_insure_headerMsgText} =  ₹50L cover starting at ₹900/month. Secure your loved ones today. T&C apply
+${e_insure_T&CText} =  T&C apply
 ${e_insure_checkPremiumBtnText} =  Check premium
 ${e_insure_costDetailsHeaderText} =  We understand cost
 ${e_insure_treatmentTitleText} =  Treatment
@@ -83,8 +83,8 @@ ${e_insure_checkPremiumBtn2Text} =  Check premium
 ${e_remit_screenTitle} =  A cheaper & faster way to send money home
 ${e_remit_screenTitleDesc} =  Now invest easily through Kuvera, or send money to your loved ones. With our partner TransferWise, you can transfer money to India for the lowest-cost. It is simple and faster than any traditional provider.
 ${e_remit_transferNowBtn} =  Transer now
-${e_remit_transferWiseSignupTitle} =  Transfer Money Online | Send Money Abroad with TransferWise - Sign up
 ${e_remit_transferWiseCross-borderTitle} =  Making cross-border investments with Kuvera seamless and easy | TransferWise - TransferWise
+${e_remit_transferWiseSignUpTitle} =  Transfer Money Online | Send Money Abroad with TransferWise - Sign up
 
 # Feature - Set a Goal
 ${e_feature_sg_screenTitle} =  SET YOUR GOAL
@@ -245,7 +245,6 @@ ${e_feature_cd_manageTodayBtnText} =   MANAGE TODAY
 
 # Button 
 ${KU_W_button} =  xpath=(//button[@class='button-primary'])[1]
-
 # Loan Navigation Page
 ${KU_W_loanLink} =  xpath=//a[contains(text(),'Loans')]
 ${KU_W_loanHeaderTitle} =  xpath=//div[@class='b-header__title']
@@ -385,7 +384,7 @@ ${KU_W_feature_sg_Q4_goalDuration} =  xpath=//input[@name='goalduration']
 ${KU_W_feature_sg_Q5_yes} =  xpath=//button[@class='btn btn-lg btn-custom btn-custom-yes']
 ${KU_W_feature_sg_Q5_no} =  xpath=//button[@class='btn btn-lg btn-custom btn-custom-no btn-danger']
 ${KU_W_feature_sg_Q6_downPayment} =  xpath=//input[@name='downpayment']
-${KU_W_feature_sg_A7_upFront} =  xpath=//input[@name='upfront']
+${KU_W_feature_sg_Q7_upFront} =  xpath=//input[@name='upfront']
 ${KU_W_feature_sg_almostDone} =  xpath=//div[@class='risk-profile-heading']/h2
 ${KU_W_feature_sg_continue} =  xpath=//button[@class='btn in-btn']
 ${KU_W_feature_sg_investmentSummary} =  xpath=//*[@class='investment-summary']

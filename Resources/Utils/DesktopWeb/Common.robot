@@ -8,11 +8,15 @@ Library     OperatingSystem
 Library     Collections
 Resource    ../../../AppLocators/DesktopWeb/CommonAppLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/MenuNavigationLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/InvestLocators/InvestLandingPageLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/InvestLocators/SaveSmartLocators.robot
+# Resource    ../../../AppLocators/DesktopWeb/InvestLocators/GuiltFundsLocators.rob
 
 *** Keywords ***
+
 Launch URL
     Open Browser  ${URL}  ${BROWSER}  alias=Kuvera
-    # Maximize Browser Window
+    #Maximize Browser Window
     Set Window Size  ${1366}  ${768}
     Reload Page
 
@@ -21,47 +25,50 @@ Welcome Page Should Be Open
 
 Wait For Element Visibility
     [Arguments]  ${element}
-    Wait Until Element Is Visible  ${element}  timeout=30
+    Wait Until Element Is Visible  ${element}  timeout=50
 
 Verify Element And Text
     [Arguments]  ${element}  ${text}
     Element Text Should Be  ${element}  ${text}
 
 Verify Page Contains Element
-    [Arguments]  ${element}    
-    Page Should Contain Element  ${element}    
+    [Arguments]  ${element}
+    Page Should Contain Element  ${element}
 
 Verify Page Contains Image
-    [Arguments]  ${image}    
-    Page Should Contain Image  ${image}    
+    [Arguments]  ${image}
+    Page Should Contain Image  ${image}
 
 Scroll Untill View
-    [Arguments]  ${element}     
-    Scroll Element Into View  ${element} 
+    [Arguments]  ${element}
+    Scroll Element Into View  ${element}
 
 Verify Page Contains Link
     [Arguments]  ${link}  ${text}
     Page Should Contain Link  ${link}  ${text}
 
-Compare Lists 
+Verify Page Contains Button
+    [Arguments]  ${button}
+    Page Should Contain Button  ${button}
+
+Compare Lists
     [Arguments]  ${actualList}   ${expectedList}
-    #Get list item from actual list
+    # Get list item from actual list
     FOR  ${actualListItems}  IN  @{actualList}
     ${actualListItem}  Set Variable  ${actualListItems.text}
     END
-    #Get list item from expected list
+    # Get list item from expected list
     FOR  ${expectedListItems}  IN  @{expectedList}
     ${expectedListItem}  Set Variable  ${expectedListItems}
     END
-    #Compare two list items
-    Should Be Equal  ${actualListItem}  ${expectedListItem}  
+    # Compare two list items
+    Should Be Equal  ${actualListItem}  ${expectedListItem}
 
 Switch To Window Verify Title And Close
     [Arguments]  ${title}
     Switch Window  locator=NEW
     Title Should Be  ${title}
     Close Window
-    Sleep  2s
     Switch Window  browser=Kuvera
 
 Switch To Frame
@@ -73,12 +80,17 @@ Get List Count
     ${listCount}  Get Length  ${list}
     [Return]  ${listCount}
 
-Close Hello Bar 
-    Sleep  10s
+Kuvera Web Close Regulatory Disclosure 
+    Wait Until Element Is Visible  ${KU_W_regulatoryDisclosure}
+    Verify Element And Text  ${KU_W_regulatoryDisclosure}  ${e_regulatoryDisclosure}
+    Wait Until Element Is Visible  ${KU_W_close}
+    Click Element  ${KU_W_close}
+    
+Close Hello Bar
+    Sleep  15s
     Wait Until Element Is Visible  ${KU_W_bannerFrame}  timeout=30
     Switch To Frame  ${KU_W_bannerFrame}
     Wait For Element Visibility  ${KU_W_bannerCloseBtn}
-    Sleep   1s
     Click Element  ${KU_W_bannerCloseBtn}
     Unselect Frame
 
@@ -88,19 +100,14 @@ Get Json Values
     ${jsonValue}  Get Value From Json  ${jsonFile}  ${jsonPath}
     [Return]  ${jsonValue}
 
-Verify Widgets From Json
-    ${jsonWidgetsFile}  Load JSON From File  /Users/prathijamoolya/Kuvera/Automation/Kuvera_RF/Resources/TestData/Widgets.json
-    ${jsonWidgetsValue}  Get Value From Json  ${jsonWidgetsFile}  $.Widgets
-    ${json_data}  Set Variable  ${jsonWidgetsValue} 
-    Log To Console  ${json_data1}          
-    # Verify Page Contains Element        ${widget}
+Press Enter Key
+    [Arguments]  ${element}  
+    Press Keys  ${element}  ENTER
 
-Kuvera Web Close Regulatory Disclosure
-    Wait Until Element Is Visible  ${KU_W_regulatoryDisclosure}
-    Verify Element And Text  ${KU_W_regulatoryDisclosure}  ${e_regulatoryDisclosure}
-    Wait Until Element Is Visible  ${KU_W_close}
-    Click Element  ${KU_W_close}
-    
+Clear Text Field
+    [Arguments]  ${element}
+    Clear Element Text  ${element} 
+
 Verify Login Page
     Wait For Element Visibility  ${KU_W_loginPageTitle}
     Verify Element And Text  ${KU_W_loginPageTitle}  ${e_loginPageTitle}
@@ -110,9 +117,9 @@ Verify Signup Page
     Wait For Element Visibility  ${KU_W_signupPageTitle}
     Verify Element And Text  ${KU_W_signupPageTitle}  ${e_signupPageTitle}
 
-Kuvera Web Logo Click	
-    Wait For Element Visibility  ${KU_W_logo}	
-    Click Element  ${KU_W_logo}    
+Kuvera Web Logo Click
+    Wait For Element Visibility  ${KU_W_logo}
+    Click Element  ${KU_W_logo}
 
 Verify Google Play & Apple Store Icons
     Scroll Element Into View  ${KU_W_android_image}
@@ -124,21 +131,12 @@ Verify Language Switch Login And Signup Link
     Verify Element And Text  ${KU_W_login}  ${e_login}
     Verify Element And Text  ${KU_W_signup}  ${e_signup}
 
-Verify Page Contains Button
-    [Arguments]  ${button}
-    Page Should Contain Button  ${button}    
-
-Press Enter Key
-    [Arguments]  ${element}  
-    Press Keys  ${element}  ENTER
-
 Header Navigation
     ${invest}  Get Json Values  $.MenuHeaders.h0  Resources/TestData/Headers.json
     ${loans}  Get Json Values  $.MenuHeaders.h1  Resources/TestData/Headers.json
     ${insure}  Get Json Values  $.MenuHeaders.h2  Resources/TestData/Headers.json
     ${remit}  Get Json Values  $.MenuHeaders.h3  Resources/TestData/Headers.json
     ${features}  Get Json Values  $.MenuHeaders.h4  Resources/TestData/Headers.json
-    
     ${elem} =  Get Element Count  ${KU_W_headers}
     FOR  ${j}  IN RANGE  1  ${elem}+1
         ${headers} =  Get Text  xpath=//div[@class='b-header__content__middle']/a[${j}]
@@ -159,16 +157,15 @@ Feature Sub Header Navigation
     ${taxHarvesting}  Get Json Values  $.MenuHeaders.h4.fsh4  Resources/TestData/Headers.json
     ${savesTaxes}  Get Json Values  $.MenuHeaders.h4.fsh5  Resources/TestData/Headers.json
     ${consolidate}  Get Json Values  $.MenuHeaders.h4.fsh6  Resources/TestData/Headers.json
-
     Log To Console  ${setAGoal}  
-    FOR  ${k}  IN RANGE  1  8
+    FOR  ${k}  IN RANGE  1  7
         Log To Console  InsideForLoop
         Wait For Element Visibility  ${KU_W_featureLink}
         Click Element  ${KU_W_featureLink} 
-        Sleep  5s
+        Sleep  3s
         ${subHeaders} =  Get Text  xpath=//div[@class='b-header__sub-content__feature']/a[${k}]
         Log to console  ${subHeaders}
-        Run keyword If  ['${subHeaders}'] == ${setAGoal}  Verify PreLogin Set A Goal Page
+        Run keyword If  ['${subHeaders}'] == ${setAGoal}   Verify PreLogin Set A Goal Page
         ...    ELSE IF  ['${subHeaders}'] == ${tradeSmart}   Verify PreLogin TradeSmart Page
         ...    ELSE IF  ['${subHeaders}'] == ${familyAccount}  Verify PreLogin Family Account Page 
         ...    ELSE IF  ['${subHeaders}'] == ${manageAccount}  Verify PreLogin Manage Account Page
@@ -177,6 +174,6 @@ Feature Sub Header Navigation
         ...    ELSE IF  ['${subHeaders}'] == ${consolidate}  Verify PreLogin Consolidate Page
         ...    ELSE  Log To Console  Test
     END
-   
+    
 Close Web Application
-    Close All Browsers
+    Close All Browser
