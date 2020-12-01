@@ -1,4 +1,5 @@
 *** Settings ***
+
 Library     SeleniumLibrary
 Resource    ../../Resources/Utils/DesktopWeb/Common.robot
 Resource    ../../Resources/Utils/DesktopWeb/LandingPage.robot
@@ -10,6 +11,10 @@ Resource    ../../Resources/Utils/DesktopWeb/Features/Goals/OwnAHome.robot
 Resource    ../../Resources/Utils/DesktopWeb/Features/Goals/BuyACar.robot
 Resource    ../../Resources/Utils/DesktopWeb/Features/Goals/SaveTax.robot
 Resource    ../../Resources/Utils/DesktopWeb/Features/Goals/RetireEasy.robot
+Resource    ../../Resources/Utils/DesktopWeb/Features/Goals/25thAnniversary.robot
+Resource    ../../Resources/Utils/DesktopWeb/Features/Goals/ForeignVacation.robot
+Resource    ../../Resources/Utils/DesktopWeb/Features/Goals/EducateMyChild.robot
+Resource    ../../Resources/Utils/DesktopWeb/Features/Goals/CreateMyGoal.robot
 
 Suite Setup  Launch URL 
 Suite Teardown  Close All Browsers
@@ -18,6 +23,7 @@ Suite Teardown  Close All Browsers
 #To run specific test: robot --variable URL:https://kuvera.in/ --variable BROWSER:headlesschrome -d Results  -i TC01 Tests/DesktopWeb/PreLoginTests.robot
 
 *** Test Cases ***
+
 Landing Page Widgets Verification And Header Navigation Test
     [Tags]  TC01
     Kuvera Web Close Regulatory Disclosure 
@@ -28,8 +34,8 @@ Landing Page Widgets Verification And Header Navigation Test
 Features Header Navigation Test
     [Tags]  TC02
     Kuvera Web Close Regulatory Disclosure 
-   # Close Hello Bar 
-    #Verify PreLogin TradeSmart Page
-    #Verify PreLogin Family Account Page 
-    #Verify PreLogin Set A Goal Page
-    Verify Retire Easy Questionnaire
+    Close Hello Bar 
+    Verify PreLogin Set A Goal Page
+    #Verify Educate My Child Questionnaire
+ 
+

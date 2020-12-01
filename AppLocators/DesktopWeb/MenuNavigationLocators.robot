@@ -110,10 +110,29 @@ ${e_feature_sg3_investUpfront} =  500
 # Goal - Retire Easy
 ${e_feature_sg4_userAge} =  25
 ${e_feature_sg4_montlyExpense} =  57000
-${e_feature_sg4_retireAge} =  60
+${e_feature_sg4_retireAge} =  50
 ${e_feature_sg4_investUpfront} =  3800
-
-
+# Goal - 25 Anniversay
+${e_feature_sg5_userAge} =  25
+${e_feature_sg5_cost} =  100000
+${e_feature_sg5_goalDuration} =  27
+${e_feature_sg5_investUpfront} =  0
+# Goal - Foreign Vacation
+${e_feature_sg6_userAge} =  25
+${e_feature_sg6_cost} =  350000
+${e_feature_sg6_goalDuration} =  5
+${e_feature_sg6_investUpfront} =  2000
+# Goal - Educate My Child
+${e_feature_sg7_userAge} =  25
+${e_feature_sg7_cost} =  500000
+${e_feature_sg7_goalDuration} =  10
+${e_feature_sg7_investUpfront} =  1000
+# Goal - Create My Own
+${e_feature_sg8_userAge} =  25
+${e_feature_sg8_goalName} =  For a rainy day
+${e_feature_sg8_cost} =  500000
+${e_feature_sg8_goalDuration} =  2
+${e_feature_sg8_investUpfront} =  500
 
 
 
@@ -355,11 +374,11 @@ ${KU_W_feature_sg_investmentSummary} =  xpath=//*[@class='investment-summary']
 ${KU_W_feature_sg_seeYourPlan} =  xpath=//button[@class='btn in-btn']
 ${KU_W_feature_sg_getThisPlan} =  xpath=//button[@class='btn in-btn hidden-xs']
 ${KU_W_feature_sg_closeBtn} =  xpath=//a[@class='header-actions close-nav close-btn active']
-${KU_W_feature_sg_carCostTxt} =  xpath=//input[@name='costtoday'] 
+${KU_W_feature_sg_costTxt} =  xpath=//input[@name='costtoday'] 
 ${KU_W_feature_sg_monthlyInvestTxt} =  xpath=//input[@name='sip']
 ${KU_W_feature_sg_monthlyExpenseTxt} =  xpath=//input[@name='expense']
 ${KU_W_feature_sg_retireAgeTxt} =  xpath=//input[@name='retireage']
-
+${KU_W_feature_sg_goalNameTxt} =  xpath=//input[@name='goalname']
 
 # Feature-TradeSmart Page
 ${KU_W_featureLink} =  xpath=//a[contains(text(),'Features')]

@@ -13,10 +13,11 @@ Verify Buy A Car Questionnaire
 
     Wait For Element Visibility  ${KU_W_feature_sg_buyACar}
     Click Element  ${KU_W_feature_sg_buyACar}
+    Wait For Element Visibility  ${KU_W_feature_sg_questionScreen}
 
     Verify Question And Enter Input  ${KU_W_feature_sg_Q_userName}  ${query1}  ${KU_W_feature_sg_userNameTxt}  ${e_feature_sg_userName}
     Verify Question And Enter Input  ${KU_W_feature_sg_Q_userAge}  ${query2}  ${KU_W_feature_sg_userAgeTxt}  ${e_feature_sg2_userAge}
-    Verify Question And Enter Input  ${KU_W_feature_sg_Q3}  ${query3}  ${KU_W_feature_sg_carCostTxt}  ${e_feature_sg2_cost}
+    Verify Question And Enter Input  ${KU_W_feature_sg_Q3}  ${query3}  ${KU_W_feature_sg_costTxt}  ${e_feature_sg2_cost}
     Verify Question And Enter Input  ${KU_W_feature_sg_Q4}  ${query4}  ${KU_W_feature_sg_goalDurationTxt}  ${e_feature_sg2_goalDuration}
     Verify Question And Enter Input  ${KU_W_feature_sg_Q5}  ${query5}  ${KU_W_feature_sg_investUpfrontTxt}  ${e_feature_sg2_investUpfront}
     Verify Recommendation And Navigation    

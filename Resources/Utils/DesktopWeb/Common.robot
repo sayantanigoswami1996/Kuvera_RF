@@ -9,6 +9,9 @@ Library     Collections
 Resource    ../../../AppLocators/DesktopWeb/CommonAppLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/MenuNavigationLocators.robot
 
+**Variables***
+${x} =  xyx
+
 *** Keywords ***
 
 Launch URL
@@ -102,8 +105,9 @@ Press Enter Key
     Press Keys  ${element}  ENTER
 
 Clear Text Field
-    [Arguments]  ${element}
-    Clear Element Text  ${element} 
+    [Arguments]  ${field}
+    Sleep  1s
+    Press Keys  ${field}  COMMAND+A  DELETE
 
 Verify Login Page
     Wait For Element Visibility  ${KU_W_loginPageTitle}
