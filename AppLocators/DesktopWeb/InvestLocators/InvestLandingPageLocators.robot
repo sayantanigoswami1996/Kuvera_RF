@@ -31,7 +31,7 @@ ${e_invest_valueFundsSubTitleText} =  Invest in stocks selling below their intri
 ${e_invest_valueFunds_screenText} =  Value Fund
 ${e_invest_topGainersTitleText} =  Top Gainers
 ${e_invest_topGainersSubTitleText} =  Indian stocks
-${e_invest_topGainers_screenText} =  Mid Cap
+${e_invest_topGainers_screenText} =   Gainers 
 ${e_invest_52WHighIndiaTitleText} =   52 Wk High India
 ${e_invest_52WHighIndiaSubTitleText} =  Momentum stocks in India
 ${e_invest_52WHighInida_screenText} =   52W high 
@@ -54,7 +54,7 @@ ${e_invest_sortBtnText} =  Sort by
 ${e_invest_filterBtnText} =  Filter
 ${e_invest_clearAllBtnTxt} =  Clear all
 ${e_invest_stock_searchBarTxt} =  Search stocks
-
+${e_invest_stock_exploreMoreTxt} =  Explore more
 # Application Locator 'KU_<locatorName>'
 # Invest Navigation Page
 ${KU_W_investLink} =  xpath=//a[@class='b-header__content__invest cursor-pointer']
@@ -82,7 +82,7 @@ ${KU_W_sectorFundsTitle} =  xpath=(//h6[@class='b-invest-tile__title'])[7]
 ${KU_W_sectorFundsSubTitle} =  xpath=(//p[@class='b-invest-tile__para'])[9]
 ${KU_W_topGainerTitle} =  xpath=(//div[@class='k-cls b-invest-card']/h6)[7]
 ${KU_W_topGainerSubTitle} =  xpath=(//div[@class='k-cls b-invest-card']/p)[7]
-${KU_W_topGainerScreenTitle} =  xpath=(//div[@class='b-stocks-explore__stock-row-content-industry-wrapper']/div[3])[1]
+${KU_W_topGainerScreenTitle} =  xpath=//div[@class='b-stocks-explore__tab_item b-stocks-explore__tab--selected']
 ${KU_W_valueFundsTitle} =  xpath=(//div[@class='k-cls b-invest-card']/h6)[8]
 ${KU_W_valueFundsSubTitle} =  xpath=(//div[@class='k-cls b-invest-card']/p)[8]
 ${KU_W_52WHighIndiaTitle} =  xpath=(//h6[@class='b-invest-tile__title'])[10]
@@ -108,6 +108,8 @@ ${KU_W_searchBarForFunds} =  xpath=(//div[@class='b-explore-fund__action-title']
 ${KU_W_searchBarForTopGainer} =  xpath=(//div[@class='b-explore-stock__action-title'])[1]
 ${KU_W_searchBarForUSETF} =  xpath=(//div[@class='b-action-bar__search__header'])[1]
 ${KU_W_sort} =  xpath=(//div[@class='b-explore-fund__action-title'])[2]
-${KU_W_sort_UTF} =  xpath=//div[@class='b-action-bar__sort__header']
+${KU_W_sort_UTF_USA} =  xpath=//div[@class='b-action-bar__sort__header']
+${KU_W_sort_topGainer_India} =  xpath=(//div[@class='b-explore-stock__action-title'])[2]
 ${KU_W_filter} =  xpath=//span[@class='b-explore-fund__action-title b-explore-fund__filter-action-title']
 ${KU_W_clearAll} =  xpath=//div[@class='b-explore-fund__clear-all']
+${KU_W_exploreMoreTitle} =  xpath=//div[@class='b-explore-assets__subheading']

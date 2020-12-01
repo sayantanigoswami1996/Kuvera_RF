@@ -8,7 +8,9 @@ Verify Question Title
     [Arguments]  ${element}  ${text}
     ${actualTitle} =  Get Text  ${element}
     ${expectedTitle} =  Convert To String    ${text}
-    Should be equal  ['${actualTitle}']  ${expectedTitle}
+    Log To console  ${actualTitle}
+    Log To console  ${expectedTitle}
+    Should be equal  ${actualTitle}  ${expectedTitle}
 
 Verify PreLogin Set A Goal Page
     ${goal1}  Get Json Values  $.Goals.g1  Resources/TestData/Goals.json
@@ -36,16 +38,17 @@ Verify PreLogin Set A Goal Page
         Run keyword If  ['${goalName}'] == ${goal1}  Verify Own A Home Questionnaire
         ...    ELSE IF  ['${goalName}'] == ${goal2}  Verify Buy A Car Questionnaire
         ...    ELSE IF  ['${goalName}'] == ${goal3}  Verify Save Tax Questionnaire
-        ...    ELSE IF  ['${goalName}'] == ${goal4}  Log To Console  PENDING4
-        ...    ELSE IF  ['${goalName}'] == ${goal5}  Log To Console  PENDING5
-        ...    ELSE IF  ['${goalName}'] == ${goal6}  Log To Console  PENDING6
-        ...    ELSE IF  ['${goalName}'] == ${goal7}  Log To Console  PENDING7
+        ...    ELSE IF  ['${goalName}'] == ${goal4}  Verify Retire Easy Questionnaire
+        ...    ELSE IF  ['${goalName}'] == ${goal5}  Verify 25 Anniversary Questionnaire
+        ...    ELSE IF  ['${goalName}'] == ${goal6}  Verify Foreign Vacation Questionnaire
+        ...    ELSE IF  ['${goalName}'] == ${goal7}  Verify Educate My Child Questionnaire
+        ...    ELSE IF  ['${goalName}'] == ${goal8}  Verify Create My Goal Questionnaire
         ...    ELSE   Go Back
     END
 
 Verify Question And Enter Input
-    [Arguments]  ${actualQTitle}  ${exptcedQTitle}  ${inputTxtField}  ${inputValue}
-    Verify Question Title  ${actualQTitle}  ${exptcedQTitle}
+    [Arguments]  ${actualQTitle}  ${expectedQTitle}  ${inputTxtField}  ${inputValue}
+    Verify Question Title  ${actualQTitle}  ${expectedQTitle}
     Clear Text Field  ${inputTxtField}
     Input Text  ${inputTxtField}  ${inputValue}
     Press Enter Key  ${inputTxtField}
@@ -53,11 +56,13 @@ Verify Question And Enter Input
 Navigate To Features Goals
     Wait For Element Visibility  ${KU_W_logo_signup}
     Click Element  ${KU_W_logo_signup}
+    Wait For Element Visibility  ${KU_W_featureLink}
     Click Element  ${KU_W_featureLink}
     Wait For Element Visibility  ${KU_W_feature_setAGoalLink}
     Click Element  ${KU_W_feature_setAGoalLink}
 
 Verify Recommendation And Navigation
+    Wait For Element Visibility  ${KU_W_feature_sg_almostDone}
     Verify Element And Text  ${KU_W_feature_sg_almostDone}  ${e_feature_sg_almostDone}
     Click Button  ${KU_W_feature_sg_continue}
     Wait For Element Visibility  ${KU_W_feature_sg_investmentSummary}

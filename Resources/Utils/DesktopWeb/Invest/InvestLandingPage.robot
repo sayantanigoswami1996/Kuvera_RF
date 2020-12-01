@@ -1,7 +1,9 @@
 *** Settings ***
 
 Library     SeleniumLibrary
+
 *** Keywords ***
+
 Verify Search And Sort
         [Arguments]   ${searchBar}    ${searchText}  ${sortButton} 
         Verify Element And Text  ${searchBar}  ${searchText}
@@ -91,7 +93,8 @@ Verify PreLogin Invest Landing Page
         Verify Element And Text   ${KU_W_insureHeaderTitle}  ${e_insure_headerTitleText}
         Go Back
         # Lower Bar - Assets
-        Sleep  2s
+        Verify Element And Text    ${KU_W_exploreMoreTitle}  ${e_invest_stock_exploreMoreTxt}
+        Wait For Element Visibility    ${KU_W_mutualFund}
         Scroll Untill View  ${KU_W_mutualFund}
         Verify Element And Text  ${KU_W_mutualFund}  ${e_invest_mf_titleText} 
         Wait For Element Visibility    ${KU_W_mutualFund}
@@ -103,7 +106,8 @@ Verify PreLogin Invest Landing Page
         Click Element  ${KU_W_digitalGold}
         Verify Element And Text   ${KU_W_dg_screenTitle}   ${e_invest_digiGold_screenText} 
         Go Back
-        Sleep  2s
+        Sleep  1s
+        Wait For Element Visibility   ${KU_W_stocks}
         Verify Element And Text  ${KU_W_stocks}   ${e_invest_stocks_titleText}
         Wait For Element Visibility   ${KU_W_stocks}
         Click Element  ${KU_W_stocks}
@@ -116,15 +120,8 @@ Verify PreLogin Invest Landing Page
         Wait For Element Visibility  ${KU_W_USStocksScreen}
         Verify Element And Text  ${KU_W_USStocksScreen}  ${e_invest_USStocks_screenText}
         Go Back
-        Sleep  2s
+        Sleep  1s
         Verify Element And Text   ${KU_W_saveSmart}   ${e_invest_ss_titleText}
         Wait For Element Visibility  ${KU_W_saveSmart}
         Click Element  ${KU_W_saveSmart}
-        Sleep  1s
         Validate SaveSmart Landing Page
-        # Verify Element And Text  ${KU_W_amazonSave}   ${e_invest_amazonSave_titleText} 
-        # Wait For Element Visibility  ${KU_W_amazonSave} 
-        # Click Element  ${KU_W_amazonSave} 
-        # Wait For Element Visibility  ${KU_W_amazonSaveScreen} 
-        # Verify Element And Text  ${KU_W_amazonSaveScreen}  ${e_invest_amazonSave_screenText} 
-        # Go Back
