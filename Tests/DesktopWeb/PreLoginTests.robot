@@ -18,6 +18,7 @@ Landing Page Widgets Verification And Header Navigation Test
 Features Header Navigation Test
     [Tags]  TC02
     Kuvera Web Close Regulatory Disclosure
-    # Close Hello Bar
-    Verify PreLogin Invest Landing Page
+     Close Hello Bar
+    # Verify PreLogin Invest Landing Page
+    Verify PreLogin Set A Goal Page
     #  Verify PreLogin Set A Goal Page

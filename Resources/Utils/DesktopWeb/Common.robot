@@ -100,7 +100,6 @@ Get Json Values
     ${jsonValue}  Get Value From Json  ${jsonFile}  ${jsonPath}
     [Return]  ${jsonValue}
 
-
 Press Enter Key
     [Arguments]  ${element}  
     Press Keys  ${element}  ENTER
@@ -108,8 +107,7 @@ Press Enter Key
 Clear Text Field
     [Arguments]  ${field}
     Sleep  1s
-    Press Keys  ${field}  COMMAND+A  DELETE
-
+    Press Keys  ${field}  CTRL+A+BACKSPACE
 
 Verify Login Page
     Wait For Element Visibility  ${KU_W_loginPageTitle}
@@ -161,7 +159,7 @@ Feature Sub Header Navigation
     ${savesTaxes}  Get Json Values  $.MenuHeaders.h4.fsh5  Resources/TestData/Headers.json
     ${consolidate}  Get Json Values  $.MenuHeaders.h4.fsh6  Resources/TestData/Headers.json
     Log To Console  ${setAGoal}  
-    FOR  ${k}  IN RANGE  1  7
+    FOR  ${k}  IN RANGE  1  8
         Log To Console  InsideForLoop
         Wait For Element Visibility  ${KU_W_featureLink}
         Click Element  ${KU_W_featureLink} 

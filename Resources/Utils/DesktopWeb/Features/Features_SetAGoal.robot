@@ -8,9 +8,12 @@ Verify Question Title
     [Arguments]  ${element}  ${text}
     ${actualTitle} =  Get Text  ${element}
     ${expectedTitle} =  Convert To String    ${text}
-    Log To console  ${actualTitle}
-    Log To console  ${expectedTitle}
-    Should be equal  ${actualTitle}  ${expectedTitle}
+    ${actualTitle1} =  Replace String  ${actualTitle}  ’  '
+    ${expectedTitle1} =  Replace String  ${expectedTitle}  ’  '
+    ${expectedTitle2} =  Replace String  ${expectedTitle1}  â€™  '
+    Log To console  ${actualTitle1}
+    Log To console  ${expectedTitle2}
+    Should be equal  ['${actualTitle1}']  ${expectedTitle2}
 
 Verify PreLogin Set A Goal Page
     ${goal1}  Get Json Values  $.Goals.g1  Resources/TestData/Goals.json
@@ -57,8 +60,10 @@ Navigate To Features Goals
     Wait For Element Visibility  ${KU_W_logo_signup}
     Click Element  ${KU_W_logo_signup}
     Wait For Element Visibility  ${KU_W_featureLink}
+    Sleep  2s
     Click Element  ${KU_W_featureLink}
     Wait For Element Visibility  ${KU_W_feature_setAGoalLink}
+    Sleep  1s
     Click Element  ${KU_W_feature_setAGoalLink}
 
 Verify Recommendation And Navigation
@@ -77,4 +82,4 @@ Verify Recommendation And Navigation
     Verify Element And Text  ${KU_W_feature_sg_getThisPlan}  ${e_feature_sg_getThisPlan}
     Click Button  ${KU_W_feature_sg_getThisPlan}
     Verify Signup Page
-    Navigate To Features Goals  
+    Navigate To Features Goals 

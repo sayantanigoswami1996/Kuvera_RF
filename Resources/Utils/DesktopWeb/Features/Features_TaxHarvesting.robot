@@ -1,5 +1,7 @@
 *** Settings ***
 
+Library     JSONLibrary
+Library     JsonValidator
 Library     SeleniumLibrary
 
 *** Keywords ***
@@ -27,14 +29,15 @@ Verify PreLogin Tax Harvesting Page
     Verify Element And Text  ${KU_W_feature_th_definition}  ${e_feature_th_definitionText}
     Verify Page Contains Link  ${KU_W_feature_th_learnMoreLink}  ${e_feature_th_learnMoreLnkTxt} 
     Scroll Untill View  ${KU_W_feature_th_learnMoreLink}
+    Sleep  2s
     Wait For Element Visibility    ${KU_W_feature_th_learnMoreLink}
-    # Sleep   3s
     Click Element  ${KU_W_feature_th_learnMoreLink}
-    Switch To Window Verify Title And Close  ${e_feature_th_learnMoreTitle} 
+    Switch To Window Verify Title And Close  ${e_feature_th_learnMoreTitle}
+    Reload Page
     Wait For Element Visibility  ${KU_W_feature_th_assumptions}
-    # Sleep   3s
     Verify Element And Text  ${KU_W_feature_th_assumptions}  ${e_feature_th_assumptionText} 
     Verify Element And Text  ${KU_W_feature_whatIsTHTitle}  ${e_feature_whatIsTHTitleText}
+
     # Table Content
     Scroll Untill View  ${KU_W_feature_th_satusIconimage}
     Verify Page Contains Image  ${KU_W_feature_th_satusIconimage}
@@ -71,6 +74,6 @@ Verify PreLogin Tax Harvesting Page
     Verify Page Contains Image  ${KU_W_feature_th_pricingcheckIcon3}
     Verify Element And Text  ${KU_W_feature_th_pricingcheckDesc3}  ${e_feature_th_checkDescText3}
 
-    # Start Harevesting Today
+    # Start Harvesting Today
     Verify Element And Text  ${KU_W_feature_th_startHarvestTitle}  ${e_feature_th_startHarvestText}
     Verify Subscribe Button  ${KU_W_feature_th_subscribe3Btn}  ${e_feature_th_subscribeBtnText}  ${KU_W_feature_th_coinImage3}

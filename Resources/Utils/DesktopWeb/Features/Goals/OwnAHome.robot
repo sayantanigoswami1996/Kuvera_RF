@@ -17,12 +17,12 @@ Verify Own A Home Questionnaire
     Click Element  ${KU_W_feature_sg_ownAHome}
     Wait For Element Visibility  ${KU_W_feature_sg_questionScreen}
 
-    Verify Question And Enter Input  ${KU_W_feature_sg_Q1_userName}  ${query1}  ${KU_W_feature_sg_userNameTxt}  ${e_feature_sg_userName}
-    Verify Question And Enter Input  ${KU_W_feature_sg_Q2_userAge}  ${query2}  ${KU_W_feature_sg_userAgeTxt}  ${e_feature_sg1_userAge}
-    Verify Question And Enter Input  ${KU_W_feature_sg_Q3_homeCost}  ${query3}  ${KU_W_feature_sg_homeCostTxt}  ${e_feature_sg1_cost}
-    Verify Question And Enter Input  ${KU_W_feature_sg_Q4_goalDuration}  ${query4}  ${KU_W_feature_sg_goalDurationTxt}  ${e_feature_sg1_goalDuration}
-    Verify Question Title ${KU_W_feature_sg_Q5_yes}  ${query5}
+    Verify Question And Enter Input  ${KU_W_feature_sg_Q_userName}  ${query1}  ${KU_W_feature_sg_userNameTxt}  ${e_feature_sg_userName}
+    Verify Question And Enter Input  ${KU_W_feature_sg_Q_userAge}  ${query2}  ${KU_W_feature_sg_userAgeTxt}  ${e_feature_sg1_userAge}
+    Verify Question And Enter Input  ${KU_W_feature_sg_Q3}  ${query3}  ${KU_W_feature_sg_homeCostTxt}  ${e_feature_sg1_cost}
+    Verify Question And Enter Input  ${KU_W_feature_sg_Q4}  ${query4}  ${KU_W_feature_sg_goalDurationTxt}  ${e_feature_sg1_goalDuration}
+    Verify Question Title  ${KU_W_feature_sg_Q5}  ${query5}
     Click Button  ${KU_W_feature_sg_yes}
-    Verify Question And Enter Input  ${KU_W_feature_sg_Q6_downPayment}  ${query6}  ${KU_W_feature_sg_downPaymentTxt}  ${e_feature_sg1_downPayment}
-    Verify Question And Enter Input  ${KU_W_feature_sg_Q7_upFront}   ${query7}  ${KU_W_feature_sg_investUpfrontTxt}  ${e_feature_sg1_investUpfront}
+    Verify Question And Enter Input  ${KU_W_feature_sg_Q6}  ${query6}  ${KU_W_feature_sg_downPaymentTxt}  ${e_feature_sg1_downPayment}
+    Verify Question And Enter Input  ${KU_W_feature_sg_Q7}  ${query7}  ${KU_W_feature_sg_investUpfrontTxt}  ${e_feature_sg1_investUpfront}
     Verify Recommendation And Navigation

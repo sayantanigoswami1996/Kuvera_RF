@@ -14,6 +14,7 @@ Verify Save Tax Questionnaire
 
     Wait For Element Visibility  ${KU_W_feature_sg_saveTax}
     Click Element  ${KU_W_feature_sg_saveTax}
+    Wait For Element Visibility  ${KU_W_feature_sg_questionScreen}
 
     Verify Question And Enter Input  ${KU_W_feature_sg_Q_userName}  ${query1}  ${KU_W_feature_sg_userNameTxt}  ${e_feature_sg_userName}
     Verify Question And Enter Input  ${KU_W_feature_sg_Q_userAge}  ${query2}  ${KU_W_feature_sg_userAgeTxt}  ${e_feature_sg3_userAge}

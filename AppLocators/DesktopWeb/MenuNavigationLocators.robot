@@ -90,30 +90,52 @@ ${e_remit_transferWiseSignUpTitle} =  Transfer Money Online | Send Money Abroad 
 ${e_feature_sg_screenTitle} =  SET YOUR GOAL
 ${e_feature_sg_screenSubTitle} =  We'll help you bring your dreams to life.
 ${e_feature_sg_content} =  Setting a financial goal is the first step to making your dreams a reality. Investing regularly is the next. We make it really simple for you, and we’re with you every step of the way. Simply choose your goal to get started.
-${e_feature_sg_Q1} =  Hi there! What’s your name?
-${e_feature_sg_Q2} =  And what’s your age?
-${e_feature_sg_Q3} =  How much does your dream home cost today?
-${e_feature_sg_Q4} =  In how many years do you want to buy this home?
-${e_feature_sg_Q5} =  Will you be taking a home loan?
-${e_feature_sg_Q6} =  How much will you make as downpayment?
-${e_feature_sg_Q7} =  How much can you invest upfront? 
-${e_feature_sg_A1_userName} =  Test
-${e_feature_sg_A2_userAge} =  27 
-${e_feature_sg_A3_homeCost} =  5000000
-${e_feature_sg_A4_goalDuration} =  2
-${e_feature_sg_A6_downPayment} =  15
-${e_feature_sg_A7_upFront} =  5000
+# Goal - Own A Home
+${e_feature_sg_userName} =  Test
+${e_feature_sg1_userAge} =  27
+${e_feature_sg1_cost} =  5000000
+${e_feature_sg1_goalDuration} =  2
+${e_feature_sg1_downPayment} =  15
+${e_feature_sg1_investUpfront} =  5000
+# Goal - Buy A Car
+${e_feature_sg2_userAge} =  30
+${e_feature_sg2_cost} =  4200000
+${e_feature_sg2_goalDuration} =  5
+${e_feature_sg2_investUpfront} =  1000
+# Goal - Save Tax
+${e_feature_sg3_userAge} =  25
+${e_feature_sg3_montlyInvest} =  3000
+${e_feature_sg3_goalDuration} =  7
+${e_feature_sg3_investUpfront} =  500
+# Goal - Retire Easy
+${e_feature_sg4_userAge} =  25
+${e_feature_sg4_montlyExpense} =  57000
+${e_feature_sg4_retireAge} =  60
+${e_feature_sg4_investUpfront} =  3800
+# Goal - 25 Anniversay
+${e_feature_sg5_userAge} =  25
+${e_feature_sg5_cost} =  100000
+${e_feature_sg5_goalDuration} =  27
+${e_feature_sg5_investUpfront} =  0
+# Goal - Foreign Vacation
+${e_feature_sg6_userAge} =  25
+${e_feature_sg6_cost} =  350000
+${e_feature_sg6_goalDuration} =  5
+${e_feature_sg6_investUpfront} =  2000
+# Goal - Educate My Child
+${e_feature_sg7_userAge} =  25
+${e_feature_sg7_cost} =  500000
+${e_feature_sg7_goalDuration} =  10
+${e_feature_sg7_investUpfront} =  1000
+# Goal - Create My Own
+${e_feature_sg8_userAge} =  25
+${e_feature_sg8_goalName} =  For a rainy day
+${e_feature_sg8_cost} =  50000
+${e_feature_sg8_goalDuration} =  2
+${e_feature_sg8_investUpfront} =  500
 ${e_feature_sg_almostDone} =  Almost done! Let’s personalise your plan.
 ${e_feature_sg_seeYourPlan} =  SEE YOUR PLAN
 ${e_feature_sg_getThisPlan} =  GET THIS PLAN
-
-${e_feature_sg_buyaCar_Q3} =  How much does your dream car cost today?
-${e_feature_sg_A3_carCost} =  6000000
-${e_feature_sg_buyAcar_Q4} =  In how many years do you want to buy this car?
-${e_feature_sg__saveTax_Q3} =  How much do you want to invest monthly?
-${e_feature_sg_A3_monthlyInvestment} =  10000
-${e_feature_sg_saveTax_Q4} =  For how long do you want to invest?
-${e_feature_sg_saveTax_Q5} =  Enter a amount you can invest upfront, else enter 0.
 
 # Feature-TradeSmart Navigation Page Variables
 ${e_feature_ts_titleText} =  TradeSmart
@@ -350,6 +372,7 @@ ${KU_W_remit_knowMoreBtn} =  xpath=//button[@class='button-primary b-why-transfe
 ${KU_W_remit_calculatorTarget} =  xpath=//*[@id="tw-calculator-target"]
 ${KU_W_remit_transferNoBottomBtn} =  xpath=//button[@class='button-primary b-how__btn-transfer']
 
+
 # Feature 
 ${KU_W_featureSubList} =  xpath=//div[@class='b-header__sub-content']/div/a
 
@@ -369,31 +392,33 @@ ${KU_W_feature_sg_educateMyChild} =  xpath=(//p[@class='card-title'])[7]
 ${KU_W_feature_sg_createMyOwn} =  xpath=(//p[@class='card-title'])[8]
 ${KU_W_feature_sg_questionScreen} =  id=title-box
 ${KU_W_feature_sg_titleBoxSection} =  id=p9e7d2f05349193e9421e568b092da688e5010650-container
-${KU_W_feature_sg_goalName} =  xpath=//*[@id="title-box"]/h2
-${KU_W_feature_sg_Q1} =  xpath=(//p[@class='question'])[1]
-${KU_W_feature_sg_Q2} =  xpath=(//p[@class='question'])[2]
+${KU_W_feature_sg_Q_goalName} =  xpath=//*[@id="title-box"]/h2
+${KU_W_feature_sg_Q_userName} =  xpath=(//p[@class='question'])[1]
+${KU_W_feature_sg_Q_userAge} =  xpath=(//p[@class='question'])[2]
 ${KU_W_feature_sg_Q3} =  xpath=(//p[@class='question'])[3]
 ${KU_W_feature_sg_Q4} =  xpath=(//p[@class='question'])[4]
 ${KU_W_feature_sg_Q5} =  xpath=(//p[@class='question'])[5]
 ${KU_W_feature_sg_Q6} =  xpath=(//p[@class='question'])[6]
 ${KU_W_feature_sg_Q7} =  xpath=(//p[@class='question'])[7]
-${KU_W_feature_sg_Q1_userName} =  xpath=//input[@name='username']
-${KU_W_feature_sg_Q2_userAge} =  xpath=//input[@name='userage']
-${KU_W_feature_sg_Q3_homeCost} =  xpath=//input[@name='costofhome']
-${KU_W_feature_sg_Q4_goalDuration} =  xpath=//input[@name='goalduration']
-${KU_W_feature_sg_Q5_yes} =  xpath=//button[@class='btn btn-lg btn-custom btn-custom-yes']
-${KU_W_feature_sg_Q5_no} =  xpath=//button[@class='btn btn-lg btn-custom btn-custom-no btn-danger']
-${KU_W_feature_sg_Q6_downPayment} =  xpath=//input[@name='downpayment']
-${KU_W_feature_sg_Q7_upFront} =  xpath=//input[@name='upfront']
+${KU_W_feature_sg_userNameTxt} =  xpath=//input[@name='username']
+${KU_W_feature_sg_userAgeTxt} =  xpath=//input[@name='userage']
+${KU_W_feature_sg_homeCostTxt} =  xpath=//input[@name='costofhome']
+${KU_W_feature_sg_goalDurationTxt} =  xpath=//input[@name='goalduration']
+${KU_W_feature_sg_yes} =  xpath=//button[@class='btn btn-lg btn-custom btn-custom-yes']
+${KU_W_feature_sg_no} =  xpath=//button[@class='btn btn-lg btn-custom btn-custom-no btn-danger']
+${KU_W_feature_sg_downPaymentTxt} =  xpath=//input[@name='downpayment']
+${KU_W_feature_sg_investUpfrontTxt} =  xpath=//input[@name='upfront']
 ${KU_W_feature_sg_almostDone} =  xpath=//div[@class='risk-profile-heading']/h2
 ${KU_W_feature_sg_continue} =  xpath=//button[@class='btn in-btn']
 ${KU_W_feature_sg_investmentSummary} =  xpath=//*[@class='investment-summary']
 ${KU_W_feature_sg_seeYourPlan} =  xpath=//button[@class='btn in-btn']
 ${KU_W_feature_sg_getThisPlan} =  xpath=//button[@class='btn in-btn hidden-xs']
 ${KU_W_feature_sg_closeBtn} =  xpath=//a[@class='header-actions close-nav close-btn active']
-${KU_W_feature_sg_Q3_carCost} =  xpath=//input[@name='costtoday'] 
-${KU_W_feature_sg_Q3_monthlyInvestment} =  xpath=//input[@name='sip']
-${KU_W_feature_sg_homePageCancelBtn} =  xpath=//div[@class='header-actions close-nav']//img 
+${KU_W_feature_sg_costTxt} =  xpath=//input[@name='costtoday'] 
+${KU_W_feature_sg_monthlyInvestTxt} =  xpath=//input[@name='sip']
+${KU_W_feature_sg_monthlyExpenseTxt} =  xpath=//input[@name='expense']
+${KU_W_feature_sg_retireAgeTxt} =  xpath=//input[@name='retireage']
+${KU_W_feature_sg_goalNameTxt} =  xpath=//input[@name='goalname']
 
 
 # Feature-TradeSmart Page
