@@ -7,6 +7,7 @@ Resource    ../../Resources/Utils/DesktopWeb/Loans.robot
 Resource    ../../Resources/Utils/DesktopWeb/Insure.robot
 Resource    ../../Resources/Utils/DesktopWeb/Remit.robot
 Resource    ../../Resources/Utils/DesktopWeb/Features/Features_SetAGoal.robot
+Resource    ../../Resources/Utils/DesktopWeb/Features/Features_Consolidate.robot
 Resource    ../../Resources/Utils/DesktopWeb/Features/Goals/OwnAHome.robot
 Resource    ../../Resources/Utils/DesktopWeb/Features/Goals/BuyACar.robot
 Resource    ../../Resources/Utils/DesktopWeb/Features/Goals/SaveTax.robot
@@ -31,11 +32,13 @@ Landing Page Widgets Verification And Header Navigation Test
     Verify Widgets
     Header Navigation
 
-Features Header Navigation Test
+Goal And Questionnaire Navigation Test
     [Tags]  TC02
     Kuvera Web Close Regulatory Disclosure 
     Close Hello Bar 
     Verify PreLogin Set A Goal Page
-    #Verify Educate My Child Questionnaire
- 
+    #Go Back
+    #Verify PreLogin Consolidate Page
+   #Verify Retire Easy Questionnaire
 
+    

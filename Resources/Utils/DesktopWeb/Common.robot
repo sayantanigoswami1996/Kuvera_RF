@@ -4,13 +4,8 @@ Library     JSONLibrary
 Library     JsonValidator
 Library     SeleniumLibrary
 Library     String
-Library     OperatingSystem
-Library     Collections
 Resource    ../../../AppLocators/DesktopWeb/CommonAppLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/MenuNavigationLocators.robot
-
-**Variables***
-${x} =  xyx
 
 *** Keywords ***
 
@@ -106,7 +101,7 @@ Press Enter Key
 
 Clear Text Field
     [Arguments]  ${field}
-    Sleep  1s
+    Sleep  500ms
     Press Keys  ${field}  COMMAND+A  DELETE
 
 Verify Login Page
