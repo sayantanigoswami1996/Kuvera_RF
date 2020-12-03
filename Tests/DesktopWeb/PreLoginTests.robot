@@ -19,11 +19,9 @@ Landing Page Widgets Verification Test
 # Header navigation - Insure, Loans, Remit
 Header Navigation Test  
     [Tags]  TC02
-    Kuvera Web Close Regulatory Disclosure 
     Header Navigation
 
 # Features sub headers navigation & goals - questionnaire
 Features Header Navigation Test
     [Tags]  TC03
-    Kuvera Web Close Regulatory Disclosure 
     Feature Sub Header Navigation
