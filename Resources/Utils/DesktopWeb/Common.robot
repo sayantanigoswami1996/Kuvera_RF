@@ -64,6 +64,7 @@ Switch To Window Verify Title And Close
     Switch Window  locator=NEW
     Title Should Be  ${title}
     Close Window
+    Sleep  2s
     Switch Window  browser=Kuvera
 
 Switch To Frame
@@ -154,7 +155,7 @@ Feature Sub Header Navigation
     ${savesTaxes}  Get Json Values  $.MenuHeaders.h4.fsh5  Resources/TestData/Headers.json
     ${consolidate}  Get Json Values  $.MenuHeaders.h4.fsh6  Resources/TestData/Headers.json
     Log To Console  ${setAGoal}  
-    FOR  ${k}  IN RANGE  1  7
+    FOR  ${k}  IN RANGE  1  8
         Log To Console  InsideForLoop
         Wait For Element Visibility  ${KU_W_featureLink}
         Click Element  ${KU_W_featureLink} 
@@ -167,7 +168,7 @@ Feature Sub Header Navigation
         ...    ELSE IF  ['${subHeaders}'] == ${manageAccount}  Verify PreLogin Manage Account Page
         ...    ELSE IF  ['${subHeaders}'] == ${taxHarvesting}  Verify PreLogin Tax Harvesting Page
         ...    ELSE IF  ['${subHeaders}'] == ${savesTaxes}  Verify PreLogin Save Taxes Page
-        ...    ELSE IF  ['${subHeaders}'] == ${consolidate}  Log To Console  PENDING
+        ...    ELSE IF  ['${subHeaders}'] == ${consolidate}  Verify PreLogin Consolidate Page
         ...    ELSE  Log To Console  Test
     END
     

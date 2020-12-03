@@ -1,7 +1,5 @@
 *** Settings ***
 
-Library     JSONLibrary
-Library     JsonValidator
 Library     SeleniumLibrary
 Resource    ../../../AppLocators/DesktopWeb/MenuNavigationLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/CommonAppLocators.robot
