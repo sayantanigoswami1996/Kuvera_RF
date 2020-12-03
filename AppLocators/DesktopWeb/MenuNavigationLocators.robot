@@ -31,10 +31,14 @@ ${e_loan_startSaveCheckEligibiliyText} =  Check your eligibility
 @{e_insure_treatmentListItem} =  COVID-19  Cancer care  Open heart surgery  Knee replacement
 @{e_insure_policyListItem} =  Policy wording simple.  Premium cost low.  Year round support.
 
+# Insure List
+@{e_insure_treatmentListItem} =  COVID-19  Cancer care  Open heart surgery  Knee replacement
+@{e_insure_policyListItem} =  Policy wording simple.  Premium cost low.  Year round support.
+
 # Insure Navigation Page Variables
 ${e_insure_headerTitleText} =  Fair and friendly health insurance is here
-${e_insure_headerMsgText} =  ₹50L cover starting at ₹900/month*. Secure your loved ones today.
-${e_insure_T&CText} =  *T&C apply
+${e_insure_headerMsgText} =  ₹50L cover starting at ₹900/month. Secure your loved ones today. T&C apply
+${e_insure_T&CText} =  T&C apply
 ${e_insure_checkPremiumBtnText} =  Check premium
 ${e_insure_costDetailsHeaderText} =  We understand cost
 ${e_insure_treatmentTitleText} =  Treatment
@@ -104,13 +108,13 @@ ${e_feature_sg2_goalDuration} =  5
 ${e_feature_sg2_investUpfront} =  1000
 # Goal - Save Tax
 ${e_feature_sg3_userAge} =  25
-${e_feature_sg3_montlyInvest} =  4200000
+${e_feature_sg3_montlyInvest} =  3000
 ${e_feature_sg3_goalDuration} =  7
 ${e_feature_sg3_investUpfront} =  500
 # Goal - Retire Easy
 ${e_feature_sg4_userAge} =  25
 ${e_feature_sg4_montlyExpense} =  57000
-${e_feature_sg4_retireAge} =  50
+${e_feature_sg4_retireAge} =  60
 ${e_feature_sg4_investUpfront} =  3800
 # Goal - 25 Anniversay
 ${e_feature_sg5_userAge} =  25
@@ -302,59 +306,53 @@ ${KU_W_startSaveCheckEligibilityBtn} =  xpath=//button[@class='button-primary b-
 ${KU_W_insureLink} =  xpath=//a[contains(text(),'Insure')]
 ${KU_W_insureHeaderTitle} =  xpath=(//div[@class='b-health-insurance-landing__title--main'])[1]
 ${KU_W_insureHeaderMsg} =  xpath=(//div[@class='b-health-insurance-landing__title--text'])[1]
-${KU_W_termsAndConditions} =  xpath=//span[@class='b-health-insurance-landing__term-condition']
-${KU_W_checkPremiumBtn1} =  xpath=(//button[@class='button-primary'])[1]
-${KU_W_costDetailsHeaderTitle} =  xpath=//div[@class='b-health-insurance-landing__cost-details--table__text']
-${KU_W_treatmentTitle} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__treatment'])[1]
-${KU_W_treatmentCostTitle} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__cost'])[1]
-
-${KU_W_covid19Cost} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__cost'])[2]
-${KU_W_cancerCareCost} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__cost'])[3]
-${KU_W_OpenHeartSurgeryCost} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__cost'])[4]
-${KU_W_kneeReplacementCost} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__cost'])[5]
-
-${KU_W_covid19Title} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__treatment'])[2]
-${KU_W_cancerCareTitle} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__treatment'])[3]
-${KU_W_heartSurgeryTitle} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__treatment'])[4]
-${KU_W_kneeReplacmentTitle} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__treatment'])[5]
-
-${KU_W_covid19Image} =  xpath=(//img[@class='b-health-insurance-landing__cost-details--img'])[1] 
-${KU_W_cancerCareImage} =  xpath=(//img[@class='b-health-insurance-landing__cost-details--img'])[2] 
-${KU_W_openHeartSurgeryImage} =  xpath=(//img[@class='b-health-insurance-landing__cost-details--img'])[3] 
-${KU_W_kneeReplacementImage} =  xpath=(//img[@class='b-health-insurance-landing__cost-details--img'])[4] 
-
-${KU_W_groupHealthInsuranceTitle} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--brief']/div)[1] 
-${KU_W_grpHealthInsurranceSubTitle} =  xpath=(//div[@class='b-health-insurance-landing__title--text'])[2]
-${KU_W_insurancePolicyLists} =  xpath=//ul[@class='b-health-insurance-landing__policy-list']/li 
-
-${KU_W_covid19CardTitle} =  xpath=(//div[@class='b-feature-card__title'])[1]
-${KU_W_covid19Msg} =  xpath=(//div[@class='b-feature-card__msg'])[1]
-${KU_W_roomrentCardTitle} =  xpath=(//div[@class='b-feature-card__title'])[2] 
-${KU_W_roomrentMsg} =  xpath=(//div[@class='b-feature-card__msg'])[2] 
-${KU_W_treatmentCappingCardTitle} =  xpath=(//div[@class='b-feature-card__title'])[3] 
-${KU_W_treatmentCappingMsg} =  xpath=(//div[@class='b-feature-card__msg'])[3] 
-${KU_W_copaymentCardTitle} =  xpath=(//div[@class='b-feature-card__title'])[4] 
-${KU_W_copaymentMsg} =  xpath=(//div[@class='b-feature-card__msg'])[4]
-${KU_W_30daySettlemenCardTitle} =  xpath=(//div[@class='b-feature-card__title'])[5] 
-${KU_W_30daySettlemenMsg} =  xpath=(//div[@class='b-feature-card__msg'])[5]
-${KU_W_ayushCoveredCardTitle} =  xpath=(//div[@class='b-feature-card__title'])[6] 
-${KU_W_ayushCoveredMsg} =  xpath=(//div[@class='b-feature-card__msg'])[6] 
-${KU_W_lowWaitingPeriodCardTitle} =  xpath=(//div[@class='b-feature-card__title'])[7] 
-${KU_W_lowWaitingPeriodMsg} =  xpath=(//div[@class='b-feature-card__msg'])[7]
-${KU_W_dailyExpenseCardTitle} =  xpath=(//div[@class='b-feature-card__title'])[8]
-${KU_W_dailyExpenseMsg} =  xpath=(//div[@class='b-feature-card__msg'])[8]
-${KU_W_dedicatedSupportCardTitle} =  xpath=(//div[@class='b-feature-card__title'])[9] 
-${KU_W_dedicatedSupportMsg} =  xpath=(//div[@class='b-feature-card__msg'])[9]
-${KU_W_sliderButton} =  xpath=//div[@class='b-slide-card-list__btns__next b-slide-card-list__btns__next--active']
-
-${KU_W_trustedPartnerTitle} =  xpath=(//div[@class='b-health-insurance-landing__insurance-brief__row--items__content']/div)[1] 
-${KU_W_trustedPartnerSubTitle} =  xpath=(//div[@class='b-health-insurance-landing__insurance-brief--subheading'])[1] 
-${KU_W_flexibleCoverageTitle} =  xpath=(//div[@class='b-health-insurance-landing__insurance-brief__row--items__content']/div)[3]
-${KU_W_flexibleCoverageSubtitle} =  xpath=(//div[@class='b-health-insurance-landing__insurance-brief--subheading'])[2] 
-${KU_W_saveTaxTitle} =  xpath=(//div[@class='b-health-insurance-landing__title--main'])[6]
-${KU_W_saveTaxSubTitle} =  xpath=(//div[@class='b-health-insurance-landing__insurance-brief--subheading'])[3]
-${KU_W_healthCoverTitle} =  xpath=//div[@class='b-health-insurance-landing__healthcare-cover--wrapper']/div 
-${KU_W_checkPremiumBtn2} =  xpath=(//button[@class='button-primary'])[2]
+${KU_W_insure_termsAndConditions} =  xpath=//span[@class='b-health-insurance-landing__term-condition']
+${KU_W_insure_checkPremiumBtn1} =  xpath=(//button[@class='button-primary'])[1]
+${KU_W_insure_costDetailsHeaderTitle} =  xpath=//div[@class='b-health-insurance-landing__cost-details--table__text']
+${KU_W_insure_treatmentTitle} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__treatment'])[1]
+${KU_W_insure_treatmentCostTitle} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__cost'])[1]
+${KU_W_insure_covid19Cost} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__cost'])[2]
+${KU_W_insure_cancerCareCost} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__cost'])[3]
+${KU_W_insure_OpenHeartSurgeryCost} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__cost'])[4]
+${KU_W_insure_kneeReplacementCost} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__cost'])[5]
+${KU_W_insure_covid19Title} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__treatment'])[2]
+${KU_W_insure_cancerCareTitle} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__treatment'])[3]
+${KU_W_insure_heartSurgeryTitle} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__treatment'])[4]
+${KU_W_insure_kneeReplacmentTitle} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__treatment'])[5]
+${KU_W_insure_covid19Image} =  xpath=(//img[@class='b-health-insurance-landing__cost-details--img'])[1] 
+${KU_W_insure_cancerCareImage} =  xpath=(//img[@class='b-health-insurance-landing__cost-details--img'])[2] 
+${KU_W_insure_openHeartSurgeryImage} =  xpath=(//img[@class='b-health-insurance-landing__cost-details--img'])[3] 
+${KU_W_insure_kneeReplacementImage} =  xpath=(//img[@class='b-health-insurance-landing__cost-details--img'])[4] 
+${KU_W_insure_groupHealthInsuranceTitle} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--brief']/div)[1] 
+${KU_W_insure_grpHealthInsurranceSubTitle} =  xpath=(//div[@class='b-health-insurance-landing__title--text'])[2]
+${KU_W_insure_insurancePolicyLists} =  xpath=//ul[@class='b-health-insurance-landing__policy-list']/li 
+${KU_W_insure_covid19CardTitle} =  xpath=(//div[@class='b-feature-card__title'])[1]
+${KU_W_insure_covid19Msg} =  xpath=(//div[@class='b-feature-card__msg'])[1]
+${KU_W_insure_roomrentCardTitle} =  xpath=(//div[@class='b-feature-card__title'])[2] 
+${KU_W_insure_roomrentMsg} =  xpath=(//div[@class='b-feature-card__msg'])[2] 
+${KU_W_insure_treatmentCappingCardTitle} =  xpath=(//div[@class='b-feature-card__title'])[3] 
+${KU_W_insure_treatmentCappingMsg} =  xpath=(//div[@class='b-feature-card__msg'])[3] 
+${KU_W_insure_copaymentCardTitle} =  xpath=(//div[@class='b-feature-card__title'])[4] 
+${KU_W_insure_copaymentMsg} =  xpath=(//div[@class='b-feature-card__msg'])[4]
+${KU_W_insure_30daySettlemenCardTitle} =  xpath=(//div[@class='b-feature-card__title'])[5] 
+${KU_W_insure_30daySettlemenMsg} =  xpath=(//div[@class='b-feature-card__msg'])[5]
+${KU_W_insure_ayushCoveredCardTitle} =  xpath=(//div[@class='b-feature-card__title'])[6] 
+${KU_W_insure_ayushCoveredMsg} =  xpath=(//div[@class='b-feature-card__msg'])[6] 
+${KU_W_insure_lowWaitingPeriodCardTitle} =  xpath=(//div[@class='b-feature-card__title'])[7] 
+${KU_W_insure_lowWaitingPeriodMsg} =  xpath=(//div[@class='b-feature-card__msg'])[7]
+${KU_W_insure_dailyExpenseCardTitle} =  xpath=(//div[@class='b-feature-card__title'])[8]
+${KU_W_insure_dailyExpenseMsg} =  xpath=(//div[@class='b-feature-card__msg'])[8]
+${KU_W_insure_dedicatedSupportCardTitle} =  xpath=(//div[@class='b-feature-card__title'])[9] 
+${KU_W_insure_dedicatedSupportMsg} =  xpath=(//div[@class='b-feature-card__msg'])[9]
+${KU_W_insure_sliderButton} =  xpath=//div[@class='b-slide-card-list__btns__next b-slide-card-list__btns__next--active']
+${KU_W_insure_trustedPartnerTitle} =  xpath=(//div[@class='b-health-insurance-landing__insurance-brief__row--items__content']/div)[1] 
+${KU_W_insure_trustedPartnerSubTitle} =  xpath=(//div[@class='b-health-insurance-landing__insurance-brief--subheading'])[1] 
+${KU_W_insure_flexibleCoverageTitle} =  xpath=(//div[@class='b-health-insurance-landing__insurance-brief__row--items__content']/div)[3]
+${KU_W_insure_flexibleCoverageSubtitle} =  xpath=(//div[@class='b-health-insurance-landing__insurance-brief--subheading'])[2] 
+${KU_W_insure_saveTaxTitle} =  xpath=(//div[@class='b-health-insurance-landing__title--main'])[6]
+${KU_W_insure_saveTaxSubTitle} =  xpath=(//div[@class='b-health-insurance-landing__insurance-brief--subheading'])[3]
+${KU_W_insure_healthCoverTitle} =  xpath=//div[@class='b-health-insurance-landing__healthcare-cover--wrapper']/div 
+${KU_W_insure_checkPremiumBtn2} =  xpath=(//button[@class='button-primary'])[2]
 
 # Remit Page    
 ${KU_W_remit_Link} =  xpath=//a[contains(text(),'Remit')]

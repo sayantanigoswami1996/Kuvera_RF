@@ -25,3 +25,4 @@ Verify Create My Goal Questionnaire
     Verify Question And Enter Input  ${KU_W_feature_sg_Q5}  ${query5}  ${KU_W_feature_sg_goalDurationTxt}  ${e_feature_sg8_goalDuration}
     Verify Question And Enter Input  ${KU_W_feature_sg_Q6}  ${query6}  ${KU_W_feature_sg_investUpfrontTxt}  ${e_feature_sg8_investUpfront}
     Verify Recommendation And Navigation  ${KU_W_feature_sg_stableIncome}  ${KU_W_feature_sg_haveFds}  ${KU_W_feature_sg_haveEquityInvestments} 
+    Go Back

@@ -79,12 +79,11 @@ Get List Count
 Kuvera Web Close Regulatory Disclosure 
     Wait Until Element Is Visible  ${KU_W_regulatoryDisclosure}
     Verify Element And Text  ${KU_W_regulatoryDisclosure}  ${e_regulatoryDisclosure}
-    Wait Until Element Is Visible  ${KU_W_close}
-    Click Element  ${KU_W_close}
-    
+    Wait Until Element Is Not Visible  ${KU_W_close}  timeout=12s
+
 Close Hello Bar
-    Sleep  15s
-    Wait Until Element Is Visible  ${KU_W_bannerFrame}  timeout=30
+    Sleep  10s
+    Wait Until Element Is Visible  ${KU_W_bannerFrame}  timeout=40
     Switch To Frame  ${KU_W_bannerFrame}
     Wait For Element Visibility  ${KU_W_bannerCloseBtn}
     Click Element  ${KU_W_bannerCloseBtn}
@@ -103,7 +102,13 @@ Press Enter Key
 Clear Text Field
     [Arguments]  ${field}
     Sleep  500ms
-    Press Keys  ${field}  COMMAND+A  DELETE
+    #Press Keys  ${field}  COMMAND+A  DELETE
+    ${fieldText} =  Get Value  ${field}
+    ${fieldTextLen} =  Get Length  ${fieldText} 
+    #Log To Console  ${fieldText}
+    #Log To Console  ${fieldTextLen}
+    Run Keyword If    """${fieldText}""" != ''
+    ...     Repeat Keyword  ${fieldTextLen+1}  Press Keys  ${field}  \ue003
 
 Verify Login Page
     Wait For Element Visibility  ${KU_W_loginPageTitle}
@@ -124,53 +129,10 @@ Verify Google Play & Apple Store Icons
     Verify Page Contains Image  ${KU_W_apple_image}
 
 Verify Language Switch Login And Signup Link
+    Wait For Element Visibility  ${KU_W_langSwitch}
     Verify Page Contains Element  ${KU_W_langSwitch}
     Verify Element And Text  ${KU_W_login}  ${e_login}
     Verify Element And Text  ${KU_W_signup}  ${e_signup}
-
-Header Navigation
-    ${invest}  Get Json Values  $.MenuHeaders.h0  Resources/TestData/Headers.json
-    ${loans}  Get Json Values  $.MenuHeaders.h1  Resources/TestData/Headers.json
-    ${insure}  Get Json Values  $.MenuHeaders.h2  Resources/TestData/Headers.json
-    ${remit}  Get Json Values  $.MenuHeaders.h3  Resources/TestData/Headers.json
-    ${features}  Get Json Values  $.MenuHeaders.h4  Resources/TestData/Headers.json
-    ${elem} =  Get Element Count  ${KU_W_headers}
-    FOR  ${j}  IN RANGE  1  ${elem}+1
-        ${headers} =  Get Text  xpath=//div[@class='b-header__content__middle']/a[${j}]
-        Log to console  ${headers}
-        Run keyword If  ['${headers}'] == ${invest}  Log To Console  PENDING
-        ...    ELSE IF  ['${headers}'] == ${loans}   Verify PreLogin Loans Page
-        ...    ELSE IF  ['${headers}'] == ${insure}  Verify PreLogin Insure Page
-        ...    ELSE IF  ['${headers}'] == ${remit}  Verify PreLogin Remit Page
-        ...    ELSE  Feature Sub Header Navigation
-    END
-
-Feature Sub Header Navigation
-    Log To Console  InFeatures
-    ${setAGoal}  Get Json Values  $.MenuHeaders.h4.fsh0  Resources/TestData/Headers.json
-    ${tradeSmart}  Get Json Values  $.MenuHeaders.h4.fsh1  Resources/TestData/Headers.json
-    ${familyAccount}  Get Json Values  $.MenuHeaders.h4.fsh2  Resources/TestData/Headers.json
-    ${manageAccount}  Get Json Values  $.MenuHeaders.h4.fsh3  Resources/TestData/Headers.json
-    ${taxHarvesting}  Get Json Values  $.MenuHeaders.h4.fsh4  Resources/TestData/Headers.json
-    ${savesTaxes}  Get Json Values  $.MenuHeaders.h4.fsh5  Resources/TestData/Headers.json
-    ${consolidate}  Get Json Values  $.MenuHeaders.h4.fsh6  Resources/TestData/Headers.json
-    Log To Console  ${setAGoal}  
-    FOR  ${k}  IN RANGE  1  8
-        Log To Console  InsideForLoop
-        Wait For Element Visibility  ${KU_W_featureLink}
-        Click Element  ${KU_W_featureLink} 
-        Sleep  3s
-        ${subHeaders} =  Get Text  xpath=//div[@class='b-header__sub-content__feature']/a[${k}]
-        Log to console  ${subHeaders}
-        Run keyword If  ['${subHeaders}'] == ${setAGoal}  Verify PreLogin Set A Goal Page
-        ...    ELSE IF  ['${subHeaders}'] == ${tradeSmart}   Verify PreLogin TradeSmart Page
-        ...    ELSE IF  ['${subHeaders}'] == ${familyAccount}  Verify PreLogin Family Account Page 
-        ...    ELSE IF  ['${subHeaders}'] == ${manageAccount}  Verify PreLogin Manage Account Page
-        ...    ELSE IF  ['${subHeaders}'] == ${taxHarvesting}  Verify PreLogin Tax Harvesting Page
-        ...    ELSE IF  ['${subHeaders}'] == ${savesTaxes}  Verify PreLogin Save Taxes Page
-        ...    ELSE IF  ['${subHeaders}'] == ${consolidate}  Verify PreLogin Consolidate Page
-        ...    ELSE  Log To Console  Test
-    END
-    
+        
 Close Web Application
     Close All Browser

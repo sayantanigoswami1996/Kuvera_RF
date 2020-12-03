@@ -10,13 +10,13 @@ Resource    ../../../Resources/Utils/DesktopWeb/Common.robot
 Verify PreLogin Loans Page
     Click Element  ${KU_W_loanLink}
     Verify Language Switch Login And Signup Link
-    Wait For Element Visbility  ${KU_W_loanHeaderTitle}  
+    Wait For Element Visibility  ${KU_W_loanHeaderTitle}  
     Verify Element And Text  ${KU_W_loanHeaderTitle}  ${e_loan_headerTitleText}
     Verify Element And Text  ${KU_W_loanHeaderMsg}  ${e_loan_headerMsgText} 
     Verify Element And Text  ${KU_W_loanCheckEligibility}  ${e_loan_checkElibilityBtnText} 
     Click Element  ${KU_W_loanCheckEligibility}
     Verify Login Page
-    Wait For Element Visbility  ${KU_W_loanCalculatorTitle}     
+    Wait For Element Visibility  ${KU_W_loanCalculatorTitle}     
     Scroll Untill View  ${KU_W_loanCalculatorTitle}
     Verify Element and Text  ${KU_W_loanCalculatorTitle}  ${e_loan_calculatorTitleText}
     Page Should Contain  ${e_loan_calculatorSubTitleText} 
@@ -39,18 +39,18 @@ Verify PreLogin Loans Page
     Verify Element and Text  ${KU_W_payForWhatYouUseMsg}  ${e_loan_payForWhatYouUseMsgText}
       
     # Instant Approval 
-    Wait For Element Visbility  ${KU_W_loanRedemptionTitle} 
+    Wait For Element Visibility  ${KU_W_loanRedemptionTitle} 
     Verify Element and Text  ${KU_W_loanRedemptionTitle}   ${e_loan_redemptionTitleText}
     Verify Element and Text  ${KU_W_loanRedemptionMsg}   ${e_loan_redemptionMsgText}
 
     # Super Affordable
-    Wait For Element Visbility  ${KU_W_saveSuperAffordableTitle}  
+    Wait For Element Visibility  ${KU_W_saveSuperAffordableTitle}  
     Scroll Untill View  ${KU_W_saveSuperAffordableTitle}
     Verify Element and Text  ${KU_W_saveSuperAffordableTitle}  ${e_loan_saveSuperAffordableTitleText} 
     Verify Element and Text  ${KU_W_saveSuperAffordableMsg}  ${e_loan_saveSuperAffordableMsgText}
 
     # Easy Start Saver
-    Wait For Element Visbility  ${KU_W_startSaveTitle}  
+    Wait For Element Visibility  ${KU_W_startSaveTitle}  
     Scroll Untill View  ${KU_W_startSaveTitle} 
     Verify Element and Text  ${KU_W_startSaveTitle}   ${e_loan_startSaveTitleText} 
     Verify Element and Text  ${KU_W_startSaveMsg}   ${e_loan_startSaveMsgText}  
@@ -64,7 +64,7 @@ Verify PreLogin Loans Page
     Verify Element and Text  ${KU_W_image4Description}  ${e_loan_startSaveImage4Text}
 
     # Get Loan Against MF
-    Wait For Element Visbility  ${KU_W_getLoanAgainstMF}  
+    Wait For Element Visibility  ${KU_W_getLoanAgainstMF}  
     Scroll Untill View   ${KU_W_getLoanAgainstMF}
     Verify Element and Text  ${KU_W_getLoanAgainstMF}   ${e_loan_getLoanAgainstMFText} 
     Verify Element and Text  ${KU_W_getLoanAgainstMFMsg}   ${e_loan_getLoanAgainstMFMsgText}
