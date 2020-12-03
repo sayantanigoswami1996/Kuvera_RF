@@ -11,8 +11,8 @@ Verify Question Title
     ${expectedTitle} =  Convert To String    ${text}
     ${actualTitle1} =  Replace String  ${actualTitle}  ’  '
     ${expectedTitle1} =  Replace String  ${expectedTitle}  ’  '
-    Should be equal  ['${actualTitle1}']  ${expectedTitle1}
-
+    ${expectedTitle2} =  Replace String  ${expectedTitle1}  â€™  '
+    Should be equal  ['${actualTitle1}']  ${expectedTitle2}
 
 Verify PreLogin Set A Goal Page
     ${goal1}  Get Json Values  $.Goals.g1  Resources/TestData/Goals.json
@@ -37,6 +37,7 @@ Verify PreLogin Set A Goal Page
     FOR  ${j}  IN RANGE  1   ${listCount}+1
         Sleep  500ms
         ${goalName} =  Get Text  xpath=//div[@class='cards']/a[${j}]/p
+        Log To Console  ${goalName}
         Run keyword If  ['${goalName}'] == ${goal1}  Verify Own A Home Questionnaire
         ...    ELSE IF  ['${goalName}'] == ${goal2}  Verify Buy A Car Questionnaire
         ...    ELSE IF  ['${goalName}'] == ${goal3}  Verify Save Tax Questionnaire

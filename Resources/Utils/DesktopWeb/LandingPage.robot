@@ -29,6 +29,7 @@ Header Navigation
     END
 
 Feature Sub Header Navigation
+    Log To Console  Features
     ${setAGoal}  Get Json Values  $.MenuHeaders.h4.fsh0  Resources/TestData/Headers.json
     ${tradeSmart}  Get Json Values  $.MenuHeaders.h4.fsh1  Resources/TestData/Headers.json
     ${familyAccount}  Get Json Values  $.MenuHeaders.h4.fsh2  Resources/TestData/Headers.json
@@ -41,6 +42,7 @@ Feature Sub Header Navigation
         Click Element  ${KU_W_featureLink} 
         Sleep  1s
         ${subHeaders} =  Get Text  xpath=//div[@class='b-header__sub-content__feature']/a[${k}]
+        Log To Console  ${subHeaders}
         Run keyword If  ['${subHeaders}'] == ${setAGoal}  Verify PreLogin Set A Goal Page
         ...    ELSE IF  ['${subHeaders}'] == ${tradeSmart}   Verify PreLogin TradeSmart Page
         ...    ELSE IF  ['${subHeaders}'] == ${familyAccount}  Verify PreLogin Family Account Page 
