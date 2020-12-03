@@ -12,8 +12,6 @@ Suite Teardown  Close All Browsers
 # Langin Page widgets verfication
 Landing Page Widgets Verification Test 
     [Tags]  TC01
-    Kuvera Web Close Regulatory Disclosure 
-    Close Hello Bar
     Verify Widgets
 
 # Header navigation - Insure, Loans, Remit
