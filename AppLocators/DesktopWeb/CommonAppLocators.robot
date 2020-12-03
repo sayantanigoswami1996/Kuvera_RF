@@ -63,6 +63,14 @@ ${KU_W_logo} =  xpath=//*[@class='b-header__content__logo']
 ${KU_W_close} =  xpath=//button[@class='button-primary b-regulatory-disclosure__btn']
 ${KU_W_bannerFrame} =  xpath=//iframe[contains(@class,'hellobar hb-animateIn')]
 ${KU_W_bannerCloseBtn} =  xpath=(//*[@class='icon-close'])[2]
+${KU_W_Login_emailLabel} =  xpath=//label[contains(text(),'Email Address')]
+${KU_W_Login_emailTxt} =  id=email
+${KU_W_Login_passwordLabel} =  xpath=//label[contains(text(),'Password')]
+${KU_W_Login_emailLabel} =  id=password
+${KU_W_Login_forgotPasswordLink} =  xpath=//span[@class='link forgot-password']
+${KU_W_Login_loginButton} =  xpath=//button[@class='button-primary']
+${KU_W_Login_googleSigninButton} =  xpath=//button[@class='btn in-btn-google']
+${KU_W_Login_fbSigninButton} =  xpath=//button[@class='btn in-btn-fb']
 ${KU_W_menu} =  xpath=//*[@class='b-header__content']
 ${KU_W_headers} =  xpath=//*[@class='b-header__content__middle']/a
 ${KU_W_exploreELSS} =  xpath=//button[contains(text(),'Explore ELSS funds')]

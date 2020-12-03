@@ -2,6 +2,8 @@
 
 Resource    ../../Resources/Utils/DesktopWeb/Common.robot
 Resource    ../../Resources/Utils/DesktopWeb/LandingPage.robot
+Resource    ../../Resources/Utils/DesktopWeb/Login.robot
+Resource    ../../Resources/Utils/DesktopWeb/Signup.robot
 Resource    ../../Resources/Utils/DesktopWeb/Loans.robot
 Resource    ../../Resources/Utils/DesktopWeb/Insure.robot
 Resource    ../../Resources/Utils/DesktopWeb/Remit.robot

@@ -85,7 +85,7 @@ Kuvera Web Close Regulatory Disclosure
     Click Element  ${KU_W_close}
 
 Close Hello Bar
-    Sleep  10s
+    Sleep  15s
     Wait Until Element Is Visible  ${KU_W_bannerFrame}  timeout=40
     Switch To Frame  ${KU_W_bannerFrame}
     Wait For Element Visibility  ${KU_W_bannerCloseBtn}
@@ -112,15 +112,6 @@ Clear Text Field
     #Log To Console  ${fieldTextLen}
     Run Keyword If    """${fieldText}""" != ''
     ...     Repeat Keyword  ${fieldTextLen+1}  Press Keys  ${field}  \ue003
-
-Verify Login Page
-    Wait For Element Visibility  ${KU_W_loginPageTitle}
-    Verify Element And Text  ${KU_W_loginPageTitle}  ${e_loginPageTitle}
-    Go Back
-
-Verify Signup Page
-    Wait For Element Visibility  ${KU_W_signupPageTitle}
-    Verify Element And Text  ${KU_W_signupPageTitle}  ${e_signupPageTitle}
 
 Kuvera Web Logo Click
     Wait For Element Visibility  ${KU_W_logo}
