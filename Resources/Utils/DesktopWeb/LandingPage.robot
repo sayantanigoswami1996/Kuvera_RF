@@ -35,19 +35,131 @@ Verify Mutual Funds Widgets
     Verify Page Contains Element  ${KU_W_faqbot_icon}
 
 Verify Features Widgets
-  Scroll Element Into View  ${KU_W_exploreELSS}
-  Verify Element And Text  ${KU_W_exploreELSS}  ${e_exploreELSSfundsBtn}
-  Verify Element And Text  ${KU_W_startHarvest}  ${e_startHarvestingBtn} 
-  Verify Element And Text  ${KU_W_switchToday}  ${e_switchTodayBtn}
-  Click Element  ${KU_W_next_button} 
-  Sleep  1s
-  Verify Element And Text  ${KU_W_upgrade_familyAccount}    ${e_upgradeFamilyAccountBtn}
-  Verify Element And Text  ${KU_W_consolidate_track}  ${e_consolidateTrackBtn}
-  Verify Element And Text  ${KU_W_manage_today}  ${e_manageTodayBtn}
-  Click Element  ${KU_W_next_button} 
-  Sleep  1s
-  Verify Element And Text  ${KU_W_set_a_goal}  ${e_setAGoalBtn} 
-  Verify Element And Text  ${KU_W_send_money}  ${e_sendMoneyBtn}
+    # Tax Saver
+    Scroll Element Into View  ${KU_W_exploreELSS}
+    Verify Element And Text  ${KU_W_exploreELSS}  ${e_exploreELSSfundsBtn}
+    Wait For Element Visibility   ${KU_W_exploreELSS}
+    Click Element  ${KU_W_exploreELSS}
+    Wait For Element Visibility   ${KU_W_searchBarForFunds}
+    Verify Page Contains Element  ${KU_W_searchBarForFunds}
+    Go Back
+    Verify Element And Text  ${KU_W_ELSS_learnMoreLink}  ${e_learnMoreLinkText}
+    Sleep  2s
+    Wait For Element Visibility  ${KU_W_ELSS_learnMoreLink}
+    Click Element  ${KU_W_ELSS_learnMoreLink}
+    Switch To Window Verify Title And Close   ${e_feature_st_pageTitleText}
+    Sleep  2s
+    # Tax Harvesting
+    Verify Element And Text  ${KU_W_startHarvest}  ${e_startHarvestingBtn} 
+    Wait For Element Visibility   ${KU_W_startHarvest}
+    Click Element   ${KU_W_startHarvest} 
+    Wait For Element Visibility  ${KU_W_feature_th_screenTitle}   
+    Verify Element And Text  ${KU_W_feature_th_screenTitle}  ${e_feature_th_TitleText} 
+    Go Back
+    Verify Element And Text  ${KU_W_harvest_learnMoreLink}  ${e_learnMoreLinkText}
+    Sleep  2s
+    Wait For Element Visibility  ${KU_W_harvest_learnMoreLink}
+    Click Element  ${KU_W_harvest_learnMoreLink}
+    Switch To Window Verify Title And Close  ${e_feature_th_learnMoreTitle}
+    Sleep  2s
+    # Switch Today
+    Verify Element And Text  ${KU_W_switchToday}  ${e_switchTodayBtn}
+    Wait For Element Visibility  ${KU_W_switchToday}
+    Click Element  ${KU_W_switchToday}
+    Wait For Element Visibility  ${KU_W_feature_ts_title} 
+    Verify Element And Text  ${KU_W_feature_ts_title}  ${e_feature_ts_titleText}
+    Go Back
+    Verify Element And Text  ${KU_W_switchToday_learnMoreLink}  ${e_learnMoreLinkText}
+    Sleep  2s
+    Wait For Element Visibility  ${KU_W_switchToday_learnMoreLink}
+    Click Element  ${KU_W_switchToday_learnMoreLink}
+    Switch To Window Verify Title And Close  ${e_switchTodayLinkTitle} 
+    Sleep  2s
+    Wait For Element Visibility  ${KU_W_next_button} 
+    Click Element  ${KU_W_next_button} 
+    # Family Account
+    Sleep  1s
+    Verify Element And Text  ${KU_W_upgrade_familyAccount}    ${e_upgradeFamilyAccountBtn}
+    Wait For Element Visibility  ${KU_W_upgrade_familyAccount}
+    Click Element  ${KU_W_upgrade_familyAccount}
+    Wait For Element Visibility  ${KU_W_feature_fa_screenTitle}
+    Verify Element And Text  ${KU_W_feature_fa_screenTitle}  ${e_feature_fa_screenTitle}
+    Go Back
+    Verify Element And Text  ${KU_W_familyAccount_learnMoreLink}  ${e_learnMoreLinkText}
+    Sleep  2s
+    Wait For Element Visibility  ${KU_W_familyAccount_learnMoreLink}
+    Click Element  ${KU_W_familyAccount_learnMoreLink}
+    Switch To Window Verify Title And Close  ${e_familyAccountLinkTitle} 
+    Sleep  2s
+    Wait For Element Visibility  ${KU_W_next_button}
+    Click Element  ${KU_W_next_button}
+    Sleep  1s
+    # Automated Tracking
+    Verify Element And Text  ${KU_W_consolidate_track}  ${e_consolidateTrackBtn}
+    Wait For Element Visibility  ${KU_W_consolidate_track}
+    Click Element  ${KU_W_consolidate_track}
+    Verify Login Page
+    Sleep  1s
+    Wait For Element Visibility  ${KU_W_next_button}
+    Click Element  ${KU_W_next_button}
+    Sleep  1s
+    # Manage Today
+    Verify Element And Text  ${KU_W_manage_today}  ${e_manageTodayBtn}
+    Wait For Element Visibility  ${KU_W_manage_today}
+    Sleep  1s
+    Click Element  ${KU_W_manage_today}
+    Wait For Element Visibility  ${KU_W_feature_manageAccountTitle}  
+    Verify Element And Text  ${KU_W_feature_manageAccountTitle}   ${e_feature_manageAccountTitleText}
+    Go Back
+    Sleep  1s
+    Click Element  ${KU_W_next_button} 
+    Wait For Element Visibility  ${KU_W_manageToday_learnMoreLink}
+    Verify Element And Text  ${KU_W_manageToday_learnMoreLink}  ${e_learnMoreLinkText}
+    Sleep  1s
+    Wait For Element Visibility  ${KU_W_manageToday_learnMoreLink}
+    Click Element  ${KU_W_manageToday_learnMoreLink}
+    Switch To Window Verify Title And Close    ${e_manageTodayLinkTitle}  
+    Sleep  2s
+    Click Element  ${KU_W_next_button}
+    Sleep  1s
+    #  Set A Goal
+    Wait For Element Visibility  ${KU_W_set_a_goal}
+    Verify Element And Text  ${KU_W_set_a_goal}  ${e_setAGoalBtn} 
+    Wait For Element Visibility  ${KU_W_set_a_goal}
+    Sleep  1s
+    Click Element  ${KU_W_set_a_goal}
+    Wait For Element Visibility  ${KU_W_feature_sg_screenTitle}
+    Verify Element And Text  ${KU_W_feature_sg_screenTitle}  ${e_feature_sg_screenTitle}
+    Go Back
+    Sleep  1s
+    Click Element  ${KU_W_next_button} 
+    Wait For Element Visibility  ${KU_W_setAGoal_learnMoreLink}
+    Verify Element And Text  ${KU_W_setAGoal_learnMoreLink}  ${e_learnMoreLinkText}
+    Sleep  1s
+    Wait For Element Visibility  ${KU_W_setAGoal_learnMoreLink}
+    Click Element  ${KU_W_setAGoal_learnMoreLink}
+    Switch To Window Verify Title And Close   ${e_setAGoalLinkTitle}  
+    Sleep  2s
+    Click Element  ${KU_W_next_button}
+    Sleep  1s
+    # Send Money
+    Verify Element And Text  ${KU_W_send_money}  ${e_sendMoneyBtn}
+    Wait For Element Visibility  ${KU_W_send_money}
+    Sleep  1s
+    Click Element  ${KU_W_send_money}
+    Wait For Element Visibility  ${KU_W_remit_screenTitle}
+    Verify Element And Text  ${KU_W_remit_screenTitle}  ${e_remit_screenTitle}
+    Go Back
+    Sleep  1s
+    Click Element  ${KU_W_next_button} 
+    Click Element  ${KU_W_next_button} 
+    Wait For Element Visibility  ${KU_W_sendMoney_learnMoreLink}
+    Verify Element And Text  ${KU_W_sendMoney_learnMoreLink}  ${e_learnMoreLinkText}
+    Sleep  1s
+    Wait For Element Visibility  ${KU_W_sendMoney_learnMoreLink}
+    Click Element  ${KU_W_sendMoney_learnMoreLink}
+    Switch To Window Verify Title And Close  ${e_sendMoneyLinkTitle}
+    Sleep  2s
 
 Verify Summary Tab Widgets
     Verify Element And Text  ${KU_W_summary_msg}  ${e_summaryHeader}

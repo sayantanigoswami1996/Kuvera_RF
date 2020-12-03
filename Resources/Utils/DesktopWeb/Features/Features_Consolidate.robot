@@ -36,8 +36,8 @@ Verify PreLogin Consolidate Page
         Verify Element And Text  ${KU_W_feature_saveTaxGoalSubTitle}  ${e_feature_cd_saveTaxSubTitleText}  
         Verify Element And Text  ${KU_W_feature_saveTaxGoalDesc}  ${e_feature_cd_saveTaxGoalDescText}
         Verify Page Contains Link  ${KU_W_feature_ELSSLink}  ${e_feature_cd_ELSSLinkText}
-        Wait For Element Visibility    ${KU_W_feature_ELSSLink} 
         Sleep   2s
+        Wait For Element Visibility    ${KU_W_feature_ELSSLink} 
         Click Element  ${KU_W_feature_ELSSLink} 
         Switch To Window Verify Title And Close  ${e_feature_cd_ELSSTitleText}  
         Sleep   5s
@@ -54,8 +54,8 @@ Verify PreLogin Consolidate Page
         Verify Element And Text  ${KU_W_feature_beatInflationSubTitle}   ${e_feature_cd_beatInflationSubText}  
         Verify Element And Text  ${KU_W_feature_beatInflationDesc}  ${e_feature_cd_beatInflationDescText}
         Verify Page Contains Link  ${KU_W_feature_inflationLink}  ${e_feature_cd_inflationLinkText}
-        Wait For Element Visibility  ${KU_W_feature_inflationLink}
         Sleep   2s
+        Wait For Element Visibility  ${KU_W_feature_inflationLink}
         Click Element  ${KU_W_feature_inflationLink} 
         Switch To Window Verify Title And Close  ${e_feature_cd_inflationScreenTitle} 
         Sleep   5s
@@ -95,8 +95,8 @@ Verify PreLogin Consolidate Page
         Verify Element And Text  ${KU_W_feature_familyAcntSubTitle}  ${e_feature_cd_familyAcntSubTitleText}  
         Verify Element And Text  ${KU_W_feature_familyAcntDesc}  ${e_feature_cd_familyAcntDescText}
         Verify Element And Text  ${KU_W_feature_familyAcntBtn}  ${e_feature_cd_familyAcntBtnText} 
-        Wait For Element Visibility   ${KU_W_feature_familyAcntBtn}
         Sleep  1s
+        Wait For Element Visibility   ${KU_W_feature_familyAcntBtn}
         Click Button  ${KU_W_feature_familyAcntBtn}
         Verify Login Page
 
@@ -107,8 +107,8 @@ Verify PreLogin Consolidate Page
         Verify Element And Text  ${KU_W_feature_switchTodayDesc1}   ${e_feature_cd_switchTodayDesc1Text}
         Verify Element And Text  ${KU_W_feature_switchTodayDesc2}  ${e_feature_cd_switchTodayDesc2Text}
         Verify Element And Text  ${KU_W_feature_switchTodayBtn}   ${e_feature_cd_switchTodayBtnText}
-        Wait For Element Visibility   ${KU_W_feature_switchTodayBtn} 
         Sleep  1s
+        Wait For Element Visibility   ${KU_W_feature_switchTodayBtn} 
         Click Button  ${KU_W_feature_switchTodayBtn} 
         Verify Login Page
 
@@ -118,8 +118,8 @@ Verify PreLogin Consolidate Page
         Verify Element And Text  ${KU_W_feature_autdTrackingSubTitle}  ${e_feature_cd_autdTrackingSubTitleText} 
         Verify Element And Text  ${KU_W_feature_autdTrackingDesc}  ${e_feature_cd_autdTrackingDescText}
         Verify Element And Text  ${KU_W_feature_startImportingBtn}  ${e_feature_cd_startImportingBtnText} 
-        Wait For Element Visibility  ${KU_W_feature_startImportingBtn} 
-        Sleep  1s 
+        Sleep  1s
+        Wait For Element Visibility  ${KU_W_feature_startImportingBtn}  
         Click Button  ${KU_W_feature_startImportingBtn}  
         Verify Login Page
         
@@ -130,7 +130,7 @@ Verify PreLogin Consolidate Page
         Verify Element And Text  ${KU_W_feature_manageAcntDesc1}  ${e_feature_cd_manageAcntDesc1Text}
         Verify Element And Text  ${KU_W_feature_manageAcntDesc2}  ${e_feature_cd_manageAcntDesc2Text}
         Verify Element And Text  ${KU_W_feature_manageTodayBtn}   ${e_feature_cd_manageTodayBtnText}  
-        Wait For Element Visibility  ${KU_W_feature_manageTodayBtn} 
-        Sleep  1s 
+        Sleep  1s
+        Wait For Element Visibility  ${KU_W_feature_manageTodayBtn}  
         Click Button  ${KU_W_feature_manageTodayBtn}  
         Verify Login Page

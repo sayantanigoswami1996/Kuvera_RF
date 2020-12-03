@@ -1,6 +1,6 @@
 *** Variables *** 
 # Application Expected Values 'e_<variableName>'
-# Invest 
+# Invest
 ${e_invest_saveSmartTitleText} =   SaveSmart
 ${e_invest_saveSmartSubText} =  Invest in low risk liquid funds and redeem upto ₹2 lakhs instantly
 ${e_invest_giltFundsTitleText} =   Gilt Funds
@@ -16,7 +16,6 @@ ${e_invest_ELSSTaxSubText} =  Save up to ₹46.8k in taxes.
 ${e_invest_ELSS_screenText} =  ELSS
 ${e_invest_digitalGoldTitleText} =  Digital Gold
 ${e_invest_digitalGoldSubText} =  Diversify your portfolio with Gold.
-${e_invest_digiGold_screenText} =  Buy 24K 99.9% pure digital gold - easily and securely.
 ${e_invest_USETFTitleText} =   US ETF
 ${e_invest_USETFSubText} =  Go global with direct US ETF investing. We make it easy and cheap.
 ${e_invest_USETF_screenText} =  Other | Exchange-traded fund
@@ -56,7 +55,7 @@ ${e_invest_clearAllBtnTxt} =  Clear all
 ${e_invest_stock_searchBarTxt} =  Search stocks
 ${e_invest_stock_exploreMoreTxt} =  Explore more
 # Application Locator 'KU_<locatorName>'
-# Invest Navigation Page
+# Invest Landing Navigation Page
 ${KU_W_investLink} =  xpath=//a[@class='b-header__content__invest cursor-pointer']
 ${KU_W_saveSmartTitle} =  xpath=(//div[@class='k-cls b-invest-card']/h6)[1]
 ${KU_W_saveSmartSubTitle} =  xpath=(//div[@class='k-cls b-invest-card']/p)[1]
@@ -71,7 +70,6 @@ ${KU_W_ELSSTaxSaverSubTitle} =  xpath=(//div[@class='k-cls b-invest-card']/p)[4]
 ${KU_W_digitalGoldTitle} =  xpath=(//div[@class='k-cls b-invest-card']/h6)[5]
 ${KU_W_digitalGoldSubTitle} =  xpath=(//div[@class='k-cls b-invest-card']/p)[5]
 ${KU_W_goldIconImage} =  xpath=(//div[@class='k-cls b-invest-card']/img)[2]
-${KU_W_dg_screenTitle} =  xpath= //div[@class='buy-gold-heading']
 ${KU_W_USUTFImage} =  xpath=(//div[@class='k-cls b-invest-card']/img)[3]
 ${KU_W_UTFTitle} =  xpath=(//div[@class='k-cls b-invest-card']/h6)[6]
 ${KU_W_UTFSubTitle} =  xpath=(//div[@class='k-cls b-invest-card']/p)[6]

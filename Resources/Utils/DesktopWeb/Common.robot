@@ -10,7 +10,7 @@ Resource    ../../../AppLocators/DesktopWeb/CommonAppLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/MenuNavigationLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/InvestLandingPageLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/SaveSmartLocators.robot
-# Resource    ../../../AppLocators/DesktopWeb/InvestLocators/GuiltFundsLocators.rob
+Resource    ../../../AppLocators/DesktopWeb/InvestLocators/DigitalGoldLocators.robot
 
 *** Keywords ***
 

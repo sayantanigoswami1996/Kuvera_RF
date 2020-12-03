@@ -12,13 +12,19 @@ ${e_mfCategory} =   Equity
 ${e_mfSubCategory} =   All
 ${e_startInvestingBtn} =  Start Investing
 ${e_exploreELSSfundsBtn} =  Explore ELSS funds
+${e_learnMoreLinkText} =   Learn more
 ${e_startHarvestingBtn} =   Start harvesting
 ${e_switchTodayBtn} =  Switch Today
+${e_switchTodayLinkTitle} =  3 ways to "SWITCH" your Regular plans to Direct Mutual Fund plans - Kuvera
 ${e_upgradeFamilyAccountBtn} =  Upgrade to family account
+${e_familyAccountLinkTitle} =  Joint And Family Accounts on Kuvera - Kuvera
 ${e_consolidateTrackBtn} =  Consolidate & track
 ${e_manageTodayBtn} =  Manage Today
+${e_manageTodayLinkTitle} =  Managed Accounts: add a manager to handhold your Kuvera account - Kuvera
 ${e_setAGoalBtn} =  Set a goal
+${e_setAGoalLinkTitle} =  Unified goal planning or how to invest less and achieve your financial goals? - Kuvera
 ${e_sendMoneyBtn} =  Send money
+${e_sendMoneyLinkTitle} =  Kuvera - Direct Mutual Funds | Stocks | Loans | Gold | Remit on Kuvera- Wealth Management Simplified
 ${e_summaryHeader} =   Earn up to 35% more in 20 years*
 ${e_careTitle} =  How much do we care?
 ${e_careInfoMsg} =  Our CEO, Gaurav Rastogi, invites you to share your questions, comments or feedback. Email him
@@ -71,22 +77,31 @@ ${KU_W_android_image} =  xpath=//img[@class='b-mobile-first__img-android']
 ${KU_W_apple_image} =   xpath=//img[@class='b-mobile-first__img-apple']
 ${KU_W_coreaua_val} =   xpath=//div[@class='b-investment-count__count__aua__val']
 ${KU_W_coreaua_text} =  xpath=//div[@class='b-investment-count__count__aua__text']
-${KU_W_cities_val} =  xpath=//div[@class='b-investment-count__count__cities__val']
 
+${KU_W_cities_val} =  xpath=//div[@class='b-investment-count__count__cities__val']
 ${KU_W_cities_text} =   xpath=//div[@class='b-investment-count__count__cities__text']
 ${KU_W_trans_val} =  xpath=//div[@class='b-investment-count__count__transaction__val']
 ${KU_W_trans_text} =  xpath=//div[@class='b-investment-count__count__transaction__text']
 ${KU_W_faqbot_icon} =   xpath=//div[@class='faq-bot-button ']
 ${KU_W_mf_welcomeTitle} =  xpath=//div[@class='b-investment-simplified__title']
 ${KU_W_mf_welcomeText} =  xpath=//div[@class='b-investment-simplified__text']
+
+${KU_W_ELSS_learnMoreLink} =  xpath=(//a[@class='b-feature-card__link'])[1]
+${KU_W_ELSS_searchFundBar} =  xpath=(//div[@class='b-explore-fund__action-title'])[1]
 ${KU_W_startHarvest} =  xpath=//button[contains(text(),'Start harvesting')]
+${KU_W_harvest_learnMoreLink} =  xpath=(//a[@class='b-feature-card__link'])[2]
 ${KU_W_switchToday} =   xpath=//button[contains(text(),'Switch Today')]
+${KU_W_switchToday_learnMoreLink} =  xpath=(//a[@class='b-feature-card__link'])[3]
 ${KU_W_next_button} =   xpath=//div[@class='b-feature-card-list__btns__next b-feature-card-list__btns__next--active']
 ${KU_W_upgrade_familyAccount} =  xpath=//button[contains(text(),'Upgrade to family account')]
+${KU_W_familyAccount_learnMoreLink} =  xpath=(//a[@class='b-feature-card__link'])[4]
 ${KU_W_consolidate_track} =  xpath=//button[contains(text(),'Consolidate & track')]
 ${KU_W_manage_today} =  xpath=//button[contains(text(),'Manage Today')]
+${KU_W_manageToday_learnMoreLink} =  xpath=(//a[@class='b-feature-card__link'])[6]
 ${KU_W_set_a_goal} =  xpath=//button[contains(text(),'Set a goal')]
+${KU_W_setAGoal_learnMoreLink} =  xpath=(//a[@class='b-feature-card__link'])[7]
 ${KU_W_send_money} =  xpath=//button[contains(text(),'Send money')]
+${KU_W_sendMoney_learnMoreLink} =  xpath=(//a[@class='b-feature-card__link'])[8]
 ${KU_W_summary_msg} =   xpath=//div[@class='b-feature-summary__percent__summary__msg__heading']
 ${KU_W_summary_learn} =   xpath=//a[@class='b-feature-summary__percent__summary__learn']
 ${KU_W_care_title} =  xpath=//div[@class='b-care__title']
