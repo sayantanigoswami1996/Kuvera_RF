@@ -14,6 +14,8 @@ Launch URL
     #Maximize Browser Window
     Set Window Size  ${1366}  ${768}
     Reload Page
+    Kuvera Web Close Regulatory Disclosure 
+    Close Hello Bar
 
 Welcome Page Should Be Open
     Title Should Be  ${KU_W_title}
