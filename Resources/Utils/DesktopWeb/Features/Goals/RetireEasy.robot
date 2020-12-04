@@ -21,6 +21,7 @@ Verify Retire Easy Questionnaire
     Verify Question And Enter Input  ${KU_W_feature_sg_Q_userAge}  ${query2}  ${KU_W_feature_sg_userAgeTxt}  ${e_feature_sg4_userAge}
     Verify Question And Enter Input  ${KU_W_feature_sg_Q3}  ${query3}  ${KU_W_feature_sg_monthlyExpenseTxt}  ${e_feature_sg4_montlyExpense}
     Verify Question Title  ${KU_W_feature_sg_Q4}  ${query4} 
+    Sleep  1s
     Double Click Element  ${KU_W_feature_sg_retireAgeTxt}
     Press Enter Key  ${KU_W_feature_sg_retireAgeTxt}
     Verify Question And Enter Input  ${KU_W_feature_sg_Q5}  ${query5}  ${KU_W_feature_sg_investUpfrontTxt}  ${e_feature_sg4_investUpfront}

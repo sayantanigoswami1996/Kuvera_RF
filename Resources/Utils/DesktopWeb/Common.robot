@@ -109,11 +109,8 @@ Press Enter Key
 Clear Text Field
     [Arguments]  ${field}
     Sleep  500ms
-    #Press Keys  ${field}  COMMAND+A  DELETE
     ${fieldText} =  Get Value  ${field}
     ${fieldTextLen} =  Get Length  ${fieldText} 
-    #Log To Console  ${fieldText}
-    #Log To Console  ${fieldTextLen}
     Run Keyword If    """${fieldText}""" != ''
     ...     Repeat Keyword  ${fieldTextLen+1}  Press Keys  ${field}  \ue003
 

@@ -24,6 +24,7 @@ Verify PreLogin Set A Goal Page
     ${goal7}  Get Json Values  $.Goals.g7  Resources/TestData/Goals.json
     ${goal8}  Get Json Values  $.Goals.g8  Resources/TestData/Goals.json
 
+    Wait For Element Visibility  ${KU_W_featureLink}
     Click Element  ${KU_W_featureLink}
     Wait For Element Visibility  ${KU_W_feature_setAGoalLink}
     Click Element  ${KU_W_feature_setAGoalLink}
