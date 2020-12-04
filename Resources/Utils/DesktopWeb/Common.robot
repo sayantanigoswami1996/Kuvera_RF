@@ -40,6 +40,10 @@ Scroll Untill View
     [Arguments]  ${element}
     Scroll Element Into View  ${element}
 
+Scroll Page To Location
+    [Arguments]  ${x_location}    ${y_location}
+    Execute JavaScript  window.scrollTo(${x_location},${y_location})
+
 Verify Page Contains Link
     [Arguments]  ${link}  ${text}
     Page Should Contain Link  ${link}  ${text}
@@ -85,8 +89,8 @@ Kuvera Web Close Regulatory Disclosure
     Click Element  ${KU_W_close}
 
 Close Hello Bar
-    Sleep  15s
-    Wait Until Element Is Visible  ${KU_W_bannerFrame}  timeout=40
+    Sleep  10s
+    Wait Until Element Is Visible  ${KU_W_bannerFrame}  timeout=30
     Switch To Frame  ${KU_W_bannerFrame}
     Wait For Element Visibility  ${KU_W_bannerCloseBtn}
     Click Element  ${KU_W_bannerCloseBtn}

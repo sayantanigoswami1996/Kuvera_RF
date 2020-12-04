@@ -9,7 +9,7 @@ Suite Teardown  Close All Browsers
 #To run specific test: robot --variable URL:https://kuvera.in/ --variable BROWSER:headlesschrome -d Results  -i TC01 Tests/DesktopWeb/PreLoginTests.robot
 
 *** Test Cases ***
-# Langin Page widgets verfication
+# Langin Page widgets verification
 Landing Page Widgets Verification Test 
     [Tags]  TC01
     Verify Widgets
@@ -23,4 +23,10 @@ Header Navigation Test
 Features Header Navigation Test
     [Tags]  TC03
     Feature Sub Header Navigation
-    #Verify Login Page Widgets
+
+# Verify all widgets in Login & Signup Page
+Features Header Navigation Test
+    [Tags]  TC04
+    Verify Login Page Widgets
+    Go Back
+    Verify Signup Page Widgets
