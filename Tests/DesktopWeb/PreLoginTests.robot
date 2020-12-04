@@ -22,5 +22,4 @@ Header Navigation Test
 # Features sub headers navigation & goals - questionnaire
 Features Header Navigation Test
     [Tags]  TC03
-    Feature Sub Header Navigation
-    
+    Feature Sub Header Navigation  

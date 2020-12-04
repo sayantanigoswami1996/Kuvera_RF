@@ -40,6 +40,10 @@ Scroll Untill View
     [Arguments]  ${element}
     Scroll Element Into View  ${element}
 
+Scroll Page To Location
+    [Arguments]    ${x_location}    ${y_location}
+    Execute JavaScript    window.scrollTo(${x_location},${y_location})
+
 Verify Page Contains Link
     [Arguments]  ${link}  ${text}
     Page Should Contain Link  ${link}  ${text}
