@@ -1,5 +1,4 @@
 *** Variables ***
-
 # Application Expected Values 'e_<VariableName>'
 ${e_title} =  Kuvera - Direct Mutual Funds | Stocks | Loans | Gold | Remit on Kuvera- Wealth Management Simplified
 ${e_regulatoryDisclosure} =  Regulatory Disclosure
@@ -13,13 +12,19 @@ ${e_mfCategory} =   Equity
 ${e_mfSubCategory} =   All
 ${e_startInvestingBtn} =  Start Investing
 ${e_exploreELSSfundsBtn} =  Explore ELSS funds
+${e_learnMoreLinkText} =   Learn more
 ${e_startHarvestingBtn} =   Start harvesting
 ${e_switchTodayBtn} =  Switch Today
+${e_switchTodayLinkTitle} =  3 ways to "SWITCH" your Regular plans to Direct Mutual Fund plans - Kuvera
 ${e_upgradeFamilyAccountBtn} =  Upgrade to family account
+${e_familyAccountLinkTitle} =  Joint And Family Accounts on Kuvera - Kuvera
 ${e_consolidateTrackBtn} =  Consolidate & track
 ${e_manageTodayBtn} =  Manage Today
+${e_manageTodayLinkTitle} =  Managed Accounts: add a manager to handhold your Kuvera account - Kuvera
 ${e_setAGoalBtn} =  Set a goal
+${e_setAGoalLinkTitle} =  Unified goal planning or how to invest less and achieve your financial goals? - Kuvera
 ${e_sendMoneyBtn} =  Send money
+${e_sendMoneyLinkTitle} =  Kuvera - Direct Mutual Funds | Stocks | Loans | Gold | Remit on Kuvera- Wealth Management Simplified
 ${e_summaryHeader} =   Earn up to 35% more in 20 years*
 ${e_careTitle} =  How much do we care?
 ${e_careInfoMsg} =  Our CEO, Gaurav Rastogi, invites you to share your questions, comments or feedback. Email him
@@ -38,23 +43,34 @@ ${e_citiesText} =   Goals
 ${e_transValue} =   1.8 Crore
 ${e_transText} =  Transactions
 
+#Feature-Widgets Variables
+${e_feature_th_TitleText} =  Save up to ₹10,000 in LTCG taxes every financial year with Tax Harvesting.
+${e_feature_ts_titleText} =  TradeSmart
+${e_feature_fa_screenTitle} =  Invest with Your Loved Ones
+${e_feature_manageAccountTitleText} =  Manage Account
+${e_feature_sg_screenTitle} =  SET YOUR GOAL
+${e_remit_screenTitle} =  A cheaper & faster way to send money home
+
 @{e_fndHouse_firstColumn} =  ADITYA BIRLA SUN LIFE  AXIS  BARODA  BHARTI AXA  BNP PARIBAS  CANARA ROBECO  DSP  EDELWEISS  ESSEL  FRANKLIN TEMPLETON    HDFC  HSBC  ICICI  PRUDENTIAL  IDBI  IDFC  IIFL  INDIA BULLS  INVESCO  ITI  JM FINANCIAL    
 @{e_fndHouse_secondColumn} =  KOTAK  L&T  LIC  MAHINDRA  MIRAE ASSET  MOTILAL OSWAL  NIPPON INDIA  PGIM INDIA  PPFAS    PRINCIPAL  QUANT  QUANTUM  SBI  SUNDARAM  TATA  TAURUS  UNION  UTI  YES 
 
+# Application Locator 'KU_<locatorName>'
 # Kuvera :: Wealth Management Simplified
-${KU_W_regulatoryDisclosure} =  xpath=//h1[@class='b-regulatory-disclosure__heading']
-${KU_W_logo} =  xpath=//*[@class='b-header__content__logo']
+${KU_W_regulatoryDisclosure} =  xpath=//h1[@class='b-regulatory-disclosure__heading'] 
 ${KU_W_logo_signup} =  xpath=//a[@class='navbar-brand active']/img
+# ${KU_W_title}=  Kuvera - Direct Mutual Funds | Stocks | Loans | Gold | Remit on Kuvera- Wealth Management Simplified
+${KU_W_logo} =  xpath=//*[@class='b-header__content__logo']
 ${KU_W_close} =  xpath=//button[@class='button-primary b-regulatory-disclosure__btn']
 ${KU_W_bannerFrame} =  xpath=//iframe[contains(@class,'hellobar hb-animateIn')]
 ${KU_W_bannerCloseBtn} =  xpath=(//*[@class='icon-close'])[2]
 ${KU_W_menu} =  xpath=//*[@class='b-header__content']
 ${KU_W_headers} =  xpath=//*[@class='b-header__content__middle']/a
 ${KU_W_exploreELSS} =  xpath=//button[contains(text(),'Explore ELSS funds')]
+${KU_W_login} =  xpath=//*[@class='b-header__content__right__signin']	
 ${KU_W_loginPageTitle} =  xpath=//div[contains(text(),'Login. Start Investing.')]
-${KU_W_login} =  xpath=//*[@class='b-header__content__right__signin']
-${KU_W_signupPageTitle} =  xpath=//div[contains(text(),'Sign Up. Start Investing.')]
 ${KU_W_signup} =   xpath=//*[@class='b-header__content__right__singup']
+${KU_W_signupPageTitle} =  xpath=//div[contains(text(),'Sign Up. Start Investing.')]
+
 ${KU_W_langSwitch} =  xpath=//div[@class='b-header__content__right--language-switcher']
 ${KU_W_mf_category} =   xpath=//div[@class='b-mf-wiget__mf-category--input']
 ${KU_W_mf_subcategory} =  xpath=//div[@class='b-mf-wiget__mf-subcategory--input']
@@ -67,22 +83,31 @@ ${KU_W_android_image} =  xpath=//img[@class='b-mobile-first__img-android']
 ${KU_W_apple_image} =   xpath=//img[@class='b-mobile-first__img-apple']
 ${KU_W_coreaua_val} =   xpath=//div[@class='b-investment-count__count__aua__val']
 ${KU_W_coreaua_text} =  xpath=//div[@class='b-investment-count__count__aua__text']
-${KU_W_cities_val} =  xpath=//div[@class='b-investment-count__count__cities__val']
 
+${KU_W_cities_val} =  xpath=//div[@class='b-investment-count__count__cities__val']
 ${KU_W_cities_text} =   xpath=//div[@class='b-investment-count__count__cities__text']
 ${KU_W_trans_val} =  xpath=//div[@class='b-investment-count__count__transaction__val']
 ${KU_W_trans_text} =  xpath=//div[@class='b-investment-count__count__transaction__text']
 ${KU_W_faqbot_icon} =   xpath=//div[@class='faq-bot-button ']
 ${KU_W_mf_welcomeTitle} =  xpath=//div[@class='b-investment-simplified__title']
 ${KU_W_mf_welcomeText} =  xpath=//div[@class='b-investment-simplified__text']
+
+${KU_W_ELSS_learnMoreLink} =  xpath=(//a[@class='b-feature-card__link'])[1]
+${KU_W_ELSS_searchFundBar} =  xpath=(//div[@class='b-explore-fund__action-title'])[1]
 ${KU_W_startHarvest} =  xpath=//button[contains(text(),'Start harvesting')]
+${KU_W_harvest_learnMoreLink} =  xpath=(//a[@class='b-feature-card__link'])[2]
 ${KU_W_switchToday} =   xpath=//button[contains(text(),'Switch Today')]
+${KU_W_switchToday_learnMoreLink} =  xpath=(//a[@class='b-feature-card__link'])[3]
 ${KU_W_next_button} =   xpath=//div[@class='b-feature-card-list__btns__next b-feature-card-list__btns__next--active']
 ${KU_W_upgrade_familyAccount} =  xpath=//button[contains(text(),'Upgrade to family account')]
+${KU_W_familyAccount_learnMoreLink} =  xpath=(//a[@class='b-feature-card__link'])[4]
 ${KU_W_consolidate_track} =  xpath=//button[contains(text(),'Consolidate & track')]
 ${KU_W_manage_today} =  xpath=//button[contains(text(),'Manage Today')]
+${KU_W_manageToday_learnMoreLink} =  xpath=(//a[@class='b-feature-card__link'])[6]
 ${KU_W_set_a_goal} =  xpath=//button[contains(text(),'Set a goal')]
+${KU_W_setAGoal_learnMoreLink} =  xpath=(//a[@class='b-feature-card__link'])[7]
 ${KU_W_send_money} =  xpath=//button[contains(text(),'Send money')]
+${KU_W_sendMoney_learnMoreLink} =  xpath=(//a[@class='b-feature-card__link'])[8]
 ${KU_W_summary_msg} =   xpath=//div[@class='b-feature-summary__percent__summary__msg__heading']
 ${KU_W_summary_learn} =   xpath=//a[@class='b-feature-summary__percent__summary__learn']
 ${KU_W_care_title} =  xpath=//div[@class='b-care__title']
@@ -108,3 +133,12 @@ ${KU_W_fundHouse_title} =   xpath=//div[@class='b-fund-house__info__title1']
 ${KU_W_fundHouse_subtitle} =   xpath=//div[@class='b-fund-house__info__title2']
 ${KU_W_fundHouses_firstColumn} =  xpath=//div[@class='b-fund-house__list__column']/a
 ${KU_W_fundHouses_secondColumn} =  xpath=//div[@class='b-fund-house__list__column b-fund-house__list__column--col2']/a
+
+# Feature-Widgets
+${KU_W_searchBarForFunds} =  xpath=(//div[@class='b-explore-fund__action-title'])[1]
+${KU_W_feature_th_screenTitle} =  xpath=//div[@class='paras-about-tax-harvesting']/h3
+${KU_W_feature_ts_title} =  xpath=//div[@class='b-trade-smart__header__desc__title'] 
+${KU_W_feature_fa_screenTitle} =  xpath=//h1[@class='b-family-account__what__heading']
+${KU_W_feature_manageAccountTitle} =  xpath=//div[@class='b-manage-account__what']/h1
+${KU_W_feature_sg_screenTitle} =  xpath=//*[@class='goals-index col-sm-4']/h2
+${KU_W_remit_screenTitle} =  xpath=//*[@class='b-introduction__desc__title']

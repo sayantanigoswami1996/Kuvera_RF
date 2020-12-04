@@ -31,10 +31,14 @@ ${e_loan_startSaveCheckEligibiliyText} =  Check your eligibility
 @{e_insure_treatmentListItem} =  COVID-19  Cancer care  Open heart surgery  Knee replacement
 @{e_insure_policyListItem} =  Policy wording simple.  Premium cost low.  Year round support.
 
+# Insure List
+@{e_insure_treatmentListItem} =  COVID-19  Cancer care  Open heart surgery  Knee replacement
+@{e_insure_policyListItem} =  Policy wording simple.  Premium cost low.  Year round support.
+
 # Insure Navigation Page Variables
 ${e_insure_headerTitleText} =  Fair and friendly health insurance is here
-${e_insure_headerMsgText} =  ₹50L cover starting at ₹900/month*. Secure your loved ones today.
-${e_insure_T&CText} =  *T&C apply
+${e_insure_headerMsgText} =  ₹50L cover starting at ₹900/month. Secure your loved ones today. T&C apply
+${e_insure_T&CText} =  T&C apply
 ${e_insure_checkPremiumBtnText} =  Check premium
 ${e_insure_costDetailsHeaderText} =  We understand cost
 ${e_insure_treatmentTitleText} =  Treatment
@@ -90,30 +94,53 @@ ${e_remit_transferWiseCross-borderTitle} =  Making cross-border investments with
 ${e_feature_sg_screenTitle} =  SET YOUR GOAL
 ${e_feature_sg_screenSubTitle} =  We'll help you bring your dreams to life.
 ${e_feature_sg_content} =  Setting a financial goal is the first step to making your dreams a reality. Investing regularly is the next. We make it really simple for you, and we’re with you every step of the way. Simply choose your goal to get started.
-${e_feature_sg_Q1} =  Hi there! What’s your name?
-${e_feature_sg_Q2} =  And what’s your age?
-${e_feature_sg_Q3} =  How much does your dream home cost today?
-${e_feature_sg_Q4} =  In how many years do you want to buy this home?
-${e_feature_sg_Q5} =  Will you be taking a home loan?
-${e_feature_sg_Q6} =  How much will you make as downpayment?
-${e_feature_sg_Q7} =  How much can you invest upfront? 
-${e_feature_sg_A1_userName} =  Test
-${e_feature_sg_A2_userAge} =  27 
-${e_feature_sg_A3_homeCost} =  5000000
-${e_feature_sg_A4_goalDuration} =  2
-${e_feature_sg_A6_downPayment} =  15
-${e_feature_sg_A7_upFront} =  5000
+# Goal - Own A Home
+${e_feature_sg_userName} =  Test
+${e_feature_sg1_userAge} =  27
+${e_feature_sg1_cost} =  5000000
+${e_feature_sg1_goalDuration} =  2
+${e_feature_sg1_downPayment} =  15
+${e_feature_sg1_investUpfront} =  5000
+# Goal - Buy A Car
+${e_feature_sg2_userAge} =  30
+${e_feature_sg2_cost} =  4200000
+${e_feature_sg2_goalDuration} =  5
+${e_feature_sg2_investUpfront} =  1000
+# Goal - Save Tax
+${e_feature_sg3_userAge} =  25
+${e_feature_sg3_montlyInvest} =  3000
+${e_feature_sg3_goalDuration} =  7
+${e_feature_sg3_investUpfront} =  500
+# Goal - Retire Easy
+${e_feature_sg4_userAge} =  25
+${e_feature_sg4_montlyExpense} =  57000
+${e_feature_sg4_retireAge} =  60
+${e_feature_sg4_investUpfront} =  3800
+# Goal - 25 Anniversay
+${e_feature_sg5_userAge} =  25
+${e_feature_sg5_cost} =  100000
+${e_feature_sg5_goalDuration} =  27
+${e_feature_sg5_investUpfront} =  0
+# Goal - Foreign Vacation
+${e_feature_sg6_userAge} =  25
+${e_feature_sg6_cost} =  350000
+${e_feature_sg6_goalDuration} =  5
+${e_feature_sg6_investUpfront} =  2000
+# Goal - Educate My Child
+${e_feature_sg7_userAge} =  25
+${e_feature_sg7_cost} =  500000
+${e_feature_sg7_goalDuration} =  10
+${e_feature_sg7_investUpfront} =  1000
+# Goal - Create My Own
+${e_feature_sg8_userAge} =  25
+${e_feature_sg8_goalName} =  For a rainy day
+${e_feature_sg8_cost} =  500000
+${e_feature_sg8_goalDuration} =  2
+${e_feature_sg8_investUpfront} =  500
 ${e_feature_sg_almostDone} =  Almost done! Let’s personalise your plan.
 ${e_feature_sg_seeYourPlan} =  SEE YOUR PLAN
 ${e_feature_sg_getThisPlan} =  GET THIS PLAN
 
-${e_feature_sg_buyaCar_Q3} =  How much does your dream car cost today?
-${e_feature_sg_A3_carCost} =  6000000
-${e_feature_sg_buyAcar_Q4} =  In how many years do you want to buy this car?
-${e_feature_sg__saveTax_Q3} =  How much do you want to invest monthly?
-${e_feature_sg_A3_monthlyInvestment} =  10000
-${e_feature_sg_saveTax_Q4} =  For how long do you want to invest?
-${e_feature_sg_saveTax_Q5} =  Enter a amount you can invest upfront, else enter 0.
 
 # Feature-TradeSmart Navigation Page Variables
 ${e_feature_ts_titleText} =  TradeSmart
@@ -188,15 +215,59 @@ ${e_feature_st_tableRow3Text} =  PPF  15 Years  8.5%
 ${e_feature_st_tableRow4Text} =  NSC  5/10 Years  8.5%
 ${e_feature_st_tableRow5Text} =  FD  5 Years  9.0%
 
-#Features- Consolidate Navigatio Page Variables
+# Features- Consolidate Navigation Page Variables
 ${e_feature_cd_pageHeaderText} =  Informed, disciplined investing grows your money, long-term 
 ${e_feature_cd_subHeaderText} =  Follow a structured approach and invest regularly, for the long-haul. This is the best way to grow your wealth over time
 ${e_feature_cd_setAGoalTitleText} =  DREAMS DO COME TRUE  
 ${e_feature_cd_setAGoalSubTitle} =  Make your goals a reality
-${e_feature_cd_setAGoalDescTitle} =   A new car, owning your own home, sending your kids to study abroad - you may have many reasons to invest. We help you build investment action plans that’ll help you make enough to make these goals a reality. More about goal-based investing
+${e_feature_cd_setAGoalDescText} =   A new car, owning your own home, sending your kids to study abroad - you may have many reasons to invest. We help you build investment action plans that’ll help you make enough to make these goals a reality. More about goal-based investing
 ${e_feature_cd_goalBsdInvestingLinkText} =  More about goal-based investing
 ${e_feature_cd_financialSuccessTitleText} =  3 Steps To Financial Success Using Goal-Based Investing - Kuvera
 ${e_feature_cd_setAGoalBtnText} =  SET A GOAL
+${e_feature_cd_saveTaxGoalTitleText} =  TAX-SAVER OPTIONS
+${e_feature_cd_saveTaxSubTitleText} =  Save on Tax
+${e_feature_cd_saveTaxGoalDescText} =  Lowest lock-ins. Simple withdrawals. No taxes on redemption. Potentially better returns. ELSS mutual funds can be a better option than traditional tax-saving measures like tax-saver FDs and PPF. More on why ELSS is better
+${e_feature_cd_ELSSLinkText} =  More on why ELSS is better
+${e_feature_cd_ELSSTitleText} =  Why is ELSS better than other tax saving investments? - Kuvera
+${e_feature_cd_saveTaxBtnText} =  SET A ‘SAVE TAX’ GOAL
+${e_feature_cd_saveTaxPageText} =  Save Tax
+${e_feature_cd_beatInflationTitleText} =  THE SILENT KILLER
+${e_feature_cd_beatInflationSubText} =  Beat Inflation
+${e_feature_cd_beatInflationDescText} =  Something that cost ₹ 1,000 25 years back now costs ₹ 6,400. That’s a 6.4x increase in cost of living over the last 25 years!\n\nHere’s another way to think about it - if you had ₹ 1 Lakh, 25 years back, it would be equal to having ₹ 6.4 Lakhs today.\n\nFDs and savings accounts cannot keep up with inflation. Mutual funds can, and they help increase your buying power over time. More about inflation
+${e_feature_cd_inflationLinkText} =  More about inflation
+${e_feature_cd_inflationScreenTitle} =  The Inflation Monster - Kuvera
+${e_feature_cd_startInvestingBtnText} =  START INVESTING
+${e_feature_cd_todaysValueTitleText} =  TODAY’S VALUE OF:
+${e_feature_cd_todaysValueSubTitleText} =  ₹ 1L invested 25 years ago
+${e_feature_cd_kuveraTitleText} =  Kuvera
+${e_feature_cd_kuveraGreenText} =  ₹ 45.5 Lakhs
+${e_feature_cd_kuveraReturnText} =  16.5% return
+${e_feature_cd_FDText} =  Fixed Deposit
+${e_feature_cd_FDOffGreenText} =  ₹ 4.8 Lakhs
+${e_feature_cd_FDReturnText} =  6.5 % return
+${e_feature_cd_SAText} =  Savings Account
+${e_feature_cd_SAOffGreenText} =  ₹ 2.3 Lakhs
+${e_feature_cd_SAReturnText} =  3.5% return
+${e_feature_cd_kuveraReturnText} =  16.5% return
+${e_feature_cd_familyAcntTitleText} =  FAMILY ACCOUNT & JOINT ACCOUNT
+${e_feature_cd_familyAcntSubTitleText} =  Invest with Your Loved Ones
+${e_feature_cd_familyAcntDescText} =  Just Sign up with one account, and manage investment for your relatives and family members. Multiple accounts under same login. All in one place. Even Joint Account too!
+${e_feature_cd_familyAcntBtnText} =  UPGRADE TO FAMILY ACCOUNT
+${e_feature_cd_switchTodayTitleText} =  INTRODUCING TRADESMART
+${e_feature_cd_switchTodaySubTitleText} =  Switch to Direct Plan for Higher Returns
+${e_feature_cd_switchTodayDesc1Text} =  Switching away from commission laden Regular Mutual Funds used to be cumbersome with uncooperative brokers, and a lot of paperwork.
+${e_feature_cd_switchTodayDesc2Text} =  We are changing all that! We have made importing your existing portfolio and switching to Direct Plans easy. So easy that you have no excuse left to continue to pay expensive commissions.            
+${e_feature_cd_switchTodayBtnText} =  SWITCH TODAY
+${e_feature_cd_autdTrackingTitleText} =  INTRODUCING AUTOMATED TRACKING
+${e_feature_cd_autdTrackingSubTitleText} =  Set up automatic tracking of external transactions
+${e_feature_cd_autdTrackingDescText} =  Setup periodic Import filter to automatically generate Consolidated Account Statement (CAS) and get them delivered to your mailbox. Then setup auto-forwarding rule in your mailbox to forward those emails to import@kuvera.in. No more uploading required. A unique workflow to make import easy while maintaining the highest level of privacy protection.
+${e_feature_cd_startImportingBtnText} =  START IMPORTING
+${e_feature_cd_manageAcntTitleText} =  MANAGED ACCOUNT
+${e_feature_cd_manageAcntSubTitleText} =  Manage Investments for Others
+${e_feature_cd_manageAcntDesc1Text} =  Complimentary to Family Account feature, this enables you to manage investments for someone else, from your Kuvera account.
+${e_feature_cd_manageAcntDesc2Text} =  Your managee retains full access to their accounts, and all transactions would be validated & approved from account owner via OTP.
+${e_feature_cd_manageTodayBtnText} =   MANAGE TODAY
+
 
 # Application Locator 'KU_<locatorName>'
 # Button 
@@ -235,59 +306,53 @@ ${KU_W_startSaveCheckEligibilityBtn} =  xpath=//button[@class='button-primary b-
 ${KU_W_insureLink} =  xpath=//a[contains(text(),'Insure')]
 ${KU_W_insureHeaderTitle} =  xpath=(//div[@class='b-health-insurance-landing__title--main'])[1]
 ${KU_W_insureHeaderMsg} =  xpath=(//div[@class='b-health-insurance-landing__title--text'])[1]
-${KU_W_termsAndConditions} =  xpath=//span[@class='b-health-insurance-landing__term-condition']
-${KU_W_checkPremiumBtn1} =  xpath=(//button[@class='button-primary'])[1]
-${KU_W_costDetailsHeaderTitle} =  xpath=//div[@class='b-health-insurance-landing__cost-details--table__text']
-${KU_W_treatmentTitle} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__treatment'])[1]
-${KU_W_treatmentCostTitle} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__cost'])[1]
-
-${KU_W_covid19Cost} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__cost'])[2]
-${KU_W_cancerCareCost} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__cost'])[3]
-${KU_W_OpenHeartSurgeryCost} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__cost'])[4]
-${KU_W_kneeReplacementCost} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__cost'])[5]
-
-${KU_W_covid19Title} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__treatment'])[2]
-${KU_W_cancerCareTitle} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__treatment'])[3]
-${KU_W_heartSurgeryTitle} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__treatment'])[4]
-${KU_W_kneeReplacmentTitle} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__treatment'])[5]
-
-${KU_W_covid19Image} =  xpath=(//img[@class='b-health-insurance-landing__cost-details--img'])[1] 
-${KU_W_cancerCareImage} =  xpath=(//img[@class='b-health-insurance-landing__cost-details--img'])[2] 
-${KU_W_openHeartSurgeryImage} =  xpath=(//img[@class='b-health-insurance-landing__cost-details--img'])[3] 
-${KU_W_kneeReplacementImage} =  xpath=(//img[@class='b-health-insurance-landing__cost-details--img'])[4] 
-
-${KU_W_groupHealthInsuranceTitle} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--brief']/div)[1] 
-${KU_W_grpHealthInsurranceSubTitle} =  xpath=(//div[@class='b-health-insurance-landing__title--text'])[2]
-${KU_W_insurancePolicyLists} =  xpath=//ul[@class='b-health-insurance-landing__policy-list']/li 
-
-${KU_W_covid19CardTitle} =  xpath=(//div[@class='b-feature-card__title'])[1]
-${KU_W_covid19Msg} =  xpath=(//div[@class='b-feature-card__msg'])[1]
-${KU_W_roomrentCardTitle} =  xpath=(//div[@class='b-feature-card__title'])[2] 
-${KU_W_roomrentMsg} =  xpath=(//div[@class='b-feature-card__msg'])[2] 
-${KU_W_treatmentCappingCardTitle} =  xpath=(//div[@class='b-feature-card__title'])[3] 
-${KU_W_treatmentCappingMsg} =  xpath=(//div[@class='b-feature-card__msg'])[3] 
-${KU_W_copaymentCardTitle} =  xpath=(//div[@class='b-feature-card__title'])[4] 
-${KU_W_copaymentMsg} =  xpath=(//div[@class='b-feature-card__msg'])[4]
-${KU_W_30daySettlemenCardTitle} =  xpath=(//div[@class='b-feature-card__title'])[5] 
-${KU_W_30daySettlemenMsg} =  xpath=(//div[@class='b-feature-card__msg'])[5]
-${KU_W_ayushCoveredCardTitle} =  xpath=(//div[@class='b-feature-card__title'])[6] 
-${KU_W_ayushCoveredMsg} =  xpath=(//div[@class='b-feature-card__msg'])[6] 
-${KU_W_lowWaitingPeriodCardTitle} =  xpath=(//div[@class='b-feature-card__title'])[7] 
-${KU_W_lowWaitingPeriodMsg} =  xpath=(//div[@class='b-feature-card__msg'])[7]
-${KU_W_dailyExpenseCardTitle} =  xpath=(//div[@class='b-feature-card__title'])[8]
-${KU_W_dailyExpenseMsg} =  xpath=(//div[@class='b-feature-card__msg'])[8]
-${KU_W_dedicatedSupportCardTitle} =  xpath=(//div[@class='b-feature-card__title'])[9] 
-${KU_W_dedicatedSupportMsg} =  xpath=(//div[@class='b-feature-card__msg'])[9]
-${KU_W_sliderButton} =  xpath=//div[@class='b-slide-card-list__btns__next b-slide-card-list__btns__next--active']
-
-${KU_W_trustedPartnerTitle} =  xpath=(//div[@class='b-health-insurance-landing__insurance-brief__row--items__content']/div)[1] 
-${KU_W_trustedPartnerSubTitle} =  xpath=(//div[@class='b-health-insurance-landing__insurance-brief--subheading'])[1] 
-${KU_W_flexibleCoverageTitle} =  xpath=(//div[@class='b-health-insurance-landing__insurance-brief__row--items__content']/div)[3]
-${KU_W_flexibleCoverageSubtitle} =  xpath=(//div[@class='b-health-insurance-landing__insurance-brief--subheading'])[2] 
-${KU_W_saveTaxTitle} =  xpath=(//div[@class='b-health-insurance-landing__title--main'])[6]
-${KU_W_saveTaxSubTitle} =  xpath=(//div[@class='b-health-insurance-landing__insurance-brief--subheading'])[3]
-${KU_W_healthCoverTitle} =  xpath=//div[@class='b-health-insurance-landing__healthcare-cover--wrapper']/div 
-${KU_W_checkPremiumBtn2} =  xpath=(//button[@class='button-primary'])[2]
+${KU_W_insure_termsAndConditions} =  xpath=//span[@class='b-health-insurance-landing__term-condition']
+${KU_W_insure_checkPremiumBtn1} =  xpath=(//button[@class='button-primary'])[1]
+${KU_W_insure_costDetailsHeaderTitle} =  xpath=//div[@class='b-health-insurance-landing__cost-details--table__text']
+${KU_W_insure_treatmentTitle} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__treatment'])[1]
+${KU_W_insure_treatmentCostTitle} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__cost'])[1]
+${KU_W_insure_covid19Cost} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__cost'])[2]
+${KU_W_insure_cancerCareCost} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__cost'])[3]
+${KU_W_insure_OpenHeartSurgeryCost} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__cost'])[4]
+${KU_W_insure_kneeReplacementCost} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__cost'])[5]
+${KU_W_insure_covid19Title} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__treatment'])[2]
+${KU_W_insure_cancerCareTitle} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__treatment'])[3]
+${KU_W_insure_heartSurgeryTitle} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__treatment'])[4]
+${KU_W_insure_kneeReplacmentTitle} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__treatment'])[5]
+${KU_W_insure_covid19Image} =  xpath=(//img[@class='b-health-insurance-landing__cost-details--img'])[1] 
+${KU_W_insure_cancerCareImage} =  xpath=(//img[@class='b-health-insurance-landing__cost-details--img'])[2] 
+${KU_W_insure_openHeartSurgeryImage} =  xpath=(//img[@class='b-health-insurance-landing__cost-details--img'])[3] 
+${KU_W_insure_kneeReplacementImage} =  xpath=(//img[@class='b-health-insurance-landing__cost-details--img'])[4] 
+${KU_W_insure_groupHealthInsuranceTitle} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--brief']/div)[1] 
+${KU_W_insure_grpHealthInsurranceSubTitle} =  xpath=(//div[@class='b-health-insurance-landing__title--text'])[2]
+${KU_W_insure_insurancePolicyLists} =  xpath=//ul[@class='b-health-insurance-landing__policy-list']/li 
+${KU_W_insure_covid19CardTitle} =  xpath=(//div[@class='b-feature-card__title'])[1]
+${KU_W_insure_covid19Msg} =  xpath=(//div[@class='b-feature-card__msg'])[1]
+${KU_W_insure_roomrentCardTitle} =  xpath=(//div[@class='b-feature-card__title'])[2] 
+${KU_W_insure_roomrentMsg} =  xpath=(//div[@class='b-feature-card__msg'])[2] 
+${KU_W_insure_treatmentCappingCardTitle} =  xpath=(//div[@class='b-feature-card__title'])[3] 
+${KU_W_insure_treatmentCappingMsg} =  xpath=(//div[@class='b-feature-card__msg'])[3] 
+${KU_W_insure_copaymentCardTitle} =  xpath=(//div[@class='b-feature-card__title'])[4] 
+${KU_W_insure_copaymentMsg} =  xpath=(//div[@class='b-feature-card__msg'])[4]
+${KU_W_insure_30daySettlemenCardTitle} =  xpath=(//div[@class='b-feature-card__title'])[5] 
+${KU_W_insure_30daySettlemenMsg} =  xpath=(//div[@class='b-feature-card__msg'])[5]
+${KU_W_insure_ayushCoveredCardTitle} =  xpath=(//div[@class='b-feature-card__title'])[6] 
+${KU_W_insure_ayushCoveredMsg} =  xpath=(//div[@class='b-feature-card__msg'])[6] 
+${KU_W_insure_lowWaitingPeriodCardTitle} =  xpath=(//div[@class='b-feature-card__title'])[7] 
+${KU_W_insure_lowWaitingPeriodMsg} =  xpath=(//div[@class='b-feature-card__msg'])[7]
+${KU_W_insure_dailyExpenseCardTitle} =  xpath=(//div[@class='b-feature-card__title'])[8]
+${KU_W_insure_dailyExpenseMsg} =  xpath=(//div[@class='b-feature-card__msg'])[8]
+${KU_W_insure_dedicatedSupportCardTitle} =  xpath=(//div[@class='b-feature-card__title'])[9] 
+${KU_W_insure_dedicatedSupportMsg} =  xpath=(//div[@class='b-feature-card__msg'])[9]
+${KU_W_insure_sliderButton} =  xpath=//div[@class='b-slide-card-list__btns__next b-slide-card-list__btns__next--active']
+${KU_W_insure_trustedPartnerTitle} =  xpath=(//div[@class='b-health-insurance-landing__insurance-brief__row--items__content']/div)[1] 
+${KU_W_insure_trustedPartnerSubTitle} =  xpath=(//div[@class='b-health-insurance-landing__insurance-brief--subheading'])[1] 
+${KU_W_insure_flexibleCoverageTitle} =  xpath=(//div[@class='b-health-insurance-landing__insurance-brief__row--items__content']/div)[3]
+${KU_W_insure_flexibleCoverageSubtitle} =  xpath=(//div[@class='b-health-insurance-landing__insurance-brief--subheading'])[2] 
+${KU_W_insure_saveTaxTitle} =  xpath=(//div[@class='b-health-insurance-landing__title--main'])[6]
+${KU_W_insure_saveTaxSubTitle} =  xpath=(//div[@class='b-health-insurance-landing__insurance-brief--subheading'])[3]
+${KU_W_insure_healthCoverTitle} =  xpath=//div[@class='b-health-insurance-landing__healthcare-cover--wrapper']/div 
+${KU_W_insure_checkPremiumBtn2} =  xpath=(//button[@class='button-primary'])[2]
 
 # Remit Page    
 ${KU_W_remit_Link} =  xpath=//a[contains(text(),'Remit')]
@@ -326,30 +391,41 @@ ${KU_W_feature_sg_educateMyChild} =  xpath=(//p[@class='card-title'])[7]
 ${KU_W_feature_sg_createMyOwn} =  xpath=(//p[@class='card-title'])[8]
 ${KU_W_feature_sg_questionScreen} =  id=title-box
 ${KU_W_feature_sg_titleBoxSection} =  id=p9e7d2f05349193e9421e568b092da688e5010650-container
-${KU_W_feature_sg_goalName} =  xpath=//*[@id="title-box"]/h2
-${KU_W_feature_sg_Q1} =  xpath=(//p[@class='question'])[1]
-${KU_W_feature_sg_Q2} =  xpath=(//p[@class='question'])[2]
+${KU_W_feature_sg_Q_goalName} =  xpath=//*[@id="title-box"]/h2
+${KU_W_feature_sg_Q_userName} =  xpath=(//p[@class='question'])[1]
+${KU_W_feature_sg_Q_userAge} =  xpath=(//p[@class='question'])[2]
 ${KU_W_feature_sg_Q3} =  xpath=(//p[@class='question'])[3]
 ${KU_W_feature_sg_Q4} =  xpath=(//p[@class='question'])[4]
 ${KU_W_feature_sg_Q5} =  xpath=(//p[@class='question'])[5]
 ${KU_W_feature_sg_Q6} =  xpath=(//p[@class='question'])[6]
 ${KU_W_feature_sg_Q7} =  xpath=(//p[@class='question'])[7]
-${KU_W_feature_sg_Q1_userName} =  xpath=//input[@name='username']
-${KU_W_feature_sg_Q2_userAge} =  xpath=//input[@name='userage']
-${KU_W_feature_sg_Q3_homeCost} =  xpath=//input[@name='costofhome']
-${KU_W_feature_sg_Q4_goalDuration} =  xpath=//input[@name='goalduration']
-${KU_W_feature_sg_Q5_yes} =  xpath=//button[@class='btn btn-lg btn-custom btn-custom-yes']
-${KU_W_feature_sg_Q5_no} =  xpath=//button[@class='btn btn-lg btn-custom btn-custom-no btn-danger']
-${KU_W_feature_sg_Q6_downPayment} =  xpath=//input[@name='downpayment']
-${KU_W_feature_sg_A7_upFront} =  xpath=//input[@name='upfront']
+${KU_W_feature_sg_userNameTxt} =  xpath=//input[@name='username']
+${KU_W_feature_sg_userAgeTxt} =  xpath=//input[@name='userage']
+${KU_W_feature_sg_homeCostTxt} =  xpath=//input[@name='costofhome']
+${KU_W_feature_sg_goalDurationTxt} =  xpath=//input[@name='goalduration']
+${KU_W_feature_sg_yes} =  xpath=//button[@class='btn btn-lg btn-custom btn-custom-yes']
+${KU_W_feature_sg_no} =  xpath=//button[@class='btn btn-lg btn-custom btn-custom-no btn-danger']
+${KU_W_feature_sg_downPaymentTxt} =  xpath=//input[@name='downpayment']
+${KU_W_feature_sg_investUpfrontTxt} =  xpath=//input[@name='upfront']
 ${KU_W_feature_sg_almostDone} =  xpath=//div[@class='risk-profile-heading']/h2
+${KU_W_feature_sg_married} =  xpath=//p[contains(text(),'MARRIED')]
+${KU_W_feature_sg_dependents} =  xpath=//p[contains(text(),'DEPENDENTS (KIDS/ELDERS)')]
+${KU_W_feature_sg_stableIncome} =  xpath=//p[contains(text(),'STABLE INCOME')]
+${KU_W_feature_sg_ownAHome} =  xpath=//p[contains(text(),'OWN A HOME')]
+${KU_W_feature_sg_haveALoan} =  xpath=//p[contains(text(),'HAVE A LOAN')]
+${KU_W_feature_sg_haveFds} =  xpath=//p[contains(text(),'HAVE FDs')]
+${KU_W_feature_sg_haveEquityInvestments} =  xpath=//p[contains(text(),'HAVE EQUITY INVESTMENTS')]
+${KU_W_feature_sg_dualIncome} =  xpath=//p[contains(text(),'DUAL INCOME')]
 ${KU_W_feature_sg_continue} =  xpath=//button[@class='btn in-btn']
 ${KU_W_feature_sg_investmentSummary} =  xpath=//*[@class='investment-summary']
 ${KU_W_feature_sg_seeYourPlan} =  xpath=//button[@class='btn in-btn']
 ${KU_W_feature_sg_getThisPlan} =  xpath=//button[@class='btn in-btn hidden-xs']
 ${KU_W_feature_sg_closeBtn} =  xpath=//a[@class='header-actions close-nav close-btn active']
-${KU_W_feature_sg_Q3_carCost} =  xpath=//input[@name='costtoday'] 
-${KU_W_feature_sg_Q3_monthlyInvestment} =  xpath=//input[@name='sip']
+${KU_W_feature_sg_costTxt} =  xpath=//input[@name='costtoday'] 
+${KU_W_feature_sg_monthlyInvestTxt} =  xpath=//input[@name='sip']
+${KU_W_feature_sg_monthlyExpenseTxt} =  xpath=//input[@name='expense']
+${KU_W_feature_sg_retireAgeTxt} =  xpath=//input[@name='retireage']
+${KU_W_feature_sg_goalNameTxt} =  xpath=//input[@name='goalname']
 
 # Feature-TradeSmart Page
 ${KU_W_featureLink} =  xpath=//a[contains(text(),'Features')]
@@ -451,8 +527,63 @@ ${KU_W_feature_goalBasedInvestingLink} =  xpath=//a[contains(text(),'More about 
 ${KU_W_feature_setAGoalBtn} =  xpath=(//button[@class='btn in-btn'])[1]
 ${KU_W_feature_entryHeaderTitle} =  xpath=//h1[@class='entry-title post-title']
 
-
 # Feature-Family Account
 ${KU_W_feature_familyAccountLink} =  xpath=//a[contains(text(),'Family Account')]   
 ${KU_W_feature_fa_screenTitle} =  xpath=//h1[@class='b-family-account__what__heading']
 ${KU_W_feature_fa_screenContent} =  xpath=//div[@class='b-family-account__what__des']
+
+# Features-Consolidate Page
+${KU_W_feature_consolidateLink} =  xpath=//a[contains(text(),'Consolidate')]
+${KU_W_feature_cd_pageHeader} =  xpath=//header[@class='page-heading']/h1
+${KU_W_feature_cd_pageSubHeader} =  xpath=//header[@class='page-heading']/p
+${KU_W_feature_setAGoalTitle} =  xpath=(//div[contains(@class,'why-invest-text')]/h4)[1]
+${KU_W_feature_setAGoalSubTitle} =  xpath=(//div[contains(@class,'why-invest-text')]/h3)[1]
+${KU_W_feature_setAGoalDesc} =  xpath=//div[@class='set-a-goal-text']/p
+${KU_W_feature_goalBasedInvestingLink} =  xpath=//a[contains(text(),'More about goal-based investing')]
+${KU_W_feature_setAGoalBtn} =  xpath=(//button[@class='btn in-btn'])[1]
+${KU_W_feature_saveTaxGoalTitle} =  xpath=(//div[contains(@class,'why-invest-text')]/h4)[2]
+${KU_W_feature_saveTaxGoalSubTitle} =  xpath=(//div[contains(@class,'why-invest-text')]/h3)[2]
+${KU_W_feature_saveTaxGoalDesc} =  xpath=(//div[contains(@class,'why-invest-text')]/p)[1]
+${KU_W_feature_ELSSLink} =  xpath=//a[contains(.,'More on why ELSS is better')]
+${KU_W_feature_saveTaxGoalBtn} =  xpath=(//button[@class='btn in-btn'])[2]
+${KU_W_feature_saveTaxPageTitle} =  xpath=//h2[contains(.,'Save Tax')]
+${KU_W_feature_beatInflationTitle} =  xpath=//h4[.='THE SILENT KILLER']
+${KU_W_feature_beatInflationSubTitle} =  xpath=//h3[contains(.,'Beat Inflation')]
+${KU_W_feature_beatInflationDesc} =  xpath=//p[@class='beat-inflation-text']
+${KU_W_feature_inflationLink} =  xpath=//a[contains(.,'More about inflation')]
+${KU_W_feature_startInvestingBtn} =  xpath=(//button[@class='btn in-btn'])[3]
+${KU_W_feature_investScreenTab} =   xpath=//div[@class='b-mutual-funds-explore__tab-wrapper disable-browser-text-select']
+${KU_W_feature_todaysValueTitle} =  xpath=//div[contains(@class,'why-invest-text')]/h6
+${KU_W_feature_todaysValueSubTitle} =  xpath=//div[contains(@class,'why-invest-text')]/h5
+${KU_W_feature_kuveraTitle} =  xpath=(//div[contains(@class,'text-left')]/h6)[1]
+${KU_W_feature_kuveraBar} =  xpath=//div[@class='leftcurved green entry']
+${KU_W_feature_greenText} =  xpath=//p[@class='text-green']
+${KU_W_feature_subText} =  xpath=(//p[@class='sub-text'])[1]
+${KU_W_feature_FDTitle} =  xpath=(//div[contains(@class,'text-left')]/h6)[2]
+${KU_W_feature_FDLightGreenBar} =  xpath=(//div[@class='leftcurved light-green entry'])[1]
+${KU_W_feature_FDLightGreyBar} =  xpath=(//div[@class='rightcurved light-grey entry'])[1]
+${KU_W_feature_FDOffgreenText} =  xpath=(//p[@class='text-off-green'])[1]
+${KU_W_feature_FDSubText} =  xpath=(//p[@class='sub-text'])[2]
+${KU_W_feature_savingAcntTitle} =  xpath=(//div[contains(@class,'text-left')]/h6)[3]
+${KU_W_feature_SALightGreenBar} =  xpath=(//div[@class='leftcurved light-green entry'])[2]
+${KU_W_feature_SALightGreyBar} =  xpath=(//div[@class='rightcurved light-grey entry'])[2]
+${KU_W_feature_SAOffgreenText} =  xpath=(//p[@class='text-off-green'])[2]
+${KU_W_feature_SASubText} =  xpath=(//p[@class='sub-text'])[3]
+${KU_W_feature_familyAcntTitle} =  xpath=(//div[contains(@class,'why-invest-text')]/h4)[3]
+${KU_W_feature_familyAcntSubTitle} =  xpath=(//div[contains(@class,'why-invest-text')]/h3)[3]
+${KU_W_feature_familyAcntDesc} =  xpath=(//div[contains(@class,'why-invest-text')]/p)[2]
+${KU_W_feature_familyAcntBtn} =  xpath=(//button[@class='btn in-btn upcase'])[1]
+${KU_W_feature_switchTodayTitle} =  xpath=(//div[contains(@class,'why-invest-text')]/h4)[4]
+${KU_W_feature_switchTodaySubTitle} =  xpath=(//div[contains(@class,'why-invest-text')]/h3)[4]
+${KU_W_feature_switchTodayDesc1} =  xpath=(//div[contains(@class,'why-invest-text')]/p)[3]
+${KU_W_feature_switchTodayDesc2} =  xpath=(//div[contains(@class,'why-invest-text')]/p)[4]
+${KU_W_feature_switchTodayBtn} =  xpath=(//button[@class='btn in-btn upcase'])[2]
+${KU_W_feature_autdTrackingTitle} =  xpath=(//div[contains(@class,'why-invest-text')]/h4)[5]
+${KU_W_feature_autdTrackingSubTitle} =  xpath=(//div[contains(@class,'why-invest-text')]/h3)[5]
+${KU_W_feature_autdTrackingDesc} =  xpath=(//div[contains(@class,'why-invest-text')]/p)[5]
+${KU_W_feature_startImportingBtn} =  xpath=(//button[@class='btn in-btn upcase'])[3]
+${KU_W_feature_manageAcntTitle} =  xpath=(//div[contains(@class,'why-invest-text')]/h4)[6]
+${KU_W_feature_manageAcntSubTitle} =  xpath=(//div[contains(@class,'why-invest-text')]/h3)[6]
+${KU_W_feature_manageAcntDesc1} =  xpath=(//div[contains(@class,'why-invest-text')]/p)[6]
+${KU_W_feature_manageAcntDesc2} =  xpath=(//div[contains(@class,'why-invest-text')]/p)[7]
+${KU_W_feature_manageTodayBtn} =  xpath=(//button[@class='btn in-btn upcase'])[4]
