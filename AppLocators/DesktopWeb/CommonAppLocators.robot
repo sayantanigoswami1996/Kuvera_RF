@@ -4,7 +4,11 @@ ${e_title} =  Kuvera - Direct Mutual Funds | Stocks | Loans | Gold | Remit on Ku
 ${e_regulatoryDisclosure} =  Regulatory Disclosure
 ${e_login} =  Log in 
 ${e_loginPageTitle} =  Login. Start Investing.
+${e_emailLabel} =  EMAIL ADDRESS
+${e_login_passwordLabel} =  PASSWORD
 ${e_signup} =  Sign up 
+${e_signup_setPasswordLabel} =  SET A PASSWORD
+${e_signup_mobileLabel} =  MOBILE
 ${e_signupPageTitle} =  Sign Up. Start Investing.
 ${e_mfWelcomeTitle} =  Investments Simplified
 ${e_mf_welcomeText} =  First free Direct Mutual Fund investing platform. Zero fees, higher returns.
@@ -43,6 +47,29 @@ ${e_citiesText} =   Goals
 ${e_transValue} =   1.8 Crore
 ${e_transText} =  Transactions
 
+${e_stock_filterTitleText} =  Filter
+${e_stock_filterTxt} =  Sector
+${e_stock_subFilterTxt} =  Industry
+${e_stock_headerTxt} =  Stocks   
+${e_stock_subHeaderTxt} =  Explore, Invest and track all your stock investments
+${e_usstock_headerTxt} =  Diversify with US stocks
+${e_usstock_subHeaderTxt} =  Zero commission. Start with $10.
+${e_ss_headerTxt} =  Start SaveSmart today 
+${e_gold_headerTxt} =  Buying gold has never been this simple!
+  
+    
+
+
+#Feature-Widgets Variables
+${e_feature_th_TitleText} =  Save up to ₹10,000 in LTCG taxes every financial year with Tax Harvesting.
+${e_feature_ts_titleText} =  TradeSmart
+${e_feature_fa_screenTitle} =  Invest with Your Loved Ones
+${e_feature_manageAccountTitleText} =  Manage Account
+${e_feature_sg_screenTitle} =  SET YOUR GOAL
+${e_remit_screenTitle} =  A cheaper & faster way to send money home
+
+
+
 
 @{e_fndHouse_firstColumn} =  ADITYA BIRLA SUN LIFE  AXIS  BARODA  BHARTI AXA  BNP PARIBAS  CANARA ROBECO  DSP  EDELWEISS  ESSEL  FRANKLIN TEMPLETON    HDFC  HSBC  ICICI  PRUDENTIAL  IDBI  IDFC  IIFL  INDIA BULLS  INVESCO  ITI  JM FINANCIAL    
 @{e_fndHouse_secondColumn} =  KOTAK  L&T  LIC  MAHINDRA  MIRAE ASSET  MOTILAL OSWAL  NIPPON INDIA  PGIM INDIA  PPFAS    PRINCIPAL  QUANT  QUANTUM  SBI  SUNDARAM  TATA  TAURUS  UNION  UTI  YES 
@@ -65,18 +92,59 @@ ${KU_W_loginPageTitle} =  xpath=//div[contains(text(),'Login. Start Investing.')
 ${KU_W_signup} =   xpath=//*[@class='b-header__content__right__singup']
 ${KU_W_signupPageTitle} =  xpath=//div[contains(text(),'Sign Up. Start Investing.')]
 
+${KU_W_emailLabel} =  xpath=//label[contains(text(),'Email Address')]
+${KU_W_emailTxt} =  id=email
+${KU_W_login_passwordLabel} =  xpath=//label[contains(text(),'Password')]
+${KU_W_passwordTxt} =  id=password
+${KU_W_login_forgotPasswordLink} =  xpath=//span[@class='link forgot-password']
+${KU_W_loginButton} =  xpath=//button[@class='button-primary']
+${KU_W_googleSigninButton} =  xpath=//button[@class='btn in-btn-google']
+${KU_W_fbSigninButton} =  xpath=//button[@class='btn in-btn-fb']
+${KU_W_signup_mobileLabel} =  xpath=//label[contains(text(),'Mobile')]
+${KU_W_signup_mobileTxt} =  id=mobile_number
+${KU_W_signup_setPasswordLabel} =  xpath=//label[contains(text(),'Set a Password')]
+${KU_W_signup_inviteCodeLabel} =  xpath=//label[contains(text(),'invite code (optional)')]
+${KU_W_signup_inviteCodeTxt} =  id=invite_code
+${KU_W_signupButton} =  xpath=//*[@class='upcase btn in-btn']
+
 ${KU_W_langSwitch} =  xpath=//div[@class='b-header__content__right--language-switcher']
+
 ${KU_W_mf_category} =   xpath=//div[@class='b-mf-wiget__mf-category--input']
 ${KU_W_mf_subcategory} =  xpath=//div[@class='b-mf-wiget__mf-subcategory--input']
 ${KU_W_fund_list} =   xpath=//div[@class='b-fund-list__row']                               
 ${KU_W_loginButton} =   xpath=//button[@class='button-primary b-login-signup__login']
 ${KU_W_signUpButton} =  xpath=//button[@class='button-primary b-login-signup__register'] 
 ${KU_W_explore_MF} =  xpath=//a[@class='b-funds-list__explore-fund'] 
-${KU_W_mf_listIcon} =   xpath=//img[@class='b-fund-list__watchlist-icon']                    
+
+${KU_W_mf_listIcon} =   xpath=//img[@class='b-fund-list__watchlist-icon']               
 ${KU_W_android_image} =  xpath=//img[@class='b-mobile-first__img-android']
 ${KU_W_apple_image} =   xpath=//img[@class='b-mobile-first__img-apple']
 ${KU_W_coreaua_val} =   xpath=//div[@class='b-investment-count__count__aua__val']
 ${KU_W_coreaua_text} =  xpath=//div[@class='b-investment-count__count__aua__text']
+
+${KU_W_stock_filterTitle} =   xpath=//span[@class='b-explore-stock__action-title b-explore-stock__filter-action-title']
+${KU_W_stock_filter} =   xpath=//div[@class='b-filter-stock__box-sector']
+${KU_W_stock_fundList} =   xpath=//div[@class='b-explore-stocks--widget-container']
+${KU_W_stock_listIcon} =   xpath=(//img[@class='b-stocks-explore__watchlist-icon'])[1]
+${KU_W_mf_stock_button} =   xpath=(//div[@class='b-dynamic-tab-header__item__title'])[1]
+${KU_W_stock_subFilter} =  xpath=//div[@class='b-filter-stock__box b-filter-stock--dropdown-title--disabled b-filter-stock__box--widget']
+${KU_W_stock_subHeader} =  xpath=//div[@class='b-stocks-home__text']
+${KU_W_stock_header} =  xpath=//div[@class='b-stocks-home__title']
+
+${KU_W_USStockButton} =  xpath=(//div[@class='b-dynamic-tab-header__item__title'])[2]
+${KU_W_usstock_filter} =  xpath=//div[@class='b-action-bar__filter__item__sector']
+${KU_W_usstock_subFilter} =  xpath=//div[@class='b-action-bar__filter__item__geography__label']
+${KU_W_usstock_fundList} =  xpath=//div[@class='b-us-stocks--widget-container']
+${KU_W_usstock_listIcon} =  xpath=(//img[@class='b-stock-item__row1__bookmark'])[1]
+${KU_W_usstock_filterTitle} =  xpath=//div[@class='b-action-bar__filter__header__label']
+${KU_W_usstock_header} =  xpath=//div[@class='b-us-stocks-widget__introduction__detail__title1']
+${KU_W_usstock_subHeader} =  xpath=//div[@class='b-us-stocks-widget__introduction__detail__sign-up']
+
+${KU_W_saveSmartButton} =  xpath=//div[contains(@class,'save-smart-title')]
+${KU_W_saveSmartTitle} =  xpath=//div[@class='b-save-smart-home__title']
+
+${KU_W_goldButton} =  xpath=//div[contains(text(),'Gold')]
+${KU_W_goldTitle} =  xpath=//div[contains(@class,'b-gold-widget-content__title')]
 
 ${KU_W_cities_val} =  xpath=//div[@class='b-investment-count__count__cities__val']
 ${KU_W_cities_text} =   xpath=//div[@class='b-investment-count__count__cities__text']
@@ -127,3 +195,12 @@ ${KU_W_fundHouse_title} =   xpath=//div[@class='b-fund-house__info__title1']
 ${KU_W_fundHouse_subtitle} =   xpath=//div[@class='b-fund-house__info__title2']
 ${KU_W_fundHouses_firstColumn} =  xpath=//div[@class='b-fund-house__list__column']/a
 ${KU_W_fundHouses_secondColumn} =  xpath=//div[@class='b-fund-house__list__column b-fund-house__list__column--col2']/a
+
+# Feature-Widgets
+${KU_W_searchBarForFunds} =  xpath=(//div[@class='b-explore-fund__action-title'])[1]
+${KU_W_feature_th_screenTitle} =  xpath=//div[@class='paras-about-tax-harvesting']/h3
+${KU_W_feature_ts_title} =  xpath=//div[@class='b-trade-smart__header__desc__title'] 
+${KU_W_feature_fa_screenTitle} =  xpath=//h1[@class='b-family-account__what__heading']
+${KU_W_feature_manageAccountTitle} =  xpath=//div[@class='b-manage-account__what']/h1
+${KU_W_feature_sg_screenTitle} =  xpath=//*[@class='goals-index col-sm-4']/h2
+${KU_W_remit_screenTitle} =  xpath=//*[@class='b-introduction__desc__title']

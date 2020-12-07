@@ -1,25 +1,30 @@
 *** Settings ***
 Library     SeleniumLibrary
-Resource    ../../Tests/DesktopWeb/Imports.robot
+Resource    ../../Tests/DesktopWeb/ImportPages.robot
+
 Suite Setup  Launch URL 
 Suite Teardown  Close All Browsers
 
-#To run all tests: robot -d Results Tests/DesktopWeb/PreLoginTests.robot
-#To run spefici test: robot -d Results  -i TC01  Tests/DesktopWeb/PreLoginTests.robot
+#To run all tests: robot --variable URL:https://kuvera.in/ --variable BROWSER:headlesschrome -d Results Tests/DesktopWeb/PreLoginTests.robot
+#To run specific test: robot --variable URL:https://kuvera.in/ --variable BROWSER:headlesschrome -d Results  -i TC01 Tests/DesktopWeb/PreLoginTests.robot
 
 *** Test Cases ***
-Landing Page Widgets Verification And Header Navigation Test
+# Landing Page widgets verfication
+Landing Page Widgets Verification Test 
     [Tags]  TC01
-    Kuvera Web Close Regulatory Disclosure
-    Close Hello Bar 
     Verify Widgets
+
+# Header navigation - Insure, Loans, Remit
+Header Navigation Test  
+    [Tags]  TC02
     Header Navigation
 
+# Features sub headers navigation & goals - questionnaire
 Features Header Navigation Test
-    [Tags]  TC02
-    Kuvera Web Close Regulatory Disclosure
-    #  Close Hello Bar
-    #  Verify Widgets
+    [Tags]  TC03
+    Feature Sub Header Navigation
+
+# Invest Landing Page Navigation
+Invest Landing Page Widgets Verification
+    [Tags]  TC04
     Verify PreLogin Invest Landing Page
-    # Verify PreLogin Set A Goal Page
-    #  Verify PreLogin Set A Goal Page

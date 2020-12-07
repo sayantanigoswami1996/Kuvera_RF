@@ -25,7 +25,25 @@ ${e_invest_addGoldBtnText} =  Add gold you already own
 ${e_invest_faqTitleText} =  Questions? We’re happy to help!
 ${e_invest_faqBtnText} =  View FAQs
 ${e_invest_faqBotText} =  Search our help articles ...      
-
+${e_invest_buyGoldTitleText} =  Buy
+${e_invest_goldRateTitleText} =  Live Buy Rate
+${e_invest_purityTitleText} =  Purity   
+${e_invest_purityAmtText} =  24K 99.9%
+${e_invest_partnerTitleText} =  Partner      
+${e_invest_partnerNameText} =  Augmont 
+${e_invest_enterAmtTitleText} =  Enter Amount             
+${e_invest_enterGramsTitleText} =  Enter Grams              
+${e_invest_digiGold_T&CText} =  *Purchased gold can be sold after 7 days.
+${e_invest_comingSoonText} =  Coming soon: Gold gifting & delivery.   
+${e_invest_buyNowBtnText} =   Buy Now
+${e_invest_sellGoldTitleText} =  Sell
+${e_invest_liveSellRateTitleText} =  Live Sell Rate             
+${e_invest_logInSellgoldTitleText} =  Log in to sell gold.
+${e_invest_noAcntText} =  Don’t have an account? 
+${e_invest_SIPTitleText} =  Start gold SIP with Kuvera
+${e_invest_SIP_loginTitleText} =  Log in to start gold SIP.
+${e_invest_trackTitleText} =  Add gold purchased outside Kuvera 
+${e_invest_track_loginTitleText} =  Log in to add gold.
 
 
 # Application Locator 'KU_<locatorName>'
@@ -50,7 +68,41 @@ ${KU_W_addGoldHeading} =  xpath=//div[@class='section-add-gold-heading']
 ${KU_W_addGoldDesc} =  xpath=//div[@class='section-add-gold-desc']
 ${KU_W_dg_addGoldBtn} =  xpath=(//button[@class='button-primary add-gold-button-custom'])[1]
 ${KU_W_dg_faqHeading} =  xpath=//div[@class='section-faq-heading']
-
-${KU_W_faqBtn} =  xpath=(//button[@class='button-primary add-gold-button-custom'])[2]
+${KU_W_faqBtn} =   xpath=(//button[@class='button-primary add-gold-button-custom'])[2]
 ${KU_W_dg_faqBotTitle} =  xpath=//span[@class='faq-bot-top-banner-text']
 ${KU_W_dg_faqCloseBtn} =  xpath=//div[@class='faq-bot-top-banner-cross']
+${KU_W_dg_aboutUSLink} =  xpath=//ul[@class='list-unstyled']/li[1]
+${KU_W_dg_buyTitle} =  xpath=(//div[@class='gold-widget-tab-text'])[1]
+${KU_W_dg_liveGoldRateTitle} =  xpath=(//div[@class='b-buy-gold__cumulative-label b-buy-gold__live-buy-rate'])[1]
+${KU_W_ratePerGm} =  xpath=(//div[@class='b-buy-gold__cumulative-unit-container'])[1]
+${KU_W_goldRateRefreshIcon} =  xpath=(//div[@class='b-buy-gold__refresh-icon'])[1]
+${KU_W_dg_buyGoldPurityTitle} =  xpath=(//div[@class='b-buy-gold__cumulative-label'])[1]
+${KU_W_dg_toastHeader} =  xpath=//div[@class='b-app-standard-snackbar__box-text']
+${KU_W_buyGoldPurityAmt} =   xpath=(//div[@class='b-buy-gold__cumulative-unit b-buy-gold__cumulative-unit--widget'])[2]
+${KU_W_dg_buyGoldPartnerTitle} =  xpath=(//div[@class='b-buy-gold__cumulative-label'])[2]
+${KU_W_dg_buyGoldPartnerName} =  xpath=(//div[@class='b-buy-gold__cumulative-unit b-buy-gold__cumulative-unit--widget'])[3]
+${KU_W_dg_enterAmtTitle} =  xpath=(//div[@class='b-buy-gold__radios__label b-buy-gold__radios__label--selected'])[1]
+${KU_W_dg_enterGramsTitle} =  xpath=(//div[@class='b-buy-gold__radios__label b-buy-gold__radios__label--unselected'])[1]
+${KU_W_amount} =  xpath=(//div[@class='b-buy-gold__auto-filled-options-button b-buy-gold__auto-filled-options-button--widget'])[2]
+${KU_W_buyNowBtn} =  xpath=//button[@class='button-primary b-buy-gold__buy-now-btn']
+${KU_W_dg_goldRate} =  xpath=(//div[@class='b-buy-gold__cumulative-unit b-buy-gold__cumulative-unit--widget'])[1]
+${KU_W_dg_enterGramsRadioBtn} =  xpath=(//div[@class='b-buy-gold__radio-icon-container--selected'])[1]
+${KU_W_enterGram} =   xpath=(//div[@class='b-buy-gold__auto-filled-options-button b-buy-gold__auto-filled-options-button--widget'])[1]
+${KU_W_dg_T&C} =  xpath=//div[@class='b-buy-gold__terms b-buy-gold__terms--widget']
+${KU_W_dg_comingSoonTitle} =  xpath=(//div[@class='b-buy-gold__coming-soon-text'])[1]
+${KU_W_dg_sellGoldTitle} =  xpath=(//div[@class='gold-widget-tab-text'])[2]
+${KU_W_dg_liveSellRateTitle} =  xpath=//div[@class='b-sell-gold__cumulative-label b-sell-gold__live-sell-rate']
+${KU_W_dg_loginIntoSellGoldTitle} =  xpath=//div[@class='b-sell-gold__widget-no-logged-sell-text']
+${KU_W_dg_sellGoldRefreshIcon} =  xpath=//img[@class='b-sell-gold__refresh-icon']
+${KU_W_dg_sellGoldPurityTitle} =  xpath=(//div[@class='b-sell-gold__cumulative-label'])[1]
+${KU_W_dg_sellGoldPartnerTitle} =  xpath=(//div[@class='b-sell-gold__cumulative-label'])[2]
+${KU_W_dg_sellGoldPurityAmt} =  xpath=(//div[@class='b-sell-gold__cumulative-unit b-sell-gold__cumulative-unit--widget'])[2]
+${KU_W_dg_sellGoldPartnerName} =  xpath=(//div[@class='b-sell-gold__cumulative-unit b-sell-gold__cumulative-unit--widget'])[3]
+${KU_W_dg_sellGold_login} =  xpath=//button[@class='button-primary b-sell-gold__sell-now-btn']
+${KU_W_dg_sellGold_signup} =  xpath=//span[@class='b-sell-gold__sign-up-link--widget']
+${KU_W_dg_sellGold_noAcntMsg} =  xpath=//div[@class='b-sell-gold__sign-up-text-container--widget']/span[1]
+${KU_W_dg_goldValue} =  xpath=//div[@class='b-buy-gold__other-value b-buy-gold__text-visible b-buy-gold__other-value--widget']
+${KU_W_dg_SIPTitle} =  xpath=(//div[@class='gold-widget-tab-text'])[3]
+${KU_W_dg_SIP_Track_Heading} =  xpath=//div[@class='b-log-gold__heading-widget']
+${KU_W_dg_loginTitle} =  xpath=//div[@class='b-sell-gold__widget-no-logged-sell-text']
+${KU_W_dg_trackTitle} =  xpath=(//div[@class='gold-widget-tab-text'])[4]

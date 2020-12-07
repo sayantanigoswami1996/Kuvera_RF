@@ -1,7 +1,5 @@
 *** Settings ***
 
-Library     JSONLibrary
-Library     JsonValidator
 Library     SeleniumLibrary
 
 *** Keywords ***

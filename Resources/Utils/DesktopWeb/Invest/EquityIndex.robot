@@ -6,6 +6,7 @@ Library     SeleniumLibrary
 
 Verify Equity Index Landing Page
     Wait For Element Visibility    ${KU_W_equityIndexTitle} 
+    Sleep  1s
     Click Element  ${KU_W_equityIndexTitle} 
     Wait For Element Visibility  ${KU_W_invest_fundsScreenTitle}
     Verify Language Switch Login And Signup Link  

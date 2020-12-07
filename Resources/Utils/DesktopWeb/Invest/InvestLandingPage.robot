@@ -13,16 +13,44 @@ Verify Filter And Clear All
         Verify Element And Text  ${KU_W_filter}   ${e_invest_filterBtnText}
         Verify Element And Text  ${KU_W_clearAll}  ${e_invest_clearAllBtnTxt}
 
+Verify Filter Navigation
+    Click Element  ${KU_W_invest_watchList}
+    Verify Element And Text  ${KU_W_invest_watchlistHeading}   ${e_invest_watchlistHeadingText}
+    # InstaRedeem
+    Click Element  ${KU_W_invest_instaRedeem}
+    Sleep  3s
+    Wait For Element Visibility    ${KU_W_invest_fundsScreenTitle}
+    Verify Element And Text   ${KU_W_invest_fundsScreenTitle}   ${e_invest__instaredeem_fundText}
+    # Save Taxes
+    Click Element  ${KU_W_invest_saveTaxes}
+    Verify Search And Sort  ${KU_W_searchBarForFunds}  ${e_invest_mf_searchBarText}   ${KU_W_sort} 
+    # Top Rated
+    Click Element  ${KU_W_invest_topRated}
+    Verify Search And Sort  ${KU_W_searchBarForFunds}  ${e_invest_mf_searchBarText}   ${KU_W_sort} 
+    # Investor Choice
+    Click Element  ${KU_W_invest_investorChoice}
+    Sleep  1s
+    Wait For Element Visibility   ${KU_W_invest_watchListBtn}
+    Verify Page Contains Element   ${KU_W_invest_watchListBtn}
+    # New Funds
+    Click Element  ${KU_W_invest_newFunds}
+    Verify Element And Text   ${KU_W_invest_newfunds_openEndedSwitch}  ${e_invest__newfunds_openSwitchText}
+    # Top Searched
+    Click Element  ${KU_W_invest_topSearched}
+    Sleep  1s
+    Wait For Element Visibility   ${KU_W_invest_watchListBtn}
+    Verify Page Contains Element   ${KU_W_invest_watchListBtn}
+
 Verify PreLogin Invest Landing Page
         Wait For Element Visibility  ${KU_W_investLink} 
         Click Element  ${KU_W_investLink} 
         Sleep  1s
         Verify Language Switch Login And Signup Link
         # Save Smart
-        Wait For Element Visibility  ${KU_W_saveSmartTitle}  
-        Verify Element And Text  ${KU_W_saveSmartTitle}  ${e_invest_saveSmartTitleText}
-        Verify Element And Text  ${KU_W_saveSmartSubTitle}  ${e_invest_saveSmartSubText} 
-        Click Element   ${KU_W_saveSmartTitle}
+        Wait For Element Visibility  ${KU_W_invest_saveSmartTitle}  
+        Verify Element And Text  ${KU_W_invest_saveSmartTitle}  ${e_invest_saveSmartTitleText}
+        Verify Element And Text  ${KU_W_invest_saveSmartSubTitle}  ${e_invest_saveSmartSubText} 
+        Click Element   ${KU_W_invest_saveSmartTitle}
         Validate SaveSmart Landing Page
         # Gilt Funds
         Wait For Element Visibility  ${KU_W_giltFundsTitle} 
@@ -48,9 +76,12 @@ Verify PreLogin Invest Landing Page
         Verify Element And Text  ${KU_W_digitalGoldTitle}   ${e_invest_digitalGoldTitleText}
         Verify Element And Text  ${KU_W_digitalGoldSubTitle}   ${e_invest_digitalGoldSubText}
         Verify Page Contains Image   ${KU_W_goldIconImage} 
+        Click Element  ${KU_W_digitalGoldTitle}
         Verify Digital Gold Landing Page
+        Sleep  2s
         # US ETF
         Wait For Element Visibility  ${KU_W_UTFTitle}
+        Sleep  2s
         Verify Element And Text  ${KU_W_UTFTitle}   ${e_invest_USETFTitleText}
         Verify Element And Text  ${KU_W_UTFSubTitle}  ${e_invest_USETFSubText}
         Verify Page Contains Image   ${KU_W_USUTFImage}  
@@ -104,9 +135,10 @@ Verify PreLogin Invest Landing Page
         Go Back
         Verify Element And Text  ${KU_W_digitalGold}  ${e_invest_digGold_titleText}
         Click Element  ${KU_W_digitalGold}
-        Verify Element And Text   ${KU_W_dg_screenTitle}   ${e_invest_digiGold_screenText} 
-        Go Back
+        Verify Digital Gold Landing Page
         Sleep  1s
+        Scroll Untill View  ${KU_W_stocks}
+        Sleep  4s
         Wait For Element Visibility   ${KU_W_stocks}
         Verify Element And Text  ${KU_W_stocks}   ${e_invest_stocks_titleText}
         Wait For Element Visibility   ${KU_W_stocks}

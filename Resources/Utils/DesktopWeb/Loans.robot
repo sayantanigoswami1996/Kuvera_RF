@@ -1,13 +1,10 @@
 *** Settings ***
 
-Library     JSONLibrary
-Library     JsonValidator
 Library     SeleniumLibrary
 
 *** Keywords ***
 
 Verify PreLogin Loans Page
-
   Click Element  ${KU_W_loanLink}
   Verify Language Switch Login And Signup Link
   Wait For Element Visibility  ${KU_W_loanHeaderTitle}  
