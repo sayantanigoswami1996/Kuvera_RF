@@ -16,12 +16,11 @@ Resource    ../../Resources/Utils/Android/Common.robot
 *** Test Cases ***
 
 Menu Navigation
-    [Tags]            TC01
+    [Tags]  TC01
     Begin Mobile Test Kuvera
     Skip Sliders
     Kuvera Logo Click
-
-    ${h0} =           Get Json Values    ${header0}   Resources/TestData/Headers.json
+    ${h0} =  Get Json Values    ${header0}   Resources/TestData/Headers.json
     Log To Console              ${h0}
 
 *** Variables ***

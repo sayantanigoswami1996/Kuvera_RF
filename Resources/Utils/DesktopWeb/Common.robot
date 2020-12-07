@@ -6,7 +6,14 @@ Library     SeleniumLibrary
 Library     String
 Resource    ../../../AppLocators/DesktopWeb/CommonAppLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/MenuNavigationLocators.robot
-
+Resource    ../../../AppLocators/DesktopWeb/InvestLocators/InvestLandingPageLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/InvestLocators/SaveSmartLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/InvestLocators/DigitalGoldLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/InvestLocators/GiltFundsLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/InvestLocators/EquityIndexLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/InvestLocators/SectorFundsLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/InvestLocators/ValueFundsLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/InvestLocators/ELSSTaxSaverLocators.robot
 *** Keywords ***
 
 Launch URL
@@ -90,7 +97,7 @@ Kuvera Web Close Regulatory Disclosure
 
 Close Hello Bar
     Sleep  10s
-    Wait Until Element Is Visible  ${KU_W_bannerFrame}  timeout=30
+    Wait Until Element Is Visible  ${KU_W_bannerFrame}  timeout=40
     Switch To Frame  ${KU_W_bannerFrame}
     Wait For Element Visibility  ${KU_W_bannerCloseBtn}
     Click Element  ${KU_W_bannerCloseBtn}

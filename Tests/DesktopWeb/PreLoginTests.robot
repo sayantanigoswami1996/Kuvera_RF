@@ -30,3 +30,8 @@ Features Header Navigation Test
     Verify Login Page Widgets
     Go Back
     Verify Signup Page Widgets
+
+# Invest Landing Page Navigation
+Invest Landing Page Widgets Verification
+    [Tags]  TC05
+    Verify PreLogin Invest Landing Page

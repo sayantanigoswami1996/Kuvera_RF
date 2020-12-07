@@ -5,6 +5,10 @@ Library     SeleniumLibrary
 *** Keywords ***
 
 Verify Widgets
+    Verify Stock Widgets
+    Verify US Stock Widgets
+    Verify Save Smart Widgets
+    Verify Gold Widgets
     Verify Mutual Funds Widgets 
     Verify Fund Houses
     Verify Features Widgets 
@@ -62,6 +66,7 @@ Verify Mutual Funds Widgets
     Verify Element And Text  ${KU_W_mf_subcategory}  ${e_mfSubCategory}
     Wait For Element Visibility  ${KU_W_fund_list} 
     Verify Page Contains Element  ${KU_W_fund_list} 
+    Verify Page Contains Image  ${KU_W_mf_listIcon}
     Verify Element And Text  ${KU_W_loginButton}  ${e_login}
     Verify Element And Text  ${KU_W_signUpButton}  ${e_signup}
     Verify Element And Text  ${KU_W_coreaua_val}  ${e_coreAUAValue}
@@ -70,11 +75,34 @@ Verify Mutual Funds Widgets
     Verify Element And Text  ${KU_W_cities_text}  ${e_citiesText}
     Verify Element And Text  ${KU_W_trans_val}  ${e_transValue}
     Verify Element And Text  ${KU_W_trans_text}  ${e_transText}
-    Verify Page Contains Image  ${KU_W_mf_listIcon}
     Scroll Element Into View  ${KU_W_explore_MF}
     Verify Page Contains Element  ${KU_W_explore_MF}
     Verify Google Play & Apple Store Icons
     Verify Page Contains Element  ${KU_W_faqbot_icon}
+
+Verify Stock Widgets
+    Wait For Element Visibility   ${KU_W_mf_stock_button}
+    Click Element  ${KU_W_mf_stock_button}
+    Verify Presence Of Filter Sub Category And WatchList Icon  ${KU_W_stock_filterTitle}  ${KU_W_stock_filter}   ${KU_W_stock_subFilter}   ${KU_W_stock_fundList}  ${KU_W_stock_listIcon}
+    Verify Element And Text  ${KU_W_stock_header}  ${e_stock_headerTxt}
+    Verify Element And Text  ${KU_W_stock_subHeader}   ${e_stock_subHeaderTxt} 
+
+Verify US Stock Widgets
+    Wait For Element Visibility   ${KU_W_USStockButton}
+    Click Element  ${KU_W_USStockButton}
+    Verify Presence Of Filter Sub Category And WatchList Icon  ${KU_W_usstock_filterTitle}  ${KU_W_usstock_filter}   ${KU_W_usstock_subFilter}   ${KU_W_usstock_fundList}  ${KU_W_usstock_listIcon}
+    Verify Element And Text  ${KU_W_usstock_header}  ${e_usstock_headerTxt}
+    Verify Element And Text  ${KU_W_usstock_subHeader}   ${e_usstock_subHeaderTxt} 
+
+Verify Save Smart Widgets
+    Wait For Element Visibility  ${KU_W_saveSmartButton}
+    Click Element  ${KU_W_saveSmartButton}
+    Verify Element And Text   ${KU_W_saveSmartTitle}   ${e_ss_headerTxt} 
+
+Verify Gold Widgets
+    Wait For Element Visibility   ${KU_W_goldButton}
+    Click Element   ${KU_W_goldButton}
+    Verify Element And Text  ${KU_W_goldTitle}   ${e_gold_headerTxt} 
 
 Verify Features Widgets
     # Tax Saver
