@@ -1,5 +1,6 @@
 *** Variables *** 
 # Application Expected Values 'e_<variableName>'
+
 # Invest
 ${e_invest_saveSmartTitleText} =   SaveSmart
 ${e_invest_saveSmartSubText} =  Invest in low risk liquid funds and redeem upto ₹2 lakhs instantly
@@ -53,8 +54,12 @@ ${e_invest__sortYearText} =  3Y
 ${e_invest__instaredeem_fundText} =  Liquid Fund
 ${e_invest__newfunds_openSwitchText} =  Open Ended
 ${e_invest_watchlistHeadingText} =  Login to track your favorite funds by adding them to your watch list.				
+
+# Mutual Fund
+${e_invest_fundOfferDocumentLink} =  Fund offer document
+
 # Application Locator 'KU_<locatorName>'
-# Invest Landing Navigation Page
+# Invest Landing Page
 ${KU_W_investLink} =  xpath=//a[@class='b-header__content__invest cursor-pointer']
 ${KU_W_invest_saveSmartTitle} =  xpath=(//div[@class='k-cls b-invest-card']/h6)[1]
 ${KU_W_invest_saveSmartSubTitle} =  xpath=(//div[@class='k-cls b-invest-card']/p)[1]
@@ -123,3 +128,44 @@ ${KU_W_invest_watchList} =  xpath=//div[contains(text(),'Watchlist')]
 ${KU_W_invest_watchlist_loginBtn} =  xpath=//button[contains(.,'Login')]
 ${KU_W_invest_fundsScreenTitle} =  xpath=(//div[@class='b-mutual-funds-explore__fund-row-content-industry-wrapper']/div[3])[1]
 ${KU_W_invest_newfunds_openEndedSwitch} =  xpath=(//div[@class='b-standard-switch__label b-standard-switch__label--selected'])[2]
+
+# Mutual Fund
+${KU_W_invest_mf_fund1} =  xpath=(//div[@class='b-mutual-funds-explore__name-wrapper'])/a[1]
+# Details Page 
+# Title Section
+${KU_W_invest_title} =  xpath=//*[@class='b-mf-basic-info__header--fund-name']
+${KU_W_invest_navValue} =  xpath=//*[@class='b-mf-basic-info__nav-value']
+${KU_W_invest_navValueInfoIcon} =  xpath=//*[@class='b-mf-basic-info__nav-value']
+${KU_W_invest_aum} =  xpath=(//*[@class='b-mf-basic-info__content-key'])[1]
+${KU_W_invest_aumInfoIcon} =  xpath=(//*[@class='b-mf-basic-info__popup-container'])[1]
+${KU_W_invest_aumValue} =  xpath=(//*[@class='b-mf-basic-info__content-value'])[1]
+${KU_W_invest_ter} =  xpath=(//*[@class='b-mf-basic-info__content-key'])[2]
+${KU_W_invest_terInfoIcon} =  xpath=(//*[@class='b-mf-basic-info__popup-container'])[2]
+${KU_W_invest_terValue} =  xpath=(//*[@class='b-mf-basic-info__content-value'])[2]
+${KU_W_invest_risk} =  xpath=(//*[@class='b-mf-basic-info__content-key'])[3]
+${KU_W_invest_riskInfoIcon} =  xpath=(//*[@class='b-mf-basic-info__popup-container'])[3]
+${KU_W_invest_riskValue} =  xpath=(//*[@class='b-mf-basic-info__content-value'])[3]
+# Graph Section 
+${KU_W_invest_performaceCart} =  id=container-chart
+# Past Performace 
+${KU_W_invest_compareTitle} =  xpath=//*[@class='b-mf-compare__title']
+${KU_W_invest_compareTableContent} =  xpath=//*[@class='b-app-standard-table']
+# Past Performace 
+${KU_W_invest_performanceHeading} =  xpath=//*[@class='b-mf-past-performance__heading']
+${KU_W_invest_performanceNumField} =  xpath=//*[@class='b-mf-past-performance__input-container__num-field-container']
+${KU_W_invest_performanceDuration1Y} =  xpath=//*[@class='b-mf-past-performance__duration-container__tile']/div[1]
+${KU_W_invest_performanceDuration3Y} =  xpath=//*[@class='b-mf-past-performance__duration-container__tile']/div[2]
+${KU_W_invest_performanceDurationAll} =  xpath=//*[@class='b-mf-past-performance__duration-container__tile']/div[3]
+${KU_W_invest_seeFundHoldings} =  xpath=//*[@class='b-mf-holdings__heading']
+${KU_W_invest_topHoldings} =  xpath=//*[@class='b-mf-institutional-holders__heading']
+${KU_W_invest_holdingsTable} =  xpath=//*[@class='b-mf-institutional-holders__table']
+${KU_W_invest_otherInfo} =  xpath=//*[@class='b-mf-other-info__heading']
+${KU_W_invest_otherInfoContent} =  xpath=//*[@class='b-mf-other-info__container']
+${KU_W_invest_exitLoad} =  xpath=//*[@class='b-mf-other-info__exit-load']
+${KU_W_invest_exitLoadInfo} =  xpath=//*[@class='b-mf-other-info__value-wrapper']/div
+${KU_W_invest_fundObjectiveLabel} =  xpath=//*[@class='b-mf-other-info__key']
+${KU_W_invest_fundObjectiveValue} =  xpath=//*[@class='b-mf-other-info__value-objective']
+${KU_W_invest_fundManager} =  xpath=//*[@class='b-mf-other-info__fund-manager']
+${KU_W_invest_fundOfferDocumentLink} =  xpath=//*[@class='b-mf-other-info__img--link']
+${KU_W_invest_AllFundsLink} =  xpath=(//*[@class='b-mf-other-info__img--link'])[2]
+${KU_W_invest_mf_widgetHeader} =  xpath=//*[@class='b-mf-widget__header']

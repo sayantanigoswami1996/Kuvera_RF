@@ -70,9 +70,6 @@ ${e_feature_manageAccountTitleText} =  Manage Account
 ${e_feature_sg_screenTitle} =  SET YOUR GOAL
 ${e_remit_screenTitle} =  A cheaper & faster way to send money home
 
-
-
-
 @{e_fndHouse_firstColumn} =  ADITYA BIRLA SUN LIFE  AXIS  BARODA  BHARTI AXA  BNP PARIBAS  CANARA ROBECO  DSP  EDELWEISS  ESSEL  FRANKLIN TEMPLETON    HDFC  HSBC  ICICI  PRUDENTIAL  IDBI  IDFC  IIFL  INDIA BULLS  INVESCO  ITI  JM FINANCIAL    
 @{e_fndHouse_secondColumn} =  KOTAK  L&T  LIC  MAHINDRA  MIRAE ASSET  MOTILAL OSWAL  NIPPON INDIA  PGIM INDIA  PPFAS    PRINCIPAL  QUANT  QUANTUM  SBI  SUNDARAM  TATA  TAURUS  UNION  UTI  YES 
 

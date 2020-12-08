@@ -6,7 +6,7 @@ Suite Setup  Launch URL
 Suite Teardown  Close All Browsers
 
 #To run all tests: robot --variable URL:https://kuvera.in/ --variable BROWSER:headlesschrome -d Results Tests/DesktopWeb/PreLoginTests.robot
-#To run specific test: robot --variable URL:https://kuvera.in/ --variable BROWSER:headlesschrome -d Results  -i TC01 Tests/DesktopWeb/PreLoginTests.robot
+#To run specific test: robot --variable URL:https://kuvera.in/ --variable BROWSER:headlesschrome -d Results -i TC01 Tests/DesktopWeb/PreLoginTests.robot
 
 *** Test Cases ***
 # Langin Page widgets verification
@@ -34,4 +34,6 @@ Features Header Navigation Test
 # Invest Landing Page Navigation
 Invest Landing Page Widgets Verification
     [Tags]  TC05
-    Verify PreLogin Invest Landing Page
+    #Verify PreLogin Invest Landing Page
+    Verify Mutual Fund Landing Page
+

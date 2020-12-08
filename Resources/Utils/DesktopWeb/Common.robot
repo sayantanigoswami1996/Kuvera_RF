@@ -80,6 +80,12 @@ Switch To Window Verify Title And Close
     Sleep  2s
     Switch Window  browser=Kuvera
 
+Switch To Window 
+    Switch Window  locator=NEW
+    Close Window
+    Sleep  2s
+    Switch Window  browser=Kuvera
+
 Switch To Frame
     [Arguments]  ${element}
     Select Frame  ${element}
