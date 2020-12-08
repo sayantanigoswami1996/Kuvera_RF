@@ -63,30 +63,14 @@ Validate SaveSmart Landing Page
     Verify Element And Text  ${KU_W_ss_sleepTitle}  ${e_invest_ss_sleepTitleText}
     Verify Element And Text  ${KU_W_ss_sleepMsg}  ${e_invest_ss_sleepMsgText}
     Verify Page Contains Element  ${KU_W_ss_funds}
-    Wait For Element Visibility  ${KU_W_ss_fundLinkNippon}
-    Click Element  ${KU_W_ss_fundLinkNippon}
-    Sleep  2s
-    Wait For Element Visibility   ${KU_W_ss_fundName}
-    Verify Element And Text   ${KU_W_ss_fundName}  ${e_invest_ss_nipponFundName}
-    Validate Nav Value ang HighChart Presence
+    Wait For Element Visibility  ${KU_W_ss_fundLogoLink1}
+    Click Element  ${KU_W_ss_fundLogoLink1}
     Go Back
-    Click Element  ${KU_W_ss_fundLinkPGIM}
-    Wait For Element Visibility   ${KU_W_ss_highChart}
-    Wait For Element Visibility   ${KU_W_ss_fundName}
-    Verify Element And Text   ${KU_W_ss_fundName}  ${e_invest_ss_PGIMfundName} 
-    Validate Nav Value ang HighChart Presence
+    Click Element  ${KU_W_ss_fundLogoLink2}
     Go Back
-    Click Element  ${KU_W_ss_fundLinkICICI}
-    Wait For Element Visibility   ${KU_W_ss_highChart}
-    Wait For Element Visibility   ${KU_W_ss_fundName}
-    Verify Element And Text   ${KU_W_ss_fundName}  ${e_invest_ss_ICICIfundName}
-    Validate Nav Value ang HighChart Presence
+    Click Element  ${KU_W_ss_fundLogoLink3}
     Go Back
-    Click Element  ${KU_W_ss_fundLinkAXIS}
-    Wait For Element Visibility   ${KU_W_ss_highChart}
-    Wait For Element Visibility   ${KU_W_ss_fundName}
-    Verify Element And Text   ${KU_W_ss_fundName}  ${e_invest_ss_AXISfundName}
-    Validate Nav Value ang HighChart Presence
+    Click Element  ${KU_W_ss_fundLogoLink4}
     Go Back
    
     # Start Save

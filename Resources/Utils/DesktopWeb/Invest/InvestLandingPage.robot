@@ -13,34 +13,71 @@ Verify Filter And Clear All
         Verify Element And Text  ${KU_W_filter}   ${e_invest_filterBtnText}
         Verify Element And Text  ${KU_W_clearAll}  ${e_invest_clearAllBtnTxt}
 
-Verify Filter Navigation
-    Click Element  ${KU_W_invest_watchList}
-    Verify Element And Text  ${KU_W_invest_watchlistHeading}   ${e_invest_watchlistHeadingText}
-    # InstaRedeem
-    Click Element  ${KU_W_invest_instaRedeem}
-    Sleep  3s
-    Wait For Element Visibility    ${KU_W_invest_fundsScreenTitle}
-    Verify Element And Text   ${KU_W_invest_fundsScreenTitle}   ${e_invest__instaredeem_fundText}
-    # Save Taxes
-    Click Element  ${KU_W_invest_saveTaxes}
-    Verify Search And Sort  ${KU_W_searchBarForFunds}  ${e_invest_mf_searchBarText}   ${KU_W_sort} 
-    # Top Rated
-    Click Element  ${KU_W_invest_topRated}
-    Verify Search And Sort  ${KU_W_searchBarForFunds}  ${e_invest_mf_searchBarText}   ${KU_W_sort} 
-    # Investor Choice
-    Click Element  ${KU_W_invest_investorChoice}
-    Sleep  1s
-    Wait For Element Visibility   ${KU_W_invest_watchListBtn}
-    Verify Page Contains Element   ${KU_W_invest_watchListBtn}
-    # New Funds
-    Click Element  ${KU_W_invest_newFunds}
-    Verify Element And Text   ${KU_W_invest_newfunds_openEndedSwitch}  ${e_invest__newfunds_openSwitchText}
-    # Top Searched
-    Click Element  ${KU_W_invest_topSearched}
-    Sleep  1s
-    Wait For Element Visibility   ${KU_W_invest_watchListBtn}
-    Verify Page Contains Element   ${KU_W_invest_watchListBtn}
+Verify Filter Navigation For Funds
+        Click Element  ${KU_W_invest_watchList}
+        Verify Element And Text  ${KU_W_invest_watchlistHeading}   ${e_invest_watchlistHeadingText}
+        # InstaRedeem
+        Click Element  ${KU_W_invest_instaRedeem}
+        Sleep  3s
+        Wait For Element Visibility    ${KU_W_invest_fundsScreenTitle}
+        Verify Element And Text   ${KU_W_invest_fundsScreenTitle}   ${e_invest__instaredeem_fundText}
+        # Save Taxes
+        Click Element  ${KU_W_invest_saveTaxes}
+        Verify Search And Sort  ${KU_W_searchBarForFunds}  ${e_invest_mf_searchBarText}   ${KU_W_sort} 
+        # Top Rated
+        Click Element  ${KU_W_invest_topRated}
+        Verify Search And Sort  ${KU_W_searchBarForFunds}  ${e_invest_mf_searchBarText}   ${KU_W_sort} 
+        # Investor Choice
+        Click Element  ${KU_W_invest_investorChoice}
+        Sleep  1s
+        Wait For Element Visibility   ${KU_W_invest_watchListBtn}
+        Verify Page Contains Element   ${KU_W_invest_watchListBtn}
+        # New Funds
+        Click Element  ${KU_W_invest_newFunds}
+        Verify Element And Text   ${KU_W_invest_newfunds_openEndedSwitch}  ${e_invest__newfunds_openSwitchText}
+        # Top Searched
+        Click Element  ${KU_W_invest_topSearched}
+        Sleep  1s
+        Wait For Element Visibility   ${KU_W_invest_watchListBtn}
+        Verify Page Contains Element   ${KU_W_invest_watchListBtn}
 
+Verify Filter Navigation For Stocks  
+        [Arguments]    ${watchListHeading}   ${watchlistHeadingText}   ${sortYearFor52High}  ${watchListBtn}
+        # All
+        Click Element  ${KU_W_invest_stocks_all}
+        Verify Search And Sort  ${KU_W_searchBarForTopGainer}  ${e_invest_stock_searchBarTxt}  ${KU_W_sort_topGainer_India}
+        # WatchList
+        Click Element  ${KU_W_invest_watchList}
+        Verify Element And Text  ${watchListHeading}  ${watchlistHeadingText} 
+        # Gainers
+        Click Element  ${KU_W_invest_stocks_gainers}
+        Verify Element And Text   ${KU_W_invest_sortYear}  ${e_invest__stocks_sortYearText}
+        Wait For Element Visibility   ${watchListBtn}
+        Verify Page Contains Element  ${watchListBtn}
+        # Losers
+        Click Element  ${KU_W_invest_stocks_losers}
+        Verify Element And Text   ${KU_W_invest_sortYear}  ${e_invest__stocks_sortYearText}
+        Wait For Element Visibility   ${watchListBtn}
+        Verify Page Contains Element  ${watchListBtn}
+        # 52Whigh
+        Click Element  ${KU_W_invest_stocks_52WHigh}
+        Verify Element And Text   ${KU_W_invest_sortYear}  ${sortYearFor52High}
+        Wait For Element Visibility   ${watchListBtn}
+        Verify Page Contains Element  ${watchListBtn}
+        # 52Wlow
+        Click Element  ${KU_W_invest_stocks_52WLow}
+        Verify Element And Text   ${KU_W_invest_sortYear}  ${sortYearFor52High}
+        Sleep  4s
+        Scroll Untill View   ${KU_W_invest_52WLow_noStocksAvailable}
+        Wait For Element Visibility    ${KU_W_invest_52WLow_noStocksAvailable}
+        Verify Element And Text   ${KU_W_invest_52WLow_noStocksAvailable}  ${e_invest__52WLow_noStocksText}
+        Verify Element And Text   ${KU_W_invest_52WHighLow_allStockLink}  ${e_invest__52WLow_allStockLinkText} 
+        Sleep  1s
+        Wait For Element Visibility    ${KU_W_invest_52WHighLow_allStockLink}
+        Click Element  ${KU_W_invest_52WHighLow_allStockLink}
+        Wait For Element Visibility   ${watchListBtn}
+        Verify Page Contains Element  ${watchListBtn}
+      
 Verify PreLogin Invest Landing Page
         Wait For Element Visibility  ${KU_W_investLink} 
         Click Element  ${KU_W_investLink} 

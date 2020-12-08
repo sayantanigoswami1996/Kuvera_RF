@@ -27,4 +27,5 @@ Features Header Navigation Test
 # Invest Landing Page Navigation
 Invest Landing Page Widgets Verification
     [Tags]  TC04
-    Verify PreLogin Invest Landing Page
+    # Verify PreLogin Invest Landing Page
+    Verify Top Gainers Landing Page
