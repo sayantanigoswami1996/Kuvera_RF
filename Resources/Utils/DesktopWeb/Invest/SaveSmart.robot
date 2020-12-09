@@ -4,12 +4,6 @@ Library     SeleniumLibrary
 
 *** Keywords ***
 
-Validate Nav Value ang HighChart Presence
-    Verify Page Contains Element  ${KU_W_ss_navValue}
-    Scroll Untill View   ${KU_W_ss_highChart}
-    Wait For Element Visibility   ${KU_W_ss_highChart}
-    Verify Page Contains Element  ${KU_W_ss_highChart} 
-
 Validate SaveSmart Landing Page
     Wait For Element Visibility  ${KU_W_ss_screenTitle}
     Verify Language Switch Login And Signup Link
@@ -65,12 +59,19 @@ Validate SaveSmart Landing Page
     Verify Page Contains Element  ${KU_W_ss_funds}
     Wait For Element Visibility  ${KU_W_ss_fundLogoLink1}
     Click Element  ${KU_W_ss_fundLogoLink1}
+    Wait For Element Visibility   ${KU_W_ss_fundName}
     Go Back
+    Wait For Element Visibility  ${KU_W_ss_fundLogoLink2}
     Click Element  ${KU_W_ss_fundLogoLink2}
+    Wait For Element Visibility  ${KU_W_ss_fundName}
     Go Back
+    Wait For Element Visibility  ${KU_W_ss_fundLogoLink3}
     Click Element  ${KU_W_ss_fundLogoLink3}
+    Wait For Element Visibility  ${KU_W_ss_fundName}
     Go Back
+    Wait For Element Visibility  ${KU_W_ss_fundLogoLink4}
     Click Element  ${KU_W_ss_fundLogoLink4}
+    Wait For Element Visibility  ${KU_W_ss_fundName}
     Go Back
    
     # Start Save
