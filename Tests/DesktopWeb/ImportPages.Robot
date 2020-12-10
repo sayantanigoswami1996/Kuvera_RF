@@ -1,5 +1,5 @@
 *** Settings ***
-
+# Import pages 
 Resource    ../../Resources/Utils/DesktopWeb/Common.robot
 Resource    ../../Resources/Utils/DesktopWeb/LandingPage.robot
 Resource    ../../Resources/Utils/DesktopWeb/Loans.robot
