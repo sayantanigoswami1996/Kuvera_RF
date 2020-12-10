@@ -7,20 +7,19 @@ Library     SeleniumLibrary
 Verify Search And Sort
         [Arguments]   ${searchBar}    ${searchText}  ${sortButton} 
         Verify Element And Text  ${searchBar}  ${searchText}
-        Verify Element And Text  ${sortButton}  ${e_invest_sortBtnText}
+        Verify Element And  Text  ${sortButton}  ${e_invest_sortBtnText}
 
 Verify Filter And Clear All        
         Verify Element And Text  ${KU_W_filter}   ${e_invest_filterBtnText}
         Verify Element And Text  ${KU_W_clearAll}  ${e_invest_clearAllBtnTxt}
 
 Verify Filter Navigation For Funds
-        Click Element  ${KU_W_invest_watchList}
-        Verify Element And Text  ${KU_W_invest_watchlistHeading}   ${e_invest_watchlistHeadingText}
         # InstaRedeem
+        Wait For Element Visibility  ${KU_W_invest_instaRedeem}
         Click Element  ${KU_W_invest_instaRedeem}
-        Sleep  3s
-        Wait For Element Visibility    ${KU_W_invest_fundsScreenTitle}
-        Verify Element And Text   ${KU_W_invest_fundsScreenTitle}   ${e_invest__instaredeem_fundText}
+        Sleep  2s
+        Wait For Element Visibility   ${KU_W_invest_instaRedeem_fundText}
+        Verify Element And Text   ${KU_W_invest_instaRedeem_fundText}   ${e_invest__instaredeem_fundText}
         # Save Taxes
         Click Element  ${KU_W_invest_saveTaxes}
         Verify Search And Sort  ${KU_W_searchBarForFunds}  ${e_invest_mf_searchBarText}   ${KU_W_sort} 
@@ -40,6 +39,7 @@ Verify Filter Navigation For Funds
         Sleep  1s
         Wait For Element Visibility   ${KU_W_invest_watchListBtn}
         Verify Page Contains Element   ${KU_W_invest_watchListBtn}
+        Go Back
 
 Verify Filter Navigation For Stocks  
         [Arguments]    ${watchListHeading}   ${watchlistHeadingText}   ${sortYearFor52High}  ${watchListBtn}
@@ -72,7 +72,7 @@ Verify Filter Navigation For Stocks
         Wait For Element Visibility    ${KU_W_invest_52WLow_noStocksAvailable}
         Verify Element And Text   ${KU_W_invest_52WLow_noStocksAvailable}  ${e_invest__52WLow_noStocksText}
         Verify Element And Text   ${KU_W_invest_52WHighLow_allStockLink}  ${e_invest__52WLow_allStockLinkText} 
-        Sleep  1s
+        Sleep  2s
         Wait For Element Visibility    ${KU_W_invest_52WHighLow_allStockLink}
         Click Element  ${KU_W_invest_52WHighLow_allStockLink}
         Wait For Element Visibility   ${watchListBtn}
@@ -98,16 +98,14 @@ Verify PreLogin Invest Landing Page
         Wait For Element Visibility  ${KU_W_ultraShortTitle} 
         Verify Element And Text  ${KU_W_ultraShortTitle}   ${e_invest_ultraShortTitleText}
         Verify Element And Text  ${KU_W_ultraShortSubTitle}   ${e_invest_ultraShortSubText}
-        Verify Ultra Short Landing Page
         # Bank & PSU Bonds
         Wait For Element Visibility  ${KU_W_bank&PSUBondsTitle} 
         Verify Element And Text  ${KU_W_bank&PSUBondsTitle}   ${e_invest_bank&PSUTitleText}
-        Verify Bank And PSU Bonds Landing Page
         # ELSS Tax Saver
         Wait For Element Visibility  ${KU_W_ELSSTaxSaverTitle}
         Verify Element And Text  ${KU_W_ELSSTaxSaverTitle}   ${e_invest_ELSSTaxTitleText}
         Verify Element And Text  ${KU_W_ELSSTaxSaverSubTitle}   ${e_invest_ELSSTaxSubText}
-        Verify ELSS Tax Saver Landing Page
+        Sleep  2s
         # Digital Gold
         Wait For Element Visibility  ${KU_W_digitalGoldTitle}
         Verify Element And Text  ${KU_W_digitalGoldTitle}   ${e_invest_digitalGoldTitleText}
@@ -122,7 +120,6 @@ Verify PreLogin Invest Landing Page
         Verify Element And Text  ${KU_W_UTFTitle}   ${e_invest_USETFTitleText}
         Verify Element And Text  ${KU_W_UTFSubTitle}  ${e_invest_USETFSubText}
         Verify Page Contains Image   ${KU_W_USUTFImage}  
-        Verify US ETF Landing Page
         # Equity Index
         Wait For Element Visibility  ${KU_W_equityIndexTitle}
         Verify Element And Text  ${KU_W_equityIndexTitle}   ${e_invest_equityIndexTitleText}
@@ -137,22 +134,18 @@ Verify PreLogin Invest Landing Page
         Wait For Element Visibility  ${KU_W_valueFundsTitle} 
         Verify Element And Text  ${KU_W_valueFundsTitle}  ${e_invest_valueFundsTitleText}
         Verify Element And Text  ${KU_W_valueFundsSubTitle}  ${e_invest_valueFundsSubTitleText}
-        Verify Value Funds Landing Page
         # Top Gainers
         Wait For Element Visibility  ${KU_W_topGainerTitle} 
         Verify Element And Text  ${KU_W_topGainerTitle}     ${e_invest_topGainersTitleText} 
         Verify Element And Text  ${KU_W_topGainerSubTitle}  ${e_invest_topGainersSubTitleText}
-        Verify Top Gainers Landing Page
         # 52 W High India
         Wait For Element Visibility  ${KU_W_52WHighIndiaTitle}  
         Verify Element And Text  ${KU_W_52WHighIndiaTitle}   ${e_invest_52WHighIndiaTitleText} 
         Verify Element And Text  ${KU_W_52WHighIndiaSubTitle}  ${e_invest_52WHighIndiaSubTitleText}
-        Verify High India Landing Page  
         # 52 W High USA
         Wait For Element Visibility  ${KU_W_52WHighUSTitle}
         Verify Element And Text  ${KU_W_52WHighUSTitle}  ${e_invest_52WHighUSTitleText} 
         Verify Element And Text  ${KU_W_52WHighUSSubTitle}   ${e_invest_52WHighUSSubTitleText}
-        Verify High US Landing Page
         # Health Premium
         Wait For Element Visibility  ${KU_W_healthPremiumTitle}
         Verify Element And Text  ${KU_W_healthPremiumTitle}  ${e_invest_healthPremiumTitleText}  
@@ -162,33 +155,11 @@ Verify PreLogin Invest Landing Page
         Go Back
         # Lower Bar - Assets
         Verify Element And Text    ${KU_W_exploreMoreTitle}  ${e_invest_stock_exploreMoreTxt}
-        Wait For Element Visibility    ${KU_W_mutualFund}
-        Scroll Untill View  ${KU_W_mutualFund}
-        Verify Element And Text  ${KU_W_mutualFund}  ${e_invest_mf_titleText} 
-        Wait For Element Visibility    ${KU_W_mutualFund}
-        Click Element  ${KU_W_mutualFund}
-        Wait For Element Visibility  ${KU_W_mutualFundScreen}
-        Verify Element And Text   ${KU_W_mutualFundScreen}  ${e_invest_mf_searchBarText} 
-        Go Back
+        Wait For Element Visibility   ${KU_W_digitalGold}
         Verify Element And Text  ${KU_W_digitalGold}  ${e_invest_digGold_titleText}
+        Wait For Element Visibility  ${KU_W_digitalGold}
         Click Element  ${KU_W_digitalGold}
         Verify Digital Gold Landing Page
-        Sleep  1s
-        Scroll Untill View  ${KU_W_stocks}
-        Sleep  4s
-        Wait For Element Visibility   ${KU_W_stocks}
-        Verify Element And Text  ${KU_W_stocks}   ${e_invest_stocks_titleText}
-        Wait For Element Visibility   ${KU_W_stocks}
-        Click Element  ${KU_W_stocks}
-        Wait For Element Visibility  ${KU_W_stocksScreen} 
-        Verify Element And Text  ${KU_W_stocksScreen}  ${e_invest_stocks_screenText} 
-        Go Back
-        Verify Element And Text  ${KU_W_USStocks}  ${e_invest_USStocks_titleText}
-        Wait For Element Visibility   ${KU_W_USStocks}
-        Click Element  ${KU_W_USStocks}
-        Wait For Element Visibility  ${KU_W_USStocksScreen}
-        Verify Element And Text  ${KU_W_USStocksScreen}  ${e_invest_USStocks_screenText}
-        Go Back
         Sleep  1s
         Verify Element And Text   ${KU_W_saveSmart}   ${e_invest_ss_titleText}
         Wait For Element Visibility  ${KU_W_saveSmart}
