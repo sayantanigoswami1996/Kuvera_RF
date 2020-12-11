@@ -223,7 +223,7 @@ Verify Features Widgets
     Sleep  1s
     Wait For Element Visibility  ${KU_W_setAGoal_learnMoreLink}
     Click Element  ${KU_W_setAGoal_learnMoreLink}
-    Switch To Window Verify Title And Close   ${e_setAGoalLinkTitle}  
+    Switch To Window Verify Title And Close  ${e_setAGoalLinkTitle}  
     Sleep  1s
     Click Element  ${KU_W_next_button}
     Sleep  1s

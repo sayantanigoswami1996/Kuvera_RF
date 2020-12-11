@@ -74,13 +74,8 @@ Verify Recommendation And Navigation
     Click Element  ${userFinancialProfile1}
     Click Element  ${userFinancialProfile2}
     Click Element  ${userFinancialProfile3}
-<<<<<<< HEAD
     Scroll Page To Location   0   5000
     Click Element  ${KU_W_feature_sg_continue}
-=======
-    Scroll Page To Location    0    5000
-    Click Button  ${KU_W_feature_sg_continue}
->>>>>>> 7cc9766ea83bddb526743d8040c72b1d1e3aa4c5
     Wait For Element Visibility  ${KU_W_feature_sg_investmentSummary}
     Verify Page Contains Element  ${KU_W_feature_sg_investmentSummary}
 

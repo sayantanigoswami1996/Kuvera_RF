@@ -5,14 +5,14 @@ Library   SeleniumLibrary
 *** Keywords ***
 
 Verify Login And SignUp Validation
-    Wait For Element Visibility  ${KU_W_dg_sellGold_login}
-    Click Element  ${KU_W_dg_sellGold_login}
+    Wait For Element Visibility  ${KU_W_dg_gold_login}
+    Click Element  ${KU_W_dg_gold_login}
     Verify Login Page
     Sleep  2s
-    Verify Element And Text  ${KU_W_dg_sellGold_noAcntMsg}  ${e_invest_noAcntText}
-    Wait For Element Visibility  ${KU_W_dg_sellGold_signup}
+    Verify Element And Text  ${KU_W_dg_gold_noAcntMsg}  ${e_invest_noAcntText}
+    Wait For Element Visibility  ${KU_W_dg_gold_signup}
     Sleep  1s
-    Click Element  ${KU_W_dg_sellGold_signup}
+    Click Element  ${KU_W_dg_gold_signup}
     Verify Signup Page
     Go Back
 
@@ -64,6 +64,7 @@ Verify FAQ Button
     Sleep  1s
 
 Verify Digital Gold Landing Page
+    Sleep  2s
     Wait For Element Visibility  ${KU_W_dg_screenTitle} 
     Verify Language Switch Login And Signup Link  
     Wait For Element Visibility  ${KU_W_dg_screenTitle}

@@ -1,4 +1,4 @@
-*** Variables ***
+﻿*** Variables ***
 # Application Expected Values 'e_<VariableName>'
 ${e_title} =  Kuvera - Direct Mutual Funds | Stocks | Loans | Gold | Remit on Kuvera- Wealth Management Simplified
 ${e_regulatoryDisclosure} =  Regulatory Disclosure
@@ -47,6 +47,19 @@ ${e_citiesText} =   Goals
 ${e_transValue} =   2.2 Crore
 ${e_transText} =  Transactions
 
+${e_stock_filterTitleText} =  Filter
+${e_stock_filterTxt} =  Sector
+${e_stock_subFilterTxt} =  Industry
+${e_stock_headerTxt} =  Stocks   
+${e_stock_subHeaderTxt} =  Explore, Invest and track all your stock investments
+${e_usstock_headerTxt} =  Diversify with US stocks
+${e_usstock_subHeaderTxt} =  Zero commission. Start with $10.
+${e_ss_headerTxt} =  Start SaveSmart today 
+${e_gold_headerTxt} =  Buying gold has never been this simple!
+  
+    
+
+
 #Feature-Widgets Variables
 ${e_feature_th_TitleText} =  Save up to ₹10,000 in LTCG taxes every financial year with Tax Harvesting.
 ${e_feature_ts_titleText} =  TradeSmart
@@ -55,8 +68,12 @@ ${e_feature_manageAccountTitleText} =  Manage Account
 ${e_feature_sg_screenTitle} =  SET YOUR GOAL
 ${e_remit_screenTitle} =  A cheaper & faster way to send money home
 
+
+
+
 @{e_fndHouse_firstColumn} =  ADITYA BIRLA SUN LIFE  AXIS  BARODA  BHARTI AXA  BNP PARIBAS  CANARA ROBECO  DSP  EDELWEISS  ESSEL  FRANKLIN TEMPLETON    HDFC  HSBC  ICICI  PRUDENTIAL  IDBI  IDFC  IIFL  INDIA BULLS  INVESCO  ITI  JM FINANCIAL    
 @{e_fndHouse_secondColumn} =  KOTAK  L&T  LIC  MAHINDRA  MIRAE ASSET  MOTILAL OSWAL  NIPPON INDIA  PGIM INDIA  PPFAS    PRINCIPAL  QUANT  QUANTUM  SBI  SUNDARAM  TATA  TAURUS  UNION  UTI  YES 
+
 
 # Application Locator 'KU_<locatorName>'
 # Kuvera :: Wealth Management Simplified
@@ -104,6 +121,30 @@ ${KU_W_android_image} =  xpath=//img[@class='b-mobile-first__img-android']
 ${KU_W_apple_image} =   xpath=//img[@class='b-mobile-first__img-apple']
 ${KU_W_coreaua_val} =   xpath=//div[@class='b-investment-count__count__aua__val']
 ${KU_W_coreaua_text} =  xpath=//div[@class='b-investment-count__count__aua__text']
+
+${KU_W_stock_filterTitle} =   xpath=//span[@class='b-explore-stock__action-title b-explore-stock__filter-action-title']
+${KU_W_stock_filter} =   xpath=//div[@class='b-filter-stock__box-sector']
+${KU_W_stock_fundList} =   xpath=//div[@class='b-explore-stocks--widget-container']
+${KU_W_stock_listIcon} =   xpath=(//img[@class='b-stocks-explore__watchlist-icon'])[1]
+${KU_W_mf_stock_button} =   xpath=(//div[@class='b-dynamic-tab-header__item__title'])[1]
+${KU_W_stock_subFilter} =  xpath=//div[@class='b-filter-stock__box b-filter-stock--dropdown-title--disabled b-filter-stock__box--widget']
+${KU_W_stock_subHeader} =  xpath=//div[@class='b-stocks-home__text']
+${KU_W_stock_header} =  xpath=//div[@class='b-stocks-home__title']
+
+${KU_W_USStockButton} =  xpath=(//div[@class='b-dynamic-tab-header__item__title'])[2]
+${KU_W_usstock_filter} =  xpath=//div[@class='b-action-bar__filter__item__sector']
+${KU_W_usstock_subFilter} =  xpath=//div[@class='b-action-bar__filter__item__geography__label']
+${KU_W_usstock_fundList} =  xpath=//div[@class='b-us-stocks--widget-container']
+${KU_W_usstock_listIcon} =  xpath=(//img[@class='b-stock-item__row1__bookmark'])[1]
+${KU_W_usstock_filterTitle} =  xpath=//div[@class='b-action-bar__filter__header__label']
+${KU_W_usstock_header} =  xpath=//div[@class='b-us-stocks-widget__introduction__detail__title1']
+${KU_W_usstock_subHeader} =  xpath=//div[@class='b-us-stocks-widget__introduction__detail__sign-up']
+
+${KU_W_saveSmartButton} =  xpath=//div[contains(@class,'save-smart-title')]
+${KU_W_saveSmartTitle} =  xpath=//div[@class='b-save-smart-home__title']
+
+${KU_W_goldButton} =  xpath=//div[contains(text(),'Gold')]
+${KU_W_goldTitle} =  xpath=//div[contains(@class,'b-gold-widget-content__title')]
 
 ${KU_W_cities_val} =  xpath=//div[@class='b-investment-count__count__cities__val']
 ${KU_W_cities_text} =   xpath=//div[@class='b-investment-count__count__cities__text']

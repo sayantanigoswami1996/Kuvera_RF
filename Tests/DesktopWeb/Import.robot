@@ -2,6 +2,14 @@
 
 Resource    ../../Resources/Utils/DesktopWeb/Common.robot
 Resource    ../../Resources/Utils/DesktopWeb/LandingPage.robot
+Resource    ../../Resources/Utils/DesktopWeb/Login.robot
+Resource    ../../Resources/Utils/DesktopWeb/Signup.robot
+Resource    ../../Resources/Utils/DesktopWeb/Invest/InvestLandingPage.robot
+Resource    ../../Resources/Utils/DesktopWeb/Invest/SaveSmart.robot
+Resource    ../../Resources/Utils/DesktopWeb/Invest/GiltFunds.robot
+Resource    ../../Resources/Utils/DesktopWeb/Invest/DigitalGold.robot
+Resource    ../../Resources/Utils/DesktopWeb/Invest/EquityIndex.robot
+Resource    ../../Resources/Utils/DesktopWeb/Invest/SectorFunds.robot
 Resource    ../../Resources/Utils/DesktopWeb/Loans.robot
 Resource    ../../Resources/Utils/DesktopWeb/Insure.robot
 Resource    ../../Resources/Utils/DesktopWeb/Remit.robot
