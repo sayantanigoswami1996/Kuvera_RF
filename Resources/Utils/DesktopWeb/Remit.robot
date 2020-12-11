@@ -1,7 +1,5 @@
 *** Settings ***
 
-Library     JSONLibrary
-Library     JsonValidator
 Library     SeleniumLibrary
 
 *** Keywords ***
@@ -39,4 +37,4 @@ Verify PreLogin Remit Page
     Switch To Window Verify Title And Close  ${e_remit_transferWiseSignUpTitle} 
 
     Scroll Untill View  ${KU_W_remit_transferNoBottomBtn}
-    Verify Transfer Now   ${KU_W_remit_transferNoBottomBtn}
+    Verify Transfer Now  ${KU_W_remit_transferNoBottomBtn}
