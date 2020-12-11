@@ -1,12 +1,13 @@
 *** Settings ***
 Library     SeleniumLibrary
-Resource    ../../Tests/DesktopWeb/ImportPages.robot
+Resource    ../../Tests/DesktopWeb/Import.robot
 
 Suite Setup  Launch URL 
 Suite Teardown  Close All Browsers
 
-#To run all tests: robot --variable URL:https://kuvera.in/ --variable BROWSER:headlesschrome -d Results Tests/DesktopWeb/PreLoginTests.robot
-#To run specific test: robot --variable URL:https://kuvera.in/ --variable BROWSER:headlesschrome -d Results -i TC01 Tests/DesktopWeb/PreLoginTests.robot
+#To run all tests - prod::     robot --variable URL:https://kuvera.in --variable BROWSER:chrome --variable ENV:prod -d Results -i TC05 Tests/DesktopWeb/PreLoginTests.robot
+#To run all tests - stage::    robot --variable URL:https://staging2.kuvera.in/rc-1.172.3/#/ --variable BROWSER:chrome --variable ENV:stage -d Results -i TC05 Tests/DesktopWeb/PreLoginTests.robot
+#To run specific test::        robot --variable URL:https://kuvera.in/ --variable BROWSER:headlesschrome -d Results  -i TC01 Tests/DesktopWeb/PreLoginTests.robot
 
 *** Test Cases ***
 # Langin Page widgets verification
@@ -36,4 +37,3 @@ Invest Landing Page Widgets Verification
     [Tags]  TC05
     #Verify PreLogin Invest Landing Page
     Verify Mutual Fund Landing Page
-
