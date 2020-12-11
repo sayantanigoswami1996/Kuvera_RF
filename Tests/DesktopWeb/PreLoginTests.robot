@@ -1,6 +1,6 @@
 *** Settings ***
 Library     SeleniumLibrary
-Resource    ../../Tests/DesktopWeb/ImportPages.robot
+Resource    ../../Tests/DesktopWeb/Import.robot
 
 Suite Setup  Launch URL 
 Suite Teardown  Close All Browsers
