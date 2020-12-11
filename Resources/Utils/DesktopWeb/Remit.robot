@@ -26,7 +26,7 @@ Verify PreLogin Remit Page
     @{actualListItems} =  Get WebElements  ${KU_W_remit_whyTransferWiseList} 
     Compare Lists  ${actualListItems}  ${e_remit_whyTransferWiseList}
     Click Element  ${KU_W_remit_knowMoreBtn}
-    Switch To Window Verify Title And Close   ${e_remit_transferWiseCross-borderTitle}
+    Switch To Window Verify Title And Close  ${e_remit_transferWiseCross-borderTitle}
 
     # Verify Third party - Transferwise redirection
     Switch To Frame  ${KU_W_remit_calculator_iFrame}
@@ -37,4 +37,4 @@ Verify PreLogin Remit Page
     Switch To Window Verify Title And Close  ${e_remit_transferWiseSignUpTitle} 
 
     Scroll Untill View  ${KU_W_remit_transferNoBottomBtn}
-    Verify Transfer Now   ${KU_W_remit_transferNoBottomBtn}
+    Verify Transfer Now  ${KU_W_remit_transferNoBottomBtn}

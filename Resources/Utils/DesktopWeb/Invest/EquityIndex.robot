@@ -19,6 +19,5 @@ Verify Equity Index Landing Page
     Click Element   ${KU_W_invest_watchListBtn} 
     # Watchlist
     Verify Element And Text  ${KU_W_invest_watchlistHeading}   ${e_invest_watchlistHeadingText}
-    Go Back 
     Verify Filter Navigation For Funds
     Go Back

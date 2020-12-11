@@ -20,6 +20,6 @@ Verify Login Page Widgets
     Verify Page Contains Element  ${KU_W_login_passwordLabel}
     Verify Element And Text  ${KU_W_login_passwordLabel}  ${e_login_passwordLabel}
     Verify Page Contains Element  ${KU_W_passwordTxt}
-    Verify Page Contains Button  ${KU_W_loginButton}
+    Verify Page Contains Button  ${KU_W_loginpage_loginButton}
     Verify Page Contains Button  ${KU_W_googleSigninButton}
     Verify Page Contains Button  ${KU_W_fbSigninButton}

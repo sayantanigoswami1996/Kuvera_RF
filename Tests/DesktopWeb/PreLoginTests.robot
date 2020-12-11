@@ -1,6 +1,6 @@
 *** Settings ***
 Library     SeleniumLibrary
-Resource    ../../Tests/DesktopWeb/ImportPages.robot
+Resource    ../../Tests/DesktopWeb/Import.robot
 
 Suite Setup  Launch URL 
 Suite Teardown  Close All Browsers
@@ -24,8 +24,15 @@ Features Header Navigation Test
     [Tags]  TC03
     Feature Sub Header Navigation
 
+# Verify all widgets in Login & Signup Page
+Login and Signup Page Navigation Test
+    [Tags]  TC04
+    Verify Login Page Widgets
+    Go Back
+    Verify Signup Page Widgets
+    Go Back
+
 # Invest Landing Page Navigation
 Invest Landing Page Widgets Verification
-    [Tags]  TC04
-    # Verify PreLogin Invest Landing Page
-    Verify Top Gainers Landing Page
+    [Tags]  TC05
+    Verify PreLogin Invest Landing Page

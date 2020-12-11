@@ -18,6 +18,8 @@ Resource    ../../../AppLocators/DesktopWeb/InvestLocators/ValueFundsLocators.ro
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/ELSSTaxSaverLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/BankPSUBondsLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/TopGainersLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/InvestLocators/ELSSTaxSaverLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/InvestLocators/USETFLocators.robot
 *** Keywords ***
 
 Launch URL
@@ -25,8 +27,9 @@ Launch URL
     # Maximize Browser Window
     Set Window Size  ${1366}  ${768}
     Reload Page
-    Kuvera Web Close Regulatory Disclosure 
-    Close Hello Bar
+    Kuvera Web Close Regulatory Disclosure
+    Run Keyword If    "${ENV}" == "prod"  Close Hello Bar
+    ...    ELSE   Log To Console  Staging
 
 Welcome Page Should Be Open
     Title Should Be  ${KU_W_title}
@@ -140,6 +143,12 @@ Verify Language Switch Login And Signup Link
     Verify Element And Text  ${KU_W_login}  ${e_login}
     Verify Element And Text  ${KU_W_signup}  ${e_signup}
 
+Switch To Window
+    Switch Window  locator=NEW
+    Close Window
+    Sleep  2s
+    Switch Window  browser=Kuvera
+    
 Scroll Page To Location
     [Arguments]    ${x_location}    ${y_location}
     Execute JavaScript    window.scrollTo(${x_location},${y_location})

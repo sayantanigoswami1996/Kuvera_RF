@@ -5,8 +5,8 @@ Library     SeleniumLibrary
 *** Keywords ***
 
 Verify Gilt Funds Landing Page
-    Wait For Element Visibility   ${KU_W_giltFundsTitle}
     Sleep  1s
+    Wait For Element Visibility   ${KU_W_giltFundsTitle}
     Click Element  ${KU_W_giltFundsTitle}
     Wait For Element Visibility   ${KU_W_invest_fundsScreenTitle}
     Verify Language Switch Login And Signup Link
@@ -21,6 +21,5 @@ Verify Gilt Funds Landing Page
     Wait For Element Visibility  ${KU_W_invest_watchlistHeading}
     # WatchList
     Verify Element And Text  ${KU_W_invest_watchlistHeading}   ${e_invest_watchlistHeadingText}
-    Go Back 
     Verify Filter Navigation For Funds
     Go Back

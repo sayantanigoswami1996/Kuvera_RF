@@ -12,10 +12,10 @@ Verify PreLogin TradeSmart Page
   Verify Element And Text  ${KU_W_feature_ts_title}  ${e_feature_ts_titleText}
   Verify Element And Text  ${KU_W_feature_ts_subHeaderTitle}   ${e_feature_ts_subHeaderDesc} 
   Verify Element And Text  ${KU_W_feature_ts_activationTitle}  ${e_feature_ts_activationTitle}
-  Verify Element And Text  ${KU_W_feature_ts_activationMsg}    ${e_feature_ts_activationSubTitle}
+  Verify Element And Text  ${KU_W_feature_ts_activationMsg}  ${e_feature_ts_activationSubTitle}
   Scroll Untill View  ${KU_W_feature_ts_activateBtn} 
   Verify Element And Text  ${KU_W_feature_ts_activateBtn}  ${e_ts_activateBtnText}
-  Verify Page Contains Image    ${KU_W_feature_ts_coinImage}
+  Verify Page Contains Image  ${KU_W_feature_ts_coinImage}
   Click Button  ${KU_W_feature_ts_activateBtn} 
   Verify Login Page
 
