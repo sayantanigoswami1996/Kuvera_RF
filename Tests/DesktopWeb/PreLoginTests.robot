@@ -15,9 +15,9 @@ Landing Page Widgets Verification Test
     Verify Widgets
 
 # Header navigation - Insure, Loans, Remit
-Header Navigation Test  
-    [Tags]  TC02
-    Header Navigation
+# Header Navigation Test  
+#     [Tags]  TC02
+#     Header Navigation
 
 # Features sub headers navigation & goals - questionnaire
 Features Header Navigation Test
@@ -35,4 +35,5 @@ Login and Signup Page Navigation Test
 # Invest Landing Page Navigation
 Invest Landing Page Widgets Verification
     [Tags]  TC05
-   Verify PreLogin Invest Landing Page
+    Verify PreLogin Invest Landing Page
+   

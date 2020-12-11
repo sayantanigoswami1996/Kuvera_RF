@@ -42,9 +42,9 @@ ${e_earnMsg} =  We pioneered commission free Direct Plan investing.\nEarn from o
 ${e_earnLearnLink} =   Learn how!
 ${e_coreAUAValue} =  ₹ 17,000
 ${e_coreAUAText} =  Crore AUA       
-${e_citiesValue} =  3 Lakh
+${e_citiesValue} =  4 Lakh
 ${e_citiesText} =   Goals
-${e_transValue} =   1.8 Crore
+${e_transValue} =   2.2 Crore
 ${e_transText} =  Transactions
 
 ${e_stock_filterTitleText} =  Filter
