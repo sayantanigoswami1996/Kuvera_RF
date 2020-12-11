@@ -3,6 +3,7 @@
 Library     SeleniumLibrary
 
 *** Keywords ***
+
 Verify High India Landing Page
     Wait For Element Visibility  ${KU_W_52WHighIndiaTitle}  
     Click Element  ${KU_W_52WHighIndiaTitle} 
