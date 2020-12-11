@@ -106,16 +106,16 @@ Verify Filter Navigation For USETF and 52 Wk High US
     # 52Wlow
     Click Element  ${KU_W_invest_stocks_52WLow}
     Verify Element And Text  ${KU_W_invest_sortYear}  ${sortYearFor52High}
-    Sleep  4s
-    Scroll Untill View  ${KU_W_invest_noStocksForUTFAnd52WUS}
-    Wait For Element Visibility  ${KU_W_invest_noStocksForUTFAnd52WUS}
-    Verify Element And Text  ${KU_W_invest_noStocksForUTFAnd52WUS}  ${e_invest__52WLow_noStocksText}
-    Verify Element And Text  ${KU_W_invest_allStockLinkForUTFAnd52WUS}  ${e_invest__USETF_allStockLinkText} 
-    Sleep  2s
-    Wait For Element Visibility  ${KU_W_invest_allStockLinkForUTFAnd52WUS}
-    Click Element  ${KU_W_invest_allStockLinkForUTFAnd52WUS}
-    Wait For Element Visibility  ${watchListBtn}
-    Verify Page Contains Element  ${watchListBtn}
+    # Sleep  4s
+    # Scroll Untill View  ${KU_W_invest_noStocksForUTFAnd52WUS}
+    # Wait For Element Visibility  ${KU_W_invest_noStocksForUTFAnd52WUS}
+    # Verify Element And Text  ${KU_W_invest_noStocksForUTFAnd52WUS}  ${e_invest__52WLow_noStocksText}
+    # Verify Element And Text  ${KU_W_invest_allStockLinkForUTFAnd52WUS}  ${e_invest__USETF_allStockLinkText} 
+    # Sleep  2s
+    # Wait For Element Visibility  ${KU_W_invest_allStockLinkForUTFAnd52WUS}
+    # Click Element  ${KU_W_invest_allStockLinkForUTFAnd52WUS}
+    # Wait For Element Visibility  ${watchListBtn}
+    # Verify Page Contains Element  ${watchListBtn}
     Go Back
 
 Verify PreLogin Invest Landing Page

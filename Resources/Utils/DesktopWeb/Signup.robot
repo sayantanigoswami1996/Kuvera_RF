@@ -25,4 +25,3 @@ Verify Signup Page Widgets
     Verify Page Contains Button  ${KU_W_signup_signupButton} 
     Verify Page Contains Button  ${KU_W_googleSigninButton}
     Verify Page Contains Button  ${KU_W_fbSigninButton}
-
