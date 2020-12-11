@@ -14,6 +14,17 @@ Verify Widgets
     Verify Features Widgets 
     Verify Summary Tab Widgets
 
+Verify Presence Of Filter Sub Category And WatchList Icon
+    [Arguments]  ${filter}  ${category}  ${subcategory}  ${fundList}  ${watchListIcon} 
+    Scroll Untill View  ${filter}
+    Wait For Element Visibility  ${filter} 
+    Verify Element And Text  ${filter}  ${e_stock_filterTitleText}
+    Verify Element And Text  ${category}  ${e_stock_filterTxt}
+    Verify Element And Text  ${subcategory}  ${e_stock_subFilterTxt}
+    Wait For Element Visibility  ${fundList} 
+    Verify Page Contains Element  ${fundList} 
+    Verify Page Contains Image  ${watchListIcon}
+
 Header Navigation
     ${invest}  Get Json Values  $.MenuHeaders.h0  Resources/TestData/Headers.json
     ${loans}  Get Json Values  $.MenuHeaders.h1  Resources/TestData/Headers.json
@@ -58,6 +69,8 @@ Feature Sub Header Navigation
     END
 
 Verify Mutual Funds Widgets
+    Wait For Element Visibility  ${KU_W_mf_stock_button}
+    Click Element  ${KU_W_mf_stock_button}
     Wait For Element Visibility  ${KU_W_mf_welcomeTitle}
     Verify Language Switch Login And Signup Link
     Verify Element And Text  ${KU_W_mf_welcomeTitle}  ${e_mfWelcomeTitle}
@@ -78,51 +91,52 @@ Verify Mutual Funds Widgets
     Scroll Element Into View  ${KU_W_explore_MF}
     Verify Page Contains Element  ${KU_W_explore_MF}
     Verify Google Play & Apple Store Icons
-    Verify Page Contains Element  ${KU_W_faqbot_icon}
+    Run Keyword If  "${ENV}" == "prod"  Verify Page Contains Element  ${KU_W_faqbot_icon}
+    ...    ELSE  Log To Console  Staging
 
 Verify Stock Widgets
-    Wait For Element Visibility   ${KU_W_mf_stock_button}
+    Wait For Element Visibility  ${KU_W_mf_stock_button}
     Click Element  ${KU_W_mf_stock_button}
     Verify Presence Of Filter Sub Category And WatchList Icon  ${KU_W_stock_filterTitle}  ${KU_W_stock_filter}   ${KU_W_stock_subFilter}   ${KU_W_stock_fundList}  ${KU_W_stock_listIcon}
     Verify Element And Text  ${KU_W_stock_header}  ${e_stock_headerTxt}
     Verify Element And Text  ${KU_W_stock_subHeader}   ${e_stock_subHeaderTxt} 
 
 Verify US Stock Widgets
-    Wait For Element Visibility   ${KU_W_USStockButton}
+    Wait For Element Visibility  ${KU_W_USStockButton}
     Click Element  ${KU_W_USStockButton}
     Verify Presence Of Filter Sub Category And WatchList Icon  ${KU_W_usstock_filterTitle}  ${KU_W_usstock_filter}   ${KU_W_usstock_subFilter}   ${KU_W_usstock_fundList}  ${KU_W_usstock_listIcon}
     Verify Element And Text  ${KU_W_usstock_header}  ${e_usstock_headerTxt}
-    Verify Element And Text  ${KU_W_usstock_subHeader}   ${e_usstock_subHeaderTxt} 
+    Verify Element And Text  ${KU_W_usstock_subHeader}  ${e_usstock_subHeaderTxt} 
 
 Verify Save Smart Widgets
     Wait For Element Visibility  ${KU_W_saveSmartButton}
     Click Element  ${KU_W_saveSmartButton}
-    Verify Element And Text   ${KU_W_saveSmartTitle}   ${e_ss_headerTxt} 
+    Verify Element And Text  ${KU_W_saveSmartTitle}  ${e_ss_headerTxt} 
 
 Verify Gold Widgets
-    Wait For Element Visibility   ${KU_W_goldButton}
-    Click Element   ${KU_W_goldButton}
-    Verify Element And Text  ${KU_W_goldTitle}   ${e_gold_headerTxt} 
+    Wait For Element Visibility  ${KU_W_goldButton}
+    Click Element  ${KU_W_goldButton}
+    Verify Element And Text  ${KU_W_goldTitle}  ${e_gold_headerTxt} 
 
 Verify Features Widgets
     # Tax Saver
     Scroll Element Into View  ${KU_W_exploreELSS}
     Verify Element And Text  ${KU_W_exploreELSS}  ${e_exploreELSSfundsBtn}
-    Wait For Element Visibility   ${KU_W_exploreELSS}
+    Wait For Element Visibility  ${KU_W_exploreELSS}
     Click Element  ${KU_W_exploreELSS}
-    Wait For Element Visibility   ${KU_W_searchBarForFunds}
+    Wait For Element Visibility  ${KU_W_searchBarForFunds}
     Verify Page Contains Element  ${KU_W_searchBarForFunds}
     Go Back
     Verify Element And Text  ${KU_W_ELSS_learnMoreLink}  ${e_learnMoreLinkText}
     Sleep  1s
     Wait For Element Visibility  ${KU_W_ELSS_learnMoreLink}
     Click Element  ${KU_W_ELSS_learnMoreLink}
-    Switch To Window Verify Title And Close   ${e_feature_st_pageTitleText}
+    Switch To Window Verify Title And Close  ${e_feature_st_pageTitleText}
     Sleep  1s
     # Tax Harvesting
     Verify Element And Text  ${KU_W_startHarvest}  ${e_startHarvestingBtn} 
-    Wait For Element Visibility   ${KU_W_startHarvest}
-    Click Element   ${KU_W_startHarvest} 
+    Wait For Element Visibility  ${KU_W_startHarvest}
+    Click Element  ${KU_W_startHarvest} 
     Wait For Element Visibility  ${KU_W_feature_th_screenTitle}   
     Verify Element And Text  ${KU_W_feature_th_screenTitle}  ${e_feature_th_TitleText} 
     Go Back
@@ -149,7 +163,7 @@ Verify Features Widgets
     Click Element  ${KU_W_next_button} 
     # Family Account
     Sleep  1s
-    Verify Element And Text  ${KU_W_upgrade_familyAccount}    ${e_upgradeFamilyAccountBtn}
+    Verify Element And Text  ${KU_W_upgrade_familyAccount}  ${e_upgradeFamilyAccountBtn}
     Wait For Element Visibility  ${KU_W_upgrade_familyAccount}
     Click Element  ${KU_W_upgrade_familyAccount}
     Wait For Element Visibility  ${KU_W_feature_fa_screenTitle}
@@ -179,7 +193,7 @@ Verify Features Widgets
     Sleep  1s
     Click Element  ${KU_W_manage_today}
     Wait For Element Visibility  ${KU_W_feature_manageAccountTitle}  
-    Verify Element And Text  ${KU_W_feature_manageAccountTitle}   ${e_feature_manageAccountTitleText}
+    Verify Element And Text  ${KU_W_feature_manageAccountTitle}  ${e_feature_manageAccountTitleText}
     Go Back
     Sleep  1s
     Click Element  ${KU_W_next_button} 
@@ -188,7 +202,8 @@ Verify Features Widgets
     Sleep  1s
     Wait For Element Visibility  ${KU_W_manageToday_learnMoreLink}
     Click Element  ${KU_W_manageToday_learnMoreLink}
-    Switch To Window Verify Title And Close    ${e_manageTodayLinkTitle}  
+    ${expectedManageTodayLinkTitle} =  Convert To String  ${e_manageTodayLinkTitle} 
+    Switch To Window Verify Title And Close   ${expectedManageTodayLinkTitle}  
     Sleep  1s
     Click Element  ${KU_W_next_button}
     Sleep  1s
@@ -208,7 +223,7 @@ Verify Features Widgets
     Sleep  1s
     Wait For Element Visibility  ${KU_W_setAGoal_learnMoreLink}
     Click Element  ${KU_W_setAGoal_learnMoreLink}
-    Switch To Window Verify Title And Close   ${e_setAGoalLinkTitle}  
+    Switch To Window Verify Title And Close  ${e_setAGoalLinkTitle}  
     Sleep  1s
     Click Element  ${KU_W_next_button}
     Sleep  1s
@@ -257,10 +272,10 @@ Verify Summary Tab Widgets
     Verify Element And Text  ${KU_W_start_investButton}  ${e_startInvestingBtn}
 
 Verify Fund Houses
-   Scroll Element Into View  ${KU_W_fundHouse_title}
-   @{fundHouses_list1} =  Get WebElements  ${KU_W_fundHouses_firstColumn}
-   # Validation of Fund Houses List on the first column
-   Compare Lists  ${fundHouses_list1}  ${e_fndHouse_firstColumn}
-   # Validation of Fund Houses List on the second column
-   @{fundHouses_list2} =  Get WebElements  ${KU_W_fundHouses_secondColumn}
-   Compare Lists  ${fundHouses_list2}  ${e_fndHouse_secondColumn}
+    Scroll Element Into View  ${KU_W_fundHouse_title}
+    @{fundHouses_list1} =  Get WebElements  ${KU_W_fundHouses_firstColumn}
+    # Validation of Fund Houses List on the first column
+    Compare Lists  ${fundHouses_list1}  ${e_fndHouse_firstColumn}
+    # Validation of Fund Houses List on the second column
+    @{fundHouses_list2} =  Get WebElements  ${KU_W_fundHouses_secondColumn}
+    Compare Lists  ${fundHouses_list2}  ${e_fndHouse_secondColumn}

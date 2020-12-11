@@ -4,6 +4,8 @@ Library     JSONLibrary
 Library     JsonValidator
 Library     SeleniumLibrary
 Library     String
+Library     OperatingSystem
+Library     Collections
 Resource    ../../../AppLocators/DesktopWeb/CommonAppLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/MenuNavigationLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/InvestLandingPageLocators.robot
@@ -12,17 +14,17 @@ Resource    ../../../AppLocators/DesktopWeb/InvestLocators/DigitalGoldLocators.r
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/GiltFundsLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/EquityIndexLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/SectorFundsLocators.robot
-Resource    ../../../AppLocators/DesktopWeb/InvestLocators/ValueFundsLocators.robot
-Resource    ../../../AppLocators/DesktopWeb/InvestLocators/ELSSTaxSaverLocators.robot
+
 *** Keywords ***
 
 Launch URL
     Open Browser  ${URL}  ${BROWSER}  alias=Kuvera
-    #Maximize Browser Window
+    # Maximize Browser Window
     Set Window Size  ${1366}  ${768}
     Reload Page
-    Kuvera Web Close Regulatory Disclosure 
-    Close Hello Bar
+    Kuvera Web Close Regulatory Disclosure
+    Run Keyword If    "${ENV}" == "prod"  Close Hello Bar
+    ...    ELSE   Log To Console  Staging
 
 Welcome Page Should Be Open
     Title Should Be  ${KU_W_title}
@@ -46,10 +48,6 @@ Verify Page Contains Image
 Scroll Untill View
     [Arguments]  ${element}
     Scroll Element Into View  ${element}
-
-Scroll Page To Location
-    [Arguments]  ${x_location}    ${y_location}
-    Execute JavaScript  window.scrollTo(${x_location},${y_location})
 
 Verify Page Contains Link
     [Arguments]  ${link}  ${text}
@@ -102,7 +100,7 @@ Kuvera Web Close Regulatory Disclosure
     Click Element  ${KU_W_close}
 
 Close Hello Bar
-    Sleep  10s
+    Sleep  15s
     Wait Until Element Is Visible  ${KU_W_bannerFrame}  timeout=40
     Switch To Frame  ${KU_W_bannerFrame}
     Wait For Element Visibility  ${KU_W_bannerCloseBtn}
@@ -122,11 +120,8 @@ Press Enter Key
 Clear Text Field
     [Arguments]  ${field}
     Sleep  500ms
-    #Press Keys  ${field}  COMMAND+A  DELETE
     ${fieldText} =  Get Value  ${field}
     ${fieldTextLen} =  Get Length  ${fieldText} 
-    #Log To Console  ${fieldText}
-    #Log To Console  ${fieldTextLen}
     Run Keyword If    """${fieldText}""" != ''
     ...     Repeat Keyword  ${fieldTextLen+1}  Press Keys  ${field}  \ue003
 
@@ -144,6 +139,10 @@ Verify Language Switch Login And Signup Link
     Verify Page Contains Element  ${KU_W_langSwitch}
     Verify Element And Text  ${KU_W_login}  ${e_login}
     Verify Element And Text  ${KU_W_signup}  ${e_signup}
-        
+    
+Scroll Page To Location
+    [Arguments]  ${x_location}  ${y_location}
+    Execute JavaScript  window.scrollTo(${x_location},${y_location})
+
 Close Web Application
     Close All Browser

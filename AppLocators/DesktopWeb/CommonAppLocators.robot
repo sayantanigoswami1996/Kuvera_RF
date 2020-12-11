@@ -1,4 +1,4 @@
-*** Variables ***
+﻿*** Variables ***
 # Application Expected Values 'e_<VariableName>'
 ${e_title} =  Kuvera - Direct Mutual Funds | Stocks | Loans | Gold | Remit on Kuvera- Wealth Management Simplified
 ${e_regulatoryDisclosure} =  Regulatory Disclosure
@@ -10,8 +10,6 @@ ${e_signup} =  Sign up
 ${e_signup_setPasswordLabel} =  SET A PASSWORD
 ${e_signup_mobileLabel} =  MOBILE
 ${e_signupPageTitle} =  Sign Up. Start Investing.
-${e_signup_setPasswordLabel} =  SET A PASSWORD
-${e_signup_mobileLabel} =  MOBILE
 ${e_mfWelcomeTitle} =  Investments Simplified
 ${e_mf_welcomeText} =  First free Direct Mutual Fund investing platform. Zero fees, higher returns.
 ${e_mfCategory} =   Equity
@@ -42,11 +40,11 @@ ${e_usersMsg} =   We revolutionized the way India invests. With your feedback we
 ${e_earnTitle} =  Earn up to 1.5% more returns*
 ${e_earnMsg} =  We pioneered commission free Direct Plan investing.\nEarn from our expertise and don't pay commission ever.
 ${e_earnLearnLink} =   Learn how!
-${e_coreAUAValue} =  ₹ 16,000
+${e_coreAUAValue} =  ₹ 17,000
 ${e_coreAUAText} =  Crore AUA       
-${e_citiesValue} =  3 Lakh
+${e_citiesValue} =  4 Lakh
 ${e_citiesText} =   Goals
-${e_transValue} =   1.8 Crore
+${e_transValue} =   2.2 Crore
 ${e_transText} =  Transactions
 
 ${e_stock_filterTitleText} =  Filter
@@ -59,9 +57,6 @@ ${e_usstock_subHeaderTxt} =  Zero commission. Start with $10.
 ${e_ss_headerTxt} =  Start SaveSmart today 
 ${e_gold_headerTxt} =  Buying gold has never been this simple!
   
-    
-
-
 #Feature-Widgets Variables
 ${e_feature_th_TitleText} =  Save up to ₹10,000 in LTCG taxes every financial year with Tax Harvesting.
 ${e_feature_ts_titleText} =  TradeSmart
@@ -73,6 +68,7 @@ ${e_remit_screenTitle} =  A cheaper & faster way to send money home
 @{e_fndHouse_firstColumn} =  ADITYA BIRLA SUN LIFE  AXIS  BARODA  BHARTI AXA  BNP PARIBAS  CANARA ROBECO  DSP  EDELWEISS  ESSEL  FRANKLIN TEMPLETON    HDFC  HSBC  ICICI  PRUDENTIAL  IDBI  IDFC  IIFL  INDIA BULLS  INVESCO  ITI  JM FINANCIAL    
 @{e_fndHouse_secondColumn} =  KOTAK  L&T  LIC  MAHINDRA  MIRAE ASSET  MOTILAL OSWAL  NIPPON INDIA  PGIM INDIA  PPFAS    PRINCIPAL  QUANT  QUANTUM  SBI  SUNDARAM  TATA  TAURUS  UNION  UTI  YES 
 
+
 # Application Locator 'KU_<locatorName>'
 # Kuvera :: Wealth Management Simplified
 ${KU_W_regulatoryDisclosure} =  xpath=//h1[@class='b-regulatory-disclosure__heading'] 
@@ -82,22 +78,6 @@ ${KU_W_logo} =  xpath=//*[@class='b-header__content__logo']
 ${KU_W_close} =  xpath=//button[@class='button-primary b-regulatory-disclosure__btn']
 ${KU_W_bannerFrame} =  xpath=//iframe[contains(@class,'hellobar hb-animateIn')]
 ${KU_W_bannerCloseBtn} =  xpath=(//*[@class='icon-close'])[2]
-${KU_W_emailLabel} =  xpath=//label[contains(text(),'Email Address')]
-${KU_W_emailTxt} =  id=email
-${KU_W_login_passwordLabel} =  xpath=//label[contains(text(),'Password')]
-${KU_W_passwordTxt} =  id=password
-${KU_W_login_forgotPasswordLink} =  xpath=//span[@class='link forgot-password']
-${KU_W_loginButton} =  xpath=//button[@class='button-primary']
-${KU_W_googleSigninButton} =  xpath=//button[@class='btn in-btn-google']
-${KU_W_fbSigninButton} =  xpath=//button[@class='btn in-btn-fb']
-${KU_W_signup_mobileLabel} =  xpath=//label[contains(text(),'Mobile')]
-${KU_W_signup_mobileTxt} =  id=mobile_number
-${KU_W_signup_setPasswordLabel} =  xpath=//label[contains(text(),'Set a Password')]
-${KU_W_signup_inviteCodeLabel} =  xpath=//label[contains(text(),'invite code (optional)')]
-${KU_W_signup_inviteCodeTxt} =  id=invite_code
-${KU_W_signupButton} =  xpath=//*[@class='upcase btn in-btn']
-
-
 ${KU_W_menu} =  xpath=//*[@class='b-header__content']
 ${KU_W_headers} =  xpath=//*[@class='b-header__content__middle']/a
 ${KU_W_exploreELSS} =  xpath=//button[contains(text(),'Explore ELSS funds')]
@@ -111,7 +91,6 @@ ${KU_W_emailTxt} =  id=email
 ${KU_W_login_passwordLabel} =  xpath=//label[contains(text(),'Password')]
 ${KU_W_passwordTxt} =  id=password
 ${KU_W_login_forgotPasswordLink} =  xpath=//span[@class='link forgot-password']
-${KU_W_loginButton} =  xpath=//button[@class='button-primary']
 ${KU_W_googleSigninButton} =  xpath=//button[@class='btn in-btn-google']
 ${KU_W_fbSigninButton} =  xpath=//button[@class='btn in-btn-fb']
 ${KU_W_signup_mobileLabel} =  xpath=//label[contains(text(),'Mobile')]
@@ -119,13 +98,14 @@ ${KU_W_signup_mobileTxt} =  id=mobile_number
 ${KU_W_signup_setPasswordLabel} =  xpath=//label[contains(text(),'Set a Password')]
 ${KU_W_signup_inviteCodeLabel} =  xpath=//label[contains(text(),'invite code (optional)')]
 ${KU_W_signup_inviteCodeTxt} =  id=invite_code
-${KU_W_signupButton} =  xpath=//*[@class='upcase btn in-btn']
+${KU_W_signup_signupButton} =  xpath=//*[@class='upcase btn in-btn']
 
 ${KU_W_langSwitch} =  xpath=//div[@class='b-header__content__right--language-switcher']
 
 ${KU_W_mf_category} =   xpath=//div[@class='b-mf-wiget__mf-category--input']
 ${KU_W_mf_subcategory} =  xpath=//div[@class='b-mf-wiget__mf-subcategory--input']
-${KU_W_fund_list} =   xpath=//div[@class='b-fund-list__row']                               
+${KU_W_fund_list} =   xpath=//div[@class='b-fund-list__row']  
+${KU_W_loginpage_loginButton} =   xpath=//button[@class='button-primary']                        
 ${KU_W_loginButton} =   xpath=//button[@class='button-primary b-login-signup__login']
 ${KU_W_signUpButton} =  xpath=//button[@class='button-primary b-login-signup__register'] 
 ${KU_W_explore_MF} =  xpath=//a[@class='b-funds-list__explore-fund'] 

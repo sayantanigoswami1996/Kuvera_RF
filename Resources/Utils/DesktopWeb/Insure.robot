@@ -10,7 +10,6 @@ Verify PreLogin Insure Page
     Wait For Element Visibility  ${KU_W_insureHeaderTitle}  
     Verify Element And Text  ${KU_W_insureHeaderTitle}  ${e_insure_headerTitleText} 
     Verify Element And Text  ${KU_W_insureHeaderMsg}  ${e_insure_headerMsgText}
-    Verify Element And Text  ${KU_W_insure_termsAndConditions}  ${e_insure_T&CText}  
     Verify Element And Text  ${KU_W_insure_checkPremiumBtn1}  ${e_insure_checkPremiumBtnText}  
     Wait For Element Visibility  ${KU_W_insure_checkPremiumBtn1}
     Sleep   1s
@@ -30,7 +29,7 @@ Verify PreLogin Insure Page
     Verify Element and Text  ${KU_W_insure_OpenHeartSurgeryCost}  ${e_insure_openHeartSurgeryCostText}
     Verify Element and Text  ${KU_W_insure_kneeReplacementCost}  ${e_insure_kneeReplacementCostText}
 
-    Verify Element and Text  ${KU_W_insure_covid19Title}   ${e_insure_covid19TitleText}
+    Verify Element and Text  ${KU_W_insure_covid19Title}  ${e_insure_covid19TitleText}
     Verify Element and Text  ${KU_W_insure_cancerCareTitle}  ${e_insure_cancerCareTitleText}
     Verify Element and Text  ${KU_W_insure_heartSurgeryTitle}  ${e_insure_openHeartSurgeryTitleText}
     Verify Element and Text  ${KU_W_insure_kneeReplacmentTitle}  ${e_insure_kneeReplacementTitleText}
