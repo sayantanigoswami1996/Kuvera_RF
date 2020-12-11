@@ -1,4 +1,5 @@
 *** Variables *** 
+
 # Application Expected Values 'e_<variableName>'
 # Loan List 
 @{e_loan_calculatorMsgListItem} =  MF units remain secure with the fund house.  No fixed loan period. A 1yr loan auto renews on the 12th month.     Loan starting from ₹25,000 up to ₹10cr.  Full disclosure. No hidden fees.
@@ -26,6 +27,9 @@ ${e_loan_getLoanAgainstMFText} =  Get loan against Mutual Funds
 ${e_loan_getLoanAgainstMFMsgText} =  An affordable, quick, and flexible loan. All paperless.
 ${e_loan_startSaveCheckEligibiliyText} =  Check your eligibility
 
+# Insure List
+@{e_insure_treatmentListItem} =  COVID-19  Cancer care  Open heart surgery  Knee replacement
+@{e_insure_policyListItem} =  Policy wording simple.  Premium cost low.  Year round support.
 
 # Insure List
 @{e_insure_treatmentListItem} =  COVID-19  Cancer care  Open heart surgery  Knee replacement
@@ -128,7 +132,7 @@ ${e_feature_sg7_investUpfront} =  1000
 # Goal - Create My Own
 ${e_feature_sg8_userAge} =  25
 ${e_feature_sg8_goalName} =  For a rainy day
-${e_feature_sg8_cost} =  50000
+${e_feature_sg8_cost} =  500000
 ${e_feature_sg8_goalDuration} =  2
 ${e_feature_sg8_investUpfront} =  500
 ${e_feature_sg_almostDone} =  Almost done! Let’s personalise your plan.
@@ -205,6 +209,7 @@ ${e_feature_st_tableRow4Text} =  NSC  5/10 Years  8.5%
 ${e_feature_st_tableRow5Text} =  FD  5 Years  9.0%
 
 #Features- Consolidate Navigation Page Variables
+
 ${e_feature_cd_pageHeaderText} =  Informed, disciplined investing grows your money, long-term 
 ${e_feature_cd_subHeaderText} =  Follow a structured approach and invest regularly, for the long-haul. This is the best way to grow your wealth over time
 ${e_feature_cd_setAGoalTitleText} =  DREAMS DO COME TRUE  
@@ -258,7 +263,6 @@ ${e_feature_cd_manageAcntDesc2Text} =  Your managee retains full access to their
 ${e_feature_cd_manageTodayBtnText} =   MANAGE TODAY
 
 # Application Locator 'KU_<locatorName>'
-
 # Button 
 ${KU_W_button} =  xpath=(//button[@class='button-primary'])[1]
 # Loan Navigation Page
@@ -415,7 +419,6 @@ ${KU_W_feature_sg_monthlyExpenseTxt} =  xpath=//input[@name='expense']
 ${KU_W_feature_sg_retireAgeTxt} =  xpath=//input[@name='retireage']
 ${KU_W_feature_sg_goalNameTxt} =  xpath=//input[@name='goalname']
 
-
 # Feature-TradeSmart Page
 ${KU_W_featureLink} =  xpath=//a[contains(text(),'Features')]
 ${KU_W_feature_ts_Link} =  xpath=//a[contains(text(),'TradeSmart')]
@@ -500,6 +503,22 @@ ${KU_W_feature_st_tableRow2} =  xpath= //tbody/tr[2]
 ${KU_W_feature_st_tableRow3} =  xpath= //tbody/tr[3]
 ${KU_W_feature_st_tableRow4} =  xpath= //tbody/tr[4]
 ${KU_W_feature_st_tableRow5} =  xpath= //tbody/tr[5]
+
+# Features-Consolidate Page
+${KU_W_feature_consolidateLink} =  xpath=//a[contains(text(),'Consolidate')]
+${KU_W_feature_cd_pageHeader} =  xpath=//header[@class='page-heading']/h1
+${KU_W_feature_cd_pageSubHeader} =  xpath=//header[@class='page-heading']/p
+${KU_W_feature_setAGoalPageTitle} =  xpath=(//div[contains(@class,'why-invest-text')]/h4)[1]
+${KU_W_feature_setAGoalPageSubTitle} =  xpath=(//div[contains(@class,'why-invest-text')]/h3)[1]
+${KU_W_feature_setAGoalPageDesc} =  xpath=//div[@class='set-a-goal-text']/p
+${KU_W_feature_goalBasedInvestingLink} =  xpath=//a[contains(text(),'More about goal-based investing')]
+${KU_W_feature_setAGoalBtn} =  xpath=(//button[@class='btn in-btn'])[1]
+${KU_W_feature_entryHeaderTitle} =  xpath=//h1[@class='entry-title post-title']
+
+# Feature-Family Account
+${KU_W_feature_familyAccountLink} =  xpath=//a[contains(text(),'Family Account')]   
+${KU_W_feature_fa_screenTitle} =  xpath=//h1[@class='b-family-account__what__heading']
+${KU_W_feature_fa_screenContent} =  xpath=//div[@class='b-family-account__what__des']
 
 # Features-Consolidate Page
 ${KU_W_feature_consolidateLink} =  xpath=//a[contains(text(),'Consolidate')]

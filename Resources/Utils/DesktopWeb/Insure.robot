@@ -9,7 +9,7 @@ Verify PreLogin Insure Page
     Verify Language Switch Login And Signup Link
     Wait For Element Visibility  ${KU_W_insureHeaderTitle}  
     Verify Element And Text  ${KU_W_insureHeaderTitle}  ${e_insure_headerTitleText} 
-    Verify Element And Text  ${KU_W_insureHeaderMsg}  ${e_insure_headerMsgText}
+    Verify Element And Text  ${KU_W_insureHeaderMsg}  ${e_insure_headerMsgText} 
     Verify Element And Text  ${KU_W_insure_checkPremiumBtn1}  ${e_insure_checkPremiumBtnText}  
     Wait For Element Visibility  ${KU_W_insure_checkPremiumBtn1}
     Sleep   1s
