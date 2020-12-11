@@ -35,6 +35,4 @@ Login and Signup Page Navigation Test
 # Invest Landing Page Navigation
 Invest Landing Page Widgets Verification
     [Tags]  TC05
-    #Verify PreLogin Invest Landing Page
-       Wait For Element Visibility  ${KU_W_investLink} 
-    Click Element  ${KU_W_investLink} 
+    Verify PreLogin Invest Landing Page
