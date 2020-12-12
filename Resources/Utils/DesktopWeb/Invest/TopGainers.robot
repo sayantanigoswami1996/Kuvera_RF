@@ -18,4 +18,3 @@ Verify Top Gainers Landing Page
     Click Element  ${KU_W_invest_topGainerAndIndia_watchListBtn}
     Verify Login Page
     Verify Filter Navigation For Top Gainer and 52 Wk High India  ${KU_W_invest_topGainerAndIndia_watchListHeading}  ${e_invest_stocks_watchlistHeadingText}   ${e_invest__52WHighLow_UTF_sortYearText}  ${KU_W_invest_topGainerAndIndia_watchListBtn}
-    Go Back

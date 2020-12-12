@@ -41,6 +41,24 @@ Verify Filter Navigation For Funds
     Verify Page Contains Element  ${KU_W_invest_watchListBtn}
     Go Back
 
+Verify No Stocks Screen For Top Gainer and 52Wk High India
+    [Arguments]   ${watchListBtn}
+    Scroll Untill View  ${KU_W_invest_52WLow_noStocksAvailable}
+    Wait For Element Visibility  ${KU_W_invest_52WLow_noStocksAvailable}
+    Verify Element And Text  ${KU_W_invest_52WLow_noStocksAvailable}  ${e_invest__52WLow_noStocksText}
+    Verify Element And Text  ${KU_W_invest_52WHighLow_allStockLink}  ${e_invest__52WLow_allStockLinkText} 
+    Sleep  2s
+    Wait For Element Visibility  ${KU_W_invest_52WHighLow_allStockLink}
+    Click Element  ${KU_W_invest_52WHighLow_allStockLink}
+    Wait For Element Visibility  ${watchListBtn}
+    Verify Page Contains Element  ${watchListBtn}
+    Go Back
+    Go Back
+
+Verify WatchList Button For Top Gainer and 52Wk High India
+    Verify Page Contains Element  ${KU_W_invest_topGainerAndIndia_watchListBtn}
+    Go Back
+
 Verify Filter Navigation For Top Gainer and 52 Wk High India   
     [Arguments]  ${watchListHeading}  ${watchlistHeadingText}  ${sortYearFor52High}  ${watchListBtn}
     # All
@@ -67,16 +85,28 @@ Verify Filter Navigation For Top Gainer and 52 Wk High India
     # 52Wlow
     Click Element  ${KU_W_invest_stocks_52WLow}
     Verify Element And Text  ${KU_W_invest_sortYear}  ${sortYearFor52High}
-    Sleep  4s
-    Scroll Untill View  ${KU_W_invest_52WLow_noStocksAvailable}
-    Wait For Element Visibility  ${KU_W_invest_52WLow_noStocksAvailable}
-    Verify Element And Text  ${KU_W_invest_52WLow_noStocksAvailable}  ${e_invest__52WLow_noStocksText}
-    Verify Element And Text  ${KU_W_invest_52WHighLow_allStockLink}  ${e_invest__52WLow_allStockLinkText} 
+    Sleep  3s
+    ${fundlist} =  Get Element Count   xpath=//div[@class='b-stocks-explore__stock-row-info']
+    Log To Console   ${fundlist} 
+    Run Keyword If   ${fundlist}>1   Verify WatchList Button For Top Gainer and 52Wk High India
+    ...    ELSE IF   ${fundlist}==0   Verify No Stocks Screen For Top Gainer and 52Wk High India   ${KU_W_invest_topGainerAndIndia_watchListBtn}
+    ...    ELSE  Log To Console  Completed
+    
+
+Verify No Stocks Screen For UTF and 52Wk High US
+    [Arguments]   ${watchListBtn}
+    Verify Page Contains Element  ${KU_W_invest_noStocksForUTFAnd52WUS}
+    Verify Element And Text  ${KU_W_invest_noStocksForUTFAnd52WUS}  ${e_invest__52WLow_noStocksText}
+    Verify Element And Text  ${KU_W_invest_allStockLinkForUTFAnd52WUS}  ${e_invest__USETF_allStockLinkText} 
     Sleep  2s
-    Wait For Element Visibility  ${KU_W_invest_52WHighLow_allStockLink}
-    Click Element  ${KU_W_invest_52WHighLow_allStockLink}
+    Wait For Element Visibility  ${KU_W_invest_allStockLinkForUTFAnd52WUS}
+    Click Element  ${KU_W_invest_allStockLinkForUTFAnd52WUS}
     Wait For Element Visibility  ${watchListBtn}
     Verify Page Contains Element  ${watchListBtn}
+    Go Back
+
+Verify WatchList Button For UTF and 52Wk High US
+    Verify Page Contains Element  ${KU_W_invest_USETFAnd52WUS_watchlistBtn}
     Go Back
 
 Verify Filter Navigation For USETF and 52 Wk High US  
@@ -106,18 +136,13 @@ Verify Filter Navigation For USETF and 52 Wk High US
     # 52Wlow
     Click Element  ${KU_W_invest_stocks_52WLow}
     Verify Element And Text  ${KU_W_invest_sortYear}  ${sortYearFor52High}
-    # Sleep  4s
-    # Scroll Untill View  ${KU_W_invest_noStocksForUTFAnd52WUS}
-    # Wait For Element Visibility  ${KU_W_invest_noStocksForUTFAnd52WUS}
-    # Verify Element And Text  ${KU_W_invest_noStocksForUTFAnd52WUS}  ${e_invest__52WLow_noStocksText}
-    # Verify Element And Text  ${KU_W_invest_allStockLinkForUTFAnd52WUS}  ${e_invest__USETF_allStockLinkText} 
-    # Sleep  2s
-    # Wait For Element Visibility  ${KU_W_invest_allStockLinkForUTFAnd52WUS}
-    # Click Element  ${KU_W_invest_allStockLinkForUTFAnd52WUS}
-    # Wait For Element Visibility  ${watchListBtn}
-    # Verify Page Contains Element  ${watchListBtn}
-    Go Back
-
+    Sleep  3s
+    ${fundlist} =  Get Element Count   xpath=//div[@class='b-stock-item b-stock-items__content__item']
+    Log To Console   ${fundlist} 
+    Run Keyword If   ${fundlist}>1   Verify WatchList Button For UTF and 52Wk High US
+    ...    ELSE IF   ${fundlist}==0  Verify No Stocks Screen For UTF and 52Wk High US  ${KU_W_invest_USETFAnd52WUS_watchlistBtn}
+    ...    ELSE  Log To Console  Completed
+                   
 Verify PreLogin Invest Landing Page
     Wait For Element Visibility  ${KU_W_investLink} 
     Click Element  ${KU_W_investLink} 
