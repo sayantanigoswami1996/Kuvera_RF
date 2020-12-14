@@ -1,5 +1,6 @@
 *** Settings ***
 
+# Import Pages for Tests
 Resource    ../../Resources/Utils/DesktopWeb/Common.robot
 Resource    ../../Resources/Utils/DesktopWeb/LandingPage.robot
 Resource    ../../Resources/Utils/DesktopWeb/Login.robot
@@ -14,11 +15,14 @@ Resource    ../../Resources/Utils/DesktopWeb/Invest/ELSSTaxSaver.robot
 Resource    ../../Resources/Utils/DesktopWeb/Invest/DigitalGold.robot
 Resource    ../../Resources/Utils/DesktopWeb/Invest/EquityIndex.robot
 Resource    ../../Resources/Utils/DesktopWeb/Invest/SectorFunds.robot
-Resource    ../../Resources/Utils/DesktopWeb/Invest/ValueFunds.robot
+Resource    ../../Resources/Utils/DesktopWeb/Invest/BankPSUBonds.robot
+Resource    ../../Resources/Utils/DesktopWeb/Invest/ELSSTaxSaver.robot
 Resource    ../../Resources/Utils/DesktopWeb/Invest/TopGainers.robot
-Resource    ../../Resources/Utils/DesktopWeb/Invest/UltraShort.robot
 Resource    ../../Resources/Utils/DesktopWeb/Invest/USETF.robot
-Resource    ../../Resources/Utils/DesktopWeb/Invest/MutualFunds.robot
+Resource    ../../Resources/Utils/DesktopWeb/Invest/ValueFunds.robot
+Resource    ../../Resources/Utils/DesktopWeb/Invest/52WkHighIndia.robot
+Resource    ../../Resources/Utils/DesktopWeb/Invest/52WkHighUS.robot
+Resource    ../../Resources/Utils/DesktopWeb/Invest/UltraShort.robot
 Resource    ../../Resources/Utils/DesktopWeb/Loans.robot
 Resource    ../../Resources/Utils/DesktopWeb/Insure.robot
 Resource    ../../Resources/Utils/DesktopWeb/Remit.robot

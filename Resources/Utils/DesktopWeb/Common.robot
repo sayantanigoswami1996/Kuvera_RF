@@ -14,7 +14,12 @@ Resource    ../../../AppLocators/DesktopWeb/InvestLocators/DigitalGoldLocators.r
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/GiltFundsLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/EquityIndexLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/SectorFundsLocators.robot
-
+Resource    ../../../AppLocators/DesktopWeb/InvestLocators/ValueFundsLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/InvestLocators/ELSSTaxSaverLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/InvestLocators/BankPSUBondsLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/InvestLocators/TopGainersLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/InvestLocators/ELSSTaxSaverLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/InvestLocators/USETFLocators.robot
 *** Keywords ***
 
 Launch URL

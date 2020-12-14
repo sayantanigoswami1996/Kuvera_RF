@@ -12,7 +12,7 @@ Verify PreLogin Insure Page
     Verify Element And Text  ${KU_W_insureHeaderMsg}  ${e_insure_headerMsgText}
     Verify Element And Text  ${KU_W_insure_checkPremiumBtn1}  ${e_insure_checkPremiumBtnText}  
     Wait For Element Visibility  ${KU_W_insure_checkPremiumBtn1}
-    Sleep   1s
+    Sleep  1s
     Click Button  ${KU_W_insure_checkPremiumBtn1} 
     Verify Login Page
     Wait For Element Visibility  ${KU_W_insure_costDetailsHeaderTitle}     
@@ -59,16 +59,16 @@ Verify PreLogin Insure Page
     Verify Element and Text  ${KU_W_insure_copaymentCardTitle}  ${e_insure_copaymentCardText}
     Verify Element and Text  ${KU_W_insure_copaymentMsg}  ${e_insure_copaymentMsgText}
     Click Element  ${KU_W_insure_sliderButton}
-    Sleep   1s
+    Sleep  1s
     Verify Element and Text  ${KU_W_insure_30daySettlemenCardTitle}  ${e_insure_30daySettlementCardText}
     Verify Element and Text  ${KU_W_insure_30daySettlemenMsg}  ${e_insure_30daySettlementMsgText}
-    Verify Element and Text  ${KU_W_insure_ayushCoveredCardTitle}   ${e_insure_ayushCoveredCardText}
+    Verify Element and Text  ${KU_W_insure_ayushCoveredCardTitle}  ${e_insure_ayushCoveredCardText}
     Verify Element and Text  ${KU_W_insure_ayushCoveredMsg}  ${e_insure_ayushCoveredMsgText}
     Verify Element and Text  ${KU_W_insure_lowWaitingPeriodCardTitle}  ${e_insure_lowWaitingPeriodCardText}
-    Verify Element and Text  ${KU_W_insure_lowWaitingPeriodMsg}   ${e_insure_lowWaitingPeriodMsgText}
+    Verify Element and Text  ${KU_W_insure_lowWaitingPeriodMsg}  ${e_insure_lowWaitingPeriodMsgText}
     Click Element  ${KU_W_insure_sliderButton}
-    Sleep   1s
-    Verify Element and Text  ${KU_W_insure_dailyExpenseCardTitle}   ${e_insure_dailyExpenseCardText}
+    Sleep  1s
+    Verify Element and Text  ${KU_W_insure_dailyExpenseCardTitle}  ${e_insure_dailyExpenseCardText}
     Verify Element and Text  ${KU_W_insure_dailyExpenseMsg}  ${e_insure_dailyExpenseMsgText} 
     Verify Element and Text  ${KU_W_insure_dedicatedSupportCardTitle}  ${e_insure_dedicatedSupportCardText}
     Verify Element and Text  ${KU_W_insure_dedicatedSupportMsg}  ${e_insure_dedicatedSupportMsgText}
@@ -76,12 +76,12 @@ Verify PreLogin Insure Page
     # Trusted Partner
     Scroll Untill View  ${KU_W_insure_trustedPartnerTitle}
     Verify Element and Text  ${KU_W_insure_trustedPartnerTitle}  ${e_insure_trustedPartnerTitleText}
-    Verify Element and Text  ${KU_W_insure_trustedPartnerSubTitle}   ${e_insure_trustedPartnerSubTitleText}
+    Verify Element and Text  ${KU_W_insure_trustedPartnerSubTitle}  ${e_insure_trustedPartnerSubTitleText}
 
     # Flexible Coverage 
     Wait For Element Visibility  ${KU_W_insure_flexibleCoverageTitle} 
     Scroll Untill View  ${KU_W_insure_flexibleCoverageTitle} 
-    Verify Element and Text  ${KU_W_insure_flexibleCoverageTitle}   ${e_insure_flexibleCoverageTitleText}
+    Verify Element and Text  ${KU_W_insure_flexibleCoverageTitle}  ${e_insure_flexibleCoverageTitleText}
     Verify Element and Text  ${KU_W_insure_flexibleCoverageSubtitle}  ${e_insure_flexibleCoevrageSubTitleText}
 
     # Save Tax 

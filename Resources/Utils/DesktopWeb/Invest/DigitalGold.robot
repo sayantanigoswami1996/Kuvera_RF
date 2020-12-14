@@ -64,7 +64,6 @@ Verify FAQ Button
     Sleep  1s
 
 Verify Digital Gold Landing Page
-    Sleep  2s
     Wait For Element Visibility  ${KU_W_dg_screenTitle} 
     Verify Language Switch Login And Signup Link  
     Wait For Element Visibility  ${KU_W_dg_screenTitle}

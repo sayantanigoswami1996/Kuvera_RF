@@ -36,6 +36,5 @@ Verify PreLogin Remit Page
     Verify Page Contains Element  ${KU_W_remit_calculatorTarget}
     #Switch To Window Verify Title And Close  ${e_remit_transferWiseSignUpTitle} 
     Switch To Window 
-
     Scroll Untill View  ${KU_W_remit_transferNoBottomBtn}
     Verify Transfer Now  ${KU_W_remit_transferNoBottomBtn}

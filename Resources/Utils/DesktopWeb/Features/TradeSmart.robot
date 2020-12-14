@@ -25,4 +25,4 @@ Verify PreLogin TradeSmart Page
     Scroll Untill View  ${KU_W_feature_helpTradeSmart3Msg} 
     Verify Element and Text  ${KU_W_feature_helpTradeSmart2Msg}  ${e_feature_helpTradeSmartDesc2Text}
     Verify Element and Text  ${KU_W_feature_helpTradeSmart3Msg}  ${e_feature_helpTradeSmartDesc3Text}
-    Scroll Untill View   ${KU_W_feature_aboutUs} 
+    Scroll Untill View  ${KU_W_feature_aboutUs} 

@@ -186,7 +186,6 @@ ${e_invest_digitalGoldTitleText} =  Digital Gold
 ${e_invest_digitalGoldSubText} =  Diversify your portfolio with Gold.
 ${e_invest_USETFTitleText} =   US ETF
 ${e_invest_USETFSubText} =  Go global with direct US ETF investing. We make it easy and cheap.
-${e_invest_USETF_screenText} =  Other | Exchange-traded fund
 ${e_invest_equityIndexTitleText} =  Equity Index
 ${e_invest_equityIndexSubText} =  Get index returns at low cost. 
 ${e_invest_sectorFundsTitleText} =   Sector Funds 
@@ -220,13 +219,16 @@ ${e_invest_stock_searchBarTxt} =  Search stocks
 ${e_invest_stock_exploreMoreTxt} =  Explore more
 ${e_invest__funds_sortYearText} =  3Y
 ${e_invest__stocks_sortYearText} =  1D
-${e_invest__52WHighLowSortYearText} =  1Y
+${e_invest__52WHighLow_UTF_sortYearText} =  1Y
 ${e_invest__52WLow_noStocksText} =  No stocks available  
-${e_invest__52WLow_allStockLinkText} =  Go to ‘All stocks’                    
+${e_invest__52WLow_allStockLinkText} =  Go to ‘All stocks’ 
+${e_invest__USETF_allStockLinkText} =  Go to “All stocks”                    
 ${e_invest__instaredeem_fundText} =  Liquid Fund
 ${e_invest__newfunds_openSwitchText} =  Open Ended
 ${e_invest_watchlistHeadingText} =  Login to track your favorite funds by adding them to your watch list.	
-${e_invest_stocks_watchlistHeadingText} =  Login to track your favorite stocks by adding them to your watch list.			
+${e_invest_stocks_watchlistHeadingText} =  Login to track your favorite stocks by adding them to your watch list.	
+${e_invest_USETFAnd52WUS_watchlistHeadingText} =  Track your favorite stocks by adding them to your watch list.
+      		
 # Application Locator 'KU_<locatorName>'
 # Invest Landing Navigation Page
 ${KU_W_investLink} =  xpath=//a[@class='b-header__content__invest cursor-pointer']
@@ -245,7 +247,6 @@ ${KU_W_goldIconImage} =  xpath=(//div[@class='k-cls b-invest-card']/img)[2]
 ${KU_W_USUTFImage} =  xpath=(//div[@class='k-cls b-invest-card']/img)[3]
 ${KU_W_UTFTitle} =  xpath=(//div[@class='k-cls b-invest-card']/h6)[6]
 ${KU_W_UTFSubTitle} =  xpath=(//div[@class='k-cls b-invest-card']/p)[6]
-${KU_W_UTF_screenTitle} =  xpath=(//div[@class='b-stock-item__col1__meta-info'])[1]
 ${KU_W_equityIndexTitle} =  xpath=(//h6[@class='b-invest-tile__title'])[6]
 ${KU_W_equityIndexSubTitle} =  xpath=(//p[@class='b-invest-tile__para'])[7]
 ${KU_W_sectorFundsTitle} =  xpath=(//h6[@class='b-invest-tile__title'])[7]
@@ -274,8 +275,8 @@ ${KU_W_saveSmart} =  xpath=(//div[@class='b-asset-cta__title'])[5]
 ${KU_W_amazonSave} =  xpath=(//div[@class='b-asset-cta__title'])[6]
 ${KU_W_amazonSaveScreen} =  xpath=//div[@class='b-festive-fund-no-investment__text']
 ${KU_W_invest_sortYear} =  xpath=//div[@class='default-message']
-${KU_W_searchBarForTopGainer} =  xpath=(//div[@class='b-explore-stock__action-title'])[1]
-${KU_W_searchBarForUSETF} =  xpath=(//div[@class='b-action-bar__search__header'])[1]
+${KU_W_searchBarForTopGainerAnd52WIndia} =  xpath=(//div[@class='b-explore-stock__action-title'])[1]
+${KU_W_searchBarForUSETFAnd52WUS} =  xpath=(//div[@class='b-action-bar__search__header'])[1]
 ${KU_W_sort} =  xpath=(//div[@class='b-explore-fund__action-title'])[2]
 ${KU_W_sort_UTF_USA} =  xpath=//div[@class='b-action-bar__sort__header']
 ${KU_W_sort_topGainer_India} =  xpath=(//div[@class='b-explore-stock__action-title'])[2]
@@ -303,6 +304,10 @@ ${KU_W_invest_stocks_gainers} =  xpath=//div[contains(text(),'Gainers')]
 ${KU_W_invest_stocks_52WHigh} =  xpath=//div[contains(text(),'52W high')]
 ${KU_W_invest_stocks_52WLow} =  xpath=//div[contains(text(),'52W low')]
 ${KU_W_invest_52WLow_noStocksAvailable} =  xpath=//div[@class='b-stocks-filter-no-results-found disable-browser-text-select']
-${KU_W_invest_topGainer_India_watchListBtn} =  xpath=(//div[@class='b-stocks-explore__stock-row-watchlist'])[1]
-${KU_W_invest_topGainer_India_watchListHeading} =  xpath=//div[@class='b-stock-watchlist-tab__not-logged-in--text']
+${KU_W_invest_topGainerAndIndia_watchListBtn} =  xpath=(//div[@class='b-stocks-explore__stock-row-watchlist'])[1]
+${KU_W_invest_topGainerAndIndia_watchListHeading} =  xpath=//div[@class='b-stock-watchlist-tab__not-logged-in--text']
 ${KU_W_invest_52WHighLow_allStockLink} =  xpath=//div[@class='b-stocks-filter__redirect-link disable-browser-text-select']
+${KU_W_invest_USETFAnd52WUS_watchlistBtn} =  xpath=(//img[contains(@class,'b-stock-item')])[1]
+${KU_W_invest_USETFAnd52WUS_watchListHeading} =  xpath=//div[@class='b-stock-items__watchlist-banner__track-msg']
+${KU_W_invest_noStocksForUTFAnd52WUS} =  xpath=//div[@class='b-zero-item__label']
+${KU_W_invest_allStockLinkForUTFAnd52WUS} =  xpath=//div[@class='b-zero-item__btn']
