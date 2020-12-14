@@ -35,5 +35,5 @@ Features Header Navigation Test
 # Invest Landing Page Navigation
 Invest Landing Page Widgets Verification
     [Tags]  TC05
-    #Verify PreLogin Invest Landing Page
-    Verify Mutual Fund Landing Page
+    Verify PreLogin Invest Landing Page
+    #Verify Mutual Fund Landing Page
