@@ -15,8 +15,6 @@ Verify 52WkHigh US Landing Page
     Verify Element And Text  ${KU_W_52WHighUS_screenText}  ${e_invest_52WHighIndiaUS_screenText}
     Verify Element And Text  ${KU_W_invest_sortYear}  ${e_invest__52WHighLow_UTF_sortYearText} 
     Verify Element And Text  ${KU_W_filterText_UTFAnd52WkHighUS}  ${e_invest_filterBtnText}
-    Wait For Element Visibility  ${KU_W_invest_USETFAnd52WUS_watchlistBtn}
-    Verify Page Contains Element  ${KU_W_invest_USETFAnd52WUS_watchlistBtn}
-    Click Element  ${KU_W_invest_USETFAnd52WUS_watchlistBtn}
+    Verify Watchlist Icon  ${KU_W_invest_USETFAnd52WUS_watchlistBtn}
     Verify Login Page
     Verify Filter Navigation For USETF and 52WkHighUS  ${KU_W_invest_USETFAnd52WUS_watchListHeading}  ${e_invest_USETFAnd52WUS_watchlistHeadingText}   ${e_invest__52WHighLow_UTF_sortYearText}  ${KU_W_invest_USETFAnd52WUS_watchlistBtn}

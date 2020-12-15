@@ -15,8 +15,7 @@ Verify Equity Index Landing Page
     Verify Filter And Clear All
     Verify Element And Text   ${KU_W_invest_sortYear}   ${e_invest__funds_sortYearText}
     Verify Element And Text   ${KU_W_invest_filteredFund}  ${e_invest_equIndex_filteredFundText}
-    Verify Page Contains Element  ${KU_W_invest_watchListBtn} 
-    Click Element   ${KU_W_invest_watchListBtn} 
+    Verify Watchlist Icon  ${KU_W_invest_watchListBtn}
     # Watchlist
     Verify Element And Text  ${KU_W_invest_watchlistHeading}   ${e_invest_watchlistHeadingText}
     Verify Filter Navigation For Funds
