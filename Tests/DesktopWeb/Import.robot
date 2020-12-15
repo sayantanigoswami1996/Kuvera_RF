@@ -6,8 +6,6 @@ Resource    ../../Resources/Utils/DesktopWeb/LandingPage.robot
 Resource    ../../Resources/Utils/DesktopWeb/Login.robot
 Resource    ../../Resources/Utils/DesktopWeb/Signup.robot
 Resource    ../../Resources/Utils/DesktopWeb/Invest/InvestLandingPage.robot
-Resource    ../../Resources/Utils/DesktopWeb/Invest/52WkHighIndia.robot
-Resource    ../../Resources/Utils/DesktopWeb/Invest/52WkHighUS.robot
 Resource    ../../Resources/Utils/DesktopWeb/Invest/SaveSmart.robot
 Resource    ../../Resources/Utils/DesktopWeb/Invest/BankPSUBonds.robot
 Resource    ../../Resources/Utils/DesktopWeb/Invest/GiltFunds.robot
@@ -20,9 +18,7 @@ Resource    ../../Resources/Utils/DesktopWeb/Invest/ELSSTaxSaver.robot
 Resource    ../../Resources/Utils/DesktopWeb/Invest/TopGainers.robot
 Resource    ../../Resources/Utils/DesktopWeb/Invest/USETF.robot
 Resource    ../../Resources/Utils/DesktopWeb/Invest/ValueFunds.robot
-Resource    ../../Resources/Utils/DesktopWeb/Invest/52WkHighIndia.robot
-Resource    ../../Resources/Utils/DesktopWeb/Invest/52WkHighUS.robot
-Resource    ../../Resources/Utils/DesktopWeb/Invest/UltraShort.robot
+Resource    ../../Resources/Utils/DesktopWeb/Invest/MutualFunds.robot
 Resource    ../../Resources/Utils/DesktopWeb/Loans.robot
 Resource    ../../Resources/Utils/DesktopWeb/Insure.robot
 Resource    ../../Resources/Utils/DesktopWeb/Remit.robot

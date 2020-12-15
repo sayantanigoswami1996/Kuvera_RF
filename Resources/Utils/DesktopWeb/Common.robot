@@ -20,6 +20,8 @@ Resource    ../../../AppLocators/DesktopWeb/InvestLocators/BankPSUBondsLocators.
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/TopGainersLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/ELSSTaxSaverLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/USETFLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/InvestLocators/MutualFundsLocators.robot
+
 *** Keywords ***
 
 Launch URL

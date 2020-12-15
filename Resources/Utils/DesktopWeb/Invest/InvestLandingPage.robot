@@ -4,9 +4,15 @@ Library     SeleniumLibrary
 
 *** Keywords ***
 
+Verify Watchlist Icon
+    Wait For Element Visibility  ${KU_W_invest_watchListBtn}
+    Verify Page Contains Element  ${KU_W_invest_watchListBtn}
+    Click Element  ${KU_W_invest_watchListBtn}
+
 Verify Search And Sort
     [Arguments]  ${searchBar}  ${searchText}  ${sortButton} 
     Verify Element And Text  ${searchBar}  ${searchText}
+    Verify Page Contains Element  ${KU_W_invest_mf_searchBar}
     Verify Element And Text  ${sortButton}  ${e_invest_sortBtnText}
 
 Verify Filter And Clear All        
@@ -166,7 +172,7 @@ Verify PreLogin Invest Landing Page
     Wait For Element Visibility  ${KU_W_ultraShortTitle} 
     Verify Element And Text  ${KU_W_ultraShortTitle}   ${e_invest_ultraShortTitleText}
     Verify Element And Text  ${KU_W_ultraShortSubTitle}   ${e_invest_ultraShortSubText}
-    Verify Ultra Short Landing Page 
+    #Verify Ultra Short Landing Page 
     # Bank & PSU Bonds
     Wait For Element Visibility  ${KU_W_bank&PSUBondsTitle} 
     Verify Element And Text  ${KU_W_bank&PSUBondsTitle}   ${e_invest_bank&PSUTitleText}
@@ -216,12 +222,10 @@ Verify PreLogin Invest Landing Page
     Wait For Element Visibility  ${KU_W_52WHighIndiaTitle}  
     Verify Element And Text  ${KU_W_52WHighIndiaTitle}   ${e_invest_52WHighIndiaTitleText} 
     Verify Element And Text  ${KU_W_52WHighIndiaSubTitle}  ${e_invest_52WHighIndiaSubTitleText}
-    Verify High India Landing Page  
     # 52 W High USA
     Wait For Element Visibility  ${KU_W_52WHighUSTitle}
     Verify Element And Text  ${KU_W_52WHighUSTitle}  ${e_invest_52WHighUSTitleText} 
     Verify Element And Text  ${KU_W_52WHighUSSubTitle}   ${e_invest_52WHighUSSubTitleText}
-    Verify High US Landing Page
     # Health Premium
     Wait For Element Visibility  ${KU_W_healthPremiumTitle}
     Verify Element And Text  ${KU_W_healthPremiumTitle}  ${e_invest_healthPremiumTitleText}  
