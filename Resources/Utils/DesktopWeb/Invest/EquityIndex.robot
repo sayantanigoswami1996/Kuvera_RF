@@ -10,7 +10,7 @@ Verify Equity Index Landing Page
     Click Element  ${KU_W_equityIndexTitle} 
     Wait For Element Visibility  ${KU_W_invest_fundsScreenTitle}
     Verify Language Switch Login And Signup Link  
-    Verify Search And Sort  ${KU_W_searchBarForFunds}  ${e_invest_mf_searchBarText}   ${KU_W_sort} 
+    Verify Search And Sort  ${KU_W_searchBarForFunds}  ${e_invest_searchBarText}  ${KU_W_invest_searchTextFieldForFunds}  ${KU_W_invest_sort}
     Verify Element And Text   ${KU_W_invest_fundsScreenTitle}    ${e_invest_equIndex_screenText} 
     Verify Filter And Clear All
     Verify Element And Text   ${KU_W_invest_sortYear}   ${e_invest__funds_sortYearText}

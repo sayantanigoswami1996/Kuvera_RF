@@ -7,7 +7,6 @@ ${e_invest_giltFundsTitleText} =   Gilt Funds
 ${e_invest_giltFundsSubText} =  Invest in govt bonds. Zero credit risk, but have rate risk.
 ${e_invest_ultraShortTitleText} =  Ultra-short
 ${e_invest_ultraShortSubText} =  Park money for the short term
-${e_invest_us_screenText} =  Ultra Short Duration Fund
 ${e_invest_bank&PSUTitleText} =  Bank & PSU Bonds
 ${e_invest_ELSSTaxTitleText} =   ELSS Tax Saver
 ${e_invest_ELSSTaxSubText} =  Save up to ₹46.8k in taxes.
@@ -25,14 +24,13 @@ ${e_invest_topGainersTitleText} =  Top Gainers
 ${e_invest_topGainersSubTitleText} =  Indian stocks
 ${e_invest_52WHighIndiaTitleText} =   52 Wk High India
 ${e_invest_52WHighIndiaSubTitleText} =  Momentum stocks in India
-${e_invest_52WHighInida_screenText} =   52W high 
+${e_invest_52WHighIndiaUS_screenText} =   52W high 
 ${e_invest_52WHighUSTitleText} =   52 Wk High US
 ${e_invest_52WHighUSSubTitleText} =  Momentum stocks in US
-${e_invest_52WHighUS_screenText} =  52W high 
 ${e_invest_healthPremiumTitleText} =  Get ₹50L health cover starting at ₹900 p.m. T&C apply
 ${e_invest_checkPremiumSubText} =  Check premium     
 ${e_invest_mf_titleText} =  Mutual\nfunds
-${e_invest_mf_searchBarText} =  Search funds 
+${e_invest_searchBarText} =  Search funds 
 ${e_invest_digGold_titleText} =  Digital\ngold
 ${e_invest_stocks_titleText} =  Stocks
 ${e_invest_stocks_screenText} =  Search stocks
@@ -106,10 +104,15 @@ ${KU_W_amazonSaveScreen} =  xpath=//div[@class='b-festive-fund-no-investment__te
 ${KU_W_invest_sortYear} =  xpath=//div[@class='default-message']
 ${KU_W_searchBarForTopGainerAnd52WIndia} =  xpath=(//div[@class='b-explore-stock__action-title'])[1]
 ${KU_W_searchBarForUSETFAnd52WUS} =  xpath=(//div[@class='b-action-bar__search__header'])[1]
-${KU_W_sort} =  xpath=(//div[@class='b-explore-fund__action-title'])[2]
-${KU_W_sort_UTF_USA} =  xpath=//div[@class='b-action-bar__sort__header']
-${KU_W_sort_topGainer_India} =  xpath=(//div[@class='b-explore-stock__action-title'])[2]
+${KU_W_invest_searchTextFieldForFunds} =  xpath=//div[@class='b-search-fund__bar']
+${KU_W_invest_searchTextFieldForETFAndUS} =  xpath=//div[@class='b-action-bar__search__item']
+${KU_W_invest_searchTextFieldForTopGainerAndIndia} =  xpath=//div[@class='b-search-stock__bar']
+${KU_W_invest_sort} =  xpath=(//div[@class='b-explore-fund__action-title'])[2]
+${KU_W_invest_sort_UTF_USA} =  xpath=//div[@class='b-action-bar__sort__header']
+${KU_W_invest_sort_topGainerAndIndia} =  xpath=(//div[@class='b-explore-stock__action-title'])[2]
 ${KU_W_filter} =  xpath=//span[@class='b-explore-fund__action-title b-explore-fund__filter-action-title']
+${KU_W_filterText_topGainerAndIndia} =  xpath=//span[@class='b-explore-stock__action-title b-explore-stock__filter-action-title']
+${KU_W_filterText_UTFAnd52WkHighUS} =  xpath=//div[@class='b-action-bar__filter__header__label']
 ${KU_W_clearAll} =  xpath=//div[@class='b-explore-fund__clear-all']
 ${KU_W_exploreMoreTitle} =  xpath=//div[@class='b-explore-assets__subheading']
 ${KU_W_invest_filteredFund} =  xpath=(//div[@class='b-mutual-funds-explore__fund-row-industry'])[1]

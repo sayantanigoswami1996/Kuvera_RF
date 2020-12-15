@@ -20,12 +20,14 @@ Resource    ../../../AppLocators/DesktopWeb/InvestLocators/BankPSUBondsLocators.
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/TopGainersLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/ELSSTaxSaverLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/USETFLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/InvestLocators/UltraShortLocators.robot
 *** Keywords ***
 
 Launch URL
     Open Browser  ${URL}  ${BROWSER}  alias=Kuvera
     # Maximize Browser Window
-    Set Window Size  ${1366}  ${768}
+    # Set Window Size  ${1366}  ${768}
+    Set Window Size  ${1920}  ${1080}
     Reload Page
     Kuvera Web Close Regulatory Disclosure
     Run Keyword If    "${ENV}" == "prod"  Close Hello Bar
