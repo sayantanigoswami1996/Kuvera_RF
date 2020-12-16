@@ -35,5 +35,4 @@ Login and Signup Page Navigation Test
 # Invest Landing Page Navigation
 Invest Landing Page Widgets Verification
     [Tags]  TC05
-    # Verify PreLogin Invest Landing Page
-    Verify PreLogin Insure Page
+    Verify PreLogin Invest Landing Page
