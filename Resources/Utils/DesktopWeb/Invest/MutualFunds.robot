@@ -38,6 +38,7 @@ Verify Mutual Fund Details Page
     Wait For Element Visibility  ${fund}
     Click Element  ${fund}
     Verify Language Switch Login And Signup Link
+    Wait For Element Visibility  ${KU_W_invest_mf_watchlistButton}
     Verify Page Contains Element  ${KU_W_invest_mf_watchlistButton}
     # Title Section
     Wait For Element Visibility  ${KU_W_invest_mf_title}
@@ -68,6 +69,7 @@ Verify Mutual Fund Details Page
     Click Element  ${KU_W_invest_mf_addToCartButton}
     Verify Login Page
     # Graph Section
+    Wait For Element Visibility  ${KU_W_invest_mf_performaceCart}
     Verify Page Contains Element  ${KU_W_invest_mf_performaceCart}
     Scroll Untill View  ${KU_W_invest_mf_compareTitle}
     FOR  ${i}  IN RANGE  1  6
