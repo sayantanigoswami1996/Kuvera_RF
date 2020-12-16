@@ -67,7 +67,6 @@ ${e_insure_dailyExpenseCardText} =  Daily cash expenses
 ${e_insure_dailyExpenseMsgText} =  Get up to ₹10k a day to cover out of pocket expenses during hospitalisation.
 ${e_insure_dedicatedSupportCardText} =  Dedicated support 
 ${e_insure_dedicatedSupportMsgText} =  Get year-round dedicated support. 
-
 ${e_insure_trustedPartnerTitleText} =  Trusted partner
 ${e_insure_trustedPartnerSubTitleText} =  With a 97% Claim settlement ratio, we’ve partnered with the best.
 ${e_insure_flexibleCoverageTitleText} =  Flexible coverage
@@ -76,6 +75,13 @@ ${e_insure_saveTaxTitleText} =  Save up to ₹1 lakh in tax
 ${e_insure_saveTaxSubTitleText} =  Claim tax under section 80D.
 ${e_insure_healthCoverTitleText} =  Health cover that’s right for you.
 ${e_insure_checkPremiumBtn2Text} =  Check premium
+
+${e_insure_popupHeader} =  Group health insurance is for Kuvera users only
+${e_insure_popupSubheader1} =  Sign up to India’s first completely free wealth management platform.
+${e_insure_popupSubheader2} =  Explore Mutual fund, Gold, SaveSmart, Indian & US stocks, Insurance, Loan and more.
+${e_insure_popupSubheader3} =  No fees. No commission. No conflict of interest.
+${e_insure_yellowBanner} =  cover starting at\n*\nT&C apply
+      
 
 # Remit List 
 @{e_remit_whyTransferWiseList} =  No hidden fees  Up to 8x cheaper than banks  Trusted by 7 million users  Fast way to send money  Mid-market exchange rate
@@ -296,6 +302,12 @@ ${KU_W_insureHeaderTitle} =  xpath=(//div[@class='b-health-insurance-landing__ti
 ${KU_W_insureHeaderMsg} =  xpath=(//div[@class='b-health-insurance-landing__title--text'])[1]
 ${KU_W_insure_termsAndConditions} =  xpath=//span[@class='b-health-insurance-landing__term-condition']
 ${KU_W_insure_checkPremiumBtn1} =  xpath=(//button[@class='button-primary'])[1]
+${KU_W_insure_popupHeader} =  xpath=//div[@class='b-insurance__title b-login-confirmaton__title']
+${KU_W_insure_popupSubheader1} =  xpath=(//div[@class='b-login-confirmaton__container']/ul/li)[1]
+${KU_W_insure_popupSubheader2} =  xpath=(//div[@class='b-login-confirmaton__container']/ul/li)[2]
+${KU_W_insure_popupSubheader3} =  xpath=(//div[@class='b-login-confirmaton__container']/ul/li)[3]
+${KU_W_insure_loginBtn} =  xpath=//span[@class='b-login-confirmaton__login-btn']
+${KU_W_insure_signupBtn} =  xpath=//button[contains(.,'Sign up')]
 ${KU_W_insure_costDetailsHeaderTitle} =  xpath=//div[@class='b-health-insurance-landing__cost-details--table__text']
 ${KU_W_insure_treatmentTitle} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__treatment'])[1]
 ${KU_W_insure_treatmentCostTitle} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__cost'])[1]
@@ -332,6 +344,7 @@ ${KU_W_insure_dailyExpenseCardTitle} =  xpath=(//div[@class='b-feature-card__tit
 ${KU_W_insure_dailyExpenseMsg} =  xpath=(//div[@class='b-feature-card__msg'])[8]
 ${KU_W_insure_dedicatedSupportCardTitle} =  xpath=(//div[@class='b-feature-card__title'])[9] 
 ${KU_W_insure_dedicatedSupportMsg} =  xpath=(//div[@class='b-feature-card__msg'])[9]
+${KU_W_insure_yellowBanner} =  xpath=//div[@class='b-policy-comparison-banner__items']
 ${KU_W_insure_sliderButton} =  xpath=//div[@class='b-slide-card-list__btns__next b-slide-card-list__btns__next--active']
 ${KU_W_insure_trustedPartnerTitle} =  xpath=(//div[@class='b-health-insurance-landing__insurance-brief__row--items__content']/div)[1] 
 ${KU_W_insure_trustedPartnerSubTitle} =  xpath=(//div[@class='b-health-insurance-landing__insurance-brief--subheading'])[1] 
