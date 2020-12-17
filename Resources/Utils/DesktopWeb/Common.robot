@@ -21,6 +21,8 @@ Resource    ../../../AppLocators/DesktopWeb/InvestLocators/TopGainersLocators.ro
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/ELSSTaxSaverLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/USETFLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/UltraShortLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/InvestLocators/MutualFundsLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/InvestLocators/StocksLocators.robot
 *** Keywords ***
 
 Launch URL

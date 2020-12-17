@@ -5,6 +5,7 @@ Library     SeleniumLibrary
 *** Keywords ***
 
 Verify Bank And PSU Bonds Landing Page
+    Log To Console  Bank and PSU Bonds
     Click Element  ${KU_W_bank&PSUBondsTitle}
     Wait For Element Visibility  ${KU_W_invest_fundsScreenTitle} 
     Verify Language Switch Login And Signup Link  
@@ -15,6 +16,6 @@ Verify Bank And PSU Bonds Landing Page
     Verify Element And Text  ${KU_W_invest_filteredFund}   ${e_invest_bank&PSU_filteredFundText}
     Verify Watchlist Icon  ${KU_W_invest_watchListBtn}
     # Watchlist
-    Verify Element And Text  ${KU_W_invest_watchlistHeading}  ${e_invest_watchlistHeadingText} 
+    Verify Element And Text  ${KU_W_invest_watchlistHeader}  ${e_invest_watchlistHeader} 
     Verify Filter Navigation For Funds
     Go Back

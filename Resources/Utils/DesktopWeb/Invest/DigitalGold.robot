@@ -4,66 +4,8 @@ Library   SeleniumLibrary
 
 *** Keywords ***
 
-Verify Login And SignUp Validation
-    Wait For Element Visibility  ${KU_W_dg_gold_login}
-    Click Element  ${KU_W_dg_gold_login}
-    Verify Login Page
-    Sleep  2s
-    Verify Element And Text  ${KU_W_dg_gold_noAcntMsg}  ${e_invest_noAcntText}
-    Wait For Element Visibility  ${KU_W_dg_gold_signup}
-    Sleep  1s
-    Click Element  ${KU_W_dg_gold_signup}
-    Verify Signup Page
-    Go Back
-
-Verify Live Gold Buy And Sell Rate Presence 
-    [Arguments]  ${refreshIcon}
-    Verify Page Contains Element  ${KU_W_ratePerGm}  
-    Click Element  ${refreshIcon} 
-    Wait For Element Visibility  ${KU_W_dg_toastHeader}
-    Verify Page Contains Element  ${KU_W_dg_toastHeader}
-
-Verify Purity And Partner Title Presence 
-    [Arguments]  ${purityTitle}  ${purityAmt}  ${partnerTitle}  ${partnerName}
-    Verify Element And Text  ${partnerName}  ${e_invest_partnerNameText} 
-    Verify Element And Text  ${purityTitle}  ${e_invest_purityTitleText} 
-    Verify Element And Text  ${purityAmt}  ${e_invest_purityAmtText}
-    Verify Element And Text  ${partnerTitle}  ${e_invest_partnerTitleText}
-
-Verify T&C And Coming Soon Title Presence
-    Wait For Element Visibility  ${KU_W_dg_T&C}
-    Verify Element And Text  ${KU_W_dg_T&C}  ${e_invest_digiGold_T&CText}
-    Sleep  1s
-    Verify Element And Text  ${KU_W_dg_comingSoonTitle}  ${e_invest_comingSoonText}
-
-Verify Buy Now Button
-    Verify Element And Text  ${KU_W_buyNowBtn}  ${e_invest_buyNowBtnText}
-    Wait For Element Visibility  ${KU_W_buyNowBtn}
-    Click Element  ${KU_W_buyNowBtn}
-    Verify Login Page
-
-Verify Login Title For SIP And Track  
-    [Arguments]  ${logintext}
-    Verify Element And Text  ${KU_W_dg_loginTitle}  ${logintext}
-    Sleep  1s
-    Scroll Untill View  ${KU_W_dg_aboutUSLink}
-    Verify Login And SignUp Validation
-
-Verify FAQ Button
-    Scroll Untill View  ${KU_W_dg_aboutUSLink}
-    Verify Element And Text  ${KU_W_faqBtn}  ${e_invest_faqBtnText}
-    Wait For Element Visibility  ${KU_W_faqBtn}
-    Click Element  ${KU_W_faqBtn}
-    Wait For Element Visibility  ${KU_W_dg_faqBotTitle} 
-    Verify Element And Text  ${KU_W_dg_faqBotTitle}  ${e_invest_faqBotText}
-    Sleep  1s
-    Wait For Element Visibility  ${KU_W_dg_faqCloseBtn}
-    Click Element  ${KU_W_dg_faqCloseBtn}
-    Sleep  1s 
-    Go Back
-    Sleep  1s
-
 Verify Digital Gold Landing Page
+    Log To Console  Digital Gold From Explore
     Wait For Element Visibility  ${KU_W_dg_screenTitle} 
     Verify Language Switch Login And Signup Link  
     Wait For Element Visibility  ${KU_W_dg_screenTitle}
@@ -170,3 +112,61 @@ Verify Digital Gold Landing Page
     Run Keyword If  "${ENV}" == "prod"  Verify FAQ Button
     ...  ELSE  Log To Console  Staging
     Go Back
+Verify Login And SignUp Validation
+    Wait For Element Visibility  ${KU_W_dg_gold_login}
+    Click Element  ${KU_W_dg_gold_login}
+    Verify Login Page
+    Sleep  2s
+    Verify Element And Text  ${KU_W_dg_gold_noAcntMsg}  ${e_invest_noAcntText}
+    Wait For Element Visibility  ${KU_W_dg_gold_signup}
+    Sleep  1s
+    Click Element  ${KU_W_dg_gold_signup}
+    Verify Signup Page
+    Go Back
+
+Verify Live Gold Buy And Sell Rate Presence 
+    [Arguments]  ${refreshIcon}
+    Verify Page Contains Element  ${KU_W_ratePerGm}  
+    Click Element  ${refreshIcon} 
+    Wait For Element Visibility  ${KU_W_dg_toastHeader}
+    Verify Page Contains Element  ${KU_W_dg_toastHeader}
+
+Verify Purity And Partner Title Presence 
+    [Arguments]  ${purityTitle}  ${purityAmt}  ${partnerTitle}  ${partnerName}
+    Verify Element And Text  ${partnerName}  ${e_invest_partnerNameText} 
+    Verify Element And Text  ${purityTitle}  ${e_invest_purityTitleText} 
+    Verify Element And Text  ${purityAmt}  ${e_invest_purityAmtText}
+    Verify Element And Text  ${partnerTitle}  ${e_invest_partnerTitleText}
+
+Verify T&C And Coming Soon Title Presence
+    Wait For Element Visibility  ${KU_W_dg_T&C}
+    Verify Element And Text  ${KU_W_dg_T&C}  ${e_invest_digiGold_T&CText}
+    Sleep  1s
+    Verify Element And Text  ${KU_W_dg_comingSoonTitle}  ${e_invest_comingSoonText}
+
+Verify Buy Now Button
+    Verify Element And Text  ${KU_W_buyNowBtn}  ${e_invest_buyNowBtnText}
+    Wait For Element Visibility  ${KU_W_buyNowBtn}
+    Click Element  ${KU_W_buyNowBtn}
+    Verify Login Page
+
+Verify Login Title For SIP And Track  
+    [Arguments]  ${logintext}
+    Verify Element And Text  ${KU_W_dg_loginTitle}  ${logintext}
+    Sleep  1s
+    Scroll Untill View  ${KU_W_dg_aboutUSLink}
+    Verify Login And SignUp Validation
+
+Verify FAQ Button
+    Scroll Untill View  ${KU_W_dg_aboutUSLink}
+    Verify Element And Text  ${KU_W_faqBtn}  ${e_invest_faqBtnText}
+    Wait For Element Visibility  ${KU_W_faqBtn}
+    Click Element  ${KU_W_faqBtn}
+    Wait For Element Visibility  ${KU_W_dg_faqBotTitle} 
+    Verify Element And Text  ${KU_W_dg_faqBotTitle}  ${e_invest_faqBotText}
+    Sleep  1s
+    Wait For Element Visibility  ${KU_W_dg_faqCloseBtn}
+    Click Element  ${KU_W_dg_faqCloseBtn}
+    Sleep  1s 
+    Go Back
+    Sleep  1s

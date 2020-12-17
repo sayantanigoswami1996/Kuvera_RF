@@ -52,9 +52,9 @@ ${e_invest__52WLow_allStockLinkText} =  Go to ‘All stocks’
 ${e_invest__USETF_allStockLinkText} =  Go to “All stocks”                    
 ${e_invest__instaredeem_fundText} =  Liquid Fund
 ${e_invest__newfunds_openSwitchText} =  Open Ended
-${e_invest_watchlistHeadingText} =  Login to track your favorite funds by adding them to your watch list.	
-${e_invest_stocks_watchlistHeadingText} =  Login to track your favorite stocks by adding them to your watch list.	
-${e_invest_USETFAnd52WUS_watchlistHeadingText} =  Track your favorite stocks by adding them to your watch list.
+${e_invest_watchlistHeader} =  Login to track your favorite funds by adding them to your watch list.	
+${e_invest_stocks_watchlistHeader} =  Login to track your favorite stocks by adding them to your watch list.	
+${e_invest_USETFAnd52WUS_watchlistHeader} =  Track your favorite stocks by adding them to your watch list.
       		
 # Application Locator 'KU_<locatorName>'
 # Invest Landing Navigation Page
@@ -96,17 +96,17 @@ ${KU_W_digitalGold} =  xpath=(//div[@class='b-asset-cta__title'])[2]
 ${KU_W_digitalGoldScreen} =  xpath=(//div[@class='b-asset-cta__title'])[2]
 ${KU_W_stocks} =  xpath=(//div[@class='b-asset-cta__title'])[3]
 ${KU_W_stocksScreen} =  xpath=(//div[@class='b-explore-stock__action-title'])[1]
-${KU_W_USStocks} =  xpath=(//div[@class='b-asset-cta__title'])[4]
+${KU_W_USStocks} =  xpath=(//div[@class='b-asset-cta__title'])[4]  
 ${KU_W_USStocksScreen} =  xpath=//div[@class='b-introduction__detail__title1']
 ${KU_W_saveSmart} =  xpath=(//div[@class='b-asset-cta__title'])[5]
 ${KU_W_amazonSave} =  xpath=(//div[@class='b-asset-cta__title'])[6]
 ${KU_W_amazonSaveScreen} =  xpath=//div[@class='b-festive-fund-no-investment__text']
 ${KU_W_invest_sortYear} =  xpath=//div[@class='default-message']
-${KU_W_searchBarForTopGainerAnd52WIndia} =  xpath=(//div[@class='b-explore-stock__action-title'])[1]
+${KU_W_stocktopgainerindia_searchBar} =  xpath=(//div[@class='b-explore-stock__action-title'])[1]
 ${KU_W_searchBarForUSETFAnd52WUS} =  xpath=(//div[@class='b-action-bar__search__header'])[1]
 ${KU_W_invest_searchTextFieldForFunds} =  xpath=//div[@class='b-search-fund__bar']
 ${KU_W_invest_searchTextFieldForETFAndUS} =  xpath=//div[@class='b-action-bar__search__item']
-${KU_W_invest_searchTextFieldForTopGainerAndIndia} =  xpath=//div[@class='b-search-stock__bar']
+${KU_W_invest_stocktopgainerindia_searchTextField} =  xpath=//div[@class='b-search-stock__bar']
 ${KU_W_invest_sort} =  xpath=(//div[@class='b-explore-fund__action-title'])[2]
 ${KU_W_invest_sort_UTF_USA} =  xpath=//div[@class='b-action-bar__sort__header']
 ${KU_W_invest_sort_topGainerAndIndia} =  xpath=(//div[@class='b-explore-stock__action-title'])[2]
@@ -117,7 +117,7 @@ ${KU_W_clearAll} =  xpath=//div[@class='b-explore-fund__clear-all']
 ${KU_W_exploreMoreTitle} =  xpath=//div[@class='b-explore-assets__subheading']
 ${KU_W_invest_filteredFund} =  xpath=(//div[@class='b-mutual-funds-explore__fund-row-industry'])[1]
 ${KU_W_invest_watchListBtn} =  xpath=(//div[@class='b-mutual-funds-explore__fund-row-watchlist'])[1]
-${KU_W_invest_watchlistHeading} =  xpath=//div[@class='b-mutual-funds-watchlist-tab__not-logged-in--text']
+${KU_W_invest_watchlistHeader} =  xpath=//div[@class='b-mutual-funds-watchlist-tab__not-logged-in--text']
 ${KU_W_invest_watchlist_signupBtn} =  xpath=//div[@class='b-mutual-funds-watchlist-tab__not-logged-in--signup']
 ${KU_W_invest_instaRedeem} =  xpath=//div[contains(text(),'Insta redeem')]
 ${KU_W_invest_saveTaxes} =  xpath=//div[contains(text(),'Save taxes')]
@@ -136,10 +136,10 @@ ${KU_W_invest_stocks_gainers} =  xpath=//div[contains(text(),'Gainers')]
 ${KU_W_invest_stocks_52WHigh} =  xpath=//div[contains(text(),'52W high')]
 ${KU_W_invest_stocks_52WLow} =  xpath=//div[contains(text(),'52W low')]
 ${KU_W_invest_52WLow_noStocksAvailable} =  xpath=//div[@class='b-stocks-filter-no-results-found disable-browser-text-select']
-${KU_W_invest_topGainerAndIndia_watchListBtn} =  xpath=(//div[@class='b-stocks-explore__stock-row-watchlist'])[1]
-${KU_W_invest_topGainerAndIndia_watchListHeading} =  xpath=//div[@class='b-stock-watchlist-tab__not-logged-in--text']
+${KU_W_invest_stocks_topGainerAndIndia_watchListBtn} =  xpath=(//div[@class='b-stocks-explore__stock-row-watchlist'])[1]
+${KU_W_invest_stocks_topGainerAndIndia_watchListHeader} =  xpath=//div[@class='b-stock-watchlist-tab__not-logged-in--text']
 ${KU_W_invest_52WHighLow_allStockLink} =  xpath=//div[@class='b-stocks-filter__redirect-link disable-browser-text-select']
 ${KU_W_invest_USETFAnd52WUS_watchlistBtn} =  xpath=(//img[contains(@class,'b-stock-item')])[1]
-${KU_W_invest_USETFAnd52WUS_watchListHeading} =  xpath=//div[@class='b-stock-items__watchlist-banner__track-msg']
+${KU_W_invest_USETFAnd52WUS_watchListHeader} =  xpath=//div[@class='b-stock-items__watchlist-banner__track-msg']
 ${KU_W_invest_noStocksForUTFAnd52WUS} =  xpath=//div[@class='b-zero-item__label']
 ${KU_W_invest_allStockLinkForUTFAnd52WUS} =  xpath=//div[@class='b-zero-item__btn']
