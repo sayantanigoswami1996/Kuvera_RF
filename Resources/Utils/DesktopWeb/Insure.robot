@@ -12,9 +12,9 @@ Verify PreLogin Insure Page
     Verify Element And Text  ${KU_W_insureHeaderMsg}  ${e_insure_headerMsgText}
     Verify Element And Text  ${KU_W_insure_checkPremiumBtn1}  ${e_insure_checkPremiumBtnText}  
     Wait For Element Visibility  ${KU_W_insure_checkPremiumBtn1}
-    Sleep  1s
+    Sleep   1s
     Click Button  ${KU_W_insure_checkPremiumBtn1} 
-    Verify Login Page
+    Verify Premium Popup  ${KU_W_insure_checkPremiumBtn1}
     Wait For Element Visibility  ${KU_W_insure_costDetailsHeaderTitle}     
     Scroll Untill View  ${KU_W_insure_costDetailsHeaderTitle}
     Verify Element and Text  ${KU_W_insure_costDetailsHeaderTitle}  ${e_insure_costDetailsHeaderText}
@@ -59,7 +59,7 @@ Verify PreLogin Insure Page
     Verify Element and Text  ${KU_W_insure_copaymentCardTitle}  ${e_insure_copaymentCardText}
     Verify Element and Text  ${KU_W_insure_copaymentMsg}  ${e_insure_copaymentMsgText}
     Click Element  ${KU_W_insure_sliderButton}
-    Sleep  1s
+    Sleep   1s
     Verify Element and Text  ${KU_W_insure_30daySettlemenCardTitle}  ${e_insure_30daySettlementCardText}
     Verify Element and Text  ${KU_W_insure_30daySettlemenMsg}  ${e_insure_30daySettlementMsgText}
     Verify Element and Text  ${KU_W_insure_ayushCoveredCardTitle}  ${e_insure_ayushCoveredCardText}
@@ -67,12 +67,14 @@ Verify PreLogin Insure Page
     Verify Element and Text  ${KU_W_insure_lowWaitingPeriodCardTitle}  ${e_insure_lowWaitingPeriodCardText}
     Verify Element and Text  ${KU_W_insure_lowWaitingPeriodMsg}  ${e_insure_lowWaitingPeriodMsgText}
     Click Element  ${KU_W_insure_sliderButton}
-    Sleep  1s
+    Sleep   1s
     Verify Element and Text  ${KU_W_insure_dailyExpenseCardTitle}  ${e_insure_dailyExpenseCardText}
     Verify Element and Text  ${KU_W_insure_dailyExpenseMsg}  ${e_insure_dailyExpenseMsgText} 
     Verify Element and Text  ${KU_W_insure_dedicatedSupportCardTitle}  ${e_insure_dedicatedSupportCardText}
     Verify Element and Text  ${KU_W_insure_dedicatedSupportMsg}  ${e_insure_dedicatedSupportMsgText}
 
+    # Yelow Banner
+    Verify Element And Text  ${KU_W_insure_yellowBanner}  ${e_insure_yellowBanner}
     # Trusted Partner
     Scroll Untill View  ${KU_W_insure_trustedPartnerTitle}
     Verify Element and Text  ${KU_W_insure_trustedPartnerTitle}  ${e_insure_trustedPartnerTitleText}
@@ -97,7 +99,26 @@ Verify PreLogin Insure Page
     Verify Element and Text  ${KU_W_insure_checkPremiumBtn2}  ${e_insure_checkPremiumBtn2Text}
     Wait For Element Visibility  ${KU_W_insure_checkPremiumBtn2}
     Click Button  ${KU_W_insure_checkPremiumBtn2} 
-    Verify Login Page
+    Verify Premium Popup  ${KU_W_insure_checkPremiumBtn2}
 
     # Verify the Google Play & Apple Store icons
     Verify Google Play & Apple Store Icons
+
+Verify Premium Popup
+    [Arguments]  ${premiumBtn}
+    Wait For Element Visibility  ${KU_W_insure_popupHeader}
+    Verify Element and Text  ${KU_W_insure_popupHeader}  ${e_insure_popupHeader}
+    Verify Element And Text  ${KU_W_insure_popupSubheader1}  ${e_insure_popupSubheader1} 
+    Verify Element And Text  ${KU_W_insure_popupSubheader2}  ${e_insure_popupSubheader2} 
+    Verify Element And Text  ${KU_W_insure_popupSubheader3}  ${e_insure_popupSubheader3} 
+    Verify Page Contains Element  ${KU_W_insure_loginBtn} 
+    Wait For Element Visibility  ${KU_W_insure_loginBtn}  
+    Click Element  ${KU_W_insure_loginBtn}
+    Verify Login Page
+    Wait For Element Visibility  ${premiumBtn}
+    Click Element  ${premiumBtn}
+    Verify Page Contains Element  ${KU_W_insure_signupBtn} 
+    Wait For Element Visibility  ${KU_W_insure_signupBtn}  
+    Click Element  ${KU_W_insure_signupBtn}
+    Verify Signup Page
+    Go Back

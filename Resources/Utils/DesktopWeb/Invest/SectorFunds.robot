@@ -5,6 +5,7 @@ Library     SeleniumLibrary
 *** Keywords ***
 
 Verify Sector Funds Landing Page
+    Log To Console  Sector Funds
     Wait For Element Visibility  ${KU_W_sectorFundsTitle} 
     Click Element  ${KU_W_sectorFundsTitle} 
     Wait For Element Visibility  ${KU_W_invest_fundsScreenTitle}   
@@ -16,6 +17,6 @@ Verify Sector Funds Landing Page
     Verify Element And Text  ${KU_W_invest_filteredFund}  ${e_invest_sectorFunds_filteredFundText}
     Verify Watchlist Icon  ${KU_W_invest_watchListBtn}
     # Watchlist
-    Verify Element And Text  ${KU_W_invest_watchlistHeading}  ${e_invest_watchlistHeadingText}
+    Verify Element And Text  ${KU_W_invest_watchlistHeader}  ${e_invest_watchlistHeader}
     Verify Filter Navigation For Funds
     Go Back
