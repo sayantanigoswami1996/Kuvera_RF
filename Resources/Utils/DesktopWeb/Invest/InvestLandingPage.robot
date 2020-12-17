@@ -4,10 +4,12 @@ Library     SeleniumLibrary
 
 *** Keywords ***
 
-Verify Watchlist Icon
-    Wait For Element Visibility  ${KU_W_invest_watchListBtn}
-    Verify Page Contains Element  ${KU_W_invest_watchListBtn}
-    Click Element  ${KU_W_invest_watchListBtn}
+Verify Watchlist Icon 
+    [Arguments]   ${watchlistBtn}
+    Wait For Element Visibility  ${watchlistBtn}
+    Verify Page Contains Element  ${watchlistBtn} 
+    Wait For Element Visibility  ${watchlistBtn} 
+    Click Element  ${watchlistBtn}
 
 Verify Search And Sort
     [Arguments]  ${searchBar}  ${searchText}  ${searchTextField}  ${sortButton} 
@@ -145,16 +147,9 @@ Verify Filter Navigation For USETF and 52WkHighUS
     Sleep  3s
     ${fundlist} =  Get Element Count   xpath=//div[@class='b-stock-item b-stock-items__content__item']
     Log To Console   ${fundlist} 
-    Run Keyword If   ${fundlist}>0  Verify WatchList Button For UTF and 52WkHighUS
-    ...    ELSE IF   ${fundlist}==0  Verify No Stocks Screen For UTF and 52WkHighUS  ${KU_W_invest_USETFAnd52WUS_watchlistBtn}
+    Run Keyword If   ${fundlist} > 0  Verify WatchList Button For UTF and 52WkHighUS
+    ...    ELSE IF   ${fundlist} == 0  Verify No Stocks Screen For UTF and 52WkHighUS  ${KU_W_invest_USETFAnd52WUS_watchlistBtn}
     ...    ELSE  Log To Console  Completed
-
-Verify Watchlist Icon 
-    [Arguments]   ${watchlistBtn}
-    Wait For Element Visibility  ${watchlistBtn}
-    Verify Page Contains Element  ${watchlistBtn} 
-    Wait For Element Visibility  ${watchlistBtn} 
-    Click Element  ${watchlistBtn}
 
 Verify PreLogin Invest Landing Page
     Wait For Element Visibility  ${KU_W_investLink} 

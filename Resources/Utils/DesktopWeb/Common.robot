@@ -22,16 +22,18 @@ Resource    ../../../AppLocators/DesktopWeb/InvestLocators/ELSSTaxSaverLocators.
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/USETFLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/MutualFundsLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/UltraShortLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/FooterLocators.robot
+
 *** Keywords ***
 
 Launch URL
     Open Browser  ${URL}  ${BROWSER}  alias=Kuvera
     # Maximize Browser Window
-    Set Window Size  ${1920}  ${1080}
-    Reload Page
+    #Set Window Size  ${1920}  ${1080}
+    #Reload Page
     Kuvera Web Close Regulatory Disclosure
-    Run Keyword If    "${ENV}" == "prod"  Close Hello Bar
-    ...    ELSE   Log To Console  Staging
+    #Run Keyword If    "${ENV}" == "prod"  Close Hello Bar
+    #...    ELSE   Log To Console  Staging
 
 Welcome Page Should Be Open
     Title Should Be  ${KU_W_title}

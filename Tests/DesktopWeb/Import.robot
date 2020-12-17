@@ -9,6 +9,7 @@ Resource    ../../Resources/Utils/DesktopWeb/Invest/InvestLandingPage.robot
 Resource    ../../Resources/Utils/DesktopWeb/Invest/SaveSmart.robot
 Resource    ../../Resources/Utils/DesktopWeb/Invest/BankPSUBonds.robot
 Resource    ../../Resources/Utils/DesktopWeb/Invest/GiltFunds.robot
+Resource    ../../Resources/Utils/DesktopWeb/Invest/UltraShort.robot
 Resource    ../../Resources/Utils/DesktopWeb/Invest/ELSSTaxSaver.robot
 Resource    ../../Resources/Utils/DesktopWeb/Invest/DigitalGold.robot
 Resource    ../../Resources/Utils/DesktopWeb/Invest/EquityIndex.robot
@@ -16,6 +17,8 @@ Resource    ../../Resources/Utils/DesktopWeb/Invest/SectorFunds.robot
 Resource    ../../Resources/Utils/DesktopWeb/Invest/BankPSUBonds.robot
 Resource    ../../Resources/Utils/DesktopWeb/Invest/ELSSTaxSaver.robot
 Resource    ../../Resources/Utils/DesktopWeb/Invest/TopGainers.robot
+Resource    ../../Resources/Utils/DesktopWeb/Invest/52WkHighIndia.robot
+Resource    ../../Resources/Utils/DesktopWeb/Invest/52WkHighUS.robot
 Resource    ../../Resources/Utils/DesktopWeb/Invest/USETF.robot
 Resource    ../../Resources/Utils/DesktopWeb/Invest/ValueFunds.robot
 Resource    ../../Resources/Utils/DesktopWeb/Invest/MutualFunds.robot
@@ -37,3 +40,4 @@ Resource    ../../Resources/Utils/DesktopWeb/Features/ManageAccount.robot
 Resource    ../../Resources/Utils/DesktopWeb/Features/TaxHarvesting.robot
 Resource    ../../Resources/Utils/DesktopWeb/Features/SaveTaxes.robot
 Resource    ../../Resources/Utils/DesktopWeb/Features/Consolidate.robot
+Resource    ../../Resources/Utils/DesktopWeb/Footer.robot
