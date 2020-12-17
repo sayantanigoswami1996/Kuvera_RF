@@ -24,7 +24,6 @@ Verify PreLogin Set A Goal Page
     ${goal7}  Get Json Values  $.Goals.g7  Resources/TestData/Goals.json
     ${goal8}  Get Json Values  $.Goals.g8  Resources/TestData/Goals.json
 
-    Wait For Element Visibility  ${KU_W_featureLink}
     Click Element  ${KU_W_featureLink}
     Wait For Element Visibility  ${KU_W_feature_setAGoalLink}
     Click Element  ${KU_W_feature_setAGoalLink}
@@ -75,8 +74,8 @@ Verify Recommendation And Navigation
     Click Element  ${userFinancialProfile1}
     Click Element  ${userFinancialProfile2}
     Click Element  ${userFinancialProfile3}
-    Scroll Page To Location    0    5000
-    Click Button  ${KU_W_feature_sg_continue}
+    Scroll Page To Location   0   5000
+    Click Element  ${KU_W_feature_sg_continue}
     Wait For Element Visibility  ${KU_W_feature_sg_investmentSummary}
     Verify Page Contains Element  ${KU_W_feature_sg_investmentSummary}
 

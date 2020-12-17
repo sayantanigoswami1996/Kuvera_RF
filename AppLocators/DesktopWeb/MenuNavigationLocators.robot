@@ -1,5 +1,4 @@
 *** Variables *** 
-
 # Application Expected Values 'e_<variableName>'
 # Loan List 
 @{e_loan_calculatorMsgListItem} =  MF units remain secure with the fund house.  No fixed loan period. A 1yr loan auto renews on the 12th month.     Loan starting from ₹25,000 up to ₹10cr.  Full disclosure. No hidden fees.
@@ -27,9 +26,6 @@ ${e_loan_getLoanAgainstMFText} =  Get loan against Mutual Funds
 ${e_loan_getLoanAgainstMFMsgText} =  An affordable, quick, and flexible loan. All paperless.
 ${e_loan_startSaveCheckEligibiliyText} =  Check your eligibility
 
-# Insure List
-@{e_insure_treatmentListItem} =  COVID-19  Cancer care  Open heart surgery  Knee replacement
-@{e_insure_policyListItem} =  Policy wording simple.  Premium cost low.  Year round support.
 
 # Insure List
 @{e_insure_treatmentListItem} =  COVID-19  Cancer care  Open heart surgery  Knee replacement
@@ -37,7 +33,7 @@ ${e_loan_startSaveCheckEligibiliyText} =  Check your eligibility
 
 # Insure Navigation Page Variables
 ${e_insure_headerTitleText} =  Fair and friendly health insurance is here
-${e_insure_headerMsgText} =  ₹50L cover starting at ₹900/month. Secure your loved ones today. T&C apply
+${e_insure_headerMsgText} =  ₹50L cover starting at ₹900 p.m. Secure your loved ones today. T&C apply    
 ${e_insure_T&CText} =  T&C apply
 ${e_insure_checkPremiumBtnText} =  Check premium
 ${e_insure_costDetailsHeaderText} =  We understand cost
@@ -71,7 +67,6 @@ ${e_insure_dailyExpenseCardText} =  Daily cash expenses
 ${e_insure_dailyExpenseMsgText} =  Get up to ₹10k a day to cover out of pocket expenses during hospitalisation.
 ${e_insure_dedicatedSupportCardText} =  Dedicated support 
 ${e_insure_dedicatedSupportMsgText} =  Get year-round dedicated support. 
-
 ${e_insure_trustedPartnerTitleText} =  Trusted partner
 ${e_insure_trustedPartnerSubTitleText} =  With a 97% Claim settlement ratio, we’ve partnered with the best.
 ${e_insure_flexibleCoverageTitleText} =  Flexible coverage
@@ -81,17 +76,22 @@ ${e_insure_saveTaxSubTitleText} =  Claim tax under section 80D.
 ${e_insure_healthCoverTitleText} =  Health cover that’s right for you.
 ${e_insure_checkPremiumBtn2Text} =  Check premium
 
+${e_insure_popupHeader} =  Group health insurance is for Kuvera users only
+${e_insure_popupSubheader1} =  Sign up to India’s first completely free wealth management platform.
+${e_insure_popupSubheader2} =  Explore Mutual fund, Gold, SaveSmart, Indian & US stocks, Insurance, Loan and more.
+${e_insure_popupSubheader3} =  No fees. No commission. No conflict of interest.
+${e_insure_yellowBanner} =  cover starting at\n*\nT&C apply
+      
+
 # Remit List 
 @{e_remit_whyTransferWiseList} =  No hidden fees  Up to 8x cheaper than banks  Trusted by 7 million users  Fast way to send money  Mid-market exchange rate
 # Remit Navigation Page Variables
-${e_remit_screenTitle} =  A cheaper & faster way to send money home
 ${e_remit_screenTitleDesc} =  Now invest easily through Kuvera, or send money to your loved ones. With our partner TransferWise, you can transfer money to India for the lowest-cost. It is simple and faster than any traditional provider.
 ${e_remit_transferNowBtn} =  Transer now
-${e_remit_transferWiseSignupTitle} =  Transfer Money Online | Send Money Abroad with TransferWise - Sign up
 ${e_remit_transferWiseCross-borderTitle} =  Making cross-border investments with Kuvera seamless and easy | TransferWise - TransferWise
+${e_remit_transferWiseSignUpTitle} =  TransferWise - Create account
 
 # Feature - Set a Goal
-${e_feature_sg_screenTitle} =  SET YOUR GOAL
 ${e_feature_sg_screenSubTitle} =  We'll help you bring your dreams to life.
 ${e_feature_sg_content} =  Setting a financial goal is the first step to making your dreams a reality. Investing regularly is the next. We make it really simple for you, and we’re with you every step of the way. Simply choose your goal to get started.
 # Goal - Own A Home
@@ -134,16 +134,14 @@ ${e_feature_sg7_investUpfront} =  1000
 # Goal - Create My Own
 ${e_feature_sg8_userAge} =  25
 ${e_feature_sg8_goalName} =  For a rainy day
-${e_feature_sg8_cost} =  500000
+${e_feature_sg8_cost} =  50000
 ${e_feature_sg8_goalDuration} =  2
 ${e_feature_sg8_investUpfront} =  500
 ${e_feature_sg_almostDone} =  Almost done! Let’s personalise your plan.
 ${e_feature_sg_seeYourPlan} =  SEE YOUR PLAN
 ${e_feature_sg_getThisPlan} =  GET THIS PLAN
 
-
 # Feature-TradeSmart Navigation Page Variables
-${e_feature_ts_titleText} =  TradeSmart
 ${e_feature_ts_subHeaderDesc} =  A switch or redeem order involves costs – taxes on short & long-term capital gains and exit load. TradeSmart shows you the optimal amount you can switch or redeem with the least tax and exit load.
 ${e_feature_ts_activationTitle} =  Activate once, use forever!
 ${e_feature_ts_activationSubTitle} =  Use 300 coins to activate TradeSmart, and use it forever.
@@ -154,18 +152,15 @@ ${e_feature_helpTradeSmartDesc2Text} =  See optimal number of fund units to swit
 ${e_feature_helpTradeSmartDesc3Text} =  We take care of all complexities. 1 year STCG for equity, 3 year for debt, indexation for debt, lock-in for ELSS schemes etc. We optimize over it all.
 
 # Feature-Family Account Navigation Page 
-${e_feature_fa_screenTitle} =  Invest with Your Loved Ones
 ${e_feature_fa_screenContent} =  Just Sign up with one account, and manage investment for your relatives and family members. Multiple accounts under same login. All in one place. Even Joint Account too!
 ${e_activateWithBtn} =  Activate with 200
 
 # Feature-ManageAccount Navigation Page Variables
-${e_feature_manageAccountTitleText} =  Manage Account
 ${e_feature_manageAccountDesc1Text} =  Add your financial advisor as a Manager to your Kuvera account and let them guide your investments.
 ${e_feature_manageAccountDesc2Text} =  You retain full access to your account. All transactions would be validated & approved by you via OTP.
 ${e_feature_addManagerBtnText} =  Add  manager
 
 # Feature-Tax Harvesting Navigation Page Variables
-${e_feature_th_TitleText} =  Save up to ₹10,000 in LTCG taxes every financial year with Tax Harvesting.
 ${e_feature_th_subTitleText} =  Minimise your long term tax impact by realising up to ₹1 Lakh of Long Term Capital Gain (LTCG) every financial year with no tax.
 ${e_feature_th_subscribeBtnText} =  Subscribe 499 / FY
 ${e_feature_whatIsTHTitleText} =  What is Tax Harvesting?
@@ -215,7 +210,7 @@ ${e_feature_st_tableRow3Text} =  PPF  15 Years  8.5%
 ${e_feature_st_tableRow4Text} =  NSC  5/10 Years  8.5%
 ${e_feature_st_tableRow5Text} =  FD  5 Years  9.0%
 
-# Features- Consolidate Navigation Page Variables
+#Features- Consolidate Navigation Page Variables
 ${e_feature_cd_pageHeaderText} =  Informed, disciplined investing grows your money, long-term 
 ${e_feature_cd_subHeaderText} =  Follow a structured approach and invest regularly, for the long-haul. This is the best way to grow your wealth over time
 ${e_feature_cd_setAGoalTitleText} =  DREAMS DO COME TRUE  
@@ -268,11 +263,10 @@ ${e_feature_cd_manageAcntDesc1Text} =  Complimentary to Family Account feature, 
 ${e_feature_cd_manageAcntDesc2Text} =  Your managee retains full access to their accounts, and all transactions would be validated & approved from account owner via OTP.
 ${e_feature_cd_manageTodayBtnText} =   MANAGE TODAY
 
-
 # Application Locator 'KU_<locatorName>'
+
 # Button 
 ${KU_W_button} =  xpath=(//button[@class='button-primary'])[1]
-
 # Loan Navigation Page
 ${KU_W_loanLink} =  xpath=//a[contains(text(),'Loans')]
 ${KU_W_loanHeaderTitle} =  xpath=//div[@class='b-header__title']
@@ -301,13 +295,19 @@ ${KU_W_image4Description} =  xpath=(//div[@class='b-flow-chart__description'])[4
 ${KU_W_getLoanAgainstMF} =  xpath=//div[@class='b-start-save b-kuvera-get-loan']/div[1]/div[1]
 ${KU_W_getLoanAgainstMFMsg} =  xpath=//div[@class='b-start-save b-kuvera-get-loan']/div[1]/div[2]
 ${KU_W_startSaveCheckEligibilityBtn} =  xpath=//button[@class='button-primary b-start-save__btn b-start-save__btn-desktop']
-  
+ 
 # Insure Navigation Page  
 ${KU_W_insureLink} =  xpath=//a[contains(text(),'Insure')]
 ${KU_W_insureHeaderTitle} =  xpath=(//div[@class='b-health-insurance-landing__title--main'])[1]
 ${KU_W_insureHeaderMsg} =  xpath=(//div[@class='b-health-insurance-landing__title--text'])[1]
 ${KU_W_insure_termsAndConditions} =  xpath=//span[@class='b-health-insurance-landing__term-condition']
 ${KU_W_insure_checkPremiumBtn1} =  xpath=(//button[@class='button-primary'])[1]
+${KU_W_insure_popupHeader} =  xpath=//div[@class='b-insurance__title b-login-confirmaton__title']
+${KU_W_insure_popupSubheader1} =  xpath=(//div[@class='b-login-confirmaton__container']/ul/li)[1]
+${KU_W_insure_popupSubheader2} =  xpath=(//div[@class='b-login-confirmaton__container']/ul/li)[2]
+${KU_W_insure_popupSubheader3} =  xpath=(//div[@class='b-login-confirmaton__container']/ul/li)[3]
+${KU_W_insure_loginBtn} =  xpath=//span[@class='b-login-confirmaton__login-btn']
+${KU_W_insure_signupBtn} =  xpath=//button[contains(.,'Sign up')]
 ${KU_W_insure_costDetailsHeaderTitle} =  xpath=//div[@class='b-health-insurance-landing__cost-details--table__text']
 ${KU_W_insure_treatmentTitle} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__treatment'])[1]
 ${KU_W_insure_treatmentCostTitle} =  xpath=(//div[@class='b-health-insurance-landing__cost-details--table__cost'])[1]
@@ -344,6 +344,7 @@ ${KU_W_insure_dailyExpenseCardTitle} =  xpath=(//div[@class='b-feature-card__tit
 ${KU_W_insure_dailyExpenseMsg} =  xpath=(//div[@class='b-feature-card__msg'])[8]
 ${KU_W_insure_dedicatedSupportCardTitle} =  xpath=(//div[@class='b-feature-card__title'])[9] 
 ${KU_W_insure_dedicatedSupportMsg} =  xpath=(//div[@class='b-feature-card__msg'])[9]
+${KU_W_insure_yellowBanner} =  xpath=//div[@class='b-policy-comparison-banner__items']
 ${KU_W_insure_sliderButton} =  xpath=//div[@class='b-slide-card-list__btns__next b-slide-card-list__btns__next--active']
 ${KU_W_insure_trustedPartnerTitle} =  xpath=(//div[@class='b-health-insurance-landing__insurance-brief__row--items__content']/div)[1] 
 ${KU_W_insure_trustedPartnerSubTitle} =  xpath=(//div[@class='b-health-insurance-landing__insurance-brief--subheading'])[1] 
@@ -356,9 +357,8 @@ ${KU_W_insure_checkPremiumBtn2} =  xpath=(//button[@class='button-primary'])[2]
 
 # Remit Page    
 ${KU_W_remit_Link} =  xpath=//a[contains(text(),'Remit')]
-${KU_W_remit_screenTitle} =  xpath=//*[@class='b-introduction__desc__title']
 ${KU_W_remit_screenTitleDesc} =  xpath=//*[@class='b-introduction__desc__content']      
-${KU_W_remit_transferNowTopBtn} =  xpath=//*[@class='button-primary b-introduction__btn-transfer__item']      
+${KU_W_remit_transferNowTopBtn} =  xpath=//*[@class='button-primary b-introduction__desc__btn-transfer__item']      
 ${KU_W_remit_whyTransferWise} =  xpath=//*[@class='b-why-transferwise b-transferwise__calculator-why__item__content']/div    
 ${KU_W_remit_whyTransferWiseList} =  xpath=//*[@class='b-why-transferwise__list']/div     
 ${KU_W_transferWiseStepsModal} =  xpath=//*[@class='b-transferwise-transfer-step__title__items__1']
@@ -371,6 +371,7 @@ ${KU_W_remit_sendMoneyBtn} =  xpath=(//button[@type='button'])[3]
 ${KU_W_remit_knowMoreBtn} =  xpath=//button[@class='button-primary b-why-transferwise__btn-know-more']  
 ${KU_W_remit_calculatorTarget} =  xpath=//*[@id="tw-calculator-target"]
 ${KU_W_remit_transferNoBottomBtn} =  xpath=//button[@class='button-primary b-how__btn-transfer']
+
 
 # Feature 
 ${KU_W_featureSubList} =  xpath=//div[@class='b-header__sub-content']/div/a
@@ -427,10 +428,10 @@ ${KU_W_feature_sg_monthlyExpenseTxt} =  xpath=//input[@name='expense']
 ${KU_W_feature_sg_retireAgeTxt} =  xpath=//input[@name='retireage']
 ${KU_W_feature_sg_goalNameTxt} =  xpath=//input[@name='goalname']
 
+
 # Feature-TradeSmart Page
 ${KU_W_featureLink} =  xpath=//a[contains(text(),'Features')]
 ${KU_W_feature_ts_Link} =  xpath=//a[contains(text(),'TradeSmart')]
-${KU_W_feature_ts_title} =  xpath=//div[@class='b-trade-smart__header__desc__title'] 
 ${KU_W_feature_ts_subHeaderTitle} =  xpath=//div[@class='b-trade-smart__header__desc__content']
 ${KU_W_feature_ts_activationTitle} =  xpath=//div[@class='b-trade-smart__header__desc__activate-title']
 ${KU_W_feature_ts_activationMsg} =  xpath=//div[@class='b-trade-smart__header__desc__activate-desc']
@@ -445,18 +446,15 @@ ${KU_W_feature_aboutUs} =  xpath=(//ul[@class='list-unstyled']/li)[1]
 
 # Feature-Family Account
 ${KU_W_feature_familyAccountLink} =  xpath=//a[contains(text(),'Family Account')]  
-${KU_W_feature_fa_screenTitle} =  xpath=//h1[@class='b-family-account__what__heading']
 ${KU_W_feature_fa_screenContent} =  xpath=//div[@class='b-family-account__what__des']
 
 # Feature-ManageAccount Page
 ${KU_W_feature_manageAccountLink} =  xpath=//a[contains(text(),'Manage Account')]
-${KU_W_feature_manageAccountTitle} =  xpath=//div[@class='b-manage-account__what']/h1
 ${KU_W_feature_manageAccountDesc1} =  xpath=(//div[@class='b-manage-account__what__des'])[1]
 ${KU_W_feature_manageAccountDesc2} =  xpath=(//div[@class='b-manage-account__what__des'])[2]
 
 # Feature-TaxHarvesting Page
 ${KU_W_feature_taxHarvestingLink} =  xpath=//a[contains(text(),'Tax Harvesting')]
-${KU_W_feature_th_screenTitle} =  xpath=//div[@class='paras-about-tax-harvesting']/h3
 ${KU_W_feature_th_screenContent} =  xpath=//p[@class='minimise-impact-text']
 ${KU_W_feature_th_coinImage1} =  xpath=(//img[@class='btn-coin-icon'])[1]
 ${KU_W_feature_whatIsTHTitle} =  xpath=//div[@class='what-is-tax-harvesting-ans']/h4
@@ -515,22 +513,6 @@ ${KU_W_feature_st_tableRow2} =  xpath= //tbody/tr[2]
 ${KU_W_feature_st_tableRow3} =  xpath= //tbody/tr[3]
 ${KU_W_feature_st_tableRow4} =  xpath= //tbody/tr[4]
 ${KU_W_feature_st_tableRow5} =  xpath= //tbody/tr[5]
-
-# Features-Consolidate Page
-${KU_W_feature_consolidateLink} =  xpath=//a[contains(text(),'Consolidate')]
-${KU_W_feature_cd_pageHeader} =  xpath=//header[@class='page-heading']/h1
-${KU_W_feature_cd_pageSubHeader} =  xpath=//header[@class='page-heading']/p
-${KU_W_feature_setAGoalPageTitle} =  xpath=(//div[contains(@class,'why-invest-text')]/h4)[1]
-${KU_W_feature_setAGoalPageSubTitle} =  xpath=(//div[contains(@class,'why-invest-text')]/h3)[1]
-${KU_W_feature_setAGoalPageDesc} =  xpath=//div[@class='set-a-goal-text']/p
-${KU_W_feature_goalBasedInvestingLink} =  xpath=//a[contains(text(),'More about goal-based investing')]
-${KU_W_feature_setAGoalBtn} =  xpath=(//button[@class='btn in-btn'])[1]
-${KU_W_feature_entryHeaderTitle} =  xpath=//h1[@class='entry-title post-title']
-
-# Feature-Family Account
-${KU_W_feature_familyAccountLink} =  xpath=//a[contains(text(),'Family Account')]   
-${KU_W_feature_fa_screenTitle} =  xpath=//h1[@class='b-family-account__what__heading']
-${KU_W_feature_fa_screenContent} =  xpath=//div[@class='b-family-account__what__des']
 
 # Features-Consolidate Page
 ${KU_W_feature_consolidateLink} =  xpath=//a[contains(text(),'Consolidate')]

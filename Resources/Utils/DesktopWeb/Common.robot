@@ -4,18 +4,33 @@ Library     JSONLibrary
 Library     JsonValidator
 Library     SeleniumLibrary
 Library     String
+Library     OperatingSystem
+Library     Collections
 Resource    ../../../AppLocators/DesktopWeb/CommonAppLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/MenuNavigationLocators.robot
-
+Resource    ../../../AppLocators/DesktopWeb/InvestLocators/InvestLandingPageLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/InvestLocators/SaveSmartLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/InvestLocators/DigitalGoldLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/InvestLocators/GiltFundsLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/InvestLocators/EquityIndexLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/InvestLocators/SectorFundsLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/InvestLocators/ValueFundsLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/InvestLocators/ELSSTaxSaverLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/InvestLocators/BankPSUBondsLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/InvestLocators/TopGainersLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/InvestLocators/ELSSTaxSaverLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/InvestLocators/USETFLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/InvestLocators/UltraShortLocators.robot
 *** Keywords ***
 
 Launch URL
     Open Browser  ${URL}  ${BROWSER}  alias=Kuvera
-    #Maximize Browser Window
-    Set Window Size  ${1366}  ${768}
+    # Maximize Browser Window
+    Set Window Size  ${1920}  ${1080}
     Reload Page
-    Kuvera Web Close Regulatory Disclosure 
-    Close Hello Bar
+    Kuvera Web Close Regulatory Disclosure
+    Run Keyword If    "${ENV}" == "prod"  Close Hello Bar
+    ...    ELSE   Log To Console  Staging
 
 Welcome Page Should Be Open
     Title Should Be  ${KU_W_title}
@@ -39,10 +54,6 @@ Verify Page Contains Image
 Scroll Untill View
     [Arguments]  ${element}
     Scroll Element Into View  ${element}
-
-Scroll Page To Location
-    [Arguments]    ${x_location}    ${y_location}
-    Execute JavaScript    window.scrollTo(${x_location},${y_location})
 
 Verify Page Contains Link
     [Arguments]  ${link}  ${text}
@@ -73,6 +84,12 @@ Switch To Window Verify Title And Close
     Sleep  2s
     Switch Window  browser=Kuvera
 
+Switch To Window 
+    Switch Window  locator=NEW
+    Close Window
+    Sleep  2s
+    Switch Window  browser=Kuvera
+
 Switch To Frame
     [Arguments]  ${element}
     Select Frame  ${element}
@@ -89,7 +106,7 @@ Kuvera Web Close Regulatory Disclosure
     Click Element  ${KU_W_close}
 
 Close Hello Bar
-    Sleep  10s
+    Sleep  15s
     Wait Until Element Is Visible  ${KU_W_bannerFrame}  timeout=40
     Switch To Frame  ${KU_W_bannerFrame}
     Wait For Element Visibility  ${KU_W_bannerCloseBtn}
@@ -114,15 +131,6 @@ Clear Text Field
     Run Keyword If    """${fieldText}""" != ''
     ...     Repeat Keyword  ${fieldTextLen+1}  Press Keys  ${field}  \ue003
 
-Verify Login Page
-    Wait For Element Visibility  ${KU_W_loginPageTitle}
-    Verify Element And Text  ${KU_W_loginPageTitle}  ${e_loginPageTitle}
-    Go Back
-
-Verify Signup Page
-    Wait For Element Visibility  ${KU_W_signupPageTitle}
-    Verify Element And Text  ${KU_W_signupPageTitle}  ${e_signupPageTitle}
-
 Kuvera Web Logo Click
     Wait For Element Visibility  ${KU_W_logo}
     Click Element  ${KU_W_logo}
@@ -137,6 +145,10 @@ Verify Language Switch Login And Signup Link
     Verify Page Contains Element  ${KU_W_langSwitch}
     Verify Element And Text  ${KU_W_login}  ${e_login}
     Verify Element And Text  ${KU_W_signup}  ${e_signup}
-        
+    
+Scroll Page To Location
+    [Arguments]  ${x_location}  ${y_location}
+    Execute JavaScript  window.scrollTo(${x_location},${y_location})
+
 Close Web Application
     Close All Browser
