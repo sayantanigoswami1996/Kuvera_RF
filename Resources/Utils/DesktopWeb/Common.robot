@@ -26,7 +26,6 @@ Resource    ../../../AppLocators/DesktopWeb/InvestLocators/UltraShortLocators.ro
 Launch URL
     Open Browser  ${URL}  ${BROWSER}  alias=Kuvera
     # Maximize Browser Window
-    # Set Window Size  ${1366}  ${768}
     Set Window Size  ${1920}  ${1080}
     Reload Page
     Kuvera Web Close Regulatory Disclosure
