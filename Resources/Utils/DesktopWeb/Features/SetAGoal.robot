@@ -35,7 +35,7 @@ Verify PreLogin Set A Goal Page
 
     ${listCount} =  Get Element Count  ${KU_W_feature_goalsList}
     FOR  ${j}  IN RANGE  1   ${listCount}+1
-        Sleep  5s
+        Sleep  3s
         Wait For Element Visibility  ${KU_W_feature_sg_screenTitle}
         ${goalName} =  Get Text  xpath=//div[@class='cards']/a[${j}]/p
         Log To Console  ${goalName}
@@ -60,6 +60,7 @@ Verify Question And Enter Input
 Navigate To Features Goals
     Wait For Element Visibility  ${KU_W_logo_signup}
     Click Element  ${KU_W_logo_signup}
+    Sleep  2s
     Wait For Element Visibility  ${KU_W_featureLink}
     Click Element  ${KU_W_featureLink}
     Wait For Element Visibility  ${KU_W_feature_setAGoalLink}
