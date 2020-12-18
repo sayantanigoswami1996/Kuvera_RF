@@ -10,6 +10,7 @@ Verify PreLogin Invest Landing Page
     Sleep  1s
     Verify Language Switch Login And Signup Link
     # Save Smart
+    Sleep  2s
     Wait For Element Visibility  ${KU_W_invest_saveSmartTitle}  
     Verify Element And Text  ${KU_W_invest_saveSmartTitle}  ${e_invest_saveSmartTitleText}
     Verify Element And Text  ${KU_W_invest_saveSmartSubTitle}  ${e_invest_saveSmartSubText} 
