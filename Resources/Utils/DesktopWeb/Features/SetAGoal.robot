@@ -35,7 +35,8 @@ Verify PreLogin Set A Goal Page
 
     ${listCount} =  Get Element Count  ${KU_W_feature_goalsList}
     FOR  ${j}  IN RANGE  1   ${listCount}+1
-        Sleep  2s
+        Sleep  5s
+        Wait For Element Visibility  ${KU_W_feature_sg_screenTitle}
         ${goalName} =  Get Text  xpath=//div[@class='cards']/a[${j}]/p
         Log To Console  ${goalName}
         Run keyword If  ['${goalName}'] == ${goal1}  Verify Own A Home Questionnaire
