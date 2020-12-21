@@ -14,7 +14,7 @@ Verify PreLogin Invest Landing Page
     Verify Element And Text  ${KU_W_invest_saveSmartTitle}  ${e_invest_saveSmartTitleText}
     Verify Element And Text  ${KU_W_invest_saveSmartSubTitle}  ${e_invest_saveSmartSubText} 
     Click Element   ${KU_W_invest_saveSmartTitle}
-    Log To Console  SaveSmart From Tiles
+    Log To Console  SaveSmart Tiles
     Sleep  3s
     Wait For Element Visibility   ${KU_W_ss_screenTitle}
     Verify Element And Text  ${KU_W_ss_screenTitle}  ${e_invest_ss_screenText}
@@ -44,7 +44,7 @@ Verify PreLogin Invest Landing Page
     Verify Element And Text  ${KU_W_digitalGoldSubTitle}  ${e_invest_digitalGoldSubText}
     Verify Page Contains Image  ${KU_W_goldIconImage} 
     Click Element  ${KU_W_digitalGoldTitle}
-    Log To Console  Digital Gold From Tiles
+    Log To Console  Digital Gold Tiles
     Wait For Element Visibility  ${KU_W_dg_screenTitle} 
     Verify Element And Text  ${KU_W_dg_screenTitle}  ${e_invest_digiGold_screenText} 
     Go Back
@@ -99,10 +99,7 @@ Verify PreLogin Invest Landing Page
     Scroll Untill View  ${KU_W_mutualFund}
     Verify Element And Text  ${KU_W_mutualFund}  ${e_invest_mf_titleText} 
     Wait For Element Visibility  ${KU_W_mutualFund}
-    Click Element  ${KU_W_mutualFund}
-    Wait For Element Visibility  ${KU_W_mutualFundScreen}
-    Verify Element And Text   ${KU_W_mutualFundScreen}  ${e_invest_searchBarText} 
-    Go Back
+    Verify Mutual Fund Landing Page
     # Digital Gold
     Verify Element And Text  ${KU_W_digitalGold}  ${e_invest_digGold_titleText}
     Click Element  ${KU_W_digitalGold}
@@ -114,8 +111,7 @@ Verify PreLogin Invest Landing Page
     Wait For Element Visibility  ${KU_W_stocks}
     Verify Element And Text  ${KU_W_stocks}  ${e_invest_stocks_titleText}
     Wait For Element Visibility  ${KU_W_stocks}
-    Click Element  ${KU_W_stocks}
-    Go Back
+    Verify Stocks Landing Page
     # US Stocks
     Verify Element And Text  ${KU_W_USStocks}  ${e_invest_USStocks_titleText}
     Wait For Element Visibility  ${KU_W_USStocks}

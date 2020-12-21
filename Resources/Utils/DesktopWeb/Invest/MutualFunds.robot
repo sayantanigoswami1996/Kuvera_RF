@@ -7,8 +7,6 @@ Library     SeleniumLibrary
 Verify Mutual Fund Landing Page
     Log To Console  Mutual Funds
     # MF Landing Page
-    Wait For Element Visibility  ${KU_W_investLink} 
-    Click Element  ${KU_W_investLink} 
     Sleep  500ms
     Scroll Untill View  ${KU_W_mutualFund}
     Wait For Element Visibility  ${KU_W_mutualFund}
