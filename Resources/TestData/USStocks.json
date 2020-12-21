@@ -1,5 +1,9 @@
 {
     "USStocks":{
-        "f1":"NIO Inc"
+        "f1":"Tesla, Inc.",
+        "f2":"Salesforce.com, Inc",
+        "f3":"Zoom Video Communications Inc",
+        "f4":"NVIDIA Corporation",
+        "f5":"Pfizer Inc."
     }
 }

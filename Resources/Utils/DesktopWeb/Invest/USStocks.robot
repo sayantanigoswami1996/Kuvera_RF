@@ -31,7 +31,7 @@ Verify US Stocks Landing Page
     Wait For Element Visibility  ${KU_W_invest_USStocks_exploreBtn}
     Click Element  ${KU_W_invest_USStocks_exploreBtn}
     # Iterate the US Stocks detail screen
-    FOR  ${i}  IN RANGE  1  2
+    FOR  ${i}  IN RANGE  1  6
         @{USStockName} =  Get Json Values  $.USStocks.f${i}  Resources/TestData/USStocks.json 
         Log To Console  ${USStockName}
         Search US Stocks and Verify  ${USStockName}
