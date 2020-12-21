@@ -36,6 +36,7 @@ Verify Stocks Landing Page
         @{stockName} =  Get Json Values  $.Stocks.f${i}  Resources/TestData/Stocks.json 
         Log To Console  ${stockName}
         Search Stocks and Verify  ${stockName}
+        Sleep  1s
         Verify Stock Details Screen  ${KU_W_invest_stocks_stockLink}
     END
     Go Back 
@@ -47,6 +48,7 @@ Search Stocks and Verify
     Click Element  ${KU_W_invest_stocktopgainerindia_searchTextField}
     Input Text  ${KU_W_invest_stocks_searchField}  ${stockName}  clear=true
     Press Enter Key  ${KU_W_invest_stocks_searchField}
+    Sleep  3s
 
 Verify Sort Duration List
     Verify Page Contains Element  ${KU_W_invest_stocks_fundSortVal1D}
@@ -70,18 +72,16 @@ Verify Search Stocks
     Input Text  ${KU_W_invest_stocks_searchField}  ${e_invest_stocks_searchFund}
     Wait For Element Visibility  ${KU_W_invest_stocks_stockName}
     Verify Page Contains Element  ${KU_W_invest_stocks_stockName}
-    # Wait For Element Visibility  ${KU_W_invest_stocks_clearSearchItem}
-    # Click Element  ${KU_W_invest_stocks_clearSearchItem}
-    # Wait For Element Visibility  ${KU_W_invest_stocks_searchField}
-    # Input Text  ${KU_W_invest_stocks_searchField}  ${e_invest_stocks_randomSearchFund}  clear=true
-    # Press Enter Key  ${KU_W_invest_stocks_searchField}
-    # Sleep  5s
-    # Wait For Element Visibility  ${KU_W_invest_stocks_noSearchResult}
-    # Verify Page Contains Element  ${KU_W_invest_stocks_noSearchResult}
-    # Wait For Element Visibility  ${KU_W_invest_stocks_noSearchResultImg}
-    # Verify Page Contains Image  ${KU_W_invest_stocks_noSearchResultImg}
-    # Sleep  5s
-    # Click Element  ${KU_W_invest_stocks_clearSearchItem}
+    Wait For Element Visibility  ${KU_W_invest_stocks_clearSearchItem}
+    Click Element  ${KU_W_invest_stocks_clearSearchItem}
+    Wait For Element Visibility  ${KU_W_invest_stocks_searchField}
+    Input Text  ${KU_W_invest_stocks_searchField}  ${e_invest_stocks_randomSearchFund}  clear=true
+    Press Enter Key  ${KU_W_invest_stocks_searchField}
+    Sleep  2s
+    Wait For Element Visibility  ${KU_W_invest_stocks_noSearchResult}
+    Verify Page Contains Element  ${KU_W_invest_stocks_noSearchResult}
+    Wait For Element Visibility  ${KU_W_invest_stocks_noSearchResultImg}
+    Verify Page Contains Image  ${KU_W_invest_stocks_noSearchResultImg}
 
 Verify Stock Details Screen
     [Arguments]  ${stockLink}
