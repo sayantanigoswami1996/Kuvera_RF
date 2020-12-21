@@ -5,7 +5,7 @@ Library     SeleniumLibrary
 *** Keywords ***
 
 Validate SaveSmart Landing Page
-    Log To Console  Save Smart From Explore
+    Log To Console  Save Smart Explore
     Wait For Element Visibility  ${KU_W_ss_screenTitle}
     Verify Language Switch Login And Signup Link
     Verify Element And Text  ${KU_W_ss_screenTitle}  ${e_invest_ss_screenText}

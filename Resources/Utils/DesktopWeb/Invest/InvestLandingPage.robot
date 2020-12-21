@@ -104,10 +104,10 @@ Verify PreLogin Invest Landing Page
     Verify Element And Text  ${KU_W_digitalGold}  ${e_invest_digGold_titleText}
     Click Element  ${KU_W_digitalGold}
     Verify Digital Gold Landing Page
-    Sleep  1s
+    Reload Page
+    Sleep  2s
     # Stocks
     Scroll Untill View  ${KU_W_stocks}
-    Sleep  4s
     Wait For Element Visibility  ${KU_W_stocks}
     Verify Element And Text  ${KU_W_stocks}  ${e_invest_stocks_titleText}
     Wait For Element Visibility  ${KU_W_stocks}
@@ -115,10 +115,7 @@ Verify PreLogin Invest Landing Page
     # US Stocks
     Verify Element And Text  ${KU_W_USStocks}  ${e_invest_USStocks_titleText}
     Wait For Element Visibility  ${KU_W_USStocks}
-    Click Element  ${KU_W_USStocks}
-    Wait For Element Visibility  ${KU_W_USStocksScreen}
-    Verify Element And Text  ${KU_W_USStocksScreen}  ${e_invest_USStocks_screenText}
-    Go Back
+    Verify US Stocks Landing Page
     Sleep  1s
     # Save Smart
     Verify Element And Text  ${KU_W_saveSmart}  ${e_invest_ss_titleText}
@@ -234,14 +231,14 @@ Verify No Stocks Screen For UTF and 52WkHighUS
     Go Back
 
 Verify WatchList Button For UTF and 52WkHighUS
-    Verify Page Contains Element  ${KU_W_invest_USETFAnd52WUS_watchlistBtn}
+    Verify Page Contains Element  ${KU_W_invest_USStocksUSETFAnd52WUS_watchlistBtn}
     Go Back
 
-Verify Filter Navigation For USETF and 52WkHighUS  
+Verify Filter Navigation For USStocks USETF and 52WkHighUS  
     [Arguments]  ${watchListHeader}  ${watchlistHeaderText}  ${sortYearFor52High}  ${watchListBtn}
     # All
     Click Element  ${KU_W_invest_stocks_all}
-    Verify Search And Sort  ${KU_W_searchBarForUSETFAnd52WUS}  ${e_invest_stock_searchBarTxt}  ${KU_W_invest_searchTextFieldForETFAndUS}  ${KU_W_invest_sort_UTF_USA}
+    Verify Search And Sort  ${KU_W_USStocksETF52WUS_searchBar}  ${e_invest_stock_searchBarTxt}  ${KU_W_invest_USStocksETFAnd52WUS_searchTextField}  ${KU_W_invest_sort_USStocks_UTF_USA}
     # WatchList
     Click Element  ${KU_W_invest_watchList}
     Wait For Element Visibility  ${watchListHeader}
@@ -267,5 +264,42 @@ Verify Filter Navigation For USETF and 52WkHighUS
     Sleep  3s
     ${fundlist} =  Get Element Count   xpath=//div[@class='b-stock-item b-stock-items__content__item']
     Run Keyword If   ${fundlist}>0  Verify WatchList Button For UTF and 52WkHighUS
-    ...    ELSE IF   ${fundlist}==0  Verify No Stocks Screen For UTF and 52WkHighUS  ${KU_W_invest_USETFAnd52WUS_watchlistBtn}
+    ...    ELSE IF   ${fundlist}==0  Verify No Stocks Screen For UTF and 52WkHighUS  ${KU_W_invest_USStocksUSETFAnd52WUS_watchlistBtn}
     ...    ELSE  Log To Console  Completed
+
+Verify Explore Tags For Stocks And USStocks
+    [Arguments]  ${sortYear}  
+    Verify Page Contains Element  ${KU_W_invest_US_stocks_exploreTags}
+    Click Element  ${KU_W_invest_US_stocks_exploreTagLink1} 
+    Verify Element And Text  ${sortYear}  ${e_invest_stocks_sortYear}
+    Go Back
+    Wait For Element Visibility  ${KU_W_invest_US_stocks_exploreTagLink2}
+    Click Element  ${KU_W_invest_US_stocks_exploreTagLink2}
+    Verify Element And Text  ${sortYear}  ${e_invest_stocks_sortYear}
+    Go Back
+
+Verify Performance Chart For Stocks And US Stocks
+    [Arguments]  ${performanceChart}
+    Wait For Element Visibility  ${performanceChart} 
+    Verify Page Contains Element  ${performanceChart}
+    Scroll Untill View  ${KU_W_invest_US_stocks_performancePeriod}
+    Verify Page Contains Element  ${KU_W_invest_US_stocks_performancePeriod}
+    ${periodlist} =  Get Element Count  xpath=(//div[contains(@class,'b-period-option_item')])
+    FOR  ${i}  IN RANGE  1  ${periodlist}+1
+        Sleep  2s
+        Click Element  xpath=(//div[contains(@class,'b-period-option_item')])[${i}]
+        Wait For Element Visibility  ${performanceChart}
+        Verify Page Contains Element  ${performanceChart}
+    END
+
+Verify Compare Other Stocks Section
+    ${comparePeriodlist} =  Get Element Count  xpath=//img[@class='b-app-standard-table__sort b-app-standard-table__sort--asc']
+    FOR  ${i}  IN RANGE  1  ${comparePeriodlist}+1
+        Sleep  2s
+        Verify Page Contains Image  xpath=(//img[@class='b-app-standard-table__sort b-app-standard-table__sort--asc'])[${i}]
+        Click Element  xpath=(//img[@class='b-app-standard-table__sort b-app-standard-table__sort--asc'])[${i}]
+        Verify Page Contains Element  xpath=(//div[@class='b-app-standard-table__column-data'])[${i}+1]
+        Verify Page Contains Image  xpath=(//img[@class='b-app-standard-table__sort b-app-standard-table__sort--desc'])[${i}]
+        Click Element  xpath=(//img[@class='b-app-standard-table__sort b-app-standard-table__sort--desc'])[${i}]
+        Verify Page Contains Element  xpath=(//div[@class='b-app-standard-table__column-data'])[${i}+1]
+    END   

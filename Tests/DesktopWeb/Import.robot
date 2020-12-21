@@ -21,6 +21,7 @@ Resource    ../../Resources/Utils/DesktopWeb/Invest/52WkHighUS.robot
 Resource    ../../Resources/Utils/DesktopWeb/Invest/UltraShort.robot
 Resource    ../../Resources/Utils/DesktopWeb/Invest/MutualFunds.robot
 Resource    ../../Resources/Utils/DesktopWeb/Invest/Stocks.robot
+Resource    ../../Resources/Utils/DesktopWeb/Invest/USStocks.robot
 Resource    ../../Resources/Utils/DesktopWeb/Loans.robot
 Resource    ../../Resources/Utils/DesktopWeb/Insure.robot
 Resource    ../../Resources/Utils/DesktopWeb/Remit.robot

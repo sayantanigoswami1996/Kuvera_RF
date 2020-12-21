@@ -23,12 +23,12 @@ Resource    ../../../AppLocators/DesktopWeb/InvestLocators/USETFLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/UltraShortLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/MutualFundsLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/StocksLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/InvestLocators/USStocksLocators.robot
 *** Keywords ***
 
 Launch URL
     Open Browser  ${URL}  ${BROWSER}  alias=Kuvera
     # Maximize Browser Window
-    # Set Window Size  ${1366}  ${768}
     Set Window Size  ${1920}  ${1080}
     Reload Page
     Kuvera Web Close Regulatory Disclosure
@@ -153,6 +153,12 @@ Switch To Window
 Scroll Page To Location
         [Arguments]    ${x_location}    ${y_location}
         Execute JavaScript    window.scrollTo(${x_location},${y_location})
+
+Wait Scroll And Click Element
+    [Arguments]  ${element}
+    Wait For Element Visibility  ${element}
+    Scroll Until View  ${element}
+    Click Element  ${element}
 
 Close Web Application
         Close All Browser

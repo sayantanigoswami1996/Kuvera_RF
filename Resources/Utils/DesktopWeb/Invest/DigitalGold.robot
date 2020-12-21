@@ -5,7 +5,7 @@ Library   SeleniumLibrary
 *** Keywords ***
 
 Verify Digital Gold Landing Page
-    Log To Console  Digital Gold From Explore
+    Log To Console  Digital Gold Explore
     Wait For Element Visibility  ${KU_W_dg_screenTitle} 
     Verify Language Switch Login And Signup Link  
     Wait For Element Visibility  ${KU_W_dg_screenTitle}
@@ -26,7 +26,7 @@ Verify Digital Gold Landing Page
     Verify Page Contains Link  ${KU_W_dg_augmontLink}  ${e_invest_digiGold_augmontLinkText}
     Wait For Element Visibility  ${KU_W_dg_augmontLink}
     Click Element  ${KU_W_dg_augmontLink}
-    Switch To Window Verify Title And Close  ${e_invest_digiGold_augmontScreenTitle}
+    Switch To Window
     Reload Page
   
     # Buy-Sell-SIP-Track Table Content

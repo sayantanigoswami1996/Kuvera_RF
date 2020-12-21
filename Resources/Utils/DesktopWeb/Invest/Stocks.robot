@@ -17,10 +17,10 @@ Verify Stocks Landing Page
     Verify Language Switch Login And Signup Link  
     Verify Search And Sort  ${KU_W_stocktopgainerindia_searchBar}  ${e_invest_stock_searchBarTxt}  ${KU_W_invest_stocktopgainerindia_searchTextField}  ${KU_W_invest_sort_topGainerAndIndia}
     Verify Element And Text  ${KU_W_invest_stocks_sortYear}  ${e_invest_stocks_sortYear}
-    Verify Page Contains Element  ${KU_W_invest_stocks_fundPrice}
+    Verify Page Contains Element  ${KU_W_invest_stocks_stockPrice}
     Verify Page Contains Element  ${KU_W_invest_stocks_filteredTag}
     Verify Sort Duration List
-    Verify Filter
+    Verify Filter For Stocks
     Verify Search Stocks
     Wait For Element Visibility  ${KU_W_faqbot_icon}
     Run Keyword If  "${ENV}" == "prod"  Verify Page Contains Element  ${KU_W_faqbot_icon}
@@ -55,15 +55,15 @@ Verify Sort Duration List
     Verify Page Contains Element  ${KU_W_invest_stocks_fundSortVal1Y}
     Verify Page Contains Element  ${KU_W_invest_stocks_fundSortMarketCap}
 
-Verify Filter
-    Verify Element And Text  ${KU_W_invest_stocks_defaultFilter}  ${e_invest_stocks_defaultFilter}
+Verify Filter For Stocks
+    Verify Element And Text  ${KU_W_invest_stocks_defaultFilter}  ${e_invest_US_stocks_defaultFilter}
     Wait For Element Visibility  ${KU_W_invest_stocks_defaultFilter}
     Click Element  ${KU_W_invest_stocks_defaultFilter}
     Wait For Element Visibility  ${KU_W_invest_stocks_basicMaterialFilter}
     Click Element  ${KU_W_invest_stocks_basicMaterialFilter}
     Verify Element And Text  ${KU_W_invest_stocks_defaultFilter}  ${e_invest_stocks_basicMaterialFilter}
     Click Element  ${KU_W_invest_stocks_clearAll}
-    Verify Element And Text  ${KU_W_invest_stocks_defaultFilter}  ${e_invest_stocks_defaultFilter}
+    Verify Element And Text  ${KU_W_invest_stocks_defaultFilter}  ${e_invest_US_stocks_defaultFilter}
 
 Verify Search Stocks
     Wait For Element Visibility  ${KU_W_invest_stocktopgainerindia_searchTextField}
@@ -74,29 +74,21 @@ Verify Search Stocks
     Verify Page Contains Element  ${KU_W_invest_stocks_stockName}
     Wait For Element Visibility  ${KU_W_invest_stocks_clearSearchItem}
     Click Element  ${KU_W_invest_stocks_clearSearchItem}
-    Wait For Element Visibility  ${KU_W_invest_stocks_searchField}
-    Input Text  ${KU_W_invest_stocks_searchField}  ${e_invest_stocks_randomSearchFund}  clear=true
-    Press Enter Key  ${KU_W_invest_stocks_searchField}
-    Sleep  2s
-    Wait For Element Visibility  ${KU_W_invest_stocks_noSearchResult}
-    Verify Page Contains Element  ${KU_W_invest_stocks_noSearchResult}
-    Wait For Element Visibility  ${KU_W_invest_stocks_noSearchResultImg}
-    Verify Page Contains Image  ${KU_W_invest_stocks_noSearchResultImg}
-
+    # Wait For Element Visibility  ${KU_W_invest_stocks_searchField}
+    # Input Text  ${KU_W_invest_stocks_searchField}  ${e_invest_stocks_randomSearchFund}  clear=true
+    # Sleep  2s
+    # Wait For Element Visibility  ${KU_W_invest_stocks_noSearchResult}
+    # Verify Page Contains Element  ${KU_W_invest_stocks_noSearchResult}
+    # Wait For Element Visibility  ${KU_W_invest_stocks_noSearchResultImg}
+    # Verify Page Contains Image  ${KU_W_invest_stocks_noSearchResultImg}
+    
 Verify Stock Details Screen
     [Arguments]  ${stockLink}
     Wait For Element Visibility  ${stockLink}
     Click Element  ${stockLink}
     Wait For Element Visibility  ${KU_W_invest_stocksDetails_stockName}
     Verify Page Contains Element  ${KU_W_invest_stocksDetails_stockName}
-    Verify Page Contains Element  ${KU_W_invest_stocks_exploreTags}
-    Click Element  ${KU_W_invest_stocks_exploreTagLink1} 
-    Verify Element And Text  ${KU_W_invest_stocks_sortYear}  ${e_invest_stocks_sortYear}
-    Go Back
-    Wait For Element Visibility  ${KU_W_invest_stocks_exploreTagLink2}
-    Click Element  ${KU_W_invest_stocks_exploreTagLink2}
-    Verify Element And Text  ${KU_W_invest_stocks_sortYear}  ${e_invest_stocks_sortYear}
-    Go Back
+    Verify Explore Tags For Stocks And USStocks  ${KU_W_invest_stocks_sortYear}
     Wait For Element Visibility  ${KU_W_invest_stocks_currentMarketPrice}
     Verify Page Contains Element  ${KU_W_invest_stocks_currentMarketPrice}
     Sleep  2s
@@ -115,30 +107,10 @@ Verify Stock Details Screen
     Run Keyword If  "${ENV}" == "prod"  Verify Page Contains Element  ${KU_W_faqbot_icon}
     ...  ELSE  Log To Console  Staging
     # Graph Section
-    Wait For Element Visibility  ${KU_W_invest_stocks_performanceChart} 
-    Verify Page Contains Element  ${KU_W_invest_stocks_performanceChart}
-    Scroll Untill View  ${KU_W_invest_stocks_performancePeriod} 
-    Verify Page Contains Element  ${KU_W_invest_stocks_performancePeriod}
-    ${periodlist} =  Get Element Count  xpath=(//div[contains(@class,'b-period-option_item')])
-    FOR  ${i}  IN RANGE  1  ${periodlist}+1
-        Sleep  2s
-        Click Element  xpath=(//div[contains(@class,'b-period-option_item')])[${i}]
-        Wait For Element Visibility  ${KU_W_invest_stocks_performanceChart}
-        Verify Page Contains Element  ${KU_W_invest_stocks_performanceChart}
-    END
+    Verify Performance Chart For Stocks And US Stocks  ${KU_W_invest_stocks_performanceChart}
     # Live Market Hours is pending
     # Compare with other Stocks
-    ${comparePeriodlist} =  Get Element Count  xpath=//img[@class='b-app-standard-table__sort b-app-standard-table__sort--asc']
-    FOR  ${i}  IN RANGE  1  ${comparePeriodlist}+1
-        Sleep  2s
-        Verify Page Contains Image  xpath=(//img[@class='b-app-standard-table__sort b-app-standard-table__sort--asc'])[${i}]
-        Click Element  xpath=(//img[@class='b-app-standard-table__sort b-app-standard-table__sort--asc'])[${i}]
-        Verify Page Contains Element  xpath=(//div[@class='b-app-standard-table__column-data'])[${i}+1]
-        Verify Page Contains Image  xpath=(//img[@class='b-app-standard-table__sort b-app-standard-table__sort--desc'])[${i}]
-        Click Element  xpath=(//img[@class='b-app-standard-table__sort b-app-standard-table__sort--desc'])[${i}]
-        Verify Page Contains Element  xpath=(//div[@class='b-app-standard-table__column-data'])[${i}+1]
-    END
-
+    Verify Compare Other Stocks Section
     # Financial Charts
     Verify Financial Performace Chart
     # Top Institutional Holders
