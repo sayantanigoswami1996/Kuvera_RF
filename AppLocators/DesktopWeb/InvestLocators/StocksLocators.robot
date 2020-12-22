@@ -5,7 +5,7 @@ ${e_invest_stocks_screenLabel} =  Search stocks
 ${e_invest_stocks_sortYear} =  1Y            
 ${e_invest_stocks_basicMaterialFilter} =  Basic Materials
 ${e_invest_stocks_searchFund} =  Dha
-${e_invest_stocks_randomSearchFund} =  Fund123666666
+${e_invest_stocks_randomSearchFund} =  Stock123666666
 ${e_invest_stocks_buyStocksBtn} =  Buy stocks
 ${e_invest_stocks_incomeStatement} =  Income statement
 ${e_invest_stocks_balanceSheet} =  Balance sheet 
@@ -13,9 +13,7 @@ ${e_invest_stocks_cashFlow} =  Cash flow
 ${e_invest_stocks_noDataMsg} =  No Quarterly data available
 ${e_invest_stocks_institutionalHolders} =  Top institutional holders
 ${e_invest_stocks_mfHolders} =  Top mutual fund holders
-                
-
-
+        
 # Application Locator 'KU_<locatorName>'
 # Stocks Navigation Page
 # Stocks
@@ -65,3 +63,6 @@ ${KU_W_invest_stocks_institutionalHolders} =  xpath=(//div[@class='b-stocks-tabl
 ${KU_W_invest_stocks_institutionalHoldersTable} =  xpath=(//div[@class='b-stocks-table-container'])[1]
 ${KU_W_invest_stocks_mfHolders} =  xpath=(//div[@class='b-stocks-table-heading'])[2]
 ${KU_W_invest_stocks_mfHoldersTable} =  xpath=(//div[@class='b-stocks-table-container'])[2]
+${KU_W_invest_stocks_addBtn} =  xpath=//div[@class='b-stock-compare-m__add-label']
+${KU_W_invest_stocks_popupHeader} =  xpath=//div[@class='b-add-stock-m__heading']
+${KU_W_invest_stocks_closePopup} =  xpath=//img[@class='b-add-stock-m__close']

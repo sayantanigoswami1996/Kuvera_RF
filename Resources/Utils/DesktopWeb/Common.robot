@@ -36,7 +36,7 @@ Launch URL
     ...    ELSE   Log To Console  Staging
 
 Welcome Page Should Be Open
-        Title Should Be  ${KU_W_title}
+        Run Keyword And Continue On Failure  Title Should Be  ${KU_W_title}
 
 Wait For Element Visibility
         [Arguments]  ${element}
@@ -44,15 +44,15 @@ Wait For Element Visibility
 
 Verify Element And Text
         [Arguments]  ${element}  ${text}
-        Element Text Should Be  ${element}  ${text}
+        Run Keyword And Continue On Failure  Element Text Should Be  ${element}  ${text}
 
 Verify Page Contains Element
         [Arguments]  ${element}
-        Page Should Contain Element  ${element}
+        Run Keyword And Continue On Failure  Page Should Contain Element  ${element}
 
 Verify Page Contains Image
         [Arguments]  ${image}
-        Page Should Contain Image  ${image}
+        Run Keyword And Continue On Failure  Page Should Contain Image  ${image}
 
 Scroll Untill View
         [Arguments]  ${element}
@@ -60,11 +60,11 @@ Scroll Untill View
 
 Verify Page Contains Link
         [Arguments]  ${link}  ${text}
-        Page Should Contain Link  ${link}  ${text}
+        Run Keyword And Continue On Failure  Page Should Contain Link  ${link}  ${text}
 
 Verify Page Contains Button
         [Arguments]  ${button}
-        Page Should Contain Button  ${button}
+        Run Keyword And Continue On Failure  Page Should Contain Button  ${button}
 
 Compare Lists
         [Arguments]  ${actualList}   ${expectedList}
@@ -77,12 +77,12 @@ Compare Lists
         ${expectedListItem}  Set Variable  ${expectedListItems}
         END
         # Compare two list items
-        Should Be Equal  ${actualListItem}  ${expectedListItem}
+        Run Keyword And Continue On Failure  Should Be Equal  ${actualListItem}  ${expectedListItem}
 
 Switch To Window Verify Title And Close
         [Arguments]  ${title}
         Switch Window  locator=NEW
-        Title Should Be  ${title}
+        Run Keyword And Continue On Failure  Title Should Be  ${title}
         Close Window
         Sleep  2s
         Switch Window  browser=Kuvera
@@ -98,7 +98,7 @@ Get List Count
 
 Kuvera Web Close Regulatory Disclosure 
         Wait Until Element Is Visible  ${KU_W_regulatoryDisclosure}
-        Verify Element And Text  ${KU_W_regulatoryDisclosure}  ${e_regulatoryDisclosure}
+        Run Keyword And Continue On Failure  Verify Element And Text  ${KU_W_regulatoryDisclosure}  ${e_regulatoryDisclosure}
         Wait For Element Visibility  ${KU_W_close}
         Click Element  ${KU_W_close}
 
@@ -135,14 +135,14 @@ Kuvera Web Logo Click
 
 Verify Google Play & Apple Store Icons
         Scroll Element Into View  ${KU_W_android_image}
-        Verify Page Contains Image  ${KU_W_android_image}
-        Verify Page Contains Image  ${KU_W_apple_image}
+        Run Keyword And Continue On Failure  Verify Page Contains Image  ${KU_W_android_image}
+        Run Keyword And Continue On Failure  Verify Page Contains Image  ${KU_W_apple_image}
 
 Verify Language Switch Login And Signup Link
         Wait For Element Visibility  ${KU_W_langSwitch}
-        Verify Page Contains Element  ${KU_W_langSwitch}
-        Verify Element And Text  ${KU_W_login}  ${e_login}
-        Verify Element And Text  ${KU_W_signup}  ${e_signup}
+        Run Keyword And Continue On Failure  Verify Page Contains Element  ${KU_W_langSwitch}
+        Run Keyword And Continue On Failure  Verify Element And Text  ${KU_W_login}  ${e_login}
+        Run Keyword And Continue On Failure  Verify Element And Text  ${KU_W_signup}  ${e_signup}
 
 Switch To Window
     Switch Window  locator=NEW
@@ -159,6 +159,14 @@ Wait Scroll And Click Element
     Wait For Element Visibility  ${element}
     Scroll Until View  ${element}
     Click Element  ${element}
+
+Compare Text Values
+    [Arguments]  ${actualValue}  ${expectedValue}
+    Run Keyword And Continue On Failure  Should Be Equal  ${actualValue}  ${expectedValue}
+
+Verify Screen Title
+    [Arguments]  ${title}
+    Run Keyword And Continue On Failure  Title Should Be  ${title}
 
 Close Web Application
         Close All Browser

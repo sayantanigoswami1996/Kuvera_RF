@@ -271,10 +271,12 @@ Verify Explore Tags For Stocks And USStocks
     [Arguments]  ${sortYear}  
     Verify Page Contains Element  ${KU_W_invest_US_stocks_exploreTags}
     Click Element  ${KU_W_invest_US_stocks_exploreTagLink1} 
+    Wait For Element Visibility  ${sortYear}
     Verify Element And Text  ${sortYear}  ${e_invest_stocks_sortYear}
     Go Back
     Wait For Element Visibility  ${KU_W_invest_US_stocks_exploreTagLink2}
     Click Element  ${KU_W_invest_US_stocks_exploreTagLink2}
+    Wait For Element Visibility  ${sortYear}
     Verify Element And Text  ${sortYear}  ${e_invest_stocks_sortYear}
     Go Back
 
@@ -292,7 +294,7 @@ Verify Performance Chart For Stocks And US Stocks
         Verify Page Contains Element  ${performanceChart}
     END
 
-Verify Compare Other Stocks Section
+Verify Compare With Other
     ${comparePeriodlist} =  Get Element Count  xpath=//img[@class='b-app-standard-table__sort b-app-standard-table__sort--asc']
     FOR  ${i}  IN RANGE  1  ${comparePeriodlist}+1
         Sleep  2s
@@ -302,4 +304,13 @@ Verify Compare Other Stocks Section
         Verify Page Contains Image  xpath=(//img[@class='b-app-standard-table__sort b-app-standard-table__sort--desc'])[${i}]
         Click Element  xpath=(//img[@class='b-app-standard-table__sort b-app-standard-table__sort--desc'])[${i}]
         Verify Page Contains Element  xpath=(//div[@class='b-app-standard-table__column-data'])[${i}+1]
-    END   
+    END  
+
+Verify Add Option 
+    [Arguments]  ${addBtn}  ${popupHeader}  ${closePopup}
+    Scroll Untill View  ${addBtn}
+    Verify Page Contains Element  ${addBtn}
+    Wait For Element Visibility  ${addBtn}
+    Click Element  ${addBtn}
+    Verify Page Contains Element  ${popupHeader}
+    Click Element  ${closePopup}

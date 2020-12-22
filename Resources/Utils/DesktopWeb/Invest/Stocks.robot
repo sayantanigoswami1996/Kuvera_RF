@@ -48,7 +48,7 @@ Search Stocks and Verify
     Click Element  ${KU_W_invest_stocktopgainerindia_searchTextField}
     Input Text  ${KU_W_invest_stocks_searchField}  ${stockName}  clear=true
     Press Enter Key  ${KU_W_invest_stocks_searchField}
-    Sleep  3s
+    Sleep  2s
 
 Verify Sort Duration List
     Verify Page Contains Element  ${KU_W_invest_stocks_fundSortVal1D}
@@ -74,13 +74,13 @@ Verify Search Stocks
     Verify Page Contains Element  ${KU_W_invest_stocks_stockName}
     Wait For Element Visibility  ${KU_W_invest_stocks_clearSearchItem}
     Click Element  ${KU_W_invest_stocks_clearSearchItem}
-    # Wait For Element Visibility  ${KU_W_invest_stocks_searchField}
-    # Input Text  ${KU_W_invest_stocks_searchField}  ${e_invest_stocks_randomSearchFund}  clear=true
-    # Sleep  2s
-    # Wait For Element Visibility  ${KU_W_invest_stocks_noSearchResult}
-    # Verify Page Contains Element  ${KU_W_invest_stocks_noSearchResult}
-    # Wait For Element Visibility  ${KU_W_invest_stocks_noSearchResultImg}
-    # Verify Page Contains Image  ${KU_W_invest_stocks_noSearchResultImg}
+    Wait For Element Visibility  ${KU_W_invest_stocks_searchField}
+    Input Text  ${KU_W_invest_stocks_searchField}  ${e_invest_stocks_randomSearchFund}  clear=true
+    Sleep  2s
+    Wait For Element Visibility  ${KU_W_invest_stocks_noSearchResult}
+    Verify Page Contains Element  ${KU_W_invest_stocks_noSearchResult}
+    Wait For Element Visibility  ${KU_W_invest_stocks_noSearchResultImg}
+    Verify Page Contains Image  ${KU_W_invest_stocks_noSearchResultImg}
     
 Verify Stock Details Screen
     [Arguments]  ${stockLink}
@@ -110,7 +110,8 @@ Verify Stock Details Screen
     Verify Performance Chart For Stocks And US Stocks  ${KU_W_invest_stocks_performanceChart}
     # Live Market Hours is pending
     # Compare with other Stocks
-    Verify Compare Other Stocks Section
+    Verify Compare With Other 
+    Verify Add Option  ${KU_W_invest_stocks_addBtn}  ${KU_W_invest_stocks_popupHeader}  ${KU_W_invest_stocks_closePopup}
     # Financial Charts
     Verify Financial Performace Chart
     # Top Institutional Holders
