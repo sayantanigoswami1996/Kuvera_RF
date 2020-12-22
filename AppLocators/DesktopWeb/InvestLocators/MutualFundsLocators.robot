@@ -4,6 +4,7 @@ ${e_invest_mf_lumpsumAmountLabel} =  Lumpsum amount
 ${e_invest_mf_sipAmountLabel} =  SIP amount
 ${e_invest_mf_sipAmount} =  6000
 ${e_invest_mf_lumpsumAmount} =  50000
+${e_invest_mf_addFundPopupHeader} =  Search and add fund
 
 # Application Locator 'KU_<locatorName>'
 # Mutual Fund Navigation Page
@@ -40,6 +41,10 @@ ${KU_W_invest_mf_pc_durationsList}  =  xpath=//*[@class='b-mf-performance-chart_
 # Past Performace
 ${KU_W_invest_mf_compareTitle} =  xpath=//*[@class='b-mf-compare__title']
 ${KU_W_invest_mf_compareTableContent} =  xpath=//*[@class='b-app-standard-table']
+${KU_W_invest_mf_tableHeader} =  xpath=(//*[@class='b-app-standard-table__column-header'])[5]
+${KU_W_invest_mf_addFundBtn} =  xpath=//*[@class='b-mf-compare-m__add-label']
+${KU_W_invest_mf_addFundPopupHeader} =  xpath=//*[@class='b-add-mf-m__heading']
+${KU_W_invest_mf_addFundPopupCloseBtn} =  xpath=//*[@class='b-add-mf-m__close-container']
 # Past Performace
 ${KU_W_invest_mf_performanceHeading} =  xpath=//*[@class='b-mf-past-performance__heading']
 ${KU_W_invest_mf_performanceNumField} =  xpath=//*[@class='b-mf-past-performance__input-container__num-field-container']

@@ -33,6 +33,15 @@ Search Fund and Verify
     Input Text  ${KU_W_invest_mf_searchBar}  ${fundName}  clear=true
     Press Enter Key  ${KU_W_invest_mf_searchBar}
 
+Verify Add Option 
+    [Arguments]  ${addBtn}  ${popupHeader}  ${closePopup}
+    Scroll Untill View  ${addBtn}
+    Verify Page Contains Element  ${addBtn}
+    Wait For Element Visibility  ${addBtn}
+    Click Element  ${addBtn}
+    Verify Page Contains Element  ${popupHeader}
+    Click Element  ${closePopup}
+
 Verify Mutual Fund Details Page
     [Arguments]  ${fund}
     Wait For Element Visibility  ${fund}
@@ -60,13 +69,11 @@ Verify Mutual Fund Details Page
     Wait For Element Visibility  ${KU_W_invest_mf_sipAmountLabel}
     Verify Element And Text  ${KU_W_invest_mf_sipAmountLabel}  ${e_invest_mf_sipAmountLabel}
     Input Text  ${KU_W_invest_mf_sipAmountTxt}  ${e_invest_mf_sipAmount}
-    Wait For Element Visibility  ${KU_W_invest_mf_investNowButton}
-    Click Element  ${KU_W_invest_mf_investNowButton}
+    Wait Scroll And Click Element  ${KU_W_invest_mf_investNowButton}
     Verify Login Page
     Verify Element And Text  ${KU_W_invest_mf_lumpsumAmountLabel}  ${e_invest_mf_lumpsumAmountLabel}
     Input Text  ${KU_W_invest_mf_lumpsumAmountTxt}  ${e_invest_mf_lumpsumAmount}
-    Wait For Element Visibility  ${KU_W_invest_mf_addToCartButton}
-    Click Element  ${KU_W_invest_mf_addToCartButton}
+    Wait Scroll And Click Element  ${KU_W_invest_mf_addToCartButton}
     Verify Login Page
     # Graph Section
     Wait For Element Visibility  ${KU_W_invest_mf_performaceCart}
@@ -81,6 +88,8 @@ Verify Mutual Fund Details Page
     Scroll Untill View  ${KU_W_invest_mf_compareTitle}
     Verify Page Contains Element  ${KU_W_invest_mf_compareTitle}
     Verify Page Contains Element  ${KU_W_invest_mf_compareTableContent}
+    #Verify Compare With Other
+    Verify Add Option  ${KU_W_invest_mf_addFundBtn}  ${KU_W_invest_mf_addFundPopupHeader}  ${KU_W_invest_mf_addFundPopupCloseBtn}
     # Past Performace section
     Scroll Untill View  ${KU_W_invest_mf_performanceHeading}
     Verify Page Contains Element  ${KU_W_invest_mf_performanceHeading}
