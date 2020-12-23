@@ -106,7 +106,7 @@ Verify PreLogin Invest Landing Page
     Click Element  ${KU_W_digitalGold}
     Verify Digital Gold Landing Page
     Reload Page
-    Sleep  2s
+    Sleep  4s
     # Stocks
     Scroll Untill View  ${KU_W_stocks}
     Wait For Element Visibility  ${KU_W_stocks}

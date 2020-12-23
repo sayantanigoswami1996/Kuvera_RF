@@ -4,8 +4,8 @@
 ${e_invest_stocks_screenLabel} =  Search stocks
 ${e_invest_stocks_sortYear} =  1Y            
 ${e_invest_stocks_basicMaterialFilter} =  Basic Materials
-${e_invest_stocks_searchFund} =  Dha
-${e_invest_stocks_randomSearchFund} =  Stock123666666
+${e_invest_stocks_searchStock} =  Dha
+${e_invest_stocks_randomSearchStock} =  Stock123666666
 ${e_invest_stocks_buyStocksBtn} =  Buy stocks
 ${e_invest_stocks_incomeStatement} =  Income statement
 ${e_invest_stocks_balanceSheet} =  Balance sheet 

@@ -69,12 +69,12 @@ Verify Search Stocks
     Wait For Element Visibility  ${KU_W_invest_stocktopgainerindia_searchTextField}
     Click Element  ${KU_W_invest_stocktopgainerindia_searchTextField}
     Wait For Element Visibility  ${KU_W_invest_stocks_searchField}
-    Input Text  ${KU_W_invest_stocks_searchField}  ${e_invest_stocks_searchFund}
+    Input Text  ${KU_W_invest_stocks_searchField}  ${e_invest_stocks_searchStock}
     Wait For Element Visibility  ${KU_W_invest_stocks_stockName}
     Verify Page Contains Element  ${KU_W_invest_stocks_stockName}
     Wait For Element Visibility  ${KU_W_invest_stocks_clearSearchItem}
     Click Element  ${KU_W_invest_stocks_clearSearchItem}
-    Input Text  ${KU_W_invest_stocks_searchField}  ${e_invest_stocks_randomSearchFund}  clear=true
+    Input Text  ${KU_W_invest_stocks_searchField}  ${e_invest_stocks_randomSearchStock}  clear=true
     Press Enter Key  ${KU_W_invest_stocks_searchField}
     Verify Page Contains Element  ${KU_W_invest_stocks_noSearchResult}
     Verify Page Contains Image  ${KU_W_invest_stocks_noSearchResultImg}
