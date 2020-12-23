@@ -5,7 +5,7 @@ Library     SeleniumLibrary
 *** Keywords ***
 
 Verify ELSS Tax Saver Landing Page
-    Log to Console  ELSS Tax Saver
+    Log To Console  ELSS Tax Saver
     Sleep  1s
     Wait For Element Visibility  ${KU_W_ELSSTaxSaverTitle}
     Click Element  ${KU_W_ELSSTaxSaverTitle}

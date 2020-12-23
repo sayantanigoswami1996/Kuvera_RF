@@ -21,6 +21,9 @@ Resource    ../../../AppLocators/DesktopWeb/InvestLocators/TopGainersLocators.ro
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/ELSSTaxSaverLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/USETFLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/UltraShortLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/InvestLocators/MutualFundsLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/InvestLocators/StocksLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/InvestLocators/USStocksLocators.robot
 *** Keywords ***
 
 Launch URL
@@ -37,7 +40,7 @@ Welcome Page Should Be Open
 
 Wait For Element Visibility
     [Arguments]  ${element}
-    Wait Until Element Is Visible  ${element}  timeout=50
+    Wait Until Element Is Visible  ${element}  timeout=60
 
 Verify Element And Text
     [Arguments]  ${element}  ${text}
@@ -84,12 +87,6 @@ Switch To Window Verify Title And Close
     Sleep  2s
     Switch Window  browser=Kuvera
 
-Switch To Window 
-    Switch Window  locator=NEW
-    Close Window
-    Sleep  2s
-    Switch Window  browser=Kuvera
-
 Switch To Frame
     [Arguments]  ${element}
     Select Frame  ${element}
@@ -106,7 +103,7 @@ Kuvera Web Close Regulatory Disclosure
     Click Element  ${KU_W_close}
 
 Close Hello Bar
-    Sleep  15s
+    Sleep  10s
     Wait Until Element Is Visible  ${KU_W_bannerFrame}  timeout=40
     Switch To Frame  ${KU_W_bannerFrame}
     Wait For Element Visibility  ${KU_W_bannerCloseBtn}
@@ -127,7 +124,7 @@ Clear Text Field
     [Arguments]  ${field}
     Sleep  500ms
     ${fieldText} =  Get Value  ${field}
-    ${fieldTextLen} =  Get Length  ${fieldText} 
+    ${fieldTextLen} =  Get Length  ${fieldText}
     Run Keyword If    """${fieldText}""" != ''
     ...     Repeat Keyword  ${fieldTextLen+1}  Press Keys  ${field}  \ue003
 
@@ -143,12 +140,34 @@ Verify Google Play & Apple Store Icons
 Verify Language Switch Login And Signup Link
     Wait For Element Visibility  ${KU_W_langSwitch}
     Verify Page Contains Element  ${KU_W_langSwitch}
+    Wait For Element Visibility  ${KU_W_login}
     Verify Element And Text  ${KU_W_login}  ${e_login}
+    Wait For Element Visibility  ${KU_W_signup}
     Verify Element And Text  ${KU_W_signup}  ${e_signup}
+
+Switch To Window
+    Switch Window  locator=NEW
+    Close Window
+    Sleep  2s
+    Switch Window  browser=Kuvera
     
 Scroll Page To Location
-    [Arguments]  ${x_location}  ${y_location}
-    Execute JavaScript  window.scrollTo(${x_location},${y_location})
+    [Arguments]    ${x_location}    ${y_location}
+    Execute JavaScript    window.scrollTo(${x_location},${y_location})
+
+Wait Scroll And Click Element
+    [Arguments]  ${element}
+    Wait For Element Visibility  ${element}
+    Scroll Untill View  ${element}
+    Click Element  ${element}
+
+Compare Text Values
+    [Arguments]  ${actualValue}  ${expectedValue}
+    Should Be Equal  ${actualValue}  ${expectedValue}
+
+Verify Screen Title
+    [Arguments]  ${title}
+    Title Should Be  ${title}
 
 Close Web Application
     Close All Browser
