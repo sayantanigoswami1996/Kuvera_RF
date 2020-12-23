@@ -39,8 +39,7 @@ Verify US Stocks Landing Page
     END
     Go Back 
     Verify US Stocks Landing Page Widgets
-    Go Back
-
+    
 Verify US Stocks Landing Page Widgets
     Verify Element And Text  ${KU_W_invest_USStocksSubTitle}  ${e_invest_USStocks_subTitle}
     Verify Page Contains Image  ${KU_W_invest_USStocksLandingScreen_vestedLogo}
@@ -89,9 +88,11 @@ Verify US Stocks Landing Page Widgets
     Verify Element And Text  ${KU_W_invest_USStocks_zeroBrokerageDesc}  ${e_invest_USStocks_zeroBrokerageDesc}
     Verify Page Contains Image  ${KU_W_invest_USStocks_zeroCommissionImg}
     Verify Page Contains Image  ${KU_W_invest_USStocks_zeroBrokInfoLink}
+    Sleep  2s
     Wait For Element Visibility  ${KU_W_invest_USStocks_zeroBrokInfoLink}
     Click Element  ${KU_W_invest_USStocks_zeroBrokInfoLink}
     Verify Element And Text  ${KU_W_invest_USStocks_zeroBrokInfoMsg}  ${e_invest_USStocks_zeroBrokInfoMsg}
+    Sleep  2s
     Wait For Element Visibility  ${KU_W_invest_USStocks_learnMorePopupLink}
     Click Element  ${KU_W_invest_USStocks_learnMorePopupLink}
     Switch To Window
@@ -168,9 +169,15 @@ Verify US Stocks Landing Page Widgets
     Click Element  ${KU_W_invest_USStocks_goGlobalStartTodayBtn}
     Verify Login Page
     Verify Page Contains Image  ${KU_W_invest_USStocks_goGlobalImg}
-    Verify Google Play & Apple Store Icons
     Run Keyword If  "${ENV}" == "prod"  Verify FAQBot Icon
     ...  ELSE  Log To Console  Staging
+    Verify Google Play & Apple Store Icons
+    Sleep  3s
+    Go Back
+    Sleep  1s
+    Go Back
+    Sleep  1s
+    Go Back
 
 Verify FAQBot Icon
     Verify Page Contains Element  ${KU_W_faqbot_icon}
