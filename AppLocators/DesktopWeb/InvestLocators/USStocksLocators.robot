@@ -36,7 +36,8 @@ ${e_invest_USStocks_transactStocksSubTitle} =  Buy an entire stock or a fraction
 ${e_invest_USStocks_buyBtn} =  Buy 
 ${e_invest_USStocks_importHoldingsBtn} =  Import holdings
 ${e_invest_USStocks_companyHeader_about} =  About 
- 
+${e_invest_USStocks_botQA_ques1} =  What if Kuvera or Vested shut down?
+
 # Application Locator 'KU_<locatorName>'
 # US Stocks Navigation Page
 # US Stocks
@@ -83,7 +84,7 @@ ${KU_W_invest_USStocks_goGlobalTitle} =  xpath=//div[@class='b-sign-invest__desc
 ${KU_W_invest_USStocks_goGlobalSubTitle} =  xpath=//div[@class='b-sign-invest__desc__content']
 ${KU_W_invest_USStocks_goGlobalStartTodayBtn} =  xpath=//button[@class='button-primary b-sign-invest__desc__btn']
 ${KU_W_invest_USStocks_goGlobalImg} =  xpath=//img[@class='b-sign-invest__img-title__item']
-${KU_W_invest_USStocks_botQAList} =  xpath=(//div[@class='qa-q-item-main'])[2]
+${KU_W_invest_USStocks_botQA1} =  xpath=(//div[@class='qa-q-item-title']/a)[1]
 ${KU_W_invest_USStocks_closeBanner} =  xpath=//div[@class='faq-bot-top-banner-cross']
 ${KU_W_invest_USStocks_faq_question1} =  xpath=(//div[@class='b-faq__list__content__question'])[1]
 ${KU_W_invest_USStocks_faq_question2} =  xpath=(//div[@class='b-faq__list__content__question'])[2]

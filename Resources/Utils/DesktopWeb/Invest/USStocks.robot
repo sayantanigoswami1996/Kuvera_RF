@@ -40,7 +40,9 @@ Verify US Stocks Landing Page
     Go Back 
     Verify US Stocks Landing Page Widgets
     
+
 Verify US Stocks Landing Page Widgets
+    Log To Console  US Stocks Home Screen
     Verify Element And Text  ${KU_W_invest_USStocksSubTitle}  ${e_invest_USStocks_subTitle}
     Verify Page Contains Image  ${KU_W_invest_USStocksLandingScreen_vestedLogo}
     Verify Element And Text  ${KU_W_invest_USStocks_signupDetail}  ${e_invest_USStocks_signupDetail}
@@ -157,10 +159,7 @@ Verify US Stocks Landing Page Widgets
     # View All
     Scroll Untill View  ${KU_W_invest_USStocks_faq_viewAll}
     Click Element  ${KU_W_invest_USStocks_faq_viewAll}
-    # Wait For Element Visibility  ${KU_W_invest_USStocks_botQAList}
-    # Verify Page Contains Element  ${KU_W_invest_USStocks_botQAList}
-    Wait For Element Visibility  ${KU_W_invest_USStocks_closeBanner}
-    Click Element  ${KU_W_invest_USStocks_closeBanner}
+    Verify Question And Close
     # Go Global with US stocks
     Scroll Untill View  ${KU_W_invest_USStocks_goGlobalTitle}
     Verify Element And Text  ${KU_W_invest_USStocks_goGlobalTitle}  ${e_invest_USStocks_goGlobalTitle}
@@ -178,14 +177,17 @@ Verify US Stocks Landing Page Widgets
     Go Back
     Sleep  1s
     Go Back
-
+    
 Verify FAQBot Icon
     Verify Page Contains Element  ${KU_W_faqbot_icon}
     Wait For Element Visibility  ${KU_W_faqbot_icon} 
     Click Element  ${KU_W_faqbot_icon}
+    Verify Question And Close
+
+Verify Question And Close
     Sleep  2s
-    # Wait For Element Visibility  ${KU_W_invest_USStocks_botQAList}
-    # Verify Page Contains Element  ${KU_W_invest_USStocks_botQAList}
+    # Wait For Element Visibility  ${KU_W_invest_USStocks_botQA1}
+    # Verify Element And Text  ${KU_W_invest_USStocks_botQA1}  ${e_invest_USStocks_botQA_ques1}
     Wait For Element Visibility  ${KU_W_invest_USStocks_closeBanner}
     Click Element  ${KU_W_invest_USStocks_closeBanner}
 
