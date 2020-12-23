@@ -15,8 +15,8 @@ Verify PreLogin Invest Landing Page
     Verify Element And Text  ${KU_W_invest_saveSmartTitle}  ${e_invest_saveSmartTitleText}
     Verify Element And Text  ${KU_W_invest_saveSmartSubTitle}  ${e_invest_saveSmartSubText} 
     Click Element   ${KU_W_invest_saveSmartTitle}
-    Log To Console  Save Smart From Tiles
-    Sleep  5s
+    Log To Console  Save Smart Tiles
+    Sleep  2s
     Wait For Element Visibility   ${KU_W_ss_screenTitle}
     Verify Element And Text  ${KU_W_ss_screenTitle}  ${e_invest_ss_screenText}
     Go Back
@@ -45,7 +45,7 @@ Verify PreLogin Invest Landing Page
     Verify Element And Text  ${KU_W_digitalGoldSubTitle}  ${e_invest_digitalGoldSubText}
     Verify Page Contains Image  ${KU_W_goldIconImage} 
     Click Element  ${KU_W_digitalGoldTitle}
-    Log To Console  Digital Gold From Tiles
+    Log To Console  Digital Gold Tiles
     Wait For Element Visibility  ${KU_W_dg_screenTitle} 
     Verify Element And Text  ${KU_W_dg_screenTitle}  ${e_invest_digiGold_screenText} 
     Go Back
@@ -60,12 +60,12 @@ Verify PreLogin Invest Landing Page
     Wait For Element Visibility  ${KU_W_equityIndexTitle}
     Verify Element And Text  ${KU_W_equityIndexTitle}  ${e_invest_equityIndexTitleText}
     Verify Element And Text  ${KU_W_equityIndexSubTitle}  ${e_invest_equityIndexSubText} 
-    # Verify Equity Index Landing Page
+    Verify Equity Index Landing Page
     # Sector Funds
     Wait For Element Visibility  ${KU_W_sectorFundsTitle}
     Verify Element And Text  ${KU_W_sectorFundsTitle}   ${e_invest_sectorFundsTitleText}
     Verify Element And Text  ${KU_W_sectorFundsSubTitle}  ${e_invest_sectorFundsSubTitleText} 
-    # Verify Sector Funds Landing Page
+    Verify Sector Funds Landing Page
     # Value Funds
     Wait For Element Visibility  ${KU_W_valueFundsTitle} 
     Verify Element And Text  ${KU_W_valueFundsTitle}  ${e_invest_valueFundsTitleText}
@@ -97,12 +97,16 @@ Verify PreLogin Invest Landing Page
     # Mutual Fund
     Verify Element And Text  ${KU_W_exploreMoreTitle}  ${e_invest_stock_exploreMoreTxt}
     Wait For Element Visibility  ${KU_W_mutualFund}
-    Sleep  2s
     Scroll Untill View  ${KU_W_mutualFund}
     Verify Element And Text  ${KU_W_mutualFund}  ${e_invest_mf_titleText} 
     Wait For Element Visibility  ${KU_W_mutualFund}
     Verify Mutual Fund Landing Page
-    Sleep  1s
+    # Digital Gold
+    Verify Element And Text  ${KU_W_digitalGold}  ${e_invest_digGold_titleText}
+    Click Element  ${KU_W_digitalGold}
+    Verify Digital Gold Landing Page
+    Reload Page
+    Sleep  2s
     # Stocks
     Scroll Untill View  ${KU_W_stocks}
     Wait For Element Visibility  ${KU_W_stocks}
@@ -113,6 +117,12 @@ Verify PreLogin Invest Landing Page
     Verify Element And Text  ${KU_W_USStocks}  ${e_invest_USStocks_titleText}
     Wait For Element Visibility  ${KU_W_USStocks}
     Verify US Stocks Landing Page
+    Sleep  1s
+    # Save Smart
+    Verify Element And Text  ${KU_W_saveSmart}  ${e_invest_ss_titleText}
+    Wait For Element Visibility  ${KU_W_saveSmart}
+    Click Element  ${KU_W_saveSmart}
+    Validate SaveSmart Landing Page
     
 Verify Watchlist Icon 
     [Arguments]   ${watchlistBtn}
