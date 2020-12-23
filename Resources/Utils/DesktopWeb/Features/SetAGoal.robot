@@ -59,6 +59,7 @@ Verify Question And Enter Input
 Navigate To Features Goals
     Wait For Element Visibility  ${KU_W_logo_signup}
     Click Element  ${KU_W_logo_signup}
+    Sleep  2s
     Wait For Element Visibility  ${KU_W_featureLink}
     Click Element  ${KU_W_featureLink}
     Wait For Element Visibility  ${KU_W_feature_setAGoalLink}
