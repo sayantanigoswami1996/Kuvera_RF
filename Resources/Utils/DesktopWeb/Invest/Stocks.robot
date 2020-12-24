@@ -68,6 +68,7 @@ Verify Search Stocks
     Click Element  ${KU_W_invest_stocks_clearSearchItem}
     Input Text  ${KU_W_invest_stocks_searchField}  ${e_invest_stocks_randomSearchStock}  clear=true
     Press Enter Key  ${KU_W_invest_stocks_searchField}
+    # Stability Issue needs to fixed on new release
     # Verify Page Contains Element  ${KU_W_invest_stocks_noSearchResult}
     # Verify Page Contains Image  ${KU_W_invest_stocks_noSearchResultImg}
     

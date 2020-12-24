@@ -115,3 +115,4 @@ Verify Mutual Fund Details Page
     Click Element  ${KU_W_invest_mf_AllFundsLink}
     Go Back
     Go Back
+    Go Back

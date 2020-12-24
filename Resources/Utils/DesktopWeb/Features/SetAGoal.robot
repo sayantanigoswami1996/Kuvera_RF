@@ -72,8 +72,11 @@ Verify Recommendation And Navigation
     Verify Element And Text  ${KU_W_feature_sg_almostDone}  ${e_feature_sg_almostDone}
     Scroll Untill View  ${KU_W_feature_sg_continue}
     Wait For Element Visibility  ${userFinancialProfile1}
+    Sleep  1s
     Click Element  ${userFinancialProfile1}
+    Sleep  1s
     Click Element  ${userFinancialProfile2}
+    Sleep  1s
     Click Element  ${userFinancialProfile3}
     Scroll Page To Location   0   5000
     Click Element  ${KU_W_feature_sg_continue}
