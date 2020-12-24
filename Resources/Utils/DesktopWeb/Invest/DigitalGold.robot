@@ -5,13 +5,8 @@ Library   SeleniumLibrary
 *** Keywords ***
 
 Verify Digital Gold Landing Page
-    Log To Console  Digital Gold Explore
-    Wait For Element Visibility  ${KU_W_investLink} 
-    Click Element  ${KU_W_investLink}
-    Sleep  1s
-    Scroll Untill View  ${KU_W_digitalGold}
-    Verify Element And Text  ${KU_W_digitalGold}  ${e_invest_digGold_titleText}
-    Click Element  ${KU_W_digitalGold}
+    Log To Console  Digital Gold - Explore More
+    Navigate To Invest Page And Verify Explore Options  ${KU_W_digitalGold}  ${e_invest_digGold}
     Verify Language Switch Login And Signup Link  
     Wait For Element Visibility  ${KU_W_dg_screenTitle}
     Verify Element And Text  ${KU_W_dg_screenTitle}  ${e_invest_digiGold_screenText} 
@@ -111,7 +106,7 @@ Verify Digital Gold Landing Page
     Wait For Element Visibility  ${KU_W_dg_addGoldBtn}
     Click Button  ${KU_W_dg_addGoldBtn}
     Verify Login Page  
-    #  Questions ? We are happy to help
+    #  Questions? We are happy to help
     Scroll Untill View  ${KU_W_dg_faqHeading}
     Verify Element And Text  ${KU_W_dg_faqHeading}  ${e_invest_faqTitleText} 
     Scroll Untill View  ${KU_W_dg_aboutUSLink}

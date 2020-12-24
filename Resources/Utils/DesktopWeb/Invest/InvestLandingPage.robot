@@ -5,7 +5,7 @@ Library     SeleniumLibrary
 *** Keywords ***
 
 Verify Invest Tiles
-    Wait For Element Visibility  ${KU_W_investLink}
+    Wait For Element Visibility  ${KU_W_investLink} 
     Click Element  ${KU_W_investLink}
     Sleep  1s
     Verify Language Switch Login And Signup Link
@@ -92,6 +92,10 @@ Verify Invest Tiles
     Verify Element And Text  ${KU_W_checkPremiumBtn}  ${e_invest_checkPremiumSubText}
     Click Element  ${KU_W_checkPremiumBtn} 
     Verify Element And Text   ${KU_W_insureHeaderTitle}  ${e_insure_headerTitleText}
+    Go Back
+    Scroll Untill View  ${KU_W_exploreMoreTitle}
+    Verify Element And Text  ${KU_W_exploreMoreTitle}  ${e_invest_stock_exploreMoreTxt}
+    Go Back
 
 Navigate To Invest Page And Verify Explore Options
     [Arguments]  ${option}  ${optionText}
@@ -100,7 +104,7 @@ Navigate To Invest Page And Verify Explore Options
     Scroll Page To Location  0  2000
     Verify Element And Text  ${option}  ${optionText}
     Wait Scroll And Click Element  ${option}
-
+    
 Verify Watchlist Icon 
     [Arguments]   ${watchlistBtn}
     Wait For Element Visibility  ${watchlistBtn}

@@ -34,7 +34,6 @@ Verify US Stocks Landing Page
     END
     Go Back 
     Verify US Stocks Landing Page Widgets
-    
 
 Verify US Stocks Landing Page Widgets
     Log To Console  US Stocks Home Screen
