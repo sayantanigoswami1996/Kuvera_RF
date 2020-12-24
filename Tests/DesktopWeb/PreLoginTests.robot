@@ -33,6 +33,31 @@ Login and Signup Page Navigation Test
     Go Back
 
 # Invest Landing Page Navigation
-Invest Landing Page Widgets Verification
+Invest Tiles And Widgets Navigation
     [Tags]  TC05
-    Verify PreLogin Invest Landing Page
+    Verify Invest Tiles
+
+# Invest Mutual Fund 
+Invest Mutual Fund Navigation
+    [Tags]  TC06
+    Verify Mutual Fund Landing Page
+
+# Invest Digital Gold
+Invest Stocks Navigation
+    [Tags]  TC07
+    Verify Digital Gold Landing Page
+
+# Invest Stocks
+Invest Stocks Navigation
+    [Tags]  TC08
+    Verify Stocks Landing Page
+
+# Invest US Stocks
+Invest US Stocks Navigation
+    [Tags]  TC08
+    Verify US Stocks Landing Page
+
+# Invest Save Smart
+Invest Stocks Navigation
+    [Tags]  TC08
+    Verify Save Smart Landing Page

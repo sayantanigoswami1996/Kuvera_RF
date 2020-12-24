@@ -6,14 +6,7 @@ Library     SeleniumLibrary
 
 Verify Stocks Landing Page
     Log To Console  Stocks
-    Scroll Untill View  ${KU_W_stocks}
-    Sleep  4s
-    Wait For Element Visibility  ${KU_W_stocks}
-    Verify Element And Text  ${KU_W_stocks}  ${e_invest_stocks_titleText}
-    Wait For Element Visibility  ${KU_W_stocks}
-    Click Element  ${KU_W_stocks}
-    Wait For Element Visibility  ${KU_W_invest_stocks_searchLabel}
-    Verify Element And Text  ${KU_W_invest_stocks_searchLabel}  ${e_invest_stocks_screenLabel}
+    Navigate To Invest Page And Verify Explore Options  ${KU_W_stocks}  ${e_invest_stocks}
     Verify Language Switch Login And Signup Link  
     Verify Search And Sort  ${KU_W_stocktopgainerindia_searchBar}  ${e_invest_stock_searchBarTxt}  ${KU_W_invest_stocktopgainerindia_searchTextField}  ${KU_W_invest_sort_topGainerAndIndia}
     Verify Element And Text  ${KU_W_invest_stocks_sortYear}  ${e_invest_stocks_sortYear}

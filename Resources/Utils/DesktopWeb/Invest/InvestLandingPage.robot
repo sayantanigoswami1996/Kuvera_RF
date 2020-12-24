@@ -4,9 +4,8 @@ Library     SeleniumLibrary
 
 *** Keywords ***
 
-Verify PreLogin Invest Landing Page
-    Wait For Element Visibility  ${KU_W_investLink} 
-    Click Element  ${KU_W_investLink} 
+Verify Invest Tiles
+    Navigate to Invest Page
     Sleep  1s
     Verify Language Switch Login And Signup Link
     # Save Smart
@@ -93,36 +92,17 @@ Verify PreLogin Invest Landing Page
     Click Element  ${KU_W_checkPremiumBtn} 
     Verify Element And Text   ${KU_W_insureHeaderTitle}  ${e_insure_headerTitleText}
     Go Back
-    # Lower Bar - Assets
-    # Mutual Fund
+    Scroll Untill View  ${KU_W_exploreMoreTitle}
     Verify Element And Text  ${KU_W_exploreMoreTitle}  ${e_invest_stock_exploreMoreTxt}
-    Wait For Element Visibility  ${KU_W_mutualFund}
-    Scroll Untill View  ${KU_W_mutualFund}
-    Verify Element And Text  ${KU_W_mutualFund}  ${e_invest_mf_titleText} 
-    Wait For Element Visibility  ${KU_W_mutualFund}
-    Verify Mutual Fund Landing Page
-    # Digital Gold
-    Verify Element And Text  ${KU_W_digitalGold}  ${e_invest_digGold_titleText}
-    Click Element  ${KU_W_digitalGold}
-    Verify Digital Gold Landing Page
-    Reload Page
-    Sleep  4s
-    # Stocks
-    Scroll Untill View  ${KU_W_stocks}
-    Wait For Element Visibility  ${KU_W_stocks}
-    Verify Element And Text  ${KU_W_stocks}  ${e_invest_stocks_titleText}
-    Wait For Element Visibility  ${KU_W_stocks}
-    Verify Stocks Landing Page
-    # US Stocks
-    Verify Element And Text  ${KU_W_USStocks}  ${e_invest_USStocks_titleText}
-    Wait For Element Visibility  ${KU_W_USStocks}
-    Verify US Stocks Landing Page
-    Sleep  1s
-    # Save Smart
-    Verify Element And Text  ${KU_W_saveSmart}  ${e_invest_ss_titleText}
-    Wait For Element Visibility  ${KU_W_saveSmart}
-    Click Element  ${KU_W_saveSmart}
-    Validate SaveSmart Landing Page
+    Go Back
+
+Navigate To Invest Page And Verify Explore Options
+    [Arguments]  ${option}  ${optionText}
+    Wait For Element Visibility  ${KU_W_investLink} 
+    Click Element  ${KU_W_investLink}
+    Scroll Page To Location  0  2000
+    Verify Element And Text  ${option}  ${optionText}
+    Wait Scroll And Click Element  ${option}
     
 Verify Watchlist Icon 
     [Arguments]   ${watchlistBtn}

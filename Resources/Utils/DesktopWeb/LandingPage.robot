@@ -36,7 +36,7 @@ Header Navigation
     FOR  ${j}  IN RANGE  1  ${elem}+1
         ${headers} =  Get Text  xpath=//div[@class='b-header__content__middle']/a[${j}]
         Log to console  ${headers}
-        Run keyword If  ['${headers}'] == ${invest}  Log To Console  InProgess
+        Run keyword If  ['${headers}'] == ${invest}  Log To Console  Covered in other test
         ...    ELSE IF  ['${headers}'] == ${loans}   Verify PreLogin Loans Page
         ...    ELSE IF  ['${headers}'] == ${insure}  Verify PreLogin Insure Page
         ...    ELSE IF  ['${headers}'] == ${remit}  Verify PreLogin Remit Page

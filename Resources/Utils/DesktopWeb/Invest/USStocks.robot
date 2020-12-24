@@ -6,10 +6,7 @@ Library     SeleniumLibrary
 
 Verify US Stocks Landing Page
     Log To Console  US Stocks
-    Scroll Untill View  ${KU_W_USStocks}
-    Sleep  3s
-    Wait For Element Visibility  ${KU_W_USStocks}
-    Click Element  ${KU_W_USStocks}
+    Navigate To Invest Page And Verify Explore Options  ${KU_W_USStocks}  ${e_invest_USStocks}
     Wait For Element Visibility  ${KU_W_invest_USStocksTitle}
     Verify Element And Text  ${KU_W_invest_USStocksTitle}  ${e_invest_USStocks_title}
     Verify Language Switch Login And Signup Link 
@@ -24,7 +21,7 @@ Verify US Stocks Landing Page
     Verify Login Page
     Verify Filter For US Stocks
     Wait For Element Visibility  ${KU_W_faqbot_icon}
-    Run Keyword If  "${ENV}" == "prod"  Verify Page Contains Element  ${KU_W_faqbot_icon}
+    Run Keyword If  ${ENV} == ${e_prod}  Verify Page Contains Element  ${KU_W_faqbot_icon}
     ...  ELSE  Log To Console  Staging
     Verify Filter Navigation For USStocks USETF and 52WkHighUS  ${KU_W_invest_USStocksUSETFAnd52WUS_watchListHeader}  ${e_invest_USStocksUSETFAnd52WUS_watchlistHeader}  ${e_invest__52WHighLow_UTF_sortYearText}  ${KU_W_invest_USStocksUSETFAnd52WUS_watchlistBtn}
     Wait For Element Visibility  ${KU_W_invest_USStocks_exploreBtn}
@@ -39,7 +36,6 @@ Verify US Stocks Landing Page
     END
     Go Back 
     Verify US Stocks Landing Page Widgets
-    
 
 Verify US Stocks Landing Page Widgets
     Log To Console  US Stocks Home Screen
@@ -168,7 +164,7 @@ Verify US Stocks Landing Page Widgets
     Click Element  ${KU_W_invest_USStocks_goGlobalStartTodayBtn}
     Verify Login Page
     Verify Page Contains Image  ${KU_W_invest_USStocks_goGlobalImg}
-    Run Keyword If  "${ENV}" == "prod"  Verify FAQBot Icon
+    Run Keyword If  ${ENV} == ${e_prod}  Verify FAQBot Icon
     ...  ELSE  Log To Console  Staging
     Verify Google Play & Apple Store Icons
     Sleep  3s
