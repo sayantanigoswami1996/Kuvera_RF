@@ -45,7 +45,7 @@ Invest Mutual Fund Navigation
     Verify Mutual Fund Landing Page
     
 # Invest Digital Gold
-Invest Stocks Navigation
+Invest Digital Gold Navigation
     [Tags]  TC07
     Verify Digital Gold Landing Page
     
