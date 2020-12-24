@@ -5,7 +5,8 @@ Library     SeleniumLibrary
 *** Keywords ***
 
 Verify Invest Tiles
-    Navigate to Invest Page
+    Wait For Element Visibility  ${KU_W_investLink} 
+    Click Element  ${KU_W_investLink}
     Sleep  1s
     Verify Language Switch Login And Signup Link
     # Save Smart

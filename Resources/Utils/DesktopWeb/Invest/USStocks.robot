@@ -21,7 +21,7 @@ Verify US Stocks Landing Page
     Verify Login Page
     Verify Filter For US Stocks
     Wait For Element Visibility  ${KU_W_faqbot_icon}
-    Run Keyword If  ${ENV} == ${e_prod}  Verify Page Contains Element  ${KU_W_faqbot_icon}
+    Run Keyword If  '${ENV}' == '${e_prod}'  Verify Page Contains Element  ${KU_W_faqbot_icon}
     ...  ELSE  Log To Console  Staging
     Verify Filter Navigation For USStocks USETF and 52WkHighUS  ${KU_W_invest_USStocksUSETFAnd52WUS_watchListHeader}  ${e_invest_USStocksUSETFAnd52WUS_watchlistHeader}  ${e_invest__52WHighLow_UTF_sortYearText}  ${KU_W_invest_USStocksUSETFAnd52WUS_watchlistBtn}
     Wait For Element Visibility  ${KU_W_invest_USStocks_exploreBtn}
@@ -164,7 +164,7 @@ Verify US Stocks Landing Page Widgets
     Click Element  ${KU_W_invest_USStocks_goGlobalStartTodayBtn}
     Verify Login Page
     Verify Page Contains Image  ${KU_W_invest_USStocks_goGlobalImg}
-    Run Keyword If  ${ENV} == ${e_prod}  Verify FAQBot Icon
+    Run Keyword If  '${ENV}' == '${e_prod}'  Verify FAQBot Icon
     ...  ELSE  Log To Console  Staging
     Verify Google Play & Apple Store Icons
     Sleep  3s

@@ -16,7 +16,7 @@ Verify Stocks Landing Page
     Verify Filter For Stocks
     Verify Search Stocks
     Wait For Element Visibility  ${KU_W_faqbot_icon}
-    Run Keyword If  "${ENV}" == "prod"  Verify Page Contains Element  ${KU_W_faqbot_icon}
+    Run Keyword If  '${ENV}' == '${e_prod}'  Verify Page Contains Element  ${KU_W_faqbot_icon}
     ...  ELSE  Log To Console  Staging
     Verify Filter Navigation For Stocks TopGainer and 52 WkHighIndia  ${KU_W_invest_stocks_topGainerAndIndia_watchListHeader}  ${e_invest_stocks_watchlistHeader}   ${e_invest__52WHighLow_UTF_sortYearText}  ${KU_W_invest_stocks_topGainerAndIndia_watchListBtn}
     Click Element  ${KU_W_stocks}
@@ -94,7 +94,7 @@ Verify Stock Details Screen
     Verify Login Page
     # FAQ
     Wait For Element Visibility  ${KU_W_faqbot_icon}
-    Run Keyword If  "${ENV}" == "prod"  Verify Page Contains Element  ${KU_W_faqbot_icon}
+    Run Keyword If  '${ENV}' == '${e_prod}'  Verify Page Contains Element  ${KU_W_faqbot_icon}
     ...  ELSE  Log To Console  Staging
     # Graph Section
     Verify Performance Chart For Stocks And US Stocks  ${KU_W_invest_stocks_performanceChart}
