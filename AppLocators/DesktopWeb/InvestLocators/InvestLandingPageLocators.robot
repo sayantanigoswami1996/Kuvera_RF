@@ -57,7 +57,7 @@ ${e_invest_USStocksUSETFAnd52WUS_watchlistHeader} =  Track your favorite stocks 
 ${e_invest_US_stocks_defaultFilter} =  Sector       		
 # Application Locator 'KU_<locatorName>'
 # Invest Landing Navigation Page
-${KU_W_investLink} =  xpath=//a[@class='b-header__content__invest cursor-pointer']
+${KU_W_investLink} =  xpath=//a[contains(text(),'Invest')]
 ${KU_W_invest_saveSmartTitle} =  xpath=(//div[@class='k-cls b-invest-card']/h6)[1]
 ${KU_W_invest_saveSmartSubTitle} =  xpath=(//div[@class='k-cls b-invest-card']/p)[1]
 ${KU_W_giltFundsTitle} =  xpath=(//div[@class='k-cls b-invest-card']/h6)[3]

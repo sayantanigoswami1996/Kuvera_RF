@@ -160,6 +160,7 @@ Wait Scroll And Click Element
     [Arguments]  ${element}
     Wait For Element Visibility  ${element}
     Scroll Untill View  ${element}
+    sleep  1s
     Click Element  ${element}
 
 Compare Text Values
