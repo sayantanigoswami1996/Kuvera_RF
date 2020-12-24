@@ -1,7 +1,7 @@
 *** Variables *** 
 # Application Expected Values 'e_<variableName>'
 # Stocks
-${e_invest_stocks_screenLabel} =  Search stocks
+${e_invest_stocks_searchLabel} =  Search stocks
 ${e_invest_stocks_sortYear} =  1Y            
 ${e_invest_stocks_basicMaterialFilter} =  Basic Materials
 ${e_invest_stocks_searchStock} =  Dha

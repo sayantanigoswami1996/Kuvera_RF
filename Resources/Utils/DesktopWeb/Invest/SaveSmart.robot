@@ -6,7 +6,7 @@ Library     SeleniumLibrary
 
 Validate SaveSmart Landing Page
     Log To Console  Save Smart Explore
-    Wait For Element Visibility  ${KU_W_ss_screenTitle}
+    Navigate To Invest Page And Verify Explore Options  ${KU_W_saveSmart}  ${e_invest_saveSmart}
     Verify Language Switch Login And Signup Link
     Verify Element And Text  ${KU_W_ss_screenTitle}  ${e_invest_ss_screenText}
     Input Text  ${KU_W_ss_inputAmount}  ${e_invest_ss_amount}

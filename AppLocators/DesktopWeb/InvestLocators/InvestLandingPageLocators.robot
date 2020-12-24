@@ -20,8 +20,8 @@ ${e_invest_sectorFundsTitleText} =   Sector Funds
 ${e_invest_sectorFundsSubTitleText} =  Pharma, Tech & more
 ${e_invest_valueFundsTitleText} =   Value funds
 ${e_invest_valueFundsSubTitleText} =  Invest in stocks selling below their intrinsic or book value.
-${e_invest_topGainersTitleText} =  Top Gainers
-${e_invest_topGainersSubTitleText} =  Indian stocks
+${e_invest_cryptoTitleText} =   Crypto
+${e_invest_cryptoSubTitleText} =  BTC, ETF et al. Join the crypto revolution
 ${e_invest_52WHighIndiaTitleText} =   52 Wk High India
 ${e_invest_52WHighIndiaSubTitleText} =  Momentum stocks in India
 ${e_invest_52WHighIndiaUS_screenText} =   52W high 
@@ -31,11 +31,11 @@ ${e_invest_healthPremiumTitleText} =  Get ₹50L health cover starting at ₹900
 ${e_invest_checkPremiumSubText} =  Check premium     
 ${e_invest_mf_titleText} =  Mutual\nfunds
 ${e_invest_searchBarText} =  Search funds 
-${e_invest_digGold_titleText} =  Digital\ngold
-${e_invest_stocks_titleText} =  Stocks
+${e_invest_digGold} =  Digital\ngold
+${e_invest_stocks} =  Stocks
 ${e_invest_stocks_screenText} =  Search stocks
-${e_invest_USStocks_titleText} =  US\nstocks
-${e_invest_ss_titleText} =   Save\nsmart
+${e_invest_USStocks} =  US\nstocks
+${e_invest_saveSmart} =   Save\nsmart
 ${e_invest_amazonSave_titleText} =  Amazon\nsave
 ${e_invest_amazonSave_screenText} =  4 simple steps to qualify for 3% extra for your shopping on Amazon.in
 ${e_invest_sortBtnText} =  Sort by				
@@ -77,8 +77,8 @@ ${KU_W_equityIndexTitle} =  xpath=(//h6[@class='b-invest-tile__title'])[6]
 ${KU_W_equityIndexSubTitle} =  xpath=(//p[@class='b-invest-tile__para'])[7]
 ${KU_W_sectorFundsTitle} =  xpath=(//h6[@class='b-invest-tile__title'])[7]
 ${KU_W_sectorFundsSubTitle} =  xpath=(//p[@class='b-invest-tile__para'])[9]
-${KU_W_topGainerTitle} =  xpath=(//div[@class='k-cls b-invest-card']/h6)[7]
-${KU_W_topGainerSubTitle} =  xpath=(//div[@class='k-cls b-invest-card']/p)[7]
+${KU_W_cryptoTitle} =  xpath=//h6[contains(text(),'Crypto')]
+${KU_W_cryptoSubTitle} =  xpath=(//p[@class='b-invest-tile__para'])[10]
 ${KU_W_valueFundsTitle} =  xpath=(//div[@class='k-cls b-invest-card']/h6)[8]
 ${KU_W_valueFundsSubTitle} =  xpath=(//div[@class='k-cls b-invest-card']/p)[8]
 ${KU_W_52WHighIndiaTitle} =  xpath=(//h6[@class='b-invest-tile__title'])[10]
@@ -100,16 +100,16 @@ ${KU_W_saveSmart} =  xpath=(//div[@class='b-asset-cta__title'])[5]
 ${KU_W_amazonSave} =  xpath=(//div[@class='b-asset-cta__title'])[6]
 ${KU_W_amazonSaveScreen} =  xpath=//div[@class='b-festive-fund-no-investment__text']
 ${KU_W_invest_sortYear} =  xpath=//div[@class='default-message']
-${KU_W_stocktopgainerindia_searchBar} =  xpath=(//div[@class='b-explore-stock__action-title'])[1]
-${KU_W_USStocksETF52WUS_searchBar} =  xpath=(//div[@class='b-action-bar__search__header'])[1]
+${KU_W_stockAnd52WIndia_searchBar} =  xpath=(//div[@class='b-explore-stock__action-title'])[1]
+${KU_W_US_SETF52WUS_searchBar} =  xpath=(//div[@class='b-action-bar__search__header'])[1]
 ${KU_W_invest_searchTextFieldForFunds} =  xpath=//div[@class='b-search-fund__bar']
-${KU_W_invest_USStocksETFAnd52WUS_searchTextField} =  xpath=//div[@class='b-action-bar__search__item']
-${KU_W_invest_stocktopgainerindia_searchTextField} =  xpath=//div[@class='b-search-stock__bar']
+${KU_W_invest_US_SETFAnd52WUS_searchTextField} =  xpath=//div[@class='b-action-bar__search__item']
+${KU_W_invest_stockAndindia_searchTextField} =  xpath=//div[@class='b-search-stock__bar']
 ${KU_W_invest_sort} =  xpath=(//div[@class='b-explore-fund__action-title'])[2]
-${KU_W_invest_sort_USStocks_UTF_USA} =  xpath=//div[@class='b-action-bar__sort__header']
-${KU_W_invest_sort_topGainerAndIndia} =  xpath=(//div[@class='b-explore-stock__action-title'])[2]
+${KU_W_invest_sort_US_S_UTF_USA} =  xpath=//div[@class='b-action-bar__sort__header']
+${KU_W_invest_sort_52WIndia} =  xpath=(//div[@class='b-explore-stock__action-title'])[2]
 ${KU_W_filter} =  xpath=//span[@class='b-explore-fund__action-title b-explore-fund__filter-action-title']
-${KU_W_filterText_topGainerAndIndia} =  xpath=//span[@class='b-explore-stock__action-title b-explore-stock__filter-action-title']
+${KU_W_filterText_52WIndia} =  xpath=//span[@class='b-explore-stock__action-title b-explore-stock__filter-action-title']
 ${KU_W_filterText_UTFAnd52WkHighUS} =  xpath=//div[@class='b-action-bar__filter__header__label']
 ${KU_W_clearAll} =  xpath=//div[@class='b-explore-fund__clear-all']
 ${KU_W_exploreMoreTitle} =  xpath=//div[@class='b-explore-assets__subheading']
@@ -134,11 +134,11 @@ ${KU_W_invest_stocks_gainers} =  xpath=//div[contains(text(),'Gainers')]
 ${KU_W_invest_stocks_52WHigh} =  xpath=//div[contains(text(),'52W high')]
 ${KU_W_invest_stocks_52WLow} =  xpath=//div[contains(text(),'52W low')]
 ${KU_W_invest_52WLow_noStocksAvailable} =  xpath=//div[@class='b-stocks-filter-no-results-found disable-browser-text-select']
-${KU_W_invest_stocks_topGainerAndIndia_watchListBtn} =  xpath=(//div[@class='b-stocks-explore__stock-row-watchlist'])[1]
-${KU_W_invest_stocks_topGainerAndIndia_watchListHeader} =  xpath=//div[@class='b-stock-watchlist-tab__not-logged-in--text']
+${KU_W_invest_stocks_52WIndia_watchListBtn} =  xpath=(//div[@class='b-stocks-explore__stock-row-watchlist'])[1]
+${KU_W_invest_stocks_52WIndia_watchListHeader} =  xpath=//div[@class='b-stock-watchlist-tab__not-logged-in--text']
 ${KU_W_invest_52WHighLow_allStockLink} =  xpath=//div[@class='b-stocks-filter__redirect-link disable-browser-text-select']
-${KU_W_invest_USStocksUSETFAnd52WUS_watchlistBtn} =  xpath=(//img[contains(@class,'b-stock-item')])[1]
-${KU_W_invest_USStocksUSETFAnd52WUS_watchListHeader} =  xpath=//div[@class='b-stock-items__watchlist-banner__track-msg']
+${KU_W_invest_US_SETFAnd52WUS_watchlistBtn} =  xpath=(//img[contains(@class,'b-stock-item')])[1]
+${KU_W_invest_US_SETFAnd52WUS_watchListHeader} =  xpath=//div[@class='b-stock-items__watchlist-banner__track-msg']
 ${KU_W_invest_noStocksForUTFAnd52WUS} =  xpath=//div[@class='b-zero-item__label']
 ${KU_W_invest_allStockLinkForUTFAnd52WUS} =  xpath=//div[@class='b-zero-item__btn']
 ${KU_W_invest_US_stocks_exploreTags} =  xpath=//div[@class='b-explore-tags__container']

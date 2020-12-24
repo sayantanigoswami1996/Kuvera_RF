@@ -17,13 +17,14 @@ Resource    ../../../AppLocators/DesktopWeb/InvestLocators/SectorFundsLocators.r
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/ValueFundsLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/ELSSTaxSaverLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/BankPSUBondsLocators.robot
-Resource    ../../../AppLocators/DesktopWeb/InvestLocators/TopGainersLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/InvestLocators/CryptoLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/ELSSTaxSaverLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/USETFLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/UltraShortLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/MutualFundsLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/StocksLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/USStocksLocators.robot
+
 *** Keywords ***
 
 Launch URL
@@ -32,7 +33,7 @@ Launch URL
     Set Window Size  ${1920}  ${1080}
     Reload Page
     Kuvera Web Close Regulatory Disclosure
-    Run Keyword If    "${ENV}" == "prod"  Close Hello Bar
+    Run Keyword If    '${ENV}' == '${e_prod}'  Close Hello Bar
     ...    ELSE   Log To Console  Staging
 
 Welcome Page Should Be Open
@@ -103,7 +104,7 @@ Kuvera Web Close Regulatory Disclosure
     Click Element  ${KU_W_close}
 
 Close Hello Bar
-    Sleep  10s
+    Sleep  15s
     Wait Until Element Is Visible  ${KU_W_bannerFrame}  timeout=40
     Switch To Frame  ${KU_W_bannerFrame}
     Wait For Element Visibility  ${KU_W_bannerCloseBtn}
@@ -169,5 +170,27 @@ Verify Screen Title
     [Arguments]  ${title}
     Title Should Be  ${title}
 
+Verify Presence Of FAQBOT Icon
+    Run Keyword If  '${ENV}' == '${e_prod}'  Verify Page Contains Element  ${KU_W_faqbot_icon}
+    ...    ELSE  Log To Console  Staging
+
+Verify Question On FAQBOT Icon
+    [Arguments]  ${botButon}  ${question}
+    Run Keyword If  '${ENV}' == '${e_prod}'  Open Bot And Validate Question  ${botButon}  ${question}
+    ...    ELSE  Log To Console  Staging
+
+Open Bot And Validate Question
+    [Arguments]  ${botButon}  ${question}
+    Verify Page Contains Element  ${botButon}
+    Wait For Element Visibility  ${botButon} 
+    Click Element  ${botButon}
+    Sleep  2s
+    Switch To Frame  ${KU_W_faqbotFrame}
+    Wait For Element Visibility  ${KU_W_faqbotQA1}
+    Verify Element And Text  ${KU_W_faqbotQA1}  ${question}
+    Unselect Frame
+    Wait For Element Visibility  ${KU_W_faqbotCloseBanner}
+    Click Element  ${KU_W_faqbotCloseBanner}
+    
 Close Web Application
     Close All Browser

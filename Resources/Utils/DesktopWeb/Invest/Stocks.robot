@@ -6,16 +6,9 @@ Library     SeleniumLibrary
 
 Verify Stocks Landing Page
     Log To Console  Stocks
-    Scroll Untill View  ${KU_W_stocks}
-    Sleep  4s
-    Wait For Element Visibility  ${KU_W_stocks}
-    Verify Element And Text  ${KU_W_stocks}  ${e_invest_stocks_titleText}
-    Wait For Element Visibility  ${KU_W_stocks}
-    Click Element  ${KU_W_stocks}
-    Wait For Element Visibility  ${KU_W_invest_stocks_searchLabel}
-    Verify Element And Text  ${KU_W_invest_stocks_searchLabel}  ${e_invest_stocks_screenLabel}
+    Navigate To Invest Page And Verify Explore Options  ${KU_W_stocks}  ${e_invest_stocks}
     Verify Language Switch Login And Signup Link  
-    Verify Search And Sort  ${KU_W_stocktopgainerindia_searchBar}  ${e_invest_stock_searchBarTxt}  ${KU_W_invest_stocktopgainerindia_searchTextField}  ${KU_W_invest_sort_topGainerAndIndia}
+    Verify Search And Sort  ${KU_W_stockAnd52WIndia_searchBar}  ${e_invest_stock_searchBarTxt}  ${KU_W_invest_stockAndindia_searchTextField}  ${KU_W_invest_sort_52WIndia}
     Verify Element And Text  ${KU_W_invest_stocks_sortYear}  ${e_invest_stocks_sortYear}
     Verify Page Contains Element  ${KU_W_invest_stocks_stockPrice}
     Verify Page Contains Element  ${KU_W_invest_stocks_filteredTag}
@@ -23,14 +16,13 @@ Verify Stocks Landing Page
     Verify Filter For Stocks
     Verify Search Stocks
     Wait For Element Visibility  ${KU_W_faqbot_icon}
-    Run Keyword If  "${ENV}" == "prod"  Verify Page Contains Element  ${KU_W_faqbot_icon}
-    ...  ELSE  Log To Console  Staging
-    Verify Filter Navigation For Stocks TopGainer and 52 WkHighIndia  ${KU_W_invest_stocks_topGainerAndIndia_watchListHeader}  ${e_invest_stocks_watchlistHeader}   ${e_invest__52WHighLow_UTF_sortYearText}  ${KU_W_invest_stocks_topGainerAndIndia_watchListBtn}
+    Verify Presence Of FAQBOT Icon
+    Verify Filter Navigation For Stocks And 52 WkHighIndia  ${KU_W_invest_stocks_52WIndia_watchListHeader}  ${e_invest_stocks_watchlistHeader}  ${e_invest__52WHighLow_UTF_sortYearText}  ${KU_W_invest_stocks_52WIndia_watchListBtn}
     Click Element  ${KU_W_stocks}
     Sleep  1s
-    Wait For Element Visibility  ${KU_W_invest_stocks_topGainerAndIndia_watchListBtn}
-    Verify Watchlist Icon  ${KU_W_invest_stocks_topGainerAndIndia_watchListBtn}  
-    Verify Login Page    
+    Wait For Element Visibility  ${KU_W_invest_stocks_52WIndia_watchListBtn}
+    Verify Watchlist Icon  ${KU_W_invest_stocks_52WIndia_watchListBtn}  
+    Verify Login Page 
     # Iterate the Stocks detail screen
     FOR  ${i}  IN RANGE  1  6
         @{stockName} =  Get Json Values  $.Stocks.f${i}  Resources/TestData/Stocks.json 
@@ -44,8 +36,8 @@ Verify Stocks Landing Page
 Search Stocks and Verify 
     # Verify Search functionality
     [Arguments]  ${stockName}
-    Wait For Element Visibility  ${KU_W_invest_stocktopgainerindia_searchTextField}
-    Click Element  ${KU_W_invest_stocktopgainerindia_searchTextField}
+    Wait For Element Visibility  ${KU_W_invest_stockAndindia_searchTextField}
+    Click Element  ${KU_W_invest_stockAndindia_searchTextField}
     Input Text  ${KU_W_invest_stocks_searchField}  ${stockName}  clear=true
     Press Enter Key  ${KU_W_invest_stocks_searchField}
     Sleep  2s
@@ -66,8 +58,8 @@ Verify Filter For Stocks
     Verify Element And Text  ${KU_W_invest_stocks_defaultFilter}  ${e_invest_US_stocks_defaultFilter}
 
 Verify Search Stocks
-    Wait For Element Visibility  ${KU_W_invest_stocktopgainerindia_searchTextField}
-    Click Element  ${KU_W_invest_stocktopgainerindia_searchTextField}
+    Wait For Element Visibility  ${KU_W_invest_stockAndindia_searchTextField}
+    Click Element  ${KU_W_invest_stockAndindia_searchTextField}
     Wait For Element Visibility  ${KU_W_invest_stocks_searchField}
     Input Text  ${KU_W_invest_stocks_searchField}  ${e_invest_stocks_searchStock}
     Wait For Element Visibility  ${KU_W_invest_stocks_stockName}
@@ -76,8 +68,8 @@ Verify Search Stocks
     Click Element  ${KU_W_invest_stocks_clearSearchItem}
     Input Text  ${KU_W_invest_stocks_searchField}  ${e_invest_stocks_randomSearchStock}  clear=true
     Press Enter Key  ${KU_W_invest_stocks_searchField}
-    Verify Page Contains Element  ${KU_W_invest_stocks_noSearchResult}
-    Verify Page Contains Image  ${KU_W_invest_stocks_noSearchResultImg}
+    # Verify Page Contains Element  ${KU_W_invest_stocks_noSearchResult}
+    # Verify Page Contains Image  ${KU_W_invest_stocks_noSearchResultImg}
     
 Verify Stock Details Screen
     [Arguments]  ${stockLink}
@@ -101,8 +93,7 @@ Verify Stock Details Screen
     Verify Login Page
     # FAQ
     Wait For Element Visibility  ${KU_W_faqbot_icon}
-    Run Keyword If  "${ENV}" == "prod"  Verify Page Contains Element  ${KU_W_faqbot_icon}
-    ...  ELSE  Log To Console  Staging
+    Verify Presence Of FAQBOT Icon
     # Graph Section
     Verify Performance Chart For Stocks And US Stocks  ${KU_W_invest_stocks_performanceChart}
     # Live Market Hours is pending
