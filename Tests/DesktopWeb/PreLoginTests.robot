@@ -18,20 +18,17 @@ Landing Page Widgets Verification Test
 # Header navigation - Insure, Loans, Remit
 Header Navigation Test  
     [Tags]  TC02
-    Navigate To Landing Page
     Header Navigation
 
 # Features sub headers navigation & goals - questionnaire
 Features Header Navigation Test
     [Tags]  TC03
-    Navigate To Landing Page
     Feature Sub Header Navigation
     
 
 # Verify all widgets in Login & Signup Page
 Login and Signup Page Navigation Test
     [Tags]  TC04
-    Navigate To Landing Page
     Verify Login Page Widgets
     Go Back
     Verify Signup Page Widgets
