@@ -23,6 +23,7 @@ Verify Mutual Fund Landing Page
 Search Fund and Verify 
     # Verify Search functionality
     [Arguments]  ${fundName}
+    Wait For Element Visibility  ${KU_W_searchBarForFunds}
     Click Element  ${KU_W_searchBarForFunds}
     Input Text  ${KU_W_invest_mf_searchBar}  ${fundName}  clear=true
     Press Enter Key  ${KU_W_invest_mf_searchBar}
