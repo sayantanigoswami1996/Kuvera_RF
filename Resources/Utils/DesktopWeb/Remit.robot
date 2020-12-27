@@ -2,6 +2,7 @@
 Library     SeleniumLibrary
 
 *** Keywords ***
+
 Verify Transfer Now
     [Arguments]  ${element}
     sleep  1s
@@ -10,7 +11,7 @@ Verify Transfer Now
     Wait For Element Visibility  ${KU_W_transferWiseNextStepsContinueBtn}
     Click Element  ${KU_W_transferWiseNextStepsContinueBtn}
     Switch To Window Verify Title And Close  ${e_remit_transferWiseCross-borderTitle}
-
+    
 Verify PreLogin Remit Page
     Wait For Element Visibility  ${KU_W_remit_Link}
     Click Element  ${KU_W_remit_Link}
