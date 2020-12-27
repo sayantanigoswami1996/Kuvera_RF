@@ -13,6 +13,7 @@ Resource    ../../../AppLocators/DesktopWeb/InvestLocators/SaveSmartLocators.rob
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/DigitalGoldLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/GiltFundsLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/EquityIndexLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/InvestLocators/SectorFundsLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/ValueFundsLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/ELSSTaxSaverLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/BankPSUBondsLocators.robot
