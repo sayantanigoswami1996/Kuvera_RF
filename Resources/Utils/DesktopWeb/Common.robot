@@ -158,9 +158,9 @@ Scroll Page To Location
 
 Wait Scroll And Click Element
     [Arguments]  ${element}
+    Sleep  1s
     Wait For Element Visibility  ${element}
     Scroll Untill View  ${element}
-    sleep  1s
     Click Element  ${element}
 
 Compare Text Values

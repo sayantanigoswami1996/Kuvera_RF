@@ -95,10 +95,10 @@ Verify Invest Tiles
     Go Back
     Scroll Untill View  ${KU_W_exploreMoreTitle}
     Verify Element And Text  ${KU_W_exploreMoreTitle}  ${e_invest_stock_exploreMoreTxt}
-    Go Back
 
 Navigate To Invest Page And Verify Explore Options
     [Arguments]  ${option}  ${optionText}
+    Sleep  1s
     Wait For Element Visibility  ${KU_W_investLink} 
     Click Element  ${KU_W_investLink}
     Scroll Page To Location  0  2000

@@ -86,7 +86,7 @@ ${KU_W_52WHighIndiaSubTitle} =  xpath=(//p[@class='b-invest-tile__para'])[12]
 ${KU_W_52WHighIndia_screenText} =   xpath=//div[@class='b-stocks-explore__tab-wrapper disable-browser-text-select']//div[5]
 ${KU_W_52WHighUSTitle} =  xpath=(//div[@class='k-cls b-invest-card']/h6)[9]
 ${KU_W_52WHighUSSubTitle} =  xpath=(//div[@class='k-cls b-invest-card']/p)[9]
-${KU_W_52WHighUS_screenText} =   xpath=//div[@class='disable-browser-text-select b-standard-tab__item b-standard-tab__item--active b-standard-tab__item--52-week-high']
+${KU_W_52WHighUS_screenText} =  xpath=//div[@class='disable-browser-text-select b-standard-tab__item b-standard-tab__item--active b-standard-tab__item--52-week-high']
 ${KU_W_healthPremiumTitle} =  xpath=//div[@class='b-invest-landing__other-container']//div[1]/p
 ${KU_W_checkPremiumBtn} =  xpath=//h6[contains(.,'Check premium')]
 ${KU_W_mutualFund} =  xpath=(//div[@class='b-asset-cta__title'])[1]
