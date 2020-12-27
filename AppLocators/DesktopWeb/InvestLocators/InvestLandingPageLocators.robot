@@ -54,7 +54,10 @@ ${e_invest__newfunds_openSwitchText} =  Open Ended
 ${e_invest_watchlistHeader} =  Login to track your favorite funds by adding them to your watch list.	
 ${e_invest_stocks_watchlistHeader} =  Login to track your favorite stocks by adding them to your watch list.	
 ${e_invest_USStocksUSETFAnd52WUS_watchlistHeader} =  Track your favorite stocks by adding them to your watch list.
-${e_invest_US_stocks_defaultFilter} =  Sector       		
+${e_invest_US_stocks_defaultFilter} =  Sector  
+
+${e_invest_sectorFunds_screenText} =  Sectoral/Thematic
+${e_invest_sectorFunds_filteredFundText} =  Equity     		
 # Application Locator 'KU_<locatorName>'
 # Invest Landing Navigation Page
 ${KU_W_investLink} =  xpath=//a[contains(text(),'Invest')]
