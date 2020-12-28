@@ -189,6 +189,7 @@ Verify Filter Navigation For Stocks And 52 WkHighIndia
     # 52Whigh
     Click Element  ${KU_W_invest_stocks_52WHigh}
     Verify Element And Text  ${KU_W_invest_sortYear}  ${sortYearFor52High}
+    Sleep  2s
     Wait For Element Visibility  ${watchListBtn}
     Verify Page Contains Element  ${watchListBtn}
     # 52Wlow
