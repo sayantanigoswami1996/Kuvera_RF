@@ -84,10 +84,9 @@ Verify US Stocks Landing Page Widgets
     Verify Element And Text  ${KU_W_invest_USStocks_zeroBrokerageDesc}  ${e_invest_USStocks_zeroBrokerageDesc}
     Verify Page Contains Image  ${KU_W_invest_USStocks_zeroCommissionImg}
     Verify Page Contains Image  ${KU_W_invest_USStocks_zeroBrokInfoLink}
-    Sleep  2s
+    Sleep  4s
     Wait For Element Visibility  ${KU_W_invest_USStocks_zeroBrokInfoLink}
     Click Element  ${KU_W_invest_USStocks_zeroBrokInfoLink}
-    Wait For Element Visibility  ${KU_W_invest_USStocks_zeroBrokInfoMsg}
     Verify Element And Text  ${KU_W_invest_USStocks_zeroBrokInfoMsg}  ${e_invest_USStocks_zeroBrokInfoMsg}
     Sleep  2s
     Wait For Element Visibility  ${KU_W_invest_USStocks_learnMorePopupLink}
