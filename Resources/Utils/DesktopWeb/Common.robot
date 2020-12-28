@@ -29,9 +29,9 @@ Resource    ../../../AppLocators/DesktopWeb/InvestLocators/USStocksLocators.robo
 
 Launch URL
     Open Browser  ${URL}  ${BROWSER}  alias=Kuvera
-    # Maximize Browser Window
-    Set Window Size  ${1920}  ${1080}
-    Reload Page
+    Maximize Browser Window
+    #Set Window Size  ${1920}  ${1080}
+    #Reload Page
     Kuvera Web Close Regulatory Disclosure
     Run Keyword If    "${ENV}" == "prod"  Close Hello Bar
     ...    ELSE   Log To Console  Staging
@@ -104,7 +104,7 @@ Kuvera Web Close Regulatory Disclosure
     Click Element  ${KU_W_close}
 
 Close Hello Bar
-    Sleep  10s
+    Sleep  15s
     Wait Until Element Is Visible  ${KU_W_bannerFrame}  timeout=40
     Switch To Frame  ${KU_W_bannerFrame}
     Wait For Element Visibility  ${KU_W_bannerCloseBtn}

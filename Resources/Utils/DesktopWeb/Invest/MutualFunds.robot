@@ -33,15 +33,6 @@ Search Fund and Verify
     Input Text  ${KU_W_invest_mf_searchBar}  ${fundName}  clear=true
     Press Enter Key  ${KU_W_invest_mf_searchBar}
 
-Verify Add Option 
-    [Arguments]  ${addBtn}  ${popupHeader}  ${closePopup}
-    Scroll Untill View  ${addBtn}
-    Verify Page Contains Element  ${addBtn}
-    Wait For Element Visibility  ${addBtn}
-    Click Element  ${addBtn}
-    Verify Page Contains Element  ${popupHeader}
-    Click Element  ${closePopup}
-
 Verify Mutual Fund Details Page
     [Arguments]  ${fund}
     Wait For Element Visibility  ${fund}
@@ -49,6 +40,9 @@ Verify Mutual Fund Details Page
     Verify Language Switch Login And Signup Link
     Wait For Element Visibility  ${KU_W_invest_mf_watchlistButton}
     Verify Page Contains Element  ${KU_W_invest_mf_watchlistButton}
+    Verify Watchlist Icon  ${KU_W_invest_mf_watchlistButton}
+    Go Back
+
     # Title Section
     Wait For Element Visibility  ${KU_W_invest_mf_title}
     Verify Page Contains Element  ${KU_W_invest_mf_title}
