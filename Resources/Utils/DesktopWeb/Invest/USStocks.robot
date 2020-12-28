@@ -87,6 +87,7 @@ Verify US Stocks Landing Page Widgets
     Sleep  2s
     Wait For Element Visibility  ${KU_W_invest_USStocks_zeroBrokInfoLink}
     Click Element  ${KU_W_invest_USStocks_zeroBrokInfoLink}
+    Wait For Element Visibility  ${KU_W_invest_USStocks_zeroBrokInfoMsg}
     Verify Element And Text  ${KU_W_invest_USStocks_zeroBrokInfoMsg}  ${e_invest_USStocks_zeroBrokInfoMsg}
     Sleep  2s
     Wait For Element Visibility  ${KU_W_invest_USStocks_learnMorePopupLink}

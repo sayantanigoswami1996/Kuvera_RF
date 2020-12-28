@@ -18,7 +18,7 @@ Verify PreLogin Consolidate Page
     Verify Element And Text  ${KU_W_feature_setAGoalSubTitle}  ${e_feature_cd_setAGoalSubTitle} 
     Verify Element And Text  ${KU_W_feature_setAGoalDesc}  ${e_feature_cd_setAGoalDescText}
     Verify Page Contains Link  ${KU_W_feature_goalBasedInvestingLink}  ${e_feature_cd_goalBsdInvestingLinkText}
-    Sleep  2s
+    Sleep  5s
     Wait For Element Visibility  ${KU_W_feature_goalBasedInvestingLink}
     Click Element  ${KU_W_feature_goalBasedInvestingLink}
     Switch To Window Verify Title And Close  ${e_feature_cd_financialSuccessTitleText}  
