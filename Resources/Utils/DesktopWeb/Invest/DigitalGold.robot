@@ -5,8 +5,8 @@ Library   SeleniumLibrary
 *** Keywords ***
 
 Verify Digital Gold Landing Page
-    Log To Console  Digital Gold Explore
-    Wait For Element Visibility  ${KU_W_dg_screenTitle} 
+    Log To Console  Digital Gold - Explore More
+    Navigate To Invest Page And Verify Explore Options  ${KU_W_digitalGold}  ${e_invest_digGold}
     Verify Language Switch Login And Signup Link  
     Wait For Element Visibility  ${KU_W_dg_screenTitle}
     Verify Element And Text  ${KU_W_dg_screenTitle}  ${e_invest_digiGold_screenText} 
@@ -106,12 +106,13 @@ Verify Digital Gold Landing Page
     Wait For Element Visibility  ${KU_W_dg_addGoldBtn}
     Click Button  ${KU_W_dg_addGoldBtn}
     Verify Login Page  
-    #  Questions ? We are happy to help
+    #  Questions? We are happy to help
     Scroll Untill View  ${KU_W_dg_faqHeading}
     Verify Element And Text  ${KU_W_dg_faqHeading}  ${e_invest_faqTitleText} 
-    Run Keyword If  "${ENV}" == "prod"  Verify FAQ Button
-    ...  ELSE  Log To Console  Staging
-    Go Back
+    Scroll Untill View  ${KU_W_dg_aboutUSLink}
+    Verify Element And Text  ${KU_W_faqBtn}  ${e_invest_faqBtnText}
+    Verify Question On FAQBOT Icon  ${KU_W_faqBtn}  ${e_invest_faqbotQA1}
+   
 Verify Login And SignUp Validation
     Wait For Element Visibility  ${KU_W_dg_gold_login}
     Click Element  ${KU_W_dg_gold_login}
@@ -156,17 +157,3 @@ Verify Login Title For SIP And Track
     Sleep  1s
     Scroll Untill View  ${KU_W_dg_aboutUSLink}
     Verify Login And SignUp Validation
-
-Verify FAQ Button
-    Scroll Untill View  ${KU_W_dg_aboutUSLink}
-    Verify Element And Text  ${KU_W_faqBtn}  ${e_invest_faqBtnText}
-    Wait For Element Visibility  ${KU_W_faqBtn}
-    Click Element  ${KU_W_faqBtn}
-    Wait For Element Visibility  ${KU_W_dg_faqBotTitle} 
-    Verify Element And Text  ${KU_W_dg_faqBotTitle}  ${e_invest_faqBotText}
-    Sleep  1s
-    Wait For Element Visibility  ${KU_W_dg_faqCloseBtn}
-    Click Element  ${KU_W_dg_faqCloseBtn}
-    Sleep  1s 
-    Go Back
-    Sleep  1s

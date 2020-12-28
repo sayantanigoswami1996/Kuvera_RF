@@ -6,10 +6,7 @@ Library     SeleniumLibrary
 
 Verify US Stocks Landing Page
     Log To Console  US Stocks
-    Scroll Untill View  ${KU_W_USStocks}
-    Sleep  3s
-    Wait For Element Visibility  ${KU_W_USStocks}
-    Click Element  ${KU_W_USStocks}
+    Navigate To Invest Page And Verify Explore Options  ${KU_W_USStocks}  ${e_invest_USStocks}
     Wait For Element Visibility  ${KU_W_invest_USStocksTitle}
     Verify Element And Text  ${KU_W_invest_USStocksTitle}  ${e_invest_USStocks_title}
     Verify Language Switch Login And Signup Link 
@@ -20,13 +17,11 @@ Verify US Stocks Landing Page
     Verify Page Contains Element  ${KU_W_invest_USStocks_filteredTag}
     Verify Page Contains Element  ${KU_W_invest_USStocks_stockPrice}
     # WatchList
-    Verify Watchlist Icon  ${KU_W_invest_USStocksUSETFAnd52WUS_watchlistBtn}
+    Verify Watchlist Icon  ${KU_W_invest_US_SETFAnd52WUS_watchlistBtn}
     Verify Login Page
     Verify Filter For US Stocks
-    Wait For Element Visibility  ${KU_W_faqbot_icon}
-    Run Keyword If  "${ENV}" == "prod"  Verify Page Contains Element  ${KU_W_faqbot_icon}
-    ...  ELSE  Log To Console  Staging
-    Verify Filter Navigation For USStocks USETF and 52WkHighUS  ${KU_W_invest_USStocksUSETFAnd52WUS_watchListHeader}  ${e_invest_USStocksUSETFAnd52WUS_watchlistHeader}  ${e_invest__52WHighLow_UTF_sortYearText}  ${KU_W_invest_USStocksUSETFAnd52WUS_watchlistBtn}
+    Verify Presence Of FAQBOT Icon
+    Verify Filter Navigation For USStocks USETF and 52WkHighUS  ${KU_W_invest_US_SETFAnd52WUS_watchListHeader}  ${e_invest_USStocksUSETFAnd52WUS_watchlistHeader}  ${e_invest__52WHighLow_UTF_sortYearText}  ${KU_W_invest_US_SETFAnd52WUS_watchlistBtn}
     Wait For Element Visibility  ${KU_W_invest_USStocks_exploreBtn}
     Click Element  ${KU_W_invest_USStocks_exploreBtn}
     # Iterate the US Stocks detail screen
@@ -39,7 +34,6 @@ Verify US Stocks Landing Page
     END
     Go Back 
     Verify US Stocks Landing Page Widgets
-    
 
 Verify US Stocks Landing Page Widgets
     Log To Console  US Stocks Home Screen
@@ -51,8 +45,8 @@ Verify US Stocks Landing Page Widgets
     Verify Login Page
     Wait For Element Visibility  ${KU_W_invest_USStocks_exploreBtn}
     Click Element  ${KU_W_invest_USStocks_exploreBtn}
-    Wait For Element Visibility  ${KU_W_USStocksETF52WUS_searchBar}
-    Verify Search And Sort  ${KU_W_USStocksETF52WUS_searchBar}  ${e_invest_stock_searchBarTxt}  ${KU_W_invest_USStocksETFAnd52WUS_searchTextField}  ${KU_W_invest_sort_USStocks_UTF_USA} 
+    Wait For Element Visibility  ${KU_W_US_SETF52WUS_searchBar}
+    Verify Search And Sort  ${KU_W_US_SETF52WUS_searchBar}  ${e_invest_stock_searchBarTxt}  ${KU_W_invest_US_SETFAnd52WUS_searchTextField}  ${KU_W_invest_sort_US_S_UTF_USA}
     Go Back
     Wait For Element Visibility  ${KU_W_invest_USStocks_introductoryImg}
     Verify Page Contains Image  ${KU_W_invest_USStocks_introductoryImg}
@@ -93,6 +87,7 @@ Verify US Stocks Landing Page Widgets
     Sleep  2s
     Wait For Element Visibility  ${KU_W_invest_USStocks_zeroBrokInfoLink}
     Click Element  ${KU_W_invest_USStocks_zeroBrokInfoLink}
+    Wait For Element Visibility  ${KU_W_invest_USStocks_zeroBrokInfoMsg}
     Verify Element And Text  ${KU_W_invest_USStocks_zeroBrokInfoMsg}  ${e_invest_USStocks_zeroBrokInfoMsg}
     Sleep  2s
     Wait For Element Visibility  ${KU_W_invest_USStocks_learnMorePopupLink}
@@ -158,8 +153,7 @@ Verify US Stocks Landing Page Widgets
     Click Element  ${KU_W_invest_USStocks_faq_arrowImg3}
     # View All
     Scroll Untill View  ${KU_W_invest_USStocks_faq_viewAll}
-    Click Element  ${KU_W_invest_USStocks_faq_viewAll}
-    Verify Question And Close
+    Verify Question On FAQBOT Icon  ${KU_W_invest_USStocks_faq_viewAll}  ${e_invest_USStocks_botQA_ques1}
     # Go Global with US stocks
     Scroll Untill View  ${KU_W_invest_USStocks_goGlobalTitle}
     Verify Element And Text  ${KU_W_invest_USStocks_goGlobalTitle}  ${e_invest_USStocks_goGlobalTitle}
@@ -168,28 +162,8 @@ Verify US Stocks Landing Page Widgets
     Click Element  ${KU_W_invest_USStocks_goGlobalStartTodayBtn}
     Verify Login Page
     Verify Page Contains Image  ${KU_W_invest_USStocks_goGlobalImg}
-    Run Keyword If  "${ENV}" == "prod"  Verify FAQBot Icon
-    ...  ELSE  Log To Console  Staging
+    Verify Question On FAQBOT Icon  ${KU_W_faqbot_icon}  ${e_invest_USStocks_botQA_ques1}
     Verify Google Play & Apple Store Icons
-    Sleep  3s
-    Go Back
-    Sleep  1s
-    Go Back
-    Sleep  1s
-    Go Back
-    
-Verify FAQBot Icon
-    Verify Page Contains Element  ${KU_W_faqbot_icon}
-    Wait For Element Visibility  ${KU_W_faqbot_icon} 
-    Click Element  ${KU_W_faqbot_icon}
-    Verify Question And Close
-
-Verify Question And Close
-    Sleep  2s
-    # Wait For Element Visibility  ${KU_W_invest_USStocks_botQA1}
-    # Verify Element And Text  ${KU_W_invest_USStocks_botQA1}  ${e_invest_USStocks_botQA_ques1}
-    Wait For Element Visibility  ${KU_W_invest_USStocks_closeBanner}
-    Click Element  ${KU_W_invest_USStocks_closeBanner}
 
 Verify Filter For US Stocks
     Verify Element And Text  ${KU_W_invest_USStocks_defaultFilter}  ${e_invest_US_stocks_defaultFilter}
@@ -204,8 +178,8 @@ Verify Filter For US Stocks
 Search US Stocks and Verify 
     # Verify Search functionality
     [Arguments]  ${USStockName}
-    Wait For Element Visibility  ${KU_W_invest_USStocksETFAnd52WUS_searchTextField}
-    Click Element  ${KU_W_invest_USStocksETFAnd52WUS_searchTextField}
+    Wait For Element Visibility  ${KU_W_invest_US_SETFAnd52WUS_searchTextField}
+    Click Element  ${KU_W_invest_US_SETFAnd52WUS_searchTextField}
     Input Text  ${KU_W_invest_USStocks_searchField}  ${USStockName}  clear=true
     Press Enter Key  ${KU_W_invest_USStocks_searchField}
     Sleep  2s
@@ -214,6 +188,7 @@ Verify US Stocks Details Screen
     [Arguments]  ${stockLink}
     Wait For Element Visibility  ${stockLink}
     Click Element  ${stockLink}
+    Sleep  2s
     Wait For Element Visibility  ${KU_W_invest_USStocks_stockName}
     Verify Page Contains Element  ${KU_W_invest_USStocks_stockName}
     # Explore Tags
@@ -224,11 +199,11 @@ Verify US Stocks Details Screen
     Verify Page Contains Element  ${KU_W_invest_USStocks_change%}
     Verify Page Contains Element  ${KU_W_invest_USStocks_timestamp}  
     Verify Page Contains Element  ${KU_W_invest_USStocks_gainloss%} 
-    Verify Page Contains Element  ${KU_W_invest_USStocks_shareIcon}
-    Verify Page Contains Element  ${KU_W_invest_USStocks_pdfIcon}
-    Verify Page Contains Element  ${KU_W_invest_USStocks_watchlistIcon}
+    Verify Share PDF And Watchlist Option  ${KU_W_invest_USStocks_shareIcon}  ${KU_W_invest_USStocks_sharePopup}  ${KU_W_invest_USStocks_pdfIcon}  ${KU_W_invest_USStocks_watchlistIcon}
     # Transact Stocks
+    Wait For Element Visibility  ${KU_W_invest_USStocks_transactStocksTitle}
     Verify Element And Text  ${KU_W_invest_USStocks_transactStocksTitle}  ${e_invest_USStocks_transactStocksTitle}
+    Wait For Element Visibility  ${KU_W_invest_USStocks_transactStocksSubTitle}
     Verify Element And Text  ${KU_W_invest_USStocks_transactStocksSubTitle}  ${e_invest_USStocks_transactStocksSubTitle}
     Verify Page Contains Image  ${KU_W_invest_USStocks_vestedLogo}
     Wait For Element Visibility  ${KU_W_invest_USStocks_buyBtn}
@@ -241,9 +216,7 @@ Verify US Stocks Details Screen
     Click Element  ${KU_W_invest_USStocks_importHoldingsBtn}
     Verify Login Page
     # FAQ
-    Wait For Element Visibility  ${KU_W_faqbot_icon}
-    Run Keyword If  "${ENV}" == "prod"  Verify Page Contains Element  ${KU_W_faqbot_icon}
-    ...  ELSE  Log To Console  Staging
+    Verify Presence Of FAQBOT Icon
     # Graph Section
     Verify Performance Chart For Stocks And US Stocks  ${KU_W_invest_USStocks_performanceChart}
     # Live Market Hours is pending

@@ -5,17 +5,11 @@ Library     SeleniumLibrary
 *** Keywords ***
 
 Verify Mutual Fund Landing Page
-    # MF Landing Page
-    Wait For Element Visibility  ${KU_W_investLink} 
-    Click Element  ${KU_W_investLink} 
-    Sleep  500ms
-    Scroll Untill View  ${KU_W_mutualFund}
-    Wait For Element Visibility  ${KU_W_mutualFund}
-    Click Element  ${KU_W_mutualFund}
+    Log To Console  Mutual Fund
+    Navigate To Invest Page And Verify Explore Options  ${KU_W_mutualFund}  ${e_invest_mf_titleText} 
     Verify Language Switch Login And Signup Link
     Wait For Element Visibility  ${KU_W_invest_mf_fundName}
     Verify Page Contains Element  ${KU_W_invest_mf_growthDividendButton}
-   
     # Iterate the Mutual Fund detail screen
     FOR  ${i}  IN RANGE  1  6
         @{mutualFundName} =  Get Json Values  $.MutualFunds.f${i}  Resources/TestData/MutualFunds.json 
@@ -29,6 +23,7 @@ Verify Mutual Fund Landing Page
 Search Fund and Verify 
     # Verify Search functionality
     [Arguments]  ${fundName}
+    Wait For Element Visibility  ${KU_W_searchBarForFunds}
     Click Element  ${KU_W_searchBarForFunds}
     Input Text  ${KU_W_invest_mf_searchBar}  ${fundName}  clear=true
     Press Enter Key  ${KU_W_invest_mf_searchBar}
@@ -40,6 +35,8 @@ Verify Mutual Fund Details Page
     Verify Language Switch Login And Signup Link
     Wait For Element Visibility  ${KU_W_invest_mf_watchlistButton}
     Verify Page Contains Element  ${KU_W_invest_mf_watchlistButton}
+    Verify Watchlist Icon  ${KU_W_invest_mf_watchlistButton}
+    Go Back
     # Title Section
     Wait For Element Visibility  ${KU_W_invest_mf_title}
     Verify Page Contains Element  ${KU_W_invest_mf_title}

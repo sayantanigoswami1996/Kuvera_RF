@@ -15,7 +15,10 @@ ${e_footer_tweeterIcon} =  Profile / Twitter
 ${e_footer_switchToDirectFunds} =  Switch to Direct Funds
 ${e_footer_switchToDirectTitle} =  Introducing 1-Click Switch to Direct Plans.
 ${e_footer_exploreFunds} =  Explore Funds
-${e_mutualFundPageTitle} =  Explore Funds
+${e_mutualFundPageTitle} =  Kuvera - Direct Mutual Funds | Stocks | Loans | Gold | Remit on Kuvera- Wealth Management Simplified
+${e_blog} =  Blog
+${e_blogScreenTitle} =  Your Investment Magazine
+${e_getFinanceInsightsTitle} =  Subscribe to weekly updates
 
 # Application Locator 'KU_<locatorName>'
 # Kuvera :: Wealth Management Simplified
@@ -36,3 +39,9 @@ ${KU_W_footer_switchToDirectFunds} =  xpath=(//ul[@class='list-unstyled'])[2]/li
 ${KU_W_footer_switchToDirectTitle} =  xpath=//*[@class='container page-heading']/div/div/h1
 ${KU_W_footer_setAGoal} =  xpath=//a[contains(text(),'Set a goal')]
 ${KU_W_footer_exploreFunds} =  xpath=//a[contains(text(),'Explore Funds')]
+${KU_W_blog} =  xpath=//a[contains(text(),'Blog')]
+${KU_W_blogScreenTitle} =  xpath=///h1[contains(text(),'Your Investment Magazine')]
+${KU_W_googlePlay} =  xpath=(//ul[@class='list-unstyled'])[3]/li[3]/a
+${KU_W_appStore} =  xpath=(//ul[@class='list-unstyled'])[3]/li[4]/a
+${KU_W_getFinanceInsights} =  xpath=//button[@class='btn active-btn']
+${KU_W_getFinanceInsightsTitle} =  xpath=//*[@class='b-finance-insights__heading']

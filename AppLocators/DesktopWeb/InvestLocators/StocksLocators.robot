@@ -1,11 +1,11 @@
 *** Variables *** 
 # Application Expected Values 'e_<variableName>'
 # Stocks
-${e_invest_stocks_screenLabel} =  Search stocks
+${e_invest_stocks_searchLabel} =  Search stocks
 ${e_invest_stocks_sortYear} =  1Y            
 ${e_invest_stocks_basicMaterialFilter} =  Basic Materials
-${e_invest_stocks_searchFund} =  Dha
-${e_invest_stocks_randomSearchFund} =  Stock123666666
+${e_invest_stocks_searchStock} =  Dha
+${e_invest_stocks_randomSearchStock} =  Stock123666666
 ${e_invest_stocks_buyStocksBtn} =  Buy stocks
 ${e_invest_stocks_incomeStatement} =  Income statement
 ${e_invest_stocks_balanceSheet} =  Balance sheet 
@@ -39,7 +39,7 @@ ${KU_W_invest_stocks_currentMarketPrice} =  xpath=//div[@class='b-stocks-basic-i
 ${KU_W_invest_stocks_change%} =  xpath=//div[contains(@class,'b-stocks-basic-info__return b-stocks-basic-info')]
 ${KU_W_invest_stocks_timeStamp} =  xpath=//div[@class='b-stocks-basic-info__timestamp']
 ${KU_W_invest_stocks_currentGainLoss%} =  xpath=//div[contains(@class,'b-stock-performance-chart__xirr')]
-${KU_W_invest_stocks_shareIcon} =  xpath=//div[@class='b-stocks-basic-info__share-icon--mobile']
+${KU_W_invest_stocks_shareIcon} =  xpath=//div[@class='b-stocks-basic-info__share-icon--desktop']
 ${KU_W_invest_stocks_pdfIcon} =  xpath=(//img[@class='b-stocks-basic-info__action-icons'])[3]
 ${KU_W_invest_stocks_watchlistIcon} =  xpath=(//img[@class='b-stocks-basic-info__action-icons'])[4]
 ${KU_W_invest_stocks_buyStocksBtn} =  xpath=//div[@class='b-stocks-widget__content--button']
@@ -66,3 +66,4 @@ ${KU_W_invest_stocks_mfHoldersTable} =  xpath=(//div[@class='b-stocks-table-cont
 ${KU_W_invest_stocks_addBtn} =  xpath=//div[@class='b-stock-compare-m__add-label']
 ${KU_W_invest_stocks_popupHeader} =  xpath=//div[@class='b-add-stock-m__heading']
 ${KU_W_invest_stocks_closePopup} =  xpath=//img[@class='b-add-stock-m__close']
+${KU_W_invest_stocks_sharePopup} =  xpath=//div[@class='b-stocks-info__share-popup-text']

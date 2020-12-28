@@ -1,5 +1,6 @@
 ﻿*** Variables ***
 # Application Expected Values 'e_<VariableName>'
+${e_prod} =  prod
 ${e_title} =  Kuvera - Direct Mutual Funds | Stocks | Loans | Gold | Remit on Kuvera- Wealth Management Simplified
 ${e_regulatoryDisclosure} =  Regulatory Disclosure
 ${e_login} =  Log in 
@@ -23,6 +24,7 @@ ${e_switchTodayLinkTitle} =  3 ways to "SWITCH" your Regular plans to Direct Mut
 ${e_upgradeFamilyAccountBtn} =  Upgrade to family account
 ${e_familyAccountLinkTitle} =  Joint And Family Accounts on Kuvera - Kuvera
 ${e_consolidateTrackBtn} =  Consolidate & track
+${e_consolidateTrackLinkTitle} =  Automatic tracking of external transactions | Wealth Management Simplified | Kuvera
 ${e_manageTodayBtn} =  Manage Today
 ${e_manageTodayLinkTitle} =  Managed Accounts: add a manager to handhold your Kuvera account - Kuvera
 ${e_setAGoalBtn} =  Set a goal
@@ -110,7 +112,7 @@ ${KU_W_langSwitch} =  xpath=//div[@class='b-header__content__right--language-swi
 
 ${KU_W_mf_category} =   xpath=//div[@class='b-mf-wiget__mf-category--input']
 ${KU_W_mf_subcategory} =  xpath=//div[@class='b-mf-wiget__mf-subcategory--input']
-${KU_W_fund_list} =   xpath=//div[@class='b-fund-list__row']  
+${KU_W_fund_list} =   xpath=//div[@class='b-fund-list__row b-fund-list__row--custom']
 ${KU_W_loginpage_loginButton} =   xpath=//button[@class='button-primary']                        
 ${KU_W_loginButton} =   xpath=//button[@class='button-primary b-login-signup__login']
 ${KU_W_signUpButton} =  xpath=//button[@class='button-primary b-login-signup__register'] 
@@ -150,7 +152,10 @@ ${KU_W_cities_val} =  xpath=//div[@class='b-investment-count__count__cities__val
 ${KU_W_cities_text} =   xpath=//div[@class='b-investment-count__count__cities__text']
 ${KU_W_trans_val} =  xpath=//div[@class='b-investment-count__count__transaction__val']
 ${KU_W_trans_text} =  xpath=//div[@class='b-investment-count__count__transaction__text']
-${KU_W_faqbot_icon} =   xpath=//div[@class='faq-bot-button ']
+${KU_W_faqbot_icon} =   xpath=//div[@class='faq-bot-button faq-bot-button--show']
+${KU_W_faqbotFrame} =  xpath=//iframe[@id='faq-bot-iframe']
+${KU_W_faqbotCloseBanner} =  xpath=//div[@class='faq-bot-top-banner-cross']
+${KU_W_faqbotQA1} =  xpath=(//div[@class='qa-q-item-title']/a)[1]
 ${KU_W_mf_welcomeTitle} =  xpath=//div[@class='b-investment-simplified__title']
 ${KU_W_mf_welcomeText} =  xpath=//div[@class='b-investment-simplified__text']
 
@@ -164,6 +169,7 @@ ${KU_W_next_button} =   xpath=//div[@class='b-feature-card-list__btns__next b-fe
 ${KU_W_upgrade_familyAccount} =  xpath=//button[contains(text(),'Upgrade to family account')]
 ${KU_W_familyAccount_learnMoreLink} =  xpath=(//a[@class='b-feature-card__link'])[4]
 ${KU_W_consolidate_track} =  xpath=//button[contains(text(),'Consolidate & track')]
+${KU_W_automatedTrack_learnMoreLink} =  xpath=(//a[@class='b-feature-card__link'])[5]
 ${KU_W_manage_today} =  xpath=//button[contains(text(),'Manage Today')]
 ${KU_W_manageToday_learnMoreLink} =  xpath=(//a[@class='b-feature-card__link'])[6]
 ${KU_W_set_a_goal} =  xpath=//button[contains(text(),'Set a goal')]

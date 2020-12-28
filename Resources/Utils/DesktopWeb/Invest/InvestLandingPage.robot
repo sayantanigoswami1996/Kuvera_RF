@@ -4,18 +4,19 @@ Library     SeleniumLibrary
 
 *** Keywords ***
 
-Verify PreLogin Invest Landing Page
+Verify Invest Tiles
     Wait For Element Visibility  ${KU_W_investLink} 
-    Click Element  ${KU_W_investLink} 
+    Click Element  ${KU_W_investLink}
     Sleep  1s
     Verify Language Switch Login And Signup Link
     # Save Smart
+    Sleep  2s
     Wait For Element Visibility  ${KU_W_invest_saveSmartTitle}  
     Verify Element And Text  ${KU_W_invest_saveSmartTitle}  ${e_invest_saveSmartTitleText}
     Verify Element And Text  ${KU_W_invest_saveSmartSubTitle}  ${e_invest_saveSmartSubText} 
     Click Element   ${KU_W_invest_saveSmartTitle}
-    Log To Console  SaveSmart Tiles
-    Sleep  3s
+    Log To Console  Save Smart Tiles
+    Sleep  2s
     Wait For Element Visibility   ${KU_W_ss_screenTitle}
     Verify Element And Text  ${KU_W_ss_screenTitle}  ${e_invest_ss_screenText}
     Go Back
@@ -70,11 +71,11 @@ Verify PreLogin Invest Landing Page
     Verify Element And Text  ${KU_W_valueFundsTitle}  ${e_invest_valueFundsTitleText}
     Verify Element And Text  ${KU_W_valueFundsSubTitle}  ${e_invest_valueFundsSubTitleText}
     Verify Value Funds Landing Page
-    # Top Gainers
-    Wait For Element Visibility  ${KU_W_topGainerTitle} 
-    Verify Element And Text  ${KU_W_topGainerTitle}  ${e_invest_topGainersTitleText} 
-    Verify Element And Text  ${KU_W_topGainerSubTitle}  ${e_invest_topGainersSubTitleText}
-    Verify Top Gainers Landing Page
+    # Crypto
+    Wait For Element Visibility  ${KU_W_cryptoTitle}
+    Verify Element And Text  ${KU_W_cryptoTitle}  ${e_invest_cryptoTitleText} 
+    Verify Element And Text  ${KU_W_cryptoSubTitle}  ${e_invest_cryptoSubTitleText}
+    Verify Crypto Landing Page
     # 52 W High India
     Wait For Element Visibility  ${KU_W_52WHighIndiaTitle}  
     Verify Element And Text  ${KU_W_52WHighIndiaTitle}  ${e_invest_52WHighIndiaTitleText} 
@@ -92,37 +93,18 @@ Verify PreLogin Invest Landing Page
     Click Element  ${KU_W_checkPremiumBtn} 
     Verify Element And Text   ${KU_W_insureHeaderTitle}  ${e_insure_headerTitleText}
     Go Back
-    # Lower Bar - Assets
-    # Mutual Fund
+    Scroll Untill View  ${KU_W_exploreMoreTitle}
     Verify Element And Text  ${KU_W_exploreMoreTitle}  ${e_invest_stock_exploreMoreTxt}
-    Wait For Element Visibility  ${KU_W_mutualFund}
-    Scroll Untill View  ${KU_W_mutualFund}
-    Verify Element And Text  ${KU_W_mutualFund}  ${e_invest_mf_titleText} 
-    Wait For Element Visibility  ${KU_W_mutualFund}
-    Verify Mutual Fund Landing Page
-    # Digital Gold
-    Verify Element And Text  ${KU_W_digitalGold}  ${e_invest_digGold_titleText}
-    Click Element  ${KU_W_digitalGold}
-    Verify Digital Gold Landing Page
-    Reload Page
-    Sleep  2s
-    # Stocks
-    Scroll Untill View  ${KU_W_stocks}
-    Wait For Element Visibility  ${KU_W_stocks}
-    Verify Element And Text  ${KU_W_stocks}  ${e_invest_stocks_titleText}
-    Wait For Element Visibility  ${KU_W_stocks}
-    Verify Stocks Landing Page
-    # US Stocks
-    Verify Element And Text  ${KU_W_USStocks}  ${e_invest_USStocks_titleText}
-    Wait For Element Visibility  ${KU_W_USStocks}
-    Verify US Stocks Landing Page
-    Sleep  1s
-    # Save Smart
-    Verify Element And Text  ${KU_W_saveSmart}  ${e_invest_ss_titleText}
-    Wait For Element Visibility  ${KU_W_saveSmart}
-    Click Element  ${KU_W_saveSmart}
-    Validate SaveSmart Landing Page
 
+Navigate To Invest Page And Verify Explore Options
+    [Arguments]  ${option}  ${optionText}
+    Sleep  1s
+    Wait For Element Visibility  ${KU_W_investLink} 
+    Click Element  ${KU_W_investLink}
+    Scroll Page To Location  0  2000
+    Verify Element And Text  ${option}  ${optionText}
+    Wait Scroll And Click Element  ${option}
+    
 Verify Watchlist Icon 
     [Arguments]   ${watchlistBtn}
     Wait For Element Visibility  ${watchlistBtn}
@@ -168,7 +150,7 @@ Verify Filter Navigation For Funds
     Verify Page Contains Element  ${KU_W_invest_watchListBtn}
     Go Back
 
-Verify No Stocks Screen For TopGainer and 52WkHighIndia
+Verify No Stocks Screen For 52WkHighIndia
     [Arguments]   ${watchListBtn}
     Scroll Untill View  ${KU_W_invest_52WLow_noStocksAvailable}
     Wait For Element Visibility  ${KU_W_invest_52WLow_noStocksAvailable}
@@ -182,15 +164,15 @@ Verify No Stocks Screen For TopGainer and 52WkHighIndia
     Go Back
     Go Back
 
-Verify WatchList Button For TopGainer and 52WkHighIndia
-    Verify Page Contains Element   ${KU_W_invest_stocks_topGainerAndIndia_watchListBtn}
+Verify WatchList Button For 52WkHighIndia
+    Verify Page Contains Element  ${KU_W_invest_stocks_52WIndia_watchListBtn}
     Go Back
 
-Verify Filter Navigation For Stocks TopGainer and 52 WkHighIndia   
+Verify Filter Navigation For Stocks And 52 WkHighIndia   
     [Arguments]  ${watchListHeader}  ${watchlistHeaderText}  ${sortYearFor52High}  ${watchListBtn}
     # All
     Click Element  ${KU_W_invest_stocks_all}
-    Verify Search And Sort  ${KU_W_stocktopgainerindia_searchBar}  ${e_invest_stock_searchBarTxt}  ${KU_W_invest_stocktopgainerindia_searchTextField}  ${KU_W_invest_sort_topGainerAndIndia}
+    Verify Search And Sort  ${KU_W_stockAnd52WIndia_searchBar}  ${e_invest_stock_searchBarTxt}  ${KU_W_invest_stockAndindia_searchTextField}  ${KU_W_invest_sort_52WIndia}
     # WatchList
     Click Element  ${KU_W_invest_watchList}
     Verify Element And Text  ${watchListHeader}  ${watchlistHeaderText} 
@@ -207,6 +189,7 @@ Verify Filter Navigation For Stocks TopGainer and 52 WkHighIndia
     # 52Whigh
     Click Element  ${KU_W_invest_stocks_52WHigh}
     Verify Element And Text  ${KU_W_invest_sortYear}  ${sortYearFor52High}
+    Sleep  2s
     Wait For Element Visibility  ${watchListBtn}
     Verify Page Contains Element  ${watchListBtn}
     # 52Wlow
@@ -214,8 +197,8 @@ Verify Filter Navigation For Stocks TopGainer and 52 WkHighIndia
     Verify Element And Text  ${KU_W_invest_sortYear}  ${sortYearFor52High}
     Sleep  3s
     ${fundlist} =  Get Element Count   xpath=//div[@class='b-stocks-explore__stock-row-info']
-    Run Keyword If   ${fundlist}>0  Verify WatchList Button For TopGainer and 52WkHighIndia
-    ...    ELSE IF   ${fundlist}==0  Verify No Stocks Screen For TopGainer and 52WkHighIndia  ${KU_W_invest_stocks_topGainerAndIndia_watchListBtn}
+    Run Keyword If  ${fundlist}>0  Verify WatchList Button For 52WkHighIndia
+    ...    ELSE IF  ${fundlist}==0  Verify No Stocks Screen For 52WkHighIndia  ${KU_W_invest_stocks_52WIndia_watchListBtn}
     ...    ELSE  Log To Console  Completed
 
 Verify No Stocks Screen For UTF and 52WkHighUS
@@ -231,14 +214,14 @@ Verify No Stocks Screen For UTF and 52WkHighUS
     Go Back
 
 Verify WatchList Button For UTF and 52WkHighUS
-    Verify Page Contains Element  ${KU_W_invest_USStocksUSETFAnd52WUS_watchlistBtn}
+    Verify Page Contains Element  ${KU_W_invest_US_SETFAnd52WUS_watchlistBtn} 
     Go Back
 
 Verify Filter Navigation For USStocks USETF and 52WkHighUS  
     [Arguments]  ${watchListHeader}  ${watchlistHeaderText}  ${sortYearFor52High}  ${watchListBtn}
     # All
     Click Element  ${KU_W_invest_stocks_all}
-    Verify Search And Sort  ${KU_W_USStocksETF52WUS_searchBar}  ${e_invest_stock_searchBarTxt}  ${KU_W_invest_USStocksETFAnd52WUS_searchTextField}  ${KU_W_invest_sort_USStocks_UTF_USA}
+    Verify Search And Sort  ${KU_W_US_SETF52WUS_searchBar}  ${e_invest_stock_searchBarTxt}  ${KU_W_invest_US_SETFAnd52WUS_searchTextField}  ${KU_W_invest_sort_US_S_UTF_USA}
     # WatchList
     Click Element  ${KU_W_invest_watchList}
     Wait For Element Visibility  ${watchListHeader}
@@ -263,8 +246,8 @@ Verify Filter Navigation For USStocks USETF and 52WkHighUS
     Verify Element And Text  ${KU_W_invest_sortYear}  ${sortYearFor52High}
     Sleep  3s
     ${fundlist} =  Get Element Count   xpath=//div[@class='b-stock-item b-stock-items__content__item']
-    Run Keyword If   ${fundlist}>0  Verify WatchList Button For UTF and 52WkHighUS
-    ...    ELSE IF   ${fundlist}==0  Verify No Stocks Screen For UTF and 52WkHighUS  ${KU_W_invest_USStocksUSETFAnd52WUS_watchlistBtn}
+    Run Keyword If  ${fundlist}>0  Verify WatchList Button For UTF and 52WkHighUS
+    ...    ELSE IF  ${fundlist}==0  Verify No Stocks Screen For UTF and 52WkHighUS  ${KU_W_invest_US_SETFAnd52WUS_watchlistBtn} 
     ...    ELSE  Log To Console  Completed
 
 Verify Explore Tags For Stocks And USStocks
@@ -314,3 +297,16 @@ Verify Add Option
     Click Element  ${addBtn}
     Verify Page Contains Element  ${popupHeader}
     Click Element  ${closePopup}
+
+Verify Share PDF And Watchlist Option
+    [Arguments]  ${shareIcon}  ${sharePopup}  ${PDFIcon}  ${watchlistIcon}
+    Verify Page Contains Element  ${shareIcon}
+    Wait For Element Visibility  ${shareIcon}
+    Click Element  ${shareIcon}
+    Wait For Element Visibility  ${sharePopup}
+    Verify Page Contains Element  ${sharePopup}
+    Verify Page Contains Element  ${PDFIcon}
+    Click Element  ${PDFIcon}
+    Verify Page Contains Element  ${watchlistIcon}
+    Click Element  ${watchlistIcon}
+    Verify Login Page

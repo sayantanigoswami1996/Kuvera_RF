@@ -36,7 +36,7 @@ Header Navigation
     FOR  ${j}  IN RANGE  1  ${elem}+1
         ${headers} =  Get Text  xpath=//div[@class='b-header__content__middle']/a[${j}]
         Log to console  ${headers}
-        Run keyword If  ['${headers}'] == ${invest}  Log To Console  InProgess
+        Run keyword If  ['${headers}'] == ${invest}  Log To Console  Covered in other test
         ...    ELSE IF  ['${headers}'] == ${loans}   Verify PreLogin Loans Page
         ...    ELSE IF  ['${headers}'] == ${insure}  Verify PreLogin Insure Page
         ...    ELSE IF  ['${headers}'] == ${remit}  Verify PreLogin Remit Page
@@ -91,9 +91,8 @@ Verify Mutual Funds Widgets
     Scroll Element Into View  ${KU_W_explore_MF}
     Verify Page Contains Element  ${KU_W_explore_MF}
     Verify Google Play & Apple Store Icons
-    Run Keyword If  "${ENV}" == "prod"  Verify Page Contains Element  ${KU_W_faqbot_icon}
-    ...    ELSE  Log To Console  Staging
-
+    Verify Presence Of FAQBOT Icon
+    
 Verify Stock Widgets
     Wait For Element Visibility  ${KU_W_mf_stock_button}
     Click Element  ${KU_W_mf_stock_button}
@@ -179,6 +178,8 @@ Verify Features Widgets
     Click Element  ${KU_W_next_button}
     Sleep  1s
     # Automated Tracking
+    Click Element  ${KU_W_automatedTrack_learnMoreLink}
+    Switch To Window Verify Title And Close  ${e_consolidateTrackLinkTitle}
     Verify Element And Text  ${KU_W_consolidate_track}  ${e_consolidateTrackBtn}
     Wait For Element Visibility  ${KU_W_consolidate_track}
     Click Element  ${KU_W_consolidate_track}

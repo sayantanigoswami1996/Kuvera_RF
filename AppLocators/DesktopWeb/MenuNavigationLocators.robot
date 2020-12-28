@@ -162,7 +162,7 @@ ${e_feature_addManagerBtnText} =  Add  manager
 
 # Feature-Tax Harvesting Navigation Page Variables
 ${e_feature_th_subTitleText} =  Minimise your long term tax impact by realising up to ₹1 Lakh of Long Term Capital Gain (LTCG) every financial year with no tax.
-${e_feature_th_subscribeBtnText} =  Subscribe 499 / FY
+${e_feature_th_subscribeBtnText} =  Activate 499 / FY
 ${e_feature_whatIsTHTitleText} =  What is Tax Harvesting?
 ${e_feature_th_definitionText} =  Long-term gains from equity funds are taxed at 10%. Tax Harvesting is a technique that reduces this impact. It utilises the ₹1 Lakh annual LTCG exemption by selling and buying back part of your investment such that you “realise” gains every year. Learn more
 ${e_feature_th_learnMoreLnkTxt} =  Learn more
@@ -192,7 +192,7 @@ ${e_feature_th_startHarvestText} =  The time is ripe! Start harvesting today.
 ${e_feature_st_screenTitleText} =  Top rated tax saving funds  
 ${e_feature_st_screenContentText} =  Funds that feature in “Best Tax Saving Mutual Fund” lists across the web.
 ${e_feature_st_taxHeadingText} =  Save Taxes.  
-${e_feature_st_taxDescText} =  Tax Saving ELSS Mutual Funds can help save upto ₹ 46,350 in taxes 
+${e_feature_st_taxDescText} =  Tax Saving ELSS Mutual Funds can help save upto ₹46,350 in taxes 
 ${e_feature_st_commissionHeadingText} =  Save Commissions.  
 ${e_feature_st_commissionDescText} =  We are a Direct Plan platform. You save upto 1.5% per year in commission
 ${e_feature_st_feesHeadingText} =  Save Fees. 
