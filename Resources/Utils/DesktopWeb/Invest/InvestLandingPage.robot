@@ -101,7 +101,7 @@ Navigate To Invest Page And Verify Explore Options
     Sleep  1s
     Wait For Element Visibility  ${KU_W_investLink} 
     Click Element  ${KU_W_investLink}
-    Scroll Page To Location  0  7000
+    Scroll Page To Location  0  2000
     Verify Element And Text  ${option}  ${optionText}
     Wait Scroll And Click Element  ${option}
     
