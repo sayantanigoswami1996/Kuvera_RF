@@ -29,7 +29,7 @@ Verify PreLogin Save Taxes Page
 
     # Mutual Fund
     Scroll Untill View  ${KU_W_feature_st_watchlistBtn}
-    Click Element  ${KU_W_feature_st_watchlistBtn}
+    Click Element   ${KU_W_feature_st_watchlistBtn}
     Verify Login Page
 
     # Save Tax Funding

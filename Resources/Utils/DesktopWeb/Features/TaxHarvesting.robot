@@ -28,7 +28,7 @@ Verify PreLogin Tax Harvesting Page
     Verify Page Contains Link  ${KU_W_feature_th_learnMoreLink}  ${e_feature_th_learnMoreLnkTxt} 
     Scroll Untill View  ${KU_W_feature_th_learnMoreLink}
     Sleep  2s
-    Wait For Element Visibility  ${KU_W_feature_th_learnMoreLink}
+    Wait For Element Visibility    ${KU_W_feature_th_learnMoreLink}
     Click Element  ${KU_W_feature_th_learnMoreLink}
     Switch To Window Verify Title And Close  ${e_feature_th_learnMoreTitle}
     Reload Page

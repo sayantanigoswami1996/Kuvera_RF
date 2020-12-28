@@ -1,11 +1,9 @@
 *** Variables *** 
-
 ${e_invest_mf_lumpsumAmountLabel} =  Lumpsum amount
 ${e_invest_mf_sipAmountLabel} =  SIP amount
 ${e_invest_mf_sipAmount} =  6000
 ${e_invest_mf_lumpsumAmount} =  50000
 ${e_invest_mf_addFundPopupHeader} =  Search and add fund
-
 # Application Locator 'KU_<locatorName>'
 # Mutual Fund Navigation Page
 # Mutual Fund

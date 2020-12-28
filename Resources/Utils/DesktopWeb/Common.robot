@@ -17,7 +17,7 @@ Resource    ../../../AppLocators/DesktopWeb/InvestLocators/SectorFundsLocators.r
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/ValueFundsLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/ELSSTaxSaverLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/BankPSUBondsLocators.robot
-Resource    ../../../AppLocators/DesktopWeb/InvestLocators/TopGainersLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/InvestLocators/CryptoLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/ELSSTaxSaverLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/USETFLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/UltraShortLocators.robot
@@ -29,15 +29,15 @@ Resource    ../../../AppLocators/DesktopWeb/InvestLocators/USStocksLocators.robo
 
 Launch URL
     Open Browser  ${URL}  ${BROWSER}  alias=Kuvera
-    Maximize Browser Window
-    #Set Window Size  ${1920}  ${1080}
-    #Reload Page
+    # Maximize Browser Window
+    Set Window Size  ${1920}  ${1080}
+    Reload Page
     Kuvera Web Close Regulatory Disclosure
-    Run Keyword If    "${ENV}" == "prod"  Close Hello Bar
+    Run Keyword If    '${ENV}' == '${e_prod}'  Close Hello Bar
     ...    ELSE   Log To Console  Staging
 
 Welcome Page Should Be Open
-    Run Keyword And Continue On Failure  Title Should Be  ${KU_W_title}
+    Title Should Be  ${KU_W_title}
 
 Wait For Element Visibility
     [Arguments]  ${element}
@@ -45,15 +45,15 @@ Wait For Element Visibility
 
 Verify Element And Text
     [Arguments]  ${element}  ${text}
-    Run Keyword And Continue On Failure  Element Text Should Be  ${element}  ${text}
+    Element Text Should Be  ${element}  ${text}
 
 Verify Page Contains Element
     [Arguments]  ${element}
-    Run Keyword And Continue On Failure  Page Should Contain Element  ${element}
+    Page Should Contain Element  ${element}
 
 Verify Page Contains Image
     [Arguments]  ${image}
-    Run Keyword And Continue On Failure  Page Should Contain Image  ${image}
+    Page Should Contain Image  ${image}
 
 Scroll Untill View
     [Arguments]  ${element}
@@ -61,11 +61,11 @@ Scroll Untill View
 
 Verify Page Contains Link
     [Arguments]  ${link}  ${text}
-    Run Keyword And Continue On Failure  Page Should Contain Link  ${link}  ${text}
+    Page Should Contain Link  ${link}  ${text}
 
 Verify Page Contains Button
     [Arguments]  ${button}
-    Run Keyword And Continue On Failure  Page Should Contain Button  ${button}
+    Page Should Contain Button  ${button}
 
 Compare Lists
     [Arguments]  ${actualList}   ${expectedList}
@@ -78,12 +78,12 @@ Compare Lists
     ${expectedListItem}  Set Variable  ${expectedListItems}
     END
     # Compare two list items
-    Run Keyword And Continue On Failure  Should Be Equal  ${actualListItem}  ${expectedListItem}
+    Should Be Equal  ${actualListItem}  ${expectedListItem}
 
 Switch To Window Verify Title And Close
     [Arguments]  ${title}
     Switch Window  locator=NEW
-    Run Keyword And Continue On Failure  Title Should Be  ${title}
+    Title Should Be  ${title}
     Close Window
     Sleep  2s
     Switch Window  browser=Kuvera
@@ -99,7 +99,7 @@ Get List Count
 
 Kuvera Web Close Regulatory Disclosure 
     Wait Until Element Is Visible  ${KU_W_regulatoryDisclosure}
-    Run Keyword And Continue On Failure  Verify Element And Text  ${KU_W_regulatoryDisclosure}  ${e_regulatoryDisclosure}
+    Verify Element And Text  ${KU_W_regulatoryDisclosure}  ${e_regulatoryDisclosure}
     Wait For Element Visibility  ${KU_W_close}
     Click Element  ${KU_W_close}
 
@@ -135,14 +135,16 @@ Kuvera Web Logo Click
 
 Verify Google Play & Apple Store Icons
     Scroll Element Into View  ${KU_W_android_image}
-    Run Keyword And Continue On Failure  Verify Page Contains Image  ${KU_W_android_image}
-    Run Keyword And Continue On Failure  Verify Page Contains Image  ${KU_W_apple_image}
+    Verify Page Contains Image  ${KU_W_android_image}
+    Verify Page Contains Image  ${KU_W_apple_image}
 
 Verify Language Switch Login And Signup Link
     Wait For Element Visibility  ${KU_W_langSwitch}
-    Run Keyword And Continue On Failure  Verify Page Contains Element  ${KU_W_langSwitch}
-    Run Keyword And Continue On Failure  Verify Element And Text  ${KU_W_login}  ${e_login}
-    Run Keyword And Continue On Failure  Verify Element And Text  ${KU_W_signup}  ${e_signup}
+    Verify Page Contains Element  ${KU_W_langSwitch}
+    Wait For Element Visibility  ${KU_W_login}
+    Verify Element And Text  ${KU_W_login}  ${e_login}
+    Wait For Element Visibility  ${KU_W_signup}
+    Verify Element And Text  ${KU_W_signup}  ${e_signup}
 
 Switch To Window
     Switch Window  locator=NEW
@@ -156,17 +158,40 @@ Scroll Page To Location
 
 Wait Scroll And Click Element
     [Arguments]  ${element}
+    Sleep  1s
     Wait For Element Visibility  ${element}
     Scroll Untill View  ${element}
     Click Element  ${element}
 
 Compare Text Values
     [Arguments]  ${actualValue}  ${expectedValue}
-    Run Keyword And Continue On Failure  Should Be Equal  ${actualValue}  ${expectedValue}
+    Should Be Equal  ${actualValue}  ${expectedValue}
 
 Verify Screen Title
     [Arguments]  ${title}
     Title Should Be  ${title}
 
+Verify Presence Of FAQBOT Icon
+    Run Keyword If  '${ENV}' == '${e_prod}'  Verify Page Contains Element  ${KU_W_faqbot_icon}
+    ...    ELSE  Log To Console  Staging
+
+Verify Question On FAQBOT Icon
+    [Arguments]  ${botButon}  ${question}
+    Run Keyword If  '${ENV}' == '${e_prod}'  Open Bot And Validate Question  ${botButon}  ${question}
+    ...    ELSE  Log To Console  Staging
+
+Open Bot And Validate Question
+    [Arguments]  ${botButon}  ${question}
+    Verify Page Contains Element  ${botButon}
+    Wait For Element Visibility  ${botButon} 
+    Click Element  ${botButon}
+    Sleep  2s
+    Switch To Frame  ${KU_W_faqbotFrame}
+    Wait For Element Visibility  ${KU_W_faqbotQA1}
+    Verify Element And Text  ${KU_W_faqbotQA1}  ${question}
+    Unselect Frame
+    Wait For Element Visibility  ${KU_W_faqbotCloseBanner}
+    Click Element  ${KU_W_faqbotCloseBanner}
+    
 Close Web Application
     Close All Browser
