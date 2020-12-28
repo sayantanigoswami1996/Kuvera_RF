@@ -1,5 +1,6 @@
 *** Settings ***
 Library     SeleniumLibrary
+
 *** Keywords ***
 
 Verify Transfer Now
@@ -15,6 +16,7 @@ Verify PreLogin Remit Page
     Wait For Element Visibility  ${KU_W_remit_Link}
     Click Element  ${KU_W_remit_Link}
     Verify Language Switch Login And Signup Link
+    Sleep  1s
     Wait For Element Visibility  ${KU_W_remit_screenTitle}
     Verify Element And Text  ${KU_W_remit_screenTitle}  ${e_remit_screenTitle}
     Verify Element And Text  ${KU_W_remit_screenTitleDesc}  ${e_remit_screenTitleDesc}
