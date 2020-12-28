@@ -356,7 +356,6 @@ ${KU_W_insure_healthCoverTitle} =  xpath=//div[@class='b-health-insurance-landin
 ${KU_W_insure_checkPremiumBtn2} =  xpath=(//button[@class='button-primary'])[2]
 
 # Remit Page    
-${KU_W_remit_Link} =  xpath=//a[contains(text(),'Remit')]
 ${KU_W_remit_screenTitleDesc} =  xpath=//*[@class='b-introduction__desc__content']      
 ${KU_W_remit_transferNowTopBtn} =  xpath=//*[@class='button-primary b-introduction__desc__btn-transfer__item']      
 ${KU_W_remit_whyTransferWise} =  xpath=//*[@class='b-why-transferwise b-transferwise__calculator-why__item__content']/div    

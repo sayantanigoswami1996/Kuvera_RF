@@ -24,6 +24,7 @@ Resource    ../../../AppLocators/DesktopWeb/InvestLocators/UltraShortLocators.ro
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/MutualFundsLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/StocksLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/USStocksLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/FooterLocators.robot
 
 *** Keywords ***
 

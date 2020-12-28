@@ -23,35 +23,54 @@ Verify Footer
     Verify Terms And Privacy Policy Page 
     Verify Switch To Direct Page
     # Save Taxes
-    Verify PreLogin Save Taxes Page
+    Wait Scroll And Click Element  ${KU_W_feature_saveTaxesLink}
+    Wait For Element Visibility  ${KU_W_feature_st_screenTitle}  
+    Verify Element And Text  ${KU_W_feature_st_screenTitle}  ${e_feature_st_screenTitleText}
+    Scroll To About Us Section
     # Set a goal 
+    Wait For Element Visibility  ${KU_W_footer_setAGoal}
     Click Element  ${KU_W_footer_setAGoal}
     Wait For Element Visibility  ${KU_W_feature_sg_screenTitle}
     Verify Element And Text  ${KU_W_feature_sg_screenTitle}  ${e_feature_sg_screenTitle}
-    Verify Element And Text  ${KU_W_feature_sg_screenSubTitle}  ${e_feature_sg_screenSubTitle}
     Go Back
     Scroll To About Us Section
     # Explore Funds
-    Verify Element And Text  ${KU_W_feature_sg_screenTitle}  ${e_feature_sg_screenTitle}
     Wait Scroll And Click Element  ${KU_W_footer_exploreFunds}
     Verify Screen Title  ${e_mutualFundPageTitle}
+    # Verify Blog 
+    Verify Blog
+    Scroll To About Us Section
+    # Google Play & App Store Links
+    Wait Scroll And Click Element  ${KU_W_googlePlay}
+    Sleep  1s
+    Go Back
+    Scroll To About Us Section
+    Wait Scroll And Click Element  ${KU_W_appStore}
+    Sleep  1s
+    Go Back
+    # GET FINANCE INSIGHTS
+    Scroll To About Us Section
+    Wait Scroll And Click Element  ${KU_W_getFinanceInsights}
+    Verify Element And Text  ${KU_W_getFinanceInsightsTitle}  ${e_getFinanceInsightsTitle}
+    Go Back
 
 Scroll To About Us Section
     Scroll Page To Location  0  2000
     Scroll Untill View  ${KU_W_footer_aboutUs}
 
 Verify The Team Page
+    Scroll To About Us Section
     Wait Scroll And Click Element  ${KU_W_footer_theTeam}
     Wait For Element Visibility  ${KU_W_footer_theTeamTitle}
     Verify Element And Text  ${KU_W_footer_theTeamTitle}  ${e_footer_theTeamTitle}
-    Scroll To About Us Section
 
 Verify Why Kuvera Page
+    Scroll To About Us Section
     Verify Element And Text  ${KU_W_footer_whyKuvera}  ${e_footer_whyKuvera}
     Click Element  ${KU_W_footer_whyKuvera}
+    Sleep  1s
     Wait For Element Visibility  ${KU_W_feature_cd_pageHeader}
     Verify Element And Text  ${KU_W_feature_cd_pageHeader}  ${e_feature_cd_pageHeaderText}
-    Verify Element And Text  ${KU_W_feature_cd_pageSubHeader}  ${e_feature_cd_subHeaderText}
     Scroll To About Us Section
 
 Verify Press Page
@@ -62,9 +81,9 @@ Verify Press Page
     Wait For Element Visibility  ${KU_W_footer_inPressTitle}
     Scroll Untill View  ${KU_W_footer_inPressTitle}
     Verify Element And Text  ${KU_W_footer_inPressTitle}  ${e_footer_inPressTitle}
-    Scroll To About Us Section
 
 Verify Terms And Privacy Policy Page    
+    Scroll To About Us Section
     # Terms
     Wait Scroll And Click Element  ${KU_W_footer_termsLink}
     Wait For Element Visibility  ${KU_W_footer_termsOfUsageTitle}
@@ -74,9 +93,15 @@ Verify Terms And Privacy Policy Page
     Wait Scroll And Click Element  ${KU_W_footer_privacyPolicyLink}
     Wait For Element Visibility  ${KU_W_footer_privacyPolicyTitle}
     Verify Element And Text  ${KU_W_footer_privacyPolicyTitle}  ${e_footer_privacyPolicy}
-    Scroll To About Us Section
 
 Verify Switch To Direct Page 
+    Scroll To About Us Section
     Wait Scroll And Click Element  ${KU_W_footer_switchToDirectFunds}
     Wait For Element Visibility  ${KU_W_footer_switchToDirectTitle}
     Verify Element And Text  ${KU_W_footer_switchToDirectTitle}  ${e_footer_switchToDirectTitle}
+
+Verify Blog 
+    Scroll To About Us Section
+    Verify Element And Text  ${KU_W_blog}  ${e_blog}
+    Click Element  ${KU_W_blog}
+    Switch To Window
