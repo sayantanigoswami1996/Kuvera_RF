@@ -7,96 +7,108 @@ Library     SeleniumLibrary
 Verify All Fund House Details
     Wait For Element Visibility  ${KU_W_fundHouse_title}
     Scroll Untill View  ${KU_W_fundHouse_title}
-    ${fundHouseList} =  Get Element Count  xpath=//a[@class='b-fund-house__list__column__item']
-    Log To Console  ${fundHouseList}
+    
+    # Get list count
+    ${fundHouseListCount} =  Get Element Count  xpath=//a[@class='b-fund-house__list__column__item']
+    Log To Console  ${fundHouseListCount}
+
+    # Iterate and verify all fund house details 
     FOR  ${i}  IN RANGE  1   5
+
         ${fundHouseName} =  Get Text  xpath=(//a[@class='b-fund-house__list__column__item'])[${i}]
         Log To Console  ${fundHouseName}
         Click Element  xpath=(//a[@class='b-fund-house__list__column__item'])[${i}]
-        Sleep  2s
-        # Get all the expected texts to be validated from json file 
-        ${fundHouseName}  Get Json Values  $.FundHouse..fh${i}name  Resources/TestData/FundHouse.json
-        ${expectedfundHouseName} =  Convert To String  ${fundHouseName}
-        Log To Console  ${expectedfundHouseName}
-        ${fundHouseHeader}  Get Json Values  $.FundHouse..fh${i}header  Resources/TestData/FundHouse.json
-        ${expectedfundHouseHeader} =  Convert To String  ${fundHouseHeader}
-        ${expectedHeader1} =  Replace String  ${expectedfundHouseHeader}  ’  '
-        ${expectedHeader2} =  Replace String  ${expectedHeader1}  â€™  '
-        Log To Console  ${expectedHeader2}
-        ${fundHouseRTA}  Get Json Values  $.FundHouse..fh${i}RTA  Resources/TestData/FundHouse.json
-        ${expectedFundHouseRTA} =  Convert To String  ${fundHouseRTA}
-        Log To Console  ${expectedFundHouseRTA}
-        ${fundHouseWebsite}  Get Json Values  $.FundHouse..fh${i}website  Resources/TestData/FundHouse.json
-        ${expectedFundHouseWebsite} =  Convert To String  ${fundHouseWebsite}
-        Log To Console  ${expectedFundHouseWebsite}
-        ${fundHouseAddress}  Get Json Values  $.FundHouse..fh${i}address  Resources/TestData/FundHouse.json
-        ${expectedFundHouseAddress} =  Convert To String  ${fundHouseAddress}
-        Log To Console  ${expectedFundHouseAddress}
-        ${fundHousePhone}  Get Json Values  $.FundHouse..fh${i}phone  Resources/TestData/FundHouse.json
-        ${expectedFundPhone} =  Convert To String  ${fundHousePhone}
-        Log To Console  ${expectedFundPhone}
-        ${fundHouseEmail}  Get Json Values  $.FundHouse..fh${i}email  Resources/TestData/FundHouse.json
-        ${expectedFundHouseEmail} =  Convert To String  ${fundHouseEmail}
-        Log To Console  ${fundHouseEmail}
-        ${fundHouseInvestorLogin}  Get Json Values  $.FundHouse..fh${i}investorlogin  Resources/TestData/FundHouse.json
-        ${expectedFundHouseInvestorLogin} =  Convert To String  ${fundHouseInvestorLogin}
-        Log To Console  ${expectedFundHouseInvestorLogin}
-        ${fundManagedBy}  Get Json Values  $.FundHouse..fh${i}fundmanaged  Resources/TestData/FundHouse.json
-        ${expectedFundManagedBy} =  Convert To String  ${fundManagedBy}
-        Log To Console  ${expectedFundManagedBy}
-        
+
         #Logo
-        Wait For Element Visibility  ${KU_W_fundHouse_fundLogo}
-        Verify Page Contains Image  ${KU_W_fundHouse_fundLogo}
-        # Page Title and header 
-        ${actualFundName} =  Get Text  ${KU_W_fundHouse_fundName}
+        Wait For Element Visibility  ${KU_W_fh_fundLogo}
+        Verify Page Contains Image  ${KU_W_fh_fundLogo}
+
+        # Get all the expected details from json file 
+        ${fundHouseName}  Get Json Values  $.FundHouse..fh${i}name  Resources/TestData/FundHouse.json
+        ${fundHouseHeader}  Get Json Values  $.FundHouse..fh${i}header  Resources/TestData/FundHouse.json
+        ${fundHouseRTA}  Get Json Values  $.FundHouse..fh${i}RTA  Resources/TestData/FundHouse.json
+        ${fundHouseWebsite}  Get Json Values  $.FundHouse..fh${i}website  Resources/TestData/FundHouse.json
+        ${fundHouseAddress}  Get Json Values  $.FundHouse..fh${i}address  Resources/TestData/FundHouse.json
+        ${fundHousePhone}  Get Json Values  $.FundHouse..fh${i}phone  Resources/TestData/FundHouse.json
+        ${fundHouseEmail}  Get Json Values  $.FundHouse..fh${i}email  Resources/TestData/FundHouse.json
+        ${fundHouseInvestorLogin}  Get Json Values  $.FundHouse..fh${i}investorlogin  Resources/TestData/FundHouse.json
+        ${fundManagedBy}  Get Json Values  $.FundHouse..fh${i}fundmanaged  Resources/TestData/FundHouse.json
+
+        # Fund house name
+        ${expectedfundHouseName} =  Convert To String  ${fundHouseName}
+        ${actualFundName} =  Get Text  ${KU_W_fh_fundName}
+        Log To Console  ${actualFundName}
         Compare Text Values  ${actualFundName}  ${expectedfundHouseName}
-        ${actualFundIntroDesc} =  Get Text  ${KU_W_fundHouse_fundIntroDesc}  
-        ${actualFundIntro1} =  Replace String  ${actualFundIntroDesc}  ’  '
-        Compare Text Values  ${actualFundIntro1}  ${expectedfundHouseHeader}
-        # RTA
-        Wait For Element Visibility  ${KU_W_fundHouse_RTAHeader}
-        Verify Element And Text  ${KU_W_fundHouse_RTAHeader}  ${e_RTAHeader}
-        ${actualRTA} =  Get Text  ${KU_W_fundHouse_RTADesc}  
+
+        # Fund house header
+        ${expectedFundHouseHeader} =  Convert To String  ${fundHouseHeader}
+        ${expectedHeader1} =  Replace String  ${expectedFundHouseHeader}  ’  '
+        ${expectedHeader2} =  Replace String  ${expectedHeader1}  â€™  '
+        ${actualHeader} =  Get Text  ${KU_W_fh_fundIntroDesc}  
+        ${actualHeader1} =  Replace String  ${actualHeader}  ’  '
+        Log To Console  ${actualHeader1}
+        Compare Text Values  ${actualHeader1}  ${expectedHeader2}
+
+        # Registrar and Transfer Agent (RTA)
+        ${expectedFundHouseRTA} =  Convert To String  ${fundHouseRTA}
+        Wait For Element Visibility  ${KU_W_fh_RTAHeader}
+        Verify Element And Text  ${KU_W_fh_RTAHeader}  ${e_RTAHeader}
+        ${actualRTA} =  Get Text  ${KU_W_fh_RTADesc}  
+        Log To Console  ${actualRTA}
         Compare Text Values  ${actualRTA}  ${expectedFundHouseRTA}
+
         # Website
-        Wait For Element Visibility  ${KU_W_fundHouse_websiteHeader}
-        Verify Element And Text  ${KU_W_fundHouse_websiteHeader}  ${e_websiteHeader}
-        ${actualWebsite} =  Get Text  ${KU_W_fundHouse_websiteURL} 
+        ${expectedFundHouseWebsite} =  Convert To String  ${fundHouseWebsite}
+        Wait For Element Visibility  ${KU_W_fh_websiteHeader}
+        Verify Element And Text  ${KU_W_fh_websiteHeader}  ${e_websiteHeader}
+        ${actualWebsite} =  Get Text  ${KU_W_fh_websiteURL} 
+        Log To Console  ${actualWebsite}
         Compare Text Values  ${actualWebsite}  ${expectedFundHouseWebsite}
-        Click Element  ${KU_W_fundHouse_websiteLink}
+        Click Element  ${KU_W_fh_websiteLink}
         Switch To Window
-        Sleep  5s
+        Sleep  2s
+
         # Address
-        Scroll And Wait  ${KU_W_fundHouse_addressHeader}
-        Verify Element And Text  ${KU_W_fundHouse_addressHeader}  ${e_addressHeader}
-        ${actualAddress} =  Get Text  ${KU_W_fundHouse_addressDesc} 
+        ${expectedFundHouseAddress} =  Convert To String  ${fundHouseAddress}
+        Scroll And Wait  ${KU_W_fh_addressHeader}
+        Verify Element And Text  ${KU_W_fh_addressHeader}  ${e_addressHeader}
+        ${actualAddress} =  Get Text  ${KU_W_fh_addressDesc} 
+        Log To Console  ${actualAddress}
         Compare Text Values  ${actualAddress}  ${expectedFundHouseAddress}
+
         # Phone Number
-        Scroll And Wait  ${KU_W_fundHouse_phoneNumHeader}
-        Verify Element And Text  ${KU_W_fundHouse_phoneNumHeader}  ${e_phoneNumHeader}
-        ${actualPhoneNumber} =  Get Text  ${KU_W_fundHouse_phoneNumber}
+        ${expectedFundPhone} =  Convert To String  ${fundHousePhone}
+        Scroll And Wait  ${KU_W_fh_phoneNumHeader}
+        Verify Element And Text  ${KU_W_fh_phoneNumHeader}  ${e_phoneNumHeader}
+        ${actualPhoneNumber} =  Get Text  ${KU_W_fh_phoneNumber}
+        Log To Console  ${actualPhoneNumber}
         Compare Text Values  ${actualPhoneNumber}  ${expectedFundPhone}
-        # Contact Email
-        Scroll And Wait  ${KU_W_fundHouse_emailHeader}
-        Verify Element And Text  ${KU_W_fundHouse_emailHeader}  ${e_emailHeader}
-        ${actualcompanyEmail} =  Get Text  ${KU_W_fundHouse_companyEmail}
+
+        # Email
+        ${expectedFundHouseEmail} =  Convert To String  ${fundHouseEmail}
+        Scroll And Wait  ${KU_W_fh_emailHeader}
+        Verify Element And Text  ${KU_W_fh_emailHeader}  ${e_emailHeader}
+        ${actualcompanyEmail} =  Get Text  ${KU_W_fh_companyEmail}
+        Log To Console  ${actualcompanyEmail}
         Compare Text Values  ${actualcompanyEmail}  ${expectedFundHouseEmail}
+
         # Investor Login
-        Scroll And Wait  ${KU_W_fundHouse_investorLoginHeader}
-        Verify Element And Text  ${KU_W_fundHouse_investorLoginHeader}  ${e_investorLoginHeader}
-        ${actualInvestorLoginURL} =  Get Text  ${KU_W_fundHouse_investorLoginURL}
-        Compare Text Values  ${actualInvestorLoginURL}  ${expectedFundHouseInvestorLogin}
-        Click Element  ${KU_W_fundHouse_investorLoginLink}
+        ${expectedFundHouseInvestorURL} =  Convert To String  ${fundHouseInvestorLogin}
+        Scroll And Wait  ${KU_W_fh_investorLoginHeader}
+        Verify Element And Text  ${KU_W_fh_investorLoginHeader}  ${e_investorLoginHeader}
+        ${actualInvestorLoginURL} =  Get Text  ${KU_W_fh_investorLoginURL}
+        Log To Console  ${actualInvestorLoginURL}
+        Compare Text Values  ${actualInvestorLoginURL}  ${expectedFundHouseInvestorURL}
+        Click Element  ${KU_W_fh_investorLoginLink}
         Switch To Window
-        Sleep  5s
-        # Fund House Managed
-        Wait For Element Visibility  ${KU_W_fundHouse_fundManagedHeader}
-        ${actualFundManagedBy} =  Get Text  ${KU_W_fundHouse_fundManagedHeader}
+        Sleep  1s
+
+        # Funds managed 
+        ${expectedFundManagedBy} =  Convert To String  ${fundManagedBy}
+        Wait For Element Visibility  ${KU_W_fh_fundManagedHeader}
+        ${actualFundManagedBy} =  Get Text  ${KU_W_fh_fundManagedHeader}
+        Log To Console  ${actualFundManagedBy}
         Compare Text Values  ${actualFundManagedBy}  ${expectedFundManagedBy}
         Go Back
+        Log To Console  ******************
     END
-
-        
-
-   

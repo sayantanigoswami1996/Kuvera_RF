@@ -150,7 +150,7 @@ Verify Language Switch Login And Signup Link
 Switch To Window
     Switch Window  locator=NEW
     Close Window
-    Sleep  2s
+    Sleep  5s
     Switch Window  browser=Kuvera
     
 Scroll Page To Location
@@ -197,6 +197,7 @@ Open Bot And Validate Question
 Scroll And Wait
     [Arguments]  ${element}
     Scroll Untill View  ${element}
+    Sleep  1s
     Wait For Element Visibility  ${element}
     
 Close Web Application

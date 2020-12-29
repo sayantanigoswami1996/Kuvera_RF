@@ -53,6 +53,7 @@ Verify Footer
     Wait Scroll And Click Element  ${KU_W_getFinanceInsights}
     Verify Element And Text  ${KU_W_getFinanceInsightsTitle}  ${e_getFinanceInsightsTitle}
     Go Back
+    Go Back
 
 Scroll To About Us Section
     Scroll Page To Location  0  2000
