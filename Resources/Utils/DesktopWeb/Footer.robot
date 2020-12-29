@@ -15,7 +15,7 @@ Verify Footer
     Verify The Team Page
     Verify Why Kuvera Page
     Verify Press Page
-    Sleep  3s
+    Sleep  1s
     Wait Scroll And Click Element  ${KU_W_footer_fbIcon}
     Switch To Window
     Wait Scroll And Click Element  ${KU_W_footer_tweeterIcon}
@@ -88,7 +88,7 @@ Verify Terms And Privacy Policy Page
     Wait Scroll And Click Element  ${KU_W_footer_termsLink}
     Wait For Element Visibility  ${KU_W_footer_termsOfUsageTitle}
     Verify Element And Text  ${KU_W_footer_termsOfUsageTitle}  ${e_footer_termsOfUsageTitle}
-    Scroll Page To Location  0  2000
+    Scroll To About Us Section
     # Privacy Policy
     Wait Scroll And Click Element  ${KU_W_footer_privacyPolicyLink}
     Wait For Element Visibility  ${KU_W_footer_privacyPolicyTitle}
