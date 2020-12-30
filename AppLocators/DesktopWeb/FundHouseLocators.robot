@@ -26,4 +26,8 @@ ${KU_W_fh_companyEmail} =  xpath=(//div[contains(@class,'house-info')]//p)[6]
 ${KU_W_fh_investorLoginHeader} =  xpath=(//div[contains(@class,'house-info')]//h2)[6]
 ${KU_W_fh_investorLoginURL} =  xpath=(//div[contains(@class,'house-info')]//p)[7]
 ${KU_W_fh_investorLoginLink} =  xpath=(//div[contains(@class,'house-info')]//p//a)[3]
+<<<<<<< HEAD
 ${KU_W_fh_fundManagedHeader} =  xpath=(//div[contains(@class,'house-info')]//h2)[7]
+=======
+${KU_W_fh_fundManagedHeader} =  xpath=(//div[contains(@class,'house-info')]//h2)[7]
+>>>>>>> db7ba5b50658fdbf6fc5babd5839bef4f7725d1d
