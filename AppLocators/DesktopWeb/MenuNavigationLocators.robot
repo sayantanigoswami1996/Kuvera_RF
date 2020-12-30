@@ -443,7 +443,6 @@ ${KU_W_feature_helpTradeSmart2Msg} =  xpath=//div[@class='b-trade-smart__help-de
 ${KU_W_feature_helpTradeSmart3Msg} =  xpath=//div[@class='b-trade-smart__help-desc']/div[3]
 ${KU_W_feature_aboutUs} =  xpath=(//ul[@class='list-unstyled']/li)[1]
 
-
 # Feature-Family Account
 ${KU_W_feature_familyAccountLink} =  xpath=//a[contains(text(),'Family Account')]  
 ${KU_W_feature_fa_screenContent} =  xpath=//div[@class='b-family-account__what__des']

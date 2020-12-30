@@ -19,6 +19,8 @@ Verify PreLogin Remit Page
     Sleep  1s
     Wait For Element Visibility  ${KU_W_remit_screenTitle}
     Verify Element And Text  ${KU_W_remit_screenTitle}  ${e_remit_screenTitle}
+    Sleep  2s
+    Wait For Element Visibility  ${KU_W_remit_screenTitleDesc}
     Verify Element And Text  ${KU_W_remit_screenTitleDesc}  ${e_remit_screenTitleDesc}
     Verify Transfer Now  ${KU_W_remit_transferNowTopBtn}
     Scroll Untill View  ${KU_W_remit_whyTransferWise}

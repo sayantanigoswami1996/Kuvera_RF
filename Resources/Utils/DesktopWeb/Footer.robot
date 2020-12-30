@@ -16,10 +16,12 @@ Verify Footer
     Verify Why Kuvera Page
     Verify Press Page
     Sleep  1s
+    # FB & Tweeter options
     Wait Scroll And Click Element  ${KU_W_footer_fbIcon}
     Switch To Window
     Wait Scroll And Click Element  ${KU_W_footer_tweeterIcon}
     Switch To Window
+    # Terms & Policy
     Verify Terms And Privacy Policy Page 
     Verify Switch To Direct Page
     # Save Taxes
@@ -49,10 +51,7 @@ Verify Footer
     Sleep  1s
     Go Back
     # GET FINANCE INSIGHTS
-    Scroll To About Us Section
-    Wait Scroll And Click Element  ${KU_W_getFinanceInsights}
-    Verify Element And Text  ${KU_W_getFinanceInsightsTitle}  ${e_getFinanceInsightsTitle}
-    Go Back
+    Verify Finance Insights Subscription
 
 Scroll To About Us Section
     Scroll Page To Location  0  2000
@@ -88,8 +87,8 @@ Verify Terms And Privacy Policy Page
     Wait Scroll And Click Element  ${KU_W_footer_termsLink}
     Wait For Element Visibility  ${KU_W_footer_termsOfUsageTitle}
     Verify Element And Text  ${KU_W_footer_termsOfUsageTitle}  ${e_footer_termsOfUsageTitle}
-    Scroll To About Us Section
     # Privacy Policy
+    Scroll To About Us Section
     Wait Scroll And Click Element  ${KU_W_footer_privacyPolicyLink}
     Wait For Element Visibility  ${KU_W_footer_privacyPolicyTitle}
     Verify Element And Text  ${KU_W_footer_privacyPolicyTitle}  ${e_footer_privacyPolicy}
@@ -105,3 +104,10 @@ Verify Blog
     Verify Element And Text  ${KU_W_blog}  ${e_blog}
     Click Element  ${KU_W_blog}
     Switch To Window
+
+Verify Finance Insights Subscription
+    Scroll To About Us Section
+    Wait Scroll And Click Element  ${KU_W_getFinanceInsights}
+    Verify Element And Text  ${KU_W_getFinanceInsightsTitle}  ${e_getFinanceInsightsTitle}
+    Wait For Element Visibility  ${KU_W_subscribeCloseBtn}
+    Click Element  ${KU_W_subscribeCloseBtn}

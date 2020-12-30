@@ -1,4 +1,4 @@
-﻿*** Variables ***
+*** Variables ***
 # Application Expected Values 'e_<VariableName>'
 ${e_footer_aboutUs} =  ABOUT US
 ${e_footer_theTeam} =  The Team
@@ -45,3 +45,5 @@ ${KU_W_googlePlay} =  xpath=(//ul[@class='list-unstyled'])[3]/li[3]/a
 ${KU_W_appStore} =  xpath=(//ul[@class='list-unstyled'])[3]/li[4]/a
 ${KU_W_getFinanceInsights} =  xpath=//button[@class='btn active-btn']
 ${KU_W_getFinanceInsightsTitle} =  xpath=//*[@class='b-finance-insights__heading']
+${KU_W_subscribeFrame} =  xpath=//*[@class='modal-content-desktop b-finance-insights__modal-content']
+${KU_W_subscribeCloseBtn} =  xpath=//*[@class='b-finance-insights__close-container']

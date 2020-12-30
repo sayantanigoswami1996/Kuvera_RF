@@ -1,4 +1,4 @@
-﻿*** Variables ***
+*** Variables ***
 # Application Expected Values 'e_<VariableName>'
 ${e_prod} =  prod
 ${e_title} =  Kuvera - Direct Mutual Funds | Stocks | Loans | Gold | Remit on Kuvera- Wealth Management Simplified

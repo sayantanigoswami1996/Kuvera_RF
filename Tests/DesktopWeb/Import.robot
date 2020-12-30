@@ -41,3 +41,4 @@ Resource    ../../Resources/Utils/DesktopWeb/Features/TaxHarvesting.robot
 Resource    ../../Resources/Utils/DesktopWeb/Features/SaveTaxes.robot
 Resource    ../../Resources/Utils/DesktopWeb/Features/Consolidate.robot
 Resource    ../../Resources/Utils/DesktopWeb/Footer.robot
+Resource    ../../Resources/Utils/DesktopWeb/FundHouse.robot

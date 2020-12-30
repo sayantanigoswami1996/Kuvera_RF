@@ -12,7 +12,7 @@ Verify Question Title
     ${actualTitle1} =  Replace String  ${actualTitle}  ’  '
     ${expectedTitle1} =  Replace String  ${expectedTitle}  ’  '
     ${expectedTitle2} =  Replace String  ${expectedTitle1}  â€™  '
-    Should be equal  ['${actualTitle1}']  ${expectedTitle2}
+    Run Keyword And Continue On Failure  Should be equal  ['${actualTitle1}']  ${expectedTitle2}
 
 Verify PreLogin Set A Goal Page
     ${goal1}  Get Json Values  $.Goals.g1  Resources/TestData/Goals.json

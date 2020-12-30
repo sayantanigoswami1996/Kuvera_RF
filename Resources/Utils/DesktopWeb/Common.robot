@@ -13,6 +13,7 @@ Resource    ../../../AppLocators/DesktopWeb/InvestLocators/SaveSmartLocators.rob
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/DigitalGoldLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/GiltFundsLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/EquityIndexLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/InvestLocators/SectorFundsLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/ValueFundsLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/ELSSTaxSaverLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/BankPSUBondsLocators.robot
@@ -24,7 +25,7 @@ Resource    ../../../AppLocators/DesktopWeb/InvestLocators/MutualFundsLocators.r
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/StocksLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/USStocksLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/FooterLocators.robot
-
+Resource    ../../../AppLocators/DesktopWeb/FundHouseLocators.robot
 *** Keywords ***
 
 Launch URL
@@ -37,7 +38,7 @@ Launch URL
     ...    ELSE   Log To Console  Staging
 
 Welcome Page Should Be Open
-    Title Should Be  ${KU_W_title}
+    Run Keyword And Continue On Failure  Title Should Be  ${KU_W_title}
 
 Wait For Element Visibility
     [Arguments]  ${element}
@@ -45,15 +46,15 @@ Wait For Element Visibility
 
 Verify Element And Text
     [Arguments]  ${element}  ${text}
-    Element Text Should Be  ${element}  ${text}
+    Run Keyword And Continue On Failure  Element Text Should Be  ${element}  ${text}
 
 Verify Page Contains Element
     [Arguments]  ${element}
-    Page Should Contain Element  ${element}
+    Run Keyword And Continue On Failure  Page Should Contain Element  ${element}
 
 Verify Page Contains Image
     [Arguments]  ${image}
-    Page Should Contain Image  ${image}
+    Run Keyword And Continue On Failure  Page Should Contain Image  ${image}
 
 Scroll Untill View
     [Arguments]  ${element}
@@ -61,11 +62,11 @@ Scroll Untill View
 
 Verify Page Contains Link
     [Arguments]  ${link}  ${text}
-    Page Should Contain Link  ${link}  ${text}
+    Run Keyword And Continue On Failure  Page Should Contain Link  ${link}  ${text}
 
 Verify Page Contains Button
     [Arguments]  ${button}
-    Page Should Contain Button  ${button}
+    Run Keyword And Continue On Failure  Page Should Contain Button  ${button}
 
 Compare Lists
     [Arguments]  ${actualList}   ${expectedList}
@@ -78,12 +79,12 @@ Compare Lists
     ${expectedListItem}  Set Variable  ${expectedListItems}
     END
     # Compare two list items
-    Should Be Equal  ${actualListItem}  ${expectedListItem}
+    Run Keyword And Continue On Failure  Should Be Equal  ${actualListItem}  ${expectedListItem}
 
 Switch To Window Verify Title And Close
     [Arguments]  ${title}
     Switch Window  locator=NEW
-    Title Should Be  ${title}
+    Run Keyword And Continue On Failure  Title Should Be  ${title}
     Close Window
     Sleep  2s
     Switch Window  browser=Kuvera
@@ -149,7 +150,7 @@ Verify Language Switch Login And Signup Link
 Switch To Window
     Switch Window  locator=NEW
     Close Window
-    Sleep  2s
+    Sleep  5s
     Switch Window  browser=Kuvera
     
 Scroll Page To Location
@@ -165,11 +166,11 @@ Wait Scroll And Click Element
 
 Compare Text Values
     [Arguments]  ${actualValue}  ${expectedValue}
-    Should Be Equal  ${actualValue}  ${expectedValue}
+    Run Keyword And Continue On Failure  Should Be Equal  ['${actualValue}']  ${expectedValue}
 
 Verify Screen Title
     [Arguments]  ${title}
-    Title Should Be  ${title}
+    Run Keyword And Continue On Failure  Title Should Be  ${title}
 
 Verify Presence Of FAQBOT Icon
     Run Keyword If  '${ENV}' == '${e_prod}'  Verify Page Contains Element  ${KU_W_faqbot_icon}
@@ -192,6 +193,12 @@ Open Bot And Validate Question
     Unselect Frame
     Wait For Element Visibility  ${KU_W_faqbotCloseBanner}
     Click Element  ${KU_W_faqbotCloseBanner}
+
+Scroll And Wait
+    [Arguments]  ${element}
+    Scroll Untill View  ${element}
+    Sleep  1s
+    Wait For Element Visibility  ${element}
     
 Close Web Application
     Close All Browser
