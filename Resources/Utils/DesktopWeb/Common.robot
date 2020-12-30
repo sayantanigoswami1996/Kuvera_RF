@@ -26,12 +26,14 @@ Resource    ../../../AppLocators/DesktopWeb/InvestLocators/StocksLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/USStocksLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/FooterLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/FundHouseLocators.robot
+
 *** Keywords ***
 
 Launch URL
     Open Browser  ${URL}  ${BROWSER}  alias=Kuvera
     # Maximize Browser Window
     Set Window Size  ${1920}  ${1080}
+    Set Selenium Implicit Wait  60s
     Reload Page
     Kuvera Web Close Regulatory Disclosure
     Run Keyword If    '${ENV}' == '${e_prod}'  Close Hello Bar
@@ -167,6 +169,7 @@ Wait Scroll And Click Element
 Compare Text Values
     [Arguments]  ${actualValue}  ${expectedValue}
     Run Keyword And Continue On Failure  Should Be Equal  ['${actualValue}']  ${expectedValue}
+    Log To Console  ['${actualValue}']
 
 Verify Screen Title
     [Arguments]  ${title}
@@ -198,6 +201,12 @@ Scroll And Wait
     [Arguments]  ${element}
     Scroll Untill View  ${element}
     Wait For Element Visibility  ${element}
-    
+
+Click Link And Switch Window
+    [Arguments]  ${websiteLink} 
+    Click Element  ${websiteLink}
+    Switch To Window
+    Sleep  2s  
+   
 Close Web Application
     Close All Browser
