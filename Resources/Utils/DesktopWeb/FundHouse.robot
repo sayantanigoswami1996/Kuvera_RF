@@ -13,7 +13,7 @@ Verify All Fund House Details
     Log To Console  ${fundHouseListCount}
 
     # Iterate and verify all fund house details 
-    FOR  ${i}  IN RANGE  1  ${fundHouseListCount}+1
+    FOR  ${i}  IN RANGE  10  11
 
         ${fundHouseName} =  Get Text  xpath=(//a[@class='b-fund-house__list__column__item'])[${i}]
         Log To Console  ${fundHouseName}
@@ -46,10 +46,9 @@ Verify All Fund House Details
         ${expectedHeader2} =  Replace String  ${expectedHeader1}  â€™  '
         ${actualHeader} =  Get Text  ${KU_W_fh_fundIntroDesc}
         ${actualHeader1} =  Replace String  ${actualHeader}  ’  '
-        ${actualHeader2} =  Replace String  ${actualHeader1}  â€™  '
-        Log To Console  ${actualHeader2}
+        Log To Console  ${actualHeader1}
         Log To Console  ${expectedHeader2}
-        Compare Text Values  ${actualHeader2}  ${expectedHeader2}
+        Compare Text Values  ${actualHeader1}  ${expectedFundHouseHeader}
  
         # Registrar and Transfer Agent (RTA)
         ${expectedFundHouseRTA} =  Convert To String  ${fundHouseRTA}

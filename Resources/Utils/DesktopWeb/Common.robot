@@ -169,7 +169,6 @@ Wait Scroll And Click Element
 Compare Text Values
     [Arguments]  ${actualValue}  ${expectedValue}
     Run Keyword And Continue On Failure  Should Be Equal  ['${actualValue}']  ${expectedValue}
-    Log To Console  ['${actualValue}']
 
 Verify Screen Title
     [Arguments]  ${title}
