@@ -4,7 +4,7 @@ Library     SeleniumLibrary
 
 *** Keywords ***
 
-Verify US Stocks Landing Page
+Verify Pre Login US Stocks Landing Page
     Log To Console  US Stocks
     Navigate To Invest Page And Verify Explore Options  ${KU_W_USStocks}  ${e_invest_USStocks}
     Wait For Element Visibility  ${KU_W_invest_USStocksTitle}

@@ -4,7 +4,7 @@ Library     SeleniumLibrary
 
 *** Keywords ***
 
-Verify Footer 
+Verify PreLogin Footer 
     # About Us
     Scroll To About Us Section
     Verify Element And Text  ${KU_W_footer_aboutUs}  ${e_footer_aboutUs}

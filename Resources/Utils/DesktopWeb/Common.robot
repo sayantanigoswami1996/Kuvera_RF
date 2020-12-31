@@ -202,6 +202,11 @@ Scroll And Wait
     Sleep  1s
     Wait For Element Visibility  ${element}
 
+Replace Characters
+    [Arguments]  ${text}  ${char1}  ${char2}
+    ${replacedString} =  Replace String  ${text}  ${char1}  ${char2}
+    [Return]  ${replacedString}
+
 Click Link And Switch Window
     [Arguments]  ${websiteLink} 
     Click Element  ${websiteLink}

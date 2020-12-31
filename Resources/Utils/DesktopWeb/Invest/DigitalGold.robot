@@ -4,7 +4,7 @@ Library   SeleniumLibrary
 
 *** Keywords ***
 
-Verify Digital Gold Landing Page
+Verify Pre Login Digital Gold Landing Page
     Log To Console  Digital Gold - Explore More
     Navigate To Invest Page And Verify Explore Options  ${KU_W_digitalGold}  ${e_invest_digGold}
     Verify Language Switch Login And Signup Link  

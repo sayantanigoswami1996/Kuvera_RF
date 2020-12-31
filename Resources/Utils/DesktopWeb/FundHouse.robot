@@ -4,7 +4,7 @@ Library     SeleniumLibrary
 
 *** Keywords ***
 
-Verify All Fund House Details
+Verify PreLogin All Fund House Details
     Wait For Element Visibility  ${KU_W_fundHouse_title}
     Scroll Untill View  ${KU_W_fundHouse_title}
     
@@ -13,7 +13,7 @@ Verify All Fund House Details
     Log To Console  ${fundHouseListCount}
 
     # Iterate and verify all fund house details 
-    FOR  ${i}  IN RANGE  10  11
+    FOR  ${i}  IN RANGE  1  ${fundHouseListCount}+1
 
         ${fundHouseName} =  Get Text  xpath=(//a[@class='b-fund-house__list__column__item'])[${i}]
         Log To Console  ${fundHouseName}
@@ -40,15 +40,19 @@ Verify All Fund House Details
         Log To Console  ${actualFundName}
         Compare Text Values  ${actualFundName}  ${expectedfundHouseName}
         
-        # Fund house header
+       # Fund house header
         ${expectedFundHouseHeader} =  Convert To String  ${fundHouseHeader}
-        ${expectedHeader1} =  Replace String  ${expectedFundHouseHeader}  ’  '
-        ${expectedHeader2} =  Replace String  ${expectedHeader1}  â€™  '
+        ${expectedHeader1} =  Replace Characters  ${expectedFundHouseHeader}  ’  '
+        ${expectedHeader2} =  Replace Characters  ${expectedHeader1}  â€™  '
+        ${expectedHeader3} =  Replace Characters  ${expectedHeader2}  "  ' 
         ${actualHeader} =  Get Text  ${KU_W_fh_fundIntroDesc}
-        ${actualHeader1} =  Replace String  ${actualHeader}  ’  '
-        Log To Console  ${actualHeader1}
-        Log To Console  ${expectedHeader2}
-        Compare Text Values  ${actualHeader1}  ${expectedHeader2}
+        ${actualHeader1} =  Replace Characters  ${actualHeader}  ’  '
+        ${actualHeader2} =  Replace Characters  ${actualHeader1}  â€™  '
+         ${actualHeader3} =  Replace Characters   ${actualHeader2}  "  '
+        Log To Console  ${actualHeader3}
+        Log To Console   ***********
+        Log To Console  ${expectedHeader3}
+        Compare Text Values  ${actualHeader3}  ${expectedHeader3}
  
         # Registrar and Transfer Agent (RTA)
         ${expectedFundHouseRTA} =  Convert To String  ${fundHouseRTA}
@@ -71,9 +75,11 @@ Verify All Fund House Details
         ${expectedFundHouseAddress} =  Convert To String  ${fundHouseAddress}
         Scroll And Wait  ${KU_W_fh_addressHeader}
         Verify Element And Text  ${KU_W_fh_addressHeader}  ${e_addressHeader}
-        ${actualAddress} =  Get Text  ${KU_W_fh_addressDesc} 
-        Log To Console  ${actualAddress}
-        Compare Text Values  ${actualAddress}  ${expectedFundHouseAddress}
+        ${actualAddress} =  Get Text  ${KU_W_fh_addressDesc}
+        ${actualAddress1} =  Replace Characters  ${actualAddress}  ”  "
+        ${actualAddress2} =  Replace Characters  ${actualAddress1}  “  " 
+        Log To Console  ${actualAddress2}
+        Compare Text Values  ${actualAddress2}  ${expectedFundHouseAddress}
 
         # Phone Number
         ${expectedFundPhone} =  Convert To String  ${fundHousePhone}

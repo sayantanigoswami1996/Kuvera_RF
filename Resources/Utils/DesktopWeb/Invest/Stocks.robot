@@ -4,7 +4,7 @@ Library     SeleniumLibrary
 
 *** Keywords ***
 
-Verify Stocks Landing Page
+Verify Pre Login Stocks Landing Page
     Log To Console  Stocks
     Navigate To Invest Page And Verify Explore Options  ${KU_W_stocks}  ${e_invest_stocks}
     Verify Language Switch Login And Signup Link  
