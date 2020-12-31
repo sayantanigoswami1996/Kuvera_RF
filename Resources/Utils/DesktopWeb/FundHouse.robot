@@ -48,7 +48,7 @@ Verify All Fund House Details
         ${actualHeader1} =  Replace String  ${actualHeader}  ’  '
         Log To Console  ${actualHeader1}
         Log To Console  ${expectedHeader2}
-        Compare Text Values  ${actualHeader1}  ${expectedFundHouseHeader}
+        Compare Text Values  ${actualHeader1}  ${expectedHeader2}
  
         # Registrar and Transfer Agent (RTA)
         ${expectedFundHouseRTA} =  Convert To String  ${fundHouseRTA}
