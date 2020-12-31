@@ -4,7 +4,7 @@ Library     SeleniumLibrary
 
 *** Keywords ***
 
-Verify Gilt Funds Landing Page
+Verify PreLogin Gilt Funds Landing Page
     Log To Console  Gilt Fund
     Sleep  1s
     Wait For Element Visibility  ${KU_W_giltFundsTitle}

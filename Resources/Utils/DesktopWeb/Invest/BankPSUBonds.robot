@@ -4,7 +4,7 @@ Library     SeleniumLibrary
 
 *** Keywords ***
 
-Verify Bank And PSU Bonds Landing Page
+Verify PreLogin Bank And PSU Bonds Landing Page
     Log To Console  Bank and PSU Bonds
     Click Element  ${KU_W_bank&PSUBondsTitle}
     Wait For Element Visibility  ${KU_W_invest_fundsScreenTitle} 

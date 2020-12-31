@@ -4,7 +4,7 @@ Library     SeleniumLibrary
 
 *** Keywords ***
 
-Verify Equity Index Landing Page
+Verify PreLogin Equity Index Landing Page
     Log To Console  Equity Index
     Wait For Element Visibility    ${KU_W_equityIndexTitle} 
     Sleep  1s

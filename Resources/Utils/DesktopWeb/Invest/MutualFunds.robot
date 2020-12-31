@@ -4,7 +4,7 @@ Library     SeleniumLibrary
 
 *** Keywords ***
 
-Verify Pre Login Mutual Fund Landing Page
+Verify PreLogin Mutual Fund Landing Page
     Log To Console  Mutual Fund
     Navigate To Invest Page And Verify Explore Options  ${KU_W_mutualFund}  ${e_invest_mf_titleText} 
     Verify Language Switch Login And Signup Link
