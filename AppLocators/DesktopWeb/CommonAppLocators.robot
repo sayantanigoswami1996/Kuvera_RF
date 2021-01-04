@@ -209,4 +209,4 @@ ${KU_W_feature_ts_title} =  xpath=//div[@class='b-trade-smart__header__desc__tit
 ${KU_W_feature_fa_screenTitle} =  xpath=//h1[@class='b-family-account__what__heading']
 ${KU_W_feature_manageAccountTitle} =  xpath=//div[@class='b-manage-account__what']/h1
 ${KU_W_feature_sg_screenTitle} =  xpath=//*[@class='goals-index col-sm-4']/h2
-${KU_W_remit_screenTitle} =  xpath=//*[@class='b-introduction__desc__title']
+${KU_W_remit_screenTitle} =  xpath=//div[@class='b-introduction__desc']//div[2]

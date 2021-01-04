@@ -16,7 +16,6 @@ Verify US Stocks Landing Page
     Verify Element And Text  ${KU_W_invest_USStocks_sortYear}  ${e_invest_stocks_sortYear}
     Verify Page Contains Element  ${KU_W_invest_USStocks_filteredTag}
     Verify Page Contains Element  ${KU_W_invest_USStocks_stockPrice}
-    # WatchList
     Verify Watchlist Icon  ${KU_W_invest_US_SETFAnd52WUS_watchlistBtn}
     Verify Login Page
     Verify Filter For US Stocks
@@ -84,9 +83,11 @@ Verify US Stocks Landing Page Widgets
     Verify Element And Text  ${KU_W_invest_USStocks_zeroBrokerageDesc}  ${e_invest_USStocks_zeroBrokerageDesc}
     Verify Page Contains Image  ${KU_W_invest_USStocks_zeroCommissionImg}
     Verify Page Contains Image  ${KU_W_invest_USStocks_zeroBrokInfoLink}
-    Sleep  4s
+    Sleep  2s
     Wait For Element Visibility  ${KU_W_invest_USStocks_zeroBrokInfoLink}
     Click Element  ${KU_W_invest_USStocks_zeroBrokInfoLink}
+    Sleep  2s
+    Wait For Element Visibility  ${KU_W_invest_USStocks_zeroBrokInfoMsg}
     Verify Element And Text  ${KU_W_invest_USStocks_zeroBrokInfoMsg}  ${e_invest_USStocks_zeroBrokInfoMsg}
     Sleep  2s
     Wait For Element Visibility  ${KU_W_invest_USStocks_learnMorePopupLink}

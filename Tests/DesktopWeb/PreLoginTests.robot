@@ -11,7 +11,7 @@ Suite Teardown  Close All Browsers
 *** Test Cases ***
 # Landing Page widgets verfication
 Landing Page Widgets Verification Test 
-    [Tags]  TC01
+    [Tags]  TC01 
     Verify Widgets
     
 # Header navigation - Insure, Loans, Remit
@@ -21,7 +21,7 @@ Header Navigation Test
 
 # Features sub headers navigation & goals - questionnaire
 Features Header Navigation Test
-    [Tags]  TC03
+    [Tags]  TC03 
     Feature Sub Header Navigation
     
 # Verify all widgets in Login & Signup Page
@@ -34,27 +34,27 @@ Login and Signup Page Navigation Test
 
 # Invest Landing Page Navigation
 Invest Tiles And Widgets Navigation
-    [Tags]  TC05
+    [Tags]  TC05 
     Verify Invest Tiles
     
 # Invest Mutual Fund 
 Invest Mutual Fund Navigation
-    [Tags]  TC06
+    [Tags]  TC06  
     Verify Mutual Fund Landing Page
     
 # Invest Digital Gold
 Invest Digital Gold Navigation
-    [Tags]  TC07
+    [Tags]  TC07  
     Verify Digital Gold Landing Page
     
 # Invest Stocks
 Invest Stocks Navigation
-    [Tags]  TC08
+    [Tags]  TC08  
     Verify Stocks Landing Page
     
 # Invest US Stocks
 Invest US Stocks Navigation
-    [Tags]  TC09
+    [Tags]  TC09 
     Verify US Stocks Landing Page
     
 # Invest Save Smart

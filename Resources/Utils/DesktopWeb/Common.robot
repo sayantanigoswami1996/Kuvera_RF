@@ -193,6 +193,6 @@ Open Bot And Validate Question
     Unselect Frame
     Wait For Element Visibility  ${KU_W_faqbotCloseBanner}
     Click Element  ${KU_W_faqbotCloseBanner}
-    
+   
 Close Web Application
     Close All Browser
