@@ -9,7 +9,6 @@ Verify Signup Page
     Verify Element And Text  ${KU_W_signupPageTitle}  ${e_signupPageTitle}
     
 Verify Pre Login Signup Page Widgets
-    # Verify all widgets in signup page
     Wait For Element Visibility  ${KU_W_signup}
     Click Element  ${KU_W_signup}
     Verify Signup Page
