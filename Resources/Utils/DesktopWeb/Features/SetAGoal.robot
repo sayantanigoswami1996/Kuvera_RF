@@ -4,7 +4,7 @@ Library     SeleniumLibrary
 
 *** Keywords ***
 
-Verify Question Titl
+Verify Question Title
     [Arguments]  ${element}  ${text}
     Wait For Element Visibility  ${element}
     ${actualTitle} =  Get Text  ${element}
