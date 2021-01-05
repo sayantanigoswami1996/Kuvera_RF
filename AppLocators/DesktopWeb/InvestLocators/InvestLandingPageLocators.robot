@@ -27,6 +27,7 @@ ${e_invest_52WHighIndiaSubTitleText} =  Momentum stocks in India
 ${e_invest_52WHighIndiaUS_screenText} =   52W high 
 ${e_invest_52WHighUSTitleText} =   52 Wk High US
 ${e_invest_52WHighUSSubTitleText} =  Momentum stocks in US
+
 ${e_invest_healthPremiumTitleText} =  Get ₹50L health cover starting at ₹900 p.m. T&C apply
 ${e_invest_checkPremiumSubText} =  Check premium     
 ${e_invest_mf_titleText} =  Mutual\nfunds

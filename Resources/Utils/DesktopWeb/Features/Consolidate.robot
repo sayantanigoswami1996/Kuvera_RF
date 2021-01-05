@@ -127,3 +127,4 @@ Verify PreLogin Consolidate Page
     Wait For Element Visibility  ${KU_W_feature_manageTodayBtn}  
     Click Button  ${KU_W_feature_manageTodayBtn}  
     Verify Login Page
+    Kuvera Web Logo Click

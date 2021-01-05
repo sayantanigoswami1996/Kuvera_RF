@@ -31,7 +31,7 @@ Launch URL
     Open Browser  ${URL}  ${BROWSER}  alias=Kuvera
     # Maximize Browser Window
     Set Window Size  ${1920}  ${1080}
-    Set Selenium Implicit Wait  60s
+    Set Selenium Implicit Wait  90s
     Reload Page
     Kuvera Web Close Regulatory Disclosure
     Run Keyword If    '${ENV}' == '${e_prod}'  Close Hello Bar
@@ -42,7 +42,7 @@ Welcome Page Should Be Open
 
 Wait For Element Visibility
     [Arguments]  ${element}
-    Wait Until Element Is Visible  ${element}  timeout=60
+    Wait Until Element Is Visible  ${element}  timeout=90s
 
 Verify Element And Text
     [Arguments]  ${element}  ${text}
