@@ -14,7 +14,8 @@ Verify PreLogin Invest Tiles
     Wait For Element Visibility  ${KU_W_invest_saveSmartTitle}  
     Verify Element And Text  ${KU_W_invest_saveSmartTitle}  ${e_invest_saveSmartTitleText}
     Verify Element And Text  ${KU_W_invest_saveSmartSubTitle}  ${e_invest_saveSmartSubText} 
-    Click Element   ${KU_W_invest_saveSmartTitle}
+    Wait For Element Visibility  ${KU_W_invest_saveSmartTitle}
+    Click Element  ${KU_W_invest_saveSmartTitle}
     Log To Console  Save Smart Tiles
     Sleep  2s
     Wait For Element Visibility   ${KU_W_ss_screenTitle}

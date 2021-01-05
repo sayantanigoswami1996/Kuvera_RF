@@ -42,3 +42,5 @@ Resource    ../../Resources/Utils/DesktopWeb/Features/SaveTaxes.robot
 Resource    ../../Resources/Utils/DesktopWeb/Features/Consolidate.robot
 Resource    ../../Resources/Utils/DesktopWeb/Footer.robot
 Resource    ../../Resources/Utils/DesktopWeb/FundHouse.robot
+Resource    ../../Resources/Utils/DesktopWeb/CreateAccountForPostLogin.robot
+Resource    ../../Resources/Utils/HealthInsurancePostLogin.robot/KYC.robot

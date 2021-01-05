@@ -26,6 +26,9 @@ Resource    ../../../AppLocators/DesktopWeb/InvestLocators/StocksLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/USStocksLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/FooterLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/FundHouseLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/CreateAccountForPostLoginLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/HealthInsurancePostLoginLocators.robot/HealthInsuranceLandingPageLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/HealthInsurancePostLoginLocators.robot/KYCLocators.robot
 
 *** Keywords ***
 
@@ -212,6 +215,11 @@ Click Link And Switch Window
     Click Element  ${websiteLink}
     Switch To Window
     Sleep  2s  
+
+Generate Random Number
+    [Arguments]  ${startingrange}  ${endingrange}
+    ${randomNum} =	Evaluate	random.randint(${startingrange}, ${endingrange})
+    [Return]   ${randomNum}
    
 Close Web Application
     Close All Browser

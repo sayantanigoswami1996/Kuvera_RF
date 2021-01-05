@@ -71,3 +71,8 @@ Verify Footer Section
 All Fund House Details Navigation
     [Tags]  TC12
     Verify PreLogin All Fund House Details
+
+# Account Creation
+Create Account After Login
+    [Tags]  TC13
+    Verify PostLogin Account Creation 
