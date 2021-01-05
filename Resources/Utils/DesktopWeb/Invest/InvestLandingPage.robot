@@ -96,8 +96,7 @@ Verify Invest Tiles
     Go Back
     Scroll Untill View  ${KU_W_exploreMoreTitle}
     Verify Element And Text  ${KU_W_exploreMoreTitle}  ${e_invest_stock_exploreMoreTxt}
-    Kuvera Web Logo Click
-    Kuvera Web Close Regulatory Disclosure
+    
 
 Navigate To Invest Page And Verify Explore Options
     [Arguments]  ${option}  ${optionText}
