@@ -18,6 +18,7 @@ Resource    ../../../AppLocators/DesktopWeb/InvestLocators/ValueFundsLocators.ro
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/ELSSTaxSaverLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/BankPSUBondsLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/CryptoLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/InvestLocators/FDLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/ELSSTaxSaverLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/USETFLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/UltraShortLocators.robot
@@ -193,6 +194,10 @@ Open Bot And Validate Question
     Unselect Frame
     Wait For Element Visibility  ${KU_W_faqbotCloseBanner}
     Click Element  ${KU_W_faqbotCloseBanner}
-   
+
+Navigate to Home Page
+    Go To  ${URL}
+    Kuvera Web Close Regulatory Disclosure 
+  
 Close Web Application
     Close All Browser

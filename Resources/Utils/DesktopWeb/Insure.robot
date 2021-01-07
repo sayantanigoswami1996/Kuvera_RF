@@ -103,8 +103,7 @@ Verify PreLogin Insure Page
 
     # Verify the Google Play & Apple Store icons
     Verify Google Play & Apple Store Icons
-    Kuvera Web Logo Click
-
+    
 Verify Premium Popup
     [Arguments]  ${premiumBtn}
     Wait For Element Visibility  ${KU_W_insure_popupHeader}

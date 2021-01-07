@@ -14,6 +14,7 @@ Resource    ../../Resources/Utils/DesktopWeb/Invest/SectorFunds.robot
 Resource    ../../Resources/Utils/DesktopWeb/Invest/BankPSUBonds.robot
 Resource    ../../Resources/Utils/DesktopWeb/Invest/ELSSTaxSaver.robot
 Resource    ../../Resources/Utils/DesktopWeb/Invest/Crypto.robot
+Resource    ../../Resources/Utils/DesktopWeb/Invest/FD.robot
 Resource    ../../Resources/Utils/DesktopWeb/Invest/USETF.robot
 Resource    ../../Resources/Utils/DesktopWeb/Invest/ValueFunds.robot
 Resource    ../../Resources/Utils/DesktopWeb/Invest/52WkHighIndia.robot
