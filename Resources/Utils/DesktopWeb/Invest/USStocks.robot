@@ -4,12 +4,12 @@ Library     SeleniumLibrary
 
 *** Keywords ***
 
-Verify US Stocks Landing Page
+Verify PreLogin US Stocks Landing Page
     Log To Console  US Stocks
     Navigate To Invest Page And Verify Explore Options  ${KU_W_USStocks}  ${e_invest_USStocks}
     Wait For Element Visibility  ${KU_W_invest_USStocksTitle}
     Verify Element And Text  ${KU_W_invest_USStocksTitle}  ${e_invest_USStocks_title}
-    Verify Language Switch Login And Signup Link 
+    Verify Login And Signup Link 
     Wait For Element Visibility  ${KU_W_invest_USStocks_exploreBtn}
     Click Element  ${KU_W_invest_USStocks_exploreBtn}
     Wait For Element Visibility  ${KU_W_invest_USStocks_sortYear}

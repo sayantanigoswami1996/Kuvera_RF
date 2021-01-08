@@ -15,7 +15,7 @@ Verify Subscribe Button
 Verify PreLogin Tax Harvesting Page
     Wait For Element Visibility  ${KU_W_feature_taxHarvestingLink}
     Click Element  ${KU_W_feature_taxHarvestingLink}
-    Verify Language Switch Login And Signup Link
+    Verify Login And Signup Link
     Wait For Element Visibility  ${KU_W_feature_th_screenTitle}   
     Verify Element And Text  ${KU_W_feature_th_screenTitle}  ${e_feature_th_TitleText} 
     Verify Element And Text  ${KU_W_feature_th_screenContent}  ${e_feature_th_subTitleText} 
@@ -31,6 +31,7 @@ Verify PreLogin Tax Harvesting Page
     Wait For Element Visibility    ${KU_W_feature_th_learnMoreLink}
     Click Element  ${KU_W_feature_th_learnMoreLink}
     Switch To Window Verify Title And Close  ${e_feature_th_learnMoreTitle}
+    Sleep  3s
     Reload Page
     Wait For Element Visibility  ${KU_W_feature_th_assumptions}
     Verify Element And Text  ${KU_W_feature_th_assumptions}  ${e_feature_th_assumptionText} 

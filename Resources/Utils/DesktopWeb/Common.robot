@@ -25,6 +25,7 @@ Resource    ../../../AppLocators/DesktopWeb/InvestLocators/UltraShortLocators.ro
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/MutualFundsLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/StocksLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/USStocksLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/FooterLocators.robot
 
 *** Keywords ***
 
@@ -32,30 +33,30 @@ Launch URL
     Open Browser  ${URL}  ${BROWSER}  alias=Kuvera
     # Maximize Browser Window
     Set Window Size  ${1920}  ${1080}
-    Set Selenium Implicit Wait  90s
+    Set Selenium Implicit Wait  60s
     Reload Page
     Kuvera Web Close Regulatory Disclosure
     Run Keyword If    '${ENV}' == '${e_prod}'  Close Hello Bar
     ...    ELSE   Log To Console  Staging
 
 Welcome Page Should Be Open
-    Title Should Be  ${KU_W_title}
+    Run Keyword And Continue On Failure  Title Should Be  ${KU_W_title}
 
 Wait For Element Visibility
     [Arguments]  ${element}
-    Wait Until Element Is Visible  ${element}  timeout=90s
+    Wait Until Element Is Visible  ${element}  timeout=60
 
 Verify Element And Text
     [Arguments]  ${element}  ${text}
-    Element Text Should Be  ${element}  ${text}
+    Run Keyword And Continue On Failure  Element Text Should Be  ${element}  ${text}
 
 Verify Page Contains Element
     [Arguments]  ${element}
-    Page Should Contain Element  ${element}
+    Run Keyword And Continue On Failure  Page Should Contain Element  ${element}
 
 Verify Page Contains Image
     [Arguments]  ${image}
-    Page Should Contain Image  ${image}
+    Run Keyword And Continue On Failure  Page Should Contain Image  ${image}
 
 Scroll Untill View
     [Arguments]  ${element}
@@ -63,11 +64,11 @@ Scroll Untill View
 
 Verify Page Contains Link
     [Arguments]  ${link}  ${text}
-    Page Should Contain Link  ${link}  ${text}
+    Run Keyword And Continue On Failure  Page Should Contain Link  ${link}  ${text}
 
 Verify Page Contains Button
     [Arguments]  ${button}
-    Page Should Contain Button  ${button}
+    Run Keyword And Continue On Failure  Page Should Contain Button  ${button}
 
 Compare Lists
     [Arguments]  ${actualList}   ${expectedList}
@@ -80,12 +81,12 @@ Compare Lists
     ${expectedListItem}  Set Variable  ${expectedListItems}
     END
     # Compare two list items
-    Should Be Equal  ${actualListItem}  ${expectedListItem}
+    Run Keyword And Continue On Failure  Should Be Equal  ${actualListItem}  ${expectedListItem}
 
 Switch To Window Verify Title And Close
     [Arguments]  ${title}
     Switch Window  locator=NEW
-    Title Should Be  ${title}
+    Run Keyword And Continue On Failure  Title Should Be  ${title}
     Close Window
     Sleep  2s
     Switch Window  browser=Kuvera
@@ -140,9 +141,7 @@ Verify Google Play & Apple Store Icons
     Verify Page Contains Image  ${KU_W_android_image}
     Verify Page Contains Image  ${KU_W_apple_image}
 
-Verify Language Switch Login And Signup Link
-    Wait For Element Visibility  ${KU_W_langSwitch}
-    Verify Page Contains Element  ${KU_W_langSwitch}
+Verify Login And Signup Link
     Wait For Element Visibility  ${KU_W_login}
     Verify Element And Text  ${KU_W_login}  ${e_login}
     Wait For Element Visibility  ${KU_W_signup}
@@ -151,7 +150,7 @@ Verify Language Switch Login And Signup Link
 Switch To Window
     Switch Window  locator=NEW
     Close Window
-    Sleep  2s
+    Sleep  5s
     Switch Window  browser=Kuvera
     
 Scroll Page To Location
@@ -167,11 +166,11 @@ Wait Scroll And Click Element
 
 Compare Text Values
     [Arguments]  ${actualValue}  ${expectedValue}
-    Should Be Equal  ${actualValue}  ${expectedValue}
+    Run Keyword And Continue On Failure  Should Be Equal  ['${actualValue}']  ${expectedValue}
 
 Verify Screen Title
     [Arguments]  ${title}
-    Title Should Be  ${title}
+    Run Keyword And Continue On Failure  Title Should Be  ${title}
 
 Verify Presence Of FAQBOT Icon
     Run Keyword If  '${ENV}' == '${e_prod}'  Verify Page Contains Element  ${KU_W_faqbot_icon}
@@ -195,8 +194,27 @@ Open Bot And Validate Question
     Wait For Element Visibility  ${KU_W_faqbotCloseBanner}
     Click Element  ${KU_W_faqbotCloseBanner}
 
+Scroll And Wait
+    [Arguments]  ${element}
+    Scroll Untill View  ${element}
+    Sleep  1s
+    Wait For Element Visibility  ${element}
+
+Replace Characters
+    [Arguments]  ${text}  ${char1}  ${char2}
+    ${replacedString} =  Replace String  ${text}  ${char1}  ${char2}
+    [Return]  ${replacedString}
+
+Click Link And Switch Window
+    [Arguments]  ${websiteLink} 
+    Click Element  ${websiteLink}
+    Switch To Window
+    Sleep  2s  
+
 Navigate to Home Page
     Go To  ${URL}
+    Set Window Size  ${1920}  ${1080}
+    Reload Page
     Kuvera Web Close Regulatory Disclosure 
   
 Close Web Application

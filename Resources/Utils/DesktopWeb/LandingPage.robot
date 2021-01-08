@@ -4,7 +4,7 @@ Library     SeleniumLibrary
 
 *** Keywords ***
 
-Verify Widgets
+Verify PreLogin Widgets
     Verify Stock Widgets
     Verify US Stock Widgets
     Verify Save Smart Widgets
@@ -25,7 +25,7 @@ Verify Presence Of Filter Sub Category And WatchList Icon
     Verify Page Contains Element  ${fundList} 
     Verify Page Contains Image  ${watchListIcon}
 
-Header Navigation
+PreLogin Header Navigation
     ${invest}  Get Json Values  $.MenuHeaders.h0  Resources/TestData/Headers.json
     ${loans}  Get Json Values  $.MenuHeaders.h1  Resources/TestData/Headers.json
     ${insure}  Get Json Values  $.MenuHeaders.h2  Resources/TestData/Headers.json
@@ -43,7 +43,7 @@ Header Navigation
         ...    ELSE   Log To Console  Covered in other test
     END
 
-Feature Sub Header Navigation
+PreLogin Feature Sub Header Navigation
     Log To Console  Features
     ${setAGoal}  Get Json Values  $.MenuHeaders.h4.fsh0  Resources/TestData/Headers.json
     ${tradeSmart}  Get Json Values  $.MenuHeaders.h4.fsh1  Resources/TestData/Headers.json
@@ -72,7 +72,7 @@ Verify Mutual Funds Widgets
     Wait For Element Visibility  ${KU_W_mf_stock_button}
     Click Element  ${KU_W_mf_stock_button}
     Wait For Element Visibility  ${KU_W_mf_welcomeTitle}
-    Verify Language Switch Login And Signup Link
+    Verify Login And Signup Link
     Verify Element And Text  ${KU_W_mf_welcomeTitle}  ${e_mfWelcomeTitle}
     Verify Element And Text  ${KU_W_mf_welcomeText}  ${e_mf_welcomeText}
     Verify Element And Text  ${KU_W_mf_category}  ${e_mfCategory} 

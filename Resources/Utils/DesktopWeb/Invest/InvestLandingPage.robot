@@ -4,11 +4,11 @@ Library     SeleniumLibrary
 
 *** Keywords ***
 
-Verify Invest Tiles
+Verify PreLogin Invest Tiles
     Wait For Element Visibility  ${KU_W_investLink} 
     Click Element  ${KU_W_investLink}
     Sleep  1s
-    Verify Language Switch Login And Signup Link
+    Verify Login And Signup Link
     # Save Smart
     Sleep  2s
     Wait For Element Visibility  ${KU_W_invest_saveSmartTitle}  

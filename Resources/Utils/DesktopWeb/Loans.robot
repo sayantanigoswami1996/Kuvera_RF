@@ -6,7 +6,7 @@ Library     SeleniumLibrary
 
 Verify PreLogin Loans Page
     Click Element  ${KU_W_loanLink}
-    Verify Language Switch Login And Signup Link
+    Verify Login And Signup Link
     Wait For Element Visibility  ${KU_W_loanHeaderTitle}  
     Verify Element And Text  ${KU_W_loanHeaderTitle}  ${e_loan_headerTitleText}
     Verify Element And Text  ${KU_W_loanHeaderMsg}  ${e_loan_headerMsgText} 

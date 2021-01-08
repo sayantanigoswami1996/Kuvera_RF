@@ -6,7 +6,7 @@ Library     SeleniumLibrary
 
 Verify PreLogin Insure Page
     Click Element  ${KU_W_insureLink}
-    Verify Language Switch Login And Signup Link
+    Verify Login And Signup Link
     Wait For Element Visibility  ${KU_W_insureHeaderTitle}  
     Verify Element And Text  ${KU_W_insureHeaderTitle}  ${e_insure_headerTitleText} 
     Verify Element And Text  ${KU_W_insureHeaderMsg}  ${e_insure_headerMsgText}

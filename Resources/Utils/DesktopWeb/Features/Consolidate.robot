@@ -8,7 +8,7 @@ Verify PreLogin Consolidate Page
     Click Element  ${KU_W_featureLink}
     Wait For Element Visibility  ${KU_W_feature_consolidateLink}
     Click Element  ${KU_W_feature_consolidateLink}
-    Verify Language Switch Login And Signup Link
+    Verify Login And Signup Link
     Wait For Element Visibility  ${KU_W_feature_cd_pageHeader}  
     Verify Element And Text  ${KU_W_feature_cd_pageHeader}  ${e_feature_cd_pageHeaderText}
     Verify Element And Text  ${KU_W_feature_cd_pageSubHeader}  ${e_feature_cd_subHeaderText}

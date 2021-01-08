@@ -9,7 +9,7 @@ Verify Value Funds Landing Page
     Wait For Element Visibility  ${KU_W_valueFundsTitle} 
     Click Element  ${KU_W_valueFundsTitle} 
     Wait For Element Visibility  ${KU_W_invest_fundsScreenTitle} 
-    Verify Language Switch Login And Signup Link  
+    Verify Login And Signup Link  
     Verify Search And Sort  ${KU_W_searchBarForFunds}  ${e_invest_searchBarText}  ${KU_W_invest_searchTextFieldForFunds}  ${KU_W_invest_sort}
     Verify Element And Text  ${KU_W_invest_fundsScreenTitle}  ${e_invest_valueFunds_screenText} 
     Verify Filter And Clear All

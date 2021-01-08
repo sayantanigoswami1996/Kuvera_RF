@@ -4,10 +4,10 @@ Library     SeleniumLibrary
 
 *** Keywords ***
 
-Verify Stocks Landing Page
+Verify PreLogin Stocks Landing Page
     Log To Console  Stocks
     Navigate To Invest Page And Verify Explore Options  ${KU_W_stocks}  ${e_invest_stocks}
-    Verify Language Switch Login And Signup Link  
+    Verify Login And Signup Link  
     Verify Search And Sort  ${KU_W_stockAnd52WIndia_searchBar}  ${e_invest_stock_searchBarTxt}  ${KU_W_invest_stockAndindia_searchTextField}  ${KU_W_invest_sort_52WIndia}
     Verify Element And Text  ${KU_W_invest_stocks_sortYear}  ${e_invest_stocks_sortYear}
     Verify Page Contains Element  ${KU_W_invest_stocks_stockPrice}

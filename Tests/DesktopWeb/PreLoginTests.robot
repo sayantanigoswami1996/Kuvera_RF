@@ -10,64 +10,70 @@ Suite Teardown  Close All Browsers
 
 *** Test Cases ***
 # Landing Page widgets verfication
-Landing Page Widgets Verification Test 
+Landing Page Widgets Verification
     [Tags]  TC01 
-    Verify Widgets
+    Verify PreLogin Widgets
     [Teardown]  Navigate to Home Page
-    
+
 # Header navigation - Insure, Loans, Remit
-Header Navigation Test  
+Header Navigation 
     [Tags]  TC02
-    Header Navigation
+    PreLogin Header Navigation
     [Teardown]  Navigate to Home Page
 
 # Features sub headers navigation & goals - questionnaire
-Features Header Navigation Test
+Features Header Navigation
     [Tags]  TC03 
-    Feature Sub Header Navigation
+    PreLogin Feature Sub Header Navigation
     [Teardown]  Navigate to Home Page
-    
+
 # Verify all widgets in Login & Signup Page
 Login and Signup Page Navigation Test
     [Tags]  TC04
-    Verify Login Page Widgets
+    Verify PreLogin Login Page Widgets
     Go Back
-    Verify Signup Page Widgets
+    Verify PreLogin Signup Page Widgets
     Go Back
     [Teardown]  Navigate to Home Page
 
 # Invest Landing Page Navigation
 Invest Tiles And Widgets Navigation
     [Tags]  TC05 
-    Verify Invest Tiles
+    Verify PreLogin Invest Tiles
     [Teardown]  Navigate to Home Page
-    
+
 # Invest Mutual Fund 
 Invest Mutual Fund Navigation
     [Tags]  TC06  
-    Verify Mutual Fund Landing Page
+    Verify PreLogin Mutual Fund Landing Page
     [Teardown]  Navigate to Home Page
-    
+
 # Invest Digital Gold
 Invest Digital Gold Navigation
     [Tags]  TC07  
-    Verify Digital Gold Landing Page
+    Verify PreLogin Digital Gold Landing Page
     [Teardown]  Navigate to Home Page
-    
+
 # Invest Stocks
 Invest Stocks Navigation
     [Tags]  TC08  
-    Verify Stocks Landing Page
+    Verify PreLogin Stocks Landing Page
     [Teardown]  Navigate to Home Page
 
 # Invest US Stocks
 Invest US Stocks Navigation
     [Tags]  TC09 
-    Verify US Stocks Landing Page
+    Verify PreLogin US Stocks Landing Page
     [Teardown]  Navigate to Home Page
-    
+
 # Invest Save Smart
 Invest Save Smart Navigation
     [Tags]  TC10
-    Verify Save Smart Landing Page
+    Verify PreLogin Save Smart Landing Page
+    [Teardown]  Navigate to Home Page
+
+# Footer Section
+Verify Footer Section
+    [Tags]  TC11
+    Verify PreLogin Footer
     [Teardown]  Navigate to Home Page

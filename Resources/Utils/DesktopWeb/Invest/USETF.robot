@@ -9,7 +9,7 @@ Verify US ETF Landing Page
     Wait For Element Visibility  ${KU_W_UTFTitle}
     Click Element  ${KU_W_UTFTitle}
     Wait For Element Visibility  ${KU_W_UTF_screenTitle}  
-    Verify Language Switch Login And Signup Link  
+    Verify Login And Signup Link  
     Verify Search And Sort  ${KU_W_US_SETF52WUS_searchBar}  ${e_invest_stock_searchBarTxt}  ${KU_W_invest_US_SETFAnd52WUS_searchTextField}  ${KU_W_invest_sort_US_S_UTF_USA}
     Verify Element And Text  ${KU_W_UTF_screenTitle}  ${e_invest_USETF_screenText} 
     Verify Element And Text  ${KU_W_invest_sortYear}  ${e_invest__52WHighLow_UTF_sortYearText}
