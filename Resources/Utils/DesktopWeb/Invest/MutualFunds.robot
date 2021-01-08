@@ -7,6 +7,7 @@ Library     SeleniumLibrary
 Verify PreLogin Mutual Fund Landing Page
     Log To Console  Mutual Fund
     Navigate To Invest Page And Verify Explore Options  ${KU_W_mutualFund}  ${e_invest_mf_titleText} 
+    Sleep  1s
     Verify Login And Signup Link
     Wait For Element Visibility  ${KU_W_invest_mf_fundName}
     Verify Page Contains Element  ${KU_W_invest_mf_growthDividendButton}

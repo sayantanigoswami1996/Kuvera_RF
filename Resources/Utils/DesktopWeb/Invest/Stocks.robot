@@ -134,7 +134,7 @@ Verify Cash Flow Chart
     Verify Page Contains Element  ${KU_W_invest_stocks_financialsChart}
     
 Verify Financial Performace Chart
-    Scroll Untill View  ${KU_W_invest_stocks_incomeStatement}
+    Scroll Untill View  ${KU_W_invest_stocks_financialsChart}
     Wait For Element Visibility  ${KU_W_invest_stocks_incomeStatement}
     Verify Element And Text  ${KU_W_invest_stocks_incomeStatement}  ${e_invest_stocks_incomeStatement}
     Verify Page Contains Element  ${KU_W_invest_stocks_toggleButton}

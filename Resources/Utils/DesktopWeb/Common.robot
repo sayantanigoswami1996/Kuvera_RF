@@ -33,7 +33,7 @@ Launch URL
     Open Browser  ${URL}  ${BROWSER}  alias=Kuvera
     # Maximize Browser Window
     Set Window Size  ${1920}  ${1080}
-    Set Selenium Implicit Wait  60s
+    Set Selenium Implicit Wait  90s
     Reload Page
     Kuvera Web Close Regulatory Disclosure
     Run Keyword If    '${ENV}' == '${e_prod}'  Close Hello Bar
@@ -44,7 +44,7 @@ Welcome Page Should Be Open
 
 Wait For Element Visibility
     [Arguments]  ${element}
-    Wait Until Element Is Visible  ${element}  timeout=60
+    Wait Until Element Is Visible  ${element}  timeout=90
 
 Verify Element And Text
     [Arguments]  ${element}  ${text}
@@ -144,6 +144,7 @@ Verify Google Play & Apple Store Icons
 Verify Login And Signup Link
     Wait For Element Visibility  ${KU_W_login}
     Verify Element And Text  ${KU_W_login}  ${e_login}
+    Sleep  1s
     Wait For Element Visibility  ${KU_W_signup}
     Verify Element And Text  ${KU_W_signup}  ${e_signup}
 
