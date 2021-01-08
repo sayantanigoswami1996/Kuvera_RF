@@ -17,7 +17,10 @@ Verify PostLogin Account Creation
     Input Text  ${KU_W_ca_mobileNumInputField}  ${mobileNum}
     Wait Scroll And Click Element  ${KU_W_ca_pwdInputField}
     Input Text  ${KU_W_ca_pwdInputField}  ${e_ca_staticPWd}
+    Wait Scroll And Click Element  ${KU_W_ca_inviteCodeField}
+    Input Text  ${KU_W_ca_inviteCodeField}  ${e_ca_staticInviteCode}
     Click Element  ${KU_W_ca_signupBtn} 
+    Wait For Element Visibility  ${KU_W_ca_OTPField}
     Click Element  ${KU_W_ca_OTPField}
     Input Text  ${KU_W_ca_OTPField}  ${e_ca_staticOTP}
     Click Element  ${KU_W_ca_submitOTPBtn}

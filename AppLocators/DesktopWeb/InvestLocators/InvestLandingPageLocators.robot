@@ -3,6 +3,8 @@
 # Invest
 ${e_invest_saveSmartTitleText} =   SaveSmart
 ${e_invest_saveSmartSubText} =  Invest in low risk liquid funds and redeem upto ₹2 lakhs instantly
+${e_invest_FDTitle} =  FD
+${e_invest_FDSubTitle} =  India's favorite saving instrument
 ${e_invest_giltFundsTitleText} =   Gilt funds
 ${e_invest_giltFundsSubText} =  Invest in govt bonds. Zero credit risk, but have rate risk.
 ${e_invest_ultraShortTitleText} =  Ultra-short
@@ -61,6 +63,8 @@ ${e_invest_US_stocks_defaultFilter} =  Sector
 ${KU_W_investLink} =  xpath=//a[contains(text(),'Invest')]
 ${KU_W_invest_saveSmartTitle} =  xpath=(//div[@class='k-cls b-invest-card']/h6)[1]
 ${KU_W_invest_saveSmartSubTitle} =  xpath=(//div[@class='k-cls b-invest-card']/p)[1]
+${KU_W_FDTitle} =  xpath=//h6[contains(text(),'FD')]
+${KU_W_FDSubTitle} =  xpath=(//p[@class='b-invest-tile__para'])[2]
 ${KU_W_giltFundsTitle} =  xpath=(//div[@class='k-cls b-invest-card']/h6)[3]
 ${KU_W_giltFundsSubTitle} =  xpath=(//div[@class='k-cls b-invest-card']/p)[3]
 ${KU_W_ultraShortTitle} =  xpath=(//div[@class='k-cls b-invest-card']/h6)[2]

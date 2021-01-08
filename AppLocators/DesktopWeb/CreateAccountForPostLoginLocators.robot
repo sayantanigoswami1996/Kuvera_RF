@@ -4,6 +4,7 @@ ${e_ca_staticdomainName} =  @kuvera.in
 ${e_ca_staticEmail} =  moolya
 ${e_ca_staticMobileNum} =  1234567890
 ${e_ca_staticPWd} =  moolya123456
+${e_ca_staticInviteCode} =  20BM4
 ${e_ca_staticOTP} =  
 # Application Locator 'KU_<locatorName>'
 # Kuvera :: Wealth Management Simplified
@@ -14,3 +15,4 @@ ${KU_W_ca_signupBtn} =  xpath=//input[@value='Sign up']
 ${KU_W_ca_OTPField} =  xpath=//input[@placeholder='Enter OTP here']
 ${KU_W_ca_submitOTPBtn} =  xpath=//button[normalize-space()='Submit OTP']
 ${KU_W_ca_dashboardHeader} =  xpath=//h2[contains(text(),'Welcome to Kuvera')]
+${KU_W_ca_inviteCodeField} =  xpath=//input[@id='invite_code']

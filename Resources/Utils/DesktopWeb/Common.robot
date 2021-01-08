@@ -18,6 +18,7 @@ Resource    ../../../AppLocators/DesktopWeb/InvestLocators/ValueFundsLocators.ro
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/ELSSTaxSaverLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/BankPSUBondsLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/CryptoLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/InvestLocators/FDLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/ELSSTaxSaverLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/USETFLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/UltraShortLocators.robot
@@ -29,6 +30,8 @@ Resource    ../../../AppLocators/DesktopWeb/FundHouseLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/CreateAccountForPostLoginLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/HealthInsurancePostLoginLocators.robot/HealthInsuranceLandingPageLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/HealthInsurancePostLoginLocators.robot/KYCLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/HealthInsurancePostLoginLocators.robot/AddFamilyDetailsLocators.robot
+
 
 *** Keywords ***
 
@@ -220,6 +223,12 @@ Generate Random Number
     [Arguments]  ${startingrange}  ${endingrange}
     ${randomNum} =	Evaluate	random.randint(${startingrange}, ${endingrange})
     [Return]   ${randomNum}
-   
+
+Wait And Click 
+    [Arguments]  ${element}
+    Sleep  1s
+    Wait For Element Visibility  ${element}
+    Click Element  ${element}
+ 
 Close Web Application
     Close All Browser

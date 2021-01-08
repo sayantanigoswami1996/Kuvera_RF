@@ -21,6 +21,11 @@ Verify PreLogin Invest Tiles
     Wait For Element Visibility   ${KU_W_ss_screenTitle}
     Verify Element And Text  ${KU_W_ss_screenTitle}  ${e_invest_ss_screenText}
     Go Back
+    #FD
+    Wait For Element Visibility  ${KU_W_FDTitle}
+    Verify Element And Text  ${KU_W_FDTitle}  ${e_invest_FDTitle} 
+    Verify Element And Text  ${KU_W_FDSubTitle}  ${e_invest_FDSubTitle}
+    Verify PreLogin FD Landing Page
     # Gilt Funds
     Wait For Element Visibility  ${KU_W_giltFundsTitle} 
     Verify Element And Text  ${KU_W_giltFundsTitle}  ${e_invest_giltFundsTitleText}

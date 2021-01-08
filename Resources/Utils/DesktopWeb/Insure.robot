@@ -14,7 +14,9 @@ Verify PreLogin Insure Page
     Wait For Element Visibility  ${KU_W_insure_checkPremiumBtn1}
     Sleep   1s
     Click Button  ${KU_W_insure_checkPremiumBtn1} 
-    Verify Premium Popup  ${KU_W_insure_checkPremiumBtn1}
+    Run Keyword If    '${ENV}' == '${e_prod}'  Verify Premium Popup  ${KU_W_insure_checkPremiumBtn1}
+    ...    ELSE   Verify Add Family Details Page
+    
     Wait For Element Visibility  ${KU_W_insure_costDetailsHeaderTitle}     
     Scroll Untill View  ${KU_W_insure_costDetailsHeaderTitle}
     Verify Element and Text  ${KU_W_insure_costDetailsHeaderTitle}  ${e_insure_costDetailsHeaderText}
@@ -122,3 +124,6 @@ Verify Premium Popup
     Click Element  ${KU_W_insure_signupBtn}
     Verify Signup Page
     Go Back
+
+Verify Add Family Details Page
+     

@@ -14,6 +14,7 @@ Resource    ../../Resources/Utils/DesktopWeb/Invest/SectorFunds.robot
 Resource    ../../Resources/Utils/DesktopWeb/Invest/BankPSUBonds.robot
 Resource    ../../Resources/Utils/DesktopWeb/Invest/ELSSTaxSaver.robot
 Resource    ../../Resources/Utils/DesktopWeb/Invest/Crypto.robot
+Resource    ../../Resources/Utils/DesktopWeb/Invest/FD.robot
 Resource    ../../Resources/Utils/DesktopWeb/Invest/USETF.robot
 Resource    ../../Resources/Utils/DesktopWeb/Invest/ValueFunds.robot
 Resource    ../../Resources/Utils/DesktopWeb/Invest/52WkHighIndia.robot
@@ -43,4 +44,6 @@ Resource    ../../Resources/Utils/DesktopWeb/Features/Consolidate.robot
 Resource    ../../Resources/Utils/DesktopWeb/Footer.robot
 Resource    ../../Resources/Utils/DesktopWeb/FundHouse.robot
 Resource    ../../Resources/Utils/DesktopWeb/CreateAccountForPostLogin.robot
-Resource    ../../Resources/Utils/HealthInsurancePostLogin.robot/KYC.robot
+Resource    ../../Resources/Utils/DesktopWeb/HealthInsurancePostLogin/KYC.robot
+Resource    ../../Resources/Utils/DesktopWeb/HealthInsurancePostLogin/AddFamilyDetails.robot
+Resource    ../../Resources/Utils/DesktopWeb/HealthInsurancePostLogin/HealthInsuranceLandingPage.robot

@@ -21,7 +21,6 @@ ${e_KYC_portfolioNameField} =  Portfolio Primary
 
 # Application Locator 'KU_<locatorName>'
 # Kuvera :: Wealth Management Simplified
-
 ${KU_W_KYC_startBtn} =  xpath=//button[contains(@class,'button-primary app-standard-notification__btn-2')]
 ${KU_W_KYC_formTitle} =  xpath=(//div[@class='title'])[1]
 ${KU_W_KYC_formSubTitle} =  xpath=//div[@class='sub-title left-aligned']
