@@ -5,7 +5,6 @@ Library     SeleniumLibrary
 *** Keywords ***
 
 Verify PreLogin Consolidate Page
-    Click Element  ${KU_W_featureLink}
     Wait For Element Visibility  ${KU_W_feature_consolidateLink}
     Click Element  ${KU_W_feature_consolidateLink}
     Verify Login And Signup Link
