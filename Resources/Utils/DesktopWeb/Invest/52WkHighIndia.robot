@@ -4,7 +4,7 @@ Library     SeleniumLibrary
 
 *** Keywords ***
 
-Verify 52WkHigh India Landing Page 
+Verify PreLogin 52WkHigh India Landing Page 
     Log To Console  52 Wk High India
     Wait For Element Visibility  ${KU_W_52WHighIndiaTitle}  
     Click Element  ${KU_W_52WHighIndiaTitle} 

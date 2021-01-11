@@ -26,6 +26,7 @@ Resource    ../../../AppLocators/DesktopWeb/InvestLocators/MutualFundsLocators.r
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/StocksLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/USStocksLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/FooterLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/FundHouseLocators.robot
 
 *** Keywords ***
 
@@ -212,7 +213,7 @@ Click Link And Switch Window
     Switch To Window
     Sleep  2s  
 
-Navigate to Home Page
+Navigate To Home Page
     Go To  ${URL}
     Set Window Size  ${1920}  ${1080}
     Reload Page

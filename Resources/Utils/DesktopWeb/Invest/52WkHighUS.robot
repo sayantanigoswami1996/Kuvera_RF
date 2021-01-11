@@ -4,7 +4,7 @@ Library     SeleniumLibrary
 
 *** Keywords ***
 
-Verify 52WkHigh US Landing Page
+Verify PreLogin 52WkHigh US Landing Page
     Log To Console  52 Wk High US
     Wait For Element Visibility  ${KU_W_52WHighUSTitle}
     Click Element  ${KU_W_52WHighUSTitle}

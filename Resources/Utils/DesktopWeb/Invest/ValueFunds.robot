@@ -4,7 +4,7 @@ Library     SeleniumLibrary
 
 *** Keywords ***
 
-Verify Value Funds Landing Page
+Verify PreLogin Value Funds Landing Page
     Log To Console  Value Funds
     Wait For Element Visibility  ${KU_W_valueFundsTitle} 
     Click Element  ${KU_W_valueFundsTitle} 

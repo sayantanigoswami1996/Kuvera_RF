@@ -4,7 +4,7 @@ Library     SeleniumLibrary
 
 *** Keywords ***
 
-Verify US ETF Landing Page
+Verify PreLogin US ETF Landing Page
     Log To Console  US ETF
     Wait For Element Visibility  ${KU_W_UTFTitle}
     Click Element  ${KU_W_UTFTitle}

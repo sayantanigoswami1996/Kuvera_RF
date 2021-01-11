@@ -4,7 +4,7 @@ Library     SeleniumLibrary
 
 *** Keywords ***
 
-Verify Sector Funds Landing Page
+Verify PreLogin Sector Funds Landing Page
     Log To Console  Sector Funds
     Wait For Element Visibility  ${KU_W_sectorFundsTitle} 
     Click Element  ${KU_W_sectorFundsTitle} 

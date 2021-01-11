@@ -4,7 +4,7 @@ Library     SeleniumLibrary
 
 *** Keywords ***
 
-Verify Ultra Short Landing Page
+Verify PreLogin Ultra Short Landing Page
     Log To Console  Ultra Short
     Sleep  2s
     Click Element   ${KU_W_ultraShortTitle}   
