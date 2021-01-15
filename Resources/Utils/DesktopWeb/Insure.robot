@@ -6,7 +6,8 @@ Library     SeleniumLibrary
 
 Verify PreLogin Insure Page
     Click Element  ${KU_W_insureLink}
-    Verify Language Switch Login And Signup Link
+    Run Keyword If    '${ENV}' == '${e_prod}'  Verify Login And Signup Link
+    ...    ELSE  Log To Console  Continue
     Wait For Element Visibility  ${KU_W_insureHeaderTitle}  
     Verify Element And Text  ${KU_W_insureHeaderTitle}  ${e_insure_headerTitleText} 
     Verify Element And Text  ${KU_W_insureHeaderMsg}  ${e_insure_headerMsgText}
@@ -15,8 +16,7 @@ Verify PreLogin Insure Page
     Sleep   1s
     Click Button  ${KU_W_insure_checkPremiumBtn1} 
     Run Keyword If    '${ENV}' == '${e_prod}'  Verify Premium Popup  ${KU_W_insure_checkPremiumBtn1}
-    ...    ELSE   Verify Add Family Details Page
-    
+    ...    ELSE  Verify Missing PAN Page
     Wait For Element Visibility  ${KU_W_insure_costDetailsHeaderTitle}     
     Scroll Untill View  ${KU_W_insure_costDetailsHeaderTitle}
     Verify Element and Text  ${KU_W_insure_costDetailsHeaderTitle}  ${e_insure_costDetailsHeaderText}
@@ -101,11 +101,11 @@ Verify PreLogin Insure Page
     Verify Element and Text  ${KU_W_insure_checkPremiumBtn2}  ${e_insure_checkPremiumBtn2Text}
     Wait For Element Visibility  ${KU_W_insure_checkPremiumBtn2}
     Click Button  ${KU_W_insure_checkPremiumBtn2} 
-    Verify Premium Popup  ${KU_W_insure_checkPremiumBtn2}
-
+    Run Keyword If    '${ENV}' == '${e_prod}'  Verify Premium Popup  ${KU_W_insure_checkPremiumBtn2}
+    ...    ELSE  Verify Missing PAN Page
     # Verify the Google Play & Apple Store icons
     Verify Google Play & Apple Store Icons
-
+    
 Verify Premium Popup
     [Arguments]  ${premiumBtn}
     Wait For Element Visibility  ${KU_W_insure_popupHeader}
@@ -125,5 +125,9 @@ Verify Premium Popup
     Verify Signup Page
     Go Back
 
-Verify Add Family Details Page
-     
+Verify Missing PAN Page
+    Wait For Element Visibility  ${KU_W_HI_missingPANTitle}
+    Sleep  2s
+    Verify Element And Text  ${KU_W_HI_missingPANTitle}  ${e_HI_missingPANTitle}
+    Verify Element And Text  ${KU_W_HI_missingPANSubTitle}  ${e_HI_missingPANSubTitle}
+    Go Back

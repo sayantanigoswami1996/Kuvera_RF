@@ -2,7 +2,8 @@
 Library     SeleniumLibrary
 Resource    ../../Tests/DesktopWeb/Import.robot
 
-Suite Setup  Launch URL 
+Suite Setup  Launch URL
+Test Teardown  Navigate To Home Page 
 Suite Teardown  Close All Browsers
 
 #To run all tests: robot --variable URL:https://kuvera.in/ --variable BROWSER:headlesschrome -d Results Tests/DesktopWeb/PreLoginTests.robot
@@ -71,8 +72,3 @@ Verify Footer Section
 All Fund House Details Navigation
     [Tags]  TC12
     Verify PreLogin All Fund House Details
-
-# Account Creation
-Create Account After Login
-    [Tags]  TC13
-    Verify PostLogin Account Creation 

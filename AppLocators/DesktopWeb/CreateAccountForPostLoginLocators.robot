@@ -1,11 +1,11 @@
 *** Variables *** 
 # Application Expected Values 'e_<variableName>'
-${e_ca_staticdomainName} =  @kuvera.in
-${e_ca_staticEmail} =  moolya
-${e_ca_staticMobileNum} =  1234567890
-${e_ca_staticPWd} =  moolya123456
-${e_ca_staticInviteCode} =  20BM4
-${e_ca_staticOTP} =  
+${e_ca_domainName} =  @kuvera.in
+${e_ca_email} =  moolya+
+${e_ca_mobileNum} =  1234567890
+${e_ca_pwd} =  moolya123456
+${e_ca_inviteCode} =  20BM4
+${e_ca_OTP} =  111111
 # Application Locator 'KU_<locatorName>'
 # Kuvera :: Wealth Management Simplified
 ${KU_W_ca_emailInputField} =  xpath=//input[@id='email']

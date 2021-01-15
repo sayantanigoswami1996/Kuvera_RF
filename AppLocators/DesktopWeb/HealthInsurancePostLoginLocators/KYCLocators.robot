@@ -1,18 +1,19 @@
 *** Variables *** 
 # Application Expected Values 'e_<variableName>'
-${e_KYC_formTitle} =  Tell us about yourself
+${e_KYC_formTitle} =  Tell us about yourself      
 ${e_KYC_formSubTitle} =  So we can setup your account right. This will only take a few minutes. 
-${e_KYC_PANLabel} =  PAN Number
+${e_KYC_PANLabel} =  PAN NUMBER
 ${e_KYC_PANNumber} =  GLXPS3070J
-${e_KYC_DOBLabel} =  Date of Birth
+${e_KYC_DOBLabel} =  DATE OF BIRTH
 ${e_KYC_dateField} =  13
 ${e_KYC_monthField} =  08
 ${e_KYC_yearField} =  1993
-${e_KYC_mobileNumLabel} =  Mobile
+${e_KYC_mobileNumLabel} =  MOBILE
 ${e_KYC_mobileNumField} =  9110880017 
-${e_KYC_address1Field} =  Sri Lakshminarayana Mansion, 40, S End Rd
+${e_KYC_address1Field} =  Sri Lakshminarayana Mansion
 ${e_KYC_address2Field} =  Tata Silk Farm,Jayanagar
 ${e_KYC_cityField} =  Bengaluru
+${e_KYC_stateField} =  Karnataka
 ${e_KYC_pincodeField} =  560004
 ${e_KYC_addSignatureSubTitle1} =  CAMS requires your signature to setup your investment account with CAMS serviced fund houses.
 ${e_KYC_addSignatureSubTitle2} =  Use a mouse or your finger to draw a reasonable likeness of your signature.
@@ -41,8 +42,7 @@ ${KU_W_KYC_cityField} =  xpath=//input[@id='city']
 ${KU_W_KYC_pincodeField} =  xpath=//input[@id='pincode']
 ${KU_W_KYC_countryField} =  xpath=//input[@placeholder='Select country']
 ${KU_W_KYC_India} =  xpath=//a[contains(text(),'India')]
-${KU_W_KYC_stateField} =  xpath=//input[@placeholder='Select state']
-${KU_W_KYC_karnatakaState} =  xpath=//a[contains(text(),'Karnataka')]
+${KU_W_KYC_stateField} =  xpath=//input[@id='state']
 ${KU_W_KYC_gender} =  xpath=//div[@emitvalue='F']
 ${KU_W_KYC_maritalStatus} =  xpath=(//div[@emitvalue='N'])[1]
 ${KU_W_KYC_taxReturnFiling} =  xpath=(//div[@emitvalue='N'])[2]

@@ -9,10 +9,10 @@ Verify Question Title
     Wait For Element Visibility  ${element}
     ${actualTitle} =  Get Text  ${element}
     ${expectedTitle} =  Convert To String    ${text}
-    ${actualTitle1} =  Replace Characters  ${actualTitle}  ’  '
-    ${expectedTitle1} =  Replace Characters  ${expectedTitle}  ’  '
-    ${expectedTitle2} =  Replace Characters  ${expectedTitle1}  â€™  '
-    Compare Text Values  ${actualTitle1}  ${expectedTitle2}
+    ${actualTitle1} =  Replace String  ${actualTitle}  ’  '
+    ${expectedTitle1} =  Replace String  ${expectedTitle}  ’  '
+    ${expectedTitle2} =  Replace String  ${expectedTitle1}  â€™  '
+    Should be equal  ['${actualTitle1}']  ${expectedTitle2}
 
 Verify PreLogin Set A Goal Page
     ${goal1}  Get Json Values  $.Goals.g1  Resources/TestData/Goals.json
@@ -59,7 +59,7 @@ Verify Question And Enter Input
 Navigate To Features Goals
     Wait For Element Visibility  ${KU_W_logo_signup}
     Click Element  ${KU_W_logo_signup}
-    Sleep  2s
+    Sleep  5s
     Wait For Element Visibility  ${KU_W_featureLink}
     Click Element  ${KU_W_featureLink}
     Wait For Element Visibility  ${KU_W_feature_setAGoalLink}

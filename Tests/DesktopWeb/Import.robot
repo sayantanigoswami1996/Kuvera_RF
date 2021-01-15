@@ -47,3 +47,6 @@ Resource    ../../Resources/Utils/DesktopWeb/CreateAccountForPostLogin.robot
 Resource    ../../Resources/Utils/DesktopWeb/HealthInsurancePostLogin/KYC.robot
 Resource    ../../Resources/Utils/DesktopWeb/HealthInsurancePostLogin/AddFamilyDetails.robot
 Resource    ../../Resources/Utils/DesktopWeb/HealthInsurancePostLogin/HealthInsuranceLandingPage.robot
+Resource    ../../Resources/Utils/DesktopWeb/UnauthenticatedLinks/LiquidFunds.robot
+Resource    ../../Resources/Utils/DesktopWeb/UnauthenticatedLinks/ForgotPassword.robot
+Resource    ../../Resources/Utils/DesktopWeb/UnauthenticatedLinks/TaxCalculator.robot

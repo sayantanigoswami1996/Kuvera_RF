@@ -42,7 +42,7 @@ ${e_usersMsg} =   We revolutionized the way India invests. With your feedback we
 ${e_earnTitle} =  Earn up to 1.5% more returns*
 ${e_earnMsg} =  We pioneered commission free Direct Plan investing.\nEarn from our expertise and don't pay commission ever.
 ${e_earnLearnLink} =   Learn how!
-${e_coreAUAValue} =  ₹ 17,000
+${e_coreAUAValue} =  ₹ 18,000
 ${e_coreAUAText} =  Crore AUA       
 ${e_citiesValue} =  4 Lakh
 ${e_citiesText} =   Goals
@@ -89,9 +89,9 @@ ${KU_W_bannerCloseBtn} =  xpath=(//*[@class='icon-close'])[2]
 ${KU_W_menu} =  xpath=//*[@class='b-header__content']
 ${KU_W_headers} =  xpath=//*[@class='b-header__content__middle']/a
 ${KU_W_exploreELSS} =  xpath=//button[contains(text(),'Explore ELSS funds')]
-${KU_W_login} =  xpath=//*[@class='b-header__content__right__signin']	
+${KU_W_login} =  xpath=//a[@class='b-header__content__right__signin']	
 ${KU_W_loginPageTitle} =  xpath=//div[contains(text(),'Login. Start Investing.')]
-${KU_W_signup} =   xpath=//*[@class='b-header__content__right__singup']
+${KU_W_signup} =   xpath=//a[@class='b-header__content__right__singup']
 ${KU_W_signupPageTitle} =  xpath=//div[contains(text(),'Sign Up. Start Investing.')]
 
 ${KU_W_emailLabel} =  xpath=//label[contains(text(),'Email Address')]
@@ -209,4 +209,4 @@ ${KU_W_feature_ts_title} =  xpath=//div[@class='b-trade-smart__header__desc__tit
 ${KU_W_feature_fa_screenTitle} =  xpath=//h1[@class='b-family-account__what__heading']
 ${KU_W_feature_manageAccountTitle} =  xpath=//div[@class='b-manage-account__what']/h1
 ${KU_W_feature_sg_screenTitle} =  xpath=//*[@class='goals-index col-sm-4']/h2
-${KU_W_remit_screenTitle} =  xpath=//div[@class='b-introduction__desc__title']
+${KU_W_remit_screenTitle} =  xpath=//div[@class='b-introduction__desc']//div[2]

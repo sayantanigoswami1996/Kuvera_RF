@@ -10,7 +10,7 @@ Verify PreLogin 52WkHigh US Landing Page
     Click Element  ${KU_W_52WHighUSTitle}
     Sleep  1s
     Wait For Element Visibility  ${KU_W_52WHighUS_screenText}
-    Verify Language Switch Login And Signup Link  
+    Verify Login And Signup Link  
     Element Should Be Visible  ${KU_W_52WHighUS_screenText}
     Wait For Element Visibility  ${KU_W_US_SETF52WUS_searchBar}
     Verify Search And Sort  ${KU_W_US_SETF52WUS_searchBar}  ${e_invest_stock_searchBarTxt}  ${KU_W_invest_US_SETFAnd52WUS_searchTextField}  ${KU_W_invest_sort_US_S_UTF_USA} 

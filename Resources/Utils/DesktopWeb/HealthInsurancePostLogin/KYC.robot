@@ -6,14 +6,15 @@ Library     SeleniumLibrary
 
 Verify Fill In Of KYC Form Details
     Verify PostLogin Account Creation 
+    Wait For Element Visibility  ${KU_W_KYC_startBtn}
+    Click Element  ${KU_W_KYC_startBtn}
     Form Details Page
 
 Form Details Page
-    Wait For Element Visibility  ${KU_W_KYC_startBtn}
-    Click Element  ${KU_W_KYC_startBtn}
+    Wait For Element Visibility  ${KU_W_KYC_formTitle}
     Verify Element And Text  ${KU_W_KYC_formTitle}  ${e_KYC_formTitle}
     Verify Element And Text  ${KU_W_KYC_formSubTitle}  ${e_KYC_formSubTitle}  
-    Verify Element And Text  ${KU_W_KYC_PANLabel}  ${e_KYC_PAN_PANLabel}
+    Verify Element And Text  ${KU_W_KYC_PANLabel}  ${e_KYC_PANLabel}
     Click Element  ${KU_W_KYC_PANTextField}
     Input Text  ${KU_W_KYC_PANTextField}  ${e_KYC_PANNumber}
     Verify Element And Text  ${KU_W_KYC_DOBLabel}  ${e_KYC_DOBLabel}
@@ -40,18 +41,23 @@ Form Details Page
     Click Element  ${KU_W_KYC_countryField}
     Click Element  ${KU_W_KYC_India}
     Wait Scroll And Click Element  ${KU_W_KYC_stateField} 
-    Click Element  ${KU_W_KYC_karnatakaState}
+    Input Text  ${KU_W_KYC_stateField}  ${e_KYC_stateField}
     Wait Scroll And Click Element  ${KU_W_KYC_gender}
+    Wait Scroll And Click Element  ${KU_W_KYC_maritalStatus}
     Wait Scroll And Click Element  ${KU_W_KYC_taxReturnFiling}
     Wait Scroll And Click Element  ${KU_W_KYC_updateBtn}
     Verify Page Contains Element  ${KU_W_KYC_addSignatureTitle}
     Verify Element And Text  ${KU_W_KYC_addSignatureSubTitle1}  ${e_KYC_addSignatureSubTitle1}
     Verify Element And Text  ${KU_W_KYC_addSignatureSubTitle2}  ${e_KYC_addSignatureSubTitle2}
-    Click Element  ${KU_W_KYC_canvasSpace} 
-    Input Text  ${KU_W_KYC_canvasSpace}  ${e_KYC_signtaure}
+    # Click Element  ${KU_W_KYC_canvasSpace} 
+    # Input Text  ${KU_W_KYC_canvasSpace}  ${e_KYC_signtaure}
+    Add Signature
     Wait Scroll And Click Element  ${KU_W_KYC_OKBtn}
     Click Element  ${KU_W_KYC_popupOkBtn}
-    Verify Element And Text  ${KU_W_KYC_portfolioEmailField}  ${completeEmailID}
-    Verify Element And Text  ${KU_W_KYC_portfolioNameField}  ${e_KYC_portfolioNameField}
     Wait Scroll And Click Element  ${KU_W_KYC_confirmBtn}
-    Click Element  ${KU_W_kuverLogo}   
+    Click Element  ${KU_W_HI_kuverLogo}
+
+Add Signature
+    Click Element  ${KU_W_KYC_canvasSpace}
+    Mouse Down  ${KU_W_KYC_canvasSpace}
+    Mouse Up  ${KU_W_KYC_canvasSpace}    

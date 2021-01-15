@@ -1,11 +1,14 @@
 *** Settings ***
 
-Library     SeleniumLibrary
+Library           SeleniumLibrary    plugins=SeleniumMouseExtensions 
 
 *** Keywords ***
 
 Verify PostLogin Add Family Details
     Verify PostLogin Account Creation 
+    Navigate To Insure Page And Click Premium Button
+    Wait And Click  ${KU_W_HI_missingPANOkayBtn}
+    Form Details Page
     Navigate To Insure Page And Click Premium Button
     Wait For Element Visibility  ${KU_W_famDetails_pageTitle}
     # Text Validation Of Title and Subtitle
@@ -26,7 +29,7 @@ Verify PostLogin Add Family Details
     # Add Member 
     Wait And Click  ${KU_W_famDetails_addMemberMenu}
     Wait And Click  ${KU_W_famDetails_memberName}
-    Input Text  ${e_famDetails_memberName} 
+    Input Text  ${KU_W_famDetails_memberName}  ${e_famDetails_memberName}
     Wait And Click  ${KU_W_famDetails_dropdown}
     Click Element  ${KU_W_famDetails_daughter} 
     Wait And Click  ${KU_W_famDetails_DOB}
@@ -38,6 +41,7 @@ Verify PostLogin Add Family Details
     Wait Scroll And Click Element  ${KU_W_famDetails_proceedBtn}
 
     # Select City 
+    Wait For Element Visibility  ${KU_W_selectCity_selecyCitySubTitle}
     Verify Element And Text  ${KU_W_famDetails_pageTitle}  ${e_selectCity_selectCityTitle}
     Verify Element And Text  ${KU_W_selectCity_selecyCitySubTitle}  ${e_selectCity_selectCitySubTitle}
     Verify Element And Text  ${KU_W_selectCity_cityHeader}  ${e_selectCity_cityHeader}
@@ -47,6 +51,7 @@ Verify PostLogin Add Family Details
     Wait And Click  ${KU_W_selectCity_infoLinkOkayBtn}
     Verify City Name And Count Of Hospitals
     Verify Presence Of List Of Hospitals
+    Click Element  ${KU_W_selectCity_OtherAddBtn}
     Click Element  ${KU_W_selectCity_searchBox}
     Input Text  ${KU_W_selectCity_searchBox}  ${e_selectCity_searchedCityName}
     Click Element  ${KU_W_selectCity_searchedCity}
@@ -70,7 +75,6 @@ Verify Presence Of List Of Hospitals
     # Get list count
     ${hospitalListCount} =  Get Element Count  xpath=//div[@class='b-add-ciy__container__cities-row__text b-add-ciy__container__cashless-hsopital-number']
     Log To Console  ${hospitalListCount}
-
     # Iterate and verify all fund house details 
     FOR  ${i}  IN RANGE  1  ${hospitalListCount}+1
         Wait Scroll And Click Element  xpath=(//div[@class='b-add-ciy__container__cities-row__text b-add-ciy__container__cashless-hsopital-number'])[${i}]

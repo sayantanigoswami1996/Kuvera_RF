@@ -7,7 +7,8 @@ Library     SeleniumLibrary
 Verify PreLogin Mutual Fund Landing Page
     Log To Console  Mutual Fund
     Navigate To Invest Page And Verify Explore Options  ${KU_W_mutualFund}  ${e_invest_mf_titleText} 
-    Verify Language Switch Login And Signup Link
+    Sleep  1s
+    Verify Login And Signup Link
     Wait For Element Visibility  ${KU_W_invest_mf_fundName}
     Verify Page Contains Element  ${KU_W_invest_mf_growthDividendButton}
     # Iterate the Mutual Fund detail screen
@@ -32,7 +33,7 @@ Verify Mutual Fund Details Page
     [Arguments]  ${fund}
     Wait For Element Visibility  ${fund}
     Click Element  ${fund}
-    Verify Language Switch Login And Signup Link
+    Verify Login And Signup Link
     Wait For Element Visibility  ${KU_W_invest_mf_watchlistButton}
     Verify Page Contains Element  ${KU_W_invest_mf_watchlistButton}
     Verify Watchlist Icon  ${KU_W_invest_mf_watchlistButton}

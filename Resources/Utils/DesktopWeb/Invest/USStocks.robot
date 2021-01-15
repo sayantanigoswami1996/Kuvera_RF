@@ -9,14 +9,13 @@ Verify PreLogin US Stocks Landing Page
     Navigate To Invest Page And Verify Explore Options  ${KU_W_USStocks}  ${e_invest_USStocks}
     Wait For Element Visibility  ${KU_W_invest_USStocksTitle}
     Verify Element And Text  ${KU_W_invest_USStocksTitle}  ${e_invest_USStocks_title}
-    Verify Language Switch Login And Signup Link 
+    Verify Login And Signup Link 
     Wait For Element Visibility  ${KU_W_invest_USStocks_exploreBtn}
     Click Element  ${KU_W_invest_USStocks_exploreBtn}
     Wait For Element Visibility  ${KU_W_invest_USStocks_sortYear}
     Verify Element And Text  ${KU_W_invest_USStocks_sortYear}  ${e_invest_stocks_sortYear}
     Verify Page Contains Element  ${KU_W_invest_USStocks_filteredTag}
     Verify Page Contains Element  ${KU_W_invest_USStocks_stockPrice}
-    # WatchList
     Verify Watchlist Icon  ${KU_W_invest_US_SETFAnd52WUS_watchlistBtn}
     Verify Login Page
     Verify Filter For US Stocks
@@ -87,6 +86,7 @@ Verify US Stocks Landing Page Widgets
     Sleep  2s
     Wait For Element Visibility  ${KU_W_invest_USStocks_zeroBrokInfoLink}
     Click Element  ${KU_W_invest_USStocks_zeroBrokInfoLink}
+    Sleep  2s
     Wait For Element Visibility  ${KU_W_invest_USStocks_zeroBrokInfoMsg}
     Verify Element And Text  ${KU_W_invest_USStocks_zeroBrokInfoMsg}  ${e_invest_USStocks_zeroBrokInfoMsg}
     Sleep  2s

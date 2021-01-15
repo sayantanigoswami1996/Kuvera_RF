@@ -37,7 +37,7 @@ ${KU_W_footer_tweeterIcon} =  xpath=//ul[@class='list-unstyled']/li[5]/a[2]
 # Switch to Direct Funds
 ${KU_W_footer_switchToDirectFunds} =  xpath=(//ul[@class='list-unstyled'])[2]/li[2]/a
 ${KU_W_footer_switchToDirectTitle} =  xpath=//*[@class='container page-heading']/div/div/h1
-${KU_W_footer_setAGoal} =  xpath=//a[contains(text(),'Set a goal')]
+${KU_W_footer_setAGoal} =  xpath=//a[contains(text(),'Set a Goal')]
 ${KU_W_footer_exploreFunds} =  xpath=//a[contains(text(),'Explore Funds')]
 ${KU_W_blog} =  xpath=//a[contains(text(),'Blog')]
 ${KU_W_blogScreenTitle} =  xpath=///h1[contains(text(),'Your Investment Magazine')]

@@ -7,7 +7,7 @@ Library   SeleniumLibrary
 Verify PreLogin Digital Gold Landing Page
     Log To Console  Digital Gold - Explore More
     Navigate To Invest Page And Verify Explore Options  ${KU_W_digitalGold}  ${e_invest_digGold}
-    Verify Language Switch Login And Signup Link  
+    Verify Login And Signup Link  
     Wait For Element Visibility  ${KU_W_dg_screenTitle}
     Verify Element And Text  ${KU_W_dg_screenTitle}  ${e_invest_digiGold_screenText} 
     Verify Element And Text  ${KU_W_dg_purityHeading}  ${e_invest_digiGold_purityHeadingText} 

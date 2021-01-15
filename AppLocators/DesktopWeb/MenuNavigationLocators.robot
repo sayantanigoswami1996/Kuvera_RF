@@ -521,7 +521,7 @@ ${KU_W_feature_cd_pageSubHeader} =  xpath=//header[@class='page-heading']/p
 ${KU_W_feature_setAGoalTitle} =  xpath=(//div[contains(@class,'why-invest-text')]/h4)[1]
 ${KU_W_feature_setAGoalSubTitle} =  xpath=(//div[contains(@class,'why-invest-text')]/h3)[1]
 ${KU_W_feature_setAGoalDesc} =  xpath=//div[@class='set-a-goal-text']/p
-${KU_W_feature_goalBasedInvestingLink} =  xpath=//a[contains(text(),'More about goal-based investing')]
+${KU_W_feature_goalBasedInvestingLink} =  xpath=//div[@class='set-a-goal-text']/p/a
 ${KU_W_feature_setAGoalBtn} =  xpath=(//button[@class='btn in-btn'])[1]
 ${KU_W_feature_saveTaxGoalTitle} =  xpath=(//div[contains(@class,'why-invest-text')]/h4)[2]
 ${KU_W_feature_saveTaxGoalSubTitle} =  xpath=(//div[contains(@class,'why-invest-text')]/h3)[2]

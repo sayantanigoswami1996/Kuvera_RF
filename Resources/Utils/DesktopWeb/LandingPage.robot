@@ -72,7 +72,7 @@ Verify Mutual Funds Widgets
     Wait For Element Visibility  ${KU_W_mf_stock_button}
     Click Element  ${KU_W_mf_stock_button}
     Wait For Element Visibility  ${KU_W_mf_welcomeTitle}
-    Verify Language Switch Login And Signup Link
+    Verify Login And Signup Link
     Verify Element And Text  ${KU_W_mf_welcomeTitle}  ${e_mfWelcomeTitle}
     Verify Element And Text  ${KU_W_mf_welcomeText}  ${e_mf_welcomeText}
     Verify Element And Text  ${KU_W_mf_category}  ${e_mfCategory} 

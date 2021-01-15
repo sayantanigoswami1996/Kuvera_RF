@@ -8,12 +8,12 @@ Verify PreLogin Invest Tiles
     Wait For Element Visibility  ${KU_W_investLink} 
     Click Element  ${KU_W_investLink}
     Sleep  1s
-    Verify Language Switch Login And Signup Link
+    Verify Login And Signup Link
     # Save Smart
     Sleep  2s
     Wait For Element Visibility  ${KU_W_invest_saveSmartTitle}  
     Verify Element And Text  ${KU_W_invest_saveSmartTitle}  ${e_invest_saveSmartTitleText}
-    Verify Element And Text  ${KU_W_invest_saveSmartSubTitle}  ${e_invest_saveSmartSubText} 
+    Verify Element And Text  ${KU_W_invest_saveSmartSubTitle}  ${e_invest_saveSmartSubText}
     Wait For Element Visibility  ${KU_W_invest_saveSmartTitle}
     Click Element  ${KU_W_invest_saveSmartTitle}
     Log To Console  Save Smart Tiles
@@ -35,7 +35,7 @@ Verify PreLogin Invest Tiles
     Wait For Element Visibility  ${KU_W_ultraShortTitle} 
     Verify Element And Text  ${KU_W_ultraShortTitle}  ${e_invest_ultraShortTitleText}
     Verify Element And Text  ${KU_W_ultraShortSubTitle}  ${e_invest_ultraShortSubText}
-    Verify PreLogin Ultra Short Landing Page 
+    Verify PreLogin Ultra Short Landing Page
     # Bank & PSU Bonds
     Wait For Element Visibility  ${KU_W_bank&PSUBondsTitle} 
     Verify Element And Text  ${KU_W_bank&PSUBondsTitle}  ${e_invest_bank&PSUTitleText}
@@ -86,7 +86,7 @@ Verify PreLogin Invest Tiles
     Wait For Element Visibility  ${KU_W_52WHighIndiaTitle}  
     Verify Element And Text  ${KU_W_52WHighIndiaTitle}  ${e_invest_52WHighIndiaTitleText} 
     Verify Element And Text  ${KU_W_52WHighIndiaSubTitle}  ${e_invest_52WHighIndiaSubTitleText}
-    Verify PreLogin 52WkHigh India Landing Page 
+    Verify PreLogin 52WkHigh India Landing Page
     # 52 W High USA
     Wait For Element Visibility  ${KU_W_52WHighUSTitle}
     Verify Element And Text  ${KU_W_52WHighUSTitle}  ${e_invest_52WHighUSTitleText} 
@@ -101,6 +101,7 @@ Verify PreLogin Invest Tiles
     Go Back
     Scroll Untill View  ${KU_W_exploreMoreTitle}
     Verify Element And Text  ${KU_W_exploreMoreTitle}  ${e_invest_stock_exploreMoreTxt}
+    
 
 Navigate To Invest Page And Verify Explore Options
     [Arguments]  ${option}  ${optionText}
