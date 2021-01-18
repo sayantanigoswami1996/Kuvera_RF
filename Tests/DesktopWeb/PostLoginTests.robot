@@ -1,5 +1,5 @@
 *** Settings ***
-Library     SeleniumLibrary
+Library    SeleniumLibrary
 Resource    ../../Tests/DesktopWeb/Import.robot
 
 Suite Setup  Launch URL 

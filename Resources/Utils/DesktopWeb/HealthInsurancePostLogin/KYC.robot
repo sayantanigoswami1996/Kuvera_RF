@@ -1,6 +1,6 @@
 *** Settings ***
 
-Library     SeleniumLibrary
+Library   SeleniumLibrary
 
 *** Keywords ***
 
@@ -39,9 +39,11 @@ Form Details Page
     Wait Scroll And Click Element  ${KU_W_KYC_pincodeField}
     Input Text  ${KU_W_KYC_pincodeField}  ${e_KYC_pincodeField}
     Click Element  ${KU_W_KYC_countryField}
-    Click Element  ${KU_W_KYC_India}
+    Input Text  ${KU_W_KYC_countrySearchBar}  ${e_KYC_countryField}
+    Click Element  ${KU_W_KYC_countryDropdownList}
     Wait Scroll And Click Element  ${KU_W_KYC_stateField} 
     Input Text  ${KU_W_KYC_stateField}  ${e_KYC_stateField}
+    Click Element  ${KU_W_KYC_stateDropdownList} 
     Wait Scroll And Click Element  ${KU_W_KYC_gender}
     Wait Scroll And Click Element  ${KU_W_KYC_maritalStatus}
     Wait Scroll And Click Element  ${KU_W_KYC_taxReturnFiling}
@@ -49,8 +51,6 @@ Form Details Page
     Verify Page Contains Element  ${KU_W_KYC_addSignatureTitle}
     Verify Element And Text  ${KU_W_KYC_addSignatureSubTitle1}  ${e_KYC_addSignatureSubTitle1}
     Verify Element And Text  ${KU_W_KYC_addSignatureSubTitle2}  ${e_KYC_addSignatureSubTitle2}
-    # Click Element  ${KU_W_KYC_canvasSpace} 
-    # Input Text  ${KU_W_KYC_canvasSpace}  ${e_KYC_signtaure}
     Add Signature
     Wait Scroll And Click Element  ${KU_W_KYC_OKBtn}
     Click Element  ${KU_W_KYC_popupOkBtn}
@@ -58,6 +58,8 @@ Form Details Page
     Click Element  ${KU_W_HI_kuverLogo}
 
 Add Signature
-    Click Element  ${KU_W_KYC_canvasSpace}
-    Mouse Down  ${KU_W_KYC_canvasSpace}
-    Mouse Up  ${KU_W_KYC_canvasSpace}    
+    Mouse Over  ${KU_W_KYC_canvasSpace}
+    Sleep  4s
+    Click Element At Coordinates  ${KU_W_KYC_canvasSpace}  400  226
+    Drag And Drop By Offset  ${KU_W_KYC_canvasSpace}  200  100
+    Click Element At Coordinates  ${KU_W_KYC_canvasSpace}  250  140

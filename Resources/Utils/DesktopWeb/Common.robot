@@ -2,7 +2,7 @@
 
 Library     JSONLibrary
 Library     JsonValidator
-Library     SeleniumLibrary    plugins=SeleniumMouseExtensions 
+Library     SeleniumLibrary
 Library     String
 Library     OperatingSystem
 Library     Collections
