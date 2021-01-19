@@ -5,8 +5,7 @@ Library    SeleniumLibrary
 *** Keywords ***
 
 Verify PostLogin Add Family Details
-    Verify PostLogin Account Creation
-    Navigate To Insure Page And Click Premium Button
+    Wait Scroll And Click Element  ${KU_W_insure_checkPremiumBtn2} 
     Wait And Click  ${KU_W_HI_missingPANOkayBtn}
     Form Details Page
     Navigate To Insure Page And Click Premium Button
@@ -34,11 +33,11 @@ Verify PostLogin Add Family Details
     Click Element  ${KU_W_FM_daughter} 
     Wait And Click  ${KU_W_FM_DOB}
     FOR  ${i}  IN RANGE  1   15
-        Wait And Click  ${KU_W_FM_monthOnCalendar}
+        Click Element  ${KU_W_FM_monthOnCalendar}
     END
     Wait And Click  ${KU_W_FM_dateOnCalendar}
     Wait And Click  ${KU_W_FM_doneBtn}
-    Wait Scroll And Click Element  ${KU_W_FM_proceedBtn}
+    Wait Scroll And Click Element  ${KU_W_HI_proceedBtn}
 
     # Select City 
     Wait For Element Visibility  ${KU_W_SC_selectCitySubTitle}
@@ -65,19 +64,29 @@ Verify PostLogin Add Family Details
     Verify Policy Details On Landing Screen
     Verify Policy Details On Popup
     Verify FAQ questions
-    Wait Scroll And Click Element  ${KU_W_BYC_proceedBtn}
+    Wait Scroll And Click Element  ${KU_W_HI_proceedBtn}
 
     # Daily Cash Coverage
-    Wait For Element Visibility  ${KU_W_DYC_cashCoverageSubTitle}
-    Verify Element And Text  ${KU_W_HI_pageTitle}  ${e_DYC_dailyCashCoverageTitle}
-    Verify Element And Text  ${KU_W_DYC_cashCoverageSubTitle}  ${e_DYC_dailyCashCoverageSubTitle}
-    Verify Element And Text  ${KU_W_DYC_coverageDesc1}  ${e_DYC_dailyCashCoverageDesc1}
-    Verify Page Contains Image  ${KU_W_DYC_coverageImg1}
-    Verify Element And Text  ${KU_W_DYC_coverageDesc2}  ${e_DYC_dailyCashCoverageDesc2}
-    Verify Page Contains Image  ${KU_W_DYC_coverageImg2}
-    Verify Element And Text  ${KU_W_DYC_coverageDesc3}  ${e_DYC_dailyCashCoverageDesc3}
-    Verify Page Contains Image  ${KU_W_DYC_coverageImg3}
+    Wait For Element Visibility  ${KU_W_DCC_cashCoverageSubTitle}
+    Verify Element And Text  ${KU_W_HI_pageTitle}  ${e_DCC_dailyCashCoverageTitle}
+    Verify Element And Text  ${KU_W_DCC_cashCoverageSubTitle}  ${e_DCC_dailyCashCoverageSubTitle}
+    Verify Element And Text  ${KU_W_DCC_coverageDesc1}  ${e_DCC_dailyCashCoverageDesc1}
+    Verify Page Contains Image  ${KU_W_DCC_coverageImg1}
+    Verify Element And Text  ${KU_W_DCC_coverageDesc2}  ${e_DCC_dailyCashCoverageDesc2}
+    Verify Page Contains Image  ${KU_W_DCC_coverageImg2}
+    Verify Element And Text  ${KU_W_DCC_coverageDesc3}  ${e_DCC_dailyCashCoverageDesc3}
+    Verify Page Contains Image  ${KU_W_DCC_coverageImg3}
     Verify Cash Cover Card Details
+    Wait Scroll And Click Element  ${KU_W_HI_proceedBtn}
+
+    # General Exclusions
+    Wait For Element Visibility  ${KU_W_GE_generalExclusionSubTitle}
+    Verify Element And Text  ${KU_W_HI_pageTitle}  ${e_GE_generalExclusionTitle}
+    Verify Element And Text  ${KU_W_GE_generalExclusionSubTitle}  ${e_GE_generalExclusionSubTitle}
+    Verify Illness List Details
+    Click Image  ${KU_W_GE_checkBox}
+    Wait Scroll And Click Element  ${KU_W_HI_proceedBtn}
+
 
 
 
@@ -176,14 +185,14 @@ Verify Health Protect Details
     Click Image  ${KU_W_BYC_indemnityInfoLink} 
     Verify Page Contains Element  ${KU_W_BYC_infoLinkDesc}
     Verify Element And Text  ${KU_W_BYC_indemnityBaseValue}  ${e_BYC_indemnityBaseValue}
-    Verify Element And Text  ${KU_W_BYC_indemnityPremium}  ${e_BYC_premiumText}
+    Verify Element And Text  ${KU_W_BYC_indemnityPremium}  ${e_HI_premiumText}
     Verify Element And Text  ${KU_W_BYC_indemnityPremiumVal}  ${e_BYC_indemnityPremiumValue}
     Verify Page Contains Image  ${KU_W_BYC_superCoverInfoLink}
     Click Image  ${KU_W_BYC_superCoverInfoLink} 
     Verify Page Contains Element  ${KU_W_BYC_infoLinkDesc}
     Verify Element And Text  ${KU_W_BYC_superCoverBaseValue}  ${e_BYC_superCoverBaseValue}
-    Verify Element And Text  ${KU_W_BYC_superCoverPremium}  ${e_BYC_premiumText}
-    Verify Element And Text  ${KU_W_BYC_superCoverPremiumVal}  ${e_BYC_superCoverPremiumValue}
+    Verify Element And Text  ${KU_W_BYC_superCoverPremium}  ${e_HI_premiumText}
+    Verify Element And Text  ${KU_W_BYC_superCoverPremiumVal}  ${e_HI_defaultPremiumValue} 
     # Sum Covered
     Verify Element And Text  ${KU_W_BYC_sumCoveredTitle}  ${e_BYC_sumCoveredTitle}
     Verify Element And Text  ${KU_W_BYC_sumCoveredSubTitle}  ${e_BYC_sumCoveredSubTitle}
@@ -206,5 +215,17 @@ Verify Policy Documents
     Click Image  ${KU_W_BYC_documentLinkCloseBtn}
 
 Verify Cash Cover Card Details
-    Verify Element And Text  ${KU_W_DYC_cashcoverCardTitle}  ${e_DYC_dailyCashCoverageTitle}
-    Verify Policy Documents  ${KU_W_DYC_policyDocumentsLink}
+    Verify Element And Text  ${KU_W_DCC_cashcoverCardTitle}  ${e_DCC_dailyCashCoverageTitle}
+    Verify Page Contains Image  ${KU_W_DCC_cashCoverCardImg}
+    Verify Element And Text  ${KU_W_DCC_selectDailyCash}  ${e_DCC_selectDailyCash}
+    Verify Element And Text  ${KU_W_DCC_cashCardPremium}  ${e_HI_premiumText}
+    Verify Element And Text  ${KU_W_DCC_defaultPremimVal}  ${e_HI_defaultPremiumValue} 
+    Wait And Click  ${KU_W_DCC_2KDailyCashBtn}
+    Verify Element And Text  ${KU_W_DCC_defaultPremimVal}  ${e_DCC_2KPremiumAmount}
+    Verify Element And Text  ${KU_W_DCC_totalPremimVal}  ${e_DCC_totalPremiumAmount}
+    Verify Policy Documents  ${KU_W_DCC_policyDocumentsLink}
+
+Verify Illness List Details
+    @{illness_list} =  Get WebElements  ${KU_W_GE_illnessPointers}
+    # Validation of Fund Houses List on the first column
+    Compare Lists  ${illness_list}  ${e_GE_illnessList}

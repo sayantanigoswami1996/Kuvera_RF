@@ -9,6 +9,7 @@ ${e_FM_infoPopupTitle1} =  Family account feature helps you to add and manage we
 ${e_FM_infoPopupTitle2} =  For clarification, contact support@kuvera.in 
 ${e_FM_name} =  Bhavani Sruti Somaraju Venkata Naga\n27Y Self\nPrimary
 ${e_FM_memberName} =  Moolya 
+
 # Select City
 ${e_SC_selectCityTitle} =  Select your city
 ${e_SC_selectCitySubTitle} =  Health Protect is valid across India. Check cashless hospital network for your city.
@@ -26,6 +27,7 @@ ${e_SC_hospitalInCity3} =  253
 ${e_SC_hospitalInCity4} =  144
 ${e_SC_hospitalInCity5} =  564
 ${e_SC_searchedCityName} =  Trichy
+
 # Build Your  Coverage
 ${e_BYC_buildCoverageTitle} =  Build your coverage
 ${e_BYC_noRentPolicy} =  No room rent capping
@@ -52,10 +54,8 @@ ${e_BYC_healthProtectTitle} =  Health Protect
 ${e_BYC_baseIndemnityTitle} =  Base Indemnity cover 
 ${e_BYC_superCoverTitle} =  Super top-up cover
 ${e_BYC_indemnityBaseValue} =  ₹3 L
-${e_BYC_premiumText} =  Premium
 ${e_BYC_indemnityPremiumValue} =  ₹5,380.5/Y
 ${e_BYC_superCoverBaseValue} =  None
-${e_BYC_superCoverPremiumValue} =  ₹0/Y
 ${e_BYC_sumCoveredTitle} =  Sum covered 
 ${e_BYC_sumCoveredSubTitle} =  Total premium
 ${e_BYC_sumCoveredValue} =  ₹3 L
@@ -64,13 +64,23 @@ ${e_BYC_endorsementLink} =  Endorsement wording
 ${e_BYC_policyWordingLink} =  Policy wording                  
 ${e_BYC_generalExclusionLink} =  General exclusions                    
 ${e_BYC_cashlessHospitalLink} =  List of cashless hospitals
+
 # Daily Cash Coverage
-${e_DYC_dailyCashCoverageTitle} =  Daily cash cover  
-${e_DYC_dailyCashCoverageSubTitle} =  Covers out of pocket expense during hospitalisation such as travelling, food etc.                  
-${e_DYC_dailyCashCoverageDesc1} =  Covers up to 30 days of hospitalisation. 
-${e_DYC_dailyCashCoverageDesc2} =  No bills submission needed. 
-${e_DYC_dailyCashCoverageDesc3} =  Money credited from 2nd day onwards.  
-${e_DYC_dailyCashCoverageDesc3} =  
+${e_DCC_dailyCashCoverageTitle} =  Daily cash cover  
+${e_DCC_dailyCashCoverageSubTitle} =  Covers out of pocket expense during hospitalisation such as travelling, food etc.                  
+${e_DCC_dailyCashCoverageDesc1} =  Covers up to 30 days of hospitalisation. 
+${e_DCC_dailyCashCoverageDesc2} =  No bills submission needed. 
+${e_DCC_dailyCashCoverageDesc3} =  Money credited from 2nd day onwards.  
+${e_DCC_selectDailyCash} =  Select daily cash 
+${e_DCC_2KPremiumAmount} =  ₹847/Y
+${e_DCC_totalPremiumAmount} =  ₹6,227.5/Y
+
+# General Exclusions
+${e_GE_generalExclusionTitle} =  General exclusions
+${e_GE_generalExclusionSubTitle} =  Policy does not apply if you have any of the following medical conditions at time of issuance.\n\nIf you get diagnosed with any such conditions after the Policy issuance then they will be covered as per the policy wordings.
+
+@{e_GE_illnessList} =  Any complications related to Diabetes, Hypertension, and Hypothyroidism  Any problem with vision or eyes other than having undergone cataract operation in either or both eyes, or having errors of refraction.  Tumor or Cancer anywhere in the body.  Arthritis, Spine or Joint disorder in the last 5 years.  Any problem with reproductive organs like the prostate, testis.  Any stone disease like kidney or ureter stones in the last 10 years.  Any disease of major organs including but not limited to the brain (includes stroke or paralysis), heart, kidney, lungs, liver or mental health disorder.  Taken any medicine more than 21 days consistently in last 5 years except for infrequent acidity, loose motion, common cold, fever, headache.  Applicant(s)/dependents have high cholesterol, asthma, diabetes, hypertension and hyperthyroidism.  Ever reported positive for Hepatitis B, HIV / AIDS or other sexually transmitted diseases.  Any major surgery (any surgery is done other than those done under local anaesthesia) in last 5 years other than family planning/ C- section ( Applicable for Females).  Any disorder of the cervix, uterus, ovary(ies), abnormal bleeding or problem with the reproductive system in the last 5 years. (Applicable for female members proposed to be insured).       
+
 # Application Locator 'KU_<locatorName>'   
 # Kuvera :: Wealth Management Simplified
 # Add Family Member
@@ -91,7 +101,7 @@ ${KU_W_FM_dateOnCalendar} =  xpath=//span[text()='7']
 ${KU_W_FM_doneBtn} =  xpath=//button[contains(text(),'Done')]
 ${KU_W_FM_primaryApplicant} =  xpath=(//div[@class='b-item__row b-item__row__hasDetails'])[1]
 ${KU_W_FM_primaryApplicantGender} =  xpath=//div[contains(text(),'Female')]
-${KU_W_FM_proceedBtn} =  xpath=//button[contains(text(),'Proceed')]
+
 # Select City
 ${KU_W_SC_selectCitySubTitle} =  xpath=//div[@class='b-insurance__description b-add-ciy__subheading']
 ${KU_W_SC_cityHeader} =  xpath=//div[@class='b-add-ciy__container__title-row']/div[1]
@@ -115,7 +125,8 @@ ${KU_W_SC_searchBox} =  xpath=//input[@placeholder='Type city name']
 ${KU_W_SC_searchedCity} =  xpath=//div[@class='b-city-list__row']
 ${KU_W_SC_viewPlanBtn} =  xpath=//button[contains(text(),'View Plan')]
 ${KU_W_SC_OtherAddBtn} =  xpath=//div[contains(text(),'Other')]
-# Build Your  Coverage
+
+# Build Your Coverage
 ${KU_W_BYC_noRentPolicy} =  xpath=(//div[@class='b-policy-feature__title'])[1]
 ${KU_W_BYC_noTreatmentPolicy} =  xpath=(//div[@class='b-policy-feature__title'])[2]
 ${KU_W_BYC_noCoPaymentPolicy} =  xpath=(//div[@class='b-policy-feature__title'])[3]
@@ -171,16 +182,25 @@ ${KU_W_BYC_policyWordingLink} =  xpath=//div[contains(text(),'Policy wording')]
 ${KU_W_BYC_generalExclusionsLink} =  xpath=//div[contains(text(),'General exclusions')]
 ${KU_W_BYC_cashlessHospitalLink} =  xpath=//div[contains(text(),'List of cashless hospitals')]
 ${KU_W_BYC_documentLinkCloseBtn} =  xpath=//div[@class='modal-content-desktop']//img[@alt='close-btn-img']
-${KU_W_BYC_proceedBtn} =  xpath=//button[contains(text(),'Proceed')]
+
 # Daily Cash Coverage
-${KU_W_DYC_cashCoverageSubTitle} =  xpath=//div[@class='b-add-on-insurance__subtitle b-insurance__description']
-${KU_W_DYC_coverageDesc1} =  xpath=(//div[@class='b-add-on-insurance__subtitle--list b-insurance__description'])[1]
-${KU_W_DYC_coverageDesc2} =  xpath=(//div[@class='b-add-on-insurance__subtitle--list b-insurance__description'])[2]
-${KU_W_DYC_coverageDesc3} =  xpath=(//div[@class='b-add-on-insurance__subtitle--list b-insurance__description'])[3]
-${KU_W_DYC_coverageImg1} =  xpath=(//img[@class='b-add-nominee-icon'])[1]
-${KU_W_DYC_coverageImg2} =  xpath=(//img[@class='b-add-nominee-icon'])[2]
-${KU_W_DYC_coverageImg3} =  xpath=(//img[@class='b-add-nominee-icon'])[3]
+${KU_W_DCC_cashCoverageSubTitle} =  xpath=//div[@class='b-add-on-insurance__subtitle b-insurance__description']
+${KU_W_DCC_coverageDesc1} =  xpath=(//div[@class='b-add-on-insurance__subtitle--list b-insurance__description'])[1]
+${KU_W_DCC_coverageDesc2} =  xpath=(//div[@class='b-add-on-insurance__subtitle--list b-insurance__description'])[2]
+${KU_W_DCC_coverageDesc3} =  xpath=(//div[@class='b-add-on-insurance__subtitle--list b-insurance__description'])[3]
+${KU_W_DCC_coverageImg1} =  xpath=(//img[@class='b-add-nominee-icon'])[1]
+${KU_W_DCC_coverageImg2} =  xpath=(//img[@class='b-add-nominee-icon'])[2]
+${KU_W_DCC_coverageImg3} =  xpath=(//img[@class='b-add-nominee-icon'])[3]
+${KU_W_DCC_cashcoverCardTitle} =  xpath=//div[@class='b-insurance__subtitle b-insurance-image-title-comp__title-text']
+${KU_W_DCC_policyDocumentsLink} =  xpath=//div[@class='b-insurance__link b-add-on__polic-doc--link']
+${KU_W_DCC_cashCoverCardImg} =  xpath=//img[@class='b-insurance-image-title-comp__img']
+${KU_W_DCC_selectDailyCash} =  xpath=(//div[@class='b-insurance__description'])[2]
+${KU_W_DCC_cashCardPremium} =  xpath=(//div[@class='b-insurance__description'])[1]
+${KU_W_DCC_defaultPremimVal} =  xpath=//div[@class='b-add-on__premuim--text']
+${KU_W_DCC_2KDailyCashBtn} =  xpath=(//div[@class='b-add-on-insurance-plan__button'])[1]
+${KU_W_DCC_totalPremimVal} =  xpath=//div[@class='b-add-on__total-premuim--text']
 
-${KU_W_DYC_cashcoverCardTitle} =  xpath=//div[@class='b-insurance__subtitle b-insurance-image-title-comp__title-text']
-${KU_W_DYC_policyDocumentsLink} =  xpath=//div[@class='b-insurance__link b-add-on__polic-doc--link']
-
+# General Exclusions
+${KU_W_GE_generalExclusionSubTitle} =  xpath=//div[@class='b-insurance__description b-add-members-details__subheading']
+${KU_W_GE_illnessPointers} =  xpath=//li[@class='b-insurance__body-dark b-check-illness__list']
+${KU_W_GE_checkBox} =  xpath=//img[@class='check-icon']
