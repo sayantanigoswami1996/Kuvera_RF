@@ -78,9 +78,29 @@ ${e_DCC_totalPremiumAmount} =  ₹6,227.5/Y
 # General Exclusions
 ${e_GE_generalExclusionTitle} =  General exclusions
 ${e_GE_generalExclusionSubTitle} =  Policy does not apply if you have any of the following medical conditions at time of issuance.\n\nIf you get diagnosed with any such conditions after the Policy issuance then they will be covered as per the policy wordings.
-
 @{e_GE_illnessList} =  Any complications related to Diabetes, Hypertension, and Hypothyroidism  Any problem with vision or eyes other than having undergone cataract operation in either or both eyes, or having errors of refraction.  Tumor or Cancer anywhere in the body.  Arthritis, Spine or Joint disorder in the last 5 years.  Any problem with reproductive organs like the prostate, testis.  Any stone disease like kidney or ureter stones in the last 10 years.  Any disease of major organs including but not limited to the brain (includes stroke or paralysis), heart, kidney, lungs, liver or mental health disorder.  Taken any medicine more than 21 days consistently in last 5 years except for infrequent acidity, loose motion, common cold, fever, headache.  Applicant(s)/dependents have high cholesterol, asthma, diabetes, hypertension and hyperthyroidism.  Ever reported positive for Hepatitis B, HIV / AIDS or other sexually transmitted diseases.  Any major surgery (any surgery is done other than those done under local anaesthesia) in last 5 years other than family planning/ C- section ( Applicable for Females).  Any disorder of the cervix, uterus, ovary(ies), abnormal bleeding or problem with the reproductive system in the last 5 years. (Applicable for female members proposed to be insured).       
 
+# Existing Illness
+${e_EI_existingIllnessTitle} =  Do you have an existing illness?
+${e_EI_existingIllnessSubTitle} =  This ensures claims are not rejected for non-disclosures of existing illness
+${e_EI_infoLinkDetails} =  Existing illness means any condition, ailment, injury or disease:
+${e_EI_infoLinkSubDetails} =   That is/are diagnosed by a physician within 48 months prior to the effective date of the policy issued by the insurer or its reinstatement or\nFor which medical advice or treatment was recommended by, or received from, a physician within 48 months prior to the effective date of the policy issued by the insurer or its reinstatement.
+${e_EI_noIllnessBtnTitle} =  I/we don’t have any illness
+${e_EI_noIllnessBtnSubTitle} =  Neither you or your loved one has an existing health condition or disease.
+${e_EI_illnessBtnTitle} =  I/we have an existing illness
+${e_EI_illnessBtnSubTitle} =  Either you or your loved one has an existing health condition or disease.
+${e_EI_declareIllnessTitle} =  Declare existing illness
+${e_EI_declareIllnessSubTitle} =  Please ensure you mention all existing health conditions or illness.
+${e_EI_userIllnessTitle} =  Current illness or health condition of
+${e_EI_addIllness} =  Thyroid
+${e_EI_applicantlllnessTitle} =  Current illness or health condition
+${e_EI_applicantlllnessDesc1} =  Please ensure your health condition is not part of the general exclusions
+${e_EI_applicantlllnessDesc2} =  Example: Applicant(s) aling from Diabetes, Hypertension, Asthma is not eligible at the time of insurance.
+${e_EI_generalExclusionPopupTitle} =   Policy does not apply if you have any of the following medical conditions at time of issuance. 
+
+# Contact Details
+${e_CD_contactDetailsTitle} =  Confirm contact details
+${e_CD_contactDetailsSubTitle} =  Helps insurer to connect with you and mail physical policy
 # Application Locator 'KU_<locatorName>'   
 # Kuvera :: Wealth Management Simplified
 # Add Family Member
@@ -89,7 +109,6 @@ ${KU_W_FM_addFamMemberSubTitle1} =  xpath=(//div[@class='b-insurance__descriptio
 ${KU_W_FM_addFamMemberSubTitle2} =  xpath=(//div[@class='b-insurance__description b-add-members-details__subheading'])[2]
 ${KU_W_FM_infoPopupTitle1} =  xpath=//div[@class='b-insurance-description b-insurance-add-member__description']/div[1]
 ${KU_W_FM_infoPopupTitle2} =  xpath=//div[@class='b-insurance-description b-insurance-add-member__description']/div[2]
-${KU_W_FM_popupOkayBtn} =  xpath=//button[contains(text(),'Okay')]
 ${KU_W_FM_insuranceHolderName} =  xpath=(//div[@class='b-item__row__content'])[1]
 ${KU_W_FM_addMemberMenu} =  xpath=//div[@class='b-item__row']/div[1]
 ${KU_W_FM_memberName} =  xpath=//input[@id='name']
@@ -98,7 +117,6 @@ ${KU_W_FM_daughter} =  xpath=//div[contains(text(),'Daughter')]
 ${KU_W_FM_DOB} =  xpath=//input[@placeholder='Select DOB']
 ${KU_W_FM_monthOnCalendar} =  xpath=//div[@class='vdp-datepicker']//div[2]//header[1]//span[1]
 ${KU_W_FM_dateOnCalendar} =  xpath=//span[text()='7']
-${KU_W_FM_doneBtn} =  xpath=//button[contains(text(),'Done')]
 ${KU_W_FM_primaryApplicant} =  xpath=(//div[@class='b-item__row b-item__row__hasDetails'])[1]
 ${KU_W_FM_primaryApplicantGender} =  xpath=//div[contains(text(),'Female')]
 
@@ -108,7 +126,6 @@ ${KU_W_SC_cityHeader} =  xpath=//div[@class='b-add-ciy__container__title-row']/d
 ${KU_W_SC_networkHospitalHeader} =  xpath=//div[@class='b-add-ciy__container__title-row']/div[2]
 ${KU_W_SC_hospitalInfoLink} =  xpath=//div[@class='b-add-ciy__container__title--hospital']//img
 ${KU_W_SC_infoLinkPopupTitle} =  xpath=//div[@class='b-hospital-info-details__title']
-${KU_W_SC_infoLinkOkayBtn} =  xpath=//button[contains(text(),'Okay')]
 ${KU_W_SC_cityName1} =  xpath=(//div[@class='b-add-ciy__container__cities-row__text'])[1]
 ${KU_W_SC_cityName2} =  xpath=(//div[@class='b-add-ciy__container__cities-row__text'])[2]
 ${KU_W_SC_cityName3} =  xpath=(//div[@class='b-add-ciy__container__cities-row__text'])[3]
@@ -136,7 +153,6 @@ ${KU_W_BYC_noTreatmentPolicyDesc} =  xpath=(//div[@class='b-policy-features-cont
 ${KU_W_BYC_noCoPaymentPolicyDesc} =  xpath=(//div[@class='b-policy-features-content__description'])[3]
 ${KU_W_BYC_waitingPeriodPolicyDesc} =  xpath=(//div[@class='b-policy-features-content__description'])[4]
 ${KU_W_BYC_seeMoreLink} =  xpath=//div[@class='b-insurance__link b-policy-feature__see-more--text']
-${KU_W_BYC_gotItPopupBtn} =  xpath=//button[contains(text(),'Got it')]
 ${KU_W_BYC_30DayGuranteePolicy} =  xpath=(//div[@class='b-show-more-feature__title'])[5]
 ${KU_W_BYC_30DayGuranteePolicyDesc} =  xpath=(//div[@class='b-show-more-feature__description'])[5]
 ${KU_W_BYC_ayushCoveredPolicy} =  xpath=(//div[@class='b-show-more-feature__title'])[6]
@@ -204,3 +220,30 @@ ${KU_W_DCC_totalPremimVal} =  xpath=//div[@class='b-add-on__total-premuim--text'
 ${KU_W_GE_generalExclusionSubTitle} =  xpath=//div[@class='b-insurance__description b-add-members-details__subheading']
 ${KU_W_GE_illnessPointers} =  xpath=//li[@class='b-insurance__body-dark b-check-illness__list']
 ${KU_W_GE_checkBox} =  xpath=//img[@class='check-icon']
+
+# Existing Ilness
+${KU_W_EI_existingIllnessTitle} =  xpath=//div[@class='b-insurance__title b-existing-illness__title']
+${KU_W_EI_existingIllnessImg} =  xpath=//img[@alt='insurance helth icon']
+${KU_W_EI_existingIllnessSubTitle} =  xpath=//div[@class='b-insurance-illness_subtitle']
+${KU_W_EI_existingIllnessInfoLink} =  xpath=//img[@alt='information icon']
+${KU_W_EI_infoLinkDetail} =  xpath=//div[@class='b-hospital-info-details__title']
+${KU_W_EI_infoLinkSubDetail} =  xpath=//div[@class='b-insurance-description b-hospital-info-details-description']
+${KU_W_EI_noIllnessBtnTitle} =  xpath=(//div[@class='b-insurance__subtitle--dark'])[1]
+${KU_W_EI_noIllnessBtnSubTitle} =  xpath=(//div[@class='b-insurance__body-dark'])[1]
+${KU_W_EI_noIllnessBtnImg} =  xpath=(//img[@alt='insurance illness icon'])[1]
+${KU_W_EI_illnessBtnTitle} =  xpath=(//div[@class='b-insurance__subtitle--dark'])[2]
+${KU_W_EI_illnessBtnSubTitle} =  xpath=(//div[@class='b-insurance__body-dark'])[3]
+${KU_W_EI_illnessBtnImg} =  xpath=(//img[@alt='insurance illness icon'])[3]
+${KU_W_EI_declareIllnessTitle} =  xpath=//div[@class='b-insurance__title b-declare-illness__title']
+${KU_W_EI_declareIllnessSubTitle} =  xpath=//div[@class='b-insurance__description b-declare-illness__description']
+${KU_W_EI_addBtn} =  xpath=(//div[@class='b-item__row__image']//img)[1]
+${KU_W_EI_addIllnessField} =  xpath=//input[@placeholder='Add condition']
+${KU_W_EI_applicantIllnessTitle} =  xpath=//div[@class='b-insurance__title b-applicant-illness__title']
+${KU_W_EI_generalExclusionLink} =  xpath=//span[@class='b-check-illness__excision-link']
+${KU_W_EI_generalExclusionPopupTitle} =  xpath=//div[@class='b-health-insurance-nav__description']
+${KU_W_EI_applicantIllnessDesc1} =  xpath=(//div[@class='b-insurance__description b-check-illness__description'])[1]
+${KU_W_EI_applicantIllnessDesc2} =  xpath=(//div[@class='b-insurance__description b-check-illness__description'])[2]
+
+# Contact Details
+${KU_W_CD_contactDetailsTitle} =  xpath=//div[@class='b-insurance__title b-primary-applicant-left__title']
+${KU_W_CD_contactDetailsSubTitle} =  xpath=//div[@class='b-insurance__description']

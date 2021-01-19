@@ -5,7 +5,7 @@ Library     SeleniumLibrary
 *** Keywords ***
 
 Verify PostLogin Insure Landing Page
-    Verify PostLogin Account Creation 
+    Verify PostLogin Account Creation
     Verify PreLogin Insure Page    
 
 Navigate To Insure Page And Click Premium Button

@@ -5,6 +5,7 @@ Library     SeleniumLibrary
 *** Keywords ***
 
 Verify PostLogin Account Creation 
+    Log To Console  Account Creation
     Wait For Element Visibility  ${KU_W_signup}
     Click Element  ${KU_W_signup}
     Click Element  ${KU_W_ca_emailInputField} 
@@ -20,6 +21,7 @@ Verify PostLogin Account Creation
     Wait Scroll And Click Element  ${KU_W_ca_inviteCodeField}
     Input Text  ${KU_W_ca_inviteCodeField}  ${e_ca_inviteCode}
     Click Element  ${KU_W_ca_signupBtn} 
+    Sleep  1s
     Wait For Element Visibility  ${KU_W_ca_OTPField}
     Click Element  ${KU_W_ca_OTPField}
     Input Text  ${KU_W_ca_OTPField}  ${e_ca_OTP}

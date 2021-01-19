@@ -11,6 +11,7 @@ Verify Fill In Of KYC Form Details
     Form Details Page
 
 Form Details Page
+    Log To Console  KYC Form
     Wait For Element Visibility  ${KU_W_KYC_formTitle}
     Verify Element And Text  ${KU_W_KYC_formTitle}  ${e_KYC_formTitle}
     Verify Element And Text  ${KU_W_KYC_formSubTitle}  ${e_KYC_formSubTitle}  
@@ -55,7 +56,7 @@ Form Details Page
     Wait Scroll And Click Element  ${KU_W_KYC_OKBtn}
     Click Element  ${KU_W_KYC_popupOkBtn}
     Wait Scroll And Click Element  ${KU_W_KYC_confirmBtn}
-    Click Element  ${KU_W_HI_kuverLogo}
+    Wait And Click  ${KU_W_HI_kuverLogo}
 
 Add Signature
     Mouse Over  ${KU_W_KYC_canvasSpace}

@@ -13,3 +13,6 @@ ${KU_W_HI_missingPANSubTitle} =  xpath=//div[@class='b-insurance__subtitle b-ins
 ${KU_W_HI_missingPANOkayBtn} =  xpath=//div[@class='b-insurance-confirm-modal__btn--okay']
 ${KU_W_HI_pageTitle} =  xpath=//div[@class='b-insurance__title']
 ${KU_W_HI_proceedBtn} =  xpath=//button[contains(text(),'Proceed')]
+${KU_W_HI_okayBtn} =  xpath=//button[contains(text(),'Okay')]
+${KU_W_HI_doneBtn} =  xpath=//button[contains(text(),'Done')]
+${KU_W_HI_gotItPopupBtn} =  xpath=//button[contains(text(),'Got it')]

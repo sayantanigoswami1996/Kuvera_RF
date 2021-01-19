@@ -11,6 +11,7 @@ Verify PostLogin Add Family Details
     Navigate To Insure Page And Click Premium Button
     Wait For Element Visibility  ${KU_W_HI_pageTitle}
     # Text Validation Of Title and Subtitle
+    Log To Console  Add Family Member
     Verify Element and Text  ${KU_W_HI_pageTitle}  ${e_FM_addFamMemberTitle}
     Verify Element and Text  ${KU_W_FM_addFamMemberSubTitle1}  ${e_FM_addFamMemberSubTitle1}
     Verify Element and Text  ${KU_W_FM_addFamMemberSubTitle2}  ${e_FM_AddFamMemberSubTitle2}
@@ -18,13 +19,13 @@ Verify PostLogin Add Family Details
     Wait And Click   ${KU_W_FM_infoLink}
     Verify Element And Text  ${KU_W_FM_infoPopupTitle1}  ${e_FM_infoPopupTitle1}
     Verify Element And Text  ${KU_W_FM_infoPopupTitle2}  ${e_FM_infoPopupTitle2}
-    Wait And Click  ${KU_W_FM_popupOkayBtn}
+    Wait And Click  ${KU_W_HI_okayBtn}
     # Add Gender to Primary Applicant
     Verify Element And Text  ${KU_W_FM_insuranceHolderName}  ${e_FM_name}
     Wait And Click  ${KU_W_FM_primaryApplicant}
     Wait And Click  ${KU_W_FM_dropdown}
     Wait And Click  ${KU_W_FM_primaryApplicantGender}
-    Wait Scroll And Click Element  ${KU_W_FM_doneBtn}
+    Wait Scroll And Click Element  ${KU_W_HI_doneBtn} 
     # Add Member 
     Wait And Click  ${KU_W_FM_addMemberMenu}
     Wait And Click  ${KU_W_FM_memberName}
@@ -36,10 +37,11 @@ Verify PostLogin Add Family Details
         Click Element  ${KU_W_FM_monthOnCalendar}
     END
     Wait And Click  ${KU_W_FM_dateOnCalendar}
-    Wait And Click  ${KU_W_FM_doneBtn}
+    Wait And Click  ${KU_W_HI_doneBtn} 
     Wait Scroll And Click Element  ${KU_W_HI_proceedBtn}
 
     # Select City 
+    Log To Console  Select City
     Wait For Element Visibility  ${KU_W_SC_selectCitySubTitle}
     Verify Element And Text  ${KU_W_HI_pageTitle}  ${e_SC_selectCityTitle}
     Verify Element And Text  ${KU_W_SC_selectCitySubTitle}  ${e_SC_selectCitySubTitle}
@@ -47,7 +49,7 @@ Verify PostLogin Add Family Details
     Verify Element And Text  ${KU_W_SC_networkHospitalHeader}  ${e_SC_networkHospitalHeader}
     Wait And Click  ${KU_W_SC_hospitalInfoLink} 
     Verify Element And Text  ${KU_W_SC_infoLinkPopupTitle}  ${e_SC_infoLinkPopupTitle}
-    Wait And Click  ${KU_W_SC_infoLinkOkayBtn}
+    Wait And Click  ${KU_W_HI_okayBtn}
     Verify City Name And Count Of Hospitals
     Verify Presence Of List Of Hospitals
     Click Element  ${KU_W_SC_OtherAddBtn}
@@ -57,6 +59,7 @@ Verify PostLogin Add Family Details
     Click Element  ${KU_W_SC_viewPlanBtn} 
 
     # Build Your Coverage
+    Log To Console  Build Your Coverage
     Wait For Element Visibility  ${KU_W_BYC_noRentPolicy}
     Verify Element And Text  ${KU_W_HI_pageTitle}  ${e_BYC_buildCoverageTitle}
     Verify Health Protect Details
@@ -67,6 +70,7 @@ Verify PostLogin Add Family Details
     Wait Scroll And Click Element  ${KU_W_HI_proceedBtn}
 
     # Daily Cash Coverage
+    Log To Console  Daily Cash Coverage 
     Wait For Element Visibility  ${KU_W_DCC_cashCoverageSubTitle}
     Verify Element And Text  ${KU_W_HI_pageTitle}  ${e_DCC_dailyCashCoverageTitle}
     Verify Element And Text  ${KU_W_DCC_cashCoverageSubTitle}  ${e_DCC_dailyCashCoverageSubTitle}
@@ -80,12 +84,45 @@ Verify PostLogin Add Family Details
     Wait Scroll And Click Element  ${KU_W_HI_proceedBtn}
 
     # General Exclusions
+    Log To Console  General Exclusions
     Wait For Element Visibility  ${KU_W_GE_generalExclusionSubTitle}
     Verify Element And Text  ${KU_W_HI_pageTitle}  ${e_GE_generalExclusionTitle}
     Verify Element And Text  ${KU_W_GE_generalExclusionSubTitle}  ${e_GE_generalExclusionSubTitle}
     Verify Illness List Details
     Click Image  ${KU_W_GE_checkBox}
     Wait Scroll And Click Element  ${KU_W_HI_proceedBtn}
+
+    # Existing Illness
+    Log To Console  Existing Illness
+    Wait For Element Visibility  ${KU_W_EI_existingIllnessSubTitle}
+    Verify Element And Text  ${KU_W_EI_existingIllnessTitle}  ${e_EI_existingIllnessTitle}
+    Verify Page Contains Image  ${KU_W_EI_existingIllnessImg}
+    Verify Element And Text  ${KU_W_EI_existingIllnessSubTitle}  ${e_EI_existingIllnessSubTitle}
+    Click Image  ${KU_W_EI_existingIllnessInfoLink}
+    Verify Element And Text  ${KU_W_EI_infoLinkDetail}  ${e_EI_infoLinkDetails}
+    Verify Element And Text  ${KU_W_EI_infoLinkSubDetail}  ${e_EI_infoLinkSubDetails}
+    Wait And Click  ${KU_W_HI_okayBtn}
+    # No Illness Button
+    Wait For Element Visibility  ${KU_W_EI_noIllnessBtnTitle}
+    Verify Element And Text  ${KU_W_EI_noIllnessBtnTitle}  ${e_EI_noIllnessBtnTitle}
+    Verify Element And Text  ${KU_W_EI_noIllnessBtnSubTitle}  ${e_EI_noIllnessBtnSubTitle}
+    Verify Page Contains Image  ${KU_W_EI_noIllnessBtnImg}
+    # Illness Button
+    Wait For Element Visibility  ${KU_W_EI_illnessBtnTitle}
+    Verify Element And Text  ${KU_W_EI_illnessBtnTitle}  ${e_EI_illnessBtnTitle}
+    Verify Element And Text  ${KU_W_EI_illnessBtnSubTitle}  ${e_EI_illnessBtnSubTitle}
+    Verify Page Contains Image  ${KU_W_EI_illnessBtnImg}
+    Click Element  ${KU_W_EI_illnessBtnTitle}
+    Existing Illness Details
+    Sleep  1s
+    Click Element  ${KU_W_EI_noIllnessBtnTitle}
+
+    # Contact Details
+    Log To Console  Contact Details
+    Wait For Element Visibility  ${KU_W_CD_contactDetailsSubTitle}
+    Verify Element And Text  ${KU_W_CD_contactDetailsTitle}  ${e_CD_contactDetailsTitle}
+    Verify Element And Text  ${KU_W_CD_contactDetailsSubTitle}  ${e_CD_contactDetailsSubTitle}
+
 
 
 
@@ -108,7 +145,6 @@ Verify City Name And Count Of Hospitals
 Verify Presence Of List Of Hospitals
     # Get list count
     ${hospitalListCount} =  Get Element Count  xpath=//div[@class='b-add-ciy__container__cities-row__text b-add-ciy__container__cashless-hsopital-number']
-    Log To Console  ${hospitalListCount}
     # Iterate and verify all fund house details 
     FOR  ${i}  IN RANGE  1  ${hospitalListCount}+1
         Wait Scroll And Click Element  xpath=(//div[@class='b-add-ciy__container__cities-row__text b-add-ciy__container__cashless-hsopital-number'])[${i}]
@@ -123,10 +159,10 @@ Verify Policy Details On Landing Screen
     Verify Element And Text  ${KU_W_BYC_noRentPolicyDesc}  ${e_BYC_noRentPolicyDesc} 
     Verify Element And Text  ${KU_W_BYC_noTreatmentPolicy}  ${e_BYC_noTreatmentPolicy}
     Verify Element And Text  ${KU_W_BYC_noTreatmentPolicyDesc}  ${e_BYC_noTreatmentPolicyDesc}
-    Verify Page Contains Image   ${KU_W_BYC_noTreatmentImage}
+    Verify Page Contains Image  ${KU_W_BYC_noTreatmentImage}
     Verify Element And Text  ${KU_W_BYC_noCoPaymentPolicy}  ${e_BYC_noCoPaymentPolicy}
     Verify Element And Text  ${KU_W_BYC_noCoPaymentPolicyDesc}  ${e_BYC_noCoPaymentPolicyDesc}
-    Verify Page Contains Image   ${KU_W_BYC_noCopaymentImage}
+    Verify Page Contains Image  ${KU_W_BYC_noCopaymentImage}
     Verify Element And Text  ${KU_W_BYC_waitingPeriodPolicy}  ${e_BYC_waitingPeriodPolicy}
     Verify Element And Text  ${KU_W_BYC_waitingPeriodPolicyDesc}  ${e_BYC_waitingPeriodPolicyDesc}
     Verify Page Contains Image  ${KU_W_BYC_waitingPeriodImage}
@@ -143,7 +179,7 @@ Verify Policy Details On Popup
     Verify Element And Text  ${KU_W_BYC_supportPolicy}  ${e_BYC_supportPolicy}
     Verify Element And Text  ${KU_W_BYC_supportPolicyDesc}  ${e_BYC_supportPolicyDesc}
     Verify Page Contains Element  ${KU_W_BYC_supportPolicyImage}
-    Wait Scroll And Click Element  ${KU_W_BYC_gotItPopupBtn}
+    Wait Scroll And Click Element  ${KU_W_HI_gotItPopupBtn}
     
 Verify FAQ questions
     # Question 1
@@ -229,3 +265,21 @@ Verify Illness List Details
     @{illness_list} =  Get WebElements  ${KU_W_GE_illnessPointers}
     # Validation of Fund Houses List on the first column
     Compare Lists  ${illness_list}  ${e_GE_illnessList}
+
+Existing Illness Details
+    Verify Element And Text  ${KU_W_EI_declareIllnessTitle}  ${e_EI_declareIllnessTitle}
+    Verify Element And Text  ${KU_W_EI_declareIllnessSubTitle}  ${e_EI_declareIllnessSubTitle}
+    Verify Element And Text  ${KU_W_EI_noIllnessBtnTitle}  ${e_EI_userIllnessTitle}
+    Wait And Click  ${KU_W_EI_addBtn}
+    Verify Element And Text  ${KU_W_EI_applicantIllnessTitle}  ${e_EI_applicantlllnessTitle}
+    Verify Element And Text  ${KU_W_EI_applicantIllnessDesc1}  ${e_EI_applicantlllnessDesc1}
+    Verify Element And Text  ${KU_W_EI_applicantIllnessDesc2}  ${e_EI_applicantlllnessDesc2}
+    Click Element  ${KU_W_EI_generalExclusionLink}
+    Verify Element And Text  ${KU_W_EI_generalExclusionPopupTitle}  ${e_EI_generalExclusionPopupTitle}
+    Verify Illness List Details
+    Wait Scroll And Click Element  ${KU_W_HI_gotItPopupBtn}
+    Click Element  ${KU_W_EI_addIllnessField} 
+    Clear Text Field  ${KU_W_EI_addIllnessField}
+    Input Text  ${KU_W_EI_addIllnessField}  ${e_EI_addIllness}
+    Wait Scroll And Click Element  ${KU_W_HI_doneBtn} 
+    Go Back
