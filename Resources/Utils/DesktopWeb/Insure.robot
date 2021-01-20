@@ -6,7 +6,8 @@ Library     SeleniumLibrary
 
 Verify PreLogin Insure Page
     Click Element  ${KU_W_insureLink}
-    Run Keyword If    '${ENV}' == '${e_prod}'  Verify Login And Signup Link
+    ${isLoginButtonVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_login}
+    Run Keyword If   ${isLoginButtonVisible}  Verify Login And Signup Link
     ...    ELSE  Log To Console  Continue
     Wait For Element Visibility  ${KU_W_insureHeaderTitle}  
     Verify Element And Text  ${KU_W_insureHeaderTitle}  ${e_insure_headerTitleText} 
@@ -15,7 +16,8 @@ Verify PreLogin Insure Page
     Wait For Element Visibility  ${KU_W_insure_checkPremiumBtn1}
     Sleep   1s
     Click Button  ${KU_W_insure_checkPremiumBtn1} 
-    Run Keyword If    '${ENV}' == '${e_prod}'  Verify Premium Popup  ${KU_W_insure_checkPremiumBtn1}
+    ${isLoginBtnVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_login}
+    Run Keyword If   ${isLoginBtnVisible}  Verify Premium Popup  ${KU_W_insure_checkPremiumBtn1}
     ...    ELSE  Verify Missing PAN Page
     Wait For Element Visibility  ${KU_W_insure_costDetailsHeaderTitle}     
     Scroll Untill View  ${KU_W_insure_costDetailsHeaderTitle}

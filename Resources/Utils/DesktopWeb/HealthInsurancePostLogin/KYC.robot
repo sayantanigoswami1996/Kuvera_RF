@@ -5,7 +5,6 @@ Library   SeleniumLibrary
 *** Keywords ***
 
 Verify Fill In Of KYC Form Details
-    Verify PostLogin Account Creation 
     Wait For Element Visibility  ${KU_W_KYC_startBtn}
     Click Element  ${KU_W_KYC_startBtn}
     Form Details Page
@@ -36,15 +35,15 @@ Form Details Page
     Wait Scroll And Click Element  ${KU_W_KYC_address2Field}
     Input Text  ${KU_W_KYC_address2Field}  ${e_KYC_address2Field}
     Wait Scroll And Click Element  ${KU_W_KYC_cityField}
-    Input Text  ${KU_W_KYC_cityField}  ${e_KYC_cityField}
-    Wait Scroll And Click Element  ${KU_W_KYC_pincodeField}
-    Input Text  ${KU_W_KYC_pincodeField}  ${e_KYC_pincodeField}
+    Input Text  ${KU_W_KYC_cityField}  ${e_HI_cityField}
+    Wait Scroll And Click Element  ${KU_W_HI_pincodeField} 
+    Input Text  ${KU_W_HI_pincodeField}   ${e_HI_pincodeField}
     Click Element  ${KU_W_KYC_countryField}
     Input Text  ${KU_W_KYC_countrySearchBar}  ${e_KYC_countryField}
     Click Element  ${KU_W_KYC_countryDropdownList}
     Wait Scroll And Click Element  ${KU_W_KYC_stateField} 
-    Input Text  ${KU_W_KYC_stateField}  ${e_KYC_stateField}
-    Click Element  ${KU_W_KYC_stateDropdownList} 
+    Input Text  ${KU_W_KYC_stateField}  ${e_HI_stateField} 
+    Click Element  ${KU_W_HI_state_cityDropdownList}
     Wait Scroll And Click Element  ${KU_W_KYC_gender}
     Wait Scroll And Click Element  ${KU_W_KYC_maritalStatus}
     Wait Scroll And Click Element  ${KU_W_KYC_taxReturnFiling}
@@ -60,7 +59,6 @@ Form Details Page
 
 Add Signature
     Mouse Over  ${KU_W_KYC_canvasSpace}
-    Sleep  4s
     Click Element At Coordinates  ${KU_W_KYC_canvasSpace}  400  226
     Drag And Drop By Offset  ${KU_W_KYC_canvasSpace}  200  100
     Click Element At Coordinates  ${KU_W_KYC_canvasSpace}  250  140

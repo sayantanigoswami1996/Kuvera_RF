@@ -12,10 +12,7 @@ ${e_KYC_mobileNumLabel} =  MOBILE
 ${e_KYC_mobileNumField} =  9110880017 
 ${e_KYC_address1Field} =  Sri Lakshminarayana Mansion
 ${e_KYC_address2Field} =  Tata Silk Farm,Jayanagar
-${e_KYC_cityField} =  Bengaluru
-${e_KYC_stateField} =  Karnataka
 ${e_KYC_countryField} =  India
-${e_KYC_pincodeField} =  560004
 ${e_KYC_addSignatureSubTitle1} =  CAMS requires your signature to setup your investment account with CAMS serviced fund houses.
 ${e_KYC_addSignatureSubTitle2} =  Use a mouse or your finger to draw a reasonable likeness of your signature.
 ${e_KYC_signtaure} =  Moolya
@@ -40,12 +37,10 @@ ${KU_W_KYC_residentIndividual} =  xpath=//a[contains(text(),'Resident Individual
 ${KU_W_KYC_address1Field} =  xpath=//input[@id='address-line-1']
 ${KU_W_KYC_address2Field} =  xpath=//input[@id='address-line-2']
 ${KU_W_KYC_cityField} =  xpath=//input[@id='city']
-${KU_W_KYC_pincodeField} =  xpath=//input[@id='pincode']
 ${KU_W_KYC_countryField} =  xpath=//div[@id='country_list']
 ${KU_W_KYC_countrySearchBar} =  xpath=(//input[@aria-label='Search for option'])[2]
 ${KU_W_KYC_countryDropdownList} =  xpath=(//ul[@class='dropdown-menu']//li)[2]
 ${KU_W_KYC_stateField} =  xpath=(//input[@aria-label='Search for option'])[3]
-${KU_W_KYC_stateDropdownList} =  xpath=(//ul[@class='dropdown-menu']//li)[1]
 ${KU_W_KYC_gender} =  xpath=//div[@emitvalue='F']
 ${KU_W_KYC_maritalStatus} =  xpath=(//div[@emitvalue='N'])[1]
 ${KU_W_KYC_taxReturnFiling} =  xpath=(//div[@emitvalue='N'])[2]

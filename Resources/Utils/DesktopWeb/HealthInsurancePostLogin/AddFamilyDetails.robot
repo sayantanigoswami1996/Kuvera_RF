@@ -52,11 +52,11 @@ Verify PostLogin Add Family Details
     Wait And Click  ${KU_W_HI_okayBtn}
     Verify City Name And Count Of Hospitals
     Verify Presence Of List Of Hospitals
-    Click Element  ${KU_W_SC_OtherAddBtn}
-    Click Element  ${KU_W_SC_searchBox}
+    Wait And Click  ${KU_W_SC_OtherAddBtn}
+    Wait And Click  ${KU_W_SC_searchBox}
     Input Text  ${KU_W_SC_searchBox}  ${e_SC_searchedCityName}
-    Click Element  ${KU_W_SC_searchedCity}
-    Click Element  ${KU_W_SC_viewPlanBtn} 
+    Wait And Click  ${KU_W_SC_searchedCity}
+    Wait And Click  ${KU_W_SC_viewPlanBtn} 
 
     # Build Your Coverage
     Log To Console  Build Your Coverage
@@ -89,7 +89,7 @@ Verify PostLogin Add Family Details
     Verify Element And Text  ${KU_W_HI_pageTitle}  ${e_GE_generalExclusionTitle}
     Verify Element And Text  ${KU_W_GE_generalExclusionSubTitle}  ${e_GE_generalExclusionSubTitle}
     Verify Illness List Details
-    Click Image  ${KU_W_GE_checkBox}
+    Click Image  ${KU_W_HI_checkBox}
     Wait Scroll And Click Element  ${KU_W_HI_proceedBtn}
 
     # Existing Illness
@@ -122,11 +122,18 @@ Verify PostLogin Add Family Details
     Wait For Element Visibility  ${KU_W_CD_contactDetailsSubTitle}
     Verify Element And Text  ${KU_W_CD_contactDetailsTitle}  ${e_CD_contactDetailsTitle}
     Verify Element And Text  ${KU_W_CD_contactDetailsSubTitle}  ${e_CD_contactDetailsSubTitle}
-
-
-
-
-
+    Fill In Contact Details Form
+      
+    # Add Nominee
+    Log To Console  Add Nominee
+    Wait For Element Visibility  ${KU_W_AN_baseIndemnityPolicy}
+    Verify Element And Text  ${KU_W_AN_addNomineeTitle}  ${e_AN_addNomineeTitle}
+    Click Element  ${KU_W_AN_baseIndemnityPolicy}
+    Wait For Element Visibility  ${KU_W_AN_nomineeDetailsTitle}
+    Verify Element And Text  ${KU_W_AN_nomineeDetailsTitle}  ${e_AN_nomineeDetailsTitle}
+    Verify Element And Text  ${KU_W_AN_nomineeDetailsSubTitle}  ${e_AN_nomineeDetailsSubTitle}
+    Fill In Nominee Details Form
+    Wait And Click  ${KU_W_HI_proceedBtn}
 
 Verify City Name And Count Of Hospitals
     # City Name
@@ -229,6 +236,9 @@ Verify Health Protect Details
     Verify Element And Text  ${KU_W_BYC_superCoverBaseValue}  ${e_BYC_superCoverBaseValue}
     Verify Element And Text  ${KU_W_BYC_superCoverPremium}  ${e_HI_premiumText}
     Verify Element And Text  ${KU_W_BYC_superCoverPremiumVal}  ${e_HI_defaultPremiumValue} 
+    Click Element  ${KU_W_BYC_superCoverDropdown}
+    Click Element  ${KU_W_BYC_superCoverTopUpValue}
+    Verify Element And Text  ${KU_W_BYC_superCoverPremiumVal}  ${e_BYC_topUpValue}
     # Sum Covered
     Verify Element And Text  ${KU_W_BYC_sumCoveredTitle}  ${e_BYC_sumCoveredTitle}
     Verify Element And Text  ${KU_W_BYC_sumCoveredSubTitle}  ${e_BYC_sumCoveredSubTitle}
@@ -283,3 +293,30 @@ Existing Illness Details
     Input Text  ${KU_W_EI_addIllnessField}  ${e_EI_addIllness}
     Wait Scroll And Click Element  ${KU_W_HI_doneBtn} 
     Go Back
+
+Fill In Contact Details Form
+    Verify Element And Text  ${KU_W_HI_phoneNum_usernameLabel}   ${e_CD_phoneNumLabel}
+    Verify Element And Text  ${KU_W_CD_addressLabel}  ${e_CD_addressLabel}
+    Click Element  ${KU_W_CD_addressField}
+    Input Text  ${KU_W_CD_addressField}  ${e_CD_address}
+    Verify Element And Text  ${KU_W_CD_stateLabel}  ${e_CD_stateLabel}
+    Wait Scroll And Click Element  ${KU_W_CD_stateSearchBar}
+    Input Text  ${KU_W_CD_stateSearchBar}  ${e_HI_stateField}
+    Click Element  ${KU_W_HI_state_cityDropdownList}
+    Wait Scroll And Click Element  ${KU_W_CD_citySearchBar}
+    Input Text  ${KU_W_CD_citySearchBar}  ${e_HI_cityField} 
+    Click Element  ${KU_W_HI_state_cityDropdownList}
+    Verify Element And Text  ${KU_W_CD_cityLabel}  ${e_CD_cityLabel} 
+    Wait For Element Visibility  ${KU_W_HI_pincodeField} 
+    Input Text  ${KU_W_HI_pincodeField}   ${e_HI_pincodeField}
+    Wait Scroll And Click Element  ${KU_W_HI_proceedBtn}
+
+Fill In Nominee Details Form
+    Verify Element And Text  ${KU_W_HI_phoneNum_usernameLabel}  ${e_AN_userNameLabel}
+    Wait And Click  ${KU_W_AN_userName}
+    Input Text  ${KU_W_AN_userName}  ${e_AN_userName}
+    Verify Element And Text  ${KU_W_AN_realtionshipLabel}  ${e_AN_relationshipLabel}
+    Click Image  ${KU_W_HI_dropdownIndicator}
+    Click Element  ${KU_W_AN_husband}
+    Click Image  ${KU_W_HI_checkBox}
+    Wait And Click  ${KU_W_HI_doneBtn}

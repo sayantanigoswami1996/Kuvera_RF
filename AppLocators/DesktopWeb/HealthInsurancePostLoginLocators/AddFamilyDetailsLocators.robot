@@ -58,8 +58,9 @@ ${e_BYC_indemnityPremiumValue} =  ₹5,380.5/Y
 ${e_BYC_superCoverBaseValue} =  None
 ${e_BYC_sumCoveredTitle} =  Sum covered 
 ${e_BYC_sumCoveredSubTitle} =  Total premium
-${e_BYC_sumCoveredValue} =  ₹3 L
-${e_BYC_totalPremiumValue} =  ₹5,380/Y
+${e_BYC_sumCoveredValue} =  ₹10 L
+${e_BYC_totalPremiumValue} =  ₹6,457/Y
+${e_BYC_topUpValue} =  ₹1,077/Y
 ${e_BYC_endorsementLink} =  Endorsement wording                   
 ${e_BYC_policyWordingLink} =  Policy wording                  
 ${e_BYC_generalExclusionLink} =  General exclusions                    
@@ -73,7 +74,7 @@ ${e_DCC_dailyCashCoverageDesc2} =  No bills submission needed.
 ${e_DCC_dailyCashCoverageDesc3} =  Money credited from 2nd day onwards.  
 ${e_DCC_selectDailyCash} =  Select daily cash 
 ${e_DCC_2KPremiumAmount} =  ₹847/Y
-${e_DCC_totalPremiumAmount} =  ₹6,227.5/Y
+${e_DCC_totalPremiumAmount} =  ₹7,304.5/Y
 
 # General Exclusions
 ${e_GE_generalExclusionTitle} =  General exclusions
@@ -101,6 +102,21 @@ ${e_EI_generalExclusionPopupTitle} =   Policy does not apply if you have any of 
 # Contact Details
 ${e_CD_contactDetailsTitle} =  Confirm contact details
 ${e_CD_contactDetailsSubTitle} =  Helps insurer to connect with you and mail physical policy
+${e_CD_phoneNumLabel} =  Phone number
+${e_CD_addressLabel} =  Address
+${e_CD_address} =  Sri Lakshminarayana Mansion Tata Silk Farm,Jayanagar
+${e_CD_pincodeLabel} =  Pincode
+${e_CD_stateLabel} =  State
+${e_CD_cityLabel} =  City
+
+# Add Nominee
+${e_AN_addNomineeTitle} =  Add nominee for each policy
+${e_AN_nomineeDetailsTitle} =  Add nominee details for
+${e_AN_nomineeDetailsSubTitle} =  Base Indemnity cover
+${e_AN_userName} =  Tester
+${e_AN_userNameLabel} =  Full Name
+${e_AN_relationshipLabel} =  Relationship
+
 # Application Locator 'KU_<locatorName>'   
 # Kuvera :: Wealth Management Simplified
 # Add Family Member
@@ -185,6 +201,8 @@ ${KU_W_BYC_indemnityPremium} =  xpath=(//div[@class='b-insurance-health__descrip
 ${KU_W_BYC_infoLinkDesc} =  xpath=//span[contains(@class,'has-tooltip v-tooltip-open')]
 ${KU_W_BYC_superCoverInfoLink} =  xpath=(//img[@class='b-order-summary__info-ques-icon'])[2]
 ${KU_W_BYC_superCoverBaseValue} =  xpath=//div[contains(text(),'None')]
+${KU_W_BYC_superCoverTopUpValue} =  xpath=//div[@class='options ku-standard-card options-align-undefined']//div[2]
+${KU_W_BYC_superCoverDropdown} =  xpath=(//div[@class='standard-select-container b-health-plan-detail__dropdown'])[2]
 ${KU_W_BYC_superCoverPremium} =  xpath=(//div[@class='b-insurance-health__description text-right'])[2]
 ${KU_W_BYC_indemnityPremiumVal} =  xpath=(//div[@class='b-health-plan-detail__text'])[1]
 ${KU_W_BYC_superCoverPremiumVal} =  xpath=(//div[@class='b-health-plan-detail__text'])[2]
@@ -219,7 +237,6 @@ ${KU_W_DCC_totalPremimVal} =  xpath=//div[@class='b-add-on__total-premuim--text'
 # General Exclusions
 ${KU_W_GE_generalExclusionSubTitle} =  xpath=//div[@class='b-insurance__description b-add-members-details__subheading']
 ${KU_W_GE_illnessPointers} =  xpath=//li[@class='b-insurance__body-dark b-check-illness__list']
-${KU_W_GE_checkBox} =  xpath=//img[@class='check-icon']
 
 # Existing Ilness
 ${KU_W_EI_existingIllnessTitle} =  xpath=//div[@class='b-insurance__title b-existing-illness__title']
@@ -247,3 +264,19 @@ ${KU_W_EI_applicantIllnessDesc2} =  xpath=(//div[@class='b-insurance__descriptio
 # Contact Details
 ${KU_W_CD_contactDetailsTitle} =  xpath=//div[@class='b-insurance__title b-primary-applicant-left__title']
 ${KU_W_CD_contactDetailsSubTitle} =  xpath=//div[@class='b-insurance__description']
+${KU_W_CD_addressLabel} =  xpath=(//label[@class='b-text-field__label'])[2]
+${KU_W_CD_addressField} =  xpath=//input[@id='address']
+${KU_W_CD_pincodeLabel} =  xpath=(//label[@class='b-text-field__label'])[3]
+${KU_W_CD_stateLabel} =  xpath=(//div[@class='b-systematic-subheading__title'])[1]
+${KU_W_CD_cityLabel} =  xpath=(//div[@class='b-systematic-subheading__title'])[2]
+${KU_W_CD_stateSearchBar} =  xpath=(//input[@aria-label='Search for option'])[1]
+${KU_W_CD_citySearchBar} =  xpath=(//input[@aria-label='Search for option'])[2]
+
+# Add Nominee
+${KU_W_AN_addNomineeTitle} =  xpath=//div[@class='b-insurance__title b-add-nominee-details-comp__title']
+${KU_W_AN_baseIndemnityPolicy} =  xpath=(//div[@class='b-item__row__image'])[1]
+${KU_W_AN_nomineeDetailsTitle} =  xpath=//div[@class='b-insurance__title b-nominee-details__title']
+${KU_W_AN_nomineeDetailsSubTitle} =  xpath=//div[@class='b-insurance__subtitle--dark']
+${KU_W_AN_userName} =  xpath=//input[@placeholder='Add Nominee']
+${KU_W_AN_realtionshipLabel} =  xpath=//div[@class='b-health-input-details__relationship--label']
+${KU_W_AN_husband} =  xpath=//div[contains(text(),'Husband')]
