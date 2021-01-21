@@ -1,5 +1,6 @@
 *** Settings ***
 
+# Import Pages for Tests
 Resource    ../../Resources/Utils/DesktopWeb/Common.robot
 Resource    ../../Resources/Utils/DesktopWeb/LandingPage.robot
 Resource    ../../Resources/Utils/DesktopWeb/Login.robot
@@ -10,12 +11,18 @@ Resource    ../../Resources/Utils/DesktopWeb/Invest/GiltFunds.robot
 Resource    ../../Resources/Utils/DesktopWeb/Invest/DigitalGold.robot
 Resource    ../../Resources/Utils/DesktopWeb/Invest/EquityIndex.robot
 Resource    ../../Resources/Utils/DesktopWeb/Invest/SectorFunds.robot
-Resource    ../../Resources/Utils/DesktopWeb/Invest/TopGainers.robot
-Resource    ../../Resources/Utils/DesktopWeb/Invest/USETF.robot
-Resource    ../../Resources/Utils/DesktopWeb/Invest/ValueFunds.robot
 Resource    ../../Resources/Utils/DesktopWeb/Invest/BankPSUBonds.robot
 Resource    ../../Resources/Utils/DesktopWeb/Invest/ELSSTaxSaver.robot
+Resource    ../../Resources/Utils/DesktopWeb/Invest/Crypto.robot
+Resource    ../../Resources/Utils/DesktopWeb/Invest/FD.robot
+Resource    ../../Resources/Utils/DesktopWeb/Invest/USETF.robot
+Resource    ../../Resources/Utils/DesktopWeb/Invest/ValueFunds.robot
+Resource    ../../Resources/Utils/DesktopWeb/Invest/52WkHighIndia.robot
+Resource    ../../Resources/Utils/DesktopWeb/Invest/52WkHighUS.robot
 Resource    ../../Resources/Utils/DesktopWeb/Invest/UltraShort.robot
+Resource    ../../Resources/Utils/DesktopWeb/Invest/MutualFunds.robot
+Resource    ../../Resources/Utils/DesktopWeb/Invest/Stocks.robot
+Resource    ../../Resources/Utils/DesktopWeb/Invest/USStocks.robot
 Resource    ../../Resources/Utils/DesktopWeb/Loans.robot
 Resource    ../../Resources/Utils/DesktopWeb/Insure.robot
 Resource    ../../Resources/Utils/DesktopWeb/Remit.robot
@@ -34,3 +41,5 @@ Resource    ../../Resources/Utils/DesktopWeb/Features/ManageAccount.robot
 Resource    ../../Resources/Utils/DesktopWeb/Features/TaxHarvesting.robot
 Resource    ../../Resources/Utils/DesktopWeb/Features/SaveTaxes.robot
 Resource    ../../Resources/Utils/DesktopWeb/Features/Consolidate.robot
+Resource    ../../Resources/Utils/DesktopWeb/Footer.robot
+Resource    ../../Resources/Utils/DesktopWeb/FundHouse.robot

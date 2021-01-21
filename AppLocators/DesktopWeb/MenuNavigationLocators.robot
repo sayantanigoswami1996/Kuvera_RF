@@ -108,7 +108,7 @@ ${e_feature_sg2_goalDuration} =  5
 ${e_feature_sg2_investUpfront} =  1000
 # Goal - Save Tax
 ${e_feature_sg3_userAge} =  25
-${e_feature_sg3_montlyInvest} =  3000
+${e_feature_sg3_montlyInvest} =  30000
 ${e_feature_sg3_goalDuration} =  7
 ${e_feature_sg3_investUpfront} =  500
 # Goal - Retire Easy
@@ -162,7 +162,7 @@ ${e_feature_addManagerBtnText} =  Add  manager
 
 # Feature-Tax Harvesting Navigation Page Variables
 ${e_feature_th_subTitleText} =  Minimise your long term tax impact by realising up to ₹1 Lakh of Long Term Capital Gain (LTCG) every financial year with no tax.
-${e_feature_th_subscribeBtnText} =  Subscribe 499 / FY
+${e_feature_th_subscribeBtnText} =  Activate 499 / FY
 ${e_feature_whatIsTHTitleText} =  What is Tax Harvesting?
 ${e_feature_th_definitionText} =  Long-term gains from equity funds are taxed at 10%. Tax Harvesting is a technique that reduces this impact. It utilises the ₹1 Lakh annual LTCG exemption by selling and buying back part of your investment such that you “realise” gains every year. Learn more
 ${e_feature_th_learnMoreLnkTxt} =  Learn more
@@ -192,7 +192,7 @@ ${e_feature_th_startHarvestText} =  The time is ripe! Start harvesting today.
 ${e_feature_st_screenTitleText} =  Top rated tax saving funds  
 ${e_feature_st_screenContentText} =  Funds that feature in “Best Tax Saving Mutual Fund” lists across the web.
 ${e_feature_st_taxHeadingText} =  Save Taxes.  
-${e_feature_st_taxDescText} =  Tax Saving ELSS Mutual Funds can help save upto ₹ 46,350 in taxes 
+${e_feature_st_taxDescText} =  Tax Saving ELSS Mutual Funds can help save upto ₹46,350 in taxes 
 ${e_feature_st_commissionHeadingText} =  Save Commissions.  
 ${e_feature_st_commissionDescText} =  We are a Direct Plan platform. You save upto 1.5% per year in commission
 ${e_feature_st_feesHeadingText} =  Save Fees. 
@@ -382,14 +382,14 @@ ${KU_W_feature_goalsList} =  xpath=//*[@class='cards']/a/p
 ${KU_W_feature_sg_screenTitle} =  xpath=//*[@class='goals-index col-sm-4']/h2
 ${KU_W_feature_sg_screenSubTitle} =  xpath=//*[@class='goals-index col-sm-4']/h1
 ${KU_W_feature_sg_content} =  xpath=//p[@class='hidden-xs']
-${KU_W_feature_sg_ownAHome} =  xpath=(//p[@class='card-title'])[1]
-${KU_W_feature_sg_buyACar} =  xpath=(//p[@class='card-title'])[2]
-${KU_W_feature_sg_saveTax} =  xpath=(//p[@class='card-title'])[3]
-${KU_W_feature_sg_retireEasy} =  xpath=(//p[@class='card-title'])[4]
-${KU_W_feature_sg_25thAnniversary} =  xpath=(//p[@class='card-title'])[5]
-${KU_W_feature_sg_foreignVacation} =  xpath=(//p[@class='card-title'])[6]
-${KU_W_feature_sg_educateMyChild} =  xpath=(//p[@class='card-title'])[7]
-${KU_W_feature_sg_createMyOwn} =  xpath=(//p[@class='card-title'])[8]
+${KU_W_feature_sg_ownAHome} =  xpath=//p[contains(text(),'own a home')]
+${KU_W_feature_sg_buyACar} =  xpath=//p[contains(text(),'buy a car')]
+${KU_W_feature_sg_saveTax} =  xpath=//p[contains(text(),'save tax')]
+${KU_W_feature_sg_retireEasy} =  xpath=//p[contains(text(),'retire easy')]
+${KU_W_feature_sg_25thAnniversary} =  xpath=//p[contains(text(),'25th Anniversary')]
+${KU_W_feature_sg_foreignVacation} =  xpath=//*[@class="card set-goal-vacation"]
+${KU_W_feature_sg_educateMyChild} =  xpath=//p[contains(text(),'educate my child')]
+${KU_W_feature_sg_createMyOwn} =  xpath=//p[contains(text(),'create my own')]
 ${KU_W_feature_sg_questionScreen} =  id=title-box
 ${KU_W_feature_sg_titleBoxSection} =  id=p9e7d2f05349193e9421e568b092da688e5010650-container
 ${KU_W_feature_sg_Q_goalName} =  xpath=//*[@id="title-box"]/h2
@@ -412,7 +412,7 @@ ${KU_W_feature_sg_almostDone} =  xpath=//div[@class='risk-profile-heading']/h2
 ${KU_W_feature_sg_married} =  xpath=//p[contains(text(),'MARRIED')]
 ${KU_W_feature_sg_dependents} =  xpath=//p[contains(text(),'DEPENDENTS (KIDS/ELDERS)')]
 ${KU_W_feature_sg_stableIncome} =  xpath=//p[contains(text(),'STABLE INCOME')]
-${KU_W_feature_sg_ownAHome} =  xpath=//p[contains(text(),'OWN A HOME')]
+${KU_W_feature_sg_p_ownAHome} =  xpath=//p[contains(text(),'OWN A HOME')]
 ${KU_W_feature_sg_haveALoan} =  xpath=//p[contains(text(),'HAVE A LOAN')]
 ${KU_W_feature_sg_haveFds} =  xpath=//p[contains(text(),'HAVE FDs')]
 ${KU_W_feature_sg_haveEquityInvestments} =  xpath=//p[contains(text(),'HAVE EQUITY INVESTMENTS')]
@@ -521,7 +521,7 @@ ${KU_W_feature_cd_pageSubHeader} =  xpath=//header[@class='page-heading']/p
 ${KU_W_feature_setAGoalTitle} =  xpath=(//div[contains(@class,'why-invest-text')]/h4)[1]
 ${KU_W_feature_setAGoalSubTitle} =  xpath=(//div[contains(@class,'why-invest-text')]/h3)[1]
 ${KU_W_feature_setAGoalDesc} =  xpath=//div[@class='set-a-goal-text']/p
-${KU_W_feature_goalBasedInvestingLink} =  xpath=//a[contains(text(),'More about goal-based investing')]
+${KU_W_feature_goalBasedInvestingLink} =  xpath=//div[@class='set-a-goal-text']/p/a
 ${KU_W_feature_setAGoalBtn} =  xpath=(//button[@class='btn in-btn'])[1]
 ${KU_W_feature_saveTaxGoalTitle} =  xpath=(//div[contains(@class,'why-invest-text')]/h4)[2]
 ${KU_W_feature_saveTaxGoalSubTitle} =  xpath=(//div[contains(@class,'why-invest-text')]/h3)[2]

@@ -5,7 +5,7 @@ ${e_invest_digiGold_screenText} =  Buy 24K 99.9% pure digital gold - easily and 
 ${e_invest_digiGold_purityHeadingText} =  Highest purity.
 ${e_invest_digiGold_purityDescText} =  24K 99.9% pure gold.
 ${e_invest_digiGold_100SecureHeadingText} =  100% secure.
-${e_invest_digiGold_100SecureDescText} =  Secured in bank grade lockers by Brinks, a global leader in asset security.
+${e_invest_digiGold_100SecureDescText} =  Secured in bank grade lockers by Sequel, a global leader in asset security.
 ${e_invest_digiGold_fullyLiquidText} =  Fully liquid.
 ${e_invest_digiGold_fullyLiquidDescText} =  Sell anytime! Receive the amount directly in your bank account.
 ${e_invest_digiGold_livePricesText} =  Live prices.
@@ -23,8 +23,7 @@ ${e_invest_addGoldTitleText} =   Already Own Gold? Track it!
 ${e_invest_addGoldDescText} =  Get the full picture of your Gold Portfolio by adding & tracking gold you’ve bought outside of Kuvera. 
 ${e_invest_addGoldBtnText} =  Add gold you already own        
 ${e_invest_faqTitleText} =  Questions? We’re happy to help!
-${e_invest_faqBtnText} =  View FAQs
-${e_invest_faqBotText} =  Search our help articles ...      
+${e_invest_faqBtnText} =  View FAQs      
 ${e_invest_buyGoldTitleText} =  Buy
 ${e_invest_goldRateTitleText} =  Live Buy Rate
 ${e_invest_purityTitleText} =  Purity   
@@ -44,7 +43,7 @@ ${e_invest_SIPTitleText} =  Start gold SIP with Kuvera
 ${e_invest_SIP_loginTitleText} =  Log in to start gold SIP.
 ${e_invest_trackTitleText} =  Add gold purchased outside Kuvera 
 ${e_invest_track_loginTitleText} =  Log in to add gold.
-
+${e_invest_faqbotQA1} =  How do I buy Gold on Kuvera?
 
 # Application Locator 'KU_<locatorName>'
 # Digital Gold Navigation Page
@@ -102,7 +101,7 @@ ${KU_W_dg_gold_login} =  xpath=//button[@class='button-primary b-sell-gold__sell
 ${KU_W_dg_gold_signup} =  xpath=//span[@class='b-sell-gold__sign-up-link--widget']
 ${KU_W_dg_gold_noAcntMsg} =  xpath=//div[@class='b-sell-gold__sign-up-text-container--widget']/span[1]
 ${KU_W_dg_goldValue} =  xpath=//div[@class='b-buy-gold__other-value b-buy-gold__text-visible b-buy-gold__other-value--widget']
-${KU_W_dg_SIPTab} =  xpath=(//*[@class='gold-widget-tab-text'])[3]
+${KU_W_dg_SIPTab} =  xpath=//div[contains(text(),'Start SIP')]
 ${KU_W_dg_SIP_Track_Heading} =  xpath=//div[@class='b-log-gold__heading-widget']
 ${KU_W_dg_loginTitle} =  xpath=//div[@class='b-sell-gold__widget-no-logged-sell-text']
-${KU_W_dg_trackTab} =  xpath=(//*[@class='gold-widget-tab-text'])[4]
+${KU_W_dg_trackTab} =  xpath=//div[@class='gold-widget-tab-text'][normalize-space()='Track']
