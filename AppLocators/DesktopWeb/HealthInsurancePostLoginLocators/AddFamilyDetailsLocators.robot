@@ -127,13 +127,33 @@ ${e_CoverageDets_dailyAllowance} =  Daily allowance\n₹2 K/day
 ${e_CoverageDets_coveringTitle} =  Covering
 ${e_CoverageDets_coveringSubTitle} =  Self (27Y) + 1 more
 ${e_CoverageDets_applicantDetails} =  Bhavani Sruti Somaraju Venkata Naga\n27Y - (1993-08-13) 
-${e_CoverageDets_familyMemberDetails} =  User
+${e_CoverageDets_familyMemberDetails} =  Moolya\n1Y - (2019-08-07)
 ${e_CoverageDets_nomineesTitle} =  Nominees
-${e_CoverageDets_nominee_userDetail1} =  Base indemnity - User (daughter)
-${e_CoverageDets_nominee_userDetail2} =  Base indemnity - User (daughter)
-${e_CoverageDets_nominee_userDetail3} =  Base indemnity - User (daughter)
+${e_CoverageDets_nominee_userDetail1} =  Base indemnity - Tester (husband)
+${e_CoverageDets_nominee_userDetail2} =  Super top up - Tester (husband)
+${e_CoverageDets_nominee_userDetail3} =  Daily cash - Tester (husband)
 ${e_CoverageDets_policyDocumentsTitle} =  Policy documents
 ${e_CoverageDets_infoBox} =  If you’re not satisfied with your policy then you can cancel it within a 15 day lookout period.
+
+# Select Payment Mode
+${e_SPM_paymentModeTitle} =  Select Payment Mode
+${e_SPM_paymentModeSubTitle} =  Choose how you’d like to pay for your Policy
+${e_SPM_netPremium} =  Net premium\n₹7,305
+${e_SPM_GST} =  GST at 18%\n₹1,315
+${e_SPM_totalPayable} =  Total Payable\n₹8,620
+${e_SPM_UPILabel} =  UPI
+${e_SPM_debitCardLabel} =  Debit Card
+${e_SPM_netBankingLabel} =  Net Banking
+${e_SPM_creditCardLabel} =  Credit Card
+${e_SPM_merchantName} =  KUVERA
+${e_SPM_merchantDesc} =  Transfer payment for health insurance
+${e_SPM_payViaNetBanking} =  PAY VIA NETBANKING
+${e_SPM_bankName} =  State Bank of India
+${e_SPM_razorPayTitle} =  Welcome to Razorpay Software Private Ltd Bank
+${e_SPM_title} =  Razorpay Bank
+# Health Protect
+${e_HP_pagetitle} =  Health protect enabled
+${e_HP_pageSubtitle} =  Your certificate of insurance and policy document will be emailed to you.
 # Application Locator 'KU_<locatorName>'   
 # Kuvera :: Wealth Management Simplified
 # Add Family Member
@@ -265,6 +285,8 @@ ${KU_W_EI_illnessBtnImg} =  xpath=(//img[@alt='insurance illness icon'])[3]
 ${KU_W_EI_declareIllnessTitle} =  xpath=//div[@class='b-insurance__title b-declare-illness__title']
 ${KU_W_EI_declareIllnessSubTitle} =  xpath=//div[@class='b-insurance__description b-declare-illness__description']
 ${KU_W_EI_addBtn} =  xpath=(//div[@class='b-item__row__image']//img)[1]
+${KU_W_EI_deleteBtn} =  xpath=//img[@alt='insurance-delete-detail']
+${KU_W_EI_popupOkayBtn} =  xpath=//div[@class='b-confirmation-modal__btn-group--okay']
 ${KU_W_EI_addIllnessField} =  xpath=//input[@placeholder='Add condition']
 ${KU_W_EI_applicantIllnessTitle} =  xpath=//div[@class='b-insurance__title b-applicant-illness__title']
 ${KU_W_EI_generalExclusionLink} =  xpath=//span[@class='b-check-illness__excision-link']
@@ -313,6 +335,38 @@ ${KU_W_CoverageDets_nomineesDropDown} =  xpath=(//img[@class='b-policy-features_
 ${KU_W_CoverageDets_policyDropDown} =  xpath=(//img[@class='b-policy-features__img'])[4]
 ${KU_W_CoverageDets_nomineesTitle} =  xpath=//div[contains(text(),'Nominees')]
 ${KU_W_CoverageDets_coveringTitle} =  xpath=//div[text()='Covering']
-${KU_W_CoverageDets_policyDocumentsTitle} =  xpath=///div[contains(text(),'Policy documents')]
+${KU_W_CoverageDets_policyDocumentsTitle} =  xpath=//div[contains(text(),'Policy documents')]
 ${KU_W_CoverageDets_infoBox} =  xpath=//div[@class='b-insurance__body-dark b-information-box__text']
-${KU_W_CoverageDets_OTP} =  xpath=///input[@class='otp-field touched dirty valid']
+${KU_W_CoverageDets_OTP} =  xpath=//input[@placeholder='Enter OTP here']
+
+# Select Payment Mode
+${KU_W_SPM_paymentModeTitle} =  xpath=//div[@class='d-payment-breakup__heading']
+${KU_W_SPM_paymentModeSubTitle} =  xpath=//div[@class='d-payment-breakup__caption']
+${KU_W_SPM_netPremium} =  xpath=//div[@class='d-payment-breakup__info d-payment-breakup__info--base']
+${KU_W_SPM_GST} =  xpath=//div[@class='d-payment-breakup__info']
+${KU_W_SPM_totalPayable} =  xpath=//div[@class='d-payment-breakup__info d-payment-breakup__info--total']
+${KU_W_SPM_netBankingPaymentMode} =  xpath=(//div[@class='b-payment-modes__payment-mode-row-top'])[3]
+${KU_W_SPM_UPILabel} =  xpath=//div[contains(text(),'UPI')]
+${KU_W_SPM_UPIImg} =  xpath=(//img[@class='b-payment-modes__payment-mode-icon'])[1]
+${KU_W_SPM_debitCardLabel} =  xpath=//div[contains(text(),'Debit Card')]
+${KU_W_SPM_netBankingLabel} =  xpath=//div[contains(text(),'Net Banking')]
+${KU_W_SPM_creditCardLabel} =  xpath=//div[contains(text(),'Credit Card')]
+${KU_W_SPM_debitCardImg} =  xpath=(//img[@class='b-payment-modes__payment-mode-icon'])[2]
+${KU_W_SPM_netBankingImg} =  xpath=(//img[@class='b-payment-modes__payment-mode-icon'])[3]
+${KU_W_SPM_creditCardImg} =  xpath=(//img[@class='b-payment-modes__payment-mode-icon'])[4]
+${KU_W_SPM_payAmtBtn} =  xpath=//button[@class='button-primary']
+${KU_W_SPM_merchantName} =  xpath=//div[@id='merchant-name']
+${KU_W_SPM_merchanteDesc} =  xpath=//div[@id='merchant-desc']
+${KU_W_SPM_SBIBank} =  xpath=//label[@for='bank-radio-SBIN']
+${KU_W_SPM_footerPayBtn} =  xpath=//div[@id='footer']
+${KU_W_SPM_mobile_emailDetails} =  xpath=//button[@id='user-details']
+${KU_W_SPM_payViaNetBanking} =  xpath=//h3[@class='title']
+${KU_W_SPM_netBankingOption} =  xpath=//button[@method='netbanking']
+${KU_W_SPM_razorPayFrame} =  xpath=//iframe[@class='razorpay-checkout-frame']
+${KU_W_SPM_bankName} =  xpath=//button[@id='bank-select']
+${KU_W_SPM_razorPayTitle} =  xpath=//h3[normalize-space()='Welcome to Razorpay Software Private Ltd Bank']
+${KU_W_SPM_razorPaySuccessBtn} =  xpath=//button[contains(text(),'Success')]
+
+# Health Protect
+${KU_W_HP_healthProtectSubTitle} =  xpath=//div[@class='b-health-insurance-confirmation__subtitle']
+${KU_W_HP_successIconImg} =  xpath=//img[@alt='sucess icon']

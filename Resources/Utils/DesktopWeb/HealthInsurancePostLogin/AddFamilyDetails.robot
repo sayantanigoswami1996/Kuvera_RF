@@ -156,11 +156,39 @@ Verify PostLogin Add Family Details
     Verify Cover Plan Summary Details
     # Info Box Text Validation
     Verify Element And Text  ${KU_W_CoverageDets_infoBox}  ${e_CoverageDets_infoBox}
-    Click Element  ${KU_W_HI_confirmOTPBtn} 
-    Wait And Click  ${KU_W_CoverageDets_OTP}
+    Wait Scroll And Click Element  ${KU_W_HI_confirmOTPBtn} 
+    Wait Scroll And Click Element  ${KU_W_CoverageDets_OTP}
     Input Text  ${KU_W_CoverageDets_OTP}  ${e_ca_OTP}
-
-
+    Wait And Click  ${KU_W_ca_submitOTPBtn}
+    
+    # Select Payment Mode
+    Log To Console  Payment Mode
+    Wait For Element Visibility  ${KU_W_SPM_paymentModeSubTitle}
+    Verify Element And Text  ${KU_W_SPM_paymentModeTitle}  ${e_SPM_paymentModeTitle}
+    Verify Element And Text  ${KU_W_SPM_paymentModeSubTitle}  ${e_SPM_paymentModeSubTitle}
+    Wait For Element Visibility  ${KU_W_SPM_netPremium}
+    Verify Element And Text  ${KU_W_SPM_netPremium}  ${e_SPM_netPremium}
+    Wait For Element Visibility  ${KU_W_SPM_GST}
+    Verify Element And Text  ${KU_W_SPM_GST}  ${e_SPM_GST}
+    Wait For Element Visibility  ${KU_W_SPM_totalPayable}
+    Verify Element And Text  ${KU_W_SPM_totalPayable}  ${e_SPM_totalPayable}
+    Verify Element And Text  ${KU_W_SPM_UPILabel}  ${e_SPM_UPILabel} 
+    Verify Page Contains Image  ${KU_W_SPM_UPIImg}
+    Verify Element And Text  ${KU_W_SPM_debitCardLabel}  ${e_SPM_debitCardLabel}
+    Verify Page Contains Image  ${KU_W_SPM_debitCardImg}
+    Verify Element And Text  ${KU_W_SPM_netBankingLabel}  ${e_SPM_netBankingLabel}
+    Verify Page Contains Image  ${KU_W_SPM_netBankingImg}
+    Verify Element And Text  ${KU_W_SPM_creditCardLabel}  ${e_SPM_creditCardLabel} 
+    Verify Page Contains Image  ${KU_W_SPM_creditCardImg}
+    Verify Payment With Net Banking
+    
+    #Health Protect Enabled
+    Log To Console  Health Protect
+    Wait For Element Visibility  ${KU_W_HP_healthProtectSubTitle}
+    Verify Element And Text  ${KU_W_HI_pageTitle}  ${e_HP_pagetitle}
+    Verify Element And Text  ${KU_W_HP_healthProtectSubTitle}  ${e_HP_pageSubtitle}
+    Verify Page Contains Image  ${KU_W_HP_successIconImg} 
+    Wait And Click  ${KU_W_HI_gotItPopupBtn}
 
 
 Verify City Name And Count Of Hospitals
@@ -319,6 +347,9 @@ Existing Illness Details
     Clear Text Field  ${KU_W_EI_addIllnessField}
     Input Text  ${KU_W_EI_addIllnessField}  ${e_EI_addIllness}
     Wait Scroll And Click Element  ${KU_W_HI_doneBtn} 
+    Wait And Click  ${KU_W_EI_addBtn}
+    Wait And Click  ${KU_W_EI_deleteBtn}
+    Wait And Click  ${KU_W_EI_popupOkayBtn}
     Go Back
 
 Fill In Contact Details Form
@@ -368,14 +399,41 @@ Verify Cover Plan Summary Details
     Verify Element And Text  ${KU_W_CoverageDets_nomineesTitle}  ${e_CoverageDets_nomineesTitle}
     Click Image  ${KU_W_CoverageDets_nomineesDropDown}
     Verify Element And Text  ${KU_W_CoverageDets_dropdownDetail1}  ${e_CoverageDets_nominee_userDetail1}
-    Verify Element And Text  ${KU_W_CoverageDets_dropdownDetail2}  ${e_CoverageDets_nominee_userDetail1}
-    Verify Element And Text  ${KU_W_CoverageDets_dropdownDetail3}  ${e_CoverageDets_nominee_userDetail1}
+    Verify Element And Text  ${KU_W_CoverageDets_dropdownDetail2}  ${e_CoverageDets_nominee_userDetail2}
+    Verify Element And Text  ${KU_W_CoverageDets_dropdownDetail3}  ${e_CoverageDets_nominee_userDetail3}
     Click Image  ${KU_W_CoverageDets_nomineesDropDown}
     # Policy Documents
     Verify Element And Text  ${KU_W_CoverageDets_policyDocumentsTitle}  ${e_CoverageDets_policyDocumentsTitle}
     Click Image  ${KU_W_CoverageDets_policyDropDown}
     Verify Policy Documents
     Click Image  ${KU_W_CoverageDets_policyDropDown}
+
+Verify Payment With Net Banking
+    Wait And Click  ${KU_W_SPM_netBankingPaymentMode}
+    Wait Scroll And Click Element  ${KU_W_SPM_payAmtBtn}
+    Switch To Frame  ${KU_W_SPM_razorPayFrame} 
+    Wait For Element Visibility  ${KU_W_SPM_merchantName}
+    Verify Element And Text  ${KU_W_SPM_merchantName}  ${e_SPM_merchantName}
+    Verify Element And Text  ${KU_W_SPM_merchanteDesc}  ${e_SPM_merchantDesc}
+    Verify Page Contains Element  ${KU_W_SPM_mobile_emailDetails}
+    Verify Element And Text  ${KU_W_SPM_payViaNetBanking}  ${e_SPM_payViaNetBanking}
+    Wait And Click  ${KU_W_SPM_netBankingOption}
+    Wait And Click  ${KU_W_SPM_SBIBank} 
+    Verify Element And Text  ${KU_W_SPM_bankName}  ${e_SPM_bankName}
+    Wait Scroll And Click Element  ${KU_W_SPM_footerPayBtn}
+    Unselect Frame
+    Switch Window  ${e_SPM_title}
+    Wait For Element Visibility  ${KU_W_SPM_razorPayTitle}
+    Verify Element And Text  ${KU_W_SPM_razorPayTitle}  ${e_SPM_razorPayTitle}
+    Wait And Click  ${KU_W_SPM_razorPaySuccessBtn}
+    Switch Window  browser=Kuvera
+
+
+
+
+
+    
+
 
 
     
