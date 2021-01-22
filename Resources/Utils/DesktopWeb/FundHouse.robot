@@ -102,5 +102,4 @@ Verify PreLogin All Fund House Details
         ${actualFundManagedBy} =  Get Text  ${KU_W_fh_fundManagedHeader}
         Compare Text Values  ${actualFundManagedBy}  ${expectedFundManagedBy}
         Go Back
-        Log To Console  ******************
     END

@@ -38,3 +38,4 @@ ${KU_W_HI_endorsementLink} =  xpath=//div[contains(text(),'Endorsement wording')
 ${KU_W_HI_policyWordingLink} =  xpath=//div[contains(text(),'Policy wording')]
 ${KU_W_HI_generalExclusionsLink} =  xpath=//div[contains(text(),'General exclusions')]
 ${KU_W_HI_cashlessHospitalLink} =  xpath=//div[contains(text(),'List of cashless hospitals')]
+${KU_W_HI_confirmOTPBtn} =  xpath=//button[text()=' Confirm with OTP ']

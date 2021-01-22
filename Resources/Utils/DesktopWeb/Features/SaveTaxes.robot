@@ -22,15 +22,14 @@ Verify PreLogin Save Taxes Page
     Verify Element And Text  ${KU_W_feature_saveCommissionHeading}  ${e_feature_st_commissionHeadingText} 
     Verify Element And Text  ${KU_W_feature_saveCommissionDesc}  ${e_feature_st_commissionDescText} 
 
+    # Mutual Fund
+    Wait Scroll And Click Element  ${KU_W_feature_st_watchlistBtn}
+    Verify Login Page
+
     # Save Fees
     Scroll Untill View  ${KU_W_feature_saveFeesHeading}
     Verify Element And Text  ${KU_W_feature_saveFeesHeading}  ${e_feature_st_feesHeadingText}
     Verify Element And Text  ${KU_W_feature_saveFeesDesc}  ${e_feature_st_feesDescText}
-
-    # Mutual Fund
-    Scroll Untill View  ${KU_W_feature_st_watchlistBtn}
-    Click Element   ${KU_W_feature_st_watchlistBtn}
-    Verify Login Page
 
     # Save Tax Funding
     Scroll Untill View  ${KU_W_feature_st_fundingTitle} 

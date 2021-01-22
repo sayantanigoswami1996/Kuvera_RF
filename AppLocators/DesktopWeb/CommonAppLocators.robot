@@ -1,4 +1,4 @@
-﻿*** Variables ***
+*** Variables ***
 # Application Expected Values 'e_<VariableName>'
 ${e_prod} =  prod
 ${e_title} =  Kuvera - Direct Mutual Funds | Stocks | Loans | Gold | Remit on Kuvera- Wealth Management Simplified
@@ -84,7 +84,8 @@ ${KU_W_logo_signup} =  xpath=//a[@class='navbar-brand active']/img
 # ${KU_W_title}=  Kuvera - Direct Mutual Funds | Stocks | Loans | Gold | Remit on Kuvera- Wealth Management Simplified
 ${KU_W_logo} =  xpath=//*[@class='b-header__content__logo']
 ${KU_W_close} =  xpath=//button[@class='button-primary b-regulatory-disclosure__btn']
-${KU_W_bannerFrame} =  xpath=//iframe[contains(@class,'hellobar hb-animateIn')]
+${KU_W_bannerFrame} =  xpath=//iframe[contains(@id,'container')]
+#${KU_W_sliderContentFrame} =  xpath=//iframe[contains(@class,'hellobar hb-animateIn')]
 ${KU_W_bannerCloseBtn} =  xpath=(//*[@class='icon-close'])[2]
 ${KU_W_menu} =  xpath=//*[@class='b-header__content']
 ${KU_W_headers} =  xpath=//*[@class='b-header__content__middle']/a

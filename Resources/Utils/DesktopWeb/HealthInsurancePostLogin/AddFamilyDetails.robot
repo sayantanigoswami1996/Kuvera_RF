@@ -155,7 +155,10 @@ Verify PostLogin Add Family Details
     # Cover Plan Summary
     Verify Cover Plan Summary Details
     # Info Box Text Validation
-    Verify Element And Text  ${KU_W_CoverageDets_infoBox}  ${e_CoverageDets_infoBox} 
+    Verify Element And Text  ${KU_W_CoverageDets_infoBox}  ${e_CoverageDets_infoBox}
+    Click Element  ${KU_W_HI_confirmOTPBtn} 
+    Wait And Click  ${KU_W_CoverageDets_OTP}
+    Input Text  ${KU_W_CoverageDets_OTP}  ${e_ca_OTP}
 
 
 

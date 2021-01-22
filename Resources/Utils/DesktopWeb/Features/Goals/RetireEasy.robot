@@ -25,4 +25,4 @@ Verify Retire Easy Questionnaire
     Double Click Element  ${KU_W_feature_sg_retireAgeTxt}
     Press Enter Key  ${KU_W_feature_sg_retireAgeTxt}
     Verify Question And Enter Input  ${KU_W_feature_sg_Q5}  ${query5}  ${KU_W_feature_sg_investUpfrontTxt}  ${e_feature_sg4_investUpfront}
-    Verify Recommendation And Navigation  ${KU_W_feature_sg_stableIncome}  ${KU_W_feature_sg_haveEquityInvestments}  ${KU_W_feature_sg_haveFds}     
+    Verify Recommendation And Navigation  ${KU_W_feature_sg_haveEquityInvestments}    

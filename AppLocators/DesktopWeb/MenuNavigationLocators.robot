@@ -108,7 +108,7 @@ ${e_feature_sg2_goalDuration} =  5
 ${e_feature_sg2_investUpfront} =  1000
 # Goal - Save Tax
 ${e_feature_sg3_userAge} =  25
-${e_feature_sg3_montlyInvest} =  3000
+${e_feature_sg3_montlyInvest} =  30000
 ${e_feature_sg3_goalDuration} =  7
 ${e_feature_sg3_investUpfront} =  500
 # Goal - Retire Easy
@@ -382,14 +382,14 @@ ${KU_W_feature_goalsList} =  xpath=//*[@class='cards']/a/p
 ${KU_W_feature_sg_screenTitle} =  xpath=//*[@class='goals-index col-sm-4']/h2
 ${KU_W_feature_sg_screenSubTitle} =  xpath=//*[@class='goals-index col-sm-4']/h1
 ${KU_W_feature_sg_content} =  xpath=//p[@class='hidden-xs']
-${KU_W_feature_sg_ownAHome} =  xpath=(//p[@class='card-title'])[1]
-${KU_W_feature_sg_buyACar} =  xpath=(//p[@class='card-title'])[2]
-${KU_W_feature_sg_saveTax} =  xpath=(//p[@class='card-title'])[3]
-${KU_W_feature_sg_retireEasy} =  xpath=(//p[@class='card-title'])[4]
-${KU_W_feature_sg_25thAnniversary} =  xpath=(//p[@class='card-title'])[5]
-${KU_W_feature_sg_foreignVacation} =  xpath=(//p[@class='card-title'])[6]
-${KU_W_feature_sg_educateMyChild} =  xpath=(//p[@class='card-title'])[7]
-${KU_W_feature_sg_createMyOwn} =  xpath=(//p[@class='card-title'])[8]
+${KU_W_feature_sg_ownAHome} =  xpath=//p[contains(text(),'own a home')]
+${KU_W_feature_sg_buyACar} =  xpath=//p[contains(text(),'buy a car')]
+${KU_W_feature_sg_saveTax} =  xpath=//p[contains(text(),'save tax')]
+${KU_W_feature_sg_retireEasy} =  xpath=//p[contains(text(),'retire easy')]
+${KU_W_feature_sg_25thAnniversary} =  xpath=//p[contains(text(),'25th Anniversary')]
+${KU_W_feature_sg_foreignVacation} =  xpath=//*[@class="card set-goal-vacation"]
+${KU_W_feature_sg_educateMyChild} =  xpath=//p[contains(text(),'educate my child')]
+${KU_W_feature_sg_createMyOwn} =  xpath=//p[contains(text(),'create my own')]
 ${KU_W_feature_sg_questionScreen} =  id=title-box
 ${KU_W_feature_sg_titleBoxSection} =  id=p9e7d2f05349193e9421e568b092da688e5010650-container
 ${KU_W_feature_sg_Q_goalName} =  xpath=//*[@id="title-box"]/h2
@@ -412,7 +412,7 @@ ${KU_W_feature_sg_almostDone} =  xpath=//div[@class='risk-profile-heading']/h2
 ${KU_W_feature_sg_married} =  xpath=//p[contains(text(),'MARRIED')]
 ${KU_W_feature_sg_dependents} =  xpath=//p[contains(text(),'DEPENDENTS (KIDS/ELDERS)')]
 ${KU_W_feature_sg_stableIncome} =  xpath=//p[contains(text(),'STABLE INCOME')]
-${KU_W_feature_sg_ownAHome} =  xpath=//p[contains(text(),'OWN A HOME')]
+${KU_W_feature_sg_p_ownAHome} =  xpath=//p[contains(text(),'OWN A HOME')]
 ${KU_W_feature_sg_haveALoan} =  xpath=//p[contains(text(),'HAVE A LOAN')]
 ${KU_W_feature_sg_haveFds} =  xpath=//p[contains(text(),'HAVE FDs')]
 ${KU_W_feature_sg_haveEquityInvestments} =  xpath=//p[contains(text(),'HAVE EQUITY INVESTMENTS')]

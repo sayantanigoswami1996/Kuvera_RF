@@ -12,8 +12,7 @@ Verify Educate My Child Questionnaire
     ${query4}  Get Json Values  $.Questionnaire..g7q4  Resources/TestData/Questionnaire.json 
     ${query5}  Get Json Values  $.Questionnaire..g7q5  Resources/TestData/Questionnaire.json 
 
-    Wait For Element Visibility  ${KU_W_feature_sg_educateMyChild}
-    Click Element  ${KU_W_feature_sg_educateMyChild}
+    Wait Scroll And Click Element  ${KU_W_feature_sg_educateMyChild}
     Wait For Element Visibility  ${KU_W_feature_sg_questionScreen}
 
     # Verify the questionnaires title and enter the input values
@@ -22,4 +21,4 @@ Verify Educate My Child Questionnaire
     Verify Question And Enter Input  ${KU_W_feature_sg_Q3}  ${query3}  ${KU_W_feature_sg_costTxt}  ${e_feature_sg8_cost}
     Verify Question And Enter Input  ${KU_W_feature_sg_Q4}  ${query4}  ${KU_W_feature_sg_goalDurationTxt}  ${e_feature_sg7_goalDuration}
     Verify Question And Enter Input  ${KU_W_feature_sg_Q5}  ${query5}  ${KU_W_feature_sg_investUpfrontTxt}  ${e_feature_sg7_investUpfront}
-    Verify Recommendation And Navigation  ${KU_W_feature_sg_dependents}  ${KU_W_feature_sg_haveALoan}  ${KU_W_feature_sg_ownAHome}   
+    Verify Recommendation And Navigation  ${KU_W_feature_sg_p_ownAHome}   

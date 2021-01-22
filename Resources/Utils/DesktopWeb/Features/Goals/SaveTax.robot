@@ -23,4 +23,4 @@ Verify Save Tax Questionnaire
     Verify Question And Enter Input  ${KU_W_feature_sg_Q3}  ${query3}  ${KU_W_feature_sg_monthlyInvestTxt}  ${e_feature_sg3_montlyInvest}
     Verify Question And Enter Input  ${KU_W_feature_sg_Q4}  ${query4}  ${KU_W_feature_sg_goalDurationTxt}  ${e_feature_sg3_goalDuration}
     Verify Question And Enter Input  ${KU_W_feature_sg_Q5}  ${query5}  ${KU_W_feature_sg_investUpfrontTxt}  ${e_feature_sg3_investUpfront}
-    Verify Recommendation And Navigation  ${KU_W_feature_sg_stableIncome}  ${KU_W_feature_sg_haveEquityInvestments}  ${KU_W_feature_sg_haveFds}     
+    Verify Recommendation And Navigation  ${KU_W_feature_sg_haveFds}     

@@ -35,8 +35,7 @@ Verify PreLogin Consolidate Page
     Verify Element And Text  ${KU_W_feature_saveTaxGoalDesc}  ${e_feature_cd_saveTaxGoalDescText}
     Verify Page Contains Link  ${KU_W_feature_ELSSLink}  ${e_feature_cd_ELSSLinkText}
     Sleep   2s
-    Wait For Element Visibility    ${KU_W_feature_ELSSLink} 
-    Click Element  ${KU_W_feature_ELSSLink} 
+    Wait Scroll And Click Element  ${KU_W_feature_ELSSLink} 
     Switch To Window Verify Title And Close  ${e_feature_cd_ELSSTitleText}  
     Sleep   5s
     Verify Element And Text  ${KU_W_feature_saveTaxGoalBtn}   ${e_feature_cd_saveTaxBtnText} 
