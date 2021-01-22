@@ -42,7 +42,7 @@ Launch URL
     Open Browser  ${URL}  ${BROWSER}  alias=Kuvera
     # Maximize Browser Window
     Set Window Size  ${1920}  ${1080}
-    Set Selenium Implicit Wait  90s
+    Set Selenium Implicit Wait  4s
     Reload Page
     Kuvera Web Close Regulatory Disclosure
     Run Keyword If    '${ENV}' == '${e_prod}'  Close Hello Bar

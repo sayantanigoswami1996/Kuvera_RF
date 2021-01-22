@@ -63,7 +63,9 @@ Verify PostLogin Add Family Details
     Wait For Element Visibility  ${KU_W_BYC_noRentPolicy}
     Verify Element And Text  ${KU_W_HI_pageTitle}  ${e_BYC_buildCoverageTitle}
     Verify Health Protect Details
-    Verify Policy Documents  ${KU_W_BYC_policyDocuLink}
+    Wait And Click  ${KU_W_BYC_policyDocuLink}
+    Verify Policy Documents
+    Click Image  ${KU_W_BYC_documentLinkCloseBtn}
     Verify Policy Details On Landing Screen
     Verify Policy Details On Popup
     Verify FAQ questions
@@ -119,9 +121,9 @@ Verify PostLogin Add Family Details
 
     # Contact Details
     Log To Console  Contact Details
-    Wait For Element Visibility  ${KU_W_CD_contactDetailsSubTitle}
+    Wait For Element Visibility  ${KU_W_HI_sectionSubTitle1}
     Verify Element And Text  ${KU_W_CD_contactDetailsTitle}  ${e_CD_contactDetailsTitle}
-    Verify Element And Text  ${KU_W_CD_contactDetailsSubTitle}  ${e_CD_contactDetailsSubTitle}
+    Verify Element And Text  ${KU_W_HI_sectionSubTitle1}  ${e_CD_contactDetailsSubTitle}
     Fill In Contact Details Form
       
     # Add Nominee
@@ -134,6 +136,29 @@ Verify PostLogin Add Family Details
     Verify Element And Text  ${KU_W_AN_nomineeDetailsSubTitle}  ${e_AN_nomineeDetailsSubTitle}
     Fill In Nominee Details Form
     Wait And Click  ${KU_W_HI_proceedBtn}
+
+    # Coverage Details
+    Log To Console  Coverage Details
+    # Applicant Details Box
+    Wait For Element Visibility  ${KU_W_CoverageDets_userNameLabel}
+    Verify Element And Text  ${KU_W_CoverageDets_coverageDetailsTitle}  ${e_CoverageDets_coverageDetailsTitle}
+    Verify Element And Text  ${KU_W_CoverageDets_userNameLabel}  ${e_CoverageDets_userNameLabel}
+    Verify Element And Text  ${KU_W_CoverageDets_applicantName}  ${e_CoverageDets_applicantName} 
+    Verify Element And Text  ${KU_W_CoverageDets_emailIDLabel}  ${e_CoverageDets_emailIDLabel}
+    Verify Page Contains Element  ${KU_W_CoverageDets_emailID}
+    Verify Element And Text  ${KU_W_CoverageDets_phoneNumLabel}  ${e_HI_phoneNumLabel}
+    Verify Page Contains Element   ${KU_W_CoverageDets_phoneNumber}
+    Verify Element And Text  ${KU_W_CoverageDets_addressLabel}  ${e_CoverageDets_resdentialAddressLabel}
+    Verify Element And Text  ${KU_W_CoverageDets_address1}  ${e_HI_completeAddress}
+    Verify Element And Text  ${KU_W_CoverageDets_address2}  ${e_CoverageDets_cityAndStateAddress}
+    Verify Element And Text  ${KU_W_CoverageDets_coverPlanSummaryTitle}  ${e_CoverageDets_coverPlanSummaryTitle}
+    # Cover Plan Summary
+    Verify Cover Plan Summary Details
+    # Info Box Text Validation
+    Verify Element And Text  ${KU_W_CoverageDets_infoBox}  ${e_CoverageDets_infoBox} 
+
+
+
 
 Verify City Name And Count Of Hospitals
     # City Name
@@ -246,31 +271,30 @@ Verify Health Protect Details
     Verify Element And Text  ${KU_W_BYC_totalPremiumValue}  ${e_BYC_totalPremiumValue}
 
 Verify Policy Documents
-    [Arguments]  ${policyDocumentLink}
-    Wait And Click  ${policyDocumentLink}
-    Verify Element And Text  ${KU_W_BYC_endorsementLink}  ${e_BYC_endorsementLink}
-    Verify Element And Text  ${KU_W_BYC_cashlessHospitalLink}  ${e_BYC_cashlessHospitalLink}
-    Verify Element And Text  ${KU_W_BYC_policyWordingLink}  ${e_BYC_policyWordingLink}
-    Verify Element And Text  ${KU_W_BYC_generalExclusionsLink}  ${e_BYC_generalExclusionLink}
+    Verify Element And Text  ${KU_W_HI_endorsementLink}  ${e_HI_endorsementLink}
+    Verify Element And Text  ${KU_W_HI_cashlessHospitalLink}  ${e_HI_cashlessHospitalLink}
+    Verify Element And Text  ${KU_W_HI_policyWordingLink}  ${e_HI_policyWordingLink}
+    Verify Element And Text  ${KU_W_HI_generalExclusionsLink}  ${e_HI_generalExclusionLink}
     # Get list count
     ${documentListCount} =  Get Element Count  xpath=//div[@class='b-insurance-policy-doc__doc-list'] 
     FOR  ${i}  IN RANGE  1   ${documentListCount}+1
         Wait And Click  xpath=(//div[@class='b-insurance-policy-doc__doc-list'])[${i}]
         Switch To Window
     END
-    Click Image  ${KU_W_BYC_documentLinkCloseBtn}
-
+    
 Verify Cash Cover Card Details
     Verify Element And Text  ${KU_W_DCC_cashcoverCardTitle}  ${e_DCC_dailyCashCoverageTitle}
     Verify Page Contains Image  ${KU_W_DCC_cashCoverCardImg}
-    Verify Element And Text  ${KU_W_DCC_selectDailyCash}  ${e_DCC_selectDailyCash}
-    Verify Element And Text  ${KU_W_DCC_cashCardPremium}  ${e_HI_premiumText}
+    Verify Element And Text  ${KU_W_HI_sectionSubTitle1}  ${e_HI_premiumText}
+    Verify Element And Text  ${KU_W_HI_sectionSubTitle2}  ${e_DCC_selectDailyCash}
     Verify Element And Text  ${KU_W_DCC_defaultPremimVal}  ${e_HI_defaultPremiumValue} 
     Wait And Click  ${KU_W_DCC_2KDailyCashBtn}
     Verify Element And Text  ${KU_W_DCC_defaultPremimVal}  ${e_DCC_2KPremiumAmount}
     Verify Element And Text  ${KU_W_DCC_totalPremimVal}  ${e_DCC_totalPremiumAmount}
-    Verify Policy Documents  ${KU_W_DCC_policyDocumentsLink}
-
+    Wait And Click  ${KU_W_DCC_policyDocumentsLink}
+    Verify Policy Documents
+    Click Image  ${KU_W_BYC_documentLinkCloseBtn}
+     
 Verify Illness List Details
     @{illness_list} =  Get WebElements  ${KU_W_GE_illnessPointers}
     # Validation of Fund Houses List on the first column
@@ -295,10 +319,10 @@ Existing Illness Details
     Go Back
 
 Fill In Contact Details Form
-    Verify Element And Text  ${KU_W_HI_phoneNum_usernameLabel}   ${e_CD_phoneNumLabel}
+    Verify Element And Text  ${KU_W_HI_phoneNum_usernameLabel}   ${e_HI_phoneNumLabel}
     Verify Element And Text  ${KU_W_CD_addressLabel}  ${e_CD_addressLabel}
     Click Element  ${KU_W_CD_addressField}
-    Input Text  ${KU_W_CD_addressField}  ${e_CD_address}
+    Input Text  ${KU_W_CD_addressField}  ${e_HI_completeAddress}
     Verify Element And Text  ${KU_W_CD_stateLabel}  ${e_CD_stateLabel}
     Wait Scroll And Click Element  ${KU_W_CD_stateSearchBar}
     Input Text  ${KU_W_CD_stateSearchBar}  ${e_HI_stateField}
@@ -320,3 +344,35 @@ Fill In Nominee Details Form
     Click Element  ${KU_W_AN_husband}
     Click Image  ${KU_W_HI_checkBox}
     Wait And Click  ${KU_W_HI_doneBtn}
+
+Verify Cover Plan Summary Details
+    # Cover
+    Verify Element And Text  ${KU_W_CoverageDets_coverTitle}  ${e_CoverageDets_coverTitle} 
+    Verify Element And Text  ${KU_W_HI_sectionSubTitle1}  ${e_CoverageDets_coverSubTitle}
+    Click Image  ${KU_W_CoverageDets_coverDropDown} 
+    Verify Element And Text  ${KU_W_CoverageDets_dropdownDetail1}  ${e_CoverageDets_indemnityDetails}
+    Verify Element And Text  ${KU_W_CoverageDets_dropdownDetail2}  ${e_CoverageDets_topUpDetails}
+    Verify Element And Text  ${KU_W_CoverageDets_dropdownDetail3}  ${e_CoverageDets_dailyAllowance}
+    Click Image  ${KU_W_CoverageDets_coverDropDown}
+    # Covering
+    Verify Element And Text  ${KU_W_CoverageDets_coveringTitle}  ${e_CoverageDets_coveringTitle}
+    Verify Element And Text  ${KU_W_HI_sectionSubTitle2}  ${e_CoverageDets_coveringSubTitle}
+    Click Image  ${KU_W_CoverageDets_coveringDropDown}
+    Verify Element And Text  ${KU_W_CoverageDets_dropdownDetail1}  ${e_CoverageDets_applicantDetails}
+    Verify Element And Text  ${KU_W_CoverageDets_dropdownDetail2}  ${e_CoverageDets_familyMemberDetails} 
+    Click Image  ${KU_W_CoverageDets_coveringDropDown}
+    # Nominee
+    Verify Element And Text  ${KU_W_CoverageDets_nomineesTitle}  ${e_CoverageDets_nomineesTitle}
+    Click Image  ${KU_W_CoverageDets_nomineesDropDown}
+    Verify Element And Text  ${KU_W_CoverageDets_dropdownDetail1}  ${e_CoverageDets_nominee_userDetail1}
+    Verify Element And Text  ${KU_W_CoverageDets_dropdownDetail2}  ${e_CoverageDets_nominee_userDetail1}
+    Verify Element And Text  ${KU_W_CoverageDets_dropdownDetail3}  ${e_CoverageDets_nominee_userDetail1}
+    Click Image  ${KU_W_CoverageDets_nomineesDropDown}
+    # Policy Documents
+    Verify Element And Text  ${KU_W_CoverageDets_policyDocumentsTitle}  ${e_CoverageDets_policyDocumentsTitle}
+    Click Image  ${KU_W_CoverageDets_policyDropDown}
+    Verify Policy Documents
+    Click Image  ${KU_W_CoverageDets_policyDropDown}
+
+
+    

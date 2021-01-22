@@ -61,10 +61,6 @@ ${e_BYC_sumCoveredSubTitle} =  Total premium
 ${e_BYC_sumCoveredValue} =  ₹10 L
 ${e_BYC_totalPremiumValue} =  ₹6,457/Y
 ${e_BYC_topUpValue} =  ₹1,077/Y
-${e_BYC_endorsementLink} =  Endorsement wording                   
-${e_BYC_policyWordingLink} =  Policy wording                  
-${e_BYC_generalExclusionLink} =  General exclusions                    
-${e_BYC_cashlessHospitalLink} =  List of cashless hospitals
 
 # Daily Cash Coverage
 ${e_DCC_dailyCashCoverageTitle} =  Daily cash cover  
@@ -102,9 +98,7 @@ ${e_EI_generalExclusionPopupTitle} =   Policy does not apply if you have any of 
 # Contact Details
 ${e_CD_contactDetailsTitle} =  Confirm contact details
 ${e_CD_contactDetailsSubTitle} =  Helps insurer to connect with you and mail physical policy
-${e_CD_phoneNumLabel} =  Phone number
 ${e_CD_addressLabel} =  Address
-${e_CD_address} =  Sri Lakshminarayana Mansion Tata Silk Farm,Jayanagar
 ${e_CD_pincodeLabel} =  Pincode
 ${e_CD_stateLabel} =  State
 ${e_CD_cityLabel} =  City
@@ -117,6 +111,29 @@ ${e_AN_userName} =  Tester
 ${e_AN_userNameLabel} =  Full Name
 ${e_AN_relationshipLabel} =  Relationship
 
+# Coverage Details
+${e_CoverageDets_coverageDetailsTitle} =  Coverage details 
+${e_CoverageDets_userNameLabel} =  Primary applicant
+${e_CoverageDets_emailIDLabel} =  Email ID
+${e_CoverageDets_resdentialAddressLabel} =  Residential address
+${e_CoverageDets_applicantName} =  Bhavani Sruti Somaraju Venkata Naga
+${e_CoverageDets_cityAndStateAddress} =  Bengaluru - 560004, Karnataka
+${e_CoverageDets_coverPlanSummaryTitle} =  Cover plan summary
+${e_CoverageDets_coverTitle} =  Cover
+${e_CoverageDets_coverSubTitle} =  ₹10 L + ₹2 K/day 
+${e_CoverageDets_indemnityDetails} =  Base Indemnity\n₹3 L
+${e_CoverageDets_topUpDetails} =  Super top up\n₹7 L
+${e_CoverageDets_dailyAllowance} =  Daily allowance\n₹2 K/day
+${e_CoverageDets_coveringTitle} =  Covering
+${e_CoverageDets_coveringSubTitle} =  Self (27Y) + 1 more
+${e_CoverageDets_applicantDetails} =  Bhavani Sruti Somaraju Venkata Naga\n27Y - (1993-08-13) 
+${e_CoverageDets_familyMemberDetails} =  User
+${e_CoverageDets_nomineesTitle} =  Nominees
+${e_CoverageDets_nominee_userDetail1} =  Base indemnity - User (daughter)
+${e_CoverageDets_nominee_userDetail2} =  Base indemnity - User (daughter)
+${e_CoverageDets_nominee_userDetail3} =  Base indemnity - User (daughter)
+${e_CoverageDets_policyDocumentsTitle} =  Policy documents
+${e_CoverageDets_infoBox} =  If you’re not satisfied with your policy then you can cancel it within a 15 day lookout period.
 # Application Locator 'KU_<locatorName>'   
 # Kuvera :: Wealth Management Simplified
 # Add Family Member
@@ -211,10 +228,6 @@ ${KU_W_BYC_sumCoveredSubTitle} =  xpath=//div[@class='b-health-plan-sum__title b
 ${KU_W_BYC_sumCoveredValue} =  xpath=//div[@class='b-build-coverage__sub-title w-half']
 ${KU_W_BYC_totalPremiumValue} =  xpath=//div[@class='b-build-coverage__sub-title w-half b-health-plan-sum__title--text']
 ${KU_W_BYC_policyDocuLink} =  xpath=//div[@class='b-insurance__link b-build-coverage__link']
-${KU_W_BYC_endorsementLink} =  xpath=//div[contains(text(),'Endorsement wording')]
-${KU_W_BYC_policyWordingLink} =  xpath=//div[contains(text(),'Policy wording')]
-${KU_W_BYC_generalExclusionsLink} =  xpath=//div[contains(text(),'General exclusions')]
-${KU_W_BYC_cashlessHospitalLink} =  xpath=//div[contains(text(),'List of cashless hospitals')]
 ${KU_W_BYC_documentLinkCloseBtn} =  xpath=//div[@class='modal-content-desktop']//img[@alt='close-btn-img']
 
 # Daily Cash Coverage
@@ -228,8 +241,6 @@ ${KU_W_DCC_coverageImg3} =  xpath=(//img[@class='b-add-nominee-icon'])[3]
 ${KU_W_DCC_cashcoverCardTitle} =  xpath=//div[@class='b-insurance__subtitle b-insurance-image-title-comp__title-text']
 ${KU_W_DCC_policyDocumentsLink} =  xpath=//div[@class='b-insurance__link b-add-on__polic-doc--link']
 ${KU_W_DCC_cashCoverCardImg} =  xpath=//img[@class='b-insurance-image-title-comp__img']
-${KU_W_DCC_selectDailyCash} =  xpath=(//div[@class='b-insurance__description'])[2]
-${KU_W_DCC_cashCardPremium} =  xpath=(//div[@class='b-insurance__description'])[1]
 ${KU_W_DCC_defaultPremimVal} =  xpath=//div[@class='b-add-on__premuim--text']
 ${KU_W_DCC_2KDailyCashBtn} =  xpath=(//div[@class='b-add-on-insurance-plan__button'])[1]
 ${KU_W_DCC_totalPremimVal} =  xpath=//div[@class='b-add-on__total-premuim--text']
@@ -263,7 +274,6 @@ ${KU_W_EI_applicantIllnessDesc2} =  xpath=(//div[@class='b-insurance__descriptio
 
 # Contact Details
 ${KU_W_CD_contactDetailsTitle} =  xpath=//div[@class='b-insurance__title b-primary-applicant-left__title']
-${KU_W_CD_contactDetailsSubTitle} =  xpath=//div[@class='b-insurance__description']
 ${KU_W_CD_addressLabel} =  xpath=(//label[@class='b-text-field__label'])[2]
 ${KU_W_CD_addressField} =  xpath=//input[@id='address']
 ${KU_W_CD_pincodeLabel} =  xpath=(//label[@class='b-text-field__label'])[3]
@@ -280,3 +290,28 @@ ${KU_W_AN_nomineeDetailsSubTitle} =  xpath=//div[@class='b-insurance__subtitle--
 ${KU_W_AN_userName} =  xpath=//input[@placeholder='Add Nominee']
 ${KU_W_AN_realtionshipLabel} =  xpath=//div[@class='b-health-input-details__relationship--label']
 ${KU_W_AN_husband} =  xpath=//div[contains(text(),'Husband')]
+
+# Coverage Details
+${KU_W_CoverageDets_coverageDetailsTitle} =  xpath=//div[@class='b-insurance__title b-coverage-plan__title']
+${KU_W_CoverageDets_userNameLabel} =  xpath=(//div[@class='b-insurance-text-display__title'])[1]
+${KU_W_CoverageDets_emailIDLabel} =  xpath=(//div[@class='b-insurance-text-display__title'])[2]
+${KU_W_CoverageDets_phoneNumLabel} =  xpath=(//div[@class='b-insurance-text-display__title'])[3]
+${KU_W_CoverageDets_addressLabel} =  xpath=(//div[@class='b-insurance-text-display__title'])[4]
+${KU_W_CoverageDets_applicantName} =  xpath=(//div[@class='b-insurance-text-display__description'])[1]
+${KU_W_CoverageDets_emailID} =  xpath=(//div[@class='b-insurance-text-display__description'])[2]
+${KU_W_CoverageDets_phoneNumber} =  xpath=(//div[@class='b-insurance-text-display__description'])[3]
+${KU_W_CoverageDets_address1} =  xpath=(//div[@class='b-insurance-text-display__description'])[4]
+${KU_W_CoverageDets_address2} =  xpath=(//div[@class='b-insurance-text-display__description'])[5]
+${KU_W_CoverageDets_coverPlanSummaryTitle} =  xpath=//div[@class='b-insurance__subtitle']
+${KU_W_CoverageDets_coverTitle} =  xpath=//div[text()='Cover']
+${KU_W_CoverageDets_coverDropDown} =  xpath=(//img[@class='b-policy-features__img'])[1]
+${KU_W_CoverageDets_dropdownDetail1} =  xpath=(//div[@class='b-cover-plan-summar__coverage-details'])[1]
+${KU_W_CoverageDets_dropDownDetail2} =  xpath=(//div[@class='b-cover-plan-summar__coverage-details'])[2]
+${KU_W_CoverageDets_dropDownDetail3} =  xpath=(//div[@class='b-cover-plan-summar__coverage-details'])[3]
+${KU_W_CoverageDets_coveringDropDown} =  xpath=(//img[@class='b-policy-features__img'])[2]
+${KU_W_CoverageDets_nomineesDropDown} =  xpath=(//img[@class='b-policy-features__img'])[3]
+${KU_W_CoverageDets_policyDropDown} =  xpath=(//img[@class='b-policy-features__img'])[4]
+${KU_W_CoverageDets_nomineesTitle} =  xpath=//div[contains(text(),'Nominees')]
+${KU_W_CoverageDets_coveringTitle} =  xpath=//div[text()='Covering']
+${KU_W_CoverageDets_policyDocumentsTitle} =  xpath=///div[contains(text(),'Policy documents')]
+${KU_W_CoverageDets_infoBox} =  xpath=//div[@class='b-insurance__body-dark b-information-box__text']

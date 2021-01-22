@@ -8,6 +8,12 @@ ${e_HI_defaultPremiumValue} =  ₹0/Y
 ${e_HI_pincodeField} =  560004
 ${e_HI_stateField} =  Karnataka
 ${e_HI_cityField} =  Bengaluru
+${e_HI_phoneNumLabel} =  Phone number
+${e_HI_completeAddress} =  Sri Lakshminarayana Mansion Tata Silk Farm,Jayanagar
+${e_HI_endorsementLink} =  Endorsement wording                   
+${e_HI_policyWordingLink} =  Policy wording                  
+${e_HI_generalExclusionLink} =  General exclusions                    
+${e_HI_cashlessHospitalLink} =  List of cashless hospitals
 # Application Locator 'KU_<locatorName>'   
 # Kuvera :: Wealth Management Simplified
 ${KU_W_HI_kuverLogo} =  xpath=//a[@class='navbar-brand']
@@ -24,3 +30,11 @@ ${KU_W_HI_state_cityDropdownList} =  xpath=(//ul[@class='dropdown-menu']//li)[1]
 ${KU_W_HI_phoneNum_usernameLabel} =  xpath=(//label[@class='b-text-field__label'])[1]
 ${KU_W_HI_checkBox} =  xpath=//img[@class='check-icon']
 ${KU_W_HI_dropdownIndicator} =  xpath=//img[@class='indicator-alignment']
+${KU_W_HI_sectionSubTitle1} =  xpath=(//div[@class='b-insurance__description'])[1]
+${KU_W_HI_sectionSubTitle2} =  xpath=(//div[@class='b-insurance__description'])[2]
+${KU_W_HI_sectionSubTitle3} =  xpath=(//div[@class='b-insurance__description'])[3]
+${KU_W_HI_sectionSubTitle4} =  xpath=(//div[@class='b-insurance__description'])[4]
+${KU_W_HI_endorsementLink} =  xpath=//div[contains(text(),'Endorsement wording')]
+${KU_W_HI_policyWordingLink} =  xpath=//div[contains(text(),'Policy wording')]
+${KU_W_HI_generalExclusionsLink} =  xpath=//div[contains(text(),'General exclusions')]
+${KU_W_HI_cashlessHospitalLink} =  xpath=//div[contains(text(),'List of cashless hospitals')]
