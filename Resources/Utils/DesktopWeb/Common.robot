@@ -104,8 +104,9 @@ Get List Count
 Kuvera Web Close Regulatory Disclosure 
     Wait Until Element Is Visible  ${KU_W_regulatoryDisclosure}
     Verify Element And Text  ${KU_W_regulatoryDisclosure}  ${e_regulatoryDisclosure}
-    Wait For Element Visibility  ${KU_W_close}
-    Click Element  ${KU_W_close}
+    #Wait For Element Visibility  ${KU_W_close}
+    #Click Element  ${KU_W_close}
+    Sleep  10s
 
 Close Hello Bar
     Sleep  15s
