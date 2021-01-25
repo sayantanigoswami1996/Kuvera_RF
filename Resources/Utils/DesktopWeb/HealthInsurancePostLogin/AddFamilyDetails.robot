@@ -64,8 +64,8 @@ Verify PostLogin Add Family Details
     Verify Element And Text  ${KU_W_HI_pageTitle}  ${e_BYC_buildCoverageTitle}
     Verify Health Protect Details
     Wait And Click  ${KU_W_BYC_policyDocuLink}
-    Verify Policy Documents
-    Click Image  ${KU_W_BYC_documentLinkCloseBtn}
+    # Verify Policy Documents
+    Click Image  ${KU_W_HI_documentLinkCloseBtn}
     Verify Policy Details On Landing Screen
     Verify Policy Details On Popup
     Verify FAQ questions
@@ -182,13 +182,14 @@ Verify PostLogin Add Family Details
     Verify Page Contains Image  ${KU_W_SPM_creditCardImg}
     Verify Payment With Net Banking
     
-    #Health Protect Enabled
+    # Health Protect Enabled
     Log To Console  Health Protect
     Wait For Element Visibility  ${KU_W_HP_healthProtectSubTitle}
     Verify Element And Text  ${KU_W_HI_pageTitle}  ${e_HP_pagetitle}
     Verify Element And Text  ${KU_W_HP_healthProtectSubTitle}  ${e_HP_pageSubtitle}
     Verify Page Contains Image  ${KU_W_HP_successIconImg} 
     Wait And Click  ${KU_W_HI_gotItPopupBtn}
+    
 
 
 Verify City Name And Count Of Hospitals
@@ -323,8 +324,8 @@ Verify Cash Cover Card Details
     Verify Element And Text  ${KU_W_DCC_defaultPremimVal}  ${e_DCC_2KPremiumAmount}
     Verify Element And Text  ${KU_W_DCC_totalPremimVal}  ${e_DCC_totalPremiumAmount}
     Wait And Click  ${KU_W_DCC_policyDocumentsLink}
-    Verify Policy Documents
-    Click Image  ${KU_W_BYC_documentLinkCloseBtn}
+    # Verify Policy Documents
+    Click Image  ${KU_W_HI_documentLinkCloseBtn}
      
 Verify Illness List Details
     @{illness_list} =  Get WebElements  ${KU_W_GE_illnessPointers}
@@ -405,7 +406,7 @@ Verify Cover Plan Summary Details
     # Policy Documents
     Verify Element And Text  ${KU_W_CoverageDets_policyDocumentsTitle}  ${e_CoverageDets_policyDocumentsTitle}
     Click Image  ${KU_W_CoverageDets_policyDropDown}
-    Verify Policy Documents
+    # Verify Policy Documents
     Click Image  ${KU_W_CoverageDets_policyDropDown}
 
 Verify Payment With Net Banking

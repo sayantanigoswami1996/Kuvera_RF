@@ -248,7 +248,6 @@ ${KU_W_BYC_sumCoveredSubTitle} =  xpath=//div[@class='b-health-plan-sum__title b
 ${KU_W_BYC_sumCoveredValue} =  xpath=//div[@class='b-build-coverage__sub-title w-half']
 ${KU_W_BYC_totalPremiumValue} =  xpath=//div[@class='b-build-coverage__sub-title w-half b-health-plan-sum__title--text']
 ${KU_W_BYC_policyDocuLink} =  xpath=//div[@class='b-insurance__link b-build-coverage__link']
-${KU_W_BYC_documentLinkCloseBtn} =  xpath=//div[@class='modal-content-desktop']//img[@alt='close-btn-img']
 
 # Daily Cash Coverage
 ${KU_W_DCC_cashCoverageSubTitle} =  xpath=//div[@class='b-add-on-insurance__subtitle b-insurance__description']

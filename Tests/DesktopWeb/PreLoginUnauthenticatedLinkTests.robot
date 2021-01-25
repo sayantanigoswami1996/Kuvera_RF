@@ -24,3 +24,18 @@ Forgot Password Page Navigation
 Tax Calculator Page Navigation
     [Tags]  TC03 
     Verify PreLogin Tax Calculator Page
+
+# Unauthenticated Links - E Sign KYC- Invalid request
+E Sign KYC - Invalid request Navigation
+    [Tags]  TC04
+    Verify PostLogin E Sign KYC Invalid Request Page
+
+# Unauthenticated Links - E Sign KYC- Completed
+E Sign KYC - Completed Navigation
+    [Tags]  TC05
+    Verify PostLogin E Sign KYC Completed Page
+
+# Unauthenticated Links - E Sign KYC- Failed
+E Sign KYC - Failed Navigation
+    [Tags]  TC06
+    Verify PostLogin E Sign KYC Failed Page

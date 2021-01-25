@@ -34,6 +34,7 @@ Resource    ../../../AppLocators/DesktopWeb/CreateAccountForPostLoginLocators.ro
 Resource    ../../../AppLocators/DesktopWeb/UnauthenticatedLinks/LiquidFundsLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/UnauthenticatedLinks/ForgotPasswordLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/UnauthenticatedLinks/TaxCalculatorLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/UnauthenticatedLinks/ESignKYCLocators.robot
 
 
 *** Keywords ***
@@ -112,7 +113,8 @@ Get List Count
 Kuvera Web Close Regulatory Disclosure 
     Wait Until Element Is Visible  ${KU_W_regulatoryDisclosure}
     Verify Element And Text  ${KU_W_regulatoryDisclosure}  ${e_regulatoryDisclosure}
-    Sleep  12s
+    Wait For Element Visibility  ${KU_W_close}
+    Click Element  ${KU_W_close}
 
 Close Hello Bar
     Sleep  15s
@@ -224,7 +226,7 @@ Navigate To Home Page
     Go To  ${URL}
     Set Window Size  ${1920}  ${1080}
     Reload Page
-    Kuvera Web Close Regulatory Disclosure
+    Sleep  12s
 
 Navigate To Home Page PostLogin
     Go To  ${URL}

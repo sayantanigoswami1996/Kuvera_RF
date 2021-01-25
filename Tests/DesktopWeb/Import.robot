@@ -47,6 +47,10 @@ Resource    ../../Resources/Utils/DesktopWeb/CreateAccountForPostLogin.robot
 Resource    ../../Resources/Utils/DesktopWeb/HealthInsurancePostLogin/KYC.robot
 Resource    ../../Resources/Utils/DesktopWeb/HealthInsurancePostLogin/AddFamilyDetails.robot
 Resource    ../../Resources/Utils/DesktopWeb/HealthInsurancePostLogin/HealthInsuranceLandingPage.robot
+Resource    ../../Resources/Utils/DesktopWeb/HealthInsurancePostLogin/Login.robot
 Resource    ../../Resources/Utils/DesktopWeb/UnauthenticatedLinks/LiquidFunds.robot
 Resource    ../../Resources/Utils/DesktopWeb/UnauthenticatedLinks/ForgotPassword.robot
 Resource    ../../Resources/Utils/DesktopWeb/UnauthenticatedLinks/TaxCalculator.robot
+Resource    ../../Resources/Utils/DesktopWeb/UnauthenticatedLinks/ESignKYCInvalidRequest.robot
+Resource    ../../Resources/Utils/DesktopWeb/UnauthenticatedLinks/ESignKYCCompleted.robot
+Resource    ../../Resources/Utils/DesktopWeb/UnauthenticatedLinks/ESignKYCFailed.robot

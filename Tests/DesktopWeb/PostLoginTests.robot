@@ -22,3 +22,4 @@ Health Insurance Navigation
     Verify PostLogin Account Creation
     Verify PostLogin Insure Landing Page
     Verify PostLogin Add Family Details
+    Login And Verify Policy Details

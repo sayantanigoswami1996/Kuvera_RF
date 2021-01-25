@@ -11,6 +11,7 @@ Verify PostLogin Account Creation
     Click Element  ${KU_W_ca_emailInputField} 
     ${randomEmail} =  Generate Random Number  100   99999
     ${completeEmailID} =  Catenate  ${e_ca_email}${randomEmail}${e_ca_domainName}
+    Set Global Variable  ${emailID}  ${completeEmailID}
     Input Text  ${KU_W_ca_emailInputField}  ${completeEmailID}
     Wait For Element Visibility  ${KU_W_ca_mobileNumInputField} 
     Click Element  ${KU_W_ca_mobileNumInputField}
@@ -27,7 +28,7 @@ Verify PostLogin Account Creation
     Input Text  ${KU_W_ca_OTPField}  ${e_ca_OTP}
     Click Element  ${KU_W_ca_submitOTPBtn}
     Verify Page Contains Element  ${KU_W_ca_dashboardHeader}
-
+    
 Generate Unique Mobile Number
     ${randomMobileNum} =  Generate Random Number  0  99999
     ${result1} =  Convert To Integer  ${randomMobileNum}
