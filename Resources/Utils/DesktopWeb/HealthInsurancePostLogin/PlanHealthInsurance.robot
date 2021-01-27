@@ -7,7 +7,7 @@ Library    SeleniumLibrary
 Verify PostLogin Add Family Details
     Wait Scroll And Click Element  ${KU_W_insure_checkPremiumBtn2} 
     Wait And Click  ${KU_W_HI_missingPANOkayBtn}
-    Form Details Page
+    KYC Form Details Page
     Navigate To Insure Page And Click Premium Button
     Wait For Element Visibility  ${KU_W_HI_pageTitle}
     # Text Validation Of Title and Subtitle
@@ -19,13 +19,13 @@ Verify PostLogin Add Family Details
     Wait And Click   ${KU_W_FM_infoLink}
     Verify Element And Text  ${KU_W_FM_infoPopupTitle1}  ${e_FM_infoPopupTitle1}
     Verify Element And Text  ${KU_W_FM_infoPopupTitle2}  ${e_FM_infoPopupTitle2}
-    Wait And Click  ${KU_W_HI_okayBtn}
+    Wait And Click  ${KU_W_postlogin_okayBtn}
     # Add Gender to Primary Applicant
     Verify Element And Text  ${KU_W_FM_insuranceHolderName}  ${e_FM_name}
     Wait And Click  ${KU_W_FM_primaryApplicant}
     Wait And Click  ${KU_W_FM_dropdown}
     Wait And Click  ${KU_W_FM_primaryApplicantGender}
-    Wait Scroll And Click Element  ${KU_W_HI_doneBtn} 
+    Wait Scroll And Click Element  ${KU_W_postlogin_doneBtn} 
     # Add Member 
     Wait And Click  ${KU_W_FM_addMemberMenu}
     Wait And Click  ${KU_W_FM_memberName}
@@ -37,8 +37,8 @@ Verify PostLogin Add Family Details
         Click Element  ${KU_W_FM_monthOnCalendar}
     END
     Wait And Click  ${KU_W_FM_dateOnCalendar}
-    Wait And Click  ${KU_W_HI_doneBtn} 
-    Wait Scroll And Click Element  ${KU_W_HI_proceedBtn}
+    Wait And Click  ${KU_W_postlogin_doneBtn} 
+    Wait Scroll And Click Element  ${KU_W_postlogin_proceedBtn}
 
     # Select City 
     Log To Console  Select City
@@ -49,7 +49,7 @@ Verify PostLogin Add Family Details
     Verify Element And Text  ${KU_W_SC_networkHospitalHeader}  ${e_SC_networkHospitalHeader}
     Wait And Click  ${KU_W_SC_hospitalInfoLink} 
     Verify Element And Text  ${KU_W_SC_infoLinkPopupTitle}  ${e_SC_infoLinkPopupTitle}
-    Wait And Click  ${KU_W_HI_okayBtn}
+    Wait And Click  ${KU_W_postlogin_okayBtn}
     Verify City Name And Count Of Hospitals
     Verify Presence Of List Of Hospitals
     Wait And Click  ${KU_W_SC_OtherAddBtn}
@@ -64,12 +64,12 @@ Verify PostLogin Add Family Details
     Verify Element And Text  ${KU_W_HI_pageTitle}  ${e_BYC_buildCoverageTitle}
     Verify Health Protect Details
     Wait And Click  ${KU_W_BYC_policyDocuLink}
-    # Verify Policy Documents
+    Verify Policy Documents
     Click Image  ${KU_W_HI_documentLinkCloseBtn}
     Verify Policy Details On Landing Screen
     Verify Policy Details On Popup
     Verify FAQ questions
-    Wait Scroll And Click Element  ${KU_W_HI_proceedBtn}
+    Wait Scroll And Click Element  ${KU_W_postlogin_proceedBtn}
 
     # Daily Cash Coverage
     Log To Console  Daily Cash Coverage 
@@ -83,7 +83,7 @@ Verify PostLogin Add Family Details
     Verify Element And Text  ${KU_W_DCC_coverageDesc3}  ${e_DCC_dailyCashCoverageDesc3}
     Verify Page Contains Image  ${KU_W_DCC_coverageImg3}
     Verify Cash Cover Card Details
-    Wait Scroll And Click Element  ${KU_W_HI_proceedBtn}
+    Wait Scroll And Click Element  ${KU_W_postlogin_proceedBtn}
 
     # General Exclusions
     Log To Console  General Exclusions
@@ -91,8 +91,8 @@ Verify PostLogin Add Family Details
     Verify Element And Text  ${KU_W_HI_pageTitle}  ${e_GE_generalExclusionTitle}
     Verify Element And Text  ${KU_W_GE_generalExclusionSubTitle}  ${e_GE_generalExclusionSubTitle}
     Verify Illness List Details
-    Click Image  ${KU_W_HI_checkBox}
-    Wait Scroll And Click Element  ${KU_W_HI_proceedBtn}
+    Click Image  ${KU_W_postlogin_checkBox}
+    Wait Scroll And Click Element  ${KU_W_postlogin_proceedBtn}
 
     # Existing Illness
     Log To Console  Existing Illness
@@ -103,7 +103,7 @@ Verify PostLogin Add Family Details
     Click Image  ${KU_W_EI_existingIllnessInfoLink}
     Verify Element And Text  ${KU_W_EI_infoLinkDetail}  ${e_EI_infoLinkDetails}
     Verify Element And Text  ${KU_W_EI_infoLinkSubDetail}  ${e_EI_infoLinkSubDetails}
-    Wait And Click  ${KU_W_HI_okayBtn}
+    Wait And Click  ${KU_W_postlogin_okayBtn}
     # No Illness Button
     Wait For Element Visibility  ${KU_W_EI_noIllnessBtnTitle}
     Verify Element And Text  ${KU_W_EI_noIllnessBtnTitle}  ${e_EI_noIllnessBtnTitle}
@@ -135,7 +135,7 @@ Verify PostLogin Add Family Details
     Verify Element And Text  ${KU_W_AN_nomineeDetailsTitle}  ${e_AN_nomineeDetailsTitle}
     Verify Element And Text  ${KU_W_AN_nomineeDetailsSubTitle}  ${e_AN_nomineeDetailsSubTitle}
     Fill In Nominee Details Form
-    Wait And Click  ${KU_W_HI_proceedBtn}
+    Wait And Click  ${KU_W_postlogin_proceedBtn}
 
     # Coverage Details
     Log To Console  Coverage Details
@@ -167,6 +167,7 @@ Verify PostLogin Add Family Details
     Verify Element And Text  ${KU_W_SPM_paymentModeTitle}  ${e_SPM_paymentModeTitle}
     Verify Element And Text  ${KU_W_SPM_paymentModeSubTitle}  ${e_SPM_paymentModeSubTitle}
     Wait For Element Visibility  ${KU_W_SPM_netPremium}
+    Sleep  2s
     Verify Element And Text  ${KU_W_SPM_netPremium}  ${e_SPM_netPremium}
     Wait For Element Visibility  ${KU_W_SPM_GST}
     Verify Element And Text  ${KU_W_SPM_GST}  ${e_SPM_GST}
@@ -188,7 +189,7 @@ Verify PostLogin Add Family Details
     Verify Element And Text  ${KU_W_HI_pageTitle}  ${e_HP_pagetitle}
     Verify Element And Text  ${KU_W_HP_healthProtectSubTitle}  ${e_HP_pageSubtitle}
     Verify Page Contains Image  ${KU_W_HP_successIconImg} 
-    Wait And Click  ${KU_W_HI_gotItPopupBtn}
+    Wait And Click  ${KU_W_postlogin_gotItPopupBtn}
     
 
 
@@ -243,7 +244,7 @@ Verify Policy Details On Popup
     Verify Element And Text  ${KU_W_BYC_supportPolicy}  ${e_BYC_supportPolicy}
     Verify Element And Text  ${KU_W_BYC_supportPolicyDesc}  ${e_BYC_supportPolicyDesc}
     Verify Page Contains Element  ${KU_W_BYC_supportPolicyImage}
-    Wait Scroll And Click Element  ${KU_W_HI_gotItPopupBtn}
+    Wait Scroll And Click Element  ${KU_W_postlogin_gotItPopupBtn}
     
 Verify FAQ questions
     # Question 1
@@ -324,7 +325,7 @@ Verify Cash Cover Card Details
     Verify Element And Text  ${KU_W_DCC_defaultPremimVal}  ${e_DCC_2KPremiumAmount}
     Verify Element And Text  ${KU_W_DCC_totalPremimVal}  ${e_DCC_totalPremiumAmount}
     Wait And Click  ${KU_W_DCC_policyDocumentsLink}
-    # Verify Policy Documents
+    Verify Policy Documents
     Click Image  ${KU_W_HI_documentLinkCloseBtn}
      
 Verify Illness List Details
@@ -343,11 +344,11 @@ Existing Illness Details
     Click Element  ${KU_W_EI_generalExclusionLink}
     Verify Element And Text  ${KU_W_EI_generalExclusionPopupTitle}  ${e_EI_generalExclusionPopupTitle}
     Verify Illness List Details
-    Wait Scroll And Click Element  ${KU_W_HI_gotItPopupBtn}
+    Wait Scroll And Click Element  ${KU_W_postlogin_gotItPopupBtn}
     Click Element  ${KU_W_EI_addIllnessField} 
     Clear Text Field  ${KU_W_EI_addIllnessField}
     Input Text  ${KU_W_EI_addIllnessField}  ${e_EI_addIllness}
-    Wait Scroll And Click Element  ${KU_W_HI_doneBtn} 
+    Wait Scroll And Click Element  ${KU_W_postlogin_doneBtn} 
     Wait And Click  ${KU_W_EI_addBtn}
     Wait And Click  ${KU_W_EI_deleteBtn}
     Wait And Click  ${KU_W_EI_popupOkayBtn}
@@ -368,7 +369,7 @@ Fill In Contact Details Form
     Verify Element And Text  ${KU_W_CD_cityLabel}  ${e_CD_cityLabel} 
     Wait For Element Visibility  ${KU_W_HI_pincodeField} 
     Input Text  ${KU_W_HI_pincodeField}   ${e_HI_pincodeField}
-    Wait Scroll And Click Element  ${KU_W_HI_proceedBtn}
+    Wait Scroll And Click Element  ${KU_W_postlogin_proceedBtn}
 
 Fill In Nominee Details Form
     Verify Element And Text  ${KU_W_HI_phoneNum_usernameLabel}  ${e_AN_userNameLabel}
@@ -377,8 +378,8 @@ Fill In Nominee Details Form
     Verify Element And Text  ${KU_W_AN_realtionshipLabel}  ${e_AN_relationshipLabel}
     Click Image  ${KU_W_HI_dropdownIndicator}
     Click Element  ${KU_W_AN_husband}
-    Click Image  ${KU_W_HI_checkBox}
-    Wait And Click  ${KU_W_HI_doneBtn}
+    Click Image  ${KU_W_postlogin_checkBox}
+    Wait And Click  ${KU_W_postlogin_doneBtn}
 
 Verify Cover Plan Summary Details
     # Cover
@@ -406,7 +407,7 @@ Verify Cover Plan Summary Details
     # Policy Documents
     Verify Element And Text  ${KU_W_CoverageDets_policyDocumentsTitle}  ${e_CoverageDets_policyDocumentsTitle}
     Click Image  ${KU_W_CoverageDets_policyDropDown}
-    # Verify Policy Documents
+    Verify Policy Documents
     Click Image  ${KU_W_CoverageDets_policyDropDown}
 
 Verify Payment With Net Banking
@@ -428,13 +429,3 @@ Verify Payment With Net Banking
     Verify Element And Text  ${KU_W_SPM_razorPayTitle}  ${e_SPM_razorPayTitle}
     Wait And Click  ${KU_W_SPM_razorPaySuccessBtn}
     Switch Window  browser=Kuvera
-
-
-
-
-
-    
-
-
-
-    

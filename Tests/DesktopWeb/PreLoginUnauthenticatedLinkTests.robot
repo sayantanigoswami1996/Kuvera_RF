@@ -3,7 +3,6 @@ Library     SeleniumLibrary
 Resource    ../../Tests/DesktopWeb/Import.robot
 
 Suite Setup  Launch URL 
-Test Teardown  Navigate To Home Page
 Suite Teardown  Close All Browsers
 
 #To run all tests: robot --variable URL:https://staging2.kuvera.in/#/ --variable BROWSER:headlesschrome -d Results Tests/DesktopWeb/PreLoginUnautheticatedLinkTests.robot
@@ -25,17 +24,17 @@ Tax Calculator Page Navigation
     [Tags]  TC03 
     Verify PreLogin Tax Calculator Page
 
-# Unauthenticated Links - E Sign KYC- Invalid request
-E Sign KYC - Invalid request Navigation
-    [Tags]  TC04
-    Verify PostLogin E Sign KYC Invalid Request Page
-
 # Unauthenticated Links - E Sign KYC- Completed
 E Sign KYC - Completed Navigation
-    [Tags]  TC05
+    [Tags]  TC04
     Verify PostLogin E Sign KYC Completed Page
 
 # Unauthenticated Links - E Sign KYC- Failed
 E Sign KYC - Failed Navigation
-    [Tags]  TC06
+    [Tags]  TC05
     Verify PostLogin E Sign KYC Failed Page
+
+# Unauthenticated Links - E Sign KYC- Invalid request
+E Sign KYC - Invalid request Navigation
+    [Tags]  TC06
+    Verify PostLogin E Sign KYC Invalid Request Page

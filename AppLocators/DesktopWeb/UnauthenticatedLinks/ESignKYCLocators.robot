@@ -11,7 +11,7 @@ ${e_eSignKYC_failedStatusTitle} =  E-Sign KYC failed
 ${e_eSignKYC_failedStatusDesc} =  Something went wrong. Please reach out to support@kuvera.in for further assistance
 # Application Locator 'KU_<locatorName>'
 # Kuvera :: Wealth Management Simplified
-${KU_W_eSignKYC_imgIcon} =  //img[@class='b-confirm__icon']
-${KU_W_eSignKYC_statusTitle} =  //div[@class='b-confirm__title']
-${KU_W_eSignKYC_statusDesc} =  //div[@class='b-confirm__description']
-${KU_W_eSignKYC_okayBtn} =  //button[@class='button-primary b-confirm__command-two']
+${KU_W_eSignKYC_imgIcon} =  xpath=//img[@class='b-confirm__icon']
+${KU_W_eSignKYC_statusTitle} =  xpath=//div[@class='b-confirm__title']
+${KU_W_eSignKYC_statusDesc} =  xpath=//div[@class='b-confirm__description']
+${KU_W_eSignKYC_okayBtn} =  xpath=//button[@class='button-primary b-confirm__command-two']

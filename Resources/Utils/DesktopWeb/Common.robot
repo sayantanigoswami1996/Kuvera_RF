@@ -27,14 +27,16 @@ Resource    ../../../AppLocators/DesktopWeb/InvestLocators/StocksLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/USStocksLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/FooterLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/FundHouseLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/PostLoginCommonAppLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/HealthInsurancePostLoginLocators/KYCLocators.robot
-Resource    ../../../AppLocators/DesktopWeb/HealthInsurancePostLoginLocators/AddFamilyDetailsLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/HealthInsurancePostLoginLocators/PlanHealthInsuranceLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/HealthInsurancePostLoginLocators/HealthInsuranceLandingPageLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/CreateAccountForPostLoginLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/UnauthenticatedLinks/LiquidFundsLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/UnauthenticatedLinks/ForgotPasswordLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/UnauthenticatedLinks/TaxCalculatorLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/UnauthenticatedLinks/ESignKYCLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/UnauthenticatedLinks/AmazonSaveShopLocators.robot
 
 
 *** Keywords ***
@@ -238,11 +240,36 @@ Generate Random Number
     ${randomNum} =	Evaluate	random.randint(${startingrange}, ${endingrange})
     [Return]   ${randomNum}
 
+Generate Unique Mobile Number
+    ${randomMobileNum} =  Generate Random Number  0  99999
+    ${result1} =  Convert To Integer  ${randomMobileNum}
+    ${result2} =  Convert To Integer  ${e_ca_mobileNum}
+    ${actualMobileNumber} =  Evaluate  ${result1}+${result2}
+    ${actualMobileNumber1} =  Convert To String  ${actualMobileNumber}
+    ${expectedMobileNum} =  Replace Characters  ${actualMobileNumber1}  1  9
+    [Return]  ${expectedMobileNum}
+
 Wait And Click 
     [Arguments]  ${element}
     Sleep  1s
     Wait For Element Visibility  ${element}
     Click Element  ${element}
-  
+
+Verify Social Sharing Option 
+    [Arguments]  ${fblink}  ${twitterlink}  ${whatsapplink}  ${telegramlink}  ${maillink}
+    Wait Scroll And Click Element  ${fblink}
+    Switch To Window Verify Title And Close  ${e_HI_facebookTitle}
+    Wait Scroll And Click Element  ${twitterlink} 
+    Sleep  5s
+    Switch To Window Verify Title And Close  ${e_HI_twitterTitle}
+    Wait Scroll And Click Element  ${whatsapplink}
+    Switch To Window Verify Title And Close  ${e_HI_whatsappTitle} 
+    Wait Scroll And Click Element  ${telegramlink}
+    Switch To Window Verify Title And Close  ${e_HI_telegramTitle}
+    Scroll Page To Location  0   1000
+    Wait Scroll And Click Element  ${maillink}
+    Sleep  2s
+    Wait Scroll And Click Element  ${KU_W_HI_mailLink} 
+    
 Close Web Application
     Close All Browser

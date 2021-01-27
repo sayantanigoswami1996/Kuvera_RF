@@ -25,10 +25,10 @@ ${e_getFinanceInsightsTitle} =  Subscribe to weekly updates
 ${KU_W_footer_aboutUs} =  xpath=//li[@class='title']
 ${KU_W_footer_theTeam} =  xpath=//ul[@class='list-unstyled']/li[2]/a
 ${KU_W_footer_theTeamTitle} =  xpath=//h1[contains(text(),'We’re on a mission to make investing simple.')]
-${KU_W_footer_whyKuvera} =  xpath=//ul[@class='list-unstyled']/li[3]/a
+${KU_W_footer_whyKuvera} =  xpath=//a[contains(text(),'Why Kuvera')]
 ${KU_W_footer_press} =  xpath=//ul[@class='list-unstyled']/li[4]/a
 ${KU_W_footer_inPressTitle} =  xpath=//*[@class='b-press__recent-coverage']/h1
-${KU_W_footer_termsLink} =  xpath=//p[@class='links']/a
+${KU_W_footer_termsLink} =  xpath=//a[contains(text(),'Terms')]
 ${KU_W_footer_termsOfUsageTitle} =  xpath=//h2[@class='title']
 ${KU_W_footer_privacyPolicyLink} =  xpath=//p[@class='links']/a[2]
 ${KU_W_footer_privacyPolicyTitle} =  xpath=//h2[@class='title text-center']

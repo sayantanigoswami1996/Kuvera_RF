@@ -69,7 +69,7 @@ Verify Why Kuvera Page
     Scroll To About Us Section
     Verify Element And Text  ${KU_W_footer_whyKuvera}  ${e_footer_whyKuvera}
     Click Element  ${KU_W_footer_whyKuvera}
-    Sleep  1s
+    Sleep  3s
     Wait For Element Visibility  ${KU_W_feature_cd_pageHeader}
     Verify Element And Text  ${KU_W_feature_cd_pageHeader}  ${e_feature_cd_pageHeaderText}
     Scroll To About Us Section

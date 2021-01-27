@@ -19,7 +19,7 @@ Verify PreLogin Tax Calculator Page
     Verify Element And Text  ${KU_W_tc_oldRegimeIncome}  ${e_tc_netIncomeHeader}
     Verify Element And Text  ${KU_W_tc_oldRegimeTaxDue}  ${e_tc_taxDueHeader}
     Verify Page Contains Element  ${KU_W_tc_oldRegimeTaxValue}
-    Verify Sharing Option
+    Verify Social Sharing Option  ${KU_W_tc_facebookBtn}  ${KU_W_tc_twitterBtn}  ${KU_W_tc_whatsappBtn}  ${KU_W_tc_telegramBtn}  ${KU_W_tc_mailBtn}
     # Annual Income
     Verify Element And Text  ${KU_W_tc_annualIncomeTitle}  ${e_tc_annualIncomeTitle}
     Click Element  ${KU_W_tc_amountField}
@@ -55,17 +55,3 @@ Verify PreLogin Tax Calculator Page
     Verify Element And Text  ${KU_W_tc_taxOnNewRegime}  ${e_tc_taxOnNewRegime}
     Verify Element And Text  ${KU_W_tc_netIncomeOnOldRegime}  ${e_tc_netIncomeOnOldRegime}    
     Verify Element And Text  ${KU_W_tc_taxOnOldRegime}  ${e_tc_taxOnOldRegime}  
-
-Verify Sharing Option
-    Wait Scroll And Click Element  ${KU_W_tc_facebookBtn}
-    Switch To Window Verify Title And Close  ${e_tc_facebookTitle}
-    Wait Scroll And Click Element  ${KU_W_tc_twitterBtn}
-    Sleep  5s
-    Switch To Window Verify Title And Close  ${e_tc_twitterTitle}
-    Wait Scroll And Click Element  ${KU_W_tc_whatsappBtn}
-    Switch To Window Verify Title And Close  ${e_tc_whatsappTitle}  
-    Wait Scroll And Click Element  ${KU_W_tc_telegramBtn}
-    Switch To Window Verify Title And Close  ${e_tc_telegramTitle}
-    Wait Scroll And Click Element  ${KU_W_tc_mailBtn}
-    Sleep  2s
-    Wait Scroll And Click Element  ${KU_W_tc_mailBtn}

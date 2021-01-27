@@ -7,9 +7,9 @@ Library   SeleniumLibrary
 Verify Fill In Of KYC Form Details
     Wait For Element Visibility  ${KU_W_KYC_startBtn}
     Click Element  ${KU_W_KYC_startBtn}
-    Form Details Page
+    KYC Form Details Page
 
-Form Details Page
+KYC Form Details Page
     Log To Console  KYC Form
     Wait For Element Visibility  ${KU_W_KYC_formTitle}
     Verify Element And Text  ${KU_W_KYC_formTitle}  ${e_KYC_formTitle}
@@ -28,6 +28,10 @@ Form Details Page
     Click Element  ${KU_W_KYC_mobileNumField}
     Input Text  ${KU_W_KYC_mobileNumField}  ${e_KYC_mobileNumField}
     Wait Scroll And Click Element  ${KU_W_kyc_nextBtn}
+    # Sleep  2s
+    # ${isPopupVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_KYC_applicantName}
+    #     Run Keyword If  ${isPopupVisible}  Log To Console  Continue
+    #     ...    ELSE  Handle The Popup
     Wait Scroll And Click Element  ${KU_W_KYC_residenceStatus}
     Wait Scroll And Click Element  ${KU_W_KYC_residentIndividual}
     Click Element  ${KU_W_KYC_address1Field}
@@ -55,10 +59,15 @@ Form Details Page
     Wait Scroll And Click Element  ${KU_W_KYC_OKBtn}
     Click Element  ${KU_W_KYC_popupOkBtn}
     Wait Scroll And Click Element  ${KU_W_KYC_confirmBtn}
-    Wait And Click  ${KU_W_HI_kuverLogo}
+    Wait And Click  ${KU_W_postlogin_kuverLogo} 
 
 Add Signature
     Mouse Over  ${KU_W_KYC_canvasSpace}
     Click Element At Coordinates  ${KU_W_KYC_canvasSpace}  400  226
     Drag And Drop By Offset  ${KU_W_KYC_canvasSpace}  200  100
     Click Element At Coordinates  ${KU_W_KYC_canvasSpace}  250  140
+
+Handle The Popup
+    Wait For Element Visibility  ${KU_W_KYC_errorFetchingPopup}
+    Wait And Click  ${KU_W_postlogin_OkBtn}
+    Wait Scroll And Click Element  ${KU_W_kyc_nextBtn}
