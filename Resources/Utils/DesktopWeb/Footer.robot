@@ -11,8 +11,9 @@ Verify PreLogin Footer
     Verify Element And Text  ${KU_W_footer_theTeam}  ${e_footer_theTeam}
     Wait For Element Visibility  ${KU_W_footer_whyKuvera}
     Verify Element And Text  ${KU_W_footer_whyKuvera}  ${e_footer_whyKuvera}
-    Sleep  3s
+    Sleep  2s
     Verify The Team Page
+    Sleep  2s
     Verify Why Kuvera Page
     Verify Press Page
     Sleep  1s
@@ -28,10 +29,10 @@ Verify PreLogin Footer
     Verify Element And Text  ${KU_W_feature_st_screenTitle}  ${e_feature_st_screenTitleText}
     Scroll To About Us Section
     # Set a goal 
-    Wait For Element Visibility  ${KU_W_footer_setAGoal}
-    Click Element  ${KU_W_footer_setAGoal}
-    Wait For Element Visibility  ${KU_W_feature_sg_screenTitle}
-    Verify Element And Text  ${KU_W_feature_sg_screenTitle}  ${e_feature_sg_screenTitle}
+    Verify Set A Goal Page
+    ${isElementVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_feature_sg_screenTitle}
+    Run Keyword If   ${isElementVisible}  Log To Console  Continue
+    ...    ELSE  Verify Set A Goal Page
     Go Back
     Scroll To About Us Section
     # Explore Funds
@@ -68,19 +69,23 @@ Verify The Team Page
 Verify Why Kuvera Page
     Scroll To About Us Section
     Verify Element And Text  ${KU_W_footer_whyKuvera}  ${e_footer_whyKuvera}
+    Wait For Element Visibility  ${KU_W_footer_whyKuvera}
     Click Element  ${KU_W_footer_whyKuvera}
-    Sleep  3s
+    Sleep  2s
     Wait For Element Visibility  ${KU_W_feature_cd_pageHeader}
     Verify Element And Text  ${KU_W_feature_cd_pageHeader}  ${e_feature_cd_pageHeaderText}
+    Sleep  2s
     Scroll To About Us Section
 
 Verify Press Page
     Scroll Untill View  ${KU_W_footer_press}
     Verify Element And Text  ${KU_W_footer_press}  ${e_footer_press}
+    Wait For Element Visibility  ${KU_W_footer_press}
     Click Element  ${KU_W_footer_press}
     Sleep  3s
     Wait For Element Visibility  ${KU_W_footer_inPressTitle}
     Scroll Untill View  ${KU_W_footer_inPressTitle}
+    Wait For Element Visibility  ${KU_W_footer_inPressTitle}
     Verify Element And Text  ${KU_W_footer_inPressTitle}  ${e_footer_inPressTitle}
 
 Verify Terms And Privacy Policy Page    
@@ -104,5 +109,13 @@ Verify Switch To Direct Page
 Verify Blog 
     Scroll To About Us Section
     Verify Element And Text  ${KU_W_blog}  ${e_blog}
+    Wait For Element Visibility  ${KU_W_blog}
     Click Element  ${KU_W_blog}
     Switch To Window
+
+Verify Set A Goal Page
+    Sleep  1s
+    Wait For Element Visibility  ${KU_W_footer_setAGoal}
+    Click Element  ${KU_W_footer_setAGoal}
+    Wait For Element Visibility  ${KU_W_feature_sg_screenTitle}
+    Verify Element And Text  ${KU_W_feature_sg_screenTitle}  ${e_feature_sg_screenTitle}
