@@ -6,7 +6,7 @@ Library     SeleniumLibrary
 
 Login And Verify Policy Details
     Go To  ${URL}
-    Logout From App
+    Logout From App Post Signup
     Login 
     Verify Policy Details
 
@@ -16,12 +16,6 @@ Login
     Wait And Click  ${KU_W_passwordTxt}
     Input Text      ${KU_W_passwordTxt}  ${e_ca_pwd}
     Wait And Click  ${KU_W_ca_loginBtn}
-
-Logout From App
-    Wait And Click  ${KU_W_ca_caretDropdown}
-    Wait And Click  ${KU_W_ca_logoutBtn}
-    Sleep  4s
-    Go Back
 
 Verify Policy Details
     Wait And Click  ${KU_W_insureLink}

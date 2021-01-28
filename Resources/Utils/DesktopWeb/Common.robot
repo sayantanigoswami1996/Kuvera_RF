@@ -230,10 +230,13 @@ Navigate To Home Page
     Reload Page
     Sleep  12s
 
-Navigate To Home Page PostLogin
+Logout From App And Navigate To Home Page PostLogin
+    Go To  ${URL}
+    Logout From App Post Signup
     Go To  ${URL}
     Set Window Size  ${1920}  ${1080}
     Reload Page
+    Sleep  12s
 
 Generate Random Number
     [Arguments]  ${startingrange}  ${endingrange}
@@ -270,6 +273,14 @@ Verify Social Sharing Option
     Wait Scroll And Click Element  ${maillink}
     Sleep  2s
     Wait Scroll And Click Element  ${KU_W_HI_mailLink} 
+
+
+Logout From App Post Signup
+    Wait And Click  ${KU_W_ca_caretDropdown}
+    Wait And Click  ${KU_W_ca_logoutBtn}
+    Sleep  4s
+    Go Back
+
     
 Close Web Application
     Close All Browser

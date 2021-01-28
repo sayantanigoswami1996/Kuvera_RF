@@ -3,7 +3,7 @@ Library    SeleniumLibrary
 Resource    ../../Tests/DesktopWeb/Import.robot
 
 Suite Setup  Launch URL 
-Test Teardown  Navigate To Home Page PostLogin
+Test Teardown  Logout From App And Navigate To Home Page PostLogin
 Suite Teardown  Close All Browsers
 
 #To run all tests: robot --variable URL:https://staging3.kuvera.in/#/ --variable BROWSER:headlesschrome -d Results Tests/DesktopWeb/PostLoginTests.robot
@@ -15,7 +15,7 @@ Create Account And Fill In KYC
     [Tags]  TC01
     Verify PostLogin Account Creation
     Verify Fill In Of KYC Form Details
-
+    
 # Create Account And Health Insurance End To End Flow
 Health Insurance Navigation   
     [Tags]  TC02
