@@ -425,6 +425,7 @@ Verify Payment With Net Banking
     Wait Scroll And Click Element  ${KU_W_SPM_footerPayBtn}
     Unselect Frame
     Switch Window  ${e_SPM_title}
+    Sleep  2s
     Wait For Element Visibility  ${KU_W_SPM_razorPayTitle}
     Verify Element And Text  ${KU_W_SPM_razorPayTitle}  ${e_SPM_razorPayTitle}
     Wait And Click  ${KU_W_SPM_razorPaySuccessBtn}

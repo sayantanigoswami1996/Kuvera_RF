@@ -52,6 +52,5 @@ Resource    ../../Resources/Utils/DesktopWeb/UnauthenticatedLinks/LiquidFunds.ro
 Resource    ../../Resources/Utils/DesktopWeb/UnauthenticatedLinks/ForgotPassword.robot
 Resource    ../../Resources/Utils/DesktopWeb/UnauthenticatedLinks/TaxCalculator.robot
 Resource    ../../Resources/Utils/DesktopWeb/UnauthenticatedLinks/ESignKYCInvalidRequest.robot
-Resource    ../../Resources/Utils/DesktopWeb/UnauthenticatedLinks/ESignKYCCompleted.robot
 Resource    ../../Resources/Utils/DesktopWeb/UnauthenticatedLinks/ESignKYCFailed.robot
 Resource    ../../Resources/Utils/DesktopWeb/UnauthenticatedLinks/AmazonSaveShop.robot
