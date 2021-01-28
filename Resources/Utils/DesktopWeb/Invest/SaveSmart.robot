@@ -4,10 +4,11 @@ Library     SeleniumLibrary
 
 *** Keywords ***
 
-Validate SaveSmart Landing Page
-    Log To Console  Save Smart From Explore
-    Wait For Element Visibility  ${KU_W_ss_screenTitle}
-    Verify Language Switch Login And Signup Link
+Verify PreLogin Save Smart Landing Page
+    Log To Console  Save Smart - Explore More
+    Navigate To Invest Page And Verify Explore Options  ${KU_W_saveSmart}  ${e_invest_saveSmart}
+    Sleep  1s
+    Verify Login And Signup Link
     Verify Element And Text  ${KU_W_ss_screenTitle}  ${e_invest_ss_screenText}
     Input Text  ${KU_W_ss_inputAmount}  ${e_invest_ss_amount}
     Verify Element And Text  ${KU_W_ss_saveBtn}  ${e_invest_ss_saveBtnText}

@@ -27,8 +27,8 @@
         "g4q1":"Hi there! What’s your name?",
         "g4q2":"And what’s your age?",
         "g4q3":"What are your current monthly expenses?",
-        "g4q4":"At what Age you want to Retire (Min Age: 26)?",
-        "g4q5":"Enter a amount you can invest upfront, else enter 0."    
+        "g4q4":"At what age do you want to retire?",
+        "g4q5":"Enter a amount you can invest upfront"    
         },
         "25th Anniversary":{
         "g5q1":"Hi there! What’s your name?",

@@ -22,4 +22,4 @@ Verify Buy A Car Questionnaire
     Verify Question And Enter Input  ${KU_W_feature_sg_Q3}  ${query3}  ${KU_W_feature_sg_costTxt}  ${e_feature_sg2_cost}
     Verify Question And Enter Input  ${KU_W_feature_sg_Q4}  ${query4}  ${KU_W_feature_sg_goalDurationTxt}  ${e_feature_sg2_goalDuration}
     Verify Question And Enter Input  ${KU_W_feature_sg_Q5}  ${query5}  ${KU_W_feature_sg_investUpfrontTxt}  ${e_feature_sg2_investUpfront}
-    Verify Recommendation And Navigation  ${KU_W_feature_sg_dependents}  ${KU_W_feature_sg_ownAHome}  ${KU_W_feature_sg_dualIncome} 
+    Verify Recommendation And Navigation  ${KU_W_feature_sg_dualIncome} 

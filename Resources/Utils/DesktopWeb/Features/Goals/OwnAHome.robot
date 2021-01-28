@@ -27,4 +27,4 @@ Verify Own A Home Questionnaire
     Click Button  ${KU_W_feature_sg_yes}
     Verify Question And Enter Input  ${KU_W_feature_sg_Q6}  ${query6}  ${KU_W_feature_sg_downPaymentTxt}  ${e_feature_sg1_downPayment}
     Verify Question And Enter Input  ${KU_W_feature_sg_Q7}  ${query7}  ${KU_W_feature_sg_investUpfrontTxt}  ${e_feature_sg1_investUpfront}
-    Verify Recommendation And Navigation  ${KU_W_feature_sg_dependents}  ${KU_W_feature_sg_stableIncome}  ${KU_W_feature_sg_haveFds}
+    Verify Recommendation And Navigation  ${KU_W_feature_sg_married}
