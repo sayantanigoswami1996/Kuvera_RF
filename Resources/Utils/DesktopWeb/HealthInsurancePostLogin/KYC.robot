@@ -51,7 +51,9 @@ KYC Form Details Page
     Wait Scroll And Click Element  ${KU_W_KYC_maritalStatus}
     Wait Scroll And Click Element  ${KU_W_KYC_taxReturnFiling}
     Wait Scroll And Click Element  ${KU_W_KYC_updateBtn}
+    Wait For Element Visibility  ${KU_W_KYC_addSignatureTitle}
     Verify Page Contains Element  ${KU_W_KYC_addSignatureTitle}
+    Wait For Element Visibility  ${KU_W_KYC_addSignatureSubTitle1}
     Verify Element And Text  ${KU_W_KYC_addSignatureSubTitle1}  ${e_KYC_addSignatureSubTitle1}
     Verify Element And Text  ${KU_W_KYC_addSignatureSubTitle2}  ${e_KYC_addSignatureSubTitle2}
     Add Signature
@@ -62,6 +64,7 @@ KYC Form Details Page
 
 Add Signature
     Mouse Over  ${KU_W_KYC_canvasSpace}
+    Wait For Element Visibility  ${KU_W_KYC_canvasSpace}
     Click Element At Coordinates  ${KU_W_KYC_canvasSpace}  400  226
     Drag And Drop By Offset  ${KU_W_KYC_canvasSpace}  200  100
     Click Element At Coordinates  ${KU_W_KYC_canvasSpace}  250  140
