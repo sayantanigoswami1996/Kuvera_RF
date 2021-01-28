@@ -9,8 +9,8 @@ Verify PostLogin Account Creation
     Wait For Element Visibility  ${KU_W_signup}
     Click Element  ${KU_W_signup}
     Click Element  ${KU_W_emailTxt}
-    ${randomNum} =  Generate Random Number  100   99999
-    ${completeEmailID} =  Catenate  ${e_ca_email}${randomNum}${e_ca_domainName}
+    ${randomNumber} =  Generate Random Number  100   99999
+    ${completeEmailID} =  Catenate  ${e_ca_email}${randomNumber}${e_ca_domainName}
     Log To Console  ${completeEmailID}
     Set Global Variable  ${emailID}  ${completeEmailID}
     Input Text  ${KU_W_emailTxt}  ${completeEmailID}
