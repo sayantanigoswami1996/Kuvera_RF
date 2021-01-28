@@ -18,6 +18,7 @@ Resource    ../../../AppLocators/DesktopWeb/InvestLocators/ELSSTaxSaverLocators.
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/BankPSUBondsLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/CryptoLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/FDLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/InvestLocators/SectorFundsLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/ELSSTaxSaverLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/USETFLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/UltraShortLocators.robot

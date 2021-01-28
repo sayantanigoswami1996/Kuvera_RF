@@ -11,6 +11,7 @@ Login And Verify Policy Details
     Verify Policy Details
 
 Login 
+    Log To Console  Login 
     Wait And Click  ${KU_W_emailTxt}  
     Input Text      ${KU_W_emailTxt}  ${emailID}
     Wait And Click  ${KU_W_passwordTxt}
@@ -18,6 +19,7 @@ Login
     Wait And Click  ${KU_W_ca_loginBtn}
 
 Verify Policy Details
+    Log To Console  Policy Details
     Wait And Click  ${KU_W_insureLink}
     FOR  ${i}  IN RANGE  1   6
         ${isElementVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_HI_totalCoverDesc}
