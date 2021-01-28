@@ -28,7 +28,7 @@ KYC Form Details Page
     Click Element  ${KU_W_KYC_mobileNumField}
     Input Text  ${KU_W_KYC_mobileNumField}  ${e_KYC_mobileNumField}
     Wait Scroll And Click Element  ${KU_W_kyc_nextBtn}
-    ${isPopupVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_KYC_errorFetchingPopup}
+    ${isPopupVisible} =  Run Keyword And Return Status  Visibility Of The Popup
         Run Keyword If  ${isPopupVisible}  Log To Console  CVL Server Down
         ...    ELSE  Log To Console  Continue 
     Wait Scroll And Click Element  ${KU_W_KYC_residenceStatus}
@@ -65,3 +65,7 @@ Add Signature
     Click Element At Coordinates  ${KU_W_KYC_canvasSpace}  400  226
     Drag And Drop By Offset  ${KU_W_KYC_canvasSpace}  200  100
     Click Element At Coordinates  ${KU_W_KYC_canvasSpace}  250  140
+
+Visibility Of The Popup
+    Wait For Element Visibility  ${KU_W_KYC_errorFetchingPopup}
+    Element Should Be Visible  ${KU_W_KYC_errorFetchingPopup}

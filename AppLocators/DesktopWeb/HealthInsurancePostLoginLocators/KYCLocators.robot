@@ -54,5 +54,5 @@ ${KU_W_KYC_popupOkBtn} =  xpath=//button[@class='button-primary confirmed overla
 ${KU_W_KYC_confirmBtn} =  xpath=//button[@class='btn in-btn cta-for-page']
 ${KU_W_KYC_portfolioEmailField} =  xpath=//input[@id='portfolio_email']
 ${KU_W_KYC_portfolioNameField} =  xpath=//input[@id='portfolio_name']
-${KU_W_KYC_errorFetchingPopup} =  xpath=(//div[@class='title'])[2]
+${KU_W_KYC_errorFetchingPopup} =  xpath=(//div[@class='overlay-content']//div)[3]
 ${KU_W_KYC_applicantName} =  xpath=//div[@class='sip-name upcase']
