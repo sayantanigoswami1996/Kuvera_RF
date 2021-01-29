@@ -26,10 +26,35 @@ Tax Calculator Page Navigation
 
 # Unauthenticated Links - E Sign KYC- Failed
 E Sign KYC - Failed Navigation
-    [Tags]  TC05
+    [Tags]  TC04
     Verify PostLogin E Sign KYC Failed Page
 
 # Unauthenticated Links - E Sign KYC- Invalid request
 E Sign KYC - Invalid request Navigation
-    [Tags]  TC06
+    [Tags]  TC05
     Verify PostLogin E Sign KYC Invalid Request Page
+
+# Unauthenticated Links - E Sign KYC- Completed
+E Sign KYC - Completed Navigation
+    [Tags]  TC06
+    Verify PostLogin E Sign KYC Completed Page
+
+# Unauthenticated Links - Amazon Save Shop
+Amazon Save Shop Navigation
+    [Tags]  TC07
+    Verify PreLogin Amazon Save Shop Page
+
+# Unauthenticated Links - Gold Rush 
+Gold Rush Navigation
+    [Tags]  TC08
+    Verify PreLogin Gold Rush Page
+
+# Unauthenticated Links - Dhanteras Gold Offer
+Dhanteras Gold Offer Navigation
+    [Tags]  TC09
+    Verify PreLogin Dhanteras Gold Offer Page
+
+# Unauthenticated Links - Pricing Offer
+Pricing Navigation
+    [Tags]  TC10
+    Verify PreLogin Pricing Page  

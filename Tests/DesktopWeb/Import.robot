@@ -52,4 +52,8 @@ Resource    ../../Resources/Utils/DesktopWeb/UnauthenticatedLinks/ForgotPassword
 Resource    ../../Resources/Utils/DesktopWeb/UnauthenticatedLinks/TaxCalculator.robot
 Resource    ../../Resources/Utils/DesktopWeb/UnauthenticatedLinks/ESignKYCInvalidRequest.robot
 Resource    ../../Resources/Utils/DesktopWeb/UnauthenticatedLinks/ESignKYCFailed.robot
+Resource    ../../Resources/Utils/DesktopWeb/UnauthenticatedLinks/ESignKYCCompleted.robot
 Resource    ../../Resources/Utils/DesktopWeb/UnauthenticatedLinks/AmazonSaveShop.robot
+Resource    ../../Resources/Utils/DesktopWeb/UnauthenticatedLinks/GoldRush.robot
+Resource    ../../Resources/Utils/DesktopWeb/UnauthenticatedLinks/DhanterasGoldOffer.robot
+Resource    ../../Resources/Utils/DesktopWeb/UnauthenticatedLinks/Pricing.robot

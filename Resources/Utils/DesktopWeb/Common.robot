@@ -37,7 +37,9 @@ Resource    ../../../AppLocators/DesktopWeb/UnauthenticatedLinks/ForgotPasswordL
 Resource    ../../../AppLocators/DesktopWeb/UnauthenticatedLinks/TaxCalculatorLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/UnauthenticatedLinks/ESignKYCLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/UnauthenticatedLinks/AmazonSaveShopLocators.robot
-
+Resource    ../../../AppLocators/DesktopWeb/UnauthenticatedLinks/GoldRushLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/UnauthenticatedLinks/DhanterasGoldOfferLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/UnauthenticatedLinks/PricingLocators.robot
 
 *** Keywords ***
 
