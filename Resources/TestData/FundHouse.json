@@ -334,12 +334,12 @@
         },
         "QUANT":{
         "fh31name":"QUANT MUTUAL FUND",
-        "fh31header":"",
+        "fh31header":"quant Group was born more than a decade ago, as a financial services platform in the midst of the 2008 Global Financial Crisis, with two simple yet powerful guiding mantras – Being Relevant and Predictive Analytics. The guiding philosophy of Being Relevant means that in a dynamic and volatile world, to remain relevant, and to preserve and grow wealth, the test of time must be passed every day by continuously updating knowledge and innovating on systems and processes. This is enabled by Predictive Analytics: an all-encompassing framework for understanding and forecasting markets, across assets and geographies.",
         "fh31RTA":"",
         "fh31website":"http://www.quantmutual.com/",
-        "fh31address":"",
-        "fh31phone":"",
-        "fh31email":"",
+        "fh31address":"quant Money Managers Ltd. 6th Floor, Sea Breeze Building, Appasaheb Marathe Marg, Prabhadevi Mumbai - 400 025",
+        "fh31phone":"022-6295-5000",
+        "fh31email":"help.investor@quant.in",
         "fh31investorlogin":"QUANT investors can login here.",
         "fh31fundmanaged":"Funds managed by QUANT"
         },
@@ -350,7 +350,7 @@
         "fh32website":"https://www.quantumamc.com/",
         "fh32address":"7th Floor, Hoechst House, Nariman Point, Mumbai 400021",
         "fh32phone":"022-61447800",
-        "fh32email":"CustomerCare@QuantumAMC.com",
+        "fh32email":"customercare@quantumamc.com",
         "fh32investorlogin":"QUANTUM investors can login here.",
         "fh32fundmanaged":"Funds managed by QUANTUM"
         },

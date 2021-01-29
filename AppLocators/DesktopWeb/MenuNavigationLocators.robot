@@ -379,7 +379,7 @@ ${KU_W_featureSubList} =  xpath=//div[@class='b-header__sub-content']/div/a
 # Feature - Set a Goal
 ${KU_W_feature_setAGoalLink} =  xpath=//a[contains(text(),'Set a Goal')]
 ${KU_W_feature_goalsList} =  xpath=//*[@class='cards']/a/p
-${KU_W_feature_sg_screenTitle} =  xpath=//*[@class='goals-index col-sm-4']/h2
+${KU_W_feature_sg_screenTitle} =  xpath=//h2[contains(text(),'SET YOUR GOAL')]
 ${KU_W_feature_sg_screenSubTitle} =  xpath=//*[@class='goals-index col-sm-4']/h1
 ${KU_W_feature_sg_content} =  xpath=//p[@class='hidden-xs']
 ${KU_W_feature_sg_ownAHome} =  xpath=//p[contains(text(),'own a home')]
