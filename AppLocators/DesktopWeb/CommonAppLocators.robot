@@ -26,7 +26,7 @@ ${e_familyAccountLinkTitle} =  Joint And Family Accounts on Kuvera - Kuvera
 ${e_consolidateTrackBtn} =  Consolidate & track
 ${e_consolidateTrackLinkTitle} =  Automatic tracking of external transactions | Wealth Management Simplified | Kuvera
 ${e_manageTodayBtn} =  Manage Today
-${e_manageTodayLinkTitle} =  Managed Accounts: add a manager to handhold your Kuvera account - Kuvera
+${e_manageTodayLinkTitle} =  Managed Accounts: add a manager to handhold your Kuvera account - Kuvera
 ${e_setAGoalBtn} =  Set a goal
 ${e_setAGoalLinkTitle} =  Unified goal planning or how to invest less and achieve your financial goals? - Kuvera
 ${e_sendMoneyBtn} =  Send money
@@ -117,9 +117,10 @@ ${KU_W_fund_list} =   xpath=//div[@class='b-fund-list__row b-fund-list__row--cus
 ${KU_W_loginpage_loginButton} =   xpath=//button[@class='button-primary']                        
 ${KU_W_loginButton} =   xpath=//button[@class='button-primary b-login-signup__login']
 ${KU_W_signUpButton} =  xpath=//button[@class='button-primary b-login-signup__register'] 
-${KU_W_explore_MF} =  xpath=//a[@class='b-funds-list__explore-fund'] 
+${KU_W_explore_MF} =  xpath=//button[contains(text(),'Explore mutual funds')] 
 
-${KU_W_mf_listIcon} =   xpath=//img[@class='b-fund-list__watchlist-icon']               
+${KU_W_mf_listIcon} =   xpath=//img[@class='b-fund-list__watchlist-icon']  
+${KU_W_mf_mfTab} =   xpath=(//div[contains(text(),'Mutual Funds')])[1]             
 ${KU_W_android_image} =  xpath=//img[@class='b-mobile-first__img-android']
 ${KU_W_apple_image} =   xpath=//img[@class='b-mobile-first__img-apple']
 ${KU_W_coreaua_val} =   xpath=//div[@class='b-investment-count__count__aua__val']
@@ -129,12 +130,12 @@ ${KU_W_stock_filterTitle} =   xpath=//span[@class='b-explore-stock__action-title
 ${KU_W_stock_filter} =   xpath=//div[@class='b-filter-stock__box-sector']
 ${KU_W_stock_fundList} =   xpath=//div[@class='b-explore-stocks--widget-container']
 ${KU_W_stock_listIcon} =   xpath=(//img[@class='b-stocks-explore__watchlist-icon'])[1]
-${KU_W_mf_stock_button} =   xpath=(//div[@class='b-dynamic-tab-header__item__title'])[1]
+${KU_W_mf_stock_button} =   xpath=//div[contains(text(),'Stocks')]
 ${KU_W_stock_subFilter} =  xpath=//div[@class='b-filter-stock__box b-filter-stock--dropdown-title--disabled b-filter-stock__box--widget']
 ${KU_W_stock_subHeader} =  xpath=//div[@class='b-stocks-home__text']
 ${KU_W_stock_header} =  xpath=//div[@class='b-stocks-home__title']
 
-${KU_W_USStockButton} =  xpath=(//div[@class='b-dynamic-tab-header__item__title'])[2]
+${KU_W_USStockButton} =  xpath=//div[contains(text(),'US stocks')]
 ${KU_W_usstock_filter} =  xpath=//div[@class='b-action-bar__filter__item__sector']
 ${KU_W_usstock_subFilter} =  xpath=//div[@class='b-action-bar__filter__item__geography__label']
 ${KU_W_usstock_fundList} =  xpath=//div[@class='b-us-stocks--widget-container']
@@ -143,10 +144,10 @@ ${KU_W_usstock_filterTitle} =  xpath=//div[@class='b-action-bar__filter__header_
 ${KU_W_usstock_header} =  xpath=//div[@class='b-us-stocks-widget__introduction__detail__title1']
 ${KU_W_usstock_subHeader} =  xpath=//div[@class='b-us-stocks-widget__introduction__detail__sign-up']
 
-${KU_W_saveSmartButton} =  xpath=//div[contains(@class,'save-smart-title')]
+${KU_W_saveSmartButton} =  xpath=//div[contains(text(),'SaveSmart')]
 ${KU_W_saveSmartTitle} =  xpath=//div[@class='b-save-smart-home__title']
 
-${KU_W_goldButton} =  xpath=//div[contains(text(),'Gold')]
+${KU_W_goldButton} =  xpath=(//div[contains(text(),'Gold')])[1]
 ${KU_W_goldTitle} =  xpath=//div[contains(@class,'b-gold-widget-content__title')]
 
 ${KU_W_cities_val} =  xpath=//div[@class='b-investment-count__count__cities__val']
@@ -209,5 +210,4 @@ ${KU_W_feature_th_screenTitle} =  xpath=//div[@class='paras-about-tax-harvesting
 ${KU_W_feature_ts_title} =  xpath=//div[@class='b-trade-smart__header__desc__title'] 
 ${KU_W_feature_fa_screenTitle} =  xpath=//h1[@class='b-family-account__what__heading']
 ${KU_W_feature_manageAccountTitle} =  xpath=//div[@class='b-manage-account__what']/h1
-${KU_W_feature_sg_screenTitle} =  xpath=//*[@class='goals-index col-sm-4']/h2
 ${KU_W_remit_screenTitle} =  xpath=//div[@class='b-introduction__desc']//div[2]

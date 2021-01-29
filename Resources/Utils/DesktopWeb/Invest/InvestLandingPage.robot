@@ -92,13 +92,7 @@ Verify PreLogin Invest Tiles
     Verify Element And Text  ${KU_W_52WHighUSTitle}  ${e_invest_52WHighUSTitleText} 
     Verify Element And Text  ${KU_W_52WHighUSSubTitle}  ${e_invest_52WHighUSSubTitleText}
     Verify PreLogin 52WkHigh US Landing Page
-    # Health Premium
-    Wait For Element Visibility  ${KU_W_healthPremiumTitle}
-    Verify Element And Text  ${KU_W_healthPremiumTitle}  ${e_invest_healthPremiumTitleText}  
-    Verify Element And Text  ${KU_W_checkPremiumBtn}  ${e_invest_checkPremiumSubText}
-    Click Element  ${KU_W_checkPremiumBtn} 
-    Verify Element And Text   ${KU_W_insureHeaderTitle}  ${e_insure_headerTitleText}
-    Go Back
+    # Explore More
     Scroll Untill View  ${KU_W_exploreMoreTitle}
     Verify Element And Text  ${KU_W_exploreMoreTitle}  ${e_invest_stock_exploreMoreTxt}
     
