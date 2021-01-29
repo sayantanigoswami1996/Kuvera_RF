@@ -56,7 +56,7 @@ Verify Mutual Fund Details Page
     Wait For Element Visibility  ${KU_W_invest_mf_widgetHeader}
     Verify Page Contains Element  ${KU_W_invest_mf_widgetHeader}
     Wait For Element Visibility  ${KU_W_invest_mf_sipAmountLabel}
-    Verify Element And Text  ${KU_W_invest_mf_sipAmountLabel}  ${e_invest_mf_sipAmountLabel}4
+    Verify Element And Text  ${KU_W_invest_mf_sipAmountLabel}  ${e_invest_mf_sipAmountLabel}
     Sleep  2s
     Wait For Element Visibility  ${KU_W_invest_mf_sipAmountTxt}
     Input Text  ${KU_W_invest_mf_sipAmountTxt}  ${e_invest_mf_sipAmount}
