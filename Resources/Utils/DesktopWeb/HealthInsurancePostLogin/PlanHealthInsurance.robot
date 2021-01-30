@@ -33,9 +33,9 @@ Verify PostLogin Add Family Details
     Wait And Click  ${KU_W_FM_dropdown}
     Click Element  ${KU_W_FM_daughter} 
     Wait And Click  ${KU_W_FM_DOB}
-    FOR  ${i}  IN RANGE  1   16
-        Click Element  ${KU_W_FM_monthOnCalendar}
-    END
+    Wait And Click  ${KU_W_FM_monthOnCalendar}
+    Wait And Click  ${KU_W_FM_rightArrow}
+    Wait And Click  ${KU_W_FM_birthMonth}
     Wait And Click  ${KU_W_FM_dateOnCalendar}
     Wait And Click  ${KU_W_postlogin_doneBtn} 
     Wait Scroll And Click Element  ${KU_W_postlogin_proceedBtn}
