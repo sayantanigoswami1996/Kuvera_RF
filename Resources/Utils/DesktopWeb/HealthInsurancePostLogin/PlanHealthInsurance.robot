@@ -33,7 +33,7 @@ Verify PostLogin Add Family Details
     Wait And Click  ${KU_W_FM_dropdown}
     Click Element  ${KU_W_FM_daughter} 
     Wait And Click  ${KU_W_FM_DOB}
-    FOR  ${i}  IN RANGE  1   15
+    FOR  ${i}  IN RANGE  1   16
         Click Element  ${KU_W_FM_monthOnCalendar}
     END
     Wait And Click  ${KU_W_FM_dateOnCalendar}
