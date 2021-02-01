@@ -3,29 +3,31 @@
 # Invest
 ${e_invest_saveSmartTitleText} =   SaveSmart
 ${e_invest_saveSmartSubText} =  Invest in low risk liquid funds and redeem upto ₹2 lakhs instantly
-${e_invest_giltFundsTitleText} =   Gilt Funds
+${e_invest_FDTitle} =  FD
+${e_invest_FDSubTitle} =  India's favorite saving instrument
+${e_invest_giltFundsTitleText} =   Gilt funds
 ${e_invest_giltFundsSubText} =  Invest in govt bonds. Zero credit risk, but have rate risk.
 ${e_invest_ultraShortTitleText} =  Ultra-short
 ${e_invest_ultraShortSubText} =  Park money for the short term
-${e_invest_bank&PSUTitleText} =  Bank & PSU Bonds
-${e_invest_ELSSTaxTitleText} =   ELSS Tax Saver
+${e_invest_bank&PSUTitleText} =  Bank & PSU bonds
+${e_invest_ELSSTaxTitleText} =   ELSS tax saver
 ${e_invest_ELSSTaxSubText} =  Save up to ₹46.8k in taxes.
-${e_invest_digitalGoldTitleText} =  Digital Gold
+${e_invest_digitalGoldTitleText} =  Digital gold
 ${e_invest_digitalGoldSubText} =  Diversify your portfolio with Gold.
 ${e_invest_USETFTitleText} =   US ETF
 ${e_invest_USETFSubText} =  Go global with direct US ETF investing. We make it easy and cheap.
-${e_invest_equityIndexTitleText} =  Equity Index
+${e_invest_equityIndexTitleText} =  Equity index
 ${e_invest_equityIndexSubText} =  Get index returns at low cost. 
-${e_invest_sectorFundsTitleText} =   Sector Funds 
+${e_invest_sectorFundsTitleText} =   Sector funds 
 ${e_invest_sectorFundsSubTitleText} =  Pharma, Tech & more
 ${e_invest_valueFundsTitleText} =   Value funds
 ${e_invest_valueFundsSubTitleText} =  Invest in stocks selling below their intrinsic or book value.
 ${e_invest_cryptoTitleText} =   Crypto
-${e_invest_cryptoSubTitleText} =  BTC, ETF et al. Join the crypto revolution
-${e_invest_52WHighIndiaTitleText} =   52 Wk High India
+${e_invest_cryptoSubTitleText} =  BTC, ETH et al. Join the crypto revolution
+${e_invest_52WHighIndiaTitleText} =   52 wk high India
 ${e_invest_52WHighIndiaSubTitleText} =  Momentum stocks in India
 ${e_invest_52WHighIndiaUS_screenText} =   52W high 
-${e_invest_52WHighUSTitleText} =   52 Wk High US
+${e_invest_52WHighUSTitleText} =   52 wk high US
 ${e_invest_52WHighUSSubTitleText} =  Momentum stocks in US
 ${e_invest_healthPremiumTitleText} =  Get ₹50L health cover starting at ₹900 p.m. T&C apply
 ${e_invest_checkPremiumSubText} =  Check premium     
@@ -61,6 +63,8 @@ ${e_invest_US_stocks_defaultFilter} =  Sector
 ${KU_W_investLink} =  xpath=//a[contains(text(),'Invest')]
 ${KU_W_invest_saveSmartTitle} =  xpath=(//div[@class='k-cls b-invest-card']/h6)[1]
 ${KU_W_invest_saveSmartSubTitle} =  xpath=(//div[@class='k-cls b-invest-card']/p)[1]
+${KU_W_FDTitle} =  xpath=//h6[contains(text(),'FD')]
+${KU_W_FDSubTitle} =  xpath=(//p[@class='b-invest-tile__para'])[2]
 ${KU_W_giltFundsTitle} =  xpath=(//div[@class='k-cls b-invest-card']/h6)[3]
 ${KU_W_giltFundsSubTitle} =  xpath=(//div[@class='k-cls b-invest-card']/p)[3]
 ${KU_W_ultraShortTitle} =  xpath=(//div[@class='k-cls b-invest-card']/h6)[2]
@@ -93,12 +97,11 @@ ${KU_W_checkPremiumBtn} =  xpath=//h6[contains(.,'Check premium')]
 ${KU_W_mutualFund} =  xpath=(//div[@class='b-asset-cta__title'])[1]
 ${KU_W_mutualFundScreen} =  xpath=(//div[@class='b-explore-fund__action-title'])[1]
 ${KU_W_digitalGold} =  xpath=(//*[contains(text(),'Digital')])[2]
-${KU_W_digitalGoldScreen} =  xpath=(//div[@class='b-asset-cta__title'])[2]
-${KU_W_stocks} =  xpath=(//div[@class='b-asset-cta__title'])[3]
+${KU_W_digitalGoldScreen} =  xpath=(//div[@class='b-asset-cta__title'])[3]
+${KU_W_stocks} =  xpath=(//*[contains(text(),'Stocks')])[2]
 ${KU_W_stocksScreen} =  xpath=(//div[@class='b-explore-stock__action-title'])[1]
-${KU_W_USStocks} =  xpath=(//div[@class='b-asset-cta__title'])[4]  
-${KU_W_saveSmart} =  xpath=(//div[@class='b-asset-cta__title'])[5]
-${KU_W_amazonSave} =  xpath=(//div[@class='b-asset-cta__title'])[6]
+${KU_W_USStocks} =  xpath=(//div[@class='b-asset-cta__title'])[5]  
+${KU_W_saveSmart} =  xpath=(//div[@class='b-asset-cta__title'])[6]
 ${KU_W_amazonSaveScreen} =  xpath=//div[@class='b-festive-fund-no-investment__text']
 ${KU_W_invest_sortYear} =  xpath=//div[@class='default-message']
 ${KU_W_stockAnd52WIndia_searchBar} =  xpath=(//div[@class='b-explore-stock__action-title'])[1]

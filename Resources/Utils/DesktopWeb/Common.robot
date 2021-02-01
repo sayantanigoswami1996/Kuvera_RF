@@ -18,6 +18,7 @@ Resource    ../../../AppLocators/DesktopWeb/InvestLocators/ValueFundsLocators.ro
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/ELSSTaxSaverLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/BankPSUBondsLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/CryptoLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/InvestLocators/FDLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/ELSSTaxSaverLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/USETFLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/UltraShortLocators.robot
@@ -26,12 +27,14 @@ Resource    ../../../AppLocators/DesktopWeb/InvestLocators/StocksLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/USStocksLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/FooterLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/FundHouseLocators.robot
+
 *** Keywords ***
 
 Launch URL
     Open Browser  ${URL}  ${BROWSER}  alias=Kuvera
     # Maximize Browser Window
     Set Window Size  ${1920}  ${1080}
+    Set Selenium Implicit Wait  90s
     Reload Page
     Kuvera Web Close Regulatory Disclosure
     Run Keyword If    '${ENV}' == '${e_prod}'  Close Hello Bar
@@ -42,7 +45,7 @@ Welcome Page Should Be Open
 
 Wait For Element Visibility
     [Arguments]  ${element}
-    Wait Until Element Is Visible  ${element}  timeout=60
+    Wait Until Element Is Visible  ${element}  timeout=90
 
 Verify Element And Text
     [Arguments]  ${element}  ${text}
@@ -139,11 +142,10 @@ Verify Google Play & Apple Store Icons
     Verify Page Contains Image  ${KU_W_android_image}
     Verify Page Contains Image  ${KU_W_apple_image}
 
-Verify Language Switch Login And Signup Link
-    Wait For Element Visibility  ${KU_W_langSwitch}
-    Verify Page Contains Element  ${KU_W_langSwitch}
+Verify Login And Signup Link
     Wait For Element Visibility  ${KU_W_login}
     Verify Element And Text  ${KU_W_login}  ${e_login}
+    Sleep  1s
     Wait For Element Visibility  ${KU_W_signup}
     Verify Element And Text  ${KU_W_signup}  ${e_signup}
 
@@ -199,6 +201,23 @@ Scroll And Wait
     Scroll Untill View  ${element}
     Sleep  1s
     Wait For Element Visibility  ${element}
-    
+
+Replace Characters
+    [Arguments]  ${text}  ${char1}  ${char2}
+    ${replacedString} =  Replace String  ${text}  ${char1}  ${char2}
+    [Return]  ${replacedString}
+
+Click Link And Switch Window
+    [Arguments]  ${websiteLink} 
+    Click Element  ${websiteLink}
+    Switch To Window
+    Sleep  2s  
+
+Navigate To Home Page
+    Go To  ${URL}
+    Set Window Size  ${1920}  ${1080}
+    Reload Page
+    Sleep  12s
+  
 Close Web Application
     Close All Browser

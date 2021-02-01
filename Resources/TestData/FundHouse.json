@@ -1,7 +1,7 @@
 {
     "FundHouse":{
-        "Adhitya Birla Sun Life":{
-        "fh1name": "ADITYA BIRLA SUN LIFE MUTUAL FUND",
+        "ADITYA BIRLA SUN LIFE":{
+        "fh1name":"ADITYA BIRLA SUN LIFE MUTUAL FUND",
         "fh1header":"Aditya Birla Sun Life AMC Limited (formerly known as Birla Sun Life Asset Management Company Limited), the investment manager of Aditya Birla Sun Life Mutual Fund is a joint venture between the Aditya Birla Group and Sun Life Financial Inc. of Canada.",
         "fh1RTA":"CAMS (Computer Age Management Services)",
         "fh1website":"https://mutualfund.adityabirlacapital.com/",
@@ -11,8 +11,8 @@
         "fh1investorlogin":"Aditya Birla Sun Life investors can login here.",
         "fh1fundmanaged":"Funds managed by Aditya Birla Sun Life"
         },
-        "Axis":{
-        "fh2name": "AXIS MUTUAL FUND",
+        "AXIS":{
+        "fh2name":"AXIS MUTUAL FUND",
         "fh2header":"Axis Mutual Fund launched its first scheme in October 2009 Since then Axis Mutual fund has grown strongly. We attribute our success thus far to our 3 founding principles - Long term wealth creation, Outside in (Customer) view and Long term relationship. Come join our growing family of investors and give shape to your desires.",
         "fh2RTA":"Karvy",
         "fh2website":"https://www.axismf.com/",
@@ -22,8 +22,8 @@
         "fh2investorlogin":"AXIS investors can login here.",
         "fh2fundmanaged":"Funds managed by AXIS"
         },
-        "Baroda":{
-        "fh3name": "BARODA MUTUAL FUND",
+        "BARODA":{
+        "fh3name":"BARODA MUTUAL FUND",
         "fh3header":"An investment manager dedicated to growing and preserving client assets and building trust. Since the formation of the joint venture in 2008, Baroda has have been working relentlessly to create an operational and servicing platform well suited to the exacting requirements of our existing and potential investors.",
         "fh3RTA":"Karvy",
         "fh3website":"https://www.barodamf.com/",
@@ -31,10 +31,11 @@
         "fh3phone":"022-30741000",
         "fh3email":"info@barodapioneer.in",
         "fh3investorlogin":"Baroda investors can login here.",
-        "fh3fundmanaged":"Funds managed by Baroda"
+        "fh3fundmanaged":"Funds managed by Baroda",
+        "fh3title":"Home | Welcome to Baroda Mutual Fund"
         },
-        "Bharti Axa":{
-        "fh4name": "BHARTI AXA MUTUAL FUND",
+        "BhARTI AXA":{
+        "fh4name":"BHARTI AXA MUTUAL FUND",
         "fh4header":"BOI AXA Investment Managers Private Limited is a joint venture between Bank of India and AXA Investment Managers, a part of AXA Group, one of the world’s largest players in the Financial Protection industry.Bank of India has over 5000 branches across India. Presently Bank of India has an overseas presence in 22 countries spread over 5 continents with 60 offices including 5 Subsidiaries, 5 Representative Offices and 1 Joint Venture.",
         "fh4RTA":"Karvy",
         "fh4website":"https://www.boiaxamf.com/",
@@ -42,8 +43,395 @@
         "fh4phone":"1800-266-2676",
         "fh4email":"service@boiaxa-im.com",
         "fh4investorlogin":"BHARTI AXA investors can login here.",
-        "fh4fundmanaged":"Funds managed by BHARTI AXA"
+        "fh4fundmanaged":"Funds managed by BHARTI AXA",
+        "fh4title":"BOI AXA Mutual Fund | Investing made Easy"
+        },
+        "BNP PARIBAS":{
+        "fh5name":"BNP PARIBAS MUTUAL FUND",
+        "fh5header":"BNP Paribas Asset Management is the dedicated asset management business line of BNP Paribas and backed by the financial strength of one of the best rated banks in the world. BNP Paribas Asset Management manages and advises assets of over EUR 565* bn across 30+ countries with significant presence in Europe, Asia and the Americas. It is among the leading asset managers in the world, offering one of the widest range of investment solutions in the industry.",
+        "fh5RTA":"Sundaram BNP Paribas Fund Services",
+        "fh5website":"https://www.bnpparibasmf.in/",
+        "fh5address":"BNP Paribas House, 3/1 North Avenue, Maker Maxity, Bandra Kurla Complex, Bandra (E) Mumbai 400051",
+        "fh5phone":"022-33704000",
+        "fh5email":"customer.care@bnpparibasmf.in",
+        "fh5investorlogin":"BNP PARIBAS investors can login here.",
+        "fh5fundmanaged":"Funds managed by BNP PARIBAS"
+        },
+        "CANARA ROBECO":{
+        "fh6name":"CANARA ROBECO MUTUAL FUND",
+        "fh6header":"Canara Robeco Mutual Fund is the second oldest Mutual Fund in India, established in December 1987 as Canbank Mutual Fund. Subsequently, in 2007, Canara Bank partnered with Robeco (now a part of ORIX Corporation, Japan) and the mutual fund was renamed as Canara Robeco Mutual Fund. Since then, it has consistently been one of the fastest growing mutual funds in India in terms of AuM. Our solutions offer a range of investment options, including diversified and thematic equity schemes, hybrid and monthly income funds and a wide range of debt and treasury products.",
+        "fh6RTA":"Karvy",
+        "fh6website":"https://www.canararobeco.com/",
+        "fh6address":"Construction House, 4th Floor, 5, Walchand Hirachand Marg, Ballard Estate, Mumbai 400 001",
+        "fh6phone":"022-66585000",
+        "fh6email":"crmf@canararobeco.com",
+        "fh6investorlogin":"Canara Robeco investors can login here.",
+        "fh6fundmanaged":"Funds managed by Canara Robeco"
+        },
+        "DSP":{
+        "fh7name":"DSP MUTUAL FUND",
+        "fh7header":"DSP Group is a 152 year old Indian financial firm. The DSP Group, headed by Mr. Hemendra Kothari, is one of the oldest and most respected financial services firms in India. The firm commenced its stock broking business in the 1860s and the family behind the group has been very influential in the growth and professionalization of capital markets and money management business in India.",
+        "fh7RTA":"Karvy",
+        "fh7website":"https://www.dspim.com/",
+        "fh7address":"Mafatlal Centre, 10th Floor, Nariman Point Mumbai 400021",
+        "fh7phone":"022-66578000",
+        "fh7email":"service@dspblackrock.com",
+        "fh7investorlogin":"DSP investors can login here.",
+        "fh7fundmanaged":"Funds managed by DSP"
+        },
+        "EDELWEISS":{
+        "fh8name":"EDELWEISS MUTUAL FUND",
+        "fh8header":"Edelweiss Asset Management Limited (EAML) is part of the Investment & Advisory line of Business of Edelweiss Group. EMAL is one of the fastest growing and young AMCs’ in India. At EAML, we want to do things differently which will add value to both our partners and investors.",
+        "fh8RTA":"Karvy",
+        "fh8website":"https://www.edelweissmf.com/",
+        "fh8address":"Edelweiss House Off. C.S.T Road, Kalina, Mumbai 400098",
+        "fh8phone":"022-40933400",
+        "fh8email":"emfhelp@edelweissfin.com",
+        "fh8investorlogin":"EDELWEISS investors can login here.",
+        "fh8fundmanaged":"Funds managed by EDELWEISS"
+        },
+        "ESSEL":{
+        "fh9name":"ESSEL MUTUAL FUND",
+        "fh9header":"Essel Group is one of India's leading private sector financial services company. As an umbrella brand for the financial businesses of the Essel Group, they offer a diverse range of products and services across corporate finance and retail segments. Their highly experienced and dedicated team is continually breaking new ground in advising clients on strategic transactions, in expanding to global finance and capital markets and in providing new opportunities to institutional and individual investors. The company strives to build sustainable wealth and relationships for its clients and stakeholders by investing in prudent human capital, extensive research and leveraging its vast global networks. Their long-term approach to client solutions is helping us redefine the meaning of financial services and rapidly expand in scope and size.",
+        "fh9RTA":"Karvy",
+        "fh9website":"https://mutualfund.esselfinance.com/",
+        "fh9address":"Peerless Mansion, 3rd Floor, 1, Chowringhee Square, Kolkata 700069.",
+        "fh9phone":"022-61779922",
+        "fh9email":"mutualfund@esselfinance.com",
+        "fh9investorlogin":"ESSEL investors can login here.",
+        "fh9fundmanaged":"Funds managed by ESSEL"
+        },
+        "FRANKLIN TEMPLETON":{
+        "fh10name":"FRANKLIN TEMPLETON MUTUAL FUND",
+        "fh10header":"Franklin Templeton's association with India dates back to over 2 decades as an investor. As part of the group's major thrust on investing in markets around the world, the India office was set up in 1996 as Templeton Asset Management India Pvt. Limited. It flagged off the mutual fund business with the launch of Templeton India Growth Fund in September 1996, and since then the business has grown at a steady pace.",
+        "fh10RTA":"Franklin Templeton International Services (India)",
+        "fh10website":"https://www.franklintempletonindia.com/investor/index",
+        "fh10address":"Indiabulls Finance Centre\nTower 2, 12th & 13th Floor\nS. B. Marg\nElphinstone Rd. (W) Mum.400013",
+        "fh10phone":"022-67519100",
+        "fh10email":"services@franklintempleton.com",
+        "fh10investorlogin":"Franklin Templeton investors can login here.",
+        "fh10fundmanaged":"Funds managed by Franklin Templeton"
+        },
+        "HDFC":{
+        "fh11name":"HDFC MUTUAL FUND",
+        "fh11header":"HDFC Mutual Fund is one of the largest mutual funds and well-established fund house in the country with focus on delivering consistent fund performance across categories since the launch of the first scheme(s) in July 2000.",
+        "fh11RTA":"CAMS (Computer Age Management Services)",
+        "fh11website":"https://www.hdfcfund.com/",
+        "fh11address":"HDFC House, 2nd Floor, H.T. Parekh Marg, 165-166, Backbay Reclamation, Churchgate, Mumbai 400020",
+        "fh11phone":"022-66316333",
+        "fh11email":"cliser@hdfcfund.com",
+        "fh11investorlogin":"HDFC investors can login here.",
+        "fh11fundmanaged":"Funds managed by HDFC"
+        },
+        "HSBC":{
+        "fh12name":"HSBC MUTUAL FUND",
+        "fh12header":"The mission of HSBC is to work with clients to meet their investment objectives, by delivering investment expertise in a tailored way. HSBC delivers on fiduciary responsibilities by managing risk as much as performance. They demonstrate their global investment expertise combined with strong governance as they collaborate with clients, aiming to help them grow and protect their assets.",
+        "fh12RTA":"CAMS (Computer Age Management Services)",
+        "fh12website":"https://www.assetmanagement.hsbc.co.in/en/mutual-funds",
+        "fh12address":"16, V N Road, Fort, Mumbai 400 001",
+        "fh12phone":"022-66145000",
+        "fh12email":"hsbcmf@camsonline.com",
+        "fh12investorlogin":"HSBC investors can login here.",
+        "fh12fundmanaged":"Funds managed by HSBC"
+        },
+        "ICICI PRUDENTIAL":{
+        "fh13name":"ICICI PRUDENTIAL MUTUAL FUND",
+        "fh13header":"ICICI Prudential Asset Management Company Ltd. is a leading asset management company (AMC) in the country focused on bridging the gap between savings & investments and creating long term wealth for investors through a range of simple and relevant investment solutions. The AMC is a joint venture between ICICI Bank, a well-known and trusted name in financial services in India and Prudential Plc, one of UK’s largest players in the financial services sectors. Throughout these years of the joint venture, the company has forged a position of pre-eminence in the Indian Mutual Fund industry.",
+        "fh13RTA":"CAMS (Computer Age Management Services)",
+        "fh13website":"https://www.icicipruamc.com/",
+        "fh13address":"One BKC, A-Wing, 13th Floor, Bandra Kurla Complex Mumbai 400051",
+        "fh13phone":"022-26525000",
+        "fh13email":"enquiry@icicipruamc.com",
+        "fh13investorlogin":"ICICI Prudential investors can login here.",
+        "fh13fundmanaged":"Funds managed by ICICI Prudential"
+        },
+        "IDBI":{
+        "fh14name":"IDBI MUTUAL FUND",
+        "fh14header":"IDBI Mutual Fund is sponsored by IDBI Bank Ltd. As one of India’s largest banks, IDBI Bank has played a major role in the country’s industrial & economic progress for over 40 years, first as a development financial institution & later as a full-fledged Commercial Bank.",
+        "fh14RTA":"Karvy",
+        "fh14website":"https://www.idbimutual.co.in/",
+        "fh14address":"5th floor, Mafatlal Centre, Nariman Point Mumbai - 400021",
+        "fh14phone":"022-66442800",
+        "fh14email":"contactus@idbimutual.co.in",
+        "fh14investorlogin":"IDBI investors can login here.",
+        "fh14fundmanaged":"Funds managed by IDBI"
+        },
+        "IDFC":{
+        "fh15name":"IDFC MUTUAL FUND",
+        "fh15header":"IDFC Ltd. is a leading diversified financial institution providing a wide range of financing products and fee-based services with infrastructure as its focus area. The key businesses of IDFC Ltd. included Project Finance, Principal Investments, Financial Markets and Investment Banking, Broking, Advisory Services and Asset Management, which comprises (i) private equity investments and project equity investments through its subsidiary, IDFC Alternatives Limited and (ii) public markets asset management services through its subsidiary IDFC AMC.",
+        "fh15RTA":"CAMS (Computer Age Management Services)",
+        "fh15website":"https://www.idfcmf.com/",
+        "fh15address":"Tower 1, 6th Floor, One IndiaBulls Centre, 841, S. B. Marg, Elphinstone Road (W), Mumbai - 400013",
+        "fh15phone":"022-66289999",
+        "fh15email":"investormf@idfc.com",
+        "fh15investorlogin":"IDFC investors can login here.",
+        "fh15fundmanaged":"Funds managed by IDFC"
+        },
+        "IIFL":{
+        "fh16name":"IIFL MUTUAL FUND",
+        "fh16header":"IIFL Asset Management offers uniquely structured products to cover diverse investment requirements of investors. Our mutual fund portfolio is concentrated on a few, high-quality, high-conviction stocks. This allows our fund managers to maintain focus and generate improved risk-adjusted returns. Having pioneered the concept of benchmark-agnostic funds in India, our fund managers function in an unconstrained but research-oriented manner. While traditional asset management companies are constrained by benchmarks, our benchmark-agnostic approach enables us to pick stocks with flexibility and tap into unique multi-baggers of the future.",
+        "fh16RTA":"CAMS (Computer Age Management Services)",
+        "fh16website":"https://www.iiflmf.com/",
+        "fh16address":"IIFL Centre, 6th Floor , Kamala City, Senapati Bapat Marg, Lower Parel, Mumbai - 400 013",
+        "fh16phone":"022-42499000",
+        "fh16email":"service@iiflmf.com",
+        "fh16investorlogin":"IIFL investors can login here.",
+        "fh16fundmanaged":"Funds managed by IIFL"
+        },
+        "INDIA BULLS":{
+        "fh17name":"INDIA BULLS MUTUAL FUND",
+        "fh17header":"Indiabulls Housing Finance Ltd. (IBHFL) is the 2nd largest private housing finance company in India, regulated by the National Housing Bank (NHB). IBHFL has fulfilled the dreams and aspirations of over 6.44 lac happy households with customer-centric finance solutions. IBHFL has the highest rating of AAA from CARE ratings and Brickwork ratings.",
+        "fh17RTA":"Karvy",
+        "fh17website":"http://www.indiabullsamc.com/",
+        "fh17address":"11th Floor, Tower-1, Indiabulls Finance Centre, S B Marg, Elphinstone (W), Mumbai -400013",
+        "fh17phone":"022-61891300",
+        "fh17email":"customercare@indiabullsamc.com",
+        "fh17investorlogin":"INDIA BULLS investors can login here.",
+        "fh17fundmanaged":"Funds managed by INDIA BULLS"
+        },
+        "INVESCO":{
+        "fh18name":"INVESCO MUTUAL FUND",
+        "fh18header":"Invesco offers a broad range of actively-managed, domestic, international/global, specialty and fixed-income mutual funds to help customize investors' portfolios to their unique needs.",
+        "fh18RTA":"Karvy",
+        "fh18website":"https://www.invescomutualfund.com/",
+        "fh18address":"Unit No. 2101 A, 21st Floor, A-Wing, Marathon Futurex, N. M. Joshi Marg, Lower Parel, Mumbai 400013",
+        "fh18phone":"022-67310000",
+        "fh18email":"mfservices@invesco.com",
+        "fh18investorlogin":"INVESCO investors can login here.",
+        "fh18fundmanaged":"Funds managed by INVESCO"
+        },
+        "ITI":{
+        "fh19name":"ITI MUTUAL FUND",
+        "fh19header":"ITI Mutual Fund aims to offer high-quality investment solutions to investors seeking long term wealth creation. We have access to some of the finest minds in the Investment Management, Equity Research and Credit Research space that enables us to run a very unique investment philosophy and also deploy robust investment strategies that can stand the test of time. The agility, no baggage and fresh perspective can help investors get ahead in a rapidly evolving economy.",
+        "fh19RTA":"",
+        "fh19website":"https://www.itimf.com/",
+        "fh19address":"",
+        "fh19phone":"1800-266-9603",
+        "fh19email":"",
+        "fh19investorlogin":"ITI investors can login here.",
+        "fh19fundmanaged":"Funds managed by ITI"
+        },
+        "JM FINANCIAL":{
+        "fh20name":"JM FINANCIAL MUTUAL FUND",
+        "fh20header":"JM Financial Asset Management Private Limited, the Asset Management Company of JM Financial Mutual Fund is sponsored by JM Financial Limited. JM Financial Asset Management Private Limited started operations in December 1994 with a simultaneous launch of three funds-JM Liquid Fund (now JM Income Fund), JM Equity Fund and JM Balanced Fund. Today, JM Financial Mutual Fund offers a bouquet of funds that caters to the diverse needs of both its institutional and individual investors",
+        "fh20RTA":"Karvy",
+        "fh20website":"https://www.jmfinancialmf.com/",
+        "fh20address":"Office B, 8th Floor, Cnergy, Appasaheb Marathe Marg, Prabhadevi, Mumbai - 400 025",
+        "fh20phone":"022-61987777",
+        "fh20email":"investor@jmfl.com",
+        "fh20investorlogin":"JM FINANCIAL investors can login here.",
+        "fh20fundmanaged":"Funds managed by JM FINANCIAL"
+        },
+        "KOTAK":{
+        "fh21name":"KOTAK MUTUAL FUND",
+        "fh21header":"Kotak Mahindra Asset Management Company Limited (KMAMC), a wholly owned subsidiary of Kotak Mahindra bank Limited (KMBL), is the Asset Manager for Kotak Mahindra Mutual Fund (KMMF). KMAMC started operations in December 1998 and has approximately 7.5 Lac investors in various schemes. KMMF offers schemes catering to investors with varying risk - return profiles and was the first fund house in the country to launch a dedicated gilt scheme investing only in government securities. The company is present in 82 cities and has 86 branches.",
+        "fh21RTA":"CAMS (Computer Age Management Services)",
+        "fh21website":"https://assetmanagement.kotak.com/",
+        "fh21address":"27 BKC, C-27, G Block, Bandra Kurla Complex, Bandra (E) Mumbai 400051",
+        "fh21phone":"022-66384444",
+        "fh21email":"fundaccops@kotakmutual.com",
+        "fh21investorlogin":"Kotak investors can login here.",
+        "fh21fundmanaged":"Funds managed by Kotak"
+        },
+        "L&T":{
+        "fh22name":"L&T MUTUAL FUND",
+        "fh22header":"L&T Finance Holdings Limited is a non-banking financial institution-core investment company. The Company's segments include Retail and Mid Market Finance, which consists of rural products finance, personal vehicle finance, microfinance, housing finance, commercial vehicle finance, construction equipment finance, loans and leases and loan against shares; Wholesale Finance, which consists of project finance and non-project corporate finance to infra and non-infra segments across power-thermal and renewable; transportation-roads, ports and airports; telecom, and other non-infra segments; Investment Management, which consists of assets management of mutual fund and private equity fund, and Other Business, which consists of wealth management and financial product distribution. It offers a range of financial products and services across retail, corporate, housing and infrastructure finance sectors, as well as mutual fund products and investment management services.",
+        "fh22RTA":"CAMS (Computer Age Management Services)",
+        "fh22website":"https://www.ltfs.com/companies/lnt-investment-management/lnt-mutual-fund.html",
+        "fh22address":"6th Floor, Brindavan, Plot No 177, CST Road, Kalina, Santacruz (E), Mumbai 400098",
+        "fh22phone":"022-66554000",
+        "fh22email":"investor.line@lntmf.co.in",
+        "fh22investorlogin":"L&T investors can login here.",
+        "fh22fundmanaged":"Funds managed by L&T"
+        },
+        "LIC":{
+        "fh23name":"LIC MUTUAL FUND",
+        "fh23header":"LIC Mutual Fund was established on 20th April 1989 by LIC of India. Being an associate company of India's premier and most trusted brand, LIC Mutual Fund is one of the well known players in the asset management sphere. With a systematic investment discipline coupled with a high standard of financial ethics and corporate governance, LIC Mutual Fund is emerging as a preferred Investment Manager amongst the investor fraternity.",
+        "fh23RTA":"Karvy",
+        "fh23website":"https://www.licmf.com/",
+        "fh23address":"4th Floor, Industrial Assurance Building Opp. Churchgate Station, Mumbai 400020",
+        "fh23phone":"022-66016000",
+        "fh23email":"cs.co@licmf.com",
+        "fh23investorlogin":"LIC investors can login here.",
+        "fh23fundmanaged":"Funds managed by LIC"
+        },
+        "MAHINDRA":{
+        "fh24name":"MAHINDRA MUTUAL FUND",
+        "fh24header":"Mahindra Mutual Fund has been constituted as a trust in accordance with the provisions of the Indian Trusts Act, 1882, as per the terms of the trust deed dated September 29, 2015 between the Mahindra and Mahindra Financial Services Limited as the Sponsor and Mahindra Trustee Company Private Limited, as the Trustee. The Trust Deed has been registered under the Indian Registration Act, 1908. Mahindra Mutual Fund has been registered with SEBI",
+        "fh24RTA":"CAMS (Computer Age Management Services)",
+        "fh24website":"https://www.mahindramutualfund.com/",
+        "fh24address":"1st Floor, Sadhana House, Behind Mahindra Tower, 570 P. B. Marg, Worli, Mumbai 400018",
+        "fh24phone":"022-66327900",
+        "fh24email":"mfinvestors@mahindra.com",
+        "fh24investorlogin":"MAHINDRA investors can login here.",
+        "fh24fundmanaged":"Funds managed by MAHINDRA"
+        },
+        "MIRAE ASSET":{
+        "fh25name":"MIRAE ASSET MUTUAL FUND",
+        "fh25header":"Established in November 2007 with a seed capital of US$ 50 million, Mirae Asset Mutual Fund is sponsored by Mirae Asset Global Investments Co. Limited, South Korea,Mirae Asset present in India as an FII since 2004, MAGI India provides Advisory Services to Hong Kong and Korea offices, Mix of domestic and International businesses providing stable growth for Mirae Asset India business",
+        "fh25RTA":"Karvy",
+        "fh25website":"https://www.miraeassetmf.co.in/",
+        "fh25address":"Unit 606, 6th Floor, Windsor, Off CST Road, Kalina, Santacruz (E), Mumbai 400098.",
+        "fh25phone":"022-67800300",
+        "fh25email":"customercare@miraeasset.com",
+        "fh25investorlogin":"Mirae Asset investors can login here.",
+        "fh25fundmanaged":"Funds managed by Mirae Asset"
+        },
+        "MOTILAL OSWAL":{
+        "fh26name":"MOTILAL OSWAL MUTUAL FUND",
+        "fh26header":"Motilal Oswal Asset Management Company Ltd. (MOAMC) is a public limited company incorporated under the Companies Act, 1956 on November 14, 2008.The AMC is also registered with SEBI under SEBI (Portfolio Managers) Regulations, 1993.There is no conflict of interest between the activity of managing the schemes of Motilal Oswal Mutual Fund and the activity of Portfolio Management Services.",
+        "fh26RTA":"Karvy",
+        "fh26website":"https://www.motilaloswalmf.com/",
+        "fh26address":"Motilal Oswal Tower, 10th Floor, Opp Parel ST Depot, Prabhadevi, Mumbai - 400025",
+        "fh26phone":"022-39804263",
+        "fh26email":"mfservice@motilaloswal.com",
+        "fh26investorlogin":"MOTILAL OSWAL investors can login here.",
+        "fh26fundmanaged":"Funds managed by MOTILAL OSWAL"
+        },
+        "NIPPON INDIA":{
+        "fh27name":"NIPPON INDIA MUTUAL FUND",
+        "fh27header":"Nippon India Mutual Fund (NIMF) is one of India's leading mutual funds, with Average Assets Under Management (AAUM) of Rs 2,22,575.73 Crores (April 2019 - June 2019 QAAUM) and 88.65 lakhs folios (as on June 30, 2019). NIMF, which is one of the fastest growing mutual funds in India, offers investors a well-rounded portfolio of products to meet varying investor requirements and has presence in 300 cities (as on March 31, 2019) across the country. NIMF constantly endeavours to launch innovative products and customer service initiatives to increase value to investors.",
+        "fh27RTA":"Karvy",
+        "fh27website":"https://www.nipponindiamf.com/",
+        "fh27address":"Reliance Centre, 7th Floor South Wing, Off Western Express Highway, Santacruz (E), Mumbai-400055",
+        "fh27phone":"1860-266-0111",
+        "fh27email":"customercare@nipponindiamf.com",
+        "fh27investorlogin":"Nippon India investors can login here.",
+        "fh27fundmanaged":"Funds managed by Nippon India"
+        },
+        "PGIM INDIA":{
+        "fh28name":"PGIM INDIA MUTUAL FUND",
+        "fh28header":"DHFL was founded in 1984 by Late Shri Rajesh Kumar Wadhawan with a vision to provide financial access to the lower and middle income segments of the society. Today, led by Mr. Kapil Wadhawan, CMD, DHFL, the Company is one of India's leading mortgage finance institutions with presence in over 351 locations across the country",
+        "fh28RTA":"Karvy",
+        "fh28website":"http://www.dhflpramericamf.com/",
+        "fh28address":"Nirlon House, 2nd Floor, Dr. Annie Besant Road, Worli, Mumbai - 400 030",
+        "fh28phone":"022-61593000",
+        "fh28email":"customercare@dhflpramericamf.com",
+        "fh28investorlogin":"PGIM India investors can login here.",
+        "fh28fundmanaged":"Funds managed by PGIM India"
+        },
+        "PPFAS":{
+        "fh29name":"PPFAS MUTUAL FUND",
+        "fh29header":"PPFAS Asset Management (PPFAS AMC) has been promoted by Parag Parikh Financial Advisory Services Pvt. Ltd. (PPFAS Ltd.), a boutique investment advisory firm incorporated in 1992. PPFAS Ltd. is also amongst India's earliest SEBI Registered Portfolio Management Service (PMS) providers.We believe that investing should not be a complicated process. Hence we strive for simplicity in our scheme design, investing process and our operations. While investing involves individuals, we accord more importance to the investing process than to personalities.",
+        "fh29RTA":"CAMS (Computer Age Management Services)",
+        "fh29website":"http://www.amc.ppfas.com",
+        "fh29address":"81/82, 8th Floor, Sakhar Bhavan, Ramnath Goenka Marg, 230, Nariman Point, Mumbai 400021",
+        "fh29phone":"022-61406555",
+        "fh29email":"priyah@ppfas.com",
+        "fh29investorlogin":"PPFAS investors can login here.",
+        "fh29fundmanaged":"Funds managed by PPFAS"
+        },
+        "PRINCIPAL":{
+        "fh30name":"PRINCIPAL MUTUAL FUND",
+        "fh30header":"We are part of the Principal Financial Group -- a global investment management leader headquartered in Des Moines, Iowa, US. In India, we bring on board the financial strength and global experience of over 140 years in asset accumulation of Principal Financial Group.",
+        "fh30RTA":"Karvy",
+        "fh30website":"https://www.principalindia.com/",
+        "fh30address":"Exchange Plaza, Grd Floor, B Wing, NSE Building, Bandra Kurla Complex, Bandra(East), Mumbai - 400051",
+        "fh30phone":"022-67720555",
+        "fh30email":"customer@principalindia.com",
+        "fh30investorlogin":"Principal investors can login here.",
+        "fh30fundmanaged":"Funds managed by Principal"
+        },
+        "QUANT":{
+        "fh31name":"QUANT MUTUAL FUND",
+        "fh31header":"quant Group was born more than a decade ago, as a financial services platform in the midst of the 2008 Global Financial Crisis, with two simple yet powerful guiding mantras – Being Relevant and Predictive Analytics. The guiding philosophy of Being Relevant means that in a dynamic and volatile world, to remain relevant, and to preserve and grow wealth, the test of time must be passed every day by continuously updating knowledge and innovating on systems and processes. This is enabled by Predictive Analytics: an all-encompassing framework for understanding and forecasting markets, across assets and geographies.",
+        "fh31RTA":"",
+        "fh31website":"http://www.quantmutual.com/",
+        "fh31address":"quant Money Managers Ltd. 6th Floor, Sea Breeze Building, Appasaheb Marathe Marg, Prabhadevi Mumbai - 400 025",
+        "fh31phone":"022-6295-5000",
+        "fh31email":"help.investor@quant.in",
+        "fh31investorlogin":"QUANT investors can login here.",
+        "fh31fundmanaged":"Funds managed by QUANT"
+        },
+        "QUANTUM":{
+        "fh32name":"QUANTUM MUTUAL FUND",
+        "fh32header":"Quantum Mutual Fund is India's first dedicated, direct-to-investor mutual fund. Quantum Mutual Fund offers simple and easy-to-understand products.With our focus on ethics, integrity and transparency and on managing assets instead of merely gathering them Quantum Mutual Fund walks a different path as compared to the rest. It could be our total focus on doing what's right for the investor or keeping our costs low, Quantum has chosen to walk the untrodden path, not even the less trodden",
+        "fh32RTA":"Karvy",
+        "fh32website":"https://www.quantumamc.com/",
+        "fh32address":"7th Floor, Hoechst House, Nariman Point, Mumbai 400021",
+        "fh32phone":"022-61447800",
+        "fh32email":"customercare@quantumamc.com",
+        "fh32investorlogin":"QUANTUM investors can login here.",
+        "fh32fundmanaged":"Funds managed by QUANTUM"
+        },
+        "SBI":{
+        "fh33name":"SBI MUTUAL FUND",
+        "fh33header":"With 30 years of rich experience in fund management, we at SBI Funds Management Pvt. Ltd. bring forward our expertise by consistently delivering value to our investors. We have a strong and proud lineage that traces back to the State Bank of India (SBI) - India's largest bank. We are a Joint Venture between SBI and AMUNDI (France), one of the world's leading fund management companies.With our network of over 222 points of acceptance across India, we deliver value and nurture the trust of our vast and varied family of investors.",
+        "fh33RTA":"CAMS (Computer Age Management Services)",
+        "fh33website":"https://www.sbimf.com/en-us",
+        "fh33address":"9th Floor, Crescenzo, C-38 & 39, G Block, Bandra Kurla Complex, Bandra (East), Mumbai 400051",
+        "fh33phone":"022-61793000",
+        "fh33email":"partnerforlife@sbimf.com",
+        "fh33investorlogin":"SBI investors can login here.",
+        "fh33fundmanaged":"Funds managed by SBI"
+        },
+        "SUNDARAM":{
+        "fh34name":"SUNDARAM MUTUAL FUND",
+        "fh34header":"Sundaram Asset Management Company (Company) has over 20 years of experience in fund management and is a fully owned subsidiary of one of India's oldest and most respected NBFCs - Sundaram Finance Limited. The Company was jointly promoted by Sundaram Finance Ltd and Stewart Newton Holdings (Mauritius) Ltd in 1996.",
+        "fh34RTA":"Sundaram BNP Paribas Fund Services",
+        "fh34website":"https://www.sundarammutual.com/Home",
+        "fh34address":"Sundaram Towers, 2nd Floor,46 Whites Road, Royapettah, Chennai 600 014.",
+        "fh34phone":"044-28583362 / 3367",
+        "fh34email":"dhirent@sundarammutual.com",
+        "fh34investorlogin":"SUNDARAM investors can login here.",
+        "fh34fundmanaged":"Funds managed by SUNDARAM"
+        },
+        "TATA":{
+        "fh35name":"TATA MUTUAL FUND",
+        "fh35header":"Established in 1994, Tata Asset Management has a track record of more than 24 years in investment management. Tata Asset Management manages investments of Tata Mutual Fund.The company offers a range of investment solutions for financial planning and wealth creation and manages funds across the entire risk-return spectrum. The diversity of our fund offerings enables investors to invest as per their life stage, financial goals and risk profile. The company also offers portfolio management services to high net worth individuals and advisory services to offshore investors and funds investing in India.",
+        "fh35RTA":"CAMS (Computer Age Management Services)",
+        "fh35website":"http://www.tatamutualfund.com/",
+        "fh35address":"Mafatlal Centre, 9th Floor, Nariman Point Mumbai 400021",
+        "fh35phone":"022-66578282",
+        "fh35email":"service@tataamc.com",
+        "fh35investorlogin":"TATA investors can login here.",
+        "fh35fundmanaged":"Funds managed by TATA"
+        },
+        "TAURUS":{
+        "fh36name":"TAURUS MUTUAL FUND",
+        "fh36header":"Taurus Mutual Fund offers investment solutions for all investor segments. With Equity oriented schemes, Debt based schemes and an Equity Linked Savings Scheme, in the open ended product basket, Taurus Mutual Fund continuously strives to strengthen its offerings with more & more innovative schemes designed on the basis of years of expertise, market knowledge & research.",
+        "fh36RTA":"Karvy",
+        "fh36website":"https://www.taurusmutualfund.com/",
+        "fh36address":"Ground Floor,AML Centre-1,8 Mahal Industrial Estate Mahakali Caves Rd., Andheri(E) Mumbai - 400093",
+        "fh36phone":"022-66242700",
+        "fh36email":"customercare@taurusmutualfund.com",
+        "fh36investorlogin":"TAURUS investors can login here.",
+        "fh36fundmanaged":"Funds managed by TAURUS"
+        },
+        "UNION":{
+        "fh37name":"UNION MUTUAL FUND",
+        "fh37header":"Union KBC Asset Management Company Private Limited (the AMC) offers approved investment funds, open-ended equity funds and other structured products, so as to bridge the gap of investor's financial needs. The AMC will leverage on KBC Asset Management's expertise in the global fund markets and KBC Asset Management's Joint Support Model with Union Bank of India’s unrivalled brand value, knowledge of their customers and extensive network, which will represent the perfect blend of ingredients to create a strong asset management business in India.",
+        "fh37RTA":"CAMS (Computer Age Management Services)",
+        "fh37website":"http://www.unionmf.com/",
+        "fh37address":"Unit No. 503, 5th Floor, Leela Business Park, Andheri Kurla Road, Andheri (East) Mumbai - 400059",
+        "fh37phone":"022-24833300",
+        "fh37email":"investorcare@unionmf.com",
+        "fh37investorlogin":"Union investors can login here.",
+        "fh37fundmanaged":"Funds managed by Union"
+        },
+        "UTI":{
+        "fh38name":"UTI MUTUAL FUND",
+        "fh38header":"UTI AMC, India’s most trusted Wealth creators and always has the interest of its investors in its heart. UTI AMC has completed 50 years as India’s leading Financial service institution and was a sole vehicle of capital market investment for Indian Citizens till the early 90’s. The institution has shown great resilience and has grown from strength to strength overcoming economic turbulence and global turnarounds. UTI has contributed immensely to industrial and capital growth in the Indian market. It has led transformative initiatives like developmental financial institutions, rural outreach programs and financial products and services. UTI AMC has assets under management across different businesses which include domestic mutual fund, Portfolio Management Services, International business, Retirement Solutions, Venture Funds and Alternative Investment assets.",
+        "fh38RTA":"Karvy",
+        "fh38website":"https://www.utimf.com/",
+        "fh38address":"UTI Towers, Gn Block, Bandra Kurla Complex, Bandra East, Mumbai 400051",
+        "fh38phone":"022-66786666",
+        "fh38email":"service@uti.co.in",
+        "fh38investorlogin":"UTI investors can login here.",
+        "fh38fundmanaged":"Funds managed by UTI"
+        },
+        "YES":{
+        "fh39name":"YES MUTUAL FUND",
+        "fh39header":"YES ASSET Management (India) Limited, a fully owned subsidiary of YES BANK, will seek to build a strong Mutual Fund Franchise to provide a complete suite of financial products to all its investors.YES Asset Management, driven by the motto \"Experience our Expertise\", combines your interests and our relentless endeavours to bring out the optimum solutions for you.YES Asset Management has been set up with an investor centric approach, simplifying investors’ wealth creation goals through knowledge-based investment practices and prudent risk management.",
+        "fh39RTA":"CAMS (Computer Age Management Services)",
+        "fh39website":"https://www.yesbank.in/personal-banking/yes-individual/wealth-management/mutual-funds",
+        "fh39address":"602 B, 6th Floor, Indiabulls Finance Centre, Senapati Bapat Marg, Elphinstone (West), Mumbai 400013",
+        "fh39phone":"022-40827600",
+        "fh39email":"clientservice@yesamc.in",
+        "fh39investorlogin":"YES investors can login here.",
+        "fh39fundmanaged":"Funds managed by YES"
         }
+    
 
     }
 }

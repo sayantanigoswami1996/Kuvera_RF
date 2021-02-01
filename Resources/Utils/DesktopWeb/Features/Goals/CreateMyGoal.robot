@@ -13,8 +13,7 @@ Verify Create My Goal Questionnaire
     ${query5}  Get Json Values  $.Questionnaire..g8q5  Resources/TestData/Questionnaire.json
     ${query6}  Get Json Values  $.Questionnaire..g8q6  Resources/TestData/Questionnaire.json
     
-    Wait For Element Visibility  ${KU_W_feature_sg_createMyOwn}
-    Click Element  ${KU_W_feature_sg_createMyOwn}
+    Wait Scroll And Click Element  ${KU_W_feature_sg_createMyOwn}
     Wait For Element Visibility  ${KU_W_feature_sg_questionScreen}
 
     # Verify the questionnaires title and enter the input values
@@ -24,5 +23,5 @@ Verify Create My Goal Questionnaire
     Verify Question And Enter Input  ${KU_W_feature_sg_Q4}  ${query4}  ${KU_W_feature_sg_costTxt}  ${e_feature_sg8_cost}
     Verify Question And Enter Input  ${KU_W_feature_sg_Q5}  ${query5}  ${KU_W_feature_sg_goalDurationTxt}  ${e_feature_sg8_goalDuration}
     Verify Question And Enter Input  ${KU_W_feature_sg_Q6}  ${query6}  ${KU_W_feature_sg_investUpfrontTxt}  ${e_feature_sg8_investUpfront}
-    Verify Recommendation And Navigation  ${KU_W_feature_sg_stableIncome}  ${KU_W_feature_sg_haveFds}  ${KU_W_feature_sg_haveEquityInvestments} 
+    Verify Recommendation And Navigation  ${KU_W_feature_sg_stableIncome}  
     Go Back

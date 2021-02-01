@@ -4,10 +4,11 @@ Library     SeleniumLibrary
 
 *** Keywords ***
 
-Verify Mutual Fund Landing Page
+Verify PreLogin Mutual Fund Landing Page
     Log To Console  Mutual Fund
     Navigate To Invest Page And Verify Explore Options  ${KU_W_mutualFund}  ${e_invest_mf_titleText} 
-    Verify Language Switch Login And Signup Link
+    Sleep  1s
+    Verify Login And Signup Link
     Wait For Element Visibility  ${KU_W_invest_mf_fundName}
     Verify Page Contains Element  ${KU_W_invest_mf_growthDividendButton}
     # Iterate the Mutual Fund detail screen
@@ -32,7 +33,7 @@ Verify Mutual Fund Details Page
     [Arguments]  ${fund}
     Wait For Element Visibility  ${fund}
     Click Element  ${fund}
-    Verify Language Switch Login And Signup Link
+    Verify Login And Signup Link
     Wait For Element Visibility  ${KU_W_invest_mf_watchlistButton}
     Verify Page Contains Element  ${KU_W_invest_mf_watchlistButton}
     Verify Watchlist Icon  ${KU_W_invest_mf_watchlistButton}
@@ -56,10 +57,13 @@ Verify Mutual Fund Details Page
     Verify Page Contains Element  ${KU_W_invest_mf_widgetHeader}
     Wait For Element Visibility  ${KU_W_invest_mf_sipAmountLabel}
     Verify Element And Text  ${KU_W_invest_mf_sipAmountLabel}  ${e_invest_mf_sipAmountLabel}
+    Sleep  2s
+    Wait For Element Visibility  ${KU_W_invest_mf_sipAmountTxt}
     Input Text  ${KU_W_invest_mf_sipAmountTxt}  ${e_invest_mf_sipAmount}
     Wait Scroll And Click Element  ${KU_W_invest_mf_investNowButton}
     Verify Login Page
     Verify Element And Text  ${KU_W_invest_mf_lumpsumAmountLabel}  ${e_invest_mf_lumpsumAmountLabel}
+    Wait For Element Visibility  ${KU_W_invest_mf_lumpsumAmountTxt}
     Input Text  ${KU_W_invest_mf_lumpsumAmountTxt}  ${e_invest_mf_lumpsumAmount}
     Wait Scroll And Click Element  ${KU_W_invest_mf_addToCartButton}
     Verify Login Page
