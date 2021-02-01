@@ -5,40 +5,32 @@ Library     JsonValidator
 Library     AppiumLibrary
 Resource   ../../../AppLocators/Android/CommonAppLocators.robot
 
+
 *** Keywords ***
-
-
 Begin Mobile Test Kuvera
-                      Open Application                  ${server}                       platformName=${platform}    platformVersion=${platform_version}    deviceName=${device}    automationName=${appium}    appActivity=${app_activity}    appPackage=${app_package}
-                      Wait For Element Visbility        ${KU_slider1}
-#app=${rd_apkPath}    appActivity=${rd_app_activity}    appPackage=${rd_app_package}
-
-Get Json Values
-    [Arguments]     ${jsonPath}            ${jsonFilePath}
-    ${jsonFile}     Load JSON From File    ${jsonFilePath}
-    ${jsonValue}    Get Value From Json    ${jsonFile}        ${jsonPath}
-    [Return]        ${jsonValue}
+    Open Application    ${remote_URL}    app=bs://dcdb86b0a23f09ef2292af860651970aa207d38b  name=Launch_Test   build=RobotFramework    platformName=Android    os_version=9.0    device=Google Pixel 3
 
 Skip Sliders
-    Click Element                    ${KU_slider5}
-    Click Element                    ${KU_slider1}
-    Wait Until Element Is Visible    ${KU_skip}
-    Click Element                    ${KU_skip}
+    Click Element  ${KU_A_slider5}
+    Click Element  ${KU_A_slider1}
+    Wait Until Element Is Visible  ${KU_A_skip}
+    Click Element  ${KU_A_skip}
 
 Kuvera Logo Click
-    Wait Until Element Is Visible    ${KU_logo}
-    Click Element                    ${KU_logo}
-    Wait Until Element Is Visible    ${KU_close}
-    Click Element                    ${KU_close}
+    Wait Until Element Is Visible  ${KU_A_logo}
+    Click Element  ${KU_A_logo}
+    Wait Until Element Is Visible  ${KU_A_close}
+    Click Element  ${KU_A_close}
 
-# Move To Explore Funds
-#     Get Source
-#     Swipe By Percent    50                    80    50    60
-#     Get Source
-#     sleep       10
-#     Get Source
-#     Click Button          Explore ELSS funds
-
+Verify Navigation to SaveSmart Page
+    Click Element  ${KU_A_hamburgerMenu}
+    Wait Until Page Contains Element  ${KU_A_investMenu}  timeout=60s
+    Click Element  ${KU_A_investMenu}
+    Wait Until Page Contains Element  ${KU_A_savesmartTiles}  timeout=60s
+    Click Element  ${KU_A_savesmartTiles}
+    Wait Until Page Contains Element  ${KU_A_savesmartHeader}  timeout=60s
+    Element Should Contain Text  ${KU_A_savesmartHeader}  ${e_A_savesmartHeader}
+    Click Element  ${KU_A_logo}
 
 Quit Kuvera Application
     Quit Application
