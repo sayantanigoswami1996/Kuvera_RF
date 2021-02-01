@@ -1,7 +1,7 @@
 *** Settings ***
 
-Resource    ../../Resources/Utils/DesktopWeb/Common.robot
 Resource    ../../Resources/Utils/DesktopWeb/LandingPage.robot
+Resource    ../../Resources/Utils/DesktopWeb/Common.robot
 Resource    ../../Resources/Utils/DesktopWeb/Login.robot
 Resource    ../../Resources/Utils/DesktopWeb/Signup.robot
 Resource    ../../Resources/Utils/DesktopWeb/Invest/InvestLandingPage.robot
