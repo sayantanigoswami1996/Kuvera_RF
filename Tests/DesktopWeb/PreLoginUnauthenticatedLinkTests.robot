@@ -5,8 +5,8 @@ Resource    ../../Tests/DesktopWeb/Import.robot
 Suite Setup  Launch URL 
 Suite Teardown  Close All Browsers
 
-#To run all tests: robot --variable URL:https://staging2.kuvera.in/#/ --variable BROWSER:headlesschrome -d Results Tests/DesktopWeb/PreLoginUnautheticatedLinkTests.robot
-#To run specific test: robot --variable URL:https://staging2.kuvera.in/#/ --variable BROWSER:headlesschrome -d Results  -i TC01 Tests/DesktopWeb/PreLoginUnauthenticatedLinkTests.robot
+#To run all tests: robot --variable URL:https://staging2.kuvera.in/ --variable BROWSER:headlesschrome --variable ENV:stage -d Results  Tests/DesktopWeb/PreLoginUnauthenticatedLinkTests.robot
+#To run specific test: robot --variable URL:https://staging2.kuvera.in/ --variable BROWSER:headlesschrome --variable ENV:stage -d Results -i TC01 Tests/DesktopWeb/PreLoginUnauthenticatedLinkTests.robot
 
 *** Test Cases ***
 # Unauthenticated Links - Liquid Fund

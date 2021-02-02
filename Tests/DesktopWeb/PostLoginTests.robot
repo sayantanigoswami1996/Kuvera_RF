@@ -6,8 +6,8 @@ Suite Setup  Launch URL
 Test Teardown  Logout From App And Navigate To Home Page PostLogin
 Suite Teardown  Close All Browsers
 
-#To run all tests: robot --variable URL:https://staging3.kuvera.in/#/ --variable BROWSER:headlesschrome -d Results Tests/DesktopWeb/PostLoginTests.robot
-#To run specific test: robot --variable URL:https://staging3.kuvera.in/#/ --variable BROWSER:headlesschrome -d Results  -i TC01 Tests/DesktopWeb/PostLoginTests.robot
+#To run all tests: To run all tests:robot --variable URL:https://staging3.kuvera.in/ --variable BROWSER:headlesschrome --variable ENV:stage -d Results  Tests/DesktopWeb/PostLoginTests.robot
+#To run specific test: robot --variable URL:https://staging3.kuvera.in/ --variable BROWSER:headlesschrome --variable ENV:stage -d Results -i TC01 Tests/DesktopWeb/PostLoginTests.robot
 
 *** Test Cases ***
 # Account Creation and Fill In KYC From Dashboard

@@ -2,13 +2,14 @@
 
 # Desired Capabilities
 ${server} =  http://localhost:4723/wd/hub
-${platform} =  Android
-${platform_version} =  9
-${device} =  vivo1916
 ${app_package} =  com.gooogle.android.kuvera.app
 ${app_activity} =  com.gooogle.android.kuvera.app.MainActivity
 ${appium} =  appium
 ${apkPath} =  Resources/APK/Kuvera-prod-1.169.1.apk
+# Browserstack Credentials
+${browserstack_userName}    prathijaetagi1
+${browserstack_accessKey}   DGf3ooYqqLBLwyPYgAo1
+${remote_URL}    http://${browserstack_userName}:${browserstack_accessKey}@hub.browserstack.com:80/wd/hub
 
 # Application Expected Values 'e_<VariableName>'
 ${e_signupLink} =  Sign up
@@ -54,6 +55,7 @@ ${KU_A_MFSubTitle} =  xpath=//*[@text='First free direct mutual fund investing p
 ${KU_A_loginLink} =  xpath=//*[@text='Log in']
 ${KU_A_loginTitle} =  xpath=//*[@text='Login. Start Investing.']
 ${KU_A_signupTitle} =  xpath=//*[@text='Sign Up. Start Investing.']
+${KU_A_signupBtn} =  xpath=(//*[@text='Sign up'])[2]
 ${KU_A_croreAUALabel} =  xpath=//*[@text='Crore AUA']
 ${KU_A_croreAUAVal} =  xpath=//*[@text='₹ 18,000']
 ${KU_A_goalsLabel} =  xpath=//*[@text='Goals']
@@ -75,4 +77,4 @@ ${KU_A_MF_subcategoryVal} =  xpath=//*[@text='All']
 ${KU_A_MF_fundName} =  xpath=//*[@text='Mirae Asset Emerging Bluechip Growth Direct Plan']
 ${KU_A_MF_watchListBtn} =  xpath=//*[@text='watchlist-unselected-blue']
 ${KU_A_MF_exploreMFLink} =  xpath=//*[@text='Explore mutual funds']
-${KU_A_MF_faqBotBtn} =  id=faq-bot-button
+${KU_A_MF_faqBotBtn} =  xpath=//*[@resource-id='faq-bot-codestart-id']

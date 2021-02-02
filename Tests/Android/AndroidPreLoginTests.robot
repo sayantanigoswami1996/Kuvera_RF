@@ -5,11 +5,11 @@ Library     JsonValidator
 
 Resource    ../../Tests/Android/A_Import.robot
 
-Suite Setup  Begin Mobile Test Kuvera
+Suite Setup  Launch Kuvera Android App
 Suite Teardown  Quit Kuvera Application
 
-#robot -d Results Tests/Android/PreLoginTests.robot
-#robot -d Results -L Debug    -i order Tests
+#To run all tests : robot --variable platform:Android --variable platform_version:${version} --variable device:${devicename} -d Results  Tests/Android/AndroidPreLoginTests.robot
+#To run specific test:  robot --variable platform:Android --variable platform_version:${version} --variable device:${devicename} -d Results -i TC01 Tests/Android/AndroidPreLoginTests.robot
 
 
 *** Test Cases ***
@@ -19,4 +19,7 @@ Landing Page Widgets Verification on Android
     [Tags]  TC01 
     Verify PreLogin Landing Page Widgets
 
-
+# Menu Navigation verfication on Android - Insure
+Menu Naviagation Verification on Android
+    [Tags]  TC02
+    Verify PreLogin Insure Page
