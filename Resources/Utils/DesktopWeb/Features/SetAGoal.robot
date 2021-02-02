@@ -88,5 +88,12 @@ Verify Recommendation And Navigation
     Verify Element And Text  ${KU_W_feature_sg_getThisPlan}  ${e_feature_sg_getThisPlan}
     Click Button  ${KU_W_feature_sg_getThisPlan}
     Sleep  2s
+    ${isElementVisible} =  Run Keyword And Return Status  Visibility Of Signup Page
+    Run Keyword If   ${isElementVisible}  Log To Console  Continue
+    ...    ELSE  Click Button  ${KU_W_feature_sg_getThisPlan}
     Verify Signup Page
     Navigate To Features Goals  
+
+Visibility Of Signup Page
+    Wait For Element Visibility  ${KU_W_signupPageTitle}
+    Element Should Be Visible  ${KU_W_signupPageTitle}
