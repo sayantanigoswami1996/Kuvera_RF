@@ -9,9 +9,16 @@ Resource   ../../../AppLocators/Android/A_MenuNavigationLocators.robot
 *** Keywords ***
 
 Launch Kuvera Android App
-    Open Application  ${server}  platformName=${platform}  platformVersion=${platform_version}  deviceName=${device}  automationName=${appium}  appActivity=${app_activity}  appPackage=${app_package}
+    Run Keyword If    '${environmentToRunTest}'=='${e_realDevice}'  Open Kuvera App On Real Device
+    ...     ELSE IF   '${environmentToRunTest}'=='${e_browserstackDevice}'  Open Kuvera App On Browserstack
     Wait Until Page Contains Element  ${KU_A_slider1}
     Navigate to Landing Page
+
+Open Kuvera App On Browserstack
+    Open Application  ${remote_URL}  app=bs://c9ea03eb5649b488f8c692af206f916e40904608  name=PreloginTests   build=RobotFramework    platformName=Android    os_version=9.0    device=Google Pixel 3  
+
+Open Kuvera App On Real Device
+    Open Application  ${server}  platformName=${platform}  platformVersion=${platform_version}  deviceName=${device}  automationName=${appium}  appActivity=${app_activity}  appPackage=${app_package}
 
 Verify Element And Text On Android
     [Arguments]  ${element}  ${text}
@@ -75,6 +82,12 @@ Verify Navigation to SaveSmart Page
 Navigate to Landing Page 
     Skip Sliders
     Kuvera Logo Click
+
+Navigate To Various Links Under Hamburger Menu
+    [Arguments]  ${hamburgerMenu}  ${links}  ${linkText}
+    Wait And Click Element On Android  ${hamburgerMenu}
+    Wait And Verify Element And Text On Android  ${links}  ${linkText}
+    Wait And Click Element On Android  ${links}
 
 Verify Signup Link And Kuvera Logo
     Wait And Verify Element And Text On Android  ${KU_A_signupLink}  ${e_signupLink}

@@ -7,11 +7,13 @@ ${app_activity} =  com.gooogle.android.kuvera.app.MainActivity
 ${appium} =  appium
 ${apkPath} =  Resources/APK/Kuvera-prod-1.169.1.apk
 # Browserstack Credentials
-${browserstack_userName}    prathijaetagi1
-${browserstack_accessKey}   DGf3ooYqqLBLwyPYgAo1
+${browserstack_userName}    sayantanigoswami3
+${browserstack_accessKey}   4vxxLyC8jKmbV77szpuB
 ${remote_URL}    http://${browserstack_userName}:${browserstack_accessKey}@hub.browserstack.com:80/wd/hub
 
 # Application Expected Values 'e_<VariableName>'
+${e_realDevice} =  Local
+${e_browserstackDevice} =  Browserstack
 ${e_signupLink} =  Sign up
 ${e_MFLabel} =  Mutual Funds
 ${e_MFTitle} =  Investments Simplified
@@ -37,9 +39,6 @@ ${e_MF_categoryLabel} =  Category
 ${e_MF_subcategoryLabel} =  Sub Category
 ${e_MF_categoryVal} =  Equity
 ${e_MF_subcategoryVal} =  All
-
-${e_goldLabel} =  Gold
-${e_goldTitle} =  Buying gold has never been this simple!
 
 # Application Locator 'KU_<locatorName>'
 ${KU_A_slider5} =  xpath=//*[@text="Go to slide 5"]

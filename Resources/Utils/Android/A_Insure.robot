@@ -5,9 +5,7 @@ Library     AppiumLibrary
 *** Keywords ***
 
 Verify PreLogin Insure Page
-    Wait And Click Element On Android  ${KU_A_hamburgerMenu}
-    Wait And Verify Element And Text On Android  ${KU_A_insureLink}  ${e_insureLink}
-    Wait And Click Element On Android  ${KU_A_insureLink}
+    Navigate To Various Links Under Hamburger Menu  ${KU_A_hamburgerMenu}  ${KU_A_insureLink}  ${e_insureLink}
     Wait And Verify Element And Text On Android  ${KU_A_insurePageTitle}  ${e_insurePageTitle}
     Verify Signup Link And Kuvera Logo
     Verify Page Contains Element On Android  ${KU_A_insure_imgIcon}
@@ -15,18 +13,16 @@ Verify PreLogin Insure Page
     Wait And Click Element On Android  ${KU_A_insure_premiumBtn}
     Verify Group Health Insurance Popup
     Verify Treatment Cost Table
-    Swipe  550  550  150  150  2000
+    Swipe By Percent  75  75  25  25  2000
     Wait And Verify Element And Text On Android  ${KU_A_insure_bhartiAxaTitle}  ${e_insure_bhartiAxaTitle} 
     Wait And Verify Element And Text On Android  ${KU_A_insure_bhartiAxaSubTitle}  ${e_insure_bhartiAxaSubTitle}
     Verify Page Contains Element On Android  ${KU_A_insure_bhartiAxaList}
-    Swipe  550  550  150  150  2000
     Wait And Verify Element And Text On Android  ${KU_A_insure_everythingUNeed}  ${e_insure_everythingUNeed} 
     Wait And Verify Element And Text On Android  ${KU_A_insure_gotYouCovered}  ${e_insure_gotYouCovered}
 
-    
-    
+       
 Verify Group Health Insurance Popup
-    Swipe  550  550  150  150  2000
+    Swipe By Percent  55  55  15  15  2000
     Verify Page Contains Element On Android  ${KU_A_insure_grpHealthInusreImg}
     Wait And Verify Element And Text On Android  ${KU_A_insure_grpHealthInsureTitle}  ${e_insure_grpHealthInsureTitle}
     Wait And Verify Element And Text On Android  ${KU_A_insure_grpHealthInsurePoint1}  ${e_insure_grpHealthInsurePoint1}
@@ -40,7 +36,7 @@ Verify Group Health Insurance Popup
     Verify Login Page
 
 Verify Treatment Cost Table
-    Swipe  550  550  150  150  2000
+    Swipe By Percent  55  55  15  15  2000
     Wait And Verify Element And Text On Android  ${KU_A_insure_understandCost}  ${e_insure_understandCost}
     Wait And Verify Element And Text On Android  ${KU_A_insure_treatmentTitle}  ${e_insure_treatmentTitle}
     Wait And Verify Element And Text On Android  ${KU_A_insure_estCostTitle}  ${e_insure_estCostTitle}
