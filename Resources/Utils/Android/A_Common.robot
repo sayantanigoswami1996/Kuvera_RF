@@ -15,7 +15,7 @@ Launch Kuvera Android App
     Navigate to Landing Page
 
 Open Kuvera App On Browserstack
-    Open Application  ${remote_URL}  app=bs://c9ea03eb5649b488f8c692af206f916e40904608  name=PreloginTests   build=RobotFramework    platformName=Android    os_version=9.0    device=Google Pixel 3  
+    Open Application  ${remote_URL}  app=bs://8098d7fc1261aeda85b18ab4d25a8dafa0c0f199  name=PreloginTests   build=RobotFramework    platformName=Android    os_version=9.0    device=Google Pixel 3  
 
 Open Kuvera App On Real Device
     Open Application  ${server}  platformName=${platform}  platformVersion=${platform_version}  deviceName=${device}  automationName=${appium}  appActivity=${app_activity}  appPackage=${app_package}
@@ -107,11 +107,11 @@ Verify Login And Signup Button
 
 Verify Signup Page
     Wait And Verify Element And Text On Android  ${KU_A_signupTitle}  ${e_signupTitle}
-    Go Back
+    Wait And Click Element On Android  ${KU_A_logo}
 
 Verify Login Page
     Wait And Verify Element And Text On Android  ${KU_A_loginTitle}  ${e_loginTitle}
-    Go Back
+    Wait And Click Element On Android  ${KU_A_logo}
 
 Verify Widgets And Title
     [Arguments]  ${label}  ${labelText}  ${title}  ${titleText}
