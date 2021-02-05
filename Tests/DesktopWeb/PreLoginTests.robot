@@ -10,6 +10,7 @@ Suite Teardown  Close All Browsers
 #To run specific test: robot --variable URL:https://kuvera.in/ --variable BROWSER:headlesschrome -d Results  -i TC01 Tests/DesktopWeb/PreLoginTests.robot
 
 *** Test Cases ***
+
 # Landing Page widgets verfication
 Landing Page Widgets Verification
     [Tags]  TC01 
