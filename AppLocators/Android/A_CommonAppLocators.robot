@@ -61,7 +61,7 @@ ${e_gold_enterGmLabel} =  Enter Grams
 ${e_gold_gramValue} =  1
 ${e_gold_comingSoon} =  Coming soon: Gold gifting & delivery.
 ${e_gold_purchaseT&C} =  *Purchased gold can be sold after 7 days.
-
+${e_gold_screenTitle} =  Buy 24K 99.9% pure digital gold - easily and securely.
 
 # Application Locator 'KU_<locatorName>'
 ${KU_A_slider5} =  xpath=//*[@text="Go to slide 5"]

@@ -110,8 +110,9 @@ Verify Gold Widgets
     Sleep  2s
     Wait And Click Element On Android  ${KU_A_gold_enterGmLabel}
     Sleep  1s
-    Input Text  ${KU_A_inputField}  ${e_gold_gramValue}
     Go Back
+    Input Text  ${KU_A_inputField}  ${e_gold_gramValue}
+    Sleep  1s
     Wait And Click Element On Android  ${KU_A_gold_buyNowBtn}
     Verify Login Page
     Wait And Click Element On Android  ${KU_A_goldLabel}
