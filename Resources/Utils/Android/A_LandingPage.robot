@@ -18,6 +18,7 @@ Verify PreLogin Landing Page Widgets
     Verify Mutual Fund Widgets
 
 Verify Mutual Fund Widgets
+    Log To Console  Mutual Fund
     Wait And Verify Element And Text On Android  ${KU_A_MFLabel}  ${e_MFLabel}
     Wait And Click Element On Android  ${KU_A_MFLabel}
     Wait And Verify Element And Text On Android  ${KU_A_MFTitle}  ${e_MFTitle}
@@ -42,6 +43,7 @@ Verify Mutual Fund Widgets
     Click On Explore Button And Verify Navigated Page  ${KU_A_MF_exploreMFBtn}  ${KU_A_MF_allFundsLabel}  ${e_MF_allFundsLabel}  ${KU_A_logo}    
 
 Verify Stock Widgets
+    Log To Console  Stocks
     Wait And Verify Element And Text On Android  ${KU_A_stocksTitle}  ${e_stocksLabel}
     Verify Page Contains Element On Android  ${KU_A_stocksImg}
     Swipe By Percent  30  30  10  10  900
@@ -51,7 +53,8 @@ Verify Stock Widgets
     Swipe By Percent  85  85  50  50  900
     Click On Explore Button And Verify Navigated Page  ${KU_A_stocks_exploreStocksBtn}  ${KU_A_stocks_allStocksTab}  ${e_stocks_allStocksTab}  ${KU_A_logo} 
     
-Verify US Stocks Widgets    
+Verify US Stocks Widgets   
+    Log To Console  USStocks 
     Wait And Verify Element And Text On Android  ${KU_A_USStocksSubTitle1}  ${e_USStocksSubTitle1}
     Verify Page Contains Element On Android  ${KU_A_USStocks_imgIcon}
     Verify Page Contains Element On Android  ${KU_A_USStocks_vestedImg}
@@ -70,11 +73,12 @@ Verify US Stocks Widgets
     Click On Explore Button And Verify Navigated Page  ${KU_A_USStocks_exploreUSStocksBtn}  ${KU_A_USStocks_allUSStocksTab}  ${e_USStocks_allUSStocksTab}  ${KU_A_logo}
 
 Verify SaveSmart Widgets
+    Log To Console  SaveSmart 
     Wait And Verify Element And Text On Android  ${KU_A_savesmartSubTitle}  ${e_savesmartSubTitle}
     Swipe By Percent  50  50  20  20  900
     Wait And Verify Element And Text On Android  ${KU_A_SS_startSaveSmart}  ${e_SS_startSaveSmart}
-    Wait And Click Element On Android  ${KU_A_SS_amountField}
-    Input Text  ${KU_A_SS_amountField}  ${e_SS_amount}
+    Wait And Click Element On Android  ${KU_A_inputField}
+    Input Text  ${KU_A_inputField}  ${e_SS_amount}
     Go Back
     Wait And Click Element On Android  ${KU_A_button}
     Verify Login Page
@@ -83,6 +87,7 @@ Verify SaveSmart Widgets
     Click On Explore Button And Verify Navigated Page  ${KU_A_SS_exploreSSBtn}  ${KU_A_SS_screenTitle}  ${e_SS_screenTitle}  ${KU_A_logo}
     
 Verify Gold Widgets
+    Log To Console  Gold 
     Wait And Verify Element And Text On Android  ${KU_A_goldSubTitle}  ${e_goldSubTitle}
     Swipe By Percent  70  70  30  30  900
     Wait And Verify Element And Text On Android  ${KU_A_gold_buyRateLabel}  ${e_gold_buyRateLabel} 
@@ -105,8 +110,8 @@ Verify Gold Widgets
     Sleep  2s
     Wait And Click Element On Android  ${KU_A_gold_enterGmLabel}
     Sleep  1s
-    Wait For Element Visibility On Android  ${KU_A_gold_gramOption}
-    Wait And Click Element On Android  ${KU_A_gold_gramOption}
+    Input Text  ${KU_A_inputField}  ${e_gold_gramValue}
+    Go Back
     Wait And Click Element On Android  ${KU_A_gold_buyNowBtn}
     Verify Login Page
     Wait And Click Element On Android  ${KU_A_goldLabel}

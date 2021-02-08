@@ -7,8 +7,8 @@ ${app_activity} =  com.gooogle.android.kuvera.app.MainActivity
 ${appium} =  appium
 ${apkPath} =  Resources/APK/Kuvera-prod-1.169.1.apk
 # Browserstack Credentials
-${browserstack_userName}    sayantanigoswami3
-${browserstack_accessKey}   4vxxLyC8jKmbV77szpuB
+${browserstack_userName}    dishumdishum1
+${browserstack_accessKey}   eysiYdZbsWSMWb6wuSYq
 ${remote_URL}    http://${browserstack_userName}:${browserstack_accessKey}@hub.browserstack.com:80/wd/hub
 
 # Application Expected Values 'e_<VariableName>'
@@ -58,6 +58,7 @@ ${e_gold_liveGoldValue} =  4,914.52
 ${e_gold_unit} =  /gm
 ${e_gold_enterAmtLabel} =   Enter Amount
 ${e_gold_enterGmLabel} =  Enter Grams
+${e_gold_gramValue} =  1
 ${e_gold_comingSoon} =  Coming soon: Gold gifting & delivery.
 ${e_gold_purchaseT&C} =  *Purchased gold can be sold after 7 days.
 
@@ -106,7 +107,7 @@ ${KU_A_savesmartLabel} =  xpath=//*[@text='SaveSmart']
 ${KU_A_savesmartTitle} =  xpath=//*[@text='Best deposit account in India!']
 ${KU_A_savesmartSubTitle} =  xpath=//*[@text='Higher returns, instant withdrawal, better than any savings account.']
 ${KU_A_SS_startSaveSmart} =  xpath=//*[@text='Start SaveSmart today']
-${KU_A_SS_amountField} =  xpath=//*[@class='android.widget.EditText']
+${KU_A_inputField} =  xpath=//*[@class='android.widget.EditText']
 ${KU_A_SS_exploreSSBtn} =  xpath=//*[@text='Explore SaveSmart']
 ${KU_A_SS_screenTitle} =  xpath=//*[@text='The smart way to save!']
 ${KU_A_button} =  xpath=//*[@class='android.widget.Button']

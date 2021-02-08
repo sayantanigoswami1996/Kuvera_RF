@@ -15,7 +15,7 @@ Launch Kuvera Android App
     Navigate to Landing Page
 
 Open Kuvera App On Browserstack
-    Open Application  ${remote_URL}  app=bs://8098d7fc1261aeda85b18ab4d25a8dafa0c0f199  name=PreloginTests   build=RobotFramework    platformName=Android    os_version=9.0    device=Google Pixel 3  
+    Open Application  ${remote_URL}  app=bs://bf9436214f3a86de6f03e9f7abbe5bb5ac9dd576  name=PreloginTests   build=RobotFramework    platformName=Android    os_version=9.0    device=Google Pixel 3  
 
 Open Kuvera App On Real Device
     Open Application  ${server}  platformName=${platform}  platformVersion=${platform_version}  deviceName=${device}  automationName=${appium}  appActivity=${app_activity}  appPackage=${app_package}
