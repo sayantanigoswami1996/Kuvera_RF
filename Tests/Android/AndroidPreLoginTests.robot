@@ -24,9 +24,14 @@ Landing Page Widgets Verification on Android
 # Menu Navigation verfication on Android - Insure
 Menu Navigation Verification on Android
     [Tags]  TC02
-    Verify PreLogin Insure Page
+    Verify Android PreLogin Insure Page
    
 # Menu Navigation verfication on Android - Loans
 Menu Navigation Verification on Android
     [Tags]  TC03
-    Verify PreLogin Loans Page
+    Verify Android PreLogin Loans Page
+
+# Menu Navigation verfication on Android - Remit
+Menu Navigation Verification on Android
+    [Tags]  TC04
+    Verify Android PreLogin Remit Page

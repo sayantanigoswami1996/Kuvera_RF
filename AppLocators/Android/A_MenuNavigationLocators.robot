@@ -48,6 +48,18 @@ ${e_loans_charges} =  Charges
 ${e_loans_highlyFlexibleTitle} =  Highly flexible
 ${e_loans_highlyFlexibleSubTitle} =  Repay your outstanding loan, in full or in parts, anytime during the loan period.
 
+# Remit
+${e_remitLink} =  Remit
+${e_remitTitle} =  A cheaper & faster way to send money home
+${e_remitSubTitle} =  Now invest easily through Kuvera, or send money to your loved ones. With our partner TransferWise, you can transfer money to India for the lowest-cost. It is simple and faster than any traditional provider.
+${e_remit_tansferwiseScreenTitle} =  A cheaper, smarter alternative to international bank transfers.
+${e_remit_whyTransferWise} =  Why TransferWise?
+
+${e_remit_transferWisePoint1} =  No hidden fees
+${e_remit_transferWisePoint2} =  Up to 8x cheaper than banks
+${e_remit_transferWisePoint3} =  Trusted by 7 million users
+
+
 # Application Locator 'KU_<locatorName>'
 # Insure 
 ${KU_A_insureLink} =  xpath=//*[@text='Insure']
@@ -112,3 +124,34 @@ ${KU_A_loans_personalEMIVal} =  xpath=//*[@text='₹6,933']
 ${KU_A_loans_portfolioChargesVal} =  xpath=//*[@text='₹1,999']
 ${KU_A_loans_portfolioEMIVal} =  xpath=//*[@text='₹1,750']
 ${KU_A_loans_portfolioIntVal} =  xpath=//*[@text='10.50%']
+
+# Remit
+${KU_A_remitLink} =  xpath=//*[@text='Remit']
+${KU_A_remitTitle} =  xpath=//*[@text='A cheaper & faster way to send money home']
+${KU_A_remitSubTitle} =  xpath=//*[@text='Now invest easily through Kuvera, or send money to your loved ones. With our partner TransferWise, you can transfer money to India for the lowest-cost. It is simple and faster than any traditional provider.']
+${KU_A_remit_imgIcon} =  xpath=(//*[@class='android.widget.Image'])[3]
+${KU_A_remit_kuveraLogoImg} =  xpath=(//*[@text='kuvera-logo-dark'])[2]
+${KU_A_remit_transferwiseImg} =  xpath=//*[@text='transferwise-logo']
+${KU_A_remit_transferNowBtn} =  xpath=//*[@text='Transfer now']
+${KU_A_remit_sendMoneyBtn} =  xpath=//*[@text='Send money']
+${KU_A_remit_conitnueBtn} =  xpath=//*[@text='Continue']
+${KU_A_remit_nextStepsTitle} =  xpath=//*[@text='Next steps']
+${KU_A_remit_nextStepsSubTitle} =  xpath=//*[@text='Transfer online in under 5 minutes.']
+${KU_A_remit_step1} =  xpath=//*[@text='Step 1']
+${KU_A_remit_step1Desc} =  xpath=//*[@text='Register with Transferwise. It is required by regulation.']
+${KU_A_remit_step2} =  xpath=//*[@text='Step 2']
+${KU_A_remit_step2Desc} =  xpath=//*[@text='Enter your transfer amount']
+${KU_A_remit_step3} =  xpath=//*[@text='Step 3']
+
+
+${KU_A_remit_step3Desc} =  xpath=//*[@text='Add your bank details']
+${KU_A_remit_step4} =  xpath=//*[@text='Step 4']
+${KU_A_remit_step4Desc} =  xpath=//*[@text='Pay for your transfer and you are done!']
+${KU_A_remit_transferwiseScreenTitle} =  xpath=//*[@text='A cheaper, smarter alternative to international bank transfers.']
+${KU_A_remit_whyTransferWise} =  xpath=//*[@text='Why TransferWise?']
+${KU_A_remit_whyTransferWisePoint1} =  xpath=//*[@text='No hidden fees']
+${KU_A_remit_whyTransferWisePoint2} =  xpath=//*[@text='Up to 8x cheaper than banks']
+${KU_A_remit_whyTransferWisePoint3} =  xpath=//*[@text='Trusted by 7 million users']
+${KU_A_remit_noHiddenFeesImg} =  xpath=//*[@text='no_hidden_fee']
+${KU_A_remit_8TimesCheaperImg} =  xpath=//*[@text='8_times_cheaper']
+${KU_A_remit_trustedCustomersImg} =  xpath=//*[@text='trusted_customers']

@@ -11,7 +11,7 @@ Resource   ../../../AppLocators/Android/A_MenuNavigationLocators.robot
 Launch Kuvera Android App
     Run Keyword If    '${environmentToRunTest}'=='${e_realDevice}'  Open Kuvera App On Real Device
     ...     ELSE IF   '${environmentToRunTest}'=='${e_browserstackDevice}'  Open Kuvera App On Browserstack
-    Wait Until Page Contains Element  ${KU_A_slider1}
+    Wait For Element Visibility On Android  ${KU_A_slider1}
     Navigate to Landing Page
 
 Open Kuvera App On Browserstack
@@ -46,6 +46,7 @@ Get Json Values
 
 Verify Page Contains Element On Android
     [Arguments]  ${element}
+    Wait For Element Visibility On Android  ${element}
     Run Keyword And Continue On Failure  Page Should Contain Element  ${element}
 
 Scroll Down On Android
@@ -57,17 +58,17 @@ Verify Presence Of Bot Button
     Wait For Element Visibility On Android  ${element}
     Verify Page Contains Element On Android  ${element}
 
-Get Json Values
+Get Json Values On Android
     [Arguments]  ${jsonPath}  ${jsonFilePath}
     ${jsonFile}  Load JSON From File  ${jsonFilePath}
     ${jsonValue}  Get Value From Json  ${jsonFile}  ${jsonPath}
     [Return]  ${jsonValue}
 
 Skip Sliders
-    Click Element  ${KU_A_slider5}
-    Click Element  ${KU_A_slider1}
-    Wait For Element Visibility On Android  ${KU_A_skip}
-    Click Element  ${KU_A_skip}
+    Wait And Click Element On Android  ${KU_A_slider5}
+    Wait And Click Element On Android  ${KU_A_slider1}
+    Sleep  2s
+    Wait And Click Element On Android  ${KU_A_skip}
 
 Kuvera Logo Click
     Wait And Click Element On Android  ${KU_A_logo}

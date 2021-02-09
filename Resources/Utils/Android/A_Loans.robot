@@ -4,11 +4,12 @@ Library     AppiumLibrary
 
 *** Keywords ***
 
-Verify PreLogin Loans Page
+Verify Android PreLogin Loans Page
     Log To Console  Loans
     Navigate To Various Links Under Hamburger Menu  ${KU_A_loansLink}  ${e_loansLink}
     Wait And Verify Element And Text On Android  ${KU_A_loansTitle}  ${e_loansTitle}
     Wait And Verify Element And Text On Android  ${KU_A_loansSubTitle}  ${e_loansSubTitle}
+    Verify Signup Link And Kuvera Logo
     Wait For Element Visibility On Android  ${KU_A_loans_imgIcon}
     Verify Page Contains Element On Android  ${KU_A_loans_imgIcon}
     Wait And Verify Element And Text On Android  ${KU_A_loans_eligibilityBtn}   ${e_loans_eligibilityBtn}
@@ -24,7 +25,7 @@ Verify PreLogin Loans Page
     Verify Page Contains Element On Android  ${KU_A_loans_highlyFlexibleImg}
     Wait And Verify Element And Text On Android  ${KU_A_loans_highlyFlexibleTitle}  ${e_loans_highlyFlexibleTitle}
     Wait And Verify Element And Text On Android  ${KU_A_loans_highlyFlexibleSubTitle}  ${e_loans_highlyFlexibleSubTitle}
-
+    Verify Presence Of Bot Button  ${KU_A_faqBotBtn} 
 
 Verify Affordable Loan Section
     Wait And Verify Element And Text On Android  ${KU_A_loans_affordableLoanTitle}  ${e_loans_affordableLoanTitle}

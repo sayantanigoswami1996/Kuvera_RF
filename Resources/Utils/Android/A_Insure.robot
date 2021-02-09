@@ -4,7 +4,7 @@ Library     AppiumLibrary
 
 *** Keywords ***
 
-Verify PreLogin Insure Page
+Verify Android PreLogin Insure Page
     Log To Console  Insure
     Navigate To Various Links Under Hamburger Menu  ${KU_A_insureLink}  ${e_insureLink}
     Wait And Verify Element And Text On Android  ${KU_A_insurePageTitle}  ${e_insurePageTitle}
@@ -15,15 +15,18 @@ Verify PreLogin Insure Page
     Verify Group Health Insurance Popup
     Navigate To Various Links Under Hamburger Menu  ${KU_A_insureLink}  ${e_insureLink}
     Verify Treatment Cost Table
+    Sleep  2s
     Swipe By Percent  75  75  25  25  2000
     Wait And Verify Element And Text On Android  ${KU_A_insure_bhartiAxaTitle}  ${e_insure_bhartiAxaTitle} 
     Wait And Verify Element And Text On Android  ${KU_A_insure_bhartiAxaSubTitle}  ${e_insure_bhartiAxaSubTitle}
     Verify Page Contains Element On Android  ${KU_A_insure_bhartiAxaList}
     Wait And Verify Element And Text On Android  ${KU_A_insure_everythingUNeed}  ${e_insure_everythingUNeed} 
     Wait And Verify Element And Text On Android  ${KU_A_insure_gotYouCovered}  ${e_insure_gotYouCovered}
+    Verify Presence Of Bot Button  ${KU_A_faqBotBtn} 
 
        
 Verify Group Health Insurance Popup
+    Sleep  2s
     Swipe By Percent  55  55  15  15  2000
     Verify Page Contains Element On Android  ${KU_A_insure_grpHealthInusreImg}
     Wait And Verify Element And Text On Android  ${KU_A_insure_grpHealthInsureTitle}  ${e_insure_grpHealthInsureTitle}
@@ -40,6 +43,7 @@ Verify Group Health Insurance Popup
     Verify Login Page On Android App
 
 Verify Treatment Cost Table
+    Sleep  2s
     Swipe By Percent  55  55  15  15  2000
     Wait And Verify Element And Text On Android  ${KU_A_insure_understandCost}  ${e_insure_understandCost}
     Wait And Verify Element And Text On Android  ${KU_A_insure_treatmentTitle}  ${e_insure_treatmentTitle}
