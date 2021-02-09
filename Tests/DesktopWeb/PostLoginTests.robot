@@ -22,4 +22,8 @@ Health Insurance Navigation
     Verify PostLogin Account Creation
     Verify PostLogin Insure Landing Page
     Verify PostLogin Add Family Details
+<<<<<<< HEAD
     Login And Verify Policy Details
+=======
+    Login And Verify Policy Details
+>>>>>>> 853c3891511c8605474d57229fc076245f4f8cc4

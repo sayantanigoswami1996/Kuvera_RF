@@ -28,8 +28,25 @@ ${e_insure_MFSubTitle} =  Sub Category
 ${e_insure_MFSubTitle} =  Equity
 ${e_insure_MFSubTitle} =  All
 # Loans
-${e_goldLabel} =  Gold
-${e_goldTitle} =  Buying gold has never been this simple!
+${e_loansLink} =  Loans
+${e_loansTitle} =  Get an instant loan backed by your portfolio
+${e_loansSubTitle} =  Let your investments work for you. The only loan account you'll ever need.
+${e_loans_eligibilityBtn} =  Check your eligibility
+${e_loans_affordableLoanTitle} =  An affordable loan
+${e_loans_affordableLoanSubTitle} =  up to 80% of your mutual fund portfolio.
+${e_loans_affordableLoanPoint1} =  MF units remain secure with the fund house.
+${e_loans_affordableLoanPoint2} =  No fixed loan period. A 1yr loan auto renews on the 12th month.
+${e_loans_affordableLoanPoint3} =  Loan starting from ₹25,000 up to ₹10cr.
+${e_loans_affordableLoanPoint4} =  Full disclosure. No hidden fees.
+${e_loans_checkSavings} =  Check your savings over 3 years.
+${e_loans_savingAmt} =  200000
+${e_loans_portfolioTitle} =  Loan against Portfolio
+${e_loans_personalLoanTitle} =  Personal Loan
+${e_loans_monthlyEMI} =  Monthly EMI
+${e_loans_interest} =  Interest
+${e_loans_charges} =  Charges
+${e_loans_highlyFlexibleTitle} =  Highly flexible
+${e_loans_highlyFlexibleSubTitle} =  Repay your outstanding loan, in full or in parts, anytime during the loan period.
 
 # Application Locator 'KU_<locatorName>'
 # Insure 
@@ -67,19 +84,31 @@ ${KU_A_insure_everythingUNeed} =  xpath=//android.view.View[@text='Everything yo
 ${KU_A_insure_gotYouCovered} =  xpath=//*[@text='We’ve got you covered']
 
 # Loans
-${KU_A_loanLink} =  xpath=//*[@text='Insure']
-${KU_A_insure_heartSurgeryImg} =  xpath=(//*[@text='insurance-landing-page-img__cost-details'])[3]
-${KU_A_insure_kneeReplacementImg} =  xpath=(//*[@text='insurance-landing-page-img__cost-details'])[4]
-${KU_A_insure_covid19} =  xpath=//*[@text=' COVID-19']
-${KU_A_insure_cancer} =  xpath=//*[@text=' Cancer care']
-${KU_A_insure_heartSurgery} =  xpath=//*[@text=' Open heart surgery']
-${KU_A_insure_kneeReplacement} =  xpath=//*[@text=' Knee replacement']
-${KU_A_insure_covidCost} =  xpath=//*[@text='₹8L']
-${KU_A_insure_cancerCost} =  xpath=//*[@text='₹25L']
-${KU_A_insure_heartSurgeryCost} =  xpath=//*[@text='₹20L']
-${KU_A_insure_kneeReplacementCost} =  xpath=//*[@text='₹4.5L']
-${KU_A_insure_bhartiAxaTitle} =  xpath=//*[@text='Thus we built a Group health insurance with Bharti AXA GIC']
-${KU_A_insure_bhartiAxaSubTitle} =  xpath=//*[@text='that works for you and your loved ones by keeping:']
-${KU_A_insure_bhartiAxaList} =  xpath=//*[@class='android.widget.ListView']
-${KU_A_insure_everythingUNeed} =  xpath=//*[@text='Everything you’d need']
-${KU_A_insure_gotYouCovered} =  xpath=//*[@text='We’ve got you covered']
+${KU_A_loansLink} =  xpath=//*[@text='Loans']
+${KU_A_loansTitle} =  xpath=//*[@text='Get an instant loan backed by your portfolio']
+${KU_A_loansSubTitle} =  xpath=//*[@text=concat('Let your investments work for you. The only loan account you', "'", 'll ever need.')]
+${KU_A_loans_imgIcon} =  xpath=//*[@text='las-landing']
+${KU_A_loans_eligibilityBtn} =  xpath=//*[@text='Check your eligibility']
+${KU_A_loans_affordableLoanTitle} =  xpath=//*[@text='An affordable loan']
+${KU_A_loans_affordableLoanSubTitle} =  xpath=//*[@text='up to 80% of your mutual fund portfolio.']
+${KU_A_loans_affordableLoanPoint1} =  xpath=//*[@text='MF units remain secure with the fund house.']
+${KU_A_loans_affordableLoanPoint2} =  xpath=//*[@text='No fixed loan period. A 1yr loan auto renews on the 12th month.']
+${KU_A_loans_affordableLoanPoint3} =  xpath=//*[@text='Loan starting from ₹25,000 up to ₹10cr.']
+${KU_A_loans_affordableLoanPoint4} =  xpath=//*[@text='Full disclosure. No hidden fees.']
+${KU_A_loans_checkSavings} =  xpath=//*[@text='Check your savings over 3 years.']
+${KU_A_loans_portfolioTitle} =  xpath=//*[@text='Loan against Portfolio']
+${KU_A_loans_monthlyEMI} =  xpath=//*[@text='Monthly EMI']
+${KU_A_loans_interest} =  xpath=//*[@text='Interest']
+${KU_A_loans_charges} =  xpath=//*[@text='Charges']
+${KU_A_loans_personalLoanTitle} =  xpath=//*[@text='Personal Loan']
+${KU_A_loans_highlyFlexibleTitle} =  xpath=//*[@text='Highly flexible']
+${KU_A_loans_highlyFlexibleSubTitle} =  xpath=//*[@text='Repay your outstanding loan, in full or in parts, anytime during the loan period.']
+${KU_A_loans_charges} =  xpath=//*[@text='Charges']
+${KU_A_loans_personalLoanTitle} =  xpath=//*[@text='Personal Loan']
+${KU_A_loans_highlyFlexibleImg} =  xpath=(//*[@class='android.widget.Image'])[3]
+${KU_A_loans_personalChargesVal} =  xpath=//*[@text='₹6,000']
+${KU_A_loans_personalIntVal} =  xpath=//*[@text='15.00%']
+${KU_A_loans_personalEMIVal} =  xpath=//*[@text='₹6,933']
+${KU_A_loans_portfolioChargesVal} =  xpath=//*[@text='₹1,999']
+${KU_A_loans_portfolioEMIVal} =  xpath=//*[@text='₹1,750']
+${KU_A_loans_portfolioIntVal} =  xpath=//*[@text='10.50%']

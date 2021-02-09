@@ -25,3 +25,11 @@ Landing Page Widgets Verification on Android
 Menu Navigation Verification on Android
     [Tags]  TC02
     Verify PreLogin Insure Page
+<<<<<<< HEAD
+=======
+   
+# Menu Navigation verfication on Android - Loans
+Menu Navigation Verification on Android
+    [Tags]  TC03
+    Verify PreLogin Loans Page
+>>>>>>> 853c3891511c8605474d57229fc076245f4f8cc4

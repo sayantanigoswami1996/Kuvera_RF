@@ -38,6 +38,12 @@ Wait And Verify Element And Text On Android
     Wait For Element Visibility On Android  ${element}
     Verify Element And Text On Android  ${element}  ${text}    
 
+Get Json Values
+    [Arguments]  ${jsonPath}  ${jsonFilePath}
+    ${jsonFile}  Load JSON From File  ${jsonFilePath}
+    ${jsonValue}  Get Value From Json  ${jsonFile}  ${jsonPath}
+    [Return]  ${jsonValue}
+
 Verify Page Contains Element On Android
     [Arguments]  ${element}
     Run Keyword And Continue On Failure  Page Should Contain Element  ${element}
@@ -64,10 +70,9 @@ Skip Sliders
     Click Element  ${KU_A_skip}
 
 Kuvera Logo Click
-    Wait For Element Visibility On Android  ${KU_A_logo}
-    Click Element  ${KU_A_logo}
+    Wait And Click Element On Android  ${KU_A_logo}
     Sleep  2s
-    Click Element  ${KU_A_close}
+    Wait And Click Element On Android  ${KU_A_close}
 
 Verify Navigation to SaveSmart Page
     Click Element  ${KU_A_hamburgerMenu}
@@ -84,8 +89,9 @@ Navigate to Landing Page
     Kuvera Logo Click
 
 Navigate To Various Links Under Hamburger Menu
-    [Arguments]  ${hamburgerMenu}  ${links}  ${linkText}
-    Wait And Click Element On Android  ${hamburgerMenu}
+    [Arguments]  ${links}  ${linkText}
+    Wait And Click Element On Android  ${KU_A_hamburgerMenu}
+    Sleep  1s
     Wait And Verify Element And Text On Android  ${links}  ${linkText}
     Wait And Click Element On Android  ${links}
 
@@ -105,13 +111,13 @@ Verify Login And Signup Button
     Wait And Verify Element And Text On Android  ${KU_A_signupTitle}  ${e_signupTitle}
     Wait And Click Element On Android  ${KU_A_logo}
 
-Verify Signup Page
+Verify Signup Page On Android App
     Wait And Verify Element And Text On Android  ${KU_A_signupTitle}  ${e_signupTitle}
-    Go Back
+    Sleep  2s
 
-Verify Login Page
+Verify Login Page On Android App
     Wait And Verify Element And Text On Android  ${KU_A_loginTitle}  ${e_loginTitle}
-    Go Back
+    Wait And Click Element On Android  ${KU_A_logo}
 
 Verify Widgets And Title
     [Arguments]  ${label}  ${labelText}  ${title}  ${titleText}
