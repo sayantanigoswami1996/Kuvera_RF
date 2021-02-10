@@ -40,20 +40,22 @@ Verify Mutual Fund Widgets
     Swipe By Percent  85  85  50  50  900
     Wait For Element Visibility On Android  ${KU_A_MF_exploreMFBtn}
     Verify Page Contains Element On Android  ${KU_A_MF_exploreMFBtn}
-    Verify Presence Of Bot Button  ${KU_A_MF_faqBotBtn} 
-    Click On Explore Button And Verify Navigated Page  ${KU_A_MF_exploreMFBtn}  ${KU_A_MF_allFundsLabel}  ${e_MF_allFundsLabel}  ${KU_A_logo}    
+    Verify Presence Of Bot Button  ${KU_A_faqBotBtn} 
+    Click On Explore Button And Verify Navigated Page  ${KU_A_MF_exploreMFBtn}  ${KU_A_MF_allFundsLabel}  ${e_MF_allFundsLabel}   
 
 Verify Stock Widgets
     Log To Console  Stocks
     Wait And Verify Element And Text On Android  ${KU_A_stocksTitle}  ${e_stocksLabel}
     Verify Page Contains Element On Android  ${KU_A_stocksImg}
+    Sleep  2s
     Swipe By Percent  30  30  10  10  900
     Verify Price Year And Market Label For Stocks And USStocks
     Verify Watchlist Button
     Wait And Click Element On Android  ${KU_A_stocksLabel}
+    Sleep  2s
     Swipe By Percent  85  85  50  50  900
     Swipe By Percent  30  30  10  10  900
-    Click On Explore Button And Verify Navigated Page  ${KU_A_stocks_exploreStocksBtn}  ${KU_A_stocks_allStocksTab}  ${e_stocks_allStocksTab}  ${KU_A_logo} 
+    Click On Explore Button And Verify Navigated Page  ${KU_A_stocks_exploreStocksBtn}  ${KU_A_stocks_allStocksTab}  ${e_stocks_allStocksTab}
     
 Verify US Stocks Widgets   
     Log To Console  USStocks 
@@ -65,32 +67,34 @@ Verify US Stocks Widgets
     Wait And Click Element On Android  ${KU_A_USStocks_startTodayBtn}
     Verify Login Page On Android App
     Wait And Click Element On Android  ${KU_A_USStocksLabel}
-    Click On Explore Button And Verify Navigated Page  ${KU_A_USStocks_exploreBtn}  ${KU_A_USStocks_allUSStocksTab}  ${e_USStocks_allUSStocksTab}  ${KU_A_logo}
+    Click On Explore Button And Verify Navigated Page  ${KU_A_USStocks_exploreBtn}  ${KU_A_USStocks_allUSStocksTab}  ${e_USStocks_allUSStocksTab}
     Wait And Click Element On Android  ${KU_A_USStocksLabel}
+    Sleep  2s
     Swipe By Percent  30  30  10  10  900
     Verify Price Year And Market Label For Stocks And USStocks
     Verify Watchlist Button
     Wait And Click Element On Android  ${KU_A_USStocksLabel}
+    Sleep  2s
     Swipe By Percent  85  85  30  30  900
-    Click On Explore Button And Verify Navigated Page  ${KU_A_USStocks_exploreUSStocksBtn}  ${KU_A_USStocks_allUSStocksTab}  ${e_USStocks_allUSStocksTab}  ${KU_A_logo}
+    Click On Explore Button And Verify Navigated Page  ${KU_A_USStocks_exploreUSStocksBtn}  ${KU_A_USStocks_allUSStocksTab}  ${e_USStocks_allUSStocksTab}
 
 Verify SaveSmart Widgets
     Log To Console  SaveSmart 
     Wait And Verify Element And Text On Android  ${KU_A_savesmartSubTitle}  ${e_savesmartSubTitle}
     Swipe By Percent  50  50  20  20  900
     Wait And Verify Element And Text On Android  ${KU_A_SS_startSaveSmart}  ${e_SS_startSaveSmart}
-    #Wait And Click Element On Android  ${KU_A_inputField}
     Input Text  ${KU_A_inputField}  ${e_SS_amount}
-    #Go Back
     Wait And Click Element On Android  ${KU_A_button}
     Verify Login Page On Android App
     Wait And Click Element On Android  ${KU_A_savesmartLabel}
+    Sleep  2s
     Swipe By Percent  85  85  30  30  900
-    Click On Explore Button And Verify Navigated Page  ${KU_A_SS_exploreSSBtn}  ${KU_A_SS_screenTitle}  ${e_SS_screenTitle}  ${KU_A_logo}
+    Click On Explore Button And Verify Navigated Page  ${KU_A_SS_exploreSSBtn}  ${KU_A_SS_screenTitle}  ${e_SS_screenTitle}
     
 Verify Gold Widgets
     Log To Console  Gold 
     Wait And Verify Element And Text On Android  ${KU_A_goldSubTitle}  ${e_goldSubTitle}
+    Sleep  2s
     Swipe By Percent  70  70  30  30  900
     Wait And Verify Element And Text On Android  ${KU_A_gold_buyRateLabel}  ${e_gold_buyRateLabel} 
     Wait And Verify Element And Text On Android  ${KU_A_gold_partnerLabel}  ${e_gold_partnerLabel}
@@ -118,8 +122,9 @@ Verify Gold Widgets
     Wait And Click Element On Android  ${KU_A_gold_buyNowBtn}
     Verify Login Page On Android App
     Wait And Click Element On Android  ${KU_A_goldLabel}
+    Sleep  1s
     Swipe By Percent  85  85  30  30  900
-    Click On Explore Button And Verify Navigated Page  ${KU_A_gold_exploreGold}  ${KU_A_gold_screenTitle}  ${e_gold_screenTitle}  ${KU_A_logo} 
+    Click On Explore Button And Verify Navigated Page  ${KU_A_gold_exploreGold}  ${KU_A_gold_screenTitle}  ${e_gold_screenTitle}   
 
 Verify Watchlist Button
     Verify Page Contains Element On Android  ${KU_A_watchListBtn} 
@@ -132,11 +137,11 @@ Verify Price Year And Market Label For Stocks And USStocks
     Verify Page Contains Element On Android  ${KU_A_US_stocks_mktCapLabel}
 
 Click On Explore Button And Verify Navigated Page
-    [Arguments]  ${fund_stockBtn}  ${allStock_fundTab}  ${allStock_fundText}  ${kuveraLogo}
+    [Arguments]  ${fund_stockBtn}  ${allStock_fundTab}  ${allStock_fundText}
     Sleep  1s
     Wait For Element Visibility On Android  ${fund_stockBtn}
     Verify Page Contains Element On Android  ${fund_stockBtn}
     Wait And Click Element On Android  ${fund_stockBtn}
     Sleep  1s
     Wait And Verify Element And Text On Android  ${allStock_fundTab}  ${allStock_fundText}
-    Wait And Click Element On Android  ${kuveraLogo}
+    Wait And Click Element On Android  ${KU_A_logo}

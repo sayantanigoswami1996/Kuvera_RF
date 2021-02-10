@@ -31,3 +31,7 @@ Menu Navigation Verification on Android
     [Tags]  TC03
     Verify Android PreLogin Loans Page
 
+# Menu Navigation verfication on Android - Remit
+Menu Navigation Verification on Android
+    [Tags]  TC04
+    Verify Android PreLogin Remit Page
