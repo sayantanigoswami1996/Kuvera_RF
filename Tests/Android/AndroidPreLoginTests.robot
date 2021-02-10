@@ -35,3 +35,8 @@ Menu Navigation Verification on Android
 Menu Navigation Verification on Android
     [Tags]  TC04
     Verify Android PreLogin Remit Page
+
+# Menu Navigation verfication on Android - Set A Goal 
+Menu Navigation Verification on Android
+    [Tags]  TC05
+    Verify Android PreLogin Set A Goal Page

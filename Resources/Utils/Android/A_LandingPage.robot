@@ -21,9 +21,11 @@ Verify Mutual Fund Widgets
     Log To Console  Mutual Fund
     Wait And Verify Element And Text On Android  ${KU_A_MFLabel}  ${e_MFLabel}
     Wait And Click Element On Android  ${KU_A_MFLabel}
+    Log To Console  Title Validation
     Wait And Verify Element And Text On Android  ${KU_A_MFTitle}  ${e_MFTitle}
     Wait And Verify Element And Text On Android  ${KU_A_MFSubTitle}  ${e_MFSubTitle} 
     Verify Login And Signup Button
+    Log To Console  AUA Goals And Transactions Validation
     Wait And Verify Element And Text On Android  ${KU_A_croreAUALabel}  ${e_croreAUALabel}
     Wait And Verify Element And Text On Android  ${KU_A_croreAUAVal}  ${e_croreAUAVal}
     Wait And Verify Element And Text On Android  ${KU_A_goalsLabel}  ${e_goalsLabel}
@@ -31,12 +33,13 @@ Verify Mutual Fund Widgets
     Wait And Verify Element And Text On Android  ${KU_A_transactionsLabel}  ${e_transactionsLabel}
     Wait And Verify Element And Text On Android  ${KU_A_transactionsVal}  ${e_transactionsVal}
     Swipe By Percent  30  30  10  10  900
+    Log To Console  Label Validation
     Wait And Verify Element And Text On Android  ${KU_A_MF_navLabel}  ${e_MF_navLabel}
     Wait And Verify Element And Text On Android  ${KU_A_MF_1YLabel}  ${e_MF_1YLabel}
     Wait And Verify Element And Text On Android  ${KU_A_MF_3YLabel}  ${e_MF_3YLabel}
     Verify Watchlist Button
     Swipe By Percent  85  85  30  30  900
-    Swipe By Percent  50  50  10  10  900
+    # Swipe By Percent  50  50  10  10  900
     Wait For Element Visibility On Android  ${KU_A_MF_exploreMFBtn}
     Verify Page Contains Element On Android  ${KU_A_MF_exploreMFBtn}
     Verify Presence Of Bot Button  ${KU_A_faqBotBtn} 
@@ -58,6 +61,7 @@ Verify Stock Widgets
     
 Verify US Stocks Widgets   
     Log To Console  USStocks 
+    Log To Console  Title And Image Validation
     Wait And Verify Element And Text On Android  ${KU_A_USStocksSubTitle1}  ${e_USStocksSubTitle1}
     Verify Page Contains Element On Android  ${KU_A_USStocks_imgIcon}
     Verify Page Contains Element On Android  ${KU_A_USStocks_vestedImg}
@@ -95,6 +99,7 @@ Verify Gold Widgets
     Wait And Verify Element And Text On Android  ${KU_A_goldSubTitle}  ${e_goldSubTitle}
     Sleep  2s
     Swipe By Percent  70  70  30  30  900
+    Log To Console  Gold Rate And Label Validation
     Wait And Verify Element And Text On Android  ${KU_A_gold_buyRateLabel}  ${e_gold_buyRateLabel} 
     Wait And Verify Element And Text On Android  ${KU_A_gold_partnerLabel}  ${e_gold_partnerLabel}
     Wait And Verify Element And Text On Android  ${KU_A_gold_purityLabel}  ${e_gold_purityLabel}
@@ -131,6 +136,7 @@ Verify Watchlist Button
     Verify Login Page On Android App 
 
 Verify Price Year And Market Label For Stocks And USStocks
+    Log To Console  Text Validation
     Verify Page Contains Element On Android  ${KU_A_US_stocks_priceLabel}
     Verify Page Contains Element On Android  ${KU_A_US_stocks_yearLabel}
     Verify Page Contains Element On Android  ${KU_A_US_stocks_mktCapLabel}

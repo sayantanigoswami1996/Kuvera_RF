@@ -6,6 +6,7 @@ Library     AppiumLibrary
 
 Verify Android PreLogin Remit Page
     Log To Console  Remit
+    Log To Console  Title And Image Validation
     Navigate To Various Links Under Hamburger Menu  ${KU_A_remitLink}  ${e_remitLink}
     Wait And Verify Element And Text On Android  ${KU_A_remitTitle}  ${e_remitTitle} 
     Wait And Verify Element And Text On Android  ${KU_A_remitSubTitle}  ${e_remitSubTitle}
@@ -27,6 +28,7 @@ Verify Android PreLogin Remit Page
 
 
 Verify Next Steps Details Page
+    Log To Console  title And Text Validation
     Verify Page Contains Element On Android  ${KU_A_remit_nextStepsTitle}
     Verify Page Contains Element On Android  ${KU_A_remit_nextStepsSubTitle}
     Verify Page Contains Element On Android  ${KU_A_remit_step1} 
@@ -43,6 +45,7 @@ Verify Next Steps Details Page
 Verify Why TransferWise
     Sleep  2s
     Swipe By Percent  55  55  35  35  900
+    Log To Console  Title Text And Image Validation
     Wait And Verify Element And Text On Android  ${KU_A_remit_whyTransferWise}  ${e_remit_whyTransferWise}
     Wait And Verify Element And Text On Android  ${KU_A_remit_whyTransferWisePoint1}  ${e_remit_transferWisePoint1}
     Wait And Verify Element And Text On Android  ${KU_A_remit_whyTransferWisePoint2}  ${e_remit_transferWisePoint2}
@@ -50,7 +53,3 @@ Verify Why TransferWise
     Verify Page Contains Element On Android  ${KU_A_remit_noHiddenFeesImg}
     Verify Page Contains Element On Android  ${KU_A_remit_8TimesCheaperImg} 
     Verify Page Contains Element On Android  ${KU_A_remit_trustedCustomersImg}
-
-
-    
-    

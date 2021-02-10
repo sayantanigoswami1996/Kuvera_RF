@@ -54,11 +54,18 @@ ${e_remitTitle} =  A cheaper & faster way to send money home
 ${e_remitSubTitle} =  Now invest easily through Kuvera, or send money to your loved ones. With our partner TransferWise, you can transfer money to India for the lowest-cost. It is simple and faster than any traditional provider.
 ${e_remit_tansferwiseScreenTitle} =  A cheaper, smarter alternative to international bank transfers.
 ${e_remit_whyTransferWise} =  Why TransferWise?
-
 ${e_remit_transferWisePoint1} =  No hidden fees
 ${e_remit_transferWisePoint2} =  Up to 8x cheaper than banks
 ${e_remit_transferWisePoint3} =  Trusted by 7 million users
 
+# Features- Set A Goal
+${e_featureLink} =  Features
+${e_feature_SG_screenTitle} =  SET YOUR GOAL
+${e_feature_SG_screenSubTitle} =  We'll help you bring your dreams to life.
+${e_feature_SG_username} =  Test
+${e_feature_SG_age} =  27
+${e_feature_SG_Q_username} =  Hi there! What’s your name?
+${e_feature_SG_Q_age} =  And what’s your age?
 
 # Application Locator 'KU_<locatorName>'
 # Insure 
@@ -142,8 +149,6 @@ ${KU_A_remit_step1Desc} =  xpath=//*[@text='Register with Transferwise. It is re
 ${KU_A_remit_step2} =  xpath=//*[@text='Step 2']
 ${KU_A_remit_step2Desc} =  xpath=//*[@text='Enter your transfer amount']
 ${KU_A_remit_step3} =  xpath=//*[@text='Step 3']
-
-
 ${KU_A_remit_step3Desc} =  xpath=//*[@text='Add your bank details']
 ${KU_A_remit_step4} =  xpath=//*[@text='Step 4']
 ${KU_A_remit_step4Desc} =  xpath=//*[@text='Pay for your transfer and you are done!']
@@ -155,3 +160,16 @@ ${KU_A_remit_whyTransferWisePoint3} =  xpath=//*[@text='Trusted by 7 million use
 ${KU_A_remit_noHiddenFeesImg} =  xpath=//*[@text='no_hidden_fee']
 ${KU_A_remit_8TimesCheaperImg} =  xpath=//*[@text='8_times_cheaper']
 ${KU_A_remit_trustedCustomersImg} =  xpath=//*[@text='trusted_customers']
+
+# Feature- Set A Goal
+${KU_A_featureLink} =  xpath=//*[@text='Features ']
+${KU_A_featureDropdown} =  xpath=//*[@class='android.widget.Image' and (./preceding-sibling::* | ./following-sibling::*)[@class='android.widget.TextView']]
+${KU_A_feature_setAGoalLink} =  xpath=//*[@text='Set a Goal']
+${KU_A_feature_ownAHome} =  xpath=//*[@text='OWN A HOME']
+${KU_A_feature_SG_screenTitle} =  xpath=//*[@text='SET YOUR GOAL']
+${KU_A_feature_SG_screenSubTitle} =  xpath=//*[@text=concat('We', "'", 'll help you bring your dreams to life.')]
+${KU_A_feature_SG_questionScreen} =  xpath=//*[@text='YOUR GOAL']
+${KU_A_feature_SG_Q_username} =  xpath=//*[@text='Hi there! What’s your name?']
+${KU_A_feature_SG_Q_age} =  xpath=//*[@text='And what’s your age?']
+${KU_A_feature_SG_continueBtn} =  xpath=//*[@text='Continue']
+

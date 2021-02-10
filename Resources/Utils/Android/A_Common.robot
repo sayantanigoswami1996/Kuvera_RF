@@ -15,7 +15,7 @@ Launch Kuvera Android App
     Navigate to Landing Page
 
 Open Kuvera App On Browserstack
-    Open Application  ${remote_URL}  app=bs://bf9436214f3a86de6f03e9f7abbe5bb5ac9dd576  name=PreloginTests   build=RobotFramework    platformName=Android    os_version=9.0    device=Google Pixel 3  
+    Open Application  ${remote_URL}  app=bs://e53d69950c44f9a0faf496d5e45f1d0f8920f106  name=PreloginTests   build=RobotFramework    platformName=Android    os_version=9.0    device=Google Pixel 3  
 
 Open Kuvera App On Real Device
     Open Application  ${server}  platformName=${platform}  platformVersion=${platform_version}  deviceName=${device}  automationName=${appium}  appActivity=${app_activity}  appPackage=${app_package}
@@ -37,12 +37,6 @@ Wait And Verify Element And Text On Android
     [Arguments]  ${element}  ${text}
     Wait For Element Visibility On Android  ${element}
     Verify Element And Text On Android  ${element}  ${text}    
-
-Get Json Values
-    [Arguments]  ${jsonPath}  ${jsonFilePath}
-    ${jsonFile}  Load JSON From File  ${jsonFilePath}
-    ${jsonValue}  Get Value From Json  ${jsonFile}  ${jsonPath}
-    [Return]  ${jsonValue}
 
 Verify Page Contains Element On Android
     [Arguments]  ${element}
@@ -66,8 +60,8 @@ Get Json Values On Android
 
 Skip Sliders
     Wait And Click Element On Android  ${KU_A_slider5}
+    Sleep  1s
     Wait And Click Element On Android  ${KU_A_slider1}
-    Sleep  2s
     Wait And Click Element On Android  ${KU_A_skip}
 
 Kuvera Logo Click
@@ -92,7 +86,6 @@ Navigate to Landing Page
 Navigate To Various Links Under Hamburger Menu
     [Arguments]  ${links}  ${linkText}
     Wait And Click Element On Android  ${KU_A_hamburgerMenu}
-    Sleep  1s
     Wait And Verify Element And Text On Android  ${links}  ${linkText}
     Wait And Click Element On Android  ${links}
 
