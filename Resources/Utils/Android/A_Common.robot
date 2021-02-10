@@ -46,6 +46,7 @@ Get Json Values
 
 Verify Page Contains Element On Android
     [Arguments]  ${element}
+    Wait For Element Visibility On Android  ${element}
     Run Keyword And Continue On Failure  Page Should Contain Element  ${element}
 
 Scroll Down On Android
@@ -56,12 +57,6 @@ Verify Presence Of Bot Button
     [Arguments]  ${element}
     Wait For Element Visibility On Android  ${element}
     Verify Page Contains Element On Android  ${element}
-
-Get Json Values
-    [Arguments]  ${jsonPath}  ${jsonFilePath}
-    ${jsonFile}  Load JSON From File  ${jsonFilePath}
-    ${jsonValue}  Get Value From Json  ${jsonFile}  ${jsonPath}
-    [Return]  ${jsonValue}
 
 Skip Sliders
     Click Element  ${KU_A_slider5}

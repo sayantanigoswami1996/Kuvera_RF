@@ -35,8 +35,9 @@ Verify Mutual Fund Widgets
     Wait And Verify Element And Text On Android  ${KU_A_MF_1YLabel}  ${e_MF_1YLabel}
     Wait And Verify Element And Text On Android  ${KU_A_MF_3YLabel}  ${e_MF_3YLabel}
     Verify Watchlist Button
-    Swipe By Percent  85  85  30  30  900
-    Swipe By Percent  50  50  10  10  900
+    Sleep  3s
+    Swipe By Percent  85  85  50  50  900
+    Swipe By Percent  85  85  50  50  900
     Wait For Element Visibility On Android  ${KU_A_MF_exploreMFBtn}
     Verify Page Contains Element On Android  ${KU_A_MF_exploreMFBtn}
     Verify Presence Of Bot Button  ${KU_A_MF_faqBotBtn} 
@@ -51,6 +52,7 @@ Verify Stock Widgets
     Verify Watchlist Button
     Wait And Click Element On Android  ${KU_A_stocksLabel}
     Swipe By Percent  85  85  50  50  900
+    Swipe By Percent  30  30  10  10  900
     Click On Explore Button And Verify Navigated Page  ${KU_A_stocks_exploreStocksBtn}  ${KU_A_stocks_allStocksTab}  ${e_stocks_allStocksTab}  ${KU_A_logo} 
     
 Verify US Stocks Widgets   
@@ -77,9 +79,9 @@ Verify SaveSmart Widgets
     Wait And Verify Element And Text On Android  ${KU_A_savesmartSubTitle}  ${e_savesmartSubTitle}
     Swipe By Percent  50  50  20  20  900
     Wait And Verify Element And Text On Android  ${KU_A_SS_startSaveSmart}  ${e_SS_startSaveSmart}
-    Wait And Click Element On Android  ${KU_A_inputField}
+    #Wait And Click Element On Android  ${KU_A_inputField}
     Input Text  ${KU_A_inputField}  ${e_SS_amount}
-    Go Back
+    #Go Back
     Wait And Click Element On Android  ${KU_A_button}
     Verify Login Page On Android App
     Wait And Click Element On Android  ${KU_A_savesmartLabel}

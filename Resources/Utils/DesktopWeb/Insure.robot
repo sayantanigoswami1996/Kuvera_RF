@@ -4,7 +4,7 @@ Library     SeleniumLibrary
 
 *** Keywords ***
 
-Verify PreLogin Insure Page
+Verify Android PreLogin Insure Page
     Click Element  ${KU_W_insureLink}
     ${isLoginButtonVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_login}
     Run Keyword If   ${isLoginButtonVisible}  Verify Login And Signup Link
