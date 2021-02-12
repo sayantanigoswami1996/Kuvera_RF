@@ -6,6 +6,7 @@ Library     AppiumLibrary
 
 Verify Android PreLogin Insure Page
     Log To Console  Insure
+    Log To Console  Title Validation
     Navigate To Various Links Under Hamburger Menu  ${KU_A_insureLink}  ${e_insureLink}
     Wait And Verify Element And Text On Android  ${KU_A_insurePageTitle}  ${e_insurePageTitle}
     Verify Signup Link And Kuvera Logo
@@ -17,6 +18,7 @@ Verify Android PreLogin Insure Page
     Verify Treatment Cost Table
     Sleep  2s
     Swipe By Percent  75  75  25  25  2000
+    Log To Console  Title And Text Validation
     Wait And Verify Element And Text On Android  ${KU_A_insure_bhartiAxaTitle}  ${e_insure_bhartiAxaTitle} 
     Wait And Verify Element And Text On Android  ${KU_A_insure_bhartiAxaSubTitle}  ${e_insure_bhartiAxaSubTitle}
     Verify Page Contains Element On Android  ${KU_A_insure_bhartiAxaList}
@@ -28,6 +30,7 @@ Verify Android PreLogin Insure Page
 Verify Group Health Insurance Popup
     Sleep  2s
     Swipe By Percent  55  55  15  15  2000
+    Log To Console  Title And Text Validation
     Verify Page Contains Element On Android  ${KU_A_insure_grpHealthInusreImg}
     Wait And Verify Element And Text On Android  ${KU_A_insure_grpHealthInsureTitle}  ${e_insure_grpHealthInsureTitle}
     Wait And Verify Element And Text On Android  ${KU_A_insure_grpHealthInsurePoint1}  ${e_insure_grpHealthInsurePoint1}
@@ -45,6 +48,7 @@ Verify Group Health Insurance Popup
 Verify Treatment Cost Table
     Sleep  2s
     Swipe By Percent  55  55  15  15  2000
+    Log To Console  Cost And Disease Title Validation
     Wait And Verify Element And Text On Android  ${KU_A_insure_understandCost}  ${e_insure_understandCost}
     Wait And Verify Element And Text On Android  ${KU_A_insure_treatmentTitle}  ${e_insure_treatmentTitle}
     Wait And Verify Element And Text On Android  ${KU_A_insure_estCostTitle}  ${e_insure_estCostTitle}

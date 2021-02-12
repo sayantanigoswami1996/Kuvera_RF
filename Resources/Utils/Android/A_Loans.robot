@@ -6,10 +6,12 @@ Library     AppiumLibrary
 
 Verify Android PreLogin Loans Page
     Log To Console  Loans
+    Log To Console  Title Validation
     Navigate To Various Links Under Hamburger Menu  ${KU_A_loansLink}  ${e_loansLink}
     Wait And Verify Element And Text On Android  ${KU_A_loansTitle}  ${e_loansTitle}
     Wait And Verify Element And Text On Android  ${KU_A_loansSubTitle}  ${e_loansSubTitle}
     Verify Signup Link And Kuvera Logo
+    Log To Console  Image Validation
     Wait For Element Visibility On Android  ${KU_A_loans_imgIcon}
     Verify Page Contains Element On Android  ${KU_A_loans_imgIcon}
     Wait And Verify Element And Text On Android  ${KU_A_loans_eligibilityBtn}   ${e_loans_eligibilityBtn}
@@ -20,10 +22,10 @@ Verify Android PreLogin Loans Page
     Sleep  2s
     Verify Affordable Loan Section
     Verify Loan Calculator
+    Verify Presence Of Bot Button  ${KU_A_faqBotBtn} 
 
 Verify Affordable Loan Section
-    Log To Console  Affordable Loan Section
-    Swipe By Percent  35  35  10  10  900
+    Log To Console  Title And Text Validation
     Wait And Verify Element And Text On Android  ${KU_A_loans_affordableLoanTitle}  ${e_loans_affordableLoanTitle}
     Wait And Verify Element And Text On Android  ${KU_A_loans_affordableLoanSubTitle}  ${e_loans_affordableLoanSubTitle}
     Wait And Verify Element And Text On Android  ${KU_A_loans_affordableLoanPoint1}  ${e_loans_affordableLoanPoint1}
@@ -36,6 +38,7 @@ Verify Loan Calculator
     Wait And Verify Element And Text On Android  ${KU_A_loans_checkSavings}  ${e_loans_checkSavings}
     Wait And Verify Element And Text On Android  ${KU_A_inputField}  ${e_loans_savingAmt}
     # Loan Against Portfolio
+    Log To Console  Title And Text Validation
     Wait And Verify Element And Text On Android  ${KU_A_loans_portfolioTitle}  ${e_loans_portfolioTitle}
     Wait And Verify Element And Text On Android  ${KU_A_loans_monthlyEMI}  ${e_loans_monthlyEMI} 
     Wait And Verify Element And Text On Android  ${KU_A_loans_interest}  ${e_loans_interest} 
@@ -44,6 +47,7 @@ Verify Loan Calculator
     Verify Page Contains Element On Android  ${KU_A_loans_portfolioIntVal}
     Verify Page Contains Element On Android  ${KU_A_loans_portfolioEMIVal}
     # Personal Loan
+    Log To Console  Title And Text Validation
     Wait And Verify Element And Text On Android  ${KU_A_loans_personalLoanTitle}  ${e_loans_personalLoanTitle}
     Verify Page Contains Element On Android  ${KU_A_loans_personalChargesVal}
     Verify Page Contains Element On Android  ${KU_A_loans_personalIntVal}
