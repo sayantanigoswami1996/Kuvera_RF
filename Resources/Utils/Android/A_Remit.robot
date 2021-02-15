@@ -21,14 +21,15 @@ Verify Android PreLogin Remit Page
     Swipe By Percent  90  90  50  50  900
     Swipe By Percent  30  30  10  10  900
     Wait And Click Element On Android  ${KU_A_remit_sendMoneyBtn}
+    Verify Setting Of Chrome Browser 
     Sleep  5s
     Go Back
-    Verify Why TransferWise
+    Verify Why TransferWise 
+    Sleep  2s
     Verify Presence Of Bot Button  ${KU_A_faqBotBtn}
 
-
 Verify Next Steps Details Page
-    Log To Console  title And Text Validation
+    Log To Console  Title And Text Validation
     Verify Page Contains Element On Android  ${KU_A_remit_nextStepsTitle}
     Verify Page Contains Element On Android  ${KU_A_remit_nextStepsSubTitle}
     Verify Page Contains Element On Android  ${KU_A_remit_step1} 
@@ -44,7 +45,7 @@ Verify Next Steps Details Page
 
 Verify Why TransferWise
     Sleep  2s
-    Swipe By Percent  55  55  35  35  900
+    Swipe By Percent  50  50  35  35  900
     Log To Console  Title Text And Image Validation
     Wait And Verify Element And Text On Android  ${KU_A_remit_whyTransferWise}  ${e_remit_whyTransferWise}
     Wait And Verify Element And Text On Android  ${KU_A_remit_whyTransferWisePoint1}  ${e_remit_transferWisePoint1}
@@ -53,3 +54,17 @@ Verify Why TransferWise
     Verify Page Contains Element On Android  ${KU_A_remit_noHiddenFeesImg}
     Verify Page Contains Element On Android  ${KU_A_remit_8TimesCheaperImg} 
     Verify Page Contains Element On Android  ${KU_A_remit_trustedCustomersImg}
+    
+
+Verify Setting Of Chrome Browser 
+    ${isElementVisible} =  Run Keyword And Return Status  Verify Open With Label
+    Run Keyword If   ${isElementVisible}  Choose Chrome Browser
+    ...    ELSE  Log To Console  Continue
+
+Choose Chrome Browser
+    Wait And Click Element On Android  ${KU_A_remit_chromeOption}
+    Wait And Click Element On Android  ${KU_A_remit_alwaysBtn}
+
+Verify Open With Label
+    Wait For Element Visibility On Android  ${KU_A_remit_openWithLabel}
+    Element Should Be Visible  ${KU_A_remit_openWithLabel}

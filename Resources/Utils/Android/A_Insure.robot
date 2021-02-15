@@ -24,9 +24,9 @@ Verify Android PreLogin Insure Page
     Verify Page Contains Element On Android  ${KU_A_insure_bhartiAxaList}
     Wait And Verify Element And Text On Android  ${KU_A_insure_everythingUNeed}  ${e_insure_everythingUNeed} 
     Wait And Verify Element And Text On Android  ${KU_A_insure_gotYouCovered}  ${e_insure_gotYouCovered}
-    Verify Presence Of Bot Button  ${KU_A_faqBotBtn} 
+    Verify Widgets
+    Verify Presence Of Bot Button  ${KU_A_faqBotBtn}
 
-       
 Verify Group Health Insurance Popup
     Sleep  2s
     Swipe By Percent  55  55  15  15  2000
@@ -67,4 +67,31 @@ Verify Treatment Cost Table
     Wait And Verify Element And Text On Android  ${KU_A_insure_cancerCost}  ${e_insure_cancerCost}
     Wait And Verify Element And Text On Android  ${KU_A_insure_heartSurgeryCost}  ${e_insure_heartSurgeryCost}
     Wait And Verify Element And Text On Android  ${KU_A_insure_kneeReplacementCost}  ${e_insure_kneeReplacementCost} 
-    
+
+Verify Widgets
+    # Widgets Verification
+    Verify Text On Page  ${e_insure_covid19Protection}
+    Verify Text On Page  ${e_insure_covid19ProtectionDesc}
+    Verify Text On Page  ${e_insure_noRoomRentCaping}
+    Verify Text On Page  ${e_insure_noRoomRentCapingDesc}
+    Swipe By Percent  75  75  20  75  15000
+    Verify Text On Page  ${e_insure_treatmentCaping}
+    Verify Text On Page  ${e_insure_treatmentCapingDesc}
+    Swipe By Percent  75  75  20  75  15000
+    Verify Text On Page  ${e_insure_noCopayment}
+    Verify Text On Page  ${e_insure_noCopaymentDesc}
+    Swipe By Percent  75  75  20  75  15000
+    Verify Text On Page  ${e_insure_settlementGurantee}
+    Verify Text On Page  ${e_insure_settlementGuranteeDesc}
+    Swipe By Percent  75  75  20  75  15000
+    Verify Text On Page  ${e_insure_ayushCovered}
+    Verify Text On Page  ${e_insure_ayushCoveredDesc}
+    Swipe By Percent  75  75  20  75  15000
+    Verify Text On Page  ${e_insure_lowestWaitingPeriod}
+    Verify Text On Page  ${e_insure_lowestWaitingPeriodDesc}
+    Swipe By Percent  75  75  20  75  15000
+    Verify Text On Page  ${e_insure_cashExpenses}
+    Verify Text On Page  ${e_insure_cashExpensesDesc}
+    Swipe By Percent  75  75  20  75  15000
+    Verify Text On Page  ${e_insure_support}
+    Verify Text On Page  ${e_insure_supportDesc}

@@ -7,8 +7,8 @@ ${app_activity} =  com.gooogle.android.kuvera.app.MainActivity
 ${appium} =  appium
 ${apkPath} =  Resources/APK/Kuvera-prod-1.169.1.apk
 # Browserstack Credentials
-${browserstack_userName}    rajagopalgovinda1
-${browserstack_accessKey}   oo6ufvPJjGQDHqRN4Jcd
+${browserstack_userName} =  username
+${browserstack_accessKey} =  accesskey
 ${remote_URL}    http://${browserstack_userName}:${browserstack_accessKey}@hub.browserstack.com:80/wd/hub
 
 # Application Expected Values 'e_<VariableName>'
@@ -62,6 +62,8 @@ ${e_gold_gramValue} =  1
 ${e_gold_comingSoon} =  Coming soon: Gold gifting & delivery.
 ${e_gold_purchaseT&C} =  *Purchased gold can be sold after 7 days.
 ${e_gold_screenTitle} =  Buy 24K 99.9% pure digital gold - easily and securely.
+${e_investYourWayTitle} =  Invest your way
+${e_oneLoginTitle} =  One login. All features.
 
 # Application Locator 'KU_<locatorName>'
 ${KU_A_slider5} =  xpath=//*[@text="Go to slide 5"]

@@ -27,6 +27,25 @@ ${e_insure_gotYouCovered} =  We’ve got you covered
 ${e_insure_MFSubTitle} =  Sub Category
 ${e_insure_MFSubTitle} =  Equity
 ${e_insure_MFSubTitle} =  All
+${e_insure_covid19Protection} =  COVID-19 protection
+${e_insure_covid19ProtectionDesc} =  Corona treatment covered after 30 days of policy issuance.
+${e_insure_noRoomRentCaping} =  No room rent capping
+${e_insure_noRoomRentCapingDesc} =  Get a single A/C room across all hospitals chains in India.
+${e_insure_trustedPartner} =  Trusted Partner
+${e_insure_treatmentCaping} =  No treatment capping
+${e_insure_treatmentCapingDesc} =  There is no capping on any specific treatment. Everything is up to sum insured.
+${e_insure_noCopayment} =  No co-payment
+${e_insure_noCopaymentDesc} =  You don’t have to shell anything on any treatment. Absolutely zero cost sharing.
+${e_insure_settlementGurantee} =  30-day settlement guarantee
+${e_insure_settlementGuranteeDesc} =  Get paid within 30 days of claim acceptance or get 2% above current bank rate interest till it is settled.
+${e_insure_ayushCovered} =  AYUSH covered
+${e_insure_ayushCoveredDesc} =  Ayurveda, Yoga and Naturopathy, Unani, Siddha and Homeopathy covered up to full sum insured.
+${e_insure_lowestWaitingPeriod} =  Lowest waiting period
+${e_insure_lowestWaitingPeriodDesc} =  Get your pre-existing and specific illness covered within 2 years.
+${e_insure_cashExpenses} =  Daily cash expenses
+${e_insure_cashExpensesDesc} =  Get up to ₹10k a day to cover out of pocket expenses during hospitalisation.
+${e_insure_support} =  Dedicated support
+${e_insure_supportDesc} =  Get year-round dedicated support.
 # Loans
 ${e_loansLink} =  Loans
 ${e_loansTitle} =  Get an instant loan backed by your portfolio
@@ -57,6 +76,9 @@ ${e_remit_whyTransferWise} =  Why TransferWise?
 ${e_remit_transferWisePoint1} =  No hidden fees
 ${e_remit_transferWisePoint2} =  Up to 8x cheaper than banks
 ${e_remit_transferWisePoint3} =  Trusted by 7 million users
+${e_remit_transferWisePoint4} =  Fast way to send money
+${e_remit_transferWisePoint5} =  Mid-market exchange rate
+${e_remit_knowMoreBtn} =  Know More
 
 # Features- Set A Goal
 ${e_featureLink} =  Features
@@ -66,6 +88,25 @@ ${e_feature_SG_username} =  Test
 ${e_feature_SG_age} =  27
 ${e_feature_SG_Q_username} =  Hi there! What’s your name?
 ${e_feature_SG_Q_age} =  And what’s your age?
+
+# Features- TradeSmart
+${e_feature_TS_screenTitle} =  TradeSmart
+${e_feature_TS_activateOnce} =  Activate once, use forever!
+${e_feature_TS_activateSubTitle} =  Use 300 coins to activate TradeSmart, and use it forever.
+${e_feature_TS_weHelpYouTitle} =  We help you trade smart
+${e_feature_TS_weHelpYouSubTitle1} =  See regular plan units as they become available to switch to direct plans with the least tax and exit load impact. Switching to Direct has never been easier or cheaper.
+${e_feature_TS_weHelpYouSubTitle2} =  See optimal number of fund units to switch or redeem before you transact. Make better decisions.
+${e_feature_TS_weHelpYouSubTitle3} =  We take care of all complexities. 1 year STCG for equity, 3 year for debt, indexation for debt, lock-in for ELSS schemes etc. We optimize over it all.
+${e_feature_TS_activateWith300Btn} =  Activate with 300
+
+# Feature - Family Account
+${e_feature_FA_screenTitle} =  Invest with Your Loved Ones
+${e_feature_FA_activateWith200Btn} =  Activate with 200
+
+# Feature - Manage Account
+${e_feature_MA_screenTitle} =  Manage Account
+${e_feature_MA_screenSubTitle1} =  Add your financial advisor as a Manager to your Kuvera account and let them guide your investments.
+${e_feature_MA_addManagerBtn} =  Add manager
 
 # Application Locator 'KU_<locatorName>'
 # Insure 
@@ -160,6 +201,9 @@ ${KU_A_remit_whyTransferWisePoint3} =  xpath=//*[@text='Trusted by 7 million use
 ${KU_A_remit_noHiddenFeesImg} =  xpath=//*[@text='no_hidden_fee']
 ${KU_A_remit_8TimesCheaperImg} =  xpath=//*[@text='8_times_cheaper']
 ${KU_A_remit_trustedCustomersImg} =  xpath=//*[@text='trusted_customers']
+${KU_A_remit_openWithLabel} =  xpath=//*[@text='Open with']
+${KU_A_remit_chromeOption} =  xpath=//*[@text='Chrome']
+${KU_A_remit_alwaysBtn} =  xpath=//*[@text='Always']
 
 # Feature- Set A Goal
 ${KU_A_featureLink} =  xpath=//*[@text='Features ']
@@ -173,3 +217,20 @@ ${KU_A_feature_SG_Q_username} =  xpath=//*[@text='Hi there! What’s your name?'
 ${KU_A_feature_SG_Q_age} =  xpath=//*[@text='And what’s your age?']
 ${KU_A_feature_SG_continueBtn} =  xpath=//*[@text='Continue']
 
+# Feature - TradeSmart
+${KU_A_feature_TS_link} =  xpath=//*[@text='TradeSmart']
+${KU_A_feature_TS_imgIcon} =  xpath=//*[@text='trade-smart-icon']
+${KU_A_feature_TS_activateWith300Btn} =  xpath=//*[@text='Activate with 300']
+${KU_A_feature_TS_screenSubTitle} =  xpath=//*[@text='A switch or redeem order involves costs – taxes on short & long-term capital gains and exit load. TradeSmart shows you the optimal amount you can switch or redeem with the least tax and exit load.']
+
+# Feature - Family Account
+${KU_A_feature_FA_link} =  xpath=//*[@text='Family Account']
+${KU_A_feature_FA_imgIcon} =  xpath=//*[@text='Family Account Icon']
+${KU_A_feature_FA_activateWith200Btn} =  xpath=//*[@text='Activate with 200']
+${KU_A_feature_FA_screenSubTitle} =  xpath=//*[@text='Just Sign up with one account, and manage investment for your relatives and family members. Multiple accounts under same login. All in one place. Even Joint Account too!']
+
+# Feature - Manage Account
+${KU_A_feature_MA_link} =  xpath=//*[@text='Manage Account']
+${KU_A_feature_MA_imgIcon} =  xpath=//*[@text='Manage Account Icon']
+${KU_A_feature_MA_addManagerBtn} =  xpath=//*[@text='Add manager']
+${KU_A_feature_MA_screenSubTitle2} =  xpath=//*[@text='You retain full access to your account. All transactions would be validated & approved by you via OTP.']

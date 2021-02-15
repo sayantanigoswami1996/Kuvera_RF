@@ -15,7 +15,7 @@ Launch Kuvera Android App
     Navigate to Landing Page
 
 Open Kuvera App On Browserstack
-    Open Application  ${remote_URL}  app=bs://e53d69950c44f9a0faf496d5e45f1d0f8920f106  name=PreloginTests   build=RobotFramework    platformName=Android    os_version=9.0    device=Google Pixel 3  
+    Open Application  ${remote_URL}  app=${appURL}  name=PreloginTests   build=RobotFramework    platformName=Android    os_version=9.0    device=Google Pixel 3  
 
 Open Kuvera App On Real Device
     Open Application  ${server}  platformName=${platform}  platformVersion=${platform_version}  deviceName=${device}  automationName=${appium}  appActivity=${app_activity}  appPackage=${app_package}
@@ -26,7 +26,7 @@ Verify Element And Text On Android
 
 Wait For Element Visibility On Android
     [Arguments]  ${element}
-    Wait Until Element Is Visible  ${element}  timeout=90
+    Wait Until Element Is Visible  ${element}  timeout=30
 
 Wait And Click Element On Android
     [Arguments]  ${element}
@@ -83,6 +83,15 @@ Navigate to Landing Page
     Skip Sliders
     Kuvera Logo Click
 
+Click On Kuvera Logo
+    Wait And Click Element On Android  ${KU_A_logo}
+
+Navigate To Menus Under Features
+    Navigate To Various Links Under Hamburger Menu  ${KU_A_featureLink}  ${e_featureLink}
+    Wait And Click Element On Android  ${KU_A_featureDropdown}
+    Sleep  3s
+    Wait And Click Element On Android  ${KU_A_featureDropdown}
+
 Navigate To Various Links Under Hamburger Menu
     [Arguments]  ${links}  ${linkText}
     Wait And Click Element On Android  ${KU_A_hamburgerMenu}
@@ -118,6 +127,15 @@ Verify Widgets And Title
     Wait And Verify Element And Text On Android  ${label}  ${labelText}
     Wait And Click Element On Android  ${label}
     Wait And Verify Element And Text On Android  ${title}  ${titleText}
+
+Wait Until Page Contains Text
+    [Arguments]  ${text}
+    Page Should Contain Text  ${text}
+
+Verify Text On Page
+    [Arguments]  ${text}
+    Wait Until Page Contains  ${text}  timeout=30
+    Page Should Contain Text  ${text}
    
 Quit Kuvera Application
     Quit Application
