@@ -8,6 +8,15 @@ Verify Android PreLogin Insure Page
     Log To Console  Insure
     Log To Console  Title Validation
     Navigate To Various Links Under Hamburger Menu  ${KU_A_insureLink}  ${e_insureLink}
+    Sleep  5s
+  
+    Page Should Contain Text  Trusted partner
+    Page Should Contain Text  With a 97% Claim settlement ratio, we’ve partnered with the best.
+
+    Page Should Contain Text   Flexible coverage 
+    Page Should Contain Text   Pick a Base/SuperTop-up/Daily-cash or all 3. Coverage from ₹3L to ₹75L.
+  
+
     Wait And Verify Element And Text On Android  ${KU_A_insurePageTitle}  ${e_insurePageTitle}
     Verify Signup Link And Kuvera Logo
     Verify Page Contains Element On Android  ${KU_A_insure_imgIcon}
@@ -67,4 +76,33 @@ Verify Treatment Cost Table
     Wait And Verify Element And Text On Android  ${KU_A_insure_cancerCost}  ${e_insure_cancerCost}
     Wait And Verify Element And Text On Android  ${KU_A_insure_heartSurgeryCost}  ${e_insure_heartSurgeryCost}
     Wait And Verify Element And Text On Android  ${KU_A_insure_kneeReplacementCost}  ${e_insure_kneeReplacementCost} 
+   
+
+    Sleep  2s
+
+    Log Source
+
+    Page Should Contain Text   What our users are saying
+
+    Sleep  2s
+
+    Log Source
+
+    Page Should Contain Text  1. Who is eligible for Group health insurance?
+    Page Should Contain Text   3. How is Group health insurance better than other market offerings?
     
+    Sleep  2s
+
+    Sleep  2s
+    Log Source
+    Page Should Contain Text  Health cover that’s right for you.
+
+    Sleep  2s
+
+    Sleep  2s
+    Log Source
+
+    Sleep  2s
+
+    Sleep  2s
+    Log Source

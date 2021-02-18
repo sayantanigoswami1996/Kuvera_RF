@@ -10,8 +10,8 @@ ${app_activity} =  com.gooogle.android.kuvera.app.MainActivity
 ${appium} =  appium
 ${apkPath} =  Resources/APK/Kuvera-prod-1.169.1.apk
 # Browserstack Credentials
-${browserstack_userName}    sayantanigoswami3
-${browserstack_accessKey}   4vxxLyC8jKmbV77szpuB
+${browserstack_userName} =  username
+${browserstack_accessKey} =  accesskey
 ${remote_URL}    http://${browserstack_userName}:${browserstack_accessKey}@hub.browserstack.com:80/wd/hub
 
 # Application Expected Values 'e_<VariableName>'

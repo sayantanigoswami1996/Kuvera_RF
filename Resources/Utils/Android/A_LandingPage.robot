@@ -16,6 +16,7 @@ Verify PreLogin Landing Page Widgets
     Verify Widgets And Title  ${KU_A_goldLabel}  ${e_goldLabel}  ${KU_A_goldTitle}  ${e_goldTitle}
     Verify Gold Widgets
     Verify Mutual Fund Widgets
+    Get Source
 
 Verify Mutual Fund Widgets
     Log To Console  Mutual Fund
@@ -44,7 +45,8 @@ Verify Mutual Fund Widgets
     Verify Page Contains Element On Android  ${KU_A_MF_exploreMFBtn}
     Verify Presence Of Bot Button  ${KU_A_faqBotBtn} 
     Click On Explore Button And Verify Navigated Page  ${KU_A_MF_exploreMFBtn}  ${KU_A_MF_allFundsLabel}  ${e_MF_allFundsLabel}   
-
+    Get Source
+    
 Verify Stock Widgets
     Log To Console  Stocks
     Wait And Verify Element And Text On Android  ${KU_A_stocksTitle}  ${e_stocksLabel}

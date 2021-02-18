@@ -14,5 +14,3 @@ Verify Android PreLogin Set A Goal Page
     Wait And Verify Element And Text On Android  ${KU_A_feature_SG_screenTitle}  ${e_feature_SG_screenTitle}
     Wait And Verify Element And Text On Android  ${KU_A_feature_SG_screenSubTitle}  ${e_feature_SG_screenSubTitle}
     Verify Android Own A Home Questionnaire
-
-
