@@ -86,13 +86,7 @@ Navigate to Landing Page
 Click On Kuvera Logo
     Wait And Click Element On Android  ${KU_A_logo}
 
-Navigate To Menus Under Features
-    Navigate To Various Links Under Hamburger Menu  ${KU_A_featureLink}  ${e_featureLink}
-    Wait And Click Element On Android  ${KU_A_featureDropdown}
-    Sleep  3s
-    Wait And Click Element On Android  ${KU_A_featureDropdown}
-
-Navigate To Various Links Under Hamburger Menu
+Navigate To Hamburger Menu
     [Arguments]  ${links}  ${linkText}
     Wait And Click Element On Android  ${KU_A_hamburgerMenu}
     Wait And Verify Element And Text On Android  ${links}  ${linkText}

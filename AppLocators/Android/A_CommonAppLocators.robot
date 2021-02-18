@@ -14,6 +14,9 @@ ${remote_URL}    http://${browserstack_userName}:${browserstack_accessKey}@hub.b
 # Application Expected Values 'e_<VariableName>'
 ${e_realDevice} =  Local
 ${e_browserstackDevice} =  Browserstack
+${e_loansPage} =  Loans
+${e_remitPage} =  Remit
+${e_insurePage} =  Insure
 ${e_signupLink} =  Sign up
 ${e_MFLabel} =  Mutual Funds
 ${e_MFTitle} =  Investments Simplified

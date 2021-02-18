@@ -17,6 +17,19 @@ Verify PreLogin Landing Page Widgets
     Verify Gold Widgets
     Verify Mutual Fund Widgets
 
+PreLogin Header Navigation On Android
+    ${invest}  Get Json Values On Android  $.MenuHeaders.h0  Resources/TestData/Headers.json
+    ${loans}  Get Json Values On Android  $.MenuHeaders.h1  Resources/TestData/Headers.json
+    ${insure}  Get Json Values On Android  $.MenuHeaders.h2  Resources/TestData/Headers.json
+    ${remit}  Get Json Values On Android  $.MenuHeaders.h3  Resources/TestData/Headers.json
+    ${features}  Get Json Values On Android  $.MenuHeaders.h4  Resources/TestData/Headers.json
+
+    Run keyword IF  ['${e_loansPage}'] == ${loans}   Verify Android PreLogin Loans Page
+    Run keyword IF  ['${e_insurePage}'] == ${insure}  Verify Android PreLogin Insure Page
+    Run keyword IF  ['${e_remitPage}'] == ${remit}  Verify Android PreLogin Remit Page
+    ...    ELSE   Log To Console  Covered in other test
+   
+
 Verify Mutual Fund Widgets
     Log To Console  Mutual Fund
     Wait And Verify Element And Text On Android  ${KU_A_MFLabel}  ${e_MFLabel}

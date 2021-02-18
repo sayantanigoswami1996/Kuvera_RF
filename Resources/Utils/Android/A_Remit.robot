@@ -7,7 +7,7 @@ Library     AppiumLibrary
 Verify Android PreLogin Remit Page
     Log To Console  Remit
     Log To Console  Title And Image Validation
-    Navigate To Various Links Under Hamburger Menu  ${KU_A_remitLink}  ${e_remitLink}
+    Navigate To Hamburger Menu  ${KU_A_remitLink}  ${e_remitLink}
     Wait And Verify Element And Text On Android  ${KU_A_remitTitle}  ${e_remitTitle} 
     Wait And Verify Element And Text On Android  ${KU_A_remitSubTitle}  ${e_remitSubTitle}
     Verify Page Contains Element On Android  ${KU_A_remit_imgIcon}

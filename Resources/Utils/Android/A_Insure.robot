@@ -7,14 +7,14 @@ Library     AppiumLibrary
 Verify Android PreLogin Insure Page
     Log To Console  Insure
     Log To Console  Title Validation
-    Navigate To Various Links Under Hamburger Menu  ${KU_A_insureLink}  ${e_insureLink}
+    Navigate To Hamburger Menu  ${KU_A_insureLink}  ${e_insureLink}
     Wait And Verify Element And Text On Android  ${KU_A_insurePageTitle}  ${e_insurePageTitle}
     Verify Signup Link And Kuvera Logo
     Verify Page Contains Element On Android  ${KU_A_insure_imgIcon}
     Wait And Verify Element And Text On Android  ${KU_A_insurePageSubTitle}  ${e_insurePageSubTitle}
     Wait And Click Element On Android  ${KU_A_insure_premiumBtn}
     Verify Group Health Insurance Popup
-    Navigate To Various Links Under Hamburger Menu  ${KU_A_insureLink}  ${e_insureLink}
+    Navigate To Hamburger Menu  ${KU_A_insureLink}  ${e_insureLink}
     Verify Treatment Cost Table
     Sleep  2s
     Swipe By Percent  75  75  25  25  2000
@@ -24,7 +24,7 @@ Verify Android PreLogin Insure Page
     Verify Page Contains Element On Android  ${KU_A_insure_bhartiAxaList}
     Wait And Verify Element And Text On Android  ${KU_A_insure_everythingUNeed}  ${e_insure_everythingUNeed} 
     Wait And Verify Element And Text On Android  ${KU_A_insure_gotYouCovered}  ${e_insure_gotYouCovered}
-    Verify Widgets
+    # Verify Widgets
     Verify Presence Of Bot Button  ${KU_A_faqBotBtn}
 
 Verify Group Health Insurance Popup

@@ -22,25 +22,10 @@ Landing Page Widgets Verification on Android
     [Tags]  TC01 
     Verify PreLogin Landing Page Widgets
 
-# Menu Navigation verfication on Android - Insure
-Insure Navigation Verification on Android
+# Header Navigation on Android - Insure , Loans, Remit
+Header Navigation Verification on Android
     [Tags]  TC02
-    Verify Android PreLogin Insure Page
-   
-# Menu Navigation verfication on Android - Loans
-Loans Navigation Verification on Android
-    [Tags]  TC03
-    Verify Android PreLogin Loans Page
-
-# Menu Navigation verfication on Android - Remit
-Remit Navigation Verification on Android
-    [Tags]  TC04
-    Verify Android PreLogin Remit Page
-
-# Menu Navigation under Features - Set A Goal 
-Set A Goal Navigation Verification on Android
-    [Tags]  TC05
-    Verify Android PreLogin Set A Goal Page
+    PreLogin Header Navigation On Android
 
 # Menu Navigation under Features - TradeSmart
 TradeSmart Navigation Verification on Android
@@ -56,3 +41,13 @@ Family Account Navigation Verification on Android
 Manage Account Navigation Verification on Android
     [Tags]  TC08
     Verify Android PreLogin Manage Account Page
+
+# Menu Navigation under Features - Tax Harvesting Account
+Tax Harvesting Navigation Verification on Android
+    [Tags]  TC09
+    Verify Android PreLogin Tax Harvesting Page
+
+# Menu Navigation under Features - Save Taxes Account
+Save Taxes Navigation Verification on Android
+    [Tags]  TC10
+    Verify Android PreLogin Save Taxes Page

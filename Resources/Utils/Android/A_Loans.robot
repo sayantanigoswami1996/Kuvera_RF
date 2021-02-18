@@ -7,7 +7,7 @@ Library     AppiumLibrary
 Verify Android PreLogin Loans Page
     Log To Console  Loans
     Log To Console  Title Validation
-    Navigate To Various Links Under Hamburger Menu  ${KU_A_loansLink}  ${e_loansLink}
+    Navigate To Hamburger Menu  ${KU_A_loansLink}  ${e_loansLink}
     Wait And Verify Element And Text On Android  ${KU_A_loansTitle}  ${e_loansTitle}
     Wait And Verify Element And Text On Android  ${KU_A_loansSubTitle}  ${e_loansSubTitle}
     Verify Signup Link And Kuvera Logo
@@ -18,7 +18,7 @@ Verify Android PreLogin Loans Page
     Wait And Click Element On Android  ${KU_A_loans_eligibilityBtn}
     Verify Login Page On Android App
     Sleep  3s
-    Navigate To Various Links Under Hamburger Menu  ${KU_A_loansLink}  ${e_loansLink}
+    Navigate To Hamburger Menu  ${KU_A_loansLink}  ${e_loansLink}
     Swipe By Percent  70  70  30  30  900
     Verify Affordable Loan Section
     Verify Loan Calculator
@@ -34,7 +34,7 @@ Verify Affordable Loan Section
     Wait And Verify Element And Text On Android  ${KU_A_loans_affordableLoanPoint4}  ${e_loans_affordableLoanPoint4}
 
 Verify Loan Calculator
-    Swipe By Percent  70  70  30  30  900
+    Swipe By Percent  70  70  20  20  5000
     Wait And Verify Element And Text On Android  ${KU_A_loans_checkSavings}  ${e_loans_checkSavings}
     Wait And Verify Element And Text On Android  ${KU_A_inputField}  ${e_loans_savingAmt}
     # Loan Against Portfolio

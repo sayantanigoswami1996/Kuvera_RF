@@ -6,9 +6,10 @@ Library     AppiumLibrary
 
 Verify Android PreLogin TradeSmart Page
     Log To Console  TradeSmart
-    Navigate To Menus Under Features
+    Navigate To Hamburger Menu  ${KU_A_featureLink}  ${e_featureLink}
     Wait And Click Element On Android  ${KU_A_feature_TS_link}
     Verify Text On Page  ${e_feature_TS_screenTitle} 
+    Verify Signup Link And Kuvera Logo
     Verify Page Contains Element On Android  ${KU_A_feature_TS_screenSubTitle}
     Verify Page Contains Element On Android  ${KU_A_feature_TS_imgIcon}
     Verify Text On Page  ${e_feature_TS_activateOnce}

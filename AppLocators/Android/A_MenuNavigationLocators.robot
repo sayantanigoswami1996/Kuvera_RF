@@ -108,6 +108,42 @@ ${e_feature_MA_screenTitle} =  Manage Account
 ${e_feature_MA_screenSubTitle1} =  Add your financial advisor as a Manager to your Kuvera account and let them guide your investments.
 ${e_feature_MA_addManagerBtn} =  Add manager
 
+# Feature - Tax Harvesting
+${e_feature_TH_screenTitle} =  Save up to ₹10,000 in LTCG taxes every financial year with Tax Harvesting.
+${e_feature_TH_screenSubTitle} =  Minimise your long term tax impact by realising up to ₹1 Lakh of Long Term Capital Gain (LTCG) every financial year with no tax.
+${e_feature_TH_definitionTitle} =  What is Tax Harvesting?
+${e_feature_TH_definitionDesc} =  Long-term gains from equity funds are taxed at 10%. Tax Harvesting is a technique that reduces this impact. It utilises the ₹1 Lakh annual LTCG exemption by selling and buying back part of your investment such that you “realise” gains every year. 
+${e_feature_TH_learnMoreLinkDesc} =  Tax Harvesting can save up to ₹10,000 in LTCG taxes every year!
+${e_feature_TH_investmentTableTitle} =  Let’s say your investment yields gains of ₹1L every year. After 3 years, the gains are ₹3L and you decide to sell.
+${e_feature_TH_withoutTaxHarvesting} =  Without Tax Harvesting
+${e_feature_TH_withTaxHarvesting} =  With Tax Harvesting
+${e_feature_TH_preTaxGains} =  Pre-tax Gains
+${e_feature_TH_withAndWithoutPreTaxVal} =  ₹3.0L
+${e_feature_TH_withoutTaxTaxableGains} =  ₹2.0L
+${e_feature_TH_withTaxTaxableGainsAndLTCG} =  NIL
+${e_feature_TH_LTCG} =  LTCG tax @10%
+${e_feature_TH_withoutTaxLTCG} =  ₹0.2L
+${e_feature_TH_inHandGains} =  In-hand gains
+${e_feature_TH_withoutTaxInHandGains} =  ₹2.8L
+${e_feature_TH_withTaxInHandGains} =  ₹3.0L
+${e_feature_TH_howItWorksTitle} =  How it Works
+${e_feature_TH_step1} =  1
+${e_feature_TH_howItWorksDesc} =  Receive timely recommendations
+
+# Feature - Save Taxes
+${e_feature_ST_screenTitle} =  Save Taxes.
+${e_feature_ST_saveTaxDesc} =  Tax Saving ELSS Mutual Funds can help save upto ₹46,350 in taxes
+${e_feature_ST_saveCommissionsTitle} =  Save Commissions.
+${e_feature_ST_saveCommissionsDesc} =  We are a Direct Plan platform. You save upto 1.5% per year in commission
+${e_feature_ST_saveFeesTitle} =  Save Fees.
+${e_feature_ST_saveFeesDesc} =  We are free. No investment fees whatsover. It doesn't get better than this.
+${e_feature_ST_topRatedTax} =  Top rated tax saving funds
+${e_feature_ST_topRatedTaxDesc} =  Funds that feature in “Best Tax Saving Mutual Fund” lists across the web.
+${e_feature_ST_taxSavingFundsTitle} =  How the ‘Tax Saving Funds’ work
+${e_feature_ST_taxSavingFundsDesc} =  Investments in Tax Saving Mutual Funds (also called ELSS funds) are eligible as deductions under Section 80C of the Income Tax Act. You can invest up to Rs 1.5 lakhs in eligible investments. At the highest tax bracket this would lead to a tax saving of Rs 46,350. There is a lock-in of 3 years, during which time you cannot redeem your investment.
+${e_feature_ST_learnHowLinkDesc} =  How to file income tax returns   when investing internationally                
+${e_feature_ST_categoryTitle} =  Equity . ELSS
+
 # Application Locator 'KU_<locatorName>'
 # Insure 
 ${KU_A_insureLink} =  xpath=//*[@text='Insure']
@@ -234,3 +270,18 @@ ${KU_A_feature_MA_link} =  xpath=//*[@text='Manage Account']
 ${KU_A_feature_MA_imgIcon} =  xpath=//*[@text='Manage Account Icon']
 ${KU_A_feature_MA_addManagerBtn} =  xpath=//*[@text='Add manager']
 ${KU_A_feature_MA_screenSubTitle2} =  xpath=//*[@text='You retain full access to your account. All transactions would be validated & approved by you via OTP.']
+
+# Feature - Tax Harvesting
+${KU_A_feature_TH_link} =  xpath=//*[@text='Tax Harvesting']
+${KU_A_feature_TH_imgIcon} =  xpath=//*[@text='tax-harvesting-landing-web']
+${KU_A_feature_TH_learnMorelink} =  xpath=//*[@text='Learn more']
+${KU_A_feature_TH_crossIcon} =  xpath=//*[@text='without-big']
+${KU_A_feature_TH_tickIcon} =  xpath=//*[@text='with-big']
+${KU_A_feature_TH_taxableGainsTitle} =  xpath=//*[@text='Taxable Gains\n(minus 1L exempt)']
+${KU_A_feature_TH_recommendationImg} =  xpath=//*[@text='receive-reco']
+
+# Feature - Save Taxes
+${KU_A_feature_ST_imgIcon} =  xpath=//*[@text='Tax Saver Icon']
+${KU_A_feature_ST_link} =  xpath=//*[@text='Save Taxes']
+${KU_A_feature_ST_learnHowLink} =  xpath=//*[@text='Learn how!']
+${KU_A_feature_ST_learnHowLinkDesc} =  xpath=//*[@text='Why ELSS deserve your attention during tax season!']

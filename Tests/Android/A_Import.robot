@@ -10,3 +10,5 @@ Resource    ../../Resources/Utils/Android/A_Features/A_SetAGoal.robot
 Resource    ../../Resources/Utils/Android/A_Features/A_TradeSmart.robot
 Resource    ../../Resources/Utils/Android/A_Features/A_FamilyAccount.robot
 Resource    ../../Resources/Utils/Android/A_Features/A_ManageAccount.robot
+Resource    ../../Resources/Utils/Android/A_Features/A_TaxHarvesting.robot
+Resource    ../../Resources/Utils/Android/A_Features/A_SaveTaxes.robot
