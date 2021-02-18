@@ -43,3 +43,8 @@ Resource    ../../Resources/Utils/DesktopWeb/Features/SaveTaxes.robot
 Resource    ../../Resources/Utils/DesktopWeb/Features/Consolidate.robot
 Resource    ../../Resources/Utils/DesktopWeb/Footer.robot
 Resource    ../../Resources/Utils/DesktopWeb/FundHouse.robot
+Resource    ../../Resources/Utils/DesktopWeb/CreateAccountForPostLogin.robot
+Resource    ../../Resources/Utils/DesktopWeb/HealthInsurancePostLogin/KYC.robot
+Resource    ../../Resources/Utils/DesktopWeb/HealthInsurancePostLogin/PlanHealthInsurance.robot
+Resource    ../../Resources/Utils/DesktopWeb/HealthInsurancePostLogin/HealthInsuranceLandingPage.robot
+Resource    ../../Resources/Utils/DesktopWeb/HealthInsurancePostLogin/LoginPostHealthInsuranceClaim.robot

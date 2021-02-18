@@ -6,7 +6,9 @@ Library     SeleniumLibrary
 
 Verify PreLogin Insure Page
     Click Element  ${KU_W_insureLink}
-    Verify Login And Signup Link
+    ${isLoginButtonVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_login}
+    Run Keyword If   ${isLoginButtonVisible}  Verify Login And Signup Link
+    ...    ELSE  Log To Console  Continue
     Wait For Element Visibility  ${KU_W_insureHeaderTitle}  
     Verify Element And Text  ${KU_W_insureHeaderTitle}  ${e_insure_headerTitleText} 
     Verify Element And Text  ${KU_W_insureHeaderMsg}  ${e_insure_headerMsgText}
@@ -14,7 +16,9 @@ Verify PreLogin Insure Page
     Wait For Element Visibility  ${KU_W_insure_checkPremiumBtn1}
     Sleep   1s
     Click Button  ${KU_W_insure_checkPremiumBtn1} 
-    Verify Premium Popup  ${KU_W_insure_checkPremiumBtn1}
+    ${isLoginBtnVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_login}
+    Run Keyword If   ${isLoginBtnVisible}  Verify Premium Popup  ${KU_W_insure_checkPremiumBtn1}
+    ...    ELSE  Verify Missing PAN Page
     Wait For Element Visibility  ${KU_W_insure_costDetailsHeaderTitle}     
     Scroll Untill View  ${KU_W_insure_costDetailsHeaderTitle}
     Verify Element and Text  ${KU_W_insure_costDetailsHeaderTitle}  ${e_insure_costDetailsHeaderText}
@@ -99,9 +103,8 @@ Verify PreLogin Insure Page
     Verify Element and Text  ${KU_W_insure_checkPremiumBtn2}  ${e_insure_checkPremiumBtn2Text}
     Wait For Element Visibility  ${KU_W_insure_checkPremiumBtn2}
     Click Button  ${KU_W_insure_checkPremiumBtn2} 
-    Verify Premium Popup  ${KU_W_insure_checkPremiumBtn2}
-
-    # Verify the Google Play & Apple Store icons
+    Run Keyword If    '${ENV}' == '${e_prod}'  Verify Premium Popup  ${KU_W_insure_checkPremiumBtn2}
+    ...    ELSE  Verify Missing PAN Page
     Verify Google Play & Apple Store Icons
     
 Verify Premium Popup
@@ -121,4 +124,11 @@ Verify Premium Popup
     Wait For Element Visibility  ${KU_W_insure_signupBtn}  
     Click Element  ${KU_W_insure_signupBtn}
     Verify Signup Page
+    Go Back
+
+Verify Missing PAN Page
+    Wait For Element Visibility  ${KU_W_HI_missingPANTitle}
+    Sleep  2s
+    Verify Element And Text  ${KU_W_HI_missingPANTitle}  ${e_HI_missingPANTitle}
+    Verify Element And Text  ${KU_W_HI_missingPANSubTitle}  ${e_HI_missingPANSubTitle}
     Go Back
