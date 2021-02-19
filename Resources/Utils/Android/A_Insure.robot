@@ -24,8 +24,10 @@ Verify Android PreLogin Insure Page
     Verify Page Contains Element On Android  ${KU_A_insure_bhartiAxaList}
     Wait And Verify Element And Text On Android  ${KU_A_insure_everythingUNeed}  ${e_insure_everythingUNeed} 
     Wait And Verify Element And Text On Android  ${KU_A_insure_gotYouCovered}  ${e_insure_gotYouCovered}
-    # Verify Widgets
+    Verify Widgets
     Verify Presence Of Bot Button  ${KU_A_faqBotBtn}
+    Swipe By Percent  30  30  85  85  5000
+    Swipe By Percent  30  30  85  85  5000
 
 Verify Group Health Insurance Popup
     Sleep  2s

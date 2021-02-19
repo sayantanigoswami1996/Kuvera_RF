@@ -27,6 +27,8 @@ Verify Android PreLogin Remit Page
     Verify Why TransferWise 
     Sleep  2s
     Verify Presence Of Bot Button  ${KU_A_faqBotBtn}
+    Swipe By Percent  30  30  85  85  5000
+    Swipe By Percent  30  30  85  85  5000
 
 Verify Next Steps Details Page
     Log To Console  Title And Text Validation

@@ -23,6 +23,8 @@ Verify Android PreLogin Loans Page
     Verify Affordable Loan Section
     Verify Loan Calculator
     Verify Presence Of Bot Button  ${KU_A_faqBotBtn}
+    Swipe By Percent  30  30  85  85  5000
+    Swipe By Percent  30  30  85  85  5000
 
 Verify Affordable Loan Section
     Log To Console  Title And Text Validation

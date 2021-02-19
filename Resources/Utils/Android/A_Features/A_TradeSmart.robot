@@ -23,6 +23,8 @@ Verify Android PreLogin TradeSmart Page
     Verify Text On Page  ${e_feature_TS_activateWith300Btn}
     Wait And Click Element On Android  ${KU_A_feature_TS_activateWith300Btn}
     Verify Login Page On Android App
+    Swipe By Percent  30  30  85  85  5000
+    Swipe By Percent  30  30  85  85  5000
 
 
 

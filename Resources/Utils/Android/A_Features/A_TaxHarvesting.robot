@@ -27,6 +27,8 @@ Verify Android PreLogin Tax Harvesting Page
     Verify Text On Page  ${e_feature_TH_step1}
     Verify Text On Page  ${e_feature_TH_howItWorksTitle}
     Verify Text On Page  ${e_feature_TH_howItWorksDesc}
+    Swipe By Percent  30  30  85  85  5000
+    Swipe By Percent  30  30  85  85  5000
     
 Verify Investment Table 
     Verify Text On Page  ${e_feature_TH_investmentTableTitle}

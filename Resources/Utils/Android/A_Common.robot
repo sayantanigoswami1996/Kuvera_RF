@@ -92,6 +92,10 @@ Navigate To Hamburger Menu
     Wait And Verify Element And Text On Android  ${links}  ${linkText}
     Wait And Click Element On Android  ${links}
 
+Click On Links
+    Wait And Verify Element And Text On Android  ${links}  ${linkText}
+    Wait And Click Element On Android  ${links}
+
 Verify Signup Link And Kuvera Logo
     Wait And Verify Element And Text On Android  ${KU_A_signupLink}  ${e_signupLink}
     Wait For Element Visibility On Android  ${KU_A_logo}

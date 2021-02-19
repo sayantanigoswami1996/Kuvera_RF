@@ -19,6 +19,8 @@ Verify Android PreLogin Save Taxes Page
     Verify Details Of Top Rated Tax
     Verify Presence Of Bot Button  ${KU_A_faqBotBtn}
     Verify Tax Saving Funds Description
+    Swipe By Percent  30  30  85  85  5000
+    Swipe By Percent  30  30  85  85  5000
     
 Verify Tax Saving Funds Description
     Swipe By Percent  70  70  20  20  5000

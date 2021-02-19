@@ -23,12 +23,31 @@ PreLogin Header Navigation On Android
     ${insure}  Get Json Values On Android  $.MenuHeaders.h2  Resources/TestData/Headers.json
     ${remit}  Get Json Values On Android  $.MenuHeaders.h3  Resources/TestData/Headers.json
     ${features}  Get Json Values On Android  $.MenuHeaders.h4  Resources/TestData/Headers.json
-
-    Run keyword IF  ['${e_loansPage}'] == ${loans}   Verify Android PreLogin Loans Page
-    Run keyword IF  ['${e_insurePage}'] == ${insure}  Verify Android PreLogin Insure Page
-    Run keyword IF  ['${e_remitPage}'] == ${remit}  Verify Android PreLogin Remit Page
+    
+    Run keyword If  ['${e_loansPage}'] == ${loans}   Verify Android PreLogin Loans Page
+    Run keyword If  ['${e_insurePage}'] == ${insure}  Verify Android PreLogin Insure Page
+    Run keyword If  ['${e_remitPage}'] == ${remit}  Verify Android PreLogin Remit Page
     ...    ELSE   Log To Console  Covered in other test
-   
+
+PreLogin Feature Sub Header Navigation On Android
+    Log To Console  Features
+    ${setAGoal}  Get Json Values On Android  $.MenuHeaders.h4.fsh0  Resources/TestData/Headers.json
+    ${tradeSmart}  Get Json Values On Android  $.MenuHeaders.h4.fsh1  Resources/TestData/Headers.json
+    ${familyAccount}  Get Json Values On Android  $.MenuHeaders.h4.fsh2  Resources/TestData/Headers.json
+    ${manageAccount}  Get Json Values On Android  $.MenuHeaders.h4.fsh3  Resources/TestData/Headers.json
+    ${taxHarvesting}  Get Json Values On Android  $.MenuHeaders.h4.fsh4  Resources/TestData/Headers.json
+    ${savesTaxes}  Get Json Values On Android  $.MenuHeaders.h4.fsh5  Resources/TestData/Headers.json
+    ${consolidate}  Get Json Values On Android  $.MenuHeaders.h4.fsh6  Resources/TestData/Headers.json
+    
+    Run keyword If  ['${e_setAGoalPage}'] == ${setAGoal}   Log To Console  Element Not Inspectable
+    Run keyword If  ['${e_tradeSmart}'] == ${tradeSmart}   Verify Android PreLogin TradeSmart Page
+    Run keyword If  ['${e_familyAccountPage}'] == ${familyAccount}  Verify Android PreLogin Family Account Page
+    Run keyword If  ['${e_manageAccountPage}'] == ${manageAccount}  Verify Android PreLogin Manage Account Page
+    Run keyword If  ['${e_taxHarvestingPage}'] == ${taxHarvesting}  Verify Android PreLogin Tax Harvesting Page
+    Run keyword If  ['${e_saveTaxesPage}'] == ${savesTaxes}  Verify Android PreLogin Save Taxes Page
+    Run keyword If  ['${e_consolidatePage}'] == ${consolidate}  Log To Console  Pending
+    ...    ELSE  Log To Console  Completed
+     
 
 Verify Mutual Fund Widgets
     Log To Console  Mutual Fund
