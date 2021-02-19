@@ -145,19 +145,17 @@ ${e_feature_ST_learnHowLinkDesc} =  How to file income tax returns   when invest
 ${e_feature_ST_categoryTitle} =  Equity . ELSS
 
 
-# Feature - Save Taxes
-${e_feature_CD_screenTitle} =  Save Taxes.
-${e_feature_CD_saveTaxDesc} =  Tax Saving ELSS Mutual Funds can help save upto ₹46,350 in taxes
-${e_feature_CD_saveCommissionsTitle} =  Save Commissions.
-${e_feature_CD_saveCommissionsDesc} =  We are a Direct Plan platform. You save upto 1.5% per year in commission
-${e_feature_CD_saveCommissionsDesc} =  Save Fees.
-${e_feature_CD_saveCommissionsDesc} =  We are free. No investment fees whatsover. It doesn't get better than this.
-${e_feature_CD_saveCommissionsDesc} =  Top rated tax saving funds
-${e_feature_CD_saveCommissionsDesc} =  Funds that feature in “Best Tax Saving Mutual Fund” lists across the web.
-${e_feature_CD_saveCommissionsDesc} =  How the ‘Tax Saving Funds’ work
-${e_feature_CD_saveCommissionsDesc} =  Investments in Tax Saving Mutual Funds (also called ELSS funds) are eligible as deductions under Section 80C of the Income Tax Act. You can invest up to Rs 1.5 lakhs in eligible investments. At the highest tax bracket this would lead to a tax saving of Rs 46,350. There is a lock-in of 3 years, during which time you cannot redeem your investment.
-${e_feature_CD_saveCommissionsDesc} =  How to file income tax returns   when investing internationally                
-${e_feature_CD_saveCommissionsDesc} =  Equity . ELSS
+# Feature - Consolidate
+${e_feature_CD_screenTitle} =  Informed, disciplined investing grows your money, long-term
+${e_feature_CD_screenSubTitle} =  Follow a structured approach and invest regularly, for the long-haul. This is the best way to grow your wealth over time
+${e_feature_CD_dreamsComeTrue} =  DREAMS DO COME TRUE
+${e_feature_CD_makeYourGoalsReality} =  Make your goals a reality
+${e_feature_CD_makeYourGoalsDesc} =  A new car, owning your own home, sending your kids to study abroad - you may have many reasons to invest. We help you build investment action plans that’ll help you make enough to make these goals a reality. 
+${e_feature_CD_goalBasedLinkTitle} =  3 Steps To Financial Success Using Goal-Based Investing
+${e_feature_CD_taxSaverOptions} =  TAX-SAVER OPTIONS
+${e_feature_CD_saveOnTax} =  Save on Tax
+${e_feature_CD_saveOnTaxDesc} =  Lowest lock-ins. Simple withdrawals. No taxes on redemption. Potentially better returns. ELSS mutual funds can be a better option than traditional tax-saving measures like tax-saver FDs and PPF.                 
+${e_feature_CD_whyELSSLinkTitle} =  Why is ELSS better than other tax saving investments?
 
 # Application Locator 'KU_<locatorName>'
 # Insure 
@@ -302,6 +300,10 @@ ${KU_A_feature_ST_learnHowLink} =  xpath=//*[@text='Learn how!']
 ${KU_A_feature_ST_learnHowLinkDesc} =  xpath=//*[@text='Why ELSS deserve your attention during tax season!']
 
 # Feature - Consolidate
-${KU_A_feature_CD_imgIcon} =  xpath=//*[@text='Tax Saver Icon']
-${KU_A_feature_CD_link} =  xpath=//*[@text='Save Taxes']
-${KU_A_feature_CD_learnHowLink} =  xpath=//*[@text='Learn how!']
+${KU_A_feature_CD_imgIcon} =  xpath=//*[@text='set a goal image']
+${KU_A_feature_CD_link} =  xpath=//*[@text='Consolidate']
+${KU_A_feature_CD_setAGoal} =  xpath=//*[@text='SET A GOAL']
+${KU_A_feature_CD_goalBasedInvestinglink} =  xpath=//*[@text='More about goal-based investing']
+${KU_A_feature_CD_saveTaxImg} =  xpath=//*[@text='Save Tax image']
+${KU_A_feature_CD_whyELSSLink} =  xpath=//*[@text='More on why ELSS is better']
+${KU_A_feature_CD_saveTaxBtn} =  xpath=//*[@text='SET A ‘SAVE TAX’ GOAL']

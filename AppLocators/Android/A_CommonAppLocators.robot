@@ -35,12 +35,12 @@ ${e_MF_allFundsLabel} =  All funds
 ${e_loginLink} =  Log in
 ${e_loginTitle} =  Login. Start Investing.
 ${e_signupTitle} =  Sign Up. Start Investing.
-${e_croreAUAVal} =  ₹ 18,000
+${e_croreAUAVal} =  ₹ 20,000
 ${e_croreAUALabel} =  Crore AUA
 ${e_goalsLabel} =  Goals
 ${e_goalsVal} =  4 Lakh
 ${e_transactionsLabel} =  Transactions
-${e_transactionsVal} =  2.2 Crore
+${e_transactionsVal} =  2.4 Crore
 ${e_stocksLabel} =  Stocks
 ${e_stocksSubTitle} =  Explore, Invest and track all your stock investments
 ${e_stocks_allStocksTab} =  All stocks
@@ -91,11 +91,8 @@ ${KU_A_loginTitle} =  xpath=//*[@text='Login. Start Investing.']
 ${KU_A_signupTitle} =  xpath=//*[@text='Sign Up. Start Investing.']
 ${KU_A_signupBtn} =  xpath=(//*[@text='Sign up'])[2]
 ${KU_A_croreAUALabel} =  xpath=//*[@text='Crore AUA']
-${KU_A_croreAUAVal} =  xpath=//*[@text='₹ 18,000']
 ${KU_A_goalsLabel} =  xpath=//*[@text='Goals']
-${KU_A_goalsVal} =  xpath=//*[@text='4 Lakh']
 ${KU_A_transactionsLabel} =  xpath=//*[@text='Transactions']
-${KU_A_transactionsVal} =  xpath=//*[@text='2.2 Crore']
 ${KU_A_stocksLabel} =  xpath=//*[@text='Stocks']
 ${KU_A_stocksTitle} =  xpath=(//*[@text='Stocks'])[1]
 ${KU_A_US_stocks_priceLabel} =  xpath=//*[@text='Price']

@@ -39,7 +39,7 @@ PreLogin Feature Sub Header Navigation On Android
     ${savesTaxes}  Get Json Values On Android  $.MenuHeaders.h4.fsh5  Resources/TestData/Headers.json
     ${consolidate}  Get Json Values On Android  $.MenuHeaders.h4.fsh6  Resources/TestData/Headers.json
     
-    Run keyword If  ['${e_setAGoalPage}'] == ${setAGoal}   Log To Console  Element Not Inspectable
+    Run keyword If  ['${e_setAGoalPage}'] == ${setAGoal}   Log To Console  Set A Goal - Element Not Inspectable
     Run keyword If  ['${e_tradeSmart}'] == ${tradeSmart}   Verify Android PreLogin TradeSmart Page
     Run keyword If  ['${e_familyAccountPage}'] == ${familyAccount}  Verify Android PreLogin Family Account Page
     Run keyword If  ['${e_manageAccountPage}'] == ${manageAccount}  Verify Android PreLogin Manage Account Page
@@ -59,11 +59,11 @@ Verify Mutual Fund Widgets
     Verify Login And Signup Button
     Log To Console  AUA Goals And Transactions Validation
     Wait And Verify Element And Text On Android  ${KU_A_croreAUALabel}  ${e_croreAUALabel}
-    Wait And Verify Element And Text On Android  ${KU_A_croreAUAVal}  ${e_croreAUAVal}
+    Verify Text On Page  ${e_croreAUAVal}
     Wait And Verify Element And Text On Android  ${KU_A_goalsLabel}  ${e_goalsLabel}
-    Wait And Verify Element And Text On Android  ${KU_A_goalsVal}  ${e_goalsVal} 
+    Verify Text On Page  ${e_goalsVal} 
     Wait And Verify Element And Text On Android  ${KU_A_transactionsLabel}  ${e_transactionsLabel}
-    Wait And Verify Element And Text On Android  ${KU_A_transactionsVal}  ${e_transactionsVal}
+    Verify Text On Page  ${e_transactionsVal}
     Swipe By Percent  30  30  10  10  900
     Log To Console  Label Validation
     Wait And Verify Element And Text On Android  ${KU_A_MF_navLabel}  ${e_MF_navLabel}
