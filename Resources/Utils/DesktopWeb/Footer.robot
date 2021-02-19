@@ -30,9 +30,6 @@ Verify PreLogin Footer
     Scroll To About Us Section
     # Set a goal 
     Verify Set A Goal Page
-    ${isElementVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_feature_sg_screenTitle}
-    Run Keyword If   ${isElementVisible}  Log To Console  Continue
-    ...    ELSE  Verify Set A Goal Page
     Go Back
     Scroll To About Us Section
     # Explore Funds
@@ -115,7 +112,14 @@ Verify Blog
 
 Verify Set A Goal Page
     Sleep  1s
-    Wait For Element Visibility  ${KU_W_footer_setAGoal}
+    Wait For Element Visibility  ${KU_W_footer_setAGoal}  
     Click Element  ${KU_W_footer_setAGoal}
+    ${isElementVisible} =  Run Keyword And Return Status  Visibility Of Set A Goal Page
+    Run Keyword If   ${isElementVisible}  Log To Console  Continue
+    ...    ELSE  Click Element  ${KU_W_footer_setAGoal}
     Wait For Element Visibility  ${KU_W_feature_sg_screenTitle}
     Verify Element And Text  ${KU_W_feature_sg_screenTitle}  ${e_feature_sg_screenTitle}
+
+Visibility Of Set A Goal Page
+    Wait For Element Visibility  ${KU_W_feature_sg_screenTitle}
+    Element Should Be Visible  ${KU_W_feature_sg_screenTitle}
