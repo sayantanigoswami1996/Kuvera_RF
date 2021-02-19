@@ -196,8 +196,8 @@ Verify Features Widgets
     Sleep  1s
     Wait For Element Visibility  ${KU_W_manageToday_learnMoreLink}
     Click Element  ${KU_W_manageToday_learnMoreLink}
-    ${expectedManageTodayLinkTitle} =  Convert To String  ${e_manageTodayLinkTitle} 
-    Switch To Window Verify Title And Close   ${expectedManageTodayLinkTitle}  
+    # ${expectedManageTodayLinkTitle} =  Convert To String  ${e_manageTodayLinkTitle} 
+    Switch To Window Verify Title And Close  ${e_manageTodayLinkTitle}  
     Sleep  1s
     Click Element  ${KU_W_next_button}
     Sleep  1s
