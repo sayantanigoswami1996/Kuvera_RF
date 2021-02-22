@@ -33,7 +33,6 @@ Resource    ../../../AppLocators/DesktopWeb/HealthInsurancePostLoginLocators/Pla
 Resource    ../../../AppLocators/DesktopWeb/HealthInsurancePostLoginLocators/HealthInsuranceLandingPageLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/CreateAccountForPostLoginLocators.robot
 
-
 *** Keywords ***
 
 Launch URL
