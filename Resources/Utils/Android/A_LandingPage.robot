@@ -45,7 +45,7 @@ PreLogin Feature Sub Header Navigation On Android
     Run keyword If  ['${e_manageAccountPage}'] == ${manageAccount}  Verify Android PreLogin Manage Account Page
     Run keyword If  ['${e_taxHarvestingPage}'] == ${taxHarvesting}  Verify Android PreLogin Tax Harvesting Page
     Run keyword If  ['${e_saveTaxesPage}'] == ${savesTaxes}  Verify Android PreLogin Save Taxes Page
-    Run keyword If  ['${e_consolidatePage}'] == ${consolidate}  Verify Android PreLogin Consolidate Page
+    Run keyword If  ['${e_consolidatePage}'] == ${consolidate}  Log To Console  Pending
     ...    ELSE  Log To Console  Completed
      
 
@@ -70,14 +70,17 @@ Verify Mutual Fund Widgets
     Wait And Verify Element And Text On Android  ${KU_A_MF_1YLabel}  ${e_MF_1YLabel}
     Wait And Verify Element And Text On Android  ${KU_A_MF_3YLabel}  ${e_MF_3YLabel}
     Verify Watchlist Button
-    Swipe By Percent  70  70  20  20  7000
+    Swipe By Percent  85  85  30  30  9000
     Wait For Element Visibility On Android  ${KU_A_MF_exploreMFBtn}
     Verify Page Contains Element On Android  ${KU_A_MF_exploreMFBtn}
     Verify Presence Of Bot Button  ${KU_A_faqBotBtn} 
     Click On Explore Button And Verify Navigated Page  ${KU_A_MF_exploreMFBtn}  ${KU_A_MF_allFundsLabel}  ${e_MF_allFundsLabel}
     Swipe By Percent  85  85  30  30  9000
+    Swipe By Percent  50  50  20  20  9000
     Verify Text On Page  ${e_investYourWayTitle}
     Verify Text On Page  ${e_oneLoginTitle}
+    Swipe By Percent  30  30  85  85  5000
+    Swipe By Percent  30  30  85  85  5000
     
 Verify Stock Widgets
     Log To Console  Stocks
