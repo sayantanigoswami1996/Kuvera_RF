@@ -15,6 +15,7 @@ Verify PreLogin Landing Page Widgets
     Verify SaveSmart Widgets
     Verify Widgets And Title  ${KU_A_goldLabel}  ${e_goldLabel}  ${KU_A_goldTitle}  ${e_goldTitle}
     Verify Gold Widgets
+    Sleep  1s
     Verify Mutual Fund Widgets
 
 PreLogin Header Navigation On Android
