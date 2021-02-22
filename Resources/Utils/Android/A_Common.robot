@@ -133,7 +133,7 @@ Wait Until Page Contains Text
 Verify Text On Page
     [Arguments]  ${text}
     Wait Until Page Contains  ${text}  timeout=30
-    Page Should Contain Text  ${text}
+    Run Keyword And Continue On Failure  Page Should Contain Text  ${text}
    
 Quit Kuvera Application
     Quit Application
