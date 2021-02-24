@@ -128,7 +128,7 @@ Verify Widgets And Title
 
 Wait Until Page Contains Text
     [Arguments]  ${text}
-    Page Should Contain Text  ${text}
+    Run Keyword And Continue On Failure  Page Should Contain Text  ${text}
 
 Verify Text On Page
     [Arguments]  ${text}
