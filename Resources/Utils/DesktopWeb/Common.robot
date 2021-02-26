@@ -1,4 +1,4 @@
-*** Settings ***
+** Settings ***
 
 Library     JSONLibrary
 Library     JsonValidator
@@ -8,27 +8,58 @@ Library     OperatingSystem
 Library     Collections
 Resource    ../../../AppLocators/DesktopWeb/CommonAppLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/MenuNavigationLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/InvestLocators/InvestLandingPageLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/InvestLocators/SaveSmartLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/InvestLocators/DigitalGoldLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/InvestLocators/GiltFundsLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/InvestLocators/EquityIndexLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/InvestLocators/ValueFundsLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/InvestLocators/ELSSTaxSaverLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/InvestLocators/BankPSUBondsLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/InvestLocators/CryptoLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/InvestLocators/FDLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/InvestLocators/SectorFundsLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/InvestLocators/ELSSTaxSaverLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/InvestLocators/USETFLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/InvestLocators/UltraShortLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/InvestLocators/MutualFundsLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/InvestLocators/StocksLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/InvestLocators/USStocksLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/FooterLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/FundHouseLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/PostLoginCommonAppLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/HealthInsurancePostLoginLocators/KYCLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/HealthInsurancePostLoginLocators/PlanHealthInsuranceLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/HealthInsurancePostLoginLocators/HealthInsuranceLandingPageLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/CreateAccountForPostLoginLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/UnauthenticatedLinks/LiquidFundsLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/UnauthenticatedLinks/ForgotPasswordLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/UnauthenticatedLinks/ESignKYCLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/UnauthenticatedLinks/AmazonSaveShopLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/UnauthenticatedLinks/GoldRushLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/UnauthenticatedLinks/DhanterasGoldOfferLocators.robot
 
 *** Keywords ***
 
 Launch URL
-    Open Browser  ${URL}  ${BROWSER}  alias=Kuvera
+    Run keyword If  '${ENV}' == '${e_prod}'  Open Browser  ${URL_prod}  ${BROWSER}  alias=Kuvera
+    ...    ELSE IF  '${ENV}' == '${e_stage3}'  Open Browser  ${URL_stage3}  ${BROWSER}  alias=Kuvera
+    ...    ELSE IF  '${ENV}' == '${e_stage2}'  Open Browser  ${URL_stage2}  ${BROWSER}  alias=Kuvera
+    Log To Console  ${ENV}
     # Maximize Browser Window
     Set Window Size  ${1920}  ${1080}
-    Set Selenium Implicit Wait  60s
+    Set Selenium Implicit Wait  4s
     Reload Page
     Kuvera Web Close Regulatory Disclosure
     Run Keyword If    '${ENV}' == '${e_prod}'  Close Hello Bar
     ...    ELSE   Log To Console  Staging
-
+    
 Welcome Page Should Be Open
     Run Keyword And Continue On Failure  Title Should Be  ${KU_W_title}
 
 Wait For Element Visibility
     [Arguments]  ${element}
-    Wait Until Element Is Visible  ${element}  timeout=60
+    Wait Until Element Is Visible  ${element}  timeout=90
 
 Verify Element And Text
     [Arguments]  ${element}  ${text}
@@ -125,11 +156,10 @@ Verify Google Play & Apple Store Icons
     Verify Page Contains Image  ${KU_W_android_image}
     Verify Page Contains Image  ${KU_W_apple_image}
 
-Verify Language Switch Login And Signup Link
-    Wait For Element Visibility  ${KU_W_langSwitch}
-    Verify Page Contains Element  ${KU_W_langSwitch}
+Verify Login And Signup Link
     Wait For Element Visibility  ${KU_W_login}
     Verify Element And Text  ${KU_W_login}  ${e_login}
+    Sleep  1s
     Wait For Element Visibility  ${KU_W_signup}
     Verify Element And Text  ${KU_W_signup}  ${e_signup}
 
@@ -196,6 +226,63 @@ Click Link And Switch Window
     Click Element  ${websiteLink}
     Switch To Window
     Sleep  2s  
+
+Navigate To Home Page
+    Run keyword If  '${ENV}' == '${e_prod}'  Go To  ${URL_prod}
+    ...    ELSE IF  '${ENV}' == '${e_stage3}'  Go To  ${URL_stage3}
+    Set Window Size  ${1920}  ${1080}
+    Reload Page
+    Sleep  12s
+
+Logout From App And Navigate To Home Page PostLogin
+    Go To  ${URL_stage3}
+    Logout From App Post Signup
+    Go To  ${URL_stage3}
+    Set Window Size  ${1920}  ${1080}
+    Reload Page
+    Sleep  12s
+
+Generate Random Number
+    [Arguments]  ${startingrange}  ${endingrange}
+    ${randomNum} =	Evaluate	random.randint(${startingrange}, ${endingrange})
+    [Return]   ${randomNum}
+
+Generate Unique Mobile Number
+    ${randomMobileNum} =  Generate Random Number  0  99999
+    ${result1} =  Convert To Integer  ${randomMobileNum}
+    ${result2} =  Convert To Integer  ${e_ca_mobileNum}
+    ${actualMobileNumber} =  Evaluate  ${result1}+${result2}
+    ${actualMobileNumber1} =  Convert To String  ${actualMobileNumber}
+    ${expectedMobileNum} =  Replace Characters  ${actualMobileNumber1}  1  9
+    [Return]  ${expectedMobileNum}
+
+Wait And Click 
+    [Arguments]  ${element}
+    Sleep  1s
+    Wait For Element Visibility  ${element}
+    Click Element  ${element}
+
+Verify Social Sharing Option 
+    [Arguments]  ${fblink}  ${twitterlink}  ${whatsapplink}  ${telegramlink}  ${maillink}
+    Wait Scroll And Click Element  ${fblink}
+    Switch To Window Verify Title And Close  ${e_HI_facebookTitle}
+    Wait Scroll And Click Element  ${twitterlink} 
+    Sleep  5s
+    Switch To Window Verify Title And Close  ${e_HI_twitterTitle}
+    Wait Scroll And Click Element  ${whatsapplink}
+    Switch To Window Verify Title And Close  ${e_HI_whatsappTitle} 
+    Wait Scroll And Click Element  ${telegramlink}
+    Switch To Window Verify Title And Close  ${e_HI_telegramTitle}
+    Scroll Page To Location  0   1000
+    Wait Scroll And Click Element  ${maillink}
+    Sleep  2s
+    Wait Scroll And Click Element  ${KU_W_HI_mailLink} 
+
+Logout From App Post Signup
+    Wait And Click  ${KU_W_ca_caretDropdown}
+    Wait And Click  ${KU_W_ca_logoutBtn}
+    Sleep  4s
+    Go Back
    
 Close Web Application
     Close All Browser

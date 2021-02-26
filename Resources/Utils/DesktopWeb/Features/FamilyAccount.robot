@@ -5,7 +5,7 @@ Library     SeleniumLibrary
 *** Keywords ***
 
 Verify PreLogin Family Account Page 
-    Verify Language Switch Login And Signup Link
+    Verify Login And Signup Link
     Wait For Element Visibility  ${KU_W_feature_familyAccountLink}
     Click Element  ${KU_W_feature_familyAccountLink}
     Wait For Element Visibility  ${KU_W_feature_fa_screenTitle}

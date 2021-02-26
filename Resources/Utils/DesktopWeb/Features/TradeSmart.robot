@@ -7,7 +7,7 @@ Library     SeleniumLibrary
 Verify PreLogin TradeSmart Page
   Wait For Element Visibility  ${KU_W_feature_ts_link}
   Click Element  ${KU_W_feature_ts_link}
-  Verify Language Switch Login And Signup Link
+  Verify Login And Signup Link
   Wait For Element Visibility  ${KU_W_feature_ts_title} 
   Verify Element And Text  ${KU_W_feature_ts_title}  ${e_feature_ts_titleText}
   Verify Element And Text  ${KU_W_feature_ts_subHeaderTitle}   ${e_feature_ts_subHeaderDesc} 

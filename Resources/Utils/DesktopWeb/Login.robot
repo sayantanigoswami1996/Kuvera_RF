@@ -9,7 +9,7 @@ Verify Login Page
     Verify Element And Text  ${KU_W_loginPageTitle}  ${e_loginPageTitle}
     Go Back
 
-Verify Pre Login Login Page Widgets
+Verify PreLogin Login Page Widgets
     # Verify all widgets in login page
     Wait For Element Visibility  ${KU_W_login}
     Click Element  ${KU_W_login}

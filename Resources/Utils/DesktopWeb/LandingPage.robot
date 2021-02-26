@@ -4,7 +4,7 @@ Library     SeleniumLibrary
 
 *** Keywords ***
 
-Verify Widgets
+Verify PreLogin Widgets
     Verify Stock Widgets
     Verify US Stock Widgets
     Verify Save Smart Widgets
@@ -14,18 +14,13 @@ Verify Widgets
     Verify Features Widgets 
     Verify Summary Tab Widgets
 
-Verify Presence Of Filter Sub Category And WatchList Icon
-    [Arguments]  ${filter}  ${category}  ${subcategory}  ${fundList}  ${watchListIcon} 
-    Scroll Untill View  ${filter}
-    Wait For Element Visibility  ${filter} 
-    Verify Element And Text  ${filter}  ${e_stock_filterTitleText}
-    Verify Element And Text  ${category}  ${e_stock_filterTxt}
-    Verify Element And Text  ${subcategory}  ${e_stock_subFilterTxt}
+Verify Presence Of Fundlist And WatchList Icon
+    [Arguments]  ${fundList}  ${watchListIcon} 
     Wait For Element Visibility  ${fundList} 
     Verify Page Contains Element  ${fundList} 
     Verify Page Contains Image  ${watchListIcon}
 
-Header Navigation
+PreLogin Header Navigation
     ${invest}  Get Json Values  $.MenuHeaders.h0  Resources/TestData/Headers.json
     ${loans}  Get Json Values  $.MenuHeaders.h1  Resources/TestData/Headers.json
     ${insure}  Get Json Values  $.MenuHeaders.h2  Resources/TestData/Headers.json
@@ -43,7 +38,7 @@ Header Navigation
         ...    ELSE   Log To Console  Covered in other test
     END
 
-Feature Sub Header Navigation
+PreLogin Feature Sub Header Navigation
     Log To Console  Features
     ${setAGoal}  Get Json Values  $.MenuHeaders.h4.fsh0  Resources/TestData/Headers.json
     ${tradeSmart}  Get Json Values  $.MenuHeaders.h4.fsh1  Resources/TestData/Headers.json
@@ -69,14 +64,12 @@ Feature Sub Header Navigation
     END
 
 Verify Mutual Funds Widgets
-    Wait For Element Visibility  ${KU_W_mf_stock_button}
-    Click Element  ${KU_W_mf_stock_button}
+    Wait For Element Visibility  ${KU_W_mf_mfTab}
+    Click Element  ${KU_W_mf_mfTab}
     Wait For Element Visibility  ${KU_W_mf_welcomeTitle}
-    Verify Language Switch Login And Signup Link
+    Verify Login And Signup Link
     Verify Element And Text  ${KU_W_mf_welcomeTitle}  ${e_mfWelcomeTitle}
     Verify Element And Text  ${KU_W_mf_welcomeText}  ${e_mf_welcomeText}
-    Verify Element And Text  ${KU_W_mf_category}  ${e_mfCategory} 
-    Verify Element And Text  ${KU_W_mf_subcategory}  ${e_mfSubCategory}
     Wait For Element Visibility  ${KU_W_fund_list} 
     Verify Page Contains Element  ${KU_W_fund_list} 
     Verify Page Contains Image  ${KU_W_mf_listIcon}
@@ -96,14 +89,14 @@ Verify Mutual Funds Widgets
 Verify Stock Widgets
     Wait For Element Visibility  ${KU_W_mf_stock_button}
     Click Element  ${KU_W_mf_stock_button}
-    Verify Presence Of Filter Sub Category And WatchList Icon  ${KU_W_stock_filterTitle}  ${KU_W_stock_filter}   ${KU_W_stock_subFilter}   ${KU_W_stock_fundList}  ${KU_W_stock_listIcon}
+    Verify Presence Of Fundlist And WatchList Icon  ${KU_W_stock_fundList}  ${KU_W_stock_listIcon}
     Verify Element And Text  ${KU_W_stock_header}  ${e_stock_headerTxt}
     Verify Element And Text  ${KU_W_stock_subHeader}   ${e_stock_subHeaderTxt} 
 
 Verify US Stock Widgets
     Wait For Element Visibility  ${KU_W_USStockButton}
     Click Element  ${KU_W_USStockButton}
-    Verify Presence Of Filter Sub Category And WatchList Icon  ${KU_W_usstock_filterTitle}  ${KU_W_usstock_filter}   ${KU_W_usstock_subFilter}   ${KU_W_usstock_fundList}  ${KU_W_usstock_listIcon}
+    Verify Presence Of Fundlist And WatchList Icon  ${KU_W_usstock_fundList}  ${KU_W_usstock_listIcon}
     Verify Element And Text  ${KU_W_usstock_header}  ${e_usstock_headerTxt}
     Verify Element And Text  ${KU_W_usstock_subHeader}  ${e_usstock_subHeaderTxt} 
 
@@ -203,8 +196,8 @@ Verify Features Widgets
     Sleep  1s
     Wait For Element Visibility  ${KU_W_manageToday_learnMoreLink}
     Click Element  ${KU_W_manageToday_learnMoreLink}
-    ${expectedManageTodayLinkTitle} =  Convert To String  ${e_manageTodayLinkTitle} 
-    Switch To Window Verify Title And Close   ${expectedManageTodayLinkTitle}  
+    # ${expectedManageTodayLinkTitle} =  Convert To String  ${e_manageTodayLinkTitle} 
+    Switch To Window Verify Title And Close  ${e_manageTodayLinkTitle}  
     Sleep  1s
     Click Element  ${KU_W_next_button}
     Sleep  1s

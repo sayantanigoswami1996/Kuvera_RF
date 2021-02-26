@@ -5,10 +5,9 @@ Library     SeleniumLibrary
 *** Keywords ***
 
 Verify PreLogin Consolidate Page
-    Click Element  ${KU_W_featureLink}
     Wait For Element Visibility  ${KU_W_feature_consolidateLink}
     Click Element  ${KU_W_feature_consolidateLink}
-    Verify Language Switch Login And Signup Link
+    Verify Login And Signup Link
     Wait For Element Visibility  ${KU_W_feature_cd_pageHeader}  
     Verify Element And Text  ${KU_W_feature_cd_pageHeader}  ${e_feature_cd_pageHeaderText}
     Verify Element And Text  ${KU_W_feature_cd_pageSubHeader}  ${e_feature_cd_subHeaderText}
@@ -18,7 +17,7 @@ Verify PreLogin Consolidate Page
     Verify Element And Text  ${KU_W_feature_setAGoalSubTitle}  ${e_feature_cd_setAGoalSubTitle} 
     Verify Element And Text  ${KU_W_feature_setAGoalDesc}  ${e_feature_cd_setAGoalDescText}
     Verify Page Contains Link  ${KU_W_feature_goalBasedInvestingLink}  ${e_feature_cd_goalBsdInvestingLinkText}
-    Sleep  2s
+    Sleep  5s
     Wait For Element Visibility  ${KU_W_feature_goalBasedInvestingLink}
     Click Element  ${KU_W_feature_goalBasedInvestingLink}
     Switch To Window Verify Title And Close  ${e_feature_cd_financialSuccessTitleText}  
@@ -36,8 +35,7 @@ Verify PreLogin Consolidate Page
     Verify Element And Text  ${KU_W_feature_saveTaxGoalDesc}  ${e_feature_cd_saveTaxGoalDescText}
     Verify Page Contains Link  ${KU_W_feature_ELSSLink}  ${e_feature_cd_ELSSLinkText}
     Sleep   2s
-    Wait For Element Visibility    ${KU_W_feature_ELSSLink} 
-    Click Element  ${KU_W_feature_ELSSLink} 
+    Wait Scroll And Click Element  ${KU_W_feature_ELSSLink} 
     Switch To Window Verify Title And Close  ${e_feature_cd_ELSSTitleText}  
     Sleep   5s
     Verify Element And Text  ${KU_W_feature_saveTaxGoalBtn}   ${e_feature_cd_saveTaxBtnText} 

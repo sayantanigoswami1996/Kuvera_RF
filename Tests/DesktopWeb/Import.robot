@@ -1,8 +1,7 @@
 *** Settings ***
 
-# Import Pages for Tests
-Resource    ../../Resources/Utils/DesktopWeb/Common.robot
 Resource    ../../Resources/Utils/DesktopWeb/LandingPage.robot
+Resource    ../../Resources/Utils/DesktopWeb/Common.robot
 Resource    ../../Resources/Utils/DesktopWeb/Login.robot
 Resource    ../../Resources/Utils/DesktopWeb/Signup.robot
 Resource    ../../Resources/Utils/DesktopWeb/Invest/InvestLandingPage.robot
@@ -14,6 +13,7 @@ Resource    ../../Resources/Utils/DesktopWeb/Invest/SectorFunds.robot
 Resource    ../../Resources/Utils/DesktopWeb/Invest/BankPSUBonds.robot
 Resource    ../../Resources/Utils/DesktopWeb/Invest/ELSSTaxSaver.robot
 Resource    ../../Resources/Utils/DesktopWeb/Invest/Crypto.robot
+Resource    ../../Resources/Utils/DesktopWeb/Invest/FD.robot
 Resource    ../../Resources/Utils/DesktopWeb/Invest/USETF.robot
 Resource    ../../Resources/Utils/DesktopWeb/Invest/ValueFunds.robot
 Resource    ../../Resources/Utils/DesktopWeb/Invest/52WkHighIndia.robot
@@ -42,3 +42,16 @@ Resource    ../../Resources/Utils/DesktopWeb/Features/SaveTaxes.robot
 Resource    ../../Resources/Utils/DesktopWeb/Features/Consolidate.robot
 Resource    ../../Resources/Utils/DesktopWeb/Footer.robot
 Resource    ../../Resources/Utils/DesktopWeb/FundHouse.robot
+Resource    ../../Resources/Utils/DesktopWeb/CreateAccountForPostLogin.robot
+Resource    ../../Resources/Utils/DesktopWeb/HealthInsurancePostLogin/KYC.robot
+Resource    ../../Resources/Utils/DesktopWeb/HealthInsurancePostLogin/PlanHealthInsurance.robot
+Resource    ../../Resources/Utils/DesktopWeb/HealthInsurancePostLogin/HealthInsuranceLandingPage.robot
+Resource    ../../Resources/Utils/DesktopWeb/HealthInsurancePostLogin/LoginPostHealthInsuranceClaim.robot
+Resource    ../../Resources/Utils/DesktopWeb/UnauthenticatedLinks/LiquidFunds.robot
+Resource    ../../Resources/Utils/DesktopWeb/UnauthenticatedLinks/ForgotPassword.robot
+Resource    ../../Resources/Utils/DesktopWeb/UnauthenticatedLinks/ESignKYCInvalidRequest.robot
+Resource    ../../Resources/Utils/DesktopWeb/UnauthenticatedLinks/ESignKYCFailed.robot
+Resource    ../../Resources/Utils/DesktopWeb/UnauthenticatedLinks/ESignKYCCompleted.robot
+Resource    ../../Resources/Utils/DesktopWeb/UnauthenticatedLinks/AmazonSaveShop.robot
+Resource    ../../Resources/Utils/DesktopWeb/UnauthenticatedLinks/GoldRush.robot
+Resource    ../../Resources/Utils/DesktopWeb/UnauthenticatedLinks/DhanterasGoldOffer.robot

@@ -4,11 +4,12 @@ Library     SeleniumLibrary
 
 *** Keywords ***
 
-Verify Ultra Short Landing Page
+Verify PreLogin Ultra Short Landing Page
     Log To Console  Ultra Short
     Sleep  2s
-    Click Element   ${KU_W_ultraShortTitle} 
+    Click Element   ${KU_W_ultraShortTitle}   
     Wait For Element Visibility  ${KU_W_invest_fundsScreenTitle} 
+    Verify Login And Signup Link
     Verify Element And Text  ${KU_W_invest_fundsScreenTitle}  ${e_invest_us_screenText} 
     Verify Search And Sort  ${KU_W_searchBarForFunds}  ${e_invest_searchBarText}  ${KU_W_invest_searchTextFieldForFunds}  ${KU_W_invest_sort}
     Verify Filter And Clear All

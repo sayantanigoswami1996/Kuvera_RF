@@ -108,7 +108,7 @@ ${e_feature_sg2_goalDuration} =  5
 ${e_feature_sg2_investUpfront} =  1000
 # Goal - Save Tax
 ${e_feature_sg3_userAge} =  25
-${e_feature_sg3_montlyInvest} =  3000
+${e_feature_sg3_montlyInvest} =  30000
 ${e_feature_sg3_goalDuration} =  7
 ${e_feature_sg3_investUpfront} =  500
 # Goal - Retire Easy
@@ -253,9 +253,9 @@ ${e_feature_cd_switchTodaySubTitleText} =  Switch to Direct Plan for Higher Retu
 ${e_feature_cd_switchTodayDesc1Text} =  Switching away from commission laden Regular Mutual Funds used to be cumbersome with uncooperative brokers, and a lot of paperwork.
 ${e_feature_cd_switchTodayDesc2Text} =  We are changing all that! We have made importing your existing portfolio and switching to Direct Plans easy. So easy that you have no excuse left to continue to pay expensive commissions.            
 ${e_feature_cd_switchTodayBtnText} =  SWITCH TODAY
-${e_feature_cd_autdTrackingTitleText} =  INTRODUCING AUTOMATED TRACKING
-${e_feature_cd_autdTrackingSubTitleText} =  Set up automatic tracking of external transactions
-${e_feature_cd_autdTrackingDescText} =  Setup periodic Import filter to automatically generate Consolidated Account Statement (CAS) and get them delivered to your mailbox. Then setup auto-forwarding rule in your mailbox to forward those emails to import@kuvera.in. No more uploading required. A unique workflow to make import easy while maintaining the highest level of privacy protection.
+${e_feature_cd_autdTrackingTitleText} =  SEAMLESS TRACKING
+${e_feature_cd_autdTrackingSubTitleText} =  Set up tracking of external transactions
+${e_feature_cd_autdTrackingDescText} =  Setup auto-forwarding rules in your mailbox to forward CAS emails from Karvy and CAMS to import@kuvera.in. Then whenever you trigger your Consolidated Account Statement (CAS), they will get delivered to your mailbox and automatically forwarded to us. That’s it, no more uploading required. And A unique workflow to make import easy while maintaining the highest level of privacy protection.
 ${e_feature_cd_startImportingBtnText} =  START IMPORTING
 ${e_feature_cd_manageAcntTitleText} =  MANAGED ACCOUNT
 ${e_feature_cd_manageAcntSubTitleText} =  Manage Investments for Others
@@ -379,17 +379,17 @@ ${KU_W_featureSubList} =  xpath=//div[@class='b-header__sub-content']/div/a
 # Feature - Set a Goal
 ${KU_W_feature_setAGoalLink} =  xpath=//a[contains(text(),'Set a Goal')]
 ${KU_W_feature_goalsList} =  xpath=//*[@class='cards']/a/p
-${KU_W_feature_sg_screenTitle} =  xpath=//*[@class='goals-index col-sm-4']/h2
+${KU_W_feature_sg_screenTitle} =  xpath=//h2[contains(text(),'SET YOUR GOAL')]
 ${KU_W_feature_sg_screenSubTitle} =  xpath=//*[@class='goals-index col-sm-4']/h1
 ${KU_W_feature_sg_content} =  xpath=//p[@class='hidden-xs']
-${KU_W_feature_sg_ownAHome} =  xpath=(//p[@class='card-title'])[1]
-${KU_W_feature_sg_buyACar} =  xpath=(//p[@class='card-title'])[2]
-${KU_W_feature_sg_saveTax} =  xpath=(//p[@class='card-title'])[3]
-${KU_W_feature_sg_retireEasy} =  xpath=(//p[@class='card-title'])[4]
-${KU_W_feature_sg_25thAnniversary} =  xpath=(//p[@class='card-title'])[5]
-${KU_W_feature_sg_foreignVacation} =  xpath=(//p[@class='card-title'])[6]
-${KU_W_feature_sg_educateMyChild} =  xpath=(//p[@class='card-title'])[7]
-${KU_W_feature_sg_createMyOwn} =  xpath=(//p[@class='card-title'])[8]
+${KU_W_feature_sg_ownAHome} =  xpath=//p[contains(text(),'own a home')]
+${KU_W_feature_sg_buyACar} =  xpath=//p[contains(text(),'buy a car')]
+${KU_W_feature_sg_saveTax} =  xpath=//p[contains(text(),'save tax')]
+${KU_W_feature_sg_retireEasy} =  xpath=//p[contains(text(),'retire easy')]
+${KU_W_feature_sg_25thAnniversary} =  xpath=//p[contains(text(),'25th Anniversary')]
+${KU_W_feature_sg_foreignVacation} =  xpath=//*[@class="card set-goal-vacation"]
+${KU_W_feature_sg_educateMyChild} =  xpath=//p[contains(text(),'educate my child')]
+${KU_W_feature_sg_createMyOwn} =  xpath=//p[contains(text(),'create my own')]
 ${KU_W_feature_sg_questionScreen} =  id=title-box
 ${KU_W_feature_sg_titleBoxSection} =  id=p9e7d2f05349193e9421e568b092da688e5010650-container
 ${KU_W_feature_sg_Q_goalName} =  xpath=//*[@id="title-box"]/h2
@@ -412,7 +412,7 @@ ${KU_W_feature_sg_almostDone} =  xpath=//div[@class='risk-profile-heading']/h2
 ${KU_W_feature_sg_married} =  xpath=//p[contains(text(),'MARRIED')]
 ${KU_W_feature_sg_dependents} =  xpath=//p[contains(text(),'DEPENDENTS (KIDS/ELDERS)')]
 ${KU_W_feature_sg_stableIncome} =  xpath=//p[contains(text(),'STABLE INCOME')]
-${KU_W_feature_sg_ownAHome} =  xpath=//p[contains(text(),'OWN A HOME')]
+${KU_W_feature_sg_p_ownAHome} =  xpath=//p[contains(text(),'OWN A HOME')]
 ${KU_W_feature_sg_haveALoan} =  xpath=//p[contains(text(),'HAVE A LOAN')]
 ${KU_W_feature_sg_haveFds} =  xpath=//p[contains(text(),'HAVE FDs')]
 ${KU_W_feature_sg_haveEquityInvestments} =  xpath=//p[contains(text(),'HAVE EQUITY INVESTMENTS')]
@@ -521,7 +521,7 @@ ${KU_W_feature_cd_pageSubHeader} =  xpath=//header[@class='page-heading']/p
 ${KU_W_feature_setAGoalTitle} =  xpath=(//div[contains(@class,'why-invest-text')]/h4)[1]
 ${KU_W_feature_setAGoalSubTitle} =  xpath=(//div[contains(@class,'why-invest-text')]/h3)[1]
 ${KU_W_feature_setAGoalDesc} =  xpath=//div[@class='set-a-goal-text']/p
-${KU_W_feature_goalBasedInvestingLink} =  xpath=//a[contains(text(),'More about goal-based investing')]
+${KU_W_feature_goalBasedInvestingLink} =  xpath=//div[@class='set-a-goal-text']/p/a
 ${KU_W_feature_setAGoalBtn} =  xpath=(//button[@class='btn in-btn'])[1]
 ${KU_W_feature_saveTaxGoalTitle} =  xpath=(//div[contains(@class,'why-invest-text')]/h4)[2]
 ${KU_W_feature_saveTaxGoalSubTitle} =  xpath=(//div[contains(@class,'why-invest-text')]/h3)[2]
