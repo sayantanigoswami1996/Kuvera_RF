@@ -18,14 +18,13 @@ Verify Android PreLogin Remit Page
     Wait And Verify Element And Text On Android  ${KU_A_remit_transferwiseScreenTitle}  ${e_remit_tansferwiseScreenTitle}
     Go Back
     Sleep  2s
-    Swipe By Percent  90  90  50  50  900
-    Swipe By Percent  30  30  10  10  900
+    Swipe By Percent  90  90  50  50  9000
+    Verify Win Digital Gold Banner
+    Swipe By Percent  90  90  50  50  9000
     Wait And Click Element On Android  ${KU_A_remit_sendMoneyBtn}
     Verify Setting Of Chrome Browser 
     Sleep  5s
     Go Back
-    Verify Why TransferWise 
-    Sleep  2s
     Verify Presence Of Bot Button  ${KU_A_faqBotBtn}
     Swipe By Percent  30  30  85  85  5000
     Swipe By Percent  30  30  85  85  5000
@@ -47,7 +46,7 @@ Verify Next Steps Details Page
 
 Verify Why TransferWise
     Sleep  2s
-    Swipe By Percent  50  50  35  35  900
+    Swipe By Percent  50  50  35  35  9000
     Log To Console  Title Text And Image Validation
     Wait And Verify Element And Text On Android  ${KU_A_remit_whyTransferWise}  ${e_remit_whyTransferWise}
     Wait And Verify Element And Text On Android  ${KU_A_remit_whyTransferWisePoint1}  ${e_remit_transferWisePoint1}
@@ -70,3 +69,8 @@ Choose Chrome Browser
 Verify Open With Label
     Wait For Element Visibility On Android  ${KU_A_remit_openWithLabel}
     Element Should Be Visible  ${KU_A_remit_openWithLabel}
+
+Verify Win Digital Gold Banner
+    Verify Page Contains Element On Android  ${KU_A_remit_transferBannerImg}
+    Verify Text On Page  ${e_remit_bannerTitle}
+    Verify Page Contains Element On Android  ${KU_A_remit_knowMoreLink}
