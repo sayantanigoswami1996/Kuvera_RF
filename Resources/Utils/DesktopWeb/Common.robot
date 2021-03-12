@@ -216,6 +216,7 @@ Replace Characters
 Click Link And Switch Window
     [Arguments]  ${websiteLink} 
     Click Element  ${websiteLink}
+    Sleep  1s
     Switch To Window
     Sleep  2s  
 
