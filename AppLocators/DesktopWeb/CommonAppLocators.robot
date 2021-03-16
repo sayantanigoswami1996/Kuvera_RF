@@ -67,7 +67,7 @@ ${e_feature_th_TitleText} =  Save up to ₹10,000 in LTCG taxes every financial 
 ${e_feature_ts_titleText} =  TradeSmart
 ${e_feature_fa_screenTitle} =  Invest with Your Loved Ones
 ${e_feature_manageAccountTitleText} =  Manage Account
-${e_feature_sg_screenTitle} =  SET YOUR GOAL
+${e_feature_sg_screenTitle} =  Set your goal
 ${e_remit_screenTitle} =  A cheaper & faster way to send money home
 
 
