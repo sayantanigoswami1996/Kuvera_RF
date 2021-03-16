@@ -8,6 +8,7 @@ Verify PreLogin Bank And PSU Bonds Landing Page
     Log To Console  Bank and PSU Bonds
     Click Element  ${KU_W_bank&PSUBondsTitle}
     Wait For Element Visibility  ${KU_W_invest_fundsScreenTitle} 
+    Sleep  1s
     Verify Login And Signup Link  
     Verify Search And Sort  ${KU_W_searchBarForFunds}  ${e_invest_searchBarText}  ${KU_W_invest_searchTextFieldForFunds}  ${KU_W_invest_sort}
     Verify Element And Text  ${KU_W_invest_fundsScreenTitle}  ${e_invest_bank&PSU_screenText}

@@ -10,6 +10,7 @@ Verify PreLogin 52WkHigh US Landing Page
     Click Element  ${KU_W_52WHighUSTitle}
     Sleep  1s
     Wait For Element Visibility  ${KU_W_52WHighUS_screenText}
+    Sleep  1s
     Verify Login And Signup Link  
     Element Should Be Visible  ${KU_W_52WHighUS_screenText}
     Wait For Element Visibility  ${KU_W_US_SETF52WUS_searchBar}
