@@ -3,8 +3,24 @@
 Library     JSONLibrary
 Library     JsonValidator
 Library     AppiumLibrary
+Library     String
 Resource   ../../../AppLocators/Android/A_CommonAppLocators.robot
 Resource   ../../../AppLocators/Android/A_MenuNavigationLocators.robot
+Resource   ../../../AppLocators/Android/A_InvestLocators/A_InvestLandingPageLocators.robot
+Resource   ../../../AppLocators/Android/A_InvestLocators/A_SaveSmartLocators.robot
+Resource   ../../../AppLocators/Android/A_InvestLocators/A_GiltFundsLocators.robot
+Resource   ../../../AppLocators/Android/A_InvestLocators/A_UltraShortLocators.robot
+Resource   ../../../AppLocators/Android/A_InvestLocators/A_USETFLocators.robot
+Resource   ../../../AppLocators/Android/A_InvestLocators/A_EquityIndexLocators.robot
+Resource   ../../../AppLocators/Android/A_InvestLocators/A_SectorFundsLocators.robot
+Resource   ../../../AppLocators/Android/A_InvestLocators/A_ValueFundsLocators.robot
+Resource   ../../../AppLocators/Android/A_InvestLocators/A_52WkHighIndiaLocators.robot
+Resource   ../../../AppLocators/Android/A_InvestLocators/A_FDLocators.robot
+Resource   ../../../AppLocators/Android/A_InvestLocators/A_CryptoLocators.robot
+Resource   ../../../AppLocators/Android/A_InvestLocators/A_DigiGoldLocators.robot
+Resource   ../../../AppLocators/Android/A_InvestLocators/A_BankPSUBondsLocators.robot
+Resource   ../../../AppLocators/Android/A_InvestLocators/A_MFLocators.robot
+Resource   ../../../AppLocators/Android/A_InvestLocators/A_StocksLocators.robot
 
 *** Keywords ***
 
@@ -120,6 +136,10 @@ Verify Login Page On Android App
     Wait And Verify Element And Text On Android  ${KU_A_loginTitle}  ${e_loginTitle}
     Wait And Click Element On Android  ${KU_A_logo}
 
+Verify Login Page And Go Back 
+    Wait And Verify Element And Text On Android  ${KU_A_loginTitle}  ${e_loginTitle}
+    Go Back
+
 Verify Widgets And Title
     [Arguments]  ${label}  ${labelText}  ${title}  ${titleText}
     Wait And Verify Element And Text On Android  ${label}  ${labelText}
@@ -134,6 +154,33 @@ Verify Text On Page
     [Arguments]  ${text}
     Wait Until Page Contains  ${text}  timeout=30
     Run Keyword And Continue On Failure  Page Should Contain Text  ${text}
-   
+
+Verify Live Gold Value
+    [Arguments]  ${liveGoldVal}
+    Wait And Click Element On Android  ${KU_A_invest_DG_refreshIcon}
+    Run Keyword And Continue On Failure  Page Should Contain Element  ${liveGoldVal}
+
+Open Bot And Validate Question On Android
+    [Arguments]  ${question}
+    Verify Page Contains Element On Android  ${KU_A_faqBotBtn}
+    Wait And Click Element On Android  ${KU_A_faqBotBtn}
+    Verify Page Contains Element On Android  ${question}
+    Wait And Click Element On Android  ${KU_A_botCloseBtn} 
+
+Press Enter Key On Android
+    [Arguments]  ${element}  
+    Press Keys  ${element}  ENTER
+
+Replace Characters On Android
+    [Arguments]  ${text}  ${char1}  ${char2}
+    ${replacedString} =  Replace String  ${text}  ${char1}  ${char2}
+    [Return]  ${replacedString}
+
+Get Fund Or Stock Name
+    [Arguments]  ${mf_stockName}
+    ${mf_stock1} =  Replace String  ${mf_stockName}  ['  ${EMPTY}
+    ${mf_stockN} =  Replace String  ${mf_stock1}  ']  ${EMPTY}
+    [Return]  ${mf_stockN}  
+  
 Quit Kuvera Application
     Quit Application
