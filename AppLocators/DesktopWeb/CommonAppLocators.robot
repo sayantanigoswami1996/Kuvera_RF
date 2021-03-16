@@ -1,11 +1,6 @@
 *** Variables ***
-${URL_prod} =  https://kuvera.in/
-${URL_stage3} =  https://staging3.kuvera.in/
-${URL_stage2} =  https://staging2.kuvera.in/
 # Application Expected Values 'e_<VariableName>'
 ${e_prod} =  prod
-${e_stage3} =  stage3
-${e_stage2} =  stage2
 ${e_title} =  Kuvera - Direct Mutual Funds | Stocks | Loans | Gold | Remit on Kuvera- Wealth Management Simplified
 ${e_regulatoryDisclosure} =  Regulatory Disclosure
 ${e_login} =  Log in 
@@ -72,7 +67,7 @@ ${e_feature_th_TitleText} =  Save up to ₹10,000 in LTCG taxes every financial 
 ${e_feature_ts_titleText} =  TradeSmart
 ${e_feature_fa_screenTitle} =  Invest with Your Loved Ones
 ${e_feature_manageAccountTitleText} =  Manage Account
-${e_feature_sg_screenTitle} =  SET YOUR GOAL
+${e_feature_sg_screenTitle} =  Set your goal
 ${e_remit_screenTitle} =  A cheaper & faster way to send money home
 
 
