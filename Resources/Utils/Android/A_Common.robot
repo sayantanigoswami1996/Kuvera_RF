@@ -165,7 +165,9 @@ Open Bot And Validate Question On Android
     Verify Page Contains Element On Android  ${KU_A_faqBotBtn}
     Wait And Click Element On Android  ${KU_A_faqBotBtn}
     Verify Page Contains Element On Android  ${question}
+    Sleep  1s
     Wait And Click Element On Android  ${KU_A_botCloseBtn} 
+    Sleep  2s
 
 Press Enter Key On Android
     [Arguments]  ${element}  

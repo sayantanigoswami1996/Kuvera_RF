@@ -15,4 +15,4 @@ Verify Android PreLogin 52Wk High India Page
     Verify Login Page And Go Back 
     Swipe By Percent  45  15  60  15  15000
     Verify Navigation To Tabs For Stocks  ${KU_A_invest_52WkIndia_allStocksMenu}  ${KU_A_invest_52WkIndia_importTitle}  ${KU_A_invest_52WkIndia_watchlistTitle}
-    # Go Back
+    Go Back
