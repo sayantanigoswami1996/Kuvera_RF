@@ -35,6 +35,7 @@ Verify Stocks Details Page On Android
     ${stkName} =    Set Variable   ${text}${stockName}
     Verify Page Contains Element On Android  ${stkName}
     Wait And Click Element On Android  ${stkName}
+    Sleep  2s
     Verify Text On Page  ${stockN}
     IF  ${stock} == ['${e_invest_stocks_stocks1}']
         Verify Filters For MF And Stocks  ${KU_A_invest_stocks_utilitiesBtn}  ${KU_A_invest_stocks_renewUtilityBtn}  ${KU_A_invest_allStocks}
