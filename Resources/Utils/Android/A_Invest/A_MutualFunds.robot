@@ -2,7 +2,6 @@
 
 Library     AppiumLibrary
 
-
 *** Keywords ***
 
 Verify Android PreLogin MF Page
@@ -11,6 +10,7 @@ Verify Android PreLogin MF Page
     Verify Page Contains Element On Android  ${KU_A_invest_MF_imgfromExplore}
     Verify Page Contains Element On Android  ${KU_A_invest_MF_title}
     Wait And Click Element On Android  ${KU_A_invest_MF_title}
+    Sleep  1s
     Verify Signup Link And Kuvera Logo
     Verify Sort And Filter Button  ${e_invest_MF_filter}
     Verify Presence Of Search Box WatchList Growth Button 
@@ -147,7 +147,9 @@ Verify Filter Navigation For Second MF
     Verify Page Contains Element On Android  ${KU_A_invest_allFundsMenu}
     Go Back
     Wait And Click Element On Android  ${KU_A_invest_topSearched}
-    Swipe By Percent  45  15  20  15  15000
+    Sleep  1s
+    Swipe By Percent  45  15  17  15  15000
+    Sleep  1s
     Verify Page Contains Element On Android  ${KU_A_invest_topSearched}
     Go Back
     Wait And Click Element On Android  ${KU_A_invest_investorChoice}

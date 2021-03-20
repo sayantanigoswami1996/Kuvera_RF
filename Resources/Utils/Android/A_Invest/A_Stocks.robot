@@ -2,7 +2,6 @@
 
 Library     AppiumLibrary
 
-
 *** Keywords ***
 
 Verify Android PreLogin Stocks Page
@@ -11,15 +10,16 @@ Verify Android PreLogin Stocks Page
     Verify Page Contains Element On Android  ${KU_A_invest_stocks_imgfromExplore}
     Verify Page Contains Element On Android  ${KU_A_invest_stocks_title}
     Wait And Click Element On Android  ${KU_A_invest_stocks_title}
-    # Verify Signup Link And Kuvera Logo
-    # Verify Search Box Sort And Watchlist Button For ELSS And Stocks  ${e_invest_1Y}
-    # Verify Login Page And Go Back 
-    # Verify Navigation To Tabs For Stocks  ${KU_A_invest_allStocks}  ${KU_A_invest_stocks_importTagTitle}  ${KU_A_invest_stocks_watchlistTitle}
-    # Go Back
-    # Go Back
-    # Wait And Click Element On Android  ${KU_A_invest_stocks_title}
+    Sleep  1s
+    Verify Signup Link And Kuvera Logo
+    Verify Search Box Sort And Watchlist Button For ELSS And Stocks  ${e_invest_1Y}
+    Verify Login Page And Go Back 
+    Verify Navigation To Tabs For Stocks  ${KU_A_invest_allStocks}  ${KU_A_invest_stocks_importTagTitle}  ${KU_A_invest_stocks_watchlistTitle}
+    Go Back
+    Go Back
+    Wait And Click Element On Android  ${KU_A_invest_stocks_title}
     FOR  ${i}  IN RANGE  1  6
-        # Iterate the Mutual Fund detail screen
+        # Iterate the Stock detail screen
         ${stocksFromJson}  Get Json Values On Android  $.Stocks.f${i}  Resources/TestData/Stocks.json 
         Log To Console  ${stocksFromJson}
         Verify Stocks Details Page On Android  ${stocksFromJson}
@@ -42,38 +42,30 @@ Verify Stocks Details Page On Android
     ELSE IF  ${stock} == ['${e_invest_stocks_stocks2}']  
         Verify Filters For MF And Stocks  ${KU_A_invest_stocks_financialBtn}  ${KU_A_invest_stocks_mortageFinanceBtn}  ${KU_A_invest_allStocks}
     ELSE IF  ${stock} == ['${e_invest_stocks_stocks3}']  
-        Verify Filters For MF And Stocks  ${KU_A_invest_stocks_healthcareBtn}  ${KU_A_invest_stocks_biotechBtn}  ${KU_A_invest_allStocks}
+        Verify Filters For MF And Stocks  ${KU_A_invest_USAndstocks_healthcareBtn}  ${KU_A_invest_stocks_biotechBtn}  ${KU_A_invest_allStocks}
     ELSE IF  ${stock} == ['${e_invest_stocks_stocks4}'] 
         Verify Filters For MF And Stocks  ${KU_A_invest_stocks_energyBtn}  ${KU_A_invest_stocks_oilAndGasBtn}  ${KU_A_invest_allStocks}
     ELSE IF  ${stock} == ['${e_invest_stocks_stocks5}'] 
         Verify Filters For MF And Stocks  ${KU_A_invest_stocks_consumerdefenBtn}  ${KU_A_invest_stocks_householdProdBtn}  ${KU_A_invest_allStocks}
     END 
-    Wait And Click Element On Android  ${KU_A_invest_buyIcon}
-    Verify Login Page And Go Back 
+    Verify Share PDF And Watchlist Icon
+    Verify Buy Icon 
     Verify Period Wise Graphs  ${KU_A_invest_1DBtn}  ${KU_A_invest_1WBtn}  ${KU_A_invest_3MBtn}  ${KU_A_invest_1YBtn}  ${KU_A_invest_5YBtn}
     Swipe By Percent  90  90  50  50  9000
-    Verify Stock Values
+    Verify Common Stock And US Stock Values
+    Verify Specific Stock Values
     Swipe By Percent  90  90  45  45  9000
     # Compare to Other section has also stocks name in different format for different stocks - it has been skipped now
-    # Verify Compare With Other Section  ${e_invest_stocks_compareWithStock}  ${KU_A_invest_stocks_stk1}
+    # Verify Compare With Other Section  ${e_invest_compareWithStock}  ${KU_A_invest_stocks_stk1}
+    # Application Issue
+    # Verify Add Fund Or Stock  ${KU_A_invest_USAndstocks_addStocks}  ${KU_A_invest_USAndstocks_searchStocks}
     Swipe By Percent  50  50  40  40  9000
     Verify Page Contains Element On Android  ${KU_A_invest_stocks_financials}
     Sleep  1s
     Go Back
     
-Verify Stock Values
+Verify Specific Stock Values
     Verify Text On Page  ${e_invest_stocks_priceLabel}
-    Verify Text On Page  ${e_invest_stocks_todaysHighLabel}
-    Verify Text On Page  ${e_invest_stocks_todaysLowLabel}
-    Verify Text On Page  ${e_invest_stocks_52WHighLabel}
-    Verify Text On Page  ${e_invest_stocks_52WLowLabel}
-    Verify Text On Page  ${e_invest_stocks_priceLabel}
-    Verify Text On Page  ${e_invest_stocks_PELabel}
-    Verify Text On Page  ${e_invest_1Y}
+    Verify Text On Page  ${e_invest_stocks_avgVolumeLabel} 
     Verify Text On Page  ${e_invest_stocks_PBLabel}  
-    Verify Text On Page  ${e_invest_stocks_EPS(TTM)Label}
-    Verify Text On Page  ${e_invest_stocks_dividendYieldLabel}
-    Verify Text On Page  ${e_invest_stocks_marketCapLabel} 
-    Verify Text On Page  ${e_invest_stocks_volumeLabel}
-    Verify Text On Page  ${e_invest_stocks_avgVolumeLabel}  
-    Verify Text On Page  ${e_invest_5Y} 
+    Verify Text On Page  ${e_invest_stocks_dividendYieldLabel}   

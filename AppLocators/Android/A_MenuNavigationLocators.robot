@@ -83,7 +83,7 @@ ${e_remit_bannerTitle} =  Win ₹1,000 digital gold on your first transfer.
 
 # Features- Set A Goal
 ${e_featureLink} =  Features
-${e_feature_SG_screenTitle} =  SET YOUR GOAL
+${e_feature_SG_screenTitle} =  Set your goal
 ${e_feature_SG_screenSubTitle} =  We'll help you bring your dreams to life.
 ${e_feature_SG_username} =  Test
 ${e_feature_SG_age} =  27
