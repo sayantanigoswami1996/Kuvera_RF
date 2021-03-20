@@ -9,7 +9,7 @@ Verify Android PreLogin Remit Page
     Log To Console  Title And Image Validation
     Navigate To Hamburger Menu  ${KU_A_remitLink}  ${e_remitLink}
     Wait And Verify Element And Text On Android  ${KU_A_remitTitle}  ${e_remitTitle} 
-    Wait And Verify Element And Text On Android  ${KU_A_remitSubTitle}  ${e_remitSubTitle}
+    Verify Page Contains Element On Android  ${KU_A_remitSubTitle}
     Verify Page Contains Element On Android  ${KU_A_remit_imgIcon}
     Verify Page Contains Element On Android  ${KU_A_remit_kuveraLogoImg}
     Verify Page Contains Element On Android  ${KU_A_remit_transferwiseImg}
@@ -20,7 +20,7 @@ Verify Android PreLogin Remit Page
     Sleep  2s
     Swipe By Percent  90  90  50  50  9000
     Verify Win Digital Gold Banner
-    Swipe By Percent  90  90  50  50  9000
+    Swipe By Percent  90  90  40  40  9000
     Wait And Click Element On Android  ${KU_A_remit_sendMoneyBtn}
     Verify Setting Of Chrome Browser 
     Sleep  5s
