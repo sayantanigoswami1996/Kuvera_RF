@@ -58,10 +58,10 @@ Suite Teardown  Quit Kuvera Application
 #     [Tags]  TC08
 #     Verify Android PreLogin FD Page
 
+# # Crypto Menu Navigation Under Invest
 # Crypto Menu Navigation Under Invest
-Crypto Menu Navigation Under Invest
-    [Tags]  TC09
-    Verify Android PreLogin Crypto Page
+#     [Tags]  TC09
+#     Verify Android PreLogin Crypto Page
 
 # MF Menu Navigation Under Invest
 MF Menu Navigation Under Invest
