@@ -99,7 +99,7 @@ Verify Invest Now Button
     Go Back
 
 Verify Past Performance 
-    Swipe By Percent  90  90  50  50  9000
+    Swipe By Percent  90  90  45  45  9000
     Wait And Click Element On Android  ${KU_A_invest_MF_pastPerformance}
     Verify Text On Page  ${e_invest_MF_pastPerformDesc}
     Verify Text On Page  ${e_invest_MF_hadUInvestedLabel}
