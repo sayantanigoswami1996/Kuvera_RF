@@ -1,7 +1,7 @@
 *** Variables *** 
 # Application Expected Values 'e_<variableName>'
 ${e_ca_domainName} =  @kuvera.in
-${e_ca_email} =  moolya+
+${e_ca_email} =  moolya+auto_
 ${e_ca_mobileNum} =  1234567890
 ${e_ca_pwd} =  moolya123456
 ${e_ca_inviteCode} =  20BM4
