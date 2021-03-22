@@ -26,7 +26,7 @@ Landing Page Widgets Verification on Android
 Header Navigation Verification on Android
     [Tags]  TC02
     PreLogin Header Navigation On Android
-     
+    
 # All Menu Navigation under Features
 Features Header Navigation Verification on Android
     [Tags]  TC03
@@ -72,3 +72,18 @@ MF Menu Navigation Under Invest
 Stocks Menu Navigation Under Invest
     [Tags]  TC11
     Verify Android PreLogin Stocks Page
+
+# US Stocks Menu Navigation Under Invest
+US Stocks Menu Navigation Under Invest
+    [Tags]  TC12
+    Verify Android PreLogin US Stocks Page
+
+# About Page Navigation
+About Page Navigation
+    [Tags]  TC13
+    Verify Android PreLogin About Page
+
+# Blog Page Navigation
+Blog Page Navigation
+    [Tags]  TC14
+    Verify Android PreLogin Blog Page

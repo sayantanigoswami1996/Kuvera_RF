@@ -156,11 +156,6 @@ Verify Filter Navigation For Second MF
     Sleep  1s
     Verify Page Contains Element On Android  ${KU_A_invest_investorChoice}
     Go Back
-    Swipe By Percent  50  20  30  20  15000
-    Swipe By Percent  50  20  30  20  15000
-    Wait And Click Element On Android  ${KU_A_invest_MF_topWatchlistedBtn}
-    Verify Page Contains Element On Android  ${KU_A_invest_watchlistMenu}
-    Go Back
 
 Name Conversion Of Mutual Fund
     [Arguments]  ${mf}

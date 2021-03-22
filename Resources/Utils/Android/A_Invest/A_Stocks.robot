@@ -15,7 +15,7 @@ Verify Android PreLogin Stocks Page
     Verify Search Box Sort And Watchlist Button For ELSS And Stocks  ${e_invest_1Y}
     Verify Login Page And Go Back 
     Verify Navigation To Tabs For Stocks  ${KU_A_invest_allStocks}  ${KU_A_invest_stocks_importTagTitle}  ${KU_A_invest_stocks_watchlistTitle}
-    Go Back
+    Sleep  1s
     Go Back
     Wait And Click Element On Android  ${KU_A_invest_stocks_title}
     FOR  ${i}  IN RANGE  1  6

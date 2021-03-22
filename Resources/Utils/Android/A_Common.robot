@@ -6,6 +6,8 @@ Library     AppiumLibrary
 Library     String
 Resource   ../../../AppLocators/Android/A_CommonAppLocators.robot
 Resource   ../../../AppLocators/Android/A_MenuNavigationLocators.robot
+Resource   ../../../AppLocators/Android/A_AboutLocators.robot
+Resource   ../../../AppLocators/Android/A_BlogLocators.robot
 Resource   ../../../AppLocators/Android/A_InvestLocators/A_InvestLandingPageLocators.robot
 Resource   ../../../AppLocators/Android/A_InvestLocators/A_SaveSmartLocators.robot
 Resource   ../../../AppLocators/Android/A_InvestLocators/A_GiltFundsLocators.robot
@@ -21,6 +23,7 @@ Resource   ../../../AppLocators/Android/A_InvestLocators/A_DigiGoldLocators.robo
 Resource   ../../../AppLocators/Android/A_InvestLocators/A_BankPSUBondsLocators.robot
 Resource   ../../../AppLocators/Android/A_InvestLocators/A_MFLocators.robot
 Resource   ../../../AppLocators/Android/A_InvestLocators/A_StocksLocators.robot
+Resource   ../../../AppLocators/Android/A_InvestLocators/A_USStocksLocators.robot
 
 *** Keywords ***
 
@@ -42,7 +45,7 @@ Verify Element And Text On Android
 
 Wait For Element Visibility On Android
     [Arguments]  ${element}
-    Wait Until Element Is Visible  ${element}  timeout=30
+    Wait Until Element Is Visible  ${element}  timeout=60
 
 Wait And Click Element On Android
     [Arguments]  ${element}

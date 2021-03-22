@@ -69,6 +69,7 @@ Verify Android PreLogin Invest Tiles
     Go Back
     # Sector Funds
     Wait And Click Element On Android  ${KU_A_invest_seekBar}
+    Sleep  2s
     Swipe By Percent  45  15  70  15  15000
     Verify Page Contains Element On Android  ${KU_A_invest_SF_tilesTitle} 
     Verify Page Contains Element On Android  ${KU_A_invest_SF_subTitle}
@@ -76,6 +77,7 @@ Verify Android PreLogin Invest Tiles
     Go Back
     # Value Funds
     Wait And Click Element On Android  ${KU_A_invest_seekBar}
+    Sleep  2s
     Swipe By Percent  45  15  70  15  15000
     Verify Page Contains Element On Android  ${KU_A_invest_VF_tilesTitle} 
     Verify Page Contains Element On Android  ${KU_A_invest_VF_subTitle}
@@ -83,6 +85,7 @@ Verify Android PreLogin Invest Tiles
     Go Back
     # Crypto
     Wait And Click Element On Android  ${KU_A_invest_seekBar}
+    Sleep  2s
     Swipe By Percent  45  15  70  15  15000
     Verify Page Contains Element On Android  ${KU_A_invest_crypto_title} 
     Verify Page Contains Element On Android  ${KU_A_invest_crypto_subTitle} 
@@ -92,6 +95,7 @@ Verify Android PreLogin Invest Tiles
     Go Back
     # 52Wk High India
     Wait And Click Element On Android  ${KU_A_invest_seekBar}
+    Sleep  2s
     Swipe By Percent  45  15  70  15  15000
     Verify Page Contains Element On Android  ${KU_A_invest_52WkIndia_tilesTitle} 
     Verify Page Contains Element On Android  ${KU_A_invest_52WkIndia_subTitle}
@@ -99,6 +103,7 @@ Verify Android PreLogin Invest Tiles
     Go Back
     # 52Wk High US
     Wait And Click Element On Android  ${KU_A_invest_seekBar}
+    Sleep  2s
     Swipe By Percent  45  15  70  15  15000
     Verify Page Contains Element On Android  ${KU_A_invest_52WkUS_tilesTitle} 
     Verify Page Contains Element On Android  ${KU_A_invest_52WkUS_subTitle}
