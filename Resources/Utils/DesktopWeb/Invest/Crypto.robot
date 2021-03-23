@@ -28,7 +28,7 @@ Verify PreLogin Crypto Landing Page
     END
     # Iterate the Crypto detail screen
     FOR  ${i}  IN RANGE  1  4
-        @{cryptoNameFromJson} =  Get Json Values  $.Crypto.c${i}  Resources/TestData/Crypto.json 
+        @{cryptoNameFromJson}=  Get Json Values  $.Crypto.c${i}  Resources/TestData/Crypto.json 
         Log To Console  ${cryptoNameFromJson}
         Verify Crypto Details Page  ${cryptoNameFromJson}
     END
