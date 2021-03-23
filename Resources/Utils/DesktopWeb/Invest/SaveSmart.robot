@@ -5,7 +5,7 @@ Library     SeleniumLibrary
 *** Keywords ***
 
 Verify PreLogin Save Smart Landing Page
-    Log To Console  Save Smart - Explore More
+    Log To Console  Save Smart - Explore
     Navigate To Invest Page And Verify Explore Options  ${KU_W_saveSmart}  ${e_invest_saveSmart}
     Sleep  1s
     Verify Login And Signup Link

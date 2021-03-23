@@ -63,12 +63,17 @@ Invest Save Smart Navigation
     [Tags]  TC10
     Verify PreLogin Save Smart Landing Page
 
+# Invest Crypto
+Invest Crypto Navigation
+    [Tags]  TC11
+    Verify PreLogin Crypto Landing Page
+
 # Footer Section
 Verify Footer Section
-    [Tags]  TC11
+    [Tags]  TC12
     Verify PreLogin Footer
 
 # Fund House Details
 All Fund House Details Navigation
-    [Tags]  TC12
+    [Tags]  TC13
     Verify PreLogin All Fund House Details
