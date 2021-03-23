@@ -224,7 +224,7 @@ Navigate To Home Page
     Go To  ${URL}
     Set Window Size  ${1920}  ${1080}
     Reload Page
-    Sleep  12s
+    Sleep  15s
 
 Logout From App And Navigate To Home Page PostLogin
     Go To  ${URL}
