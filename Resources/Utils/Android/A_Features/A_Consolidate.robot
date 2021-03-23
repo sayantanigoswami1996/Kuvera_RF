@@ -8,9 +8,10 @@ Verify Android PreLogin Consolidate Page
     Log To Console  Consolidate
     Navigate To Hamburger Menu  ${KU_A_featureLink}  ${e_featureLink}
     Wait And Click Element On Android  ${KU_A_feature_CD_link}
+    Sleep  2s
     Verify Text On Page  ${e_feature_CD_screenTitle}
-    Verify Signup Link And Kuvera Logo
     Verify Text On Page  ${e_feature_CD_screenSubTitle}
+    Verify Signup Link And Kuvera Logo
     Verify Page Contains Element On Android  ${KU_A_feature_CD_imgIcon}
     Verify Set A Goal Section
     Verify Save Tax Section

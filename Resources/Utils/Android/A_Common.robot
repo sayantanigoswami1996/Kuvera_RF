@@ -155,7 +155,7 @@ Wait Until Page Contains Text
 
 Verify Text On Page
     [Arguments]  ${text}
-    Wait Until Page Contains  ${text}  timeout=30
+    Wait Until Page Contains  ${text}  timeout=60
     Run Keyword And Continue On Failure  Page Should Contain Text  ${text}
 
 Verify Live Gold Value
