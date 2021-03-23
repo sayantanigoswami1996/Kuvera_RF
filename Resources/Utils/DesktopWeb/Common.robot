@@ -33,7 +33,6 @@ Resource    ../../../AppLocators/DesktopWeb/HealthInsurancePostLoginLocators/Pla
 Resource    ../../../AppLocators/DesktopWeb/HealthInsurancePostLoginLocators/HealthInsuranceLandingPageLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/CreateAccountForPostLoginLocators.robot
 
-
 *** Keywords ***
 
 Launch URL
@@ -217,6 +216,7 @@ Replace Characters
 Click Link And Switch Window
     [Arguments]  ${websiteLink} 
     Click Element  ${websiteLink}
+    Sleep  1s
     Switch To Window
     Sleep  2s  
 
@@ -224,7 +224,7 @@ Navigate To Home Page
     Go To  ${URL}
     Set Window Size  ${1920}  ${1080}
     Reload Page
-    Sleep  12s
+    Sleep  15s
 
 Logout From App And Navigate To Home Page PostLogin
     Go To  ${URL}
