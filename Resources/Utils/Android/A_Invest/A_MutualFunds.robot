@@ -147,7 +147,7 @@ Verify Filter Navigation For Second MF
     Verify Page Contains Element On Android  ${KU_A_invest_allFundsMenu}
     Go Back
     Wait And Click Element On Android  ${KU_A_invest_topSearched}
-    Sleep  1s
+    Sleep  5s
     Swipe By Percent  45  15  10  15  15000
     Sleep  1s
     Verify Page Contains Element On Android  ${KU_A_invest_topSearched}
