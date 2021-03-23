@@ -103,15 +103,9 @@ Verify PreLogin Insure Page
     Verify Element and Text  ${KU_W_insure_checkPremiumBtn2}  ${e_insure_checkPremiumBtn2Text}
     Wait For Element Visibility  ${KU_W_insure_checkPremiumBtn2}
     Click Button  ${KU_W_insure_checkPremiumBtn2} 
-<<<<<<< HEAD
-    Run Keyword If    '${ENV}' == '${e_prod}'  Verify Premium Popup  ${KU_W_insure_checkPremiumBtn2}
-    ...    ELSE  Verify Missing PAN Page
-    # Verify the Google Play & Apple Store icons
-=======
     ${isLoginBtnVisible1} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_login}
     Run Keyword If   ${isLoginBtnVisible1}  Verify Premium Popup  ${KU_W_insure_checkPremiumBtn2}
     ...    ELSE  Verify Missing PAN Page
->>>>>>> 5561730a3c981c2ce902535a9250065e2241b3a7
     Verify Google Play & Apple Store Icons
     
 Verify Premium Popup

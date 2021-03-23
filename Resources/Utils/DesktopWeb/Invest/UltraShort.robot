@@ -9,10 +9,6 @@ Verify PreLogin Ultra Short Landing Page
     Sleep  2s
     Click Element   ${KU_W_ultraShortTitle}   
     Wait For Element Visibility  ${KU_W_invest_fundsScreenTitle} 
-<<<<<<< HEAD
-    Sleep  1s
-=======
->>>>>>> 5561730a3c981c2ce902535a9250065e2241b3a7
     Verify Login And Signup Link
     Verify Element And Text  ${KU_W_invest_fundsScreenTitle}  ${e_invest_us_screenText} 
     Verify Search And Sort  ${KU_W_searchBarForFunds}  ${e_invest_searchBarText}  ${KU_W_invest_searchTextFieldForFunds}  ${KU_W_invest_sort}
