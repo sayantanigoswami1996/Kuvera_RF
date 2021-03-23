@@ -33,7 +33,10 @@ Resource    ../../../AppLocators/DesktopWeb/HealthInsurancePostLoginLocators/Pla
 Resource    ../../../AppLocators/DesktopWeb/HealthInsurancePostLoginLocators/HealthInsuranceLandingPageLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/CreateAccountForPostLoginLocators.robot
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5561730a3c981c2ce902535a9250065e2241b3a7
 *** Keywords ***
 
 Launch URL
@@ -189,6 +192,7 @@ Verify Question On FAQBOT Icon
     [Arguments]  ${botButon}  ${question}
     Run Keyword If  '${ENV}' == '${e_prod}'  Open Bot And Validate Question  ${botButon}  ${question}
     ...    ELSE  Log To Console  Staging
+<<<<<<< HEAD
 
 Open Bot And Validate Question
     [Arguments]  ${botButon}  ${question}
@@ -203,6 +207,22 @@ Open Bot And Validate Question
     Wait For Element Visibility  ${KU_W_faqbotCloseBanner}
     Click Element  ${KU_W_faqbotCloseBanner}
 
+=======
+
+Open Bot And Validate Question
+    [Arguments]  ${botButon}  ${question}
+    Verify Page Contains Element  ${botButon}
+    Wait For Element Visibility  ${botButon} 
+    Click Element  ${botButon}
+    Sleep  2s
+    Switch To Frame  ${KU_W_faqbotFrame}
+    Wait For Element Visibility  ${KU_W_faqbotQA1}
+    Verify Element And Text  ${KU_W_faqbotQA1}  ${question}
+    Unselect Frame
+    Wait For Element Visibility  ${KU_W_faqbotCloseBanner}
+    Click Element  ${KU_W_faqbotCloseBanner}
+
+>>>>>>> 5561730a3c981c2ce902535a9250065e2241b3a7
 Scroll And Wait
     [Arguments]  ${element}
     Scroll Untill View  ${element}
@@ -217,6 +237,10 @@ Replace Characters
 Click Link And Switch Window
     [Arguments]  ${websiteLink} 
     Click Element  ${websiteLink}
+<<<<<<< HEAD
+=======
+    Sleep  1s
+>>>>>>> 5561730a3c981c2ce902535a9250065e2241b3a7
     Switch To Window
     Sleep  2s  
 
@@ -224,7 +248,11 @@ Navigate To Home Page
     Go To  ${URL}
     Set Window Size  ${1920}  ${1080}
     Reload Page
+<<<<<<< HEAD
     Sleep  12s
+=======
+    Sleep  15s
+>>>>>>> 5561730a3c981c2ce902535a9250065e2241b3a7
 
 Logout From App And Navigate To Home Page PostLogin
     Go To  ${URL}

@@ -101,6 +101,10 @@ ${KU_W_stocks} =  xpath=(//*[contains(text(),'Stocks')])[2]
 ${KU_W_stocksScreen} =  xpath=(//div[@class='b-explore-stock__action-title'])[1]
 ${KU_W_USStocks} =  xpath=//span[contains(text(),'US stocks')]  
 ${KU_W_saveSmart} =  xpath=//span[contains(text(),'SaveSmart')]
+<<<<<<< HEAD
+=======
+${KU_W_invest_stocks_crypto_performanceChart} =  xpath=(//div[@class='highcharts-container '])[1]
+>>>>>>> 5561730a3c981c2ce902535a9250065e2241b3a7
 ${KU_W_amazonSaveScreen} =  xpath=//div[@class='b-festive-fund-no-investment__text']
 ${KU_W_invest_sortYear} =  xpath=//div[@class='default-message']
 ${KU_W_stockAnd52WIndia_searchBar} =  xpath=(//div[@class='b-explore-stock__action-title'])[1]
@@ -145,7 +149,10 @@ ${KU_W_invest_US_SETFAnd52WUS_watchListHeader} =  xpath=//div[@class='b-stock-it
 ${KU_W_invest_noStocksForUTFAnd52WUS} =  xpath=//div[@class='b-zero-item__label']
 ${KU_W_invest_allStockLinkForUTFAnd52WUS} =  xpath=//div[@class='b-zero-item__btn']
 ${KU_W_invest_US_stocks_exploreTags} =  xpath=//div[@class='b-explore-tags__container']
+<<<<<<< HEAD
 ${KU_W_invest_stocks_crypto_performanceChart} =  xpath=(//div[@class='highcharts-container '])[1]
+=======
+>>>>>>> 5561730a3c981c2ce902535a9250065e2241b3a7
 ${KU_W_invest_US_stocks_exploreTagLink1} =  xpath=(//a[@class='b-app-standard-chip disable-browser-text-select b-explore-tags__chip'])[1]
 ${KU_W_invest_US_stocks_exploreTagLink2} =  xpath=(//a[@class='b-app-standard-chip disable-browser-text-select b-explore-tags__chip'])[2]
 ${KU_W_invest_US_stocks_performancePeriod} =  xpath=//div[@class='b-period-option_wrapper disable-browser-text-select']

@@ -5,7 +5,11 @@ Library     SeleniumLibrary
 *** Keywords ***
 
 Verify PreLogin Save Smart Landing Page
+<<<<<<< HEAD
     Log To Console  Save Smart - Explore
+=======
+    Log To Console  Save Smart - Explore More
+>>>>>>> 5561730a3c981c2ce902535a9250065e2241b3a7
     Navigate To Invest Page And Verify Explore Options  ${KU_W_saveSmart}  ${e_invest_saveSmart}
     Sleep  1s
     Verify Login And Signup Link
