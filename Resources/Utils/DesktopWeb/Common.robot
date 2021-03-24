@@ -233,7 +233,7 @@ Navigate To Home Page
     ...    ELSE IF  '${ENV}' == '${e_stage3}'  Go To  ${URL_stage3}
     Set Window Size  ${1920}  ${1080}
     Reload Page
-    Sleep  12s
+    Sleep  15s
 
 Logout From App And Navigate To Home Page PostLogin
     Go To  ${URL_stage3}
@@ -241,7 +241,7 @@ Logout From App And Navigate To Home Page PostLogin
     Go To  ${URL_stage3}
     Set Window Size  ${1920}  ${1080}
     Reload Page
-    Sleep  12s
+    Sleep  15s
 
 Generate Random Number
     [Arguments]  ${startingrange}  ${endingrange}
