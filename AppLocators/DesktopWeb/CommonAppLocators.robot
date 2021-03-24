@@ -1,8 +1,8 @@
 *** Variables ***
 # Application Expected Values 'e_<VariableName>'
-${e_prod} =  prod
-${e_stage3} =  stage3
-${e_stage2} =  stage2
+${e_prod} =  Prod
+${e_stage3} =  Stage3
+${e_stage2} =  Stage2
 ${URL_prod} =  https://kuvera.in/
 ${URL_stage3} =  https://staging3.kuvera.in/
 ${URL_stage2} =  https://staging2.kuvera.in/
