@@ -8,6 +8,7 @@ Verify Fill In Of KYC Form Details
     Wait For Element Visibility  ${KU_W_KYC_startBtn}
     Click Element  ${KU_W_KYC_startBtn}
     KYC Form Details Page
+    Wait And Click  ${KU_W_postlogin_kuverLogo} 
 
 KYC Form Details Page
     Log To Console  KYC Form
@@ -60,8 +61,7 @@ KYC Form Details Page
     Wait Scroll And Click Element  ${KU_W_KYC_OKBtn}
     Click Element  ${KU_W_KYC_popupOkBtn}
     Wait Scroll And Click Element  ${KU_W_KYC_confirmBtn}
-    Wait And Click  ${KU_W_postlogin_kuverLogo} 
-
+    
 Add Signature
     Mouse Over  ${KU_W_KYC_canvasSpace}
     Wait For Element Visibility  ${KU_W_KYC_canvasSpace}
