@@ -47,21 +47,13 @@
         },
         "BOI AXA":{
         "fh5name":"BOI AXA MUTUAL FUND",
-<<<<<<< HEAD
-        "fh5header":"BOI AXA Investment Managers Private Limited is a joint venture between Bank of India and AXA Investment Managers, a part of AXA Group, one of the world’s largest players in the Financial Protection industry.Bank of India has over 5000 branches across India. Presently Bank of India has an overseas presence in 22 countries spread over 5 continents  with 60 offices including 5 Subsidiaries, 5 Representative Offices and 1 Joint Venture.",
-=======
         "fh5header":"BOI AXA Investment Managers Private Limited is a joint venture between Bank of India and AXA Investment Managers, a part of AXA Group, one of the world’s largest players in the Financial Protection industry.Bank of India has over 5000 branches across India. Presently Bank of India has an overseas presence in 22 countries spread over 5 continents with 60 offices including 5 Subsidiaries, 5 Representative Offices and 1 Joint Venture.",
->>>>>>> 5561730a3c981c2ce902535a9250065e2241b3a7
         "fh5RTA":"Karvy",
         "fh5website":"https://www.boiaxamf.com/",
         "fh5address":"B/204, Tower 1, Peninsula Corporate Park, Ganpatrao Kadam Marg, Lower Parel, Mumbai 400013",
         "fh5phone":"1800-266-2676",
         "fh5email":"service@boiaxa-im.com",
-<<<<<<< HEAD
-        "fh5investorlogin":"BOI AXA  investors can login here.",
-=======
         "fh5investorlogin":"BOI AXA investors can login here.",
->>>>>>> 5561730a3c981c2ce902535a9250065e2241b3a7
         "fh5fundmanaged":"Funds managed by BOI AXA"
         },
         "CANARA ROBECO":{
