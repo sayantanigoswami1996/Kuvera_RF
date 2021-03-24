@@ -18,7 +18,7 @@ Verify PreLogin Crypto Landing Page
     Verify Page Contains Element  ${KU_W_crypto_priceLabel}
     Verify Page Contains Element  ${KU_W_crypto_priceVal} 
     Verify Element And Text  ${KU_W_crypto_yearLabel}  ${e_crypto_year}
-    Verify Element And Text  ${KU_W_crypto_VolumeLabel}  ${e_crypto_volume} 
+    Verify Element And Text  ${KU_W_crypto_VolumeLabel}  ${e_crypto_volume}
     ${1YVal} =  Get Text  ${KU_W_crypto_yearVal}
     ${contains%} =  Run Keyword And Return Status  Should Contain  ${1YVal}  ${e_crypto_perInYearVal}
     IF  ${contains%}
