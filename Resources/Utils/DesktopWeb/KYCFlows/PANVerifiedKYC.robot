@@ -12,17 +12,14 @@ Verify PAN Verifed KYC Details
     Link Bank Account
 
 Confirm Account Details Page
-    # Confirm Account Deatils Page
-    Wait And Click  ${KU_W_KYC_portfolioNameField}
-    Input Text  ${KU_W_KYC_portfolioNameField}  ${e_KYC_portfolioNameField}
-    Wait And Click  ${KU_W_KYC_confirmBtn}
     # Tell Us About Yourself
     Verify Page Contains Element  ${KU_W_KYC_tellUsAboutYourself}
     Verify Page Contains Element  ${KU_W_KYC_tellUsAboutYourselfDesc}
-    Scroll Untill View  ${KU_W_postlogin_continueBtn}
-    Wait And Click  ${KU_W_postlogin_continueBtn} 
+    Wait Scroll And Click Element  ${KU_W_postlogin_continueBtn} 
 
 Link Bank Account
+    Log To Console  Link Bank Account
+    # Bank Account Details
     Verify Page Contains Element  ${KU_W_KYC_linkBankAccTitle}
     Verify Element And Text  ${KU_W_KYC_pageSubTitle}  ${e_KYC_linkBankAccDesc}
     Verify Element And Text  ${KU_W_KYC_IFSCLabel}  ${e_KYC_IFSCLabel}
@@ -40,9 +37,17 @@ Link Bank Account
     Wait And Click  ${KU_W_KYC_bankConfirmedCheckBox}
     Verify Element And Text  ${KU_W_KYC_addNomineeLabel}  ${e_KYC_addANomineeLabel}
     Verify Page Contains Element  ${KU_W_KYC_addNomineeText}
-    Wait And Click  ${KU_W_KYC_addNomineeCheckBox} 
+    # Add Nominee
+    Scroll Page To Location  0   300
+    ${isElementVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_KYC_nomineeName}
+    IF   ${isElementVisible}  
+        Log To Console  Continue
+    ELSE   
+        Wait And Click  ${KU_W_KYC_addNomineeCheckBox}
+    END
     Wait And Click  ${KU_W_KYC_nomineeName} 
     Input Text  ${KU_W_KYC_nomineeName}  ${e_KYC_nomineeName}
+    Wait And Click  ${KU_W_KYC_nomineeRelationshipField}
     Wait And Click  ${KU_W_KYC_nomineeRelationship}
     Wait And Click  ${KU_W_KYC_dateField}
     Input Text  ${KU_W_KYC_dateField}  ${e_KYC_nomineeDOB}
@@ -52,8 +57,9 @@ Link Bank Account
     Input Text  ${KU_W_KYC_yearField}  ${e_KYC_nomineeYOB}
     Wait And Click  ${KU_W_KYC_nomineeAddress} 
     Input Text  ${KU_W_KYC_nomineeAddress}  ${e_KYC_address1Field}
-    Wait And Click  ${KU_W_postlogin_doneBtn}
+    Wait And Click  ${KU_W_KYC_DONEBtn}
     Verify Element And Text  ${KU_W_KYC_confirmationTitle}  ${e_KYC_accountSetupTitle} 
     Verify Element And Text  ${KU_W_KYC_confirmationSubTitle}  ${e_KYC_accountSetupSubTitle}
     Wait And Click  ${KU_W_postlogin_OkBtn}
-    Verify Page Contains Element  ${KU_W_ca_dashboardHeader}
+    Sleep  1s
+    Verify Page Contains Element  ${KU_W_postlogin_homeTab}

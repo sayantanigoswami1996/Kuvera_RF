@@ -155,3 +155,10 @@ PAN Verified KYC Navigation
     [Teardown]  Logout From App And Navigate To Home Page PostLogin
     Verify PostLogin Account Creation
     Verify PAN Verifed KYC Details
+
+# Complete  UnVerified KYC Navigation
+UnVerified KYC Navigation
+    [Tags]  TC24  Stage3
+    [Teardown]  Logout From App And Navigate To Home Page PostLogin
+    Verify PostLogin Account Creation
+    Verify Unverifed KYC Navigation

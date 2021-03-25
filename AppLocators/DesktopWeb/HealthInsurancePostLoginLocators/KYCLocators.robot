@@ -19,7 +19,7 @@ ${e_KYC_signtaure} =  Moolya
 ${e_KYC_portfolioNameField} =  Portfolio Primary Tester
 ${e_KYC_linkBankAccDesc} =  Investing requires linking with your banking account. We use bank-grade security to make sure your information stays safe.
 ${e_KYC_IFSC} =  IDIB000A011
-${e_KYC_IFSCLabel} =  IFSC
+${e_KYC_IFSCLabel} =  IFSC CODE
 ${e_KYC_bankAccLabel} =  BANK ACCOUNT NUMBER
 ${e_KYC_bankAccField} =  7890457615432
 ${e_KYC_reBankAccLabel} =  CONFIRM BANK ACCOUNT
@@ -31,7 +31,10 @@ ${e_KYC_nomineeDOB} =  08
 ${e_KYC_nomineeMOB} =  09
 ${e_KYC_nomineeYOB} =  1965
 ${e_KYC_accountSetupTitle} =  Account setup complete
-${e_KYC_accountSetupSubTitle} =  You have Set Up an\nIndividual Account as\nResident applicant(s).Your account is now ready for mutual fund investments.
+${e_KYC_accountSetupSubTitle} =  You have Set Up an Individual Account as Resident applicant(s). Your account is now ready for mutual fund investments.
+${e_KYC_invalidPANNumber} =  GLXPS3071R
+${e_KYC_KYCNotVerified} =  You are not KYC verified
+${e_KYC_KYCNotVerifiedDesc} =  You need to be KYC compliant for investing in mutual funds. We will help you get this done. Download our mobile app to complete KYC now.
 
 # Application Locator 'KU_<locatorName>'
 # Kuvera :: Wealth Management Simplified
@@ -88,12 +91,12 @@ ${KU_W_KYC_bankCertifyText} =  xpath=//label[@for='bank-certify']//span[1]
 ${KU_W_KYC_addNomineeLabel} =  xpath=(//label[@class='in-field-label'])[5]
 ${KU_W_KYC_addNomineeCheckBox} =  xpath=//label[@for='add_nominee']
 ${KU_W_KYC_addNomineeText} =  xpath=//label[contains(text(),'I would like to add a nominee for investments made')]
-${KU_W_KYC_nomineeName} =  xpath=//input[@placeholder='Nominee Name']
+${KU_W_KYC_nomineeName} =  xpath=//input[@name='nominee-name']
+${KU_W_KYC_nomineeRelationshipField} =  xpath=//div[@class='standard-select-container b-add-nominee__relation__item']
 ${KU_W_KYC_nomineeRelationship} =  xpath=//div[@class='label'][normalize-space()='Mother']
 ${KU_W_KYC_nomineeAddress} =  xpath=//input[@placeholder='Nominee address']
 ${KU_W_KYC_confirmationTitle} =  xpath=//h1[@class='subscription-header']
-
 ${KU_W_KYC_confirmationSubTitle} =  xpath=//div[@class='app-full-screen-message__para']//p
-${KU_W_KYC_addNomineeLabel} =  xpath=(//label[@class='in-field-label'])[5]
-${KU_W_KYC_bankCertifyText} =  xpath=//label[@for='bank-certify']//span[1]
-${KU_W_KYC_addNomineeLabel} =  xpath=(//label[@class='in-field-label'])[5]
+${KU_W_KYC_DONEBtn} =  xpath=//button[normalize-space()='DONE']
+${KU_W_KYC_KYCNotCertifiedTitle} =  xpath=//h1[@class='b-app-standard-modal-title']
+${KU_W_KYC_KYCNotCertifiedSubTitle} =  xpath=//p[@class='b-app-standard-modal-sub-title']
