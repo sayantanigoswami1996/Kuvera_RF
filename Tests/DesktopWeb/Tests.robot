@@ -6,12 +6,12 @@ Resource    ../../Tests/DesktopWeb/Import.robot
 Suite Setup  Launch URL
 Suite Teardown  Close All Browsers
 
-#To run tests on Prod : robot --variable BROWSER:headlesschrome --variable ENV:prod -d Results -i Prod Tests/DesktopWeb/Tests.robot
-#To run tests on Stage 2 : robot --variable BROWSER:headlesschrome --variable ENV:stage2 -d Results -i Stage2 Tests/DesktopWeb/Tests.robot
-#To run tests on Stage 3 :robot --variable BROWSER:headlesschrome --variable ENV:stage3 -d Results -i Stage3 Tests/DesktopWeb/Tests.robot
-# To run specific test on Prod : robot --variable BROWSER:headlesschrome --variable ENV:prod -d Results -i TC01 Tests/DesktopWeb/Tests.robot
-# To run specific test on Stage2 : robot --variable BROWSER:headlesschrome --variable ENV:stage2 -d Results -i TC13 Tests/DesktopWeb/Tests.robot
-# To run specific test on Stage3 : robot --variable BROWSER:headlesschrome --variable ENV:stage3 -d Results -i TC20 Tests/DesktopWeb/Tests.robot
+#To run tests on Prod : robot --variable BROWSER:headlesschrome --variable ENV:Prod -d Results -i Prod Tests/DesktopWeb/Tests.robot
+#To run tests on Stage 2 : robot --variable BROWSER:headlesschrome --variable ENV:Stage2 -d Results -i Stage2 Tests/DesktopWeb/Tests.robot
+#To run tests on Stage 3 :robot --variable BROWSER:headlesschrome --variable ENV:Stage3 -d Results -i Stage3 Tests/DesktopWeb/Tests.robot
+# To run specific test on Prod : robot --variable BROWSER:headlesschrome --variable ENV:Prod -d Results -i TC01 Tests/DesktopWeb/Tests.robot
+# To run specific test on Stage2 : robot --variable BROWSER:headlesschrome --variable ENV:Stage2 -d Results -i TC13 Tests/DesktopWeb/Tests.robot
+# To run specific test on Stage3 : robot --variable BROWSER:headlesschrome --variable ENV:Stage3 -d Results -i TC20 Tests/DesktopWeb/Tests.robot
 
 *** Test Cases ***
 
