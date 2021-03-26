@@ -1,7 +1,3 @@
-*** Settings ***
-
-Library     SeleniumLibrary
-
 *** Keywords ***
 
 Verify PreLogin Mutual Fund Landing Page
@@ -20,7 +16,6 @@ Verify PreLogin Mutual Fund Landing Page
         Verify Mutual Fund Details Page  ${KU_W_invest_mf_fundName}
     END
     Go Back 
-
 Search Fund and Verify 
     # Verify Search functionality
     [Arguments]  ${fundName}
@@ -28,7 +23,6 @@ Search Fund and Verify
     Click Element  ${KU_W_searchBarForFunds}
     Input Text  ${KU_W_invest_mf_searchBar}  ${fundName}  clear=true
     Press Enter Key  ${KU_W_invest_mf_searchBar}
-
 Verify Mutual Fund Details Page
     [Arguments]  ${fund}
     Wait For Element Visibility  ${fund}
@@ -46,15 +40,14 @@ Verify Mutual Fund Details Page
     Verify Page Contains Element  ${KU_W_invest_mf_aumValue}
     Verify Page Contains Element  ${KU_W_invest_mf_ter}
     Verify Page Contains Element  ${KU_W_invest_mf_terValue}
-    Sleep  2s
     Wait For Element Visibility   ${KU_W_invest_mf_risk}
     Verify Page Contains Element  ${KU_W_invest_mf_risk}
     Wait For Element Visibility   ${KU_W_invest_mf_riskValue}
     Verify Page Contains Element  ${KU_W_invest_mf_riskValue}
-    Click Element  ${KU_W_invest_mf_aumInfoIcon}
-    Click Element  ${KU_W_invest_mf_terInfoIcon}
-    Click Element  ${KU_W_invest_mf_riskInfoIcon}
-    Click Element  ${KU_W_invest_mf_navValueInfoIcon}
+    Wait And Click  ${KU_W_invest_mf_navValueInfoIcon}
+    Wait And Click  ${KU_W_invest_mf_aumInfoIcon}
+    Wait And Click  ${KU_W_invest_mf_terInfoIcon}
+    Wait And Click  ${KU_W_invest_mf_riskInfoIcon}
     # MF Invest Now widget
     Wait For Element Visibility  ${KU_W_invest_mf_widgetHeader}
     Verify Page Contains Element  ${KU_W_invest_mf_widgetHeader}

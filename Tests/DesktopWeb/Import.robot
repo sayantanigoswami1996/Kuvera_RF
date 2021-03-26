@@ -50,3 +50,11 @@ Resource    ../../Resources/Utils/DesktopWeb/HealthInsurancePostLogin/HealthInsu
 Resource    ../../Resources/Utils/DesktopWeb/HealthInsurancePostLogin/LoginPostHealthInsuranceClaim.robot
 Resource    ../../Resources/Utils/DesktopWeb/KYCFlows/PANVerifiedKYC.robot
 Resource    ../../Resources/Utils/DesktopWeb/KYCFlows/UnverifiedKYC.robot
+Resource    ../../Resources/Utils/DesktopWeb/UnauthenticatedLinks/LiquidFunds.robot
+Resource    ../../Resources/Utils/DesktopWeb/UnauthenticatedLinks/ForgotPassword.robot
+Resource    ../../Resources/Utils/DesktopWeb/UnauthenticatedLinks/ESignKYCInvalidRequest.robot
+Resource    ../../Resources/Utils/DesktopWeb/UnauthenticatedLinks/ESignKYCFailed.robot
+Resource    ../../Resources/Utils/DesktopWeb/UnauthenticatedLinks/ESignKYCCompleted.robot
+Resource    ../../Resources/Utils/DesktopWeb/UnauthenticatedLinks/AmazonSaveShop.robot
+Resource    ../../Resources/Utils/DesktopWeb/UnauthenticatedLinks/GoldRush.robot
+Resource    ../../Resources/Utils/DesktopWeb/UnauthenticatedLinks/DhanterasGoldOffer.robot
