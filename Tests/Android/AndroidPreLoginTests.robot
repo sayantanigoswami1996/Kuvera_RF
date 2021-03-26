@@ -83,7 +83,7 @@ Blog Page Navigation
     [Tags]  TC13
     Verify Android PreLogin Blog Page
 
-# # MF Menu Navigation Under Invest
+# MF Menu Navigation Under Invest
 MF Menu Navigation Under Invest
     [Tags]  TC14
     Verify Android PreLogin MF Page

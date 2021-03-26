@@ -46,7 +46,10 @@ Verify Mutual Fund Details Page
     Verify Page Contains Element  ${KU_W_invest_mf_aumValue}
     Verify Page Contains Element  ${KU_W_invest_mf_ter}
     Verify Page Contains Element  ${KU_W_invest_mf_terValue}
+    Sleep  2s
+    Wait For Element Visibility   ${KU_W_invest_mf_risk}
     Verify Page Contains Element  ${KU_W_invest_mf_risk}
+    Wait For Element Visibility   ${KU_W_invest_mf_riskValue}
     Verify Page Contains Element  ${KU_W_invest_mf_riskValue}
     Click Element  ${KU_W_invest_mf_aumInfoIcon}
     Click Element  ${KU_W_invest_mf_terInfoIcon}

@@ -32,19 +32,28 @@ Resource    ../../../AppLocators/DesktopWeb/HealthInsurancePostLoginLocators/KYC
 Resource    ../../../AppLocators/DesktopWeb/HealthInsurancePostLoginLocators/PlanHealthInsuranceLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/HealthInsurancePostLoginLocators/HealthInsuranceLandingPageLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/CreateAccountForPostLoginLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/UnauthenticatedLinks/LiquidFundsLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/UnauthenticatedLinks/ForgotPasswordLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/UnauthenticatedLinks/ESignKYCLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/UnauthenticatedLinks/AmazonSaveShopLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/UnauthenticatedLinks/GoldRushLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/UnauthenticatedLinks/DhanterasGoldOfferLocators.robot
 
 *** Keywords ***
 
 Launch URL
-    Open Browser  ${URL}  ${BROWSER}  alias=Kuvera
+    Run keyword If  '${ENV}' == '${e_prod}'  Open Browser  ${URL_prod}  ${BROWSER}  alias=Kuvera
+    ...    ELSE IF  '${ENV}' == '${e_stage3}'  Open Browser  ${URL_stage3}  ${BROWSER}  alias=Kuvera
+    ...    ELSE IF  '${ENV}' == '${e_stage2}'  Open Browser  ${URL_stage2}  ${BROWSER}  alias=Kuvera
+    Log To Console  ${ENV}
     # Maximize Browser Window
     Set Window Size  ${1920}  ${1080}
-    Set Selenium Implicit Wait  5s
+    Set Selenium Implicit Wait  6s
     Reload Page
     Kuvera Web Close Regulatory Disclosure
     Run Keyword If    '${ENV}' == '${e_prod}'  Close Hello Bar
     ...    ELSE   Log To Console  Staging
-
+    
 Welcome Page Should Be Open
     Run Keyword And Continue On Failure  Title Should Be  ${KU_W_title}
 
@@ -216,23 +225,23 @@ Replace Characters
 Click Link And Switch Window
     [Arguments]  ${websiteLink} 
     Click Element  ${websiteLink}
-    Sleep  1s
     Switch To Window
     Sleep  2s  
 
 Navigate To Home Page
-    Go To  ${URL}
+    Run keyword If  '${ENV}' == '${e_prod}'  Go To  ${URL_prod}
+    ...    ELSE IF  '${ENV}' == '${e_stage3}'  Go To  ${URL_stage3}
     Set Window Size  ${1920}  ${1080}
     Reload Page
     Sleep  15s
 
 Logout From App And Navigate To Home Page PostLogin
-    Go To  ${URL}
+    Go To  ${URL_stage3}
     Logout From App Post Signup
-    Go To  ${URL}
+    Go To  ${URL_stage3}
     Set Window Size  ${1920}  ${1080}
     Reload Page
-    Sleep  12s
+    Sleep  15s
 
 Generate Random Number
     [Arguments]  ${startingrange}  ${endingrange}
@@ -269,7 +278,6 @@ Verify Social Sharing Option
     Wait Scroll And Click Element  ${maillink}
     Sleep  2s
     Wait Scroll And Click Element  ${KU_W_HI_mailLink} 
-
 
 Logout From App Post Signup
     Wait And Click  ${KU_W_ca_caretDropdown}

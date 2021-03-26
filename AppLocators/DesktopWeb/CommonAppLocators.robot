@@ -1,6 +1,11 @@
 *** Variables ***
 # Application Expected Values 'e_<VariableName>'
-${e_prod} =  prod
+${e_prod} =  Prod
+${e_stage3} =  Stage3
+${e_stage2} =  Stage2
+${URL_prod} =  https://kuvera.in/
+${URL_stage3} =  https://staging3.kuvera.in/
+${URL_stage2} =  https://staging2.kuvera.in/
 ${e_title} =  Kuvera - Direct Mutual Funds | Stocks | Loans | Gold | Remit on Kuvera- Wealth Management Simplified
 ${e_regulatoryDisclosure} =  Regulatory Disclosure
 ${e_login} =  Log in 
@@ -59,8 +64,6 @@ ${e_usstock_subHeaderTxt} =  Zero commission. Start with $10.
 ${e_ss_headerTxt} =  Start SaveSmart today 
 ${e_gold_headerTxt} =  Buying gold has never been this simple!
   
-    
-
 
 #Feature-Widgets Variables
 ${e_feature_th_TitleText} =  Save up to ₹10,000 in LTCG taxes every financial year with Tax Harvesting.
