@@ -39,6 +39,7 @@ Resource    ../../../AppLocators/DesktopWeb/UnauthenticatedLinks/AmazonSaveShopL
 Resource    ../../../AppLocators/DesktopWeb/UnauthenticatedLinks/GoldRushLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/UnauthenticatedLinks/DhanterasGoldOfferLocators.robot
 
+
 *** Keywords ***
 
 Launch URL

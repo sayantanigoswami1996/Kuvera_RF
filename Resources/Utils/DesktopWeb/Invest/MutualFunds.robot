@@ -46,12 +46,14 @@ Verify Mutual Fund Details Page
     Verify Page Contains Element  ${KU_W_invest_mf_aumValue}
     Verify Page Contains Element  ${KU_W_invest_mf_ter}
     Verify Page Contains Element  ${KU_W_invest_mf_terValue}
+    Wait For Element Visibility   ${KU_W_invest_mf_risk}
     Verify Page Contains Element  ${KU_W_invest_mf_risk}
+    Wait For Element Visibility   ${KU_W_invest_mf_riskValue}
     Verify Page Contains Element  ${KU_W_invest_mf_riskValue}
-    Click Element  ${KU_W_invest_mf_aumInfoIcon}
-    Click Element  ${KU_W_invest_mf_terInfoIcon}
-    Click Element  ${KU_W_invest_mf_riskInfoIcon}
-    Click Element  ${KU_W_invest_mf_navValueInfoIcon}
+    Wait And Click  ${KU_W_invest_mf_navValueInfoIcon}
+    Wait And Click  ${KU_W_invest_mf_aumInfoIcon}
+    Wait And Click  ${KU_W_invest_mf_terInfoIcon}
+    Wait And Click  ${KU_W_invest_mf_riskInfoIcon}
     # MF Invest Now widget
     Wait For Element Visibility  ${KU_W_invest_mf_widgetHeader}
     Verify Page Contains Element  ${KU_W_invest_mf_widgetHeader}
