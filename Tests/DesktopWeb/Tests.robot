@@ -148,3 +148,17 @@ Health Insurance Navigation
     Verify PostLogin Insure Landing Page
     Verify PostLogin Add Family Details
     Login And Verify Policy Details
+
+# Complete PAN Verified KYC Navigation
+PAN Verified KYC Navigation
+    [Tags]  TC23  Stage3
+    [Teardown]  Logout From App And Navigate To Home Page PostLogin
+    Verify PostLogin Account Creation
+    Verify PAN Verifed KYC Details
+
+# Complete  UnVerified KYC Navigation
+UnVerified KYC Navigation
+    [Tags]  TC24  Stage3
+    [Teardown]  Logout From App And Navigate To Home Page PostLogin
+    Verify PostLogin Account Creation
+    Verify Unverifed KYC Navigation

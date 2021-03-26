@@ -1,7 +1,3 @@
-*** Settings ***
-
-Library   SeleniumLibrary
-
 *** Keywords ***
 
 Verify PreLogin Digital Gold Landing Page
