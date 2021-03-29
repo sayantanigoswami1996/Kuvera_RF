@@ -27,11 +27,11 @@ Resource    ../../../AppLocators/DesktopWeb/InvestLocators/StocksLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/USStocksLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/FooterLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/FundHouseLocators.robot
-Resource    ../../../AppLocators/DesktopWeb/PostLoginCommonAppLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/PostLoginCommonAppLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/HealthInsurancePostLoginLocators/KYCLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/HealthInsurancePostLoginLocators/PlanHealthInsuranceLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/HealthInsurancePostLoginLocators/HealthInsuranceLandingPageLocators.robot
-Resource    ../../../AppLocators/DesktopWeb/CreateAccountForPostLoginLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/CreateAccountForPostLoginLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/UnauthenticatedLinks/LiquidFundsLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/UnauthenticatedLinks/ForgotPasswordLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/UnauthenticatedLinks/ESignKYCLocators.robot

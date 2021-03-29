@@ -64,8 +64,6 @@ ${e_usstock_subHeaderTxt} =  Zero commission. Start with $10.
 ${e_ss_headerTxt} =  Start SaveSmart today 
 ${e_gold_headerTxt} =  Buying gold has never been this simple!
   
-    
-
 
 #Feature-Widgets Variables
 ${e_feature_th_TitleText} =  Save up to ₹10,000 in LTCG taxes every financial year with Tax Harvesting.

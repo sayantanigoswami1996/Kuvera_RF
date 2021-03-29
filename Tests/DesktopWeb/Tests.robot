@@ -162,3 +162,10 @@ UnVerified KYC Navigation
     [Teardown]  Logout From App And Navigate To Home Page PostLogin
     Verify PostLogin Account Creation
     Verify Unverifed KYC Navigation
+
+# Dashboard Widgets Navigation
+Dashboard Widgets Navigation
+    [Tags]  TC25  Stage3
+    [Teardown]  Logout From App And Navigate To Home Page PostLogin
+    Verify PostLogin Account Creation
+    Verify PostLogin Dashboard Navigation

@@ -1,7 +1,3 @@
-*** Settings ***
-
-Library   SeleniumLibrary
-
 *** Keywords ***
 
 Verify Fill In Of KYC Form Details
