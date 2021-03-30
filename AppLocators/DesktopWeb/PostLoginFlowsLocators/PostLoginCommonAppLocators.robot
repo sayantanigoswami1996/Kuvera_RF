@@ -1,7 +1,7 @@
 *** Variables *** 
 # Application Expected Values 'e_<variableName>'
 ${e_postlogin_googlePlayStore} =  Kuvera Personal Finance App - Apps on Google Play
-${e_postlogin_appStore} =  Kuvera Personal Finance on the App Store
+${e_postlogin_appStoreScreen} =  App Store Preview
 # Dashboard
 ${e_dashboard_addAccSubTitle} =  ‎Manage investment for your relatives and family members.
 ${e_dashboard_addAccNavigatedTitle} =  Invest with Your Loved Ones       
@@ -31,6 +31,8 @@ ${KU_W_postlogin_dasboardTab} =  xpath=//a[contains(text(),'Dashboard')]
 ${KU_W_postlogin_portfolioTab} =  xpath=//a[.='Portfolio']
 ${KU_W_postlogin_rewardsTab} =  xpath=//a[contains(text(),'Rewards')]
 ${KU_W_postlogin_blogTab} =  xpath=//a[contains(text(),'Blog')]
+${KU_W_postlogin_appStoreScreen} =  xpath=//div[@class='localnav-title we-localnav__title']
+${KU_W_postlogin_kuveraAppIcon} =  xpath=//picture[@class='we-artwork we-artwork--downloaded ember-view product-hero__artwork we-artwork--fullwidth we-artwork--ios-app-icon']
 ${KU_W_postlogin_reportsTab} =  xpath=//a[contains(text(),'Reports')]
 ${KU_W_postlogin_importPortfolioTab} =  xpath=//a[text()='Import Portfolio']
 ${KU_W_postlogin_primaryPortfolioTab} =  xpath=//span[@class='username']
@@ -85,3 +87,4 @@ ${KU_W_dashboard_reportTitle} =  xpath=//div[@class='b-reports__heading']
 ${KU_W_dashboard_inviteFriendsTitle} =  xpath=//div[@class='b-invitation-page__heading']
 ${KU_W_dashboard_manageFolioTitle} =  xpath=//h2[contains(text(),'Complete Registration')]
 ${KU_W_dashboard_noActiveSIPTitle} =  xpath=//div[@class='no-sip-title-text']
+${KU_W_dashboard_exploreTitle} =  xpath=//h6[contains(text(),'Explore')]
