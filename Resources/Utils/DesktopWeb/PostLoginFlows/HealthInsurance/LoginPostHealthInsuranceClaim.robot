@@ -1,7 +1,7 @@
 *** Keywords ***
 
 Login And Verify Policy Details
-    Go To  ${URL}
+    Go To  ${URL_stage3}
     Logout From App Post Signup
     Login 
     Verify Policy Details

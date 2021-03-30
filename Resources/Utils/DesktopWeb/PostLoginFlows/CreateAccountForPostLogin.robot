@@ -1,3 +1,7 @@
+*** Settings ***
+
+Library     SeleniumLibrary
+
 *** Keywords ***
 
 Verify PostLogin Account Creation 

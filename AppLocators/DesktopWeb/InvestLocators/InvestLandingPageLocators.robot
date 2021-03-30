@@ -93,7 +93,7 @@ ${KU_W_52WHighUSSubTitle} =  xpath=(//div[@class='k-cls b-invest-card']/p)[9]
 ${KU_W_52WHighUS_screenText} =  xpath=//div[@class='disable-browser-text-select b-standard-tab__item b-standard-tab__item--active b-standard-tab__item--52-week-high']
 ${KU_W_healthPremiumTitle} =  xpath=//div[@class='b-invest-landing__other-container']//div[1]/p
 ${KU_W_checkPremiumBtn} =  xpath=//h6[contains(.,'Check premium')]
-${KU_W_mutualFund} =  xpath=//span[contains(text(),'MF')]
+${KU_W_mutualFund} =  xpath=(//span[contains(text(),'MF')])[1]
 ${KU_W_mutualFundScreen} =  xpath=(//div[@class='b-explore-fund__action-title'])[1]
 ${KU_W_digitalGold} =  xpath=//span[contains(text(),'Digi gold')]
 ${KU_W_digitalGoldScreen} =  xpath=(//div[@class='b-asset-cta__title'])[3]
