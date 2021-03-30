@@ -11,9 +11,9 @@ Verify Unverifed KYC Navigation
     Switch To Window Verify Title And Close  ${e_postlogin_googlePlayStore}
     Wait And Click  ${KU_W_postlogin_appStoreBtn}
     Sleep  2s
-    Switch To App Store And Verify Screen Title
+    Switch To App Store And Verify Screen Icons
 
-Switch To App Store And Verify Screen Title
+Switch To App Store And Verify Screen Icons
     Switch Window  locator=NEW
     Wait For Element Visibility  ${KU_W_postlogin_appStoreScreen}
     Verify Element And Text  ${KU_W_postlogin_appStoreScreen}  ${e_postlogin_appStoreScreen}
