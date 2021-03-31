@@ -58,3 +58,9 @@ Resource    ../../Resources/Utils/DesktopWeb/UnauthenticatedLinks/GoldRush.robot
 Resource    ../../Resources/Utils/DesktopWeb/UnauthenticatedLinks/DhanterasGoldOffer.robot
 Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/KYCFlows/PANVerifiedKYC.robot
 Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/KYCFlows/UnverifiedKYC.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Dashboard/DashboardWidgets.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Dashboard/DashboardTopHeaders.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Dashboard/DashboardLeftHeaders.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/InviteFriends.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/ManageFolio.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Reports.robot
