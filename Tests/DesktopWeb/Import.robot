@@ -44,10 +44,10 @@ Resource    ../../Resources/Utils/DesktopWeb/Features/Consolidate.robot
 Resource    ../../Resources/Utils/DesktopWeb/Footer.robot
 Resource    ../../Resources/Utils/DesktopWeb/FundHouse.robot
 Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/CreateAccountForPostLogin.robot
-Resource    ../../Resources/Utils/DesktopWeb/HealthInsurancePostLogin/KYC.robot
-Resource    ../../Resources/Utils/DesktopWeb/HealthInsurancePostLogin/PlanHealthInsurance.robot
-Resource    ../../Resources/Utils/DesktopWeb/HealthInsurancePostLogin/HealthInsuranceLandingPage.robot
-Resource    ../../Resources/Utils/DesktopWeb/HealthInsurancePostLogin/LoginPostHealthInsuranceClaim.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/HealthInsurance/KYC.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/HealthInsurance/PlanHealthInsurance.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/HealthInsurance/HealthInsuranceLandingPage.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/HealthInsurance/LoginPostHealthInsuranceClaim.robot
 Resource    ../../Resources/Utils/DesktopWeb/UnauthenticatedLinks/LiquidFunds.robot
 Resource    ../../Resources/Utils/DesktopWeb/UnauthenticatedLinks/ForgotPassword.robot
 Resource    ../../Resources/Utils/DesktopWeb/UnauthenticatedLinks/ESignKYCInvalidRequest.robot
@@ -58,4 +58,9 @@ Resource    ../../Resources/Utils/DesktopWeb/UnauthenticatedLinks/GoldRush.robot
 Resource    ../../Resources/Utils/DesktopWeb/UnauthenticatedLinks/DhanterasGoldOffer.robot
 Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/KYCFlows/PANVerifiedKYC.robot
 Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/KYCFlows/UnverifiedKYC.robot
-Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/DashboardPostLogin.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Dashboard/DashboardWidgets.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Dashboard/DashboardTopHeaders.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Dashboard/DashboardLeftHeaders.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/InviteFriends.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/ManageFolio.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Reports.robot

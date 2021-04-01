@@ -268,7 +268,7 @@ ${e_feature_cd_manageTodayBtnText} =   MANAGE TODAY
 # Button 
 ${KU_W_button} =  xpath=(//button[@class='button-primary'])[1]
 # Loan Navigation Page
-${KU_W_loanLink} =  xpath=//a[contains(text(),'Loans')]
+${KU_W_loanLink} =  xpath=//a[contains(text(),'Loan')]
 ${KU_W_loanHeaderTitle} =  xpath=//div[@class='b-header__title']
 ${KU_W_loanHeaderMsg} =  xpath=//div[contains(text(),'Let your investments work for you. The only loan a')]
 ${KU_W_loanCheckEligibility} =  class=b-state-save-btn__text

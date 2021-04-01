@@ -27,17 +27,21 @@ Resource    ../../../AppLocators/DesktopWeb/InvestLocators/StocksLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/InvestLocators/USStocksLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/FooterLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/FundHouseLocators.robot
-Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/PostLoginCommonAppLocators.robot
-Resource    ../../../AppLocators/DesktopWeb/HealthInsurancePostLoginLocators/KYCLocators.robot
-Resource    ../../../AppLocators/DesktopWeb/HealthInsurancePostLoginLocators/PlanHealthInsuranceLocators.robot
-Resource    ../../../AppLocators/DesktopWeb/HealthInsurancePostLoginLocators/HealthInsuranceLandingPageLocators.robot
-Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/CreateAccountForPostLoginLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/UnauthenticatedLinks/LiquidFundsLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/UnauthenticatedLinks/ForgotPasswordLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/UnauthenticatedLinks/ESignKYCLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/UnauthenticatedLinks/AmazonSaveShopLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/UnauthenticatedLinks/GoldRushLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/UnauthenticatedLinks/DhanterasGoldOfferLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/PostLoginCommonAppLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/HealthInsurancePostLoginLocators/KYCLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/HealthInsurancePostLoginLocators/PlanHealthInsuranceLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/HealthInsurancePostLoginLocators/HealthInsuranceLandingPageLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/CreateAccountForPostLoginLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/DashboardLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/InviteFriendsLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/ReportLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/ManageFolioLocators.robot
 
 *** Keywords ***
 
@@ -241,7 +245,7 @@ Logout From App And Navigate To Home Page PostLogin
     Go To  ${URL_stage3}
     Set Window Size  ${1920}  ${1080}
     Reload Page
-    Sleep  15s
+    Sleep  12s
 
 Generate Random Number
     [Arguments]  ${startingrange}  ${endingrange}
@@ -281,9 +285,16 @@ Verify Social Sharing Option
 
 Logout From App Post Signup
     Wait And Click  ${KU_W_ca_caretDropdown}
+    Sleep  2s
     Wait And Click  ${KU_W_ca_logoutBtn}
     Sleep  4s
     Go Back
-   
+
+Verify Registration Page Postlogin 
+    [Arguments]  ${KYCMsg}  ${registrationBtn_link}
+    Verify Page Contains Element  ${KU_W_postlogin_pageTitle} 
+    Verify Element And Text  ${KU_W_postlogin_completeKYCMsg}  ${KYCMsg}
+    Verify Page Contains Element  ${registrationBtn_link}
+    
 Close Web Application
     Close All Browser

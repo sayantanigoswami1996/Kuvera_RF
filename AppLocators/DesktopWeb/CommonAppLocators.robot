@@ -214,3 +214,9 @@ ${KU_W_feature_ts_title} =  xpath=//div[@class='b-trade-smart__header__desc__tit
 ${KU_W_feature_fa_screenTitle} =  xpath=//h1[@class='b-family-account__what__heading']
 ${KU_W_feature_manageAccountTitle} =  xpath=//div[@class='b-manage-account__what']/h1
 ${KU_W_remit_screenTitle} =  xpath=//div[@class='b-introduction__desc']//div[2]
+
+${KU_W_tc_facebookBtn} =  xpath=//div[@class='b-app-standard-social-options-container']//a[1]
+${KU_W_tc_twitterBtn} =  xpath=//div[@class='b-app-standard-social-options-container']//a[2]
+${KU_W_tc_whatsappBtn} =  xpath=//div[@class='b-app-standard-social-options-container']//a[3]
+${KU_W_tc_telegramBtn} =  xpath=//div[@class='b-app-standard-social-options-container']//a[4]
+${KU_W_tc_mailBtn} =  xpath=//div[@class='b-app-standard-social-options-container']//a[5]

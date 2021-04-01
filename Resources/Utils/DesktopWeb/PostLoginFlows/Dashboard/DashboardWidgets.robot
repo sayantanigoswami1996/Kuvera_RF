@@ -1,7 +1,7 @@
 *** Keywords ***
 
-Verify PostLogin Dashboard Navigation
-    Log To Console  Dashboard
+Verify PostLogin Dashboard Widgets Navigation
+    Log To Console  Dashboard Widgets
     Wait For Element Visibility  ${KU_W_ca_dashboardHeader}
     Verify Page Contains Element  ${KU_W_ca_dashboardHeader}
     Verify Page Contains Element  ${KU_W_dashboard_pageSubTitle} 
@@ -22,63 +22,38 @@ Verify Add Acount And Track Investment Section
     Verify Element And Text  ${KU_W_dashboard_trackInvestTitle}  ${e_dashboard_trackInvestTitle} 
     Verify Page Contains Element  ${KU_W_dashboard_trackInvestSubTitle}
     Wait And Click  ${KU_W_dashboard_trackInvestTitle}
-    Wait For Element Visibility  ${KU_W_dashboard_popupTitle}
-    Verify Page Contains Element  ${KU_W_dashboard_popupTitle}
-    Wait And Click  ${KU_W_dashboard_popupClose} 
-    Go Back
+    Verify Track Investment Popup
 
 Verify Explore Section
+    Verify Page Contains Element  ${KU_W_dashboard_exploreTitle}
     # MF 
-    Wait And Click  ${KU_W_mutualFund}
-    Wait For Element Visibility  ${KU_W_dashboard_allFunds}
-    Verify Page Contains Element  ${KU_W_dashboard_allFunds}
-    Go Back
+    Verify Investments Navigation  ${KU_W_mutualFund}  ${KU_W_dashboard_allFunds}
     # FD
-    Wait And Click  ${KU_W_FD_FDIcon} 
-    Wait For Element Visibility  ${KU_W_FD_allFDTab}
-    Verify Element And Text  ${KU_W_FD_allFDTab}  ${e_FD_allFDTab}
-    Go Back
+    Verify Investments Navigation  ${KU_W_FD_FDIcon}  ${KU_W_FD_allFDTab}
     # Digi Gold
-    Wait And Click  ${KU_W_digitalGold}
-    Wait For Element Visibility  ${KU_W_dg_screenTitle}
-    Verify Element And Text  ${KU_W_dg_screenTitle}  ${e_invest_digiGold_screenText}
-    Go Back
+    Verify Investments Navigation  ${KU_W_digitalGold}  ${KU_W_dg_screenTitle}
     # Stocks
-    Wait And Click  ${KU_W_stocks}
-    Wait For Element Visibility  ${KU_W_dashboard_allStocks}
-    Verify Page Contains Element  ${KU_W_dashboard_allStocks}
-    Go Back
+    Verify Investments Navigation  ${KU_W_stocks}  ${KU_W_dashboard_allStocks}
     # US Stocks
-    Wait And Click  ${KU_W_USStocks} 
-    Wait For Element Visibility  ${KU_W_dashboard_allUSStocks}
-    Verify Page Contains Element  ${KU_W_dashboard_allUSStocks}
-    Go Back
+    Verify Investments Navigation  ${KU_W_USStocks}  ${KU_W_dashboard_allUSStocks}
     # SaveSmart
-    Wait And Click  ${KU_W_saveSmart}
-    Wait For Element Visibility  ${KU_W_ss_screenTitle}
-    Verify Element And Text  ${KU_W_ss_screenTitle}  ${e_invest_ss_screenText}
-    Go Back
+    Verify Investments Navigation  ${KU_W_saveSmart}  ${KU_W_ss_screenTitle}
     # Crypto
-    Wait And Click  ${KU_W_crypto_titlefromExplore}
-    Wait For Element Visibility  ${KU_W_crypto_tabName}
-    Verify Page Contains Element  ${KU_W_crypto_tabName}
-    Go Back
+    Verify Investments Navigation  ${KU_W_crypto_titlefromExplore}  ${KU_W_crypto_tabName}
     # Insure
-    Wait And Click  ${KU_W_dashboard_insure}
-    Wait For Element Visibility  ${KU_W_insureHeaderTitle}  
-    Verify Element And Text  ${KU_W_insureHeaderTitle}  ${e_insure_headerTitleText} 
-    Go Back
+    Verify Investments Navigation  ${KU_W_dashboard_insure}  ${KU_W_insureHeaderTitle}
     # Loan
-    Wait And Click  ${KU_W_dashboard_loan}
-    Wait For Element Visibility  ${KU_W_loanHeaderTitle}  
-    Verify Element And Text  ${KU_W_loanHeaderTitle}  ${e_loan_headerTitleText}
-    Go Back
+    Verify Investments Navigation  ${KU_W_dashboard_loan}  ${KU_W_loanHeaderTitle}
     # Remit
-    Wait And Click  ${KU_W_dashboard_remit}
-    Wait For Element Visibility  ${KU_W_remit_screenTitle}
-    Verify Element And Text  ${KU_W_remit_screenTitle}  ${e_remit_screenTitle}
+    Verify Investments Navigation  ${KU_W_dashboard_remit}  ${KU_W_remit_screenTitle}
+    
+Verify Investments Navigation
+    [Arguments]  ${link}  ${screenTitle}
+    Wait And Click  ${link}
+    Wait For Element Visibility  ${screenTitle}
+    Verify Page Contains Element  ${screenTitle}
     Go Back
-  
+
 Verify Add SIP Goals And SuperCharge Portfolio
     # Add SIPs
     Scroll Untill View  ${KU_W_dashboard_addSIPsTitle}
@@ -140,3 +115,18 @@ Verify News And Advice Section
     Verify Element And Text  ${KU_W_dashboard_newsAndAdviceTitle}  ${e_dashboard_newsAndAdviceTitle} 
     Wait And Click  ${KU_W_dashboard_viewAllLink}
     Switch To Window Verify Title And Close  ${e_dashboard_newsScreenTitle}
+
+Verify Track Investment Popup
+    Wait For Element Visibility  ${KU_W_dashboard_popupTitle}
+    Verify Page Contains Element  ${KU_W_dashboard_popupTitle}
+    Verify Page Contains Element  ${KU_W_dashboard_trackInvest_MF}
+    Verify Page Contains Element  ${KU_W_dashboard_trackInvest_MFDesc}
+    Verify Page Contains Element  ${KU_W_dashboard_trackInvest_stocks}
+    Verify Page Contains Element  ${KU_W_dashboard_trackInvest_stocksDesc} 
+    Verify Page Contains Element  ${KU_W_dashboard_trackInvest_USStocks}
+    Verify Page Contains Element  ${KU_W_dashboard_trackInvest_USStocksDesc}
+    Verify Page Contains Element  ${KU_W_dashboard_trackInvest_digiGold}
+    Verify Page Contains Element  ${KU_W_dashboard_trackInvest_digiGoldDesc}
+    Verify Page Contains Element  ${KU_W_dashboard_trackInvest_EPF}
+    Verify Page Contains Element  ${KU_W_dashboard_trackInvest_EPFDesc}
+    Wait And Click  ${KU_W_dashboard_popupClose} 

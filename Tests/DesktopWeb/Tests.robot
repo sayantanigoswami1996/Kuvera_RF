@@ -168,4 +168,40 @@ Dashboard Widgets Navigation
     [Tags]  TC25  Stage3
     [Teardown]  Logout From App And Navigate To Home Page PostLogin
     Verify PostLogin Account Creation
-    Verify PostLogin Dashboard Navigation
+    Verify PostLogin Dashboard Widgets Navigation
+
+# Top And Left Bar Navigation
+Top And Left Bar Navigation
+    [Tags]  TC26  Stage3
+    [Teardown]  Logout From App And Navigate To Home Page PostLogin
+    Verify PostLogin Account Creation
+    Verify PostLogin Top Headers Verification
+    Verify PostLogin Left Bar Navigation
+
+# Invite Friends Menu Navigation
+Invite Friends Menu Navigation
+    [Tags]  TC27  Stage3
+    [Teardown]  Logout From App And Navigate To Home Page PostLogin
+    Verify PostLogin Account Creation
+    Verify PostLogin Invite Friends Menu Navigation
+
+# Manage Folio Menu Navigation
+Manage Folio Menu Navigation
+    [Tags]  TC28  Stage3
+    [Teardown]  Logout From App And Navigate To Home Page PostLogin
+    Verify PostLogin Account Creation
+    Verify PostLogin Manage Folio Menu Navigation
+
+# Reports Menu Navigation
+Reports Menu Navigation
+    [Tags]  TC29  Stage3
+    [Teardown]  Logout From App And Navigate To Home Page PostLogin
+    Verify PostLogin Account Creation
+    Verify PostLogin Reports Menu Navigation
+
+# Invest Tiles Navigation Postlogin 
+Invest Tiles Navigation Postlogin
+    [Tags]  TC30  Stage3
+    [Teardown]  Logout From App And Navigate To Home Page PostLogin
+    Verify PostLogin Account Creation
+    Verify PreLogin Invest Tiles
