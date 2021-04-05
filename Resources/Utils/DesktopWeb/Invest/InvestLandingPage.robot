@@ -4,12 +4,7 @@ Verify PreLogin Invest Tiles
     Wait For Element Visibility  ${KU_W_investLink} 
     Click Element  ${KU_W_investLink}
     Sleep  1s
-    ${isLoginButtonVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_login}
-    IF ${isLoginButtonVisible}  
-        Verify Login And Signup Link
-    ELSE  
-        Log To Console  Continue
-    END
+    Verify Login And Signup On Prelogin
     # Save Smart
     Sleep  2s
     Wait For Element Visibility  ${KU_W_invest_saveSmartTitle}  
@@ -37,70 +32,70 @@ Verify PreLogin Invest Tiles
     Verify Element And Text  ${KU_W_ultraShortTitle}  ${e_invest_ultraShortTitleText}
     Verify Element And Text  ${KU_W_ultraShortSubTitle}  ${e_invest_ultraShortSubText}
     Verify PreLogin Ultra Short Landing Page
-    # # Bank & PSU Bonds
-    # Wait For Element Visibility  ${KU_W_bank&PSUBondsTitle} 
-    # Verify Element And Text  ${KU_W_bank&PSUBondsTitle}  ${e_invest_bank&PSUTitleText}
-    # Verify PreLogin Bank And PSU Bonds Landing Page
-    # # ELSS Tax Saver
-    # Wait For Element Visibility  ${KU_W_ELSSTaxSaverTitle}
-    # Verify Element And Text  ${KU_W_ELSSTaxSaverTitle}  ${e_invest_ELSSTaxTitleText}
-    # Verify Element And Text  ${KU_W_ELSSTaxSaverSubTitle}  ${e_invest_ELSSTaxSubText}
-    # Verify PreLogin ELSS Tax Saver Landing Page
-    # # Digital Gold
-    # Wait For Element Visibility  ${KU_W_digitalGoldTitle}
-    # Verify Element And Text  ${KU_W_digitalGoldTitle}  ${e_invest_digitalGoldTitleText}
-    # Verify Element And Text  ${KU_W_digitalGoldSubTitle}  ${e_invest_digitalGoldSubText}
-    # Verify Page Contains Image  ${KU_W_goldIconImage} 
-    # Click Element  ${KU_W_digitalGoldTitle}
-    # Log To Console  Digital Gold Tiles
-    # Wait For Element Visibility  ${KU_W_dg_screenTitle} 
-    # Verify Element And Text  ${KU_W_dg_screenTitle}  ${e_invest_digiGold_screenText} 
-    # Go Back
-    # # US ETF
-    # Wait For Element Visibility  ${KU_W_UTFTitle}
-    # Sleep  2s
-    # Verify Element And Text  ${KU_W_UTFTitle}  ${e_invest_USETFTitleText}
-    # Verify Element And Text  ${KU_W_UTFSubTitle}  ${e_invest_USETFSubText}
-    # Verify Page Contains Image   ${KU_W_USUTFImage}  
-    # Verify PreLogin US ETF Landing Page
-    # # Equity Index
-    # Wait For Element Visibility  ${KU_W_equityIndexTitle}
-    # Verify Element And Text  ${KU_W_equityIndexTitle}  ${e_invest_equityIndexTitleText}
-    # Verify Element And Text  ${KU_W_equityIndexSubTitle}  ${e_invest_equityIndexSubText} 
-    # Verify PreLogin Equity Index Landing Page
-    # # Sector Funds
-    # Wait For Element Visibility  ${KU_W_sectorFundsTitle}
-    # Verify Element And Text  ${KU_W_sectorFundsTitle}   ${e_invest_sectorFundsTitleText}
-    # Verify Element And Text  ${KU_W_sectorFundsSubTitle}  ${e_invest_sectorFundsSubTitleText} 
-    # Verify PreLogin Sector Funds Landing Page
-    # # Value Funds
-    # Wait For Element Visibility  ${KU_W_valueFundsTitle} 
-    # Verify Element And Text  ${KU_W_valueFundsTitle}  ${e_invest_valueFundsTitleText}
-    # Verify Element And Text  ${KU_W_valueFundsSubTitle}  ${e_invest_valueFundsSubTitleText}
-    # Verify PreLogin Value Funds Landing Page
-    # # Crypto
-    # Wait For Element Visibility  ${KU_W_cryptoTitle}
-    # Verify Element And Text  ${KU_W_cryptoTitle}  ${e_invest_cryptoTitleText} 
-    # Verify Element And Text  ${KU_W_cryptoSubTitle}  ${e_invest_cryptoSubTitleText}
-    # Wait And Click  ${KU_W_cryptoTitle}
-    # Log To Console  Crypto Tiles
-    # Sleep  2s
-    # Verify Page Contains Element  ${KU_W_crypto_tabName}
-    # Verify Login And Signup Link
-    # Go Back
-    # # 52 W High India
-    # Wait For Element Visibility  ${KU_W_52WHighIndiaTitle}  
-    # Verify Element And Text  ${KU_W_52WHighIndiaTitle}  ${e_invest_52WHighIndiaTitleText} 
-    # Verify Element And Text  ${KU_W_52WHighIndiaSubTitle}  ${e_invest_52WHighIndiaSubTitleText}
-    # Verify PreLogin 52WkHigh India Landing Page
-    # # 52 W High USA
-    # Wait For Element Visibility  ${KU_W_52WHighUSTitle}
-    # Verify Element And Text  ${KU_W_52WHighUSTitle}  ${e_invest_52WHighUSTitleText} 
-    # Verify Element And Text  ${KU_W_52WHighUSSubTitle}  ${e_invest_52WHighUSSubTitleText}
-    # Verify PreLogin 52WkHigh US Landing Page
-    # # Explore More
-    # Scroll Untill View  ${KU_W_exploreTitle}
-    # Verify Element And Text  ${KU_W_exploreTitle}  ${e_invest_stock_exploreTxt}
+    # Bank & PSU Bonds
+    Wait For Element Visibility  ${KU_W_bank&PSUBondsTitle} 
+    Verify Element And Text  ${KU_W_bank&PSUBondsTitle}  ${e_invest_bank&PSUTitleText}
+    Verify PreLogin Bank And PSU Bonds Landing Page
+    # ELSS Tax Saver
+    Wait For Element Visibility  ${KU_W_ELSSTaxSaverTitle}
+    Verify Element And Text  ${KU_W_ELSSTaxSaverTitle}  ${e_invest_ELSSTaxTitleText}
+    Verify Element And Text  ${KU_W_ELSSTaxSaverSubTitle}  ${e_invest_ELSSTaxSubText}
+    Verify PreLogin ELSS Tax Saver Landing Page
+    # Digital Gold
+    Wait For Element Visibility  ${KU_W_digitalGoldTitle}
+    Verify Element And Text  ${KU_W_digitalGoldTitle}  ${e_invest_digitalGoldTitleText}
+    Verify Element And Text  ${KU_W_digitalGoldSubTitle}  ${e_invest_digitalGoldSubText}
+    Verify Page Contains Image  ${KU_W_goldIconImage} 
+    Click Element  ${KU_W_digitalGoldTitle}
+    Log To Console  Digital Gold Tiles
+    Wait For Element Visibility  ${KU_W_dg_screenTitle} 
+    Verify Element And Text  ${KU_W_dg_screenTitle}  ${e_invest_digiGold_screenText} 
+    Go Back
+    # US ETF
+    Wait For Element Visibility  ${KU_W_UTFTitle}
+    Sleep  2s
+    Verify Element And Text  ${KU_W_UTFTitle}  ${e_invest_USETFTitleText}
+    Verify Element And Text  ${KU_W_UTFSubTitle}  ${e_invest_USETFSubText}
+    Verify Page Contains Image   ${KU_W_USUTFImage}  
+    Verify PreLogin US ETF Landing Page
+    # Equity Index
+    Wait For Element Visibility  ${KU_W_equityIndexTitle}
+    Verify Element And Text  ${KU_W_equityIndexTitle}  ${e_invest_equityIndexTitleText}
+    Verify Element And Text  ${KU_W_equityIndexSubTitle}  ${e_invest_equityIndexSubText} 
+    Verify PreLogin Equity Index Landing Page
+    # Sector Funds
+    Wait For Element Visibility  ${KU_W_sectorFundsTitle}
+    Verify Element And Text  ${KU_W_sectorFundsTitle}   ${e_invest_sectorFundsTitleText}
+    Verify Element And Text  ${KU_W_sectorFundsSubTitle}  ${e_invest_sectorFundsSubTitleText} 
+    Verify PreLogin Sector Funds Landing Page
+    # Value Funds
+    Wait For Element Visibility  ${KU_W_valueFundsTitle} 
+    Verify Element And Text  ${KU_W_valueFundsTitle}  ${e_invest_valueFundsTitleText}
+    Verify Element And Text  ${KU_W_valueFundsSubTitle}  ${e_invest_valueFundsSubTitleText}
+    Verify PreLogin Value Funds Landing Page
+    # Crypto
+    Wait For Element Visibility  ${KU_W_cryptoTitle}
+    Verify Element And Text  ${KU_W_cryptoTitle}  ${e_invest_cryptoTitleText} 
+    Verify Element And Text  ${KU_W_cryptoSubTitle}  ${e_invest_cryptoSubTitleText}
+    Wait And Click  ${KU_W_cryptoTitle}
+    Log To Console  Crypto Tiles
+    Sleep  2s
+    Verify Page Contains Element  ${KU_W_crypto_tabName}
+    Verify Login And Signup On Prelogin
+    Go Back
+    # 52 W High India
+    Wait For Element Visibility  ${KU_W_52WHighIndiaTitle}  
+    Verify Element And Text  ${KU_W_52WHighIndiaTitle}  ${e_invest_52WHighIndiaTitleText} 
+    Verify Element And Text  ${KU_W_52WHighIndiaSubTitle}  ${e_invest_52WHighIndiaSubTitleText}
+    Verify PreLogin 52WkHigh India Landing Page
+    # 52 W High USA
+    Wait For Element Visibility  ${KU_W_52WHighUSTitle}
+    Verify Element And Text  ${KU_W_52WHighUSTitle}  ${e_invest_52WHighUSTitleText} 
+    Verify Element And Text  ${KU_W_52WHighUSSubTitle}  ${e_invest_52WHighUSSubTitleText}
+    Verify PreLogin 52WkHigh US Landing Page
+    # Explore More
+    Scroll Untill View  ${KU_W_exploreTitle}
+    Verify Element And Text  ${KU_W_exploreTitle}  ${e_invest_stock_exploreTxt}
     
 
 Navigate To Invest Page And Verify Explore Options
@@ -182,7 +177,13 @@ Verify Filter Navigation For Stocks And 52 WkHighIndia
     Verify Search And Sort  ${KU_W_stockAnd52WIndia_searchBar}  ${e_invest_stock_searchBarTxt}  ${KU_W_invest_stockAndindia_searchTextField}  ${KU_W_invest_sort_52WIndia}
     # WatchList
     Click Element  ${KU_W_invest_watchList}
-    Verify Element And Text  ${watchListHeader}  ${watchlistHeaderText} 
+    ${isLoginButtonVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_login}
+    IF  ${isLoginButtonVisible}  
+        Wait For Element Visibility  ${watchListHeader}
+        Verify Element And Text  ${watchListHeader}  ${watchlistHeaderText}
+    ELSE  
+        Verify Page Contains Element  ${watchListBtn}
+    END 
     # Gainers
     Click Element  ${KU_W_invest_stocks_gainers}
     Verify Element And Text  ${KU_W_invest_sortYear}  ${e_invest__stocks_sortYearText}
@@ -231,8 +232,13 @@ Verify Filter Navigation For USStocks USETF and 52WkHighUS
     Verify Search And Sort  ${KU_W_US_SETF52WUS_searchBar}  ${e_invest_stock_searchBarTxt}  ${KU_W_invest_US_SETFAnd52WUS_searchTextField}  ${KU_W_invest_sort_US_S_UTF_USA}
     # WatchList
     Click Element  ${KU_W_invest_watchList}
-    Wait For Element Visibility  ${watchListHeader}
-    Verify Element And Text  ${watchListHeader}  ${watchlistHeaderText} 
+    ${isLoginButtonVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_login}
+    IF  ${isLoginButtonVisible}  
+        Wait For Element Visibility  ${watchListHeader}
+        Verify Element And Text  ${watchListHeader}  ${watchlistHeaderText}
+    ELSE  
+        Verify Page Contains Element  ${watchListBtn}
+    END   
     # Gainers
     Click Element  ${KU_W_invest_stocks_gainers}
     Verify Element And Text  ${KU_W_invest_sortYear}  ${e_invest__stocks_sortYearText}
@@ -317,3 +323,35 @@ Verify Share PDF And Watchlist Option
     Verify Page Contains Element  ${watchlistIcon}
     Click Element  ${watchlistIcon}
     Verify Login Page
+
+Verify Pre And Post Login Action On Watchlist For Funds
+    [Arguments]  ${wlistBtn}
+    ${isLoginButtonVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_login}
+    IF  ${isLoginButtonVisible}  
+        Verify Watchlist Icon  ${wlistBtn}
+        Wait For Element Visibility  ${KU_W_invest_watchlistHeader}
+        # WatchList
+        Verify Element And Text  ${KU_W_invest_watchlistHeader}  ${e_invest_watchlistHeader}
+    ELSE  
+        Wait And Click  ${wlistBtn}
+        Verify Element And Text  ${KU_W_toastMssg}   ${e_invest_fundToastMssgText}
+    END 
+
+Verify Pre And Post Login Action On Watchlist For Stocks  
+    [Arguments]  ${watchlist}
+    ${isLoginButtonVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_login}
+    IF  ${isLoginButtonVisible}  
+        Verify Watchlist Icon  ${watchlist} 
+        Verify Login Page
+    ELSE  
+        Verify Watchlist Icon  ${watchlist}
+        Verify Page Contains Element  ${KU_W_toastMssg} 
+    END 
+
+Verify Go Back Action On Pre And Post Login
+    ${isLoginButtonVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_login}
+    IF  ${isLoginButtonVisible}  
+        Go Back
+    ELSE  
+        Log To Console  Continue
+    END

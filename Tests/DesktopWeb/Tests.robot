@@ -205,3 +205,11 @@ Invest Tiles Navigation Postlogin
     [Teardown]  Logout From App And Navigate To Home Page PostLogin
     Verify PostLogin Account Creation
     Verify PreLogin Invest Tiles
+
+# MF Navigation Postlogin 
+MF Navigation Postlogin
+    [Tags]  TC31  Stage3
+    [Teardown]  Logout From App And Navigate To Home Page PostLogin
+    Verify PostLogin Account Creation
+    Verify PAN Verifed KYC Details
+    Verify PostLogin MF Menu Navigation

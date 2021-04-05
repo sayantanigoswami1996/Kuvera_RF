@@ -4,6 +4,8 @@ ${e_invest_mf_sipAmountLabel} =  SIP amount
 ${e_invest_mf_sipAmount} =  6000
 ${e_invest_mf_lumpsumAmount} =  50000
 ${e_invest_mf_addFundPopupHeader} =  Search and add fund
+${e_invest_mf_bannerText} =  Import your MFs and switch to Direct. Start saving commissions.
+${e_invest_mf_importExternalFunds} =  Import external mutual funds
 # Application Locator 'KU_<locatorName>'
 # Mutual Fund Navigation Page
 # Mutual Fund
@@ -61,3 +63,25 @@ ${KU_W_invest_mf_fundObjectiveValue} =  xpath=//*[@class='b-mf-other-info__value
 ${KU_W_invest_mf_fundManager} =  xpath=//*[@class='b-mf-other-info__fund-manager']
 ${KU_W_invest_mf_fundOfferDocumentLink} =  xpath=//*[@class='b-mf-other-info__img--link']
 ${KU_W_invest_mf_AllFundsLink} =  xpath=(//*[@class='b-mf-other-info__img--link'])[2]
+# Postlogin - Order Summary
+${KU_W_invest_mf_dateOnOrderSIP} =  xpath=(//ul[@class='dropdown-menu']//li//a)[8]
+${KU_W_invest_mf_openDrpdownImg} =  xpath=//i[@class='open-indicator']
+${KU_W_invest_mf_newFolioLink} =  xpath=//a[normalize-space()='new']
+${KU_W_invest_mf_continueFolio} =  xpath=//button[@class='btn in-btn hidden-xs']
+${KU_W_invest_mf_accBox} =  xpath=//div[@class='tile-option-container']
+${KU_W_invest_mf_oneClickBox} =  xpath=//div[@id='create']//img
+${KU_W_invest_mf_setOneClickBtn} =  xpath=//div[text()='Set OneClick']
+${KU_W_invest_mf_continueToOrderBtn} =  xpath=//div[text()='Continue to order']
+${KU_W_invest_mf_placeOrdersBtn} =  xpath=//button[normalize-space()='Place Orders']
+${KU_W_invest_mf_continueBtn} =  xpath=//button[normalize-space()='Continue Payment']
+${KU_W_invest_mf_orderSummary} =  xpath=//h1[normalize-space()='Order Summary']
+# Postlogin - MF Listing Page
+${KU_W_invest_mf_bannerText} =  xpath=//span[@class='b-banner-text']
+${KU_W_invest_mf_importNow} =  xpath=//span[text()='Import now >']
+${KU_W_invest_mf_importExternalFunds} =  xpath=//div[@class='b-import-portfolio__get-start__label']
+${KU_W_invest_mf_categoryBox} =  xpath=(//div[@class='b-filter-fund__box'])[1]
+${KU_W_invest_mf_subcategoryBox} =  xpath=(//div[@class='b-filter-fund__box'])[2]
+${KU_W_invest_mf_categoryName} =  xpath=(//div[@class='b-mutual-funds-explore__fund-row-industry'])[1]
+${KU_W_invest_mf_subcategoryName} =  xpath=(//div[@class='b-mutual-funds-explore__fund-row-content-industry-wrapper']//div)[6]
+${KU_W_invest_mf_SIPDeleteIcon} =  xpath=//div[@class='row sip']//img
+${KU_W_invest_mf_lumpsumDeleteIcon} =  xpath=//div[@class='row lumpsum']//img

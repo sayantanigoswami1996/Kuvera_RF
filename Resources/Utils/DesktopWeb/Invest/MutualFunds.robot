@@ -4,7 +4,7 @@ Verify PreLogin Mutual Fund Landing Page
     Log To Console  Mutual Fund
     Navigate To Invest Page And Verify Explore Options  ${KU_W_mutualFund}  ${e_invest_mf_titleText} 
     Sleep  1s
-    Verify Login And Signup Link
+    Verify Login And Signup On Prelogin
     Wait For Element Visibility  ${KU_W_invest_mf_fundName}
     Verify Page Contains Element  ${KU_W_invest_mf_growthDividendButton}
     # Iterate the Mutual Fund detail screen
@@ -15,7 +15,8 @@ Verify PreLogin Mutual Fund Landing Page
         Run Keyword If    ${mutualFundName} == ['Tata Digital India Dividend Reinvest Direct Plan']  Click Element  ${KU_W_invest_mf_growthDividendButton}
         Verify Mutual Fund Details Page  ${KU_W_invest_mf_fundName}
     END
-    Go Back 
+    Go Back
+    
 Search Fund and Verify 
     # Verify Search functionality
     [Arguments]  ${fundName}
@@ -23,15 +24,16 @@ Search Fund and Verify
     Click Element  ${KU_W_searchBarForFunds}
     Input Text  ${KU_W_invest_mf_searchBar}  ${fundName}  clear=true
     Press Enter Key  ${KU_W_invest_mf_searchBar}
+
 Verify Mutual Fund Details Page
     [Arguments]  ${fund}
     Wait For Element Visibility  ${fund}
     Click Element  ${fund}
-    Verify Login And Signup Link
+    Verify Login And Signup On Prelogin
     Wait For Element Visibility  ${KU_W_invest_mf_watchlistButton}
     Verify Page Contains Element  ${KU_W_invest_mf_watchlistButton}
-    Verify Watchlist Icon  ${KU_W_invest_mf_watchlistButton}
-    Go Back
+    Verify Pre And Post Login Action On Watchlist For Funds  ${KU_W_invest_mf_watchlistButton}
+    Verify Go Back Action On Pre And Post Login
     # Title Section
     Wait For Element Visibility  ${KU_W_invest_mf_title}
     Verify Page Contains Element  ${KU_W_invest_mf_title}
@@ -46,7 +48,7 @@ Verify Mutual Fund Details Page
     Verify Page Contains Element  ${KU_W_invest_mf_riskValue} 
     Wait And Click  ${KU_W_invest_mf_aumInfoIcon}
     Wait And Click  ${KU_W_invest_mf_terInfoIcon}
-    # Wait And Click  ${KU_W_invest_mf_riskInfoIcon}
+    Wait And Click  ${KU_W_invest_mf_riskInfoIcon}
     Wait And Click  ${KU_W_invest_mf_navValueInfoIcon}
     # MF Invest Now widget
     Wait For Element Visibility  ${KU_W_invest_mf_widgetHeader}
@@ -57,12 +59,30 @@ Verify Mutual Fund Details Page
     Wait For Element Visibility  ${KU_W_invest_mf_sipAmountTxt}
     Input Text  ${KU_W_invest_mf_sipAmountTxt}  ${e_invest_mf_sipAmount}
     Wait Scroll And Click Element  ${KU_W_invest_mf_investNowButton}
-    Verify Login Page
+    ${isLoginButtonVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_login}
+    IF  ${isLoginButtonVisible}
+        Verify Login Page
+    ELSE
+        Verify Page Contains Element  ${KU_W_invest_mf_orderSummary}
+        Wait And Click  ${KU_W_invest_mf_SIPDeleteIcon}
+        Wait And Click  ${KU_W_postlogin_yesDeleteBtn}
+        Go Back
+    END 
     Verify Element And Text  ${KU_W_invest_mf_lumpsumAmountLabel}  ${e_invest_mf_lumpsumAmountLabel}
     Wait For Element Visibility  ${KU_W_invest_mf_lumpsumAmountTxt}
     Input Text  ${KU_W_invest_mf_lumpsumAmountTxt}  ${e_invest_mf_lumpsumAmount}
-    Wait Scroll And Click Element  ${KU_W_invest_mf_addToCartButton}
-    Verify Login Page
+    ${isLoginButtonVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_login}
+    IF  ${isLoginButtonVisible}
+        Wait Scroll And Click Element  ${KU_W_invest_mf_addToCartButton}
+        Verify Login Page
+    ELSE
+        Wait Scroll And Click Element  ${KU_W_invest_mf_addToCartButton}
+        Verify Page Contains Element  ${KU_W_toastMssg}
+        Wait And Click  ${KU_W_postlogin_cartBtn}
+        Wait And Click  ${KU_W_invest_mf_lumpsumDeleteIcon} 
+        Wait And Click  ${KU_W_postlogin_yesDeleteBtn}
+        Go Back
+    END 
     # Graph Section
     Wait For Element Visibility  ${KU_W_invest_mf_performaceCart}
     Verify Page Contains Element  ${KU_W_invest_mf_performaceCart}

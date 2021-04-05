@@ -52,7 +52,7 @@ Add Signature
     Click Element At Coordinates  ${KU_W_KYC_canvasSpace}  250  140
 
 Visibility Of The Popup
-    Wait Until Element Is Visible  ${KU_W_postlogin_OkBtn}   timeout=120 
+    Wait Until Element Is Visible  ${KU_W_postlogin_OkBtn}   timeout=10 
     Element Should Be Visible  ${KU_W_postlogin_OkBtn} 
 
 Enter PAN Details

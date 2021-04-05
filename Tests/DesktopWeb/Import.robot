@@ -64,3 +64,4 @@ Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Dashboard/DashboardL
 Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/InviteFriends.robot
 Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/ManageFolio.robot
 Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Reports.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/InvestExplore/MF.robot

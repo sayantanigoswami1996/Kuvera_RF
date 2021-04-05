@@ -220,3 +220,4 @@ ${KU_W_tc_twitterBtn} =  xpath=//div[@class='b-app-standard-social-options-conta
 ${KU_W_tc_whatsappBtn} =  xpath=//div[@class='b-app-standard-social-options-container']//a[3]
 ${KU_W_tc_telegramBtn} =  xpath=//div[@class='b-app-standard-social-options-container']//a[4]
 ${KU_W_tc_mailBtn} =  xpath=//div[@class='b-app-standard-social-options-container']//a[5]
+${KU_W_toastMssg} =  xpath=//div[@class='b-app-standard-snackbar__box-text']

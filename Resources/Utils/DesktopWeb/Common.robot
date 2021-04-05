@@ -77,6 +77,10 @@ Verify Page Contains Image
     [Arguments]  ${image}
     Run Keyword And Continue On Failure  Page Should Contain Image  ${image}
 
+Verify Page Contains Text
+    [Arguments]  ${text}
+    Run Keyword And Continue On Failure  Page Should Contain  ${text}
+
 Scroll Untill View
     [Arguments]  ${element}
     Scroll Element Into View  ${element}
@@ -295,6 +299,14 @@ Verify Registration Page Postlogin
     Verify Page Contains Element  ${KU_W_postlogin_pageTitle} 
     Verify Element And Text  ${KU_W_postlogin_completeKYCMsg}  ${KYCMsg}
     Verify Page Contains Element  ${registrationBtn_link}
+
+Verify Login And Signup On Prelogin
+    ${isLoginButtonVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_login}
+    IF  ${isLoginButtonVisible}  
+        Verify Login And Signup Link
+    ELSE  
+        Log To Console  Continue
+    END
     
 Close Web Application
     Close All Browser
