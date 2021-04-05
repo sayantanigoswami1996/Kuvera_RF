@@ -52,7 +52,7 @@ Verify Mutual Fund Details Page On Android
     END 
     Verify WatchList Button Of Invest
     Verify Period Wise Graphs  ${KU_A_invest_1MBtn}  ${KU_A_invest_6MBtn}  ${KU_A_invest_1YBtn}  ${KU_A_invest_3YBtn}  ${KU_A_invest_5YBtn}
-    Verify AUM And TER info
+    Verify AUM TER And Risk Info
     Verify Invest Now Button  ${fName}
     # Compare to Other section has also fund name in different format for different funds - it has been skipped now
     # Verify Compare With Other Section  ${e_invest_MF_compareWithOtherLabel}  ${mfName}
@@ -71,12 +71,15 @@ Verify WatchList Button Of Invest
     Verify Page Contains Element On Android  ${KU_A_invest_funds_watchlistTitle}
     Go Back
     
-Verify AUM And TER info
+Verify AUM TER And Risk Info
     Verify Text On Page  ${e_invest_MF_AUM}
-    Wait And Click Element On Android  ${KU_A_invest_infoImg}
+    Wait And Click Element On Android  ${KU_A_invest_aumInfoImg}
     Go Back
     Verify Text On Page  ${e_invest_MF_TER}
-    Wait And Click Element On Android  ${KU_A_invest_infoImg}
+    Wait And Click Element On Android  ${KU_A_invest_terInfoImg}
+    Go Back
+    Verify Text On Page  ${e_invest_MF_risk}
+    Wait And Click Element On Android  ${KU_A_invest_riskInfoImg}
     Go Back
 
 Verify Invest Now Button
