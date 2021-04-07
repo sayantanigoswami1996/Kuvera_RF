@@ -1,8 +1,7 @@
 *** Keywords ***
 
 Verify PostLogin MF Menu Navigation
-    Log To Console  Mutual Fund
-    Verify PreLogin Mutual Fund Landing Page
+    Verify PreLogin Mutual Fund Landing Page 
     Wait And Click  ${KU_W_mutualFund}
     Verify Import Now Banner 
     Verify Filter Selection For MF
@@ -25,21 +24,13 @@ Verify Buying Of SIP
     Wait And Click  ${KU_W_invest_mf_continueToOrderBtn}
     Wait And Click  ${KU_W_invest_mf_placeOrdersBtn}
     Wait And Click  ${KU_W_invest_mf_continueBtn}
-    Verify Payment 
+    Verify Payment Postlogin 
 
 Search For MF 
     @{mutualFundName} =  Get Json Values  $.MutualFunds.f2  Resources/TestData/MutualFunds.json 
     Log To Console  ${mutualFundName}
     Search Fund and Verify  ${mutualFundName} 
     Wait And Click  ${KU_W_invest_mf_fundName}
-
-Verify Payment 
-    Wait And Click  ${KU_W_postlogin_netBankingOption}
-    Wait And Click  ${KU_W_postlogin_proceedToPay}
-    Wait And Click  ${KU_W_postlogin_chooseBank}
-    Wait And Click  ${KU_W_postlogin_payNow}
-    Wait And Click  ${KU_W_postlogin_goBackBtn}
-    Go Back
 
 Verify Add To Cart And Buy Lumpsum
     Wait For Element Visibility  ${KU_W_invest_mf_lumpsumAmountTxt}
@@ -51,12 +42,13 @@ Verify Add To Cart And Buy Lumpsum
     Wait And Click  ${KU_W_invest_mf_continueFolio}
     Wait And Click  ${KU_W_postlogin_placeOrder}
     Wait And Click  ${KU_W_invest_mf_continueBtn}
-    Verify Payment 
+    Verify Payment Postlogin
 
 Verify Filter Selection For MF
     Wait And Click  ${KU_W_invest_mf_categoryBox}
     ${categoryCount} =  Get Element Count  xpath=//div[@class='b-fund-category-filter__option']   
     # Iterate and verify all fund house details 
+    # Nested for loop is used as based on category subacategory is choosen and then validated
     FOR  ${i}  IN RANGE  2   ${categoryCount}+1
         ${categoryName} =  Get Text  xpath=(//div[@class='b-fund-category-filter__option'])[${i}]
         Wait Scroll And Click Element  xpath=(//div[@class='b-fund-category-filter__option'])[${i}]

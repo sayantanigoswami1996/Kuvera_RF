@@ -123,3 +123,5 @@ ${KU_W_invest_USStocks_addBtn} =  xpath=//div[@class='b-us-stock-compare-m__add-
 ${KU_W_invest_USStocks_addStocksPopupHeader} =  xpath=//div[@class='b-us-stock-add-stock-m__heading']
 ${KU_W_invest_USStocks_closePopup} =  xpath=//div[@class='b-us-stock-add-stock-m__close-container']
 ${KU_W_invest_USStocks_sharePopup} =  xpath=//div[@class='b-us-stock-info__share-popup-text']
+# Postlogin
+${KU_W_invest_USStocks_investUSStocks} =  xpath=//div[contains(text(),'Invest in US stocks')]

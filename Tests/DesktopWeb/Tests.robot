@@ -213,3 +213,27 @@ MF Navigation Postlogin
     Verify PostLogin Account Creation
     Verify PAN Verifed KYC Details
     Verify PostLogin MF Menu Navigation
+
+# SaveSmart Navigation Postlogin 
+SaveSmart Navigation Postlogin
+    [Tags]  TC32  Stage3
+    [Teardown]  Logout From App And Navigate To Home Page PostLogin
+    Verify PostLogin Account Creation
+    Verify PAN Verifed KYC Details
+    Verify PostLogin SaveSmart Menu Navigation
+
+# Crypto Navigation Postlogin 
+Crypto Navigation Postlogin
+    [Tags]  TC33  Stage3
+    [Teardown]  Logout From App And Navigate To Home Page PostLogin
+    Verify PostLogin Account Creation
+    Verify PAN Verifed KYC Details
+    Verify PostLogin Crypto Menu Navigation
+
+# Digital Gold Navigation Postlogin 
+Digital Gold Navigation Postlogin
+    [Tags]  TC34  Stage3
+    [Teardown]  Logout From App And Navigate To Home Page PostLogin
+    Verify PostLogin Account Creation
+    Verify PAN Verifed KYC Details
+    Verify PostLogin Digi Gold Menu Navigation

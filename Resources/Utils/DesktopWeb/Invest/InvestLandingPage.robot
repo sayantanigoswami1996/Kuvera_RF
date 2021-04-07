@@ -105,6 +105,7 @@ Navigate To Invest Page And Verify Explore Options
     Click Element  ${KU_W_investLink}
     Scroll Page To Location  0  2000
     Verify Element And Text  ${option}  ${optionText}
+    Sleep  2s
     Wait Scroll And Click Element  ${option}
     
 Verify Watchlist Icon 
@@ -355,3 +356,11 @@ Verify Go Back Action On Pre And Post Login
     ELSE  
         Log To Console  Continue
     END
+
+Verify Payment Postlogin
+    Wait And Click  ${KU_W_postlogin_netBankingOption}
+    Wait And Click  ${KU_W_postlogin_proceedToPay}
+    Wait And Click  ${KU_W_postlogin_chooseBank}
+    Wait And Click  ${KU_W_postlogin_payNow}
+    Wait And Click  ${KU_W_postlogin_goBackBtn}
+    Go Back

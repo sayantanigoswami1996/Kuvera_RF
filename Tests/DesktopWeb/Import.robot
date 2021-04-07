@@ -64,4 +64,9 @@ Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Dashboard/DashboardL
 Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/InviteFriends.robot
 Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/ManageFolio.robot
 Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Reports.robot
-Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/InvestExplore/MF.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/InvestExplore/Po_MF.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/InvestExplore/Po_Stocks.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/InvestExplore/Po_USStocks.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/InvestExplore/Po_SaveSmart.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/InvestExplore/Po_Crypto.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/InvestExplore/Po_DigiGold.robot

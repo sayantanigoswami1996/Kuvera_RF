@@ -93,6 +93,10 @@ Verify Page Contains Button
     [Arguments]  ${button}
     Run Keyword And Continue On Failure  Page Should Contain Button  ${button}
 
+Verify Disabled Element
+    [Arguments]  ${element}
+    Run Keyword And Continue On Failure  Element Should Be Disabled  ${element}
+
 Compare Lists
     [Arguments]  ${actualList}   ${expectedList}
     # Get list item from actual list

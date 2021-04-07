@@ -5,9 +5,11 @@ ${e_crypto_year} =  1Y
 ${e_crypto_perInYearVal} =  %
 ${e_crypto_volume} =  Volume
 ${e_crypto_subText} =  I am interested in crypto beta 
+${e_crypto_subTextResponse} =  we have recorded your response
 ${e_crypto_todaysHighLabel} =  Today’s high
 ${e_crypto_todaysLowLabel} =  Today’s low 
 ${e_crypto_help} =  Help
+${e_crypto_interestMsg} =  We have successfully recorded your interest in crypto.
 
 # Application Locator 'KU_<locatorName>'
 # Crypto Landing Navigation Page
@@ -21,7 +23,7 @@ ${KU_W_crypto_priceLabel} =  xpath=(//div[contains(text(),'Price')])[1]
 ${KU_W_crypto_priceVal} =  xpath=(//div[@class='b-crypto-explore__content-info-value'])[1]
 ${KU_W_crypto_yearLabel} =  xpath=(//div[@class='b-crypto-explore__content-info-key'])[2]
 ${KU_W_crypto_VolumeLabel} =  xpath=(//div[@class='b-crypto-explore__content-info-key'])[3]
-${KU_W_crypto_yearVal} =  xpath=(//span[contains(@class,'b-crypto-explore__content-info-value b-crypto-explore__content-1D')])[1]
+${KU_W_crypto_yearVal} =  xpath=(//span[contains(@class,'b-crypto-explore__content-info-value')])[2]
 ${KU_W_crypto_perInYearVal} =  xpath=(//span[contains(.,'%')])[1]
 ${KU_W_crypto_NAInYearVal} =  xpath=(//span[contains(.,'NA')])[1]
 ${KU_W_crypto_coinNameOnDetails} =  xpath=//div[@class='b-crypto-detailed-wrapper-fund-name']
@@ -40,3 +42,4 @@ ${KU_W_crypto_mailIcon} =  xpath=//div[@class='full-height']//a[5]//img[1]
 ${KU_W_crypto_copyIcon} =  xpath=//div[@class='b-app-standard-social-options-button']//img
 ${KU_W_crypto_copyMsg} =  xpath=//div[text()='Copied link to clipboard']
 ${KU_W_crypto_sharingIcon} =  xpath=//div[@class='b-crypto-basic-info__share-icon--desktop']
+${KU_W_crypto_disabledKeepMePostedBtn} =  xpath=//button[@class='button-primary button-primary-disabled']
