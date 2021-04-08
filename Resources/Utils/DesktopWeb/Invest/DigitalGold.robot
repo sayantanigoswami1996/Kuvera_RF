@@ -143,7 +143,13 @@ Verify Digital Gold Is Better Than MF Section
     Verify Element And Text  ${KU_W_dg_addGoldBtn}  ${e_invest_addGoldBtnText} 
     Wait For Element Visibility  ${KU_W_dg_addGoldBtn}
     Click Button  ${KU_W_dg_addGoldBtn}
-    Verify Login Page  
+    ${isLoginButtonVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_login}
+    IF  ${isLoginButtonVisible}
+        Verify Login Page
+    ELSE
+        Verify Page Contains Element  ${KU_W_dg_gm_tolasBox}
+        Go Back
+    END  
     #  Questions? We are happy to help
     Scroll Untill View  ${KU_W_dg_faqHeading}
     Verify Element And Text  ${KU_W_dg_faqHeading}  ${e_invest_faqTitleText} 

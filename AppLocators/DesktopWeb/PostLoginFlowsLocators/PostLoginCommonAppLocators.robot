@@ -4,6 +4,8 @@ ${e_postlogin_googlePlayStore} =  Kuvera Personal Finance App - Apps on Google P
 ${e_postlogin_appStoreScreen} =  App Store Preview
 ${e_postlogin_portfolioTitle} =  Portfolio 
 ${e_postlogin_noActiveSIPTitle} =  You have no Active SIP. It’s easy to start an SIP
+${e_postlogin_emailID} =  moolya@kuvera.in 
+${e_postlogin_pwd} =  kuveratesting123
 # Application Locator 'KU_<locatorName>'
 # Kuvera :: Wealth Management Simplified
 ${KU_W_postlogin_kuverLogo} =  xpath=//a[@class='navbar-brand']
@@ -46,3 +48,6 @@ ${KU_W_postlogin_goBackBtn} =  xpath=//button[normalize-space()='Go Back']
 ${KU_W_postlogin_paymentPageTitle} =  xpath=//span[normalize-space()='Select Payment Mode']
 ${KU_W_postlogin_confirmBtn} =  xpath=//button[normalize-space()='Confirm']
 ${KU_W_postlogin_razorPayFrame} =  xpath=//iframe[@class='razorpay-checkout-frame']
+${KU_W_postlogin_noContinueBtn} =  xpath=//button[normalize-space()='No, Continue']
+${KU_W_postlogin_yesQuitBtn} =  xpath=//div[contains(text(),'Yes, Quit')]
+${KU_W_postlogin_continue} =  xpath=//button[normalize-space()='Continue']

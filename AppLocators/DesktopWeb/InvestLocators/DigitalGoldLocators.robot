@@ -49,10 +49,15 @@ ${e_invest_enterGramValue} =  0.0002
 ${e_invest_enterAmountValue} =  100
 ${e_invest_buyGoldMsg} =  To get started, buy gold.
 ${e_invest_sellWeight} =  0 gm
-${e_invest_SIPValue} =  1
+${e_invest_SIP_BuyValue} =  1
 ${e_invest_selectBankAcc} =  Select Bank Account
 ${e_invest_selectBankDesc} =  Selected bank account will be used for managing recurring SIP payments.
 ${e_invest_bankAccSubDesc} =  This Bank a/c will be used for managing recurring SIP payments.
+${e_invest_IFSC} =  HDFC0000022
+${e_invest_trackToastMsg} =  Your entry for gold (bought externally) has been updated.
+${e_invest_deleteTrackMsg} =  Your entry for gold (bought externally) has been deleted.
+${e_invest_sellAmtVal} =  5000
+${e_invest_sellAmtVal1} =  500
 
 # Application Locator 'KU_<locatorName>'
 # Digital Gold Navigation Page
@@ -163,3 +168,31 @@ ${KU_W_dg_authenticateLink} =  xpath=//span[contains(text(),'Authenticate')]
 ${KU_W_dg_chooseBankAccArrow} =  xpath=//i[@class='select-arrow']
 ${KU_W_dg_savingsAcc} =  xpath=//select[@name='bank_account[account_type]']//option[2]
 ${KU_W_dg_congratsSubText} =  xpath=//div[@class='b-sell-gold-congrats__subtext']
+${KU_W_dg_IFSC} =  xpath=//input[@name='IFSC Code']
+${KU_W_dg_accNumField} =  xpath=//input[@name='Account Number']
+${KU_W_dg_confirmAccNumField} =  xpath=//input[@name='Confirm Account Number']
+${KU_W_dg_savingsField} =  xpath=//span[normalize-space()='Savings']
+${KU_W_dg_chooseHDFCAcc} =  xpath=(//span[@class='checkmark b-bank-list__content__banks-item__checkmark'])[2]
+${KU_W_dg_disabledAddAcc} =  xpath=//div[@class='b-bank-list__content__action b-bank-list__content__action--disabled has-tooltip']
+${KU_W_dg_closeRazorPay} =  xpath=//div[@id='modal-close']
+${KU_W_dg_quitTitle} =  xpath=//div[contains(text(),'Are you sure you want to Quit?')]
+${KU_W_dg_QuitDesc} =  xpath=//div[contains(text(),'Your Gold SIP setup progress will be lost.')]
+${KU_W_dg_addTrackTitle} =  xpath=//div[contains(text(),'Add & track gold purchased outside Kuvera')]
+${KU_W_dg_quantityAddedLabel} =  xpath=//div[contains(text(),'Quantity Added')]
+${KU_W_dg_gm_tolasBox} =  xpath=//div[@class='b-app-standard-box-toggle b-log-gold__weight-owned-unit']
+${KU_W_dg_slider} =  xpath=//div[@class='b-app-standard-slider__bar b-app-standard-slider__right-bar']
+${KU_W_dg_updateToTrack} =  xpath=//button[normalize-space()='Update to track']
+${KU_W_dg_externalGoldTitle} =  xpath=//span[contains(.,'Gold (Bought externally)')]
+${KU_W_dg_sell_enterAmt_Gms} =  xpath=(//div[@class='b-sell-gold__text-field-container']//input)[1]
+${KU_W_dg_sell_sellNowBtn} =  xpath=//button[normalize-space()='Sell Now']
+${KU_W_dg_sell_minAmtLabel} =  xpath=//div[contains(text(),'Min. amount ₹10')]
+${KU_W_dg_sell_sellAll} =  xpath=//span[normalize-space()='Sell all']
+${KU_W_dg_sell_enterGm} =  xpath=//div[@class='b-sell-gold__text-field-container']
+${KU_W_dg_sell_enterAmt} =  xpath=//div[@class='b-sell-gold__radios__label b-sell-gold__radios__label--selected']
+${KU_W_dg_sell_orderSubText} =  xpath=//div[contains(text(),'Confirm your order details & bank account.')]
+${KU_W_dg_sell_sellOrderDets} =  xpath=//div[normalize-space()='Sell Order Details']
+${KU_W_dg_sell_quantityOfGold} =  xpath=//span[contains(text(),'Quantity of gold to sell')]
+${KU_W_dg_sell_goldReceivable} =  xpath=//span[contains(.,'Amount receivable')]
+${KU_W_dg_sell_modifyLink} =  xpath=(//div[contains(text(),'Modify')])[1]
+${KU_W_dg_sell_close} =  xpath=//img[@class='b-sell-gold__close']
+${KU_W_dg_track_deleteBtn} =  xpath=//div[@class='b-log-gold-delete'][normalize-space()='Delete']

@@ -298,6 +298,15 @@ Logout From App Post Signup
     Sleep  4s
     Go Back
 
+Login 
+    [Arguments]  ${email}  ${pwd}
+    Log To Console  Login 
+    Wait And Click  ${KU_W_emailTxt}  
+    Input Text  ${KU_W_emailTxt}  ${email}
+    Wait And Click  ${KU_W_passwordTxt}
+    Input Text  ${KU_W_passwordTxt}  ${pwd}
+    Wait And Click  ${KU_W_ca_loginBtn}
+
 Verify Registration Page Postlogin 
     [Arguments]  ${KYCMsg}  ${registrationBtn_link}
     Verify Page Contains Element  ${KU_W_postlogin_pageTitle} 

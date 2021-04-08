@@ -3,16 +3,8 @@
 Login And Verify Policy Details
     Go To  ${URL_stage3}
     Logout From App Post Signup
-    Login 
+    Login  ${emailID}  ${e_ca_pwd}
     Verify Policy Details
-
-Login 
-    Log To Console  Login 
-    Wait And Click  ${KU_W_emailTxt}  
-    Input Text      ${KU_W_emailTxt}  ${emailID}
-    Wait And Click  ${KU_W_passwordTxt}
-    Input Text      ${KU_W_passwordTxt}  ${e_ca_pwd}
-    Wait And Click  ${KU_W_ca_loginBtn}
 
 Verify Policy Details
     Log To Console  Policy Details
