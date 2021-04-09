@@ -392,7 +392,7 @@ Verify Cover Plan Summary Details
     Verify Element And Text  ${KU_W_HI_sectionSubTitle2}  ${e_CoverageDets_coveringSubTitle}
     Click Image  ${KU_W_CoverageDets_coveringDropDown}
     Verify Element And Text  ${KU_W_CoverageDets_dropdownDetail1}  ${e_CoverageDets_applicantDetails}
-    Verify Element And Text  ${KU_W_CoverageDets_dropdownDetail2}  ${e_CoverageDets_familyMemberDetails} 
+    Verify Page Contains Element  ${KU_W_CoverageDets_dropdownDetail2}
     Click Image  ${KU_W_CoverageDets_coveringDropDown}
     # Nominee
     Verify Element And Text  ${KU_W_CoverageDets_nomineesTitle}  ${e_CoverageDets_nomineesTitle}
