@@ -46,7 +46,7 @@ ${e_invest_track_loginTitleText} =  Log in to add gold.
 ${e_invest_faqbotQA1} =  How do I buy Gold on Kuvera?
 # Postlogin
 ${e_invest_enterGramValue} =  0.0002
-${e_invest_enterAmountValue} =  100
+${e_invest_enterAmountValue} =  5000
 ${e_invest_buyGoldMsg} =  To get started, buy gold.
 ${e_invest_sellWeight} =  0 gm
 ${e_invest_SIP_BuyValue} =  1

@@ -1,7 +1,7 @@
 *** Keywords ***
 
-Verify PostLogin Reports Menu Navigation
-    Log To Console  Reports
+Verify PostLogin Reports Menu Navigation Without KYC 
+    Log To Console  Reports Navigation Without KYC
     Wait And Click  ${KU_W_postlogin_reportsTab}
     # ELSS before KYC
     Wait And Click  ${KU_W_reports_ELSSReportTab}
@@ -13,8 +13,14 @@ Verify PostLogin Reports Menu Navigation
     Wait And Click  ${KU_W_reports_transactionsTab}
     Wait For Element Visibility  ${KU_W_reports_noRecord}
     Verify Element And Text  ${KU_W_reports_noRecord}  ${e_report_noRecordFound}
-    Wait And Click  ${KU_W_reports_ELSSReportTab}
+    
+
+Verify PostLogin Reports Menu Navigation With KYC 
+    Log To Console  Reports Navigation With KYC
+    Wait And Click  ${KU_W_postlogin_reportsTab}
     # Fill In KYC
+    Sleep  2s
+    Wait And Click  ${KU_W_reports_ELSSReportTab}
     Wait And Click  ${KU_W_reports_registrationBtn}
     KYC Form Details Page
     Confirm Account Details Page

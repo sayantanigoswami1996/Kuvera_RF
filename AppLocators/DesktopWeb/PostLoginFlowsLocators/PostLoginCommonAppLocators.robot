@@ -51,3 +51,9 @@ ${KU_W_postlogin_razorPayFrame} =  xpath=//iframe[@class='razorpay-checkout-fram
 ${KU_W_postlogin_noContinueBtn} =  xpath=//button[normalize-space()='No, Continue']
 ${KU_W_postlogin_yesQuitBtn} =  xpath=//div[contains(text(),'Yes, Quit')]
 ${KU_W_postlogin_continue} =  xpath=//button[normalize-space()='Continue']
+${KU_W_postlogin_submitBtn} =  xpath=//button[normalize-space()='Submit']
+# Portfolio Page
+${KU_W_portfolio_doYouWantTo} =  xpath=//div[contains(text(),'Do you want to')]
+${KU_W_portfolio_importFolioTitle} =  xpath=//p[normalize-space()='Import Portfolio']
+${KU_W_portfolio_getStartedBtn} =  xpath=//button[normalize-space()='Get Started']
+

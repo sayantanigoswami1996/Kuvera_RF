@@ -42,6 +42,7 @@ Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/DashboardLoca
 Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/InviteFriendsLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/ReportLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/ManageFolioLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/Portfolio/Portfolio_MFLocators.robot
 
 *** Keywords ***
 

@@ -185,30 +185,44 @@ Invite Friends Menu Navigation
     Verify PostLogin Account Creation
     Verify PostLogin Invite Friends Menu Navigation
 
-# Manage Folio Menu Navigation
-Manage Folio Menu Navigation
+# Manage Folio Menu Navigation Without KYC
+Manage Folio Menu Navigation Without KYC
     [Tags]  TC28  Stage3
     [Teardown]  Logout From App And Navigate To Home Page PostLogin
     Verify PostLogin Account Creation
-    Verify PostLogin Manage Folio Menu Navigation
+    Verify PostLogin Manage Folio Menu Navigation Without KYC
 
-# Reports Menu Navigation
-Reports Menu Navigation
+# Manage Folio Menu Navigation With KYC
+Manage Folio Menu Navigation With KYC
     [Tags]  TC29  Stage3
     [Teardown]  Logout From App And Navigate To Home Page PostLogin
     Verify PostLogin Account Creation
-    Verify PostLogin Reports Menu Navigation
+    Verify PostLogin Manage Folio Navigation With KYC
+
+# Reports Menu Navigation Without KYC
+Reports Menu Navigation Without KYC
+    [Tags]  TC30  Stage3
+    [Teardown]  Logout From App And Navigate To Home Page PostLogin
+    Verify PostLogin Account Creation
+    Verify PostLogin Reports Menu Navigation Without KYC 
+
+# Reports Menu Navigation With KYC
+Reports Menu Navigation With KYC
+    [Tags]  TC31  Stage3
+    [Teardown]  Logout From App And Navigate To Home Page PostLogin
+    Verify PostLogin Account Creation
+    Verify PostLogin Reports Menu Navigation With KYC 
 
 # Invest Tiles Navigation Postlogin 
 Invest Tiles Navigation Postlogin
-    [Tags]  TC30  Stage3
+    [Tags]  TC32  Stage3
     [Teardown]  Logout From App And Navigate To Home Page PostLogin
     Verify PostLogin Account Creation
     Verify PreLogin Invest Tiles
 
 # MF Navigation Postlogin 
 MF Navigation Postlogin
-    [Tags]  TC31  Stage3
+    [Tags]  TC33  Stage3
     [Teardown]  Logout From App And Navigate To Home Page PostLogin
     Verify PostLogin Account Creation
     Verify PAN Verifed KYC Details
@@ -216,7 +230,7 @@ MF Navigation Postlogin
 
 # SaveSmart Navigation Postlogin 
 SaveSmart Navigation Postlogin
-    [Tags]  TC32  Stage3
+    [Tags]  TC34  Stage3
     [Teardown]  Logout From App And Navigate To Home Page PostLogin
     Verify PostLogin Account Creation
     Verify PAN Verifed KYC Details
@@ -224,7 +238,7 @@ SaveSmart Navigation Postlogin
 
 # Crypto Navigation Postlogin 
 Crypto Navigation Postlogin
-    [Tags]  TC33  Stage3
+    [Tags]  TC35  Stage3
     [Teardown]  Logout From App And Navigate To Home Page PostLogin
     Verify PostLogin Account Creation
     Verify PAN Verifed KYC Details
@@ -232,8 +246,16 @@ Crypto Navigation Postlogin
 
 # Digital Gold Navigation Postlogin 
 Digital Gold Navigation Postlogin
-    [Tags]  TC34  Stage3
+    [Tags]  TC36  Stage3
     [Teardown]  Logout From App And Navigate To Home Page PostLogin
     Verify PostLogin Account Creation
     Verify PAN Verifed KYC Details
     Verify PostLogin Digi Gold Menu Navigation
+
+# MF Portfolio Navigation Postlogin 
+MF Portfolio Navigation Postlogin
+    [Tags]  TC37  Stage3
+    # [Teardown]  Logout From App And Navigate To Home Page PostLogin
+    Verify PostLogin Account Creation
+    Verify PAN Verifed KYC Details
+    Verify PostLogin MF Portfolio Menu Navigation With KYC
