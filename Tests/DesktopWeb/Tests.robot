@@ -6,9 +6,9 @@ Resource    ../../Tests/DesktopWeb/Import.robot
 Suite Setup  Launch URL
 Suite Teardown  Close All Browsers
 
-#To run tests on Prod : robot --variable BROWSER:headlesschrome --variable ENV:Prod -d Results -i Prod Tests/DesktopWeb/Tests.robot
-#To run tests on Stage 2 : robot --variable BROWSER:headlesschrome --variable ENV:Stage2 -d Results -i Stage2 Tests/DesktopWeb/Tests.robot
-#To run tests on Stage 3 :robot --variable BROWSER:headlesschrome --variable ENV:Stage3 -d Results -i Stage3 Tests/DesktopWeb/Tests.robot
+# To run tests on Prod : robot --variable BROWSER:headlesschrome --variable ENV:Prod -d Results -i Prod Tests/DesktopWeb/Tests.robot
+# To run tests on Stage 2 : robot --variable BROWSER:headlesschrome --variable ENV:Stage2 -d Results -i Stage2 Tests/DesktopWeb/Tests.robot
+# To run tests on Stage 3 :robot --variable BROWSER:headlesschrome --variable ENV:Stage3 -d Results -i Stage3 Tests/DesktopWeb/Tests.robot
 # To run specific test on Prod : robot --variable BROWSER:headlesschrome --variable ENV:Prod -d Results -i TC01 Tests/DesktopWeb/Tests.robot
 # To run specific test on Stage2 : robot --variable BROWSER:headlesschrome --variable ENV:Stage2 -d Results -i TC13 Tests/DesktopWeb/Tests.robot
 # To run specific test on Stage3 : robot --variable BROWSER:headlesschrome --variable ENV:Stage3 -d Results -i TC20 Tests/DesktopWeb/Tests.robot
@@ -252,10 +252,39 @@ Digital Gold Navigation Postlogin
     Verify PAN Verifed KYC Details
     Verify PostLogin Digi Gold Menu Navigation
 
-# MF Portfolio Navigation Postlogin 
-MF Portfolio Navigation Postlogin
+# MF Portfolio Navigation Postlogin Without KYC
+MF Portfolio Navigation Postlogin Without KYC
     [Tags]  TC37  Stage3
-    # [Teardown]  Logout From App And Navigate To Home Page PostLogin
+    [Teardown]  Logout From App And Navigate To Home Page PostLogin
+    Verify PostLogin Account Creation
+    Verify PostLogin MF Portfolio Menu Navigation Without KYC
+
+# MF Portfolio Navigation Postlogin With KYC
+MF Portfolio Navigation Postlogin With KYC
+    [Tags]  TC38  Stage3
+    [Teardown]  Logout From App And Navigate To Home Page PostLogin
     Verify PostLogin Account Creation
     Verify PAN Verifed KYC Details
-    Verify PostLogin MF Portfolio Menu Navigation With KYC
+    Verify PostLogin MF Portfolio Menu Navigation With KYC  
+
+# US Stocks Portfolio Navigation Postlogin Without KYC
+US Stocks Portfolio Navigation Postlogin Without KYC
+    [Tags]  TC39  Stage3
+    [Teardown]  Logout From App And Navigate To Home Page PostLogin
+    Verify PostLogin Account Creation
+    Verify PostLogin US Stocks Portflio Menu Navigation Without KYC
+
+# US Stocks Portfolio Navigation Postlogin With KYC
+US Stocks Portfolio Navigation Postlogin With KYC
+    [Tags]  TC40  Stage3
+    [Teardown]  Logout From App And Navigate To Home Page PostLogin
+    Verify PostLogin Account Creation
+    Verify PAN Verifed KYC Details
+    Verify PostLogin US Stocks Portflio Menu Navigation With KYC  
+
+# Stocks Portfolio Navigation Postlogin Without KYC
+Stocks Portfolio Navigation Postlogin Without KYC
+    [Tags]  TC41  Stage3
+    [Teardown]  Logout From App And Navigate To Home Page PostLogin
+    Verify PostLogin Account Creation
+    Verify PostLogin Stocks Portflio Menu Navigation Without KYC

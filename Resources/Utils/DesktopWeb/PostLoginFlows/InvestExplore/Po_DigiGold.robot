@@ -86,12 +86,12 @@ Verify Sell Gold 7 Days After Purchased
 
 
 Verify Buying SIP Postlogin
+    Wait And Click  ${KU_W_digitalGold}
     Enter SIP Value 
     Verify Select Bank Account Page
     Verify Order Summary Page
 
 Enter SIP Value 
-    Wait And Click  ${KU_W_digitalGold}
     Wait For Element Visibility  ${KU_W_dg_SIPTab}
     Click Element  ${KU_W_dg_SIPTab}
     Verify Page Contains Element  ${KU_W_dg_enterSIPAmt}
@@ -108,7 +108,7 @@ Verify Select Bank Account Page
     Verify Element And Text  ${KU_W_dg_subText}  ${e_invest_selectBankDesc}
     Wait And Click  ${KU_W_dg_bankAccForSIP}
     Add Bank Account
-    Wait Scroll And Click Element  ${KU_W_postlogin_continue}
+    Wait Scroll And Click Element  ${KU_W_dg_SIP_continueBtn}
     Wait And Click  ${KU_W_dg_chooseHDFCAcc} 
     Wait Scroll And Click Element  ${KU_W_postlogin_continue}
 
@@ -125,12 +125,12 @@ Verify Order Summary Page
     Verify Page Contains Element  ${KU_W_dg_selectedBank}
     Wait And Click  ${KU_W_dg_changeBankLink}
     Verify Element And Text  ${KU_W_dg_selectBankAcc}  ${e_invest_selectBankAcc}
-    Wait And Click  ${KU_W_dg_bankAccForSIP}
-    Wait And Click  ${KU_W_postlogin_continueBtn}
+    Wait And Click  ${KU_W_dg_SIP_bankAcc2}
+    Wait And Click  ${KU_W_postlogin_continue}
     Wait And Click  ${KU_W_postlogin_confirmBtn}
-    Wait And Click  ${KU_W_postlogin_continueBtn}
-    Switch To Frame  ${KU_W_postlogin_razorPayFrame}
-    Wait And Click  ${KU_W_dg_authenticateLink}
+    Wait And Click  ${KU_W_postlogin_continue}
+    Switch To Frame  ${KU_W_postlogin_razorPayFrame1}
+    Wait Scroll And Click Element  ${KU_W_dg_authenticateLink}
     Wait And Click  ${KU_W_dg_chooseBanAccArrow} 
     Wait And Click  ${KU_W_dg_savingsAcc}
     Wait And Click  ${KU_W_dg_authenticateLink}
@@ -143,41 +143,51 @@ Verify Order Summary Page
     Wait And Click  ${KU_W_SPM_razorPaySuccessBtn}
     Switch Window  browser=Kuvera
     Verify Page Contains Element  ${KU_W_dg_congratsSubText} 
-    Wait And Click  ${KU_W_postlogin_continueBtn}
+    Wait And Click  ${KU_W_postlogin_continue}
     Verify Element And Text  ${KU_W_postlogin_portfolio}  ${e_postlogin_portfolioTitle}
 
 Add Bank Account
+    Scroll Untill View  ${KU_W_dg_addBankAcc}
     Wait And Click  ${KU_W_dg_addBankAcc}
     Wait And Click  ${KU_W_dg_IFSC}
     Input Text  ${KU_W_dg_IFSC}  ${e_invest_IFSC}
     Wait And Click  ${KU_W_dg_accNumField}
-    Input Text  ${KU_W_dg_accNumField}  ${e_KYC_bankAccField}
+    ${randomNumber} =  Generate Random Number  1000   99999
+    ${completeAccNum} =  Catenate  ${e_invest_bankAccField}${randomNumber}
+    Input Text  ${KU_W_dg_accNumField}  ${completeAccNum}
     Wait And Click  ${KU_W_dg_confirmAccNumField}
-    Input Text  ${KU_W_dg_confirmAccNumField}  ${e_KYC_bankAccField}
+    Input Text  ${KU_W_dg_confirmAccNumField}  ${completeAccNum}
     Wait And Click  ${KU_W_dg_savingsField} 
     Wait And Click  ${KU_W_postlogin_checkBox}
 
 Verify Adding Five Bank Account And Quit Of Buying SIP
     Navigate To Invest Page And Verify Explore Options  ${KU_W_digitalGold}  ${e_invest_digGold}
     Enter SIP Value
+    Wait And Click  ${KU_W_dg_startSIPBtn}
     FOR  ${i}  IN RANGE  1  4
         Add Bank Account
+        Wait Scroll And Click Element  ${KU_W_dg_SIP_continueBtn}
+        Sleep  2s
     END
+    Scroll Untill View  ${KU_W_dg_disabledAddAcc}
     Verify Disabled Element  ${KU_W_dg_disabledAddAcc} 
     Wait And Click  ${KU_W_dg_chooseHDFCAcc} 
-    Wait Scroll And Click Element  ${KU_W_postlogin_continueBtn}
+    Scroll Untill View  ${KU_W_postlogin_continue}
+    Wait Scroll And Click Element  ${KU_W_postlogin_continue}
     Wait And Click  ${KU_W_postlogin_confirmBtn}
-    Wait And Click  ${KU_W_postlogin_continueBtn}
+    Wait And Click  ${KU_W_postlogin_continue}
     Switch To Frame  ${KU_W_postlogin_razorPayFrame}
     Wait And Click  ${KU_W_dg_closeRazorPay}
+    Unselect Frame
     Verify Page Contains Element  ${KU_W_dg_quitTitle}
     Verify Page Contains Element  ${KU_W_dg_QuitDesc}
     Wait And Click  ${KU_W_postlogin_noContinueBtn}
     Verify Page Contains Element  ${KU_W_dg_orderSummaryPage}
     Wait And Click  ${KU_W_postlogin_confirmBtn}
-    Wait And Click  ${KU_W_postlogin_continueBtn}
+    Wait And Click  ${KU_W_postlogin_continue}
     Switch To Frame  ${KU_W_postlogin_razorPayFrame}
     Wait And Click  ${KU_W_dg_closeRazorPay}
+    Unselect Frame
     Wait And Click  ${KU_W_postlogin_yesQuitBtn}
     Verify Element And Text  ${KU_W_postlogin_portfolio}  ${e_postlogin_portfolioTitle}
     Navigate To Invest Page And Verify Explore Options  ${KU_W_digitalGold}  ${e_invest_digGold}

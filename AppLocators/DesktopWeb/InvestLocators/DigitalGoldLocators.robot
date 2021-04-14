@@ -58,6 +58,7 @@ ${e_invest_trackToastMsg} =  Your entry for gold (bought externally) has been up
 ${e_invest_deleteTrackMsg} =  Your entry for gold (bought externally) has been deleted.
 ${e_invest_sellAmtVal} =  5000
 ${e_invest_sellAmtVal1} =  500
+${e_invest_bankAccField} =  123456789
 
 # Application Locator 'KU_<locatorName>'
 # Digital Gold Navigation Page
@@ -196,3 +197,6 @@ ${KU_W_dg_sell_goldReceivable} =  xpath=//span[contains(.,'Amount receivable')]
 ${KU_W_dg_sell_modifyLink} =  xpath=(//div[contains(text(),'Modify')])[1]
 ${KU_W_dg_sell_close} =  xpath=//img[@class='b-sell-gold__close']
 ${KU_W_dg_track_deleteBtn} =  xpath=//div[@class='b-log-gold-delete'][normalize-space()='Delete']
+${KU_W_dg_SIP_continueBtn} =  xpath=(//button[normalize-space()='Continue'])[2]
+${KU_W_dg_chooseBanAccArrow} =  xpath=//select[@name='bank_account[account_type]']
+${KU_W_dg_SIP_bankAcc2} =  xpath=(//div[@class='b-portfolio-radio-button b-bank-list__content__banks-item'])[2]

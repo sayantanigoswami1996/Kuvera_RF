@@ -5,22 +5,19 @@ Verify PostLogin MF Portfolio Menu Navigation With KYC
     Navigate To PortFolio Tab And Verify Investment Title  ${KU_W_portfolio_mf_title}  ${e_portfolio_mf_title}  ${KU_W_portfolio_mf_subTitle}  ${e_portfolio_mf_subTitle}   
     Wait And Click  ${KU_W_portfolio_mf_title}
     Verify Page Contains Element  ${KU_W_portfolio_doYouWantTo}
-    Verify Page Contains Element  ${KU_W_portfolio_mf_exploreFunds}
-    Verify Page Contains Element  ${KU_W_portfolio_mf_exploreFundsSubTitle}
-    Verify Page Contains Element  ${KU_W_portfolio_importFolioTitle}
-    Verify Page Contains Element  ${KU_W_portfolio_mf_importfolioSubDesc}
-    Verify Navigation To Explore Funds And Import Tab
+    Verify Explore Or Import Menus Page  ${KU_W_portfolio_mf_exploreFunds}  ${KU_W_portfolio_mf_exploreFundsSubTitle}  ${KU_W_portfolio_importFolioTitle}  ${KU_W_portfolio_mf_importFolioSubDesc}
+    Verify Navigation To Explore Funds And Import Tab  ${KU_W_portfolio_mf_exploreFunds}  ${KU_W_portfolio_mf_allFundsTitle}  ${e_portfolio_mf_allFundsText}  ${KU_W_portfolio_importFolioTitle}  ${KU_W_invest_mf_importExternalFunds}  ${e_invest_mf_importExternalFunds}
     Verify Import MF Portfolio
     Verify Upload CAS File
 
-
-Verify Navigation To Explore Funds And Import Tab
-    Wait And Click  ${KU_W_portfolio_mf_exploreFunds}
-    Wait For Element Visibility  ${KU_W_portfolio_mf_allFundsTitle}
-    Verify Element And Text  ${KU_W_portfolio_mf_allFundsTitle}  ${e_portfolio_mf_allFundsText}
-    Go Back
+Verify PostLogin MF Portfolio Menu Navigation Without KYC
+    Log To Console  MF Portfolio Navigation Without KYC
+    Navigate To PortFolio Tab And Verify Investment Title  ${KU_W_portfolio_mf_title}  ${e_portfolio_mf_title}  ${KU_W_portfolio_mf_subTitle}  ${e_portfolio_mf_subTitle}   
+    Wait And Click  ${KU_W_portfolio_mf_title}
     Wait And Click  ${KU_W_portfolio_importFolioTitle}
-    Verify Element And Text  ${KU_W_invest_mf_importExternalFunds}  ${e_invest_mf_importExternalFunds}
+    Verify Update PAN Page  ${KU_W_portfolio_updatePAN}  ${KU_W_portfolio_mf_updatePANDesc}  ${e_portfolio_mf_updatePANDesc}  ${KU_W_portfolio_mf_updatePANField}
+    Wait And Click  ${KU_W_postlogin_importPortfolioTab}
+    Verify Update PAN Page  ${KU_W_portfolio_updatePAN}  ${KU_W_portfolio_mf_updatePANDesc}  ${e_portfolio_mf_updatePANDesc}  ${KU_W_portfolio_mf_updatePANField}
 
 Verify Import MF Portfolio
     Wait And Click  ${KU_W_postlogin_importPortfolioTab}
@@ -33,7 +30,8 @@ Verify Import MF Portfolio
     Wait And Click  ${KU_W_portfolio_mf_investmentEmailID}
     Input Text  ${KU_W_portfolio_mf_investmentEmailID}  ${e_portfolio_mf_investmentEmailID}
     Wait And Click  ${KU_W_portfolio_mf_requestCASBtn} 
-    # Enter OTP
+    Sleep  2s
+    Enter OTP Postlogin
     Sleep  5s
     Wait And Click  ${KU_W_portfolio_mf_CMSLink}
     Switch To Window Verify Title And Close  ${e_portfolio_mf_CMSPageTitle}
@@ -49,7 +47,7 @@ Verify Upload CAS File
     Verify Element And Text  ${KU_W_portfolio_mf_uploadCASSubTitle}  ${e_portfolio_mf_uploadCASSubTitle}
     Verify Element And Text  ${KU_W_portfolio_mf_uploadCASLabel}  ${e_portfolio_mf_uploadCAS}
     Verify Page Contains Element  ${KU_W_portfolio_mf_CASPwdLabel}
-    Choose File  ${KU_W_portfolio_mf_uploadLink}  C:\Users\user\Downloads\CAS
+    Choose File  ${KU_W_portfolio_mf_uploadLink}  D:\Phase4\Kuvera_RF\Resources\Utils\Files\CAS.pdf
     Input Text  ${KU_W_portfolio_mf_pwdField}  ${e_portfolio_mf_CASPwd}
     Wait And Click  ${KU_W_postlogin_submitBtn}
     # Enter OTP
@@ -57,14 +55,3 @@ Verify Upload CAS File
     Verify Element And Text  ${KU_W_portfolio_mf_importedInvestDesc}  ${e_portfolio_mf_popupDesc}
     Wait And Click  ${KU_W_postlogin_OkBtn}
     Verify Page Contains Element  ${KU_W_portfolio_mf_mailID}
-
-
-
-Navigate To PortFolio Tab And Verify Investment Title
-    [Arguments]  ${title}  ${titleText}  ${subtitle}  ${subtitleText}
-    Wait And Click  ${KU_W_postlogin_portfolioTab}
-    Verify Element And Text  ${KU_W_postlogin_portfolio}  ${e_postlogin_portfolioTitle}
-    Verify Page Contains Element  ${KU_W_portfolio_mf_startInvesting}
-    Verify Element And Text  ${title}  ${titleText}
-    Verify Element And Text  ${subtitle}  ${subtitleText}
-    

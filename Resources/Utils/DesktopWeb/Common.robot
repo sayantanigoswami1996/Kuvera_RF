@@ -43,6 +43,8 @@ Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/InviteFriends
 Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/ReportLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/ManageFolioLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/Portfolio/Portfolio_MFLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/Portfolio/Portfolio_StocksLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/Portfolio/Portfolio_USStocksLocators.robot
 
 *** Keywords ***
 
@@ -321,6 +323,43 @@ Verify Login And Signup On Prelogin
     ELSE  
         Log To Console  Continue
     END
-    
+
+Navigate To PortFolio Tab And Verify Investment Title
+    [Arguments]  ${title}  ${titleText}  ${subtitle}  ${subtitleText}
+    Wait And Click  ${KU_W_postlogin_portfolioTab}
+    Verify Element And Text  ${KU_W_postlogin_portfolio}  ${e_postlogin_portfolioTitle}
+    Verify Page Contains Element  ${KU_W_portfolio_startInvesting}
+    Scroll Untill View  ${subtitle}
+    Verify Element And Text  ${title}  ${titleText}
+    Verify Element And Text  ${subtitle}  ${subtitleText}
+
+Verify Explore Or Import Menus Page
+    [Arguments]  ${exploreFunds_stocks}  ${funds_stocksSubTitle}  ${importFolioTitle}  ${importFolioDesc}
+    Verify Page Contains Element  ${exploreFunds_stocks}
+    Verify Page Contains Element  ${funds_stocksSubTitle}
+    Verify Page Contains Element  ${importFolioTitle}
+    Verify Page Contains Element  ${importFolioDesc}
+
+Verify Navigation To Explore Funds And Import Tab
+    [Arguments]  ${exploreFunds_stocks}  ${allFunds_stocksTitle}  ${allFunds_stockText}  ${importMenu}  ${pageTitle}  ${pageText}
+    Wait And Click  ${exploreFunds_stocks}
+    Wait For Element Visibility  ${allFunds_stocksTitle}
+    Verify Element And Text  ${allFunds_stocksTitle}  ${allFunds_stockText}
+    Go Back
+    Wait And Click  ${importMenu}
+    Verify Element And Text  ${pageTitle}  ${pageText}
+
+Verify Update PAN Page
+    [Arguments]  ${updatePANTitle}  ${updatePANDesc}  ${PANDescText}  ${PANField}
+    Verify Page Contains Element  ${updatePANTitle}
+    Verify Element And Text  ${updatePANDesc}  ${PANDescText}
+    Verify Page Contains Element  ${PANField}
+
+Enter OTP Postlogin
+    Wait For Element Visibility  ${KU_W_ca_OTPField}
+    Click Element  ${KU_W_ca_OTPField}
+    Input Text  ${KU_W_ca_OTPField}  ${e_ca_OTP}
+    Click Element  ${KU_W_ca_submitOTPBtn}
+       
 Close Web Application
     Close All Browser

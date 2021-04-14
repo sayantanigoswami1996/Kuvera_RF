@@ -6,6 +6,7 @@ ${e_postlogin_portfolioTitle} =  Portfolio
 ${e_postlogin_noActiveSIPTitle} =  You have no Active SIP. It’s easy to start an SIP
 ${e_postlogin_emailID} =  moolya@kuvera.in 
 ${e_postlogin_pwd} =  kuveratesting123
+
 # Application Locator 'KU_<locatorName>'
 # Kuvera :: Wealth Management Simplified
 ${KU_W_postlogin_kuverLogo} =  xpath=//a[@class='navbar-brand']
@@ -48,12 +49,19 @@ ${KU_W_postlogin_goBackBtn} =  xpath=//button[normalize-space()='Go Back']
 ${KU_W_postlogin_paymentPageTitle} =  xpath=//span[normalize-space()='Select Payment Mode']
 ${KU_W_postlogin_confirmBtn} =  xpath=//button[normalize-space()='Confirm']
 ${KU_W_postlogin_razorPayFrame} =  xpath=//iframe[@class='razorpay-checkout-frame']
+${KU_W_postlogin_razorPayFrame1} =  xpath=(//iframe[@class='razorpay-checkout-frame'])[2]
 ${KU_W_postlogin_noContinueBtn} =  xpath=//button[normalize-space()='No, Continue']
 ${KU_W_postlogin_yesQuitBtn} =  xpath=//div[contains(text(),'Yes, Quit')]
+${KU_W_postlogin_yesQuit} =  xpath=//div[contains(text(),'Yes, quit')]
 ${KU_W_postlogin_continue} =  xpath=//button[normalize-space()='Continue']
 ${KU_W_postlogin_submitBtn} =  xpath=//button[normalize-space()='Submit']
+${KU_W_portfolio_loginBtn} =  xpath=//button[normalize-space()='Login']
+${KU_W_portfolio_logIN} =  xpath=//button[normalize-space()='LOG IN']
+${KU_W_portfolio_signIN} =  xpath=//button[normalize-space()='SIGN IN']
+${KU_W_portfolio_signinBtn} =  xpath=//button[normalize-space()='Sign In']
 # Portfolio Page
 ${KU_W_portfolio_doYouWantTo} =  xpath=//div[contains(text(),'Do you want to')]
 ${KU_W_portfolio_importFolioTitle} =  xpath=//p[normalize-space()='Import Portfolio']
 ${KU_W_portfolio_getStartedBtn} =  xpath=//button[normalize-space()='Get Started']
-
+${KU_W_portfolio_startInvesting} =  xpath=//p[contains(text(),'Start Investing!')]
+${KU_W_portfolio_updatePAN} =  xpath=//div[contains(text(),'Update your PAN')]
