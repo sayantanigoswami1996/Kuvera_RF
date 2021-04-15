@@ -59,6 +59,7 @@ ${e_invest_deleteTrackMsg} =  Your entry for gold (bought externally) has been d
 ${e_invest_sellAmtVal} =  5000
 ${e_invest_sellAmtVal1} =  500
 ${e_invest_bankAccField} =  123456789
+${e_invest_merchantDesc} =  Buy Gold
 
 # Application Locator 'KU_<locatorName>'
 # Digital Gold Navigation Page
@@ -125,6 +126,7 @@ ${KU_W_dg_minGoldInGram} =  xpath=//div[@class='b-buy-gold__offer-text-available
 ${KU_W_dg_congratsMsg} =  xpath=//div[text()='Congratulations!']
 ${KU_W_dg_buyGoldSuccessMsg} =  xpath=//div[@class='b-buy-success-desc']
 ${KU_W_dg_enterGramLabel} =  xpath=(//div[contains(text(),'Enter Grams')])[1]
+${KU_W_dg_enterAmtLabel} =  xpath=(//div[contains(text(),'Enter Amount')])[1]
 ${KU_W_dg_paymentModeSubText} =  xpath=//div[.="Choose how you’d like to pay for your purchase"]
 ${KU_W_dg_paymentBreakup} =  xpath=//div[@class='d-payment-breakup__info d-payment-breakup__info--base']
 ${KU_W_dg_paymentBreakupGST} =  xpath=//div[@class='d-payment-breakup__info']
@@ -174,8 +176,9 @@ ${KU_W_dg_accNumField} =  xpath=//input[@name='Account Number']
 ${KU_W_dg_confirmAccNumField} =  xpath=//input[@name='Confirm Account Number']
 ${KU_W_dg_savingsField} =  xpath=//span[normalize-space()='Savings']
 ${KU_W_dg_chooseHDFCAcc} =  xpath=(//span[@class='checkmark b-bank-list__content__banks-item__checkmark'])[2]
+${KU_W_dg_chooseHDFCAcc1} =  xpath=(//span[@class='checkmark b-bank-list__content__banks-item__checkmark'])[3]
 ${KU_W_dg_disabledAddAcc} =  xpath=//div[@class='b-bank-list__content__action b-bank-list__content__action--disabled has-tooltip']
-${KU_W_dg_closeRazorPay} =  xpath=//div[@id='modal-close']
+${KU_W_dg_closeRazorPay} =  xpath=//div[@id='header']//div[@id='modal-close']
 ${KU_W_dg_quitTitle} =  xpath=//div[contains(text(),'Are you sure you want to Quit?')]
 ${KU_W_dg_QuitDesc} =  xpath=//div[contains(text(),'Your Gold SIP setup progress will be lost.')]
 ${KU_W_dg_addTrackTitle} =  xpath=//div[contains(text(),'Add & track gold purchased outside Kuvera')]

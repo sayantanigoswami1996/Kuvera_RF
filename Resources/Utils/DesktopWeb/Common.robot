@@ -45,6 +45,7 @@ Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/ManageFolioLo
 Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/Portfolio/Portfolio_MFLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/Portfolio/Portfolio_StocksLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/Portfolio/Portfolio_USStocksLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/Portfolio/Portfolio_SaveSmartLocators.robot
 
 *** Keywords ***
 
@@ -295,6 +296,7 @@ Verify Social Sharing Option
     Wait Scroll And Click Element  ${KU_W_HI_mailLink} 
 
 Logout From App Post Signup
+    Sleep  2s
     Wait And Click  ${KU_W_ca_caretDropdown}
     Sleep  2s
     Wait And Click  ${KU_W_ca_logoutBtn}

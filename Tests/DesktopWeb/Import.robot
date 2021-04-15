@@ -73,3 +73,4 @@ Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/InvestExplore/Po_Dig
 Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Portfolio/Portfolio_MF.robot
 Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Portfolio/Portfolio_Stocks.robot
 Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Portfolio/Portfolio_USStocks.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Portfolio/Portfolio_SaveSmart.robot

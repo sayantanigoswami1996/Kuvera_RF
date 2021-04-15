@@ -12,14 +12,26 @@ Verify PostLogin Digi Gold Menu Navigation
     # SIP
     Verify Buying SIP Postlogin
     Verify Adding Five Bank Account And Quit Of Buying SIP 
-    # BUY 
-    Logout From App Post Signup
-    Login  ${e_postlogin_emailID}  ${e_postlogin_pwd}
-    Verify Buy Section
-    Verify Buying Of Gold
     # SELL
     Verify Sell Section Postlogin
+    # BUY
+    Verify Buying Of Gold
     Verify Sell Gold Post Buy
+    # BUY Gold With Moolya Account
+    Logout From App Post Signup
+    Login  ${e_postlogin_emailID}  ${e_postlogin_pwd}
+    Sleep  7s
+    ${isElementVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_portfolio_doItLater}
+    IF  ${isElementVisible}  
+        Wait And Click  ${KU_W_portfolio_doItLater}
+    ELSE
+        Log To Console  Continue
+    END
+    Navigate To Invest Page And Verify Explore Options  ${KU_W_digitalGold}  ${e_invest_digGold}
+    Verify Buy Section
+    Verify Buying Of Gold
+    Verify Transaction With Moolya Account
+    # Sell Gold With Moolya Account
     Verify Sell Gold 7 Days After Purchased
     
 
@@ -44,11 +56,10 @@ Verify Sell Gold Post Buy
     Verify Element And Text  ${KU_W_dg_sellGoldTab}  ${e_invest_sellGoldTitleText}
     Verify Element And Text  ${KU_W_dg_liveSellRateTitle}  ${e_invest_liveSellRateTitleText}
     Verify Live Gold Buy And Sell Rate Presence  ${KU_W_dg_sellGoldRefreshIcon} 
-    Verify Page Contains Element  ${KU_W_dg_availableToSell}
+    Verify Page Contains Element  ${KU_W_dg_availableToSell}  
     Verify Element And Text  ${KU_W_dg_sellWeight}  ${e_invest_sellWeight}
     Wait And Click  ${KU_W_dg_infoIcon}
     Verify Page Contains Element  ${KU_W_dg_ownedGold}
-    Click Element  ${KU_W_amount}
     Verify Disabled Element  ${KU_W_dg_disabledSellNowBtn}
     Wait For Element Visibility  ${KU_W_dg_enterGramLabel}
     Click Element  ${KU_W_dg_enterGramLabel}
@@ -58,7 +69,7 @@ Verify Sell Gold Post Buy
 Verify Sell Gold 7 Days After Purchased
     Navigate To Invest Page And Verify Explore Options  ${KU_W_digitalGold}  ${e_invest_digGold}
     Verify Page Contains Element  ${KU_W_dg_availableToSell}
-    Verify Element And Text  ${KU_W_dg_sellWeight}  ${e_invest_sellWeight}
+    Verify Page Contains Element  ${KU_W_dg_sellWeight}
     Wait And Click  ${KU_W_dg_sell_enterAmt_Gms}
     Input Text  ${KU_W_dg_sell_enterAmt_Gms}  ${e_invest_sellAmtVal}
     Element Should be Enabled  ${KU_W_dg_sell_sellNowBtn}
@@ -152,7 +163,7 @@ Add Bank Account
     Wait And Click  ${KU_W_dg_IFSC}
     Input Text  ${KU_W_dg_IFSC}  ${e_invest_IFSC}
     Wait And Click  ${KU_W_dg_accNumField}
-    ${randomNumber} =  Generate Random Number  1000   99999
+    ${randomNumber} =  Generate Random Number  10000   99999
     ${completeAccNum} =  Catenate  ${e_invest_bankAccField}${randomNumber}
     Input Text  ${KU_W_dg_accNumField}  ${completeAccNum}
     Wait And Click  ${KU_W_dg_confirmAccNumField}
@@ -170,28 +181,32 @@ Verify Adding Five Bank Account And Quit Of Buying SIP
         Sleep  2s
     END
     Scroll Untill View  ${KU_W_dg_disabledAddAcc}
-    Verify Disabled Element  ${KU_W_dg_disabledAddAcc} 
-    Wait And Click  ${KU_W_dg_chooseHDFCAcc} 
+    Wait And Click  ${KU_W_dg_chooseHDFCAcc1} 
     Scroll Untill View  ${KU_W_postlogin_continue}
+    # Continue To Pay Validation
     Wait Scroll And Click Element  ${KU_W_postlogin_continue}
     Wait And Click  ${KU_W_postlogin_confirmBtn}
     Wait And Click  ${KU_W_postlogin_continue}
-    Switch To Frame  ${KU_W_postlogin_razorPayFrame}
-    Wait And Click  ${KU_W_dg_closeRazorPay}
-    Unselect Frame
+    Sleep  5s
+    Go Back
+    # Switch To Frame  ${KU_W_postlogin_razorPayFrame}
+    # Wait And Click  ${KU_W_dg_closeRazorPay}
+    # Unselect Frame
     Verify Page Contains Element  ${KU_W_dg_quitTitle}
     Verify Page Contains Element  ${KU_W_dg_QuitDesc}
     Wait And Click  ${KU_W_postlogin_noContinueBtn}
     Verify Page Contains Element  ${KU_W_dg_orderSummaryPage}
+    # Quiting Payment Validation
     Wait And Click  ${KU_W_postlogin_confirmBtn}
     Wait And Click  ${KU_W_postlogin_continue}
-    Switch To Frame  ${KU_W_postlogin_razorPayFrame}
-    Wait And Click  ${KU_W_dg_closeRazorPay}
-    Unselect Frame
+    Sleep  5s
+    Go Back
+    # Switch To Frame  ${KU_W_postlogin_razorPayFrame}
+    # Wait And Click  ${KU_W_dg_closeRazorPay}
+    # Unselect Frame
     Wait And Click  ${KU_W_postlogin_yesQuitBtn}
     Verify Element And Text  ${KU_W_postlogin_portfolio}  ${e_postlogin_portfolioTitle}
-    Navigate To Invest Page And Verify Explore Options  ${KU_W_digitalGold}  ${e_invest_digGold}
-
+    
 Verify Track Section Postlogin
     Wait And Click  ${KU_W_dg_trackTab}
     Verify Page Contains Element  ${KU_W_dg_addTrackTitle}
@@ -213,25 +228,31 @@ Verify Track Section Postlogin
     Verify Page Contains Element  ${KU_W_digitalGold}
 
 Verify Buying Of Gold
+    # Checking Min Amount Label Validation
+    Wait And Click  ${KU_W_dg_enterGram_AmtField}
     Input Text  ${KU_W_dg_enterGram_AmtField}  ${e_invest_SIP_BuyValue}
     Verify Page Contains Element  ${KU_W_dg_sell_minAmtLabel}
     Verify Page Contains Element  ${KU_W_dg_goldValue}
     Wait For Element Visibility  ${KU_W_dg_enterGramLabel}
     Click Element  ${KU_W_dg_enterGramLabel}
     Sleep  2s
+    # Checking Min Gram Label Validation
     Input Text  ${KU_W_dg_enterGram_AmtField}  ${e_invest_enterGramValue}
     Wait For Element Visibility  ${KU_W_dg_minGoldInGram}
     Verify Page Contains Element  ${KU_W_dg_minGoldInGram}
     Wait For Element Visibility  ${KU_W_dg_goldValue}
     Verify Page Contains Element  ${KU_W_dg_goldValue}
-    # Application Issue
-    Wait And Click  ${KU_W_dg_enterAmtTitle}
-    # Input Text  ${KU_W_dg_enterGram_AmtField}  ${e_invest_enterAmountValue}
-    # Wait And Click  ${KU_W_buyNowBtn}
-    # Wait And Click  ${KU_W_postlogin_netBankingOption}
-    # Wait And Click  ${KU_W_postlogin_proceedToPay}
-    # Verify Payment With Net Banking
-    # Verify Page Contains Element  ${KU_W_dg_congratsMsg}
-    # Verify Page Contains Element  ${KU_W_dg_buyGoldSuccessMsg}
-    # Wait And Click  ${KU_W_postlogin_continueBtn}
-    # Verify Element And Text  ${KU_W_postlogin_portfolio}  ${e_postlogin_portfolioTitle}
+    Wait And Click  ${KU_W_dg_enterAmtLabel}
+    Input Text  ${KU_W_dg_enterGram_AmtField}  ${e_invest_enterAmountValue}
+    Wait And Click  ${KU_W_buyNowBtn}
+    Wait And Click  ${KU_W_postlogin_netBankingOption}
+    Wait And Click  ${KU_W_postlogin_proceedToPay}
+    # Enter OTP
+
+Verify Transaction With Moolya Account
+    Verify Payment With Net Banking  ${e_invest_merchantDesc}
+    Verify Page Contains Element  ${KU_W_dg_congratsMsg}
+    Verify Page Contains Element  ${KU_W_dg_buyGoldSuccessMsg}
+    Wait And Click  ${KU_W_postlogin_continue}
+    Wait For Element Visibility  ${KU_W_postlogin_portfolio}
+    Verify Element And Text  ${KU_W_postlogin_portfolio}  ${e_postlogin_portfolioTitle}

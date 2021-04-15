@@ -25,4 +25,5 @@ Verify PostLogin Account Creation
     Click Element  ${KU_W_ca_signupBtn}
     Sleep  2s
     Enter OTP Postlogin
+    Wait For Element Visibility  ${KU_W_ca_dashboardHeader}
     Verify Page Contains Element  ${KU_W_ca_dashboardHeader}

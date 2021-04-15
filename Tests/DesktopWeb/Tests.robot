@@ -288,3 +288,19 @@ Stocks Portfolio Navigation Postlogin Without KYC
     [Teardown]  Logout From App And Navigate To Home Page PostLogin
     Verify PostLogin Account Creation
     Verify PostLogin Stocks Portflio Menu Navigation Without KYC
+
+# Stocks Portfolio Navigation Postlogin With KYC
+Stocks Portfolio Navigation Postlogin With KYC
+    [Tags]  TC42  Stage3
+    [Teardown]  Logout From App And Navigate To Home Page PostLogin
+    Verify PostLogin Account Creation
+    Verify PAN Verifed KYC Details
+    Verify PostLogin Stocks Portflio Menu Navigation With KYC
+
+# Savesmart Portfolio Navigation Postlogin With KYC
+Savesmart Portfolio Navigation Postlogin With KYC
+    [Tags]  TC43  Stage3
+    [Teardown]  Logout From App And Navigate To Home Page PostLogin
+    Verify PostLogin Account Creation
+    Verify PAN Verifed KYC Details
+    Verify PostLogin Savesmart Portflio Menu Navigation With KYC
