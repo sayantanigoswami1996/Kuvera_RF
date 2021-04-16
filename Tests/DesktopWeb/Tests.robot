@@ -304,3 +304,18 @@ Savesmart Portfolio Navigation Postlogin With KYC
     Verify PostLogin Account Creation
     Verify PAN Verifed KYC Details
     Verify PostLogin Savesmart Portflio Menu Navigation With KYC
+
+# Gold Portfolio Navigation Postlogin Without KYC
+Gold Portfolio Navigation Postlogin Without KYC
+    [Tags]  TC44  Stage3
+    # [Teardown]  Logout From App And Navigate To Home Page PostLogin
+    Verify PostLogin Account Creation
+    Verify PostLogin Gold Portfolio Menu Navigation Without KYC
+
+# Gold Portfolio Navigation Postlogin With KYC
+Gold Portfolio Navigation Postlogin With KYC
+    [Tags]  TC45  Stage3
+    # [Teardown]  Logout From App And Navigate To Home Page PostLogin
+    Verify PostLogin Account Creation
+    Verify PAN Verifed KYC Details
+    Verify PostLogin Gold Portfolio Menu Navigation With KYC

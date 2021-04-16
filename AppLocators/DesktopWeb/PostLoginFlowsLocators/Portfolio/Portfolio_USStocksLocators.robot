@@ -13,7 +13,7 @@ ${e_portfolio_USStocks_subTitle3} =  Once logged in, close the Vested window.
 ${e_portfolio_USStocks_subTitle4} =  Track your holdings from the portfolio section. 
 
 # Application Locator 'KU_<locatorName>'
-# Stocks Portfolio Navigation Page
+# US Stocks Portfolio Navigation Page
 ${KU_W_portfolio_USStocks_title} =  xpath=(//p[@class='tile-opt-label'])[3]
 ${KU_W_portfolio_USStocks_subtitle} =  xpath=(//div[@class='tile-opt-sub-label-container'])[3]
 ${KU_W_portfolio_USStocks_exploreUSStocks} =  xpath=(//p[contains(text(),'Explore & invest')])[1]

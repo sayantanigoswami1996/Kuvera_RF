@@ -53,6 +53,7 @@ ${KU_W_postlogin_razorPayFrame1} =  xpath=(//iframe[@class='razorpay-checkout-fr
 ${KU_W_postlogin_noContinueBtn} =  xpath=//button[normalize-space()='No, Continue']
 ${KU_W_postlogin_yesQuitBtn} =  xpath=//div[contains(text(),'Yes, Quit')]
 ${KU_W_postlogin_yesQuit} =  xpath=//div[contains(text(),'Yes, quit')]
+${KU_W_postlogin_yesQuit1} =  xpath=//button[normalize-space()='Yes, quit']
 ${KU_W_postlogin_continue} =  xpath=//button[normalize-space()='Continue']
 ${KU_W_postlogin_submitBtn} =  xpath=//button[normalize-space()='Submit']
 ${KU_W_portfolio_loginBtn} =  xpath=//button[normalize-space()='Login']

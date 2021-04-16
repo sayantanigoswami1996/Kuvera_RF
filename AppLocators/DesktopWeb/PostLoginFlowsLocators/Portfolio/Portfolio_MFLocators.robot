@@ -1,4 +1,5 @@
 *** Variables *** 
+# Application Expected Values 'e_<variableName>' 
 ${e_portfolio_mf_title} =  Mutual Funds                
 ${e_portfolio_mf_subTitle} =  Explore & invest in mutual funds              
 ${e_portfolio_mf_allFundsText} =  All funds     

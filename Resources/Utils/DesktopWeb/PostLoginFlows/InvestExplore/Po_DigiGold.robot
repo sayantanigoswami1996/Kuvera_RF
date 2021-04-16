@@ -212,9 +212,7 @@ Verify Track Section Postlogin
     Verify Page Contains Element  ${KU_W_dg_addTrackTitle}
     Verify Page Contains Element  ${KU_W_dg_quantityAddedLabel}
     Verify Page Contains Element  ${KU_W_dg_gm_tolasBox}
-    Mouse Over  ${KU_W_dg_slider}
-    Wait For Element Visibility  ${KU_W_dg_slider}
-    Drag And Drop By Offset  ${KU_W_dg_slider}  -123  1
+    Move Slider
     Sleep  10s
     Wait And Click  ${KU_W_dg_updateToTrack}
     Verify Element And Text  ${KU_W_toastMssg}  ${e_invest_trackToastMsg}
@@ -226,6 +224,11 @@ Verify Track Section Postlogin
     Verify Element And Text  ${KU_W_toastMssg}  ${e_invest_deleteTrackMsg} 
     Scroll Page To Location  0  2000
     Verify Page Contains Element  ${KU_W_digitalGold}
+
+Move Slider
+    Mouse Over  ${KU_W_dg_slider}
+    Wait For Element Visibility  ${KU_W_dg_slider}
+    Drag And Drop By Offset  ${KU_W_dg_slider}  -123  1
 
 Verify Buying Of Gold
     # Checking Min Amount Label Validation

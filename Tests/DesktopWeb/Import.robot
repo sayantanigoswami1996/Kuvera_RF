@@ -74,3 +74,4 @@ Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Portfolio/Portfolio_
 Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Portfolio/Portfolio_Stocks.robot
 Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Portfolio/Portfolio_USStocks.robot
 Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Portfolio/Portfolio_SaveSmart.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Portfolio/Portfolio_Gold.robot
