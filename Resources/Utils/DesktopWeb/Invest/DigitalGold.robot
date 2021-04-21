@@ -1,13 +1,73 @@
-*** Settings ***
-
-Library   SeleniumLibrary
-
 *** Keywords ***
 
 Verify PreLogin Digital Gold Landing Page
-    Log To Console  Digital Gold - Explore More
+    Log To Console  Digital Gold - Explore
     Navigate To Invest Page And Verify Explore Options  ${KU_W_digitalGold}  ${e_invest_digGold}
-    Verify Login And Signup Link  
+    Verify Content Of Left Section
+    # Buy-Sell-SIP-Track Table Content
+    # Buy 
+    Verify Buy Section
+    # Sell
+    Verify Sell Section
+    # SIP
+    Verify SIP Section 
+    # Track
+    Verify Track Section
+    # Digital Gold is better than Mutual Funds
+    Verify Digital Gold Is Better Than MF Section
+   
+Verify Login And SignUp Validation
+    Wait For Element Visibility  ${KU_W_dg_gold_login}
+    Click Element  ${KU_W_dg_gold_login}
+    Verify Login Page
+    Sleep  2s
+    Verify Element And Text  ${KU_W_dg_gold_noAcntMsg}  ${e_invest_noAcntText}
+    Wait For Element Visibility  ${KU_W_dg_gold_signup}
+    Sleep  1s
+    Click Element  ${KU_W_dg_gold_signup}
+    Verify Signup Page
+    Go Back
+
+Verify Live Gold Buy And Sell Rate Presence 
+    [Arguments]  ${refreshIcon}
+    Verify Page Contains Element  ${KU_W_ratePerGm}  
+    Click Element  ${refreshIcon} 
+    Wait For Element Visibility  ${KU_W_toastMssg}
+    Verify Page Contains Element  ${KU_W_toastMssg}
+
+Verify Purity And Partner Title Presence 
+    [Arguments]  ${purityTitle}  ${purityAmt}  ${partnerTitle}  ${partnerName}
+    Verify Element And Text  ${partnerName}  ${e_invest_partnerNameText} 
+    Verify Element And Text  ${purityTitle}  ${e_invest_purityTitleText} 
+    Verify Element And Text  ${purityAmt}  ${e_invest_purityAmtText}
+    Verify Element And Text  ${partnerTitle}  ${e_invest_partnerTitleText}
+
+Verify T&C And Coming Soon Title Presence
+    Wait For Element Visibility  ${KU_W_dg_T&C}
+    Verify Element And Text  ${KU_W_dg_T&C}  ${e_invest_digiGold_T&CText}
+    Sleep  1s
+    Verify Element And Text  ${KU_W_dg_comingSoonTitle}  ${e_invest_comingSoonText}
+
+Verify Buy Now Button
+    Verify Element And Text  ${KU_W_buyNowBtn}  ${e_invest_buyNowBtnText}
+    Wait For Element Visibility  ${KU_W_buyNowBtn}
+    Click Element  ${KU_W_buyNowBtn}
+    ${isLoginButtonVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_login}
+    IF  ${isLoginButtonVisible}
+        Verify Login Page
+    ELSE
+        Verify Gold Payment Section 
+    END 
+
+Verify Login Title For SIP And Track  
+    [Arguments]  ${logintext}
+    Verify Element And Text  ${KU_W_dg_loginTitle}  ${logintext}
+    Sleep  1s
+    Scroll Untill View  ${KU_W_dg_aboutUSLink}
+    Verify Login And SignUp Validation
+
+Verify Content Of Left Section
+    Verify Login And Signup On Prelogin  
     Wait For Element Visibility  ${KU_W_dg_screenTitle}
     Verify Element And Text  ${KU_W_dg_screenTitle}  ${e_invest_digiGold_screenText} 
     Verify Element And Text  ${KU_W_dg_purityHeading}  ${e_invest_digiGold_purityHeadingText} 
@@ -28,9 +88,8 @@ Verify PreLogin Digital Gold Landing Page
     Click Element  ${KU_W_dg_augmontLink}
     Switch To Window
     Reload Page
-  
-    # Buy-Sell-SIP-Track Table Content
-    # Buy 
+
+Verify Buy Section
     Sleep  2s
     Wait For Element Visibility  ${KU_W_dg_buyTab}
     Verify Element And Text  ${KU_W_dg_buyTab}  ${e_invest_buyGoldTitleText}
@@ -56,38 +115,17 @@ Verify PreLogin Digital Gold Landing Page
     Verify Page Contains Element  ${KU_W_dg_goldValue}
     Scroll Untill View  ${KU_W_dg_aboutUSLink}
     Verify T&C And Coming Soon Title Presence
-    Verify Buy Now Button
+    Wait And Click  ${KU_W_buyNowBtn}
+    ${isLoginButtonVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_login}
+    IF  ${isLoginButtonVisible}
+        Verify Login Page
+    ELSE
+        Verify Page Contains Element  ${KU_W_postlogin_paymentPageTitle}
+        Go Back 
+    END 
     Scroll Page To Location  0  -500
 
-    # Sell
-    Sleep  5s
-    Wait For Element Visibility  ${KU_W_dg_sellGoldTab}
-    Click Element  ${KU_W_dg_sellGoldTab}
-    Verify Element And Text  ${KU_W_dg_sellGoldTab}  ${e_invest_sellGoldTitleText}
-    Verify Element And Text  ${KU_W_dg_liveSellRateTitle}  ${e_invest_liveSellRateTitleText}
-    Verify Live Gold Buy And Sell Rate Presence  ${KU_W_dg_sellGoldRefreshIcon} 
-    Verify Purity And Partner Title Presence  ${KU_W_dg_sellGoldPurityTitle}  ${KU_W_dg_sellGoldPurityAmt}  ${KU_W_dg_sellGoldPartnerTitle}  ${KU_W_dg_sellGoldPartnerName}
-    Scroll Untill View  ${KU_W_dg_aboutUSLink}
-    Sleep  1s
-    Verify Element And Text  ${KU_W_dg_loginIntoSellGoldTitle}  ${e_invest_logInSellgoldTitleText}
-    Verify Login And SignUp Validation
-      
-    # SIP
-    Sleep  5s
-    Wait For Element Visibility  ${KU_W_dg_SIPTab}
-    Click Element  ${KU_W_dg_SIPTab}
-    Verify Element And Text  ${KU_W_dg_SIP_Track_Heading}  ${e_invest_SIPTitleText}
-    Verify Login Title For SIP And Track  ${e_invest_SIP_loginTitleText}  
-    Scroll Page To Location  0  -500
-
-    # Track
-    Sleep  2s
-    Wait For Element Visibility  ${KU_W_dg_trackTab}
-    Click Element  ${KU_W_dg_trackTab}
-    Verify Element And Text  ${KU_W_dg_SIP_Track_Heading}  ${e_invest_trackTitleText} 
-    Verify Login Title For SIP And Track  ${e_invest_track_loginTitleText}  
-
-    # Digital Gold is better than Mutual Funds
+Verify Digital Gold Is Better Than MF Section
     Scroll Untill View  ${KU_W_digitalGoldIsBetterTitle}
     Verify Element And Text  ${KU_W_digitalGoldIsBetterTitle}  ${e_invest_digiGoldIsBetterTitleText}
     Verify Element And Text  ${KU_W_digitalGoldIsBetterDesc}  ${e_invest_digiGoldIsBetterDescText}
@@ -105,55 +143,61 @@ Verify PreLogin Digital Gold Landing Page
     Verify Element And Text  ${KU_W_dg_addGoldBtn}  ${e_invest_addGoldBtnText} 
     Wait For Element Visibility  ${KU_W_dg_addGoldBtn}
     Click Button  ${KU_W_dg_addGoldBtn}
-    Verify Login Page  
+    ${isLoginButtonVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_login}
+    IF  ${isLoginButtonVisible}
+        Verify Login Page
+    ELSE
+        Verify Page Contains Element  ${KU_W_dg_gm_tolasBox}
+        Go Back
+    END  
     #  Questions? We are happy to help
     Scroll Untill View  ${KU_W_dg_faqHeading}
     Verify Element And Text  ${KU_W_dg_faqHeading}  ${e_invest_faqTitleText} 
     Scroll Untill View  ${KU_W_dg_aboutUSLink}
     Verify Element And Text  ${KU_W_faqBtn}  ${e_invest_faqBtnText}
     Verify Question On FAQBOT Icon  ${KU_W_faqBtn}  ${e_invest_faqbotQA1}
-   
-Verify Login And SignUp Validation
-    Wait For Element Visibility  ${KU_W_dg_gold_login}
-    Click Element  ${KU_W_dg_gold_login}
-    Verify Login Page
-    Sleep  2s
-    Verify Element And Text  ${KU_W_dg_gold_noAcntMsg}  ${e_invest_noAcntText}
-    Wait For Element Visibility  ${KU_W_dg_gold_signup}
-    Sleep  1s
-    Click Element  ${KU_W_dg_gold_signup}
-    Verify Signup Page
-    Go Back
 
-Verify Live Gold Buy And Sell Rate Presence 
-    [Arguments]  ${refreshIcon}
-    Verify Page Contains Element  ${KU_W_ratePerGm}  
-    Click Element  ${refreshIcon} 
-    Wait For Element Visibility  ${KU_W_dg_toastHeader}
-    Verify Page Contains Element  ${KU_W_dg_toastHeader}
-
-Verify Purity And Partner Title Presence 
-    [Arguments]  ${purityTitle}  ${purityAmt}  ${partnerTitle}  ${partnerName}
-    Verify Element And Text  ${partnerName}  ${e_invest_partnerNameText} 
-    Verify Element And Text  ${purityTitle}  ${e_invest_purityTitleText} 
-    Verify Element And Text  ${purityAmt}  ${e_invest_purityAmtText}
-    Verify Element And Text  ${partnerTitle}  ${e_invest_partnerTitleText}
-
-Verify T&C And Coming Soon Title Presence
-    Wait For Element Visibility  ${KU_W_dg_T&C}
-    Verify Element And Text  ${KU_W_dg_T&C}  ${e_invest_digiGold_T&CText}
-    Sleep  1s
-    Verify Element And Text  ${KU_W_dg_comingSoonTitle}  ${e_invest_comingSoonText}
-
-Verify Buy Now Button
-    Verify Element And Text  ${KU_W_buyNowBtn}  ${e_invest_buyNowBtnText}
-    Wait For Element Visibility  ${KU_W_buyNowBtn}
-    Click Element  ${KU_W_buyNowBtn}
-    Verify Login Page
-
-Verify Login Title For SIP And Track  
-    [Arguments]  ${logintext}
-    Verify Element And Text  ${KU_W_dg_loginTitle}  ${logintext}
-    Sleep  1s
+Verify Sell Section
+    Sleep  5s
+    Wait For Element Visibility  ${KU_W_dg_sellGoldTab}
+    Click Element  ${KU_W_dg_sellGoldTab}
+    Verify Element And Text  ${KU_W_dg_sellGoldTab}  ${e_invest_sellGoldTitleText}
+    Verify Element And Text  ${KU_W_dg_liveSellRateTitle}  ${e_invest_liveSellRateTitleText}
+    Verify Live Gold Buy And Sell Rate Presence  ${KU_W_dg_sellGoldRefreshIcon} 
+    Verify Purity And Partner Title Presence  ${KU_W_dg_sellGoldPurityTitle}  ${KU_W_dg_sellGoldPurityAmt}  ${KU_W_dg_sellGoldPartnerTitle}  ${KU_W_dg_sellGoldPartnerName}
     Scroll Untill View  ${KU_W_dg_aboutUSLink}
+    Sleep  1s
+    Verify Element And Text  ${KU_W_dg_loginTitle}  ${e_invest_logInSellgoldTitleText}
     Verify Login And SignUp Validation
+
+Verify SIP Section 
+    Sleep  5s
+    Wait For Element Visibility  ${KU_W_dg_SIPTab}
+    Click Element  ${KU_W_dg_SIPTab}
+    Verify Element And Text  ${KU_W_dg_SIP_Track_Heading}  ${e_invest_SIPTitleText}
+    Verify Login Title For SIP And Track  ${e_invest_SIP_loginTitleText}  
+    Scroll Page To Location  0  -500
+    
+Verify Track Section
+    Sleep  2s
+    Wait For Element Visibility  ${KU_W_dg_trackTab}
+    Click Element  ${KU_W_dg_trackTab}
+    Verify Element And Text  ${KU_W_dg_SIP_Track_Heading}  ${e_invest_trackTitleText} 
+    Verify Login Title For SIP And Track  ${e_invest_track_loginTitleText} 
+
+Verify Gold Payment Section 
+    Verify Page Contains Element  ${KU_W_postlogin_paymentPageTitle}
+    Verify Page Contains Element  ${KU_W_dg_paymentModeSubText}
+    Verify Page Contains Element  ${KU_W_dg_paymentBreakup}
+    Verify Page Contains Element  ${KU_W_dg_paymentBreakupGST}
+    Verify Page Contains Element  ${KU_W_dg_GSTText}
+    Verify Page Contains Element  ${KU_W_dg_payableText}
+    Verify Page Contains Element  ${KU_W_dg_totalPayable}
+    Verify Page Contains Element  ${KU_W_dg_paymentCrossIcon}
+    Verify Page Contains Element  ${KU_W_dg_paymentTimer}
+    Verify Page Contains Element  ${KU_W_dg_paymentTimerText}
+    Sleep  305s
+    Verify Page Contains Element  ${KU_W_dg_timerExpired}
+    Wait And Click  ${KU_W_dg_goldTimerRefresh}
+    Verify Page Contains Element  ${KU_W_dg_paymentTimerText}
+    Wait And Click  ${KU_W_dg_paymentGoBackIcon}

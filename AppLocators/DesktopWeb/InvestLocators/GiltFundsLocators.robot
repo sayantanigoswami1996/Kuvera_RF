@@ -6,7 +6,3 @@ ${e_invest_giltFund_filteredFundText} =  Debt
 
 # Application Locator 'KU_<locatorName>'
 # Gilt Funds Landing Navigation Page
-
-
-
-

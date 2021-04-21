@@ -1,7 +1,8 @@
 *** Settings ***
 
-Resource    ../../Resources/Utils/DesktopWeb/LandingPage.robot
+# Import Pages for Tests
 Resource    ../../Resources/Utils/DesktopWeb/Common.robot
+Resource    ../../Resources/Utils/DesktopWeb/LandingPage.robot
 Resource    ../../Resources/Utils/DesktopWeb/Login.robot
 Resource    ../../Resources/Utils/DesktopWeb/Signup.robot
 Resource    ../../Resources/Utils/DesktopWeb/Invest/InvestLandingPage.robot
@@ -42,11 +43,11 @@ Resource    ../../Resources/Utils/DesktopWeb/Features/SaveTaxes.robot
 Resource    ../../Resources/Utils/DesktopWeb/Features/Consolidate.robot
 Resource    ../../Resources/Utils/DesktopWeb/Footer.robot
 Resource    ../../Resources/Utils/DesktopWeb/FundHouse.robot
-Resource    ../../Resources/Utils/DesktopWeb/CreateAccountForPostLogin.robot
-Resource    ../../Resources/Utils/DesktopWeb/HealthInsurancePostLogin/KYC.robot
-Resource    ../../Resources/Utils/DesktopWeb/HealthInsurancePostLogin/PlanHealthInsurance.robot
-Resource    ../../Resources/Utils/DesktopWeb/HealthInsurancePostLogin/HealthInsuranceLandingPage.robot
-Resource    ../../Resources/Utils/DesktopWeb/HealthInsurancePostLogin/LoginPostHealthInsuranceClaim.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/CreateAccountForPostLogin.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/HealthInsurance/KYC.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/HealthInsurance/PlanHealthInsurance.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/HealthInsurance/HealthInsuranceLandingPage.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/HealthInsurance/LoginPostHealthInsuranceClaim.robot
 Resource    ../../Resources/Utils/DesktopWeb/UnauthenticatedLinks/LiquidFunds.robot
 Resource    ../../Resources/Utils/DesktopWeb/UnauthenticatedLinks/ForgotPassword.robot
 Resource    ../../Resources/Utils/DesktopWeb/UnauthenticatedLinks/ESignKYCInvalidRequest.robot
@@ -55,3 +56,24 @@ Resource    ../../Resources/Utils/DesktopWeb/UnauthenticatedLinks/ESignKYCComple
 Resource    ../../Resources/Utils/DesktopWeb/UnauthenticatedLinks/AmazonSaveShop.robot
 Resource    ../../Resources/Utils/DesktopWeb/UnauthenticatedLinks/GoldRush.robot
 Resource    ../../Resources/Utils/DesktopWeb/UnauthenticatedLinks/DhanterasGoldOffer.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/KYCFlows/PANVerifiedKYC.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/KYCFlows/UnverifiedKYC.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Dashboard/DashboardWidgets.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Dashboard/DashboardTopHeaders.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Dashboard/DashboardLeftHeaders.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/InviteFriends.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/ManageFolio.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Reports.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/InvestExplore/Po_MF.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/InvestExplore/Po_Stocks.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/InvestExplore/Po_USStocks.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/InvestExplore/Po_SaveSmart.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/InvestExplore/Po_Crypto.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/InvestExplore/Po_DigiGold.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Portfolio/Portfolio_MF.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Portfolio/Portfolio_Stocks.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Portfolio/Portfolio_USStocks.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Portfolio/Portfolio_SaveSmart.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Portfolio/Portfolio_Gold.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Portfolio/Portfolio_EPF.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/SIPSTPSWP.robot

@@ -6,3 +6,4 @@ ${e_FD_allFDTab} =  All FDs
 # Application Locator 'KU_<locatorName>'
 # FD Landing Navigation Page
 ${KU_W_FD_allFDTab} =  xpath=//div[contains(text(),'All FDs')]
+${KU_W_FD_FDIcon} =  xpath=//span[contains(text(),'FD')]

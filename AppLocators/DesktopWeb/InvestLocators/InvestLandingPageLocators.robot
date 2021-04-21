@@ -55,7 +55,8 @@ ${e_invest__newfunds_openSwitchText} =  Open Ended
 ${e_invest_watchlistHeader} =  Login to track your favorite funds by adding them to your watch list.	
 ${e_invest_stocks_watchlistHeader} =  Login to track your favorite stocks by adding them to your watch list.	
 ${e_invest_USStocksUSETFAnd52WUS_watchlistHeader} =  Track your favorite stocks by adding them to your watch list.
-${e_invest_US_stocks_defaultFilter} =  Sector    
+${e_invest_US_stocks_defaultFilter} =  Sector 
+${e_invest_fundToastMssgText} =  This fund has been added to your watchlist.   
 	
 # Application Locator 'KU_<locatorName>'
 # Invest Landing Navigation Page
@@ -93,7 +94,7 @@ ${KU_W_52WHighUSSubTitle} =  xpath=(//div[@class='k-cls b-invest-card']/p)[9]
 ${KU_W_52WHighUS_screenText} =  xpath=//div[@class='disable-browser-text-select b-standard-tab__item b-standard-tab__item--active b-standard-tab__item--52-week-high']
 ${KU_W_healthPremiumTitle} =  xpath=//div[@class='b-invest-landing__other-container']//div[1]/p
 ${KU_W_checkPremiumBtn} =  xpath=//h6[contains(.,'Check premium')]
-${KU_W_mutualFund} =  xpath=//span[contains(text(),'MF')]
+${KU_W_mutualFund} =  xpath=(//span[contains(text(),'MF')])[1]
 ${KU_W_mutualFundScreen} =  xpath=(//div[@class='b-explore-fund__action-title'])[1]
 ${KU_W_digitalGold} =  xpath=//span[contains(text(),'Digi gold')]
 ${KU_W_digitalGoldScreen} =  xpath=(//div[@class='b-asset-cta__title'])[3]
@@ -101,6 +102,7 @@ ${KU_W_stocks} =  xpath=(//*[contains(text(),'Stocks')])[2]
 ${KU_W_stocksScreen} =  xpath=(//div[@class='b-explore-stock__action-title'])[1]
 ${KU_W_USStocks} =  xpath=//span[contains(text(),'US stocks')]  
 ${KU_W_saveSmart} =  xpath=//span[contains(text(),'SaveSmart')]
+${KU_W_invest_stocks_crypto_performanceChart} =  xpath=(//div[@class='highcharts-container '])[1]
 ${KU_W_amazonSaveScreen} =  xpath=//div[@class='b-festive-fund-no-investment__text']
 ${KU_W_invest_sortYear} =  xpath=//div[@class='default-message']
 ${KU_W_stockAnd52WIndia_searchBar} =  xpath=(//div[@class='b-explore-stock__action-title'])[1]
@@ -145,7 +147,6 @@ ${KU_W_invest_US_SETFAnd52WUS_watchListHeader} =  xpath=//div[@class='b-stock-it
 ${KU_W_invest_noStocksForUTFAnd52WUS} =  xpath=//div[@class='b-zero-item__label']
 ${KU_W_invest_allStockLinkForUTFAnd52WUS} =  xpath=//div[@class='b-zero-item__btn']
 ${KU_W_invest_US_stocks_exploreTags} =  xpath=//div[@class='b-explore-tags__container']
-${KU_W_invest_stocks_crypto_performanceChart} =  xpath=(//div[@class='highcharts-container '])[1]
 ${KU_W_invest_US_stocks_exploreTagLink1} =  xpath=(//a[@class='b-app-standard-chip disable-browser-text-select b-explore-tags__chip'])[1]
 ${KU_W_invest_US_stocks_exploreTagLink2} =  xpath=(//a[@class='b-app-standard-chip disable-browser-text-select b-explore-tags__chip'])[2]
 ${KU_W_invest_US_stocks_performancePeriod} =  xpath=//div[@class='b-period-option_wrapper disable-browser-text-select']

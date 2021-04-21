@@ -1,17 +1,13 @@
-*** Settings ***
-
-Library     SeleniumLibrary
-
 *** Keywords ***
 
 Verify PreLogin Crypto Landing Page
-    Log To Console  Crypto - Explore More
+    Log To Console  Crypto - Explore
     Wait And Click  ${KU_W_investLink}
     Sleep  1s
     Wait And Click  ${KU_W_crypto_titlefromExplore}
     Sleep  2s
     Verify Page Contains Element  ${KU_W_crypto_tabName}
-    Verify Login And Signup Link
+    Verify Login And Signup On Prelogin
     Verify Page Contains Element  ${KU_W_crypto_coinName}
     Verify Page Contains Element  ${KU_W_crypto_offerPrice}
     Verify Page Contains Image  ${KU_W_crypto_imgIcon}
@@ -28,7 +24,7 @@ Verify PreLogin Crypto Landing Page
     END
     # Iterate the Crypto detail screen
     FOR  ${i}  IN RANGE  1  4
-        @{cryptoNameFromJson} =  Get Json Values  $.Crypto.c${i}  Resources/TestData/Crypto.json 
+        @{cryptoNameFromJson}=  Get Json Values  $.Crypto.c${i}  Resources/TestData/Crypto.json 
         Log To Console  ${cryptoNameFromJson}
         Verify Crypto Details Page  ${cryptoNameFromJson}
     END
@@ -58,10 +54,24 @@ Verify Crypto Details Page
 
 Verify Coin Widget Section
     Verify Page Contains Element  ${KU_W_crypto_boxIcon}
-    Verify Element And Text  ${KU_W_crypto_subText}  ${e_crypto_subText}
-    Verify Page Contains Element  ${KU_W_crypto_keepMePostedBtn}
-    Wait And Click  ${KU_W_crypto_keepMePostedBtn}
-    Verify Login Page
+    # Nested IF ELSE is used as keep me posted button remains enabled postlogin for first option and gets disbaled when clicked
+    ${isLoginButtonVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_login}
+    IF  ${isLoginButtonVisible}
+        Verify Element And Text  ${KU_W_crypto_subText}  ${e_crypto_subText}
+        Verify Page Contains Element  ${KU_W_crypto_keepMePostedBtn}
+        Wait And Click  ${KU_W_crypto_keepMePostedBtn}
+        Verify Login Page
+    ELSE
+        ${isLoginButtonVisible} =  Run Keyword And Return Status  Element Should Be Disabled  ${KU_W_crypto_disabledKeepMePostedBtn}
+        IF  ${isLoginButtonVisible}
+            Verify Element And Text  ${KU_W_crypto_subText}  ${e_crypto_subTextResponse}
+           
+        ELSE
+            Verify Page Contains Element  ${KU_W_crypto_keepMePostedBtn}
+            Wait And Click  ${KU_W_crypto_keepMePostedBtn}
+            Verify Element And Text  ${KU_W_toastMssg}  ${e_crypto_interestMsg}
+        END   
+    END
     Scroll Untill View  ${KU_W_crypto_priceLabel}
     Verify Page Contains Element  ${KU_W_crypto_priceLabel}
     Verify Element And Text  ${KU_W_crypto_todaysHighLabel}  ${e_crypto_todaysHighLabel}
