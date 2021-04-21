@@ -47,6 +47,8 @@ Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/Portfolio/Por
 Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/Portfolio/Portfolio_USStocksLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/Portfolio/Portfolio_SaveSmartLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/Portfolio/Portfolio_GoldLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/Portfolio/Portfolio_EPFLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/SIPSTPSWPLocators.robot
 
 *** Keywords ***
 
@@ -313,6 +315,10 @@ Login
     Input Text  ${KU_W_passwordTxt}  ${pwd}
     Wait And Click  ${KU_W_ca_loginBtn}
 
+Verify Login On Prod With Verifed KYC Account
+    Wait And Click  ${KU_W_login}
+    Login  ${e_postlogin_prod_KYCVerifiedEmail}  ${e_postlogin_pwd}
+
 Verify Registration Page Postlogin 
     [Arguments]  ${KYCMsg}  ${registrationBtn_link}
     Verify Page Contains Element  ${KU_W_postlogin_pageTitle} 
@@ -329,6 +335,7 @@ Verify Login And Signup On Prelogin
 
 Navigate To PortFolio Tab And Verify Investment Title
     [Arguments]  ${title}  ${titleText}  ${subtitle}  ${subtitleText}
+    Sleep  4s
     Wait And Click  ${KU_W_postlogin_portfolioTab}
     Verify Element And Text  ${KU_W_postlogin_portfolio}  ${e_postlogin_portfolioTitle}
     Verify Page Contains Element  ${KU_W_portfolio_startInvesting}

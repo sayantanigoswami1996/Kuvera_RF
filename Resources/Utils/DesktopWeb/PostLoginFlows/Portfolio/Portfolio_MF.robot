@@ -48,8 +48,9 @@ Verify Upload CAS File
     Verify Element And Text  ${KU_W_portfolio_mf_uploadCASLabel}  ${e_portfolio_mf_uploadCAS}
     Verify Page Contains Element  ${KU_W_portfolio_mf_CASPwdLabel}
     # Wait And Click  ${KU_W_portfolio_mf_uploadLink}
-    Choose File  ${KU_W_portfolio_mf_uploadLink}  D:\Phase4\Kuvera_RF\Resources\Utils\Files\CAS.pdf
-    Input Text  ${KU_W_portfolio_mf_pwdField}  ${e_portfolio_mf_CASPwd}
+    Sleep  6s
+    Input Text  ${KU_W_portfolio_mf_uploadFile}  D:\Phase4\Kuvera_RF\Resources\Utils\Files\CAS.pdf
+    Input Text  ${KU_W_postlogin_pwdField}  ${e_portfolio_mf_CASPwd}
     Wait And Click  ${KU_W_postlogin_submitBtn}
     # Enter OTP
     Verify Page Contains Element  ${KU_W_portfolio_mf_importedInvest}

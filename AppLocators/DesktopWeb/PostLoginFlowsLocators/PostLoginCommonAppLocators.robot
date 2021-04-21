@@ -6,6 +6,7 @@ ${e_postlogin_portfolioTitle} =  Portfolio
 ${e_postlogin_noActiveSIPTitle} =  You have no Active SIP. It’s easy to start an SIP
 ${e_postlogin_emailID} =  moolya@kuvera.in 
 ${e_postlogin_pwd} =  kuveratesting123
+${e_postlogin_prod_KYCVerifiedEmail} =  moolya+automation@kuvera.in 
 
 # Application Locator 'KU_<locatorName>'
 # Kuvera :: Wealth Management Simplified
@@ -22,7 +23,7 @@ ${KU_W_postlogin_appStoreBtn} =  xpath=//div[@class='b-app-standard-modal']//div
 ${KU_W_postlogin_playStoreBtn} =  xpath=//div[@class='b-download-app-links-container']//div[1]//a[1]//img[1]
 ${KU_W_postlogin_portfolio} =  xpath=//div[@class='b-portfolio-header__title']
 ${KU_W_postlogin_dasboardTab} =  xpath=//a[contains(text(),'Dashboard')]
-${KU_W_postlogin_portfolioTab} =  xpath=//a[.='Portfolio']
+${KU_W_postlogin_portfolioTab} =  xpath=//a[normalize-space()='Portfolio']
 ${KU_W_postlogin_rewardsTab} =  xpath=//a[contains(text(),'Rewards')]
 ${KU_W_postlogin_blogTab} =  xpath=//a[contains(text(),'Blog')]
 ${KU_W_postlogin_appStoreScreen} =  xpath=//div[@class='localnav-title we-localnav__title']
@@ -56,14 +57,15 @@ ${KU_W_postlogin_yesQuit} =  xpath=//div[contains(text(),'Yes, quit')]
 ${KU_W_postlogin_yesQuit1} =  xpath=//button[normalize-space()='Yes, quit']
 ${KU_W_postlogin_continue} =  xpath=//button[normalize-space()='Continue']
 ${KU_W_postlogin_submitBtn} =  xpath=//button[normalize-space()='Submit']
-${KU_W_portfolio_loginBtn} =  xpath=//button[normalize-space()='Login']
-${KU_W_portfolio_logIN} =  xpath=//button[normalize-space()='LOG IN']
-${KU_W_portfolio_signIN} =  xpath=//button[normalize-space()='SIGN IN']
-${KU_W_portfolio_signinBtn} =  xpath=//button[normalize-space()='Sign In']
-${KU_W_portfolio_doItLater} =  xpath=//p[contains(.,'Do it later')]
+${KU_W_postlogin_pwdField} =  xpath=//input[@placeholder='Password']
 # Portfolio Page
 ${KU_W_portfolio_doYouWantTo} =  xpath=//div[contains(text(),'Do you want to')]
 ${KU_W_portfolio_importFolioTitle} =  xpath=//p[normalize-space()='Import Portfolio']
 ${KU_W_portfolio_getStartedBtn} =  xpath=//button[normalize-space()='Get Started']
 ${KU_W_portfolio_startInvesting} =  xpath=//p[contains(text(),'Start Investing!')]
 ${KU_W_portfolio_updatePAN} =  xpath=//div[contains(text(),'Update your PAN')]
+${KU_W_portfolio_loginBtn} =  xpath=//button[normalize-space()='Login']
+${KU_W_portfolio_logIN} =  xpath=//button[normalize-space()='LOG IN']
+${KU_W_portfolio_signIN} =  xpath=//button[normalize-space()='SIGN IN']
+${KU_W_portfolio_signinBtn} =  xpath=//button[normalize-space()='Sign In']
+${KU_W_portfolio_doItLater} =  xpath=//p[contains(.,'Do it later')]

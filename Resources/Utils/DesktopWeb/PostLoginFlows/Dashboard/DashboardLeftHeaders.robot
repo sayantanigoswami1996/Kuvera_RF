@@ -24,9 +24,7 @@ Verify PostLogin Left Bar Navigation
     Wait And Click  ${KU_W_postlogin_manageFolioTab}
     Verify Registration Page Postlogin  ${e_managefolio_completeKYCMsg}  ${KU_W_managefolio_registrationBtn}
     # SIP STP AND SWP
-    Verify Page Contains Element  ${KU_W_postlogin_SIP_STP_SWPTab} 
-    Wait And Click  ${KU_W_postlogin_SIP_STP_SWPTab} 
-    Verify Element And Text  ${KU_W_postlogin_noActiveSIPTitle}  ${e_postlogin_noActiveSIPTitle}
+    Verify SIP Tab
     # Set A Goal
     Verify Page Contains Element  ${KU_W_postlogin_setAGoalTab}
     Wait And Click  ${KU_W_postlogin_setAGoalTab}
@@ -36,3 +34,8 @@ Verify PostLogin Left Bar Navigation
     # Dashboard
     Wait And Click  ${KU_W_postlogin_dasboardTab}
     Verify Page Contains Element  ${KU_W_dashboard_exploreTitle}
+
+Verify SIP Tab
+    Verify Page Contains Element  ${KU_W_postlogin_SIP_STP_SWPTab} 
+    Wait And Click  ${KU_W_postlogin_SIP_STP_SWPTab} 
+    Verify Element And Text  ${KU_W_postlogin_noActiveSIPTitle}  ${e_postlogin_noActiveSIPTitle}

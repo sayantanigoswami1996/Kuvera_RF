@@ -14,7 +14,6 @@ Suite Teardown  Close All Browsers
 # To run specific test on Stage3 : robot --variable BROWSER:headlesschrome --variable ENV:Stage3 -d Results -i TC20 Tests/DesktopWeb/Tests.robot
 
 *** Test Cases ***
-
 # Landing Page widgets verfication
 Landing Page Widgets Verification
     [Tags]  TC01  Prod  Stage3  Stage2
@@ -308,14 +307,37 @@ Savesmart Portfolio Navigation Postlogin With KYC
 # Gold Portfolio Navigation Postlogin Without KYC
 Gold Portfolio Navigation Postlogin Without KYC
     [Tags]  TC44  Stage3
-    # [Teardown]  Logout From App And Navigate To Home Page PostLogin
+    [Teardown]  Logout From App And Navigate To Home Page PostLogin
     Verify PostLogin Account Creation
     Verify PostLogin Gold Portfolio Menu Navigation Without KYC
 
 # Gold Portfolio Navigation Postlogin With KYC
 Gold Portfolio Navigation Postlogin With KYC
     [Tags]  TC45  Stage3
-    # [Teardown]  Logout From App And Navigate To Home Page PostLogin
+    [Teardown]  Logout From App And Navigate To Home Page PostLogin
     Verify PostLogin Account Creation
     Verify PAN Verifed KYC Details
     Verify PostLogin Gold Portfolio Menu Navigation With KYC
+
+# EPF Portfolio Navigation Postlogin With KYC
+EPF Portfolio Navigation Postlogin With KYC
+    [Tags]  TC46  Prod  Stage2
+    [Teardown]  Navigate To Home Page
+    Verify Login On Prod With Verifed KYC Account  
+    Verify PostLogin EPF Portfolio Menu Navigation With KYC
+    Logout From App Post Signup
+    
+# SIP STP And SWP Navigation Postlogin Without KYC
+SIP STP And SWP Navigation Postlogin Without KYC
+    [Tags]  TC47  Stage3
+    [Teardown]  Logout From App And Navigate To Home Page PostLogin
+    Verify PostLogin Account Creation
+    Verify PostLogin SIP STP And SWP Menu Navigation
+
+# SIP STP And SWP Navigation Postlogin With KYC
+SIP STP And SWP Navigation Postlogin With KYC
+    [Tags]  TC48  Stage3
+    [Teardown]  Logout From App And Navigate To Home Page PostLogin
+    Verify PostLogin Account Creation
+    Verify PAN Verifed KYC Details
+    Verify PostLogin SIP STP And SWP Menu Navigation 

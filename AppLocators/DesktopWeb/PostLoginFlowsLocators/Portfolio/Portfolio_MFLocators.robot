@@ -6,7 +6,7 @@ ${e_portfolio_mf_allFundsText} =  All funds
 ${e_portfolio_mf_externalFundsDesc} =  Consolidate and track all your mutual\nfund investments in one place.        
 ${e_portfolio_mf_emailLabel} =  Import Portfolio
 ${e_portfolio_mf_emailDesc} =  Enter an email address you use for investments external to Kuvera. We’ll use this to request the Consolidated Account Statement (CAS) of all mutual fund investments linked with that email. 
-${e_portfolio_mf_investmentEmailID} =  moolya@kuvera.in
+${e_portfolio_mf_investmentEmailID} =  sayantani.goswami@moolya.com
 ${e_portfolio_mf_importDesc} =  Visit CAMS website and follow the instructions given in the video:
 ${e_portfolio_mf_CMSPageTitle} =  Get Consolidated Account Statement - CAMS+KFintech+FTAMIL+SBFS
 ${e_portfolio_mf_alreadyHaveCAS} =  Already have a CAS?
@@ -41,7 +41,7 @@ ${KU_W_portfolio_mf_uploadCASSubTitle} =  xpath=//div[@class='b-upload-cas__desc
 ${KU_W_portfolio_mf_uploadCASLabel} =  xpath=//p[@class='b-upload-cas__btn-box__msg']
 ${KU_W_portfolio_mf_CASPwdLabel} =  xpath=//label[normalize-space()='Password to open CAS']
 ${KU_W_portfolio_mf_uploadLink} =  xpath=//span[@class='b-upload-cas__btn-box__content__label']
-${KU_W_portfolio_mf_pwdField} =  xpath=//input[@placeholder='Password']
+${KU_W_portfolio_mf_uploadFile} =  xpath=//div[@class='b-upload-cas__btn-box__content__file-info']
 ${KU_W_portfolio_mf_importedInvest} =  xpath=///div[contains(text(),'Imported your Investments')]
 ${KU_W_portfolio_mf_importedInvestDesc} =  xpath=(//div[@class='message'])[1]
 # Update PAN Page
