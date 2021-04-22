@@ -25,8 +25,12 @@ Verify PreLogin Set A Goal Page
     ${goal8}  Get Json Values  $.Goals.g8  Resources/TestData/Goals.json
 
     Click Element  ${KU_W_featureLink}
-    Wait For Element Visibility  ${KU_W_feature_setAGoalLink}
-    Click Element  ${KU_W_feature_setAGoalLink}
+    ${isLoginButtonVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_login}
+    IF  ${isLoginButtonVisible}
+        Wait And Click  ${KU_W_feature_setAGoalLink}
+    ELSE
+        Wait And Click  ${KU_W_feature_post_setAGoalLink}
+    END
 
     Wait For Element Visibility  ${KU_W_feature_sg_screenTitle}
     Verify Element And Text  ${KU_W_feature_sg_screenTitle}  ${e_feature_sg_screenTitle}
@@ -97,3 +101,25 @@ Verify Recommendation And Navigation
 Visibility Of Signup Page
     Wait For Element Visibility  ${KU_W_signupPageTitle}
     Element Should Be Visible  ${KU_W_signupPageTitle}
+
+Verify Profile Page Or Add Goal Action On Pre And PostLogin
+    [Arguments]  ${profile}
+    ${isLoginButtonVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_login}
+    IF  ${isLoginButtonVisible}
+        Verify Recommendation And Navigation  ${profile}    
+    ELSE
+        Log To Console  Navigating To Add Goal Page
+        Wait And Click  ${KU_W_feature_sg_addThisGoalBtn} 
+        Wait And Click  ${KU_W_feature_sg_getThisPlan}
+        Wait And Click  ${KU_W_featureLink}
+        Wait And Click  ${KU_W_feature_post_setAGoalLink}
+    END
+
+Verify Name And Age Questionnaire On PreLogin
+    ${isLoginButtonVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_login}
+    IF  ${isLoginButtonVisible}
+        Verify Question And Enter Input  ${KU_W_feature_sg_Q_userName}  ${query1}  ${KU_W_feature_sg_userNameTxt}  ${e_feature_sg_userName}
+        Verify Question And Enter Input  ${KU_W_feature_sg_Q_userAge}  ${query2}  ${KU_W_feature_sg_userAgeTxt}  ${e_feature_sg1_userAge}
+    ELSE
+        Log To Console  Navigating To Third Questionnaire
+    END

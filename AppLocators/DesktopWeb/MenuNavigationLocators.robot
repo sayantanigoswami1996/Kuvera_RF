@@ -378,6 +378,7 @@ ${KU_W_featureSubList} =  xpath=//div[@class='b-header__sub-content']/div/a
 
 # Feature - Set a Goal
 ${KU_W_feature_setAGoalLink} =  xpath=//a[contains(text(),'Set a Goal')]
+${KU_W_feature_post_setAGoalLink} =  xpath=(//a[contains(text(),'Set a goal')])[1]
 ${KU_W_feature_goalsList} =  xpath=//div[@class='b-flat-card b-more-goals-options__goal']//div[2]
 ${KU_W_feature_sg_screenTitle} =  xpath=//div[contains(text(),'Set your goal')]
 ${KU_W_feature_sg_screenSubTitle} =  xpath=//div[@class='k-ui__para--standard b-more-goal-list__about-subheading']
@@ -427,6 +428,8 @@ ${KU_W_feature_sg_monthlyInvestTxt} =  xpath=//input[@name='sip']
 ${KU_W_feature_sg_monthlyExpenseTxt} =  xpath=//input[@name='expense']
 ${KU_W_feature_sg_retireAgeTxt} =  xpath=//input[@name='retireage']
 ${KU_W_feature_sg_goalNameTxt} =  xpath=//input[@name='goalname']
+# PostLogin
+${KU_W_feature_sg_addThisGoalBtn} =  xpath=//button[@type='button']
 
 
 # Feature-TradeSmart Page

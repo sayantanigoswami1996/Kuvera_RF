@@ -341,3 +341,11 @@ SIP STP And SWP Navigation Postlogin With KYC
     Verify PostLogin Account Creation
     Verify PAN Verifed KYC Details
     Verify PostLogin SIP STP And SWP Menu Navigation 
+
+# Set A Goal Navigation Postlogin Under Features
+Set A Goal Navigation Postlogin Under Features
+    [Tags]  TC49  Stage3
+    [Teardown]  Logout From App And Navigate To Home Page PostLogin
+    Verify PostLogin Account Creation
+    Verify PAN Verifed KYC Details
+    Verify PostLogin Set A Goal Menu Navigation 

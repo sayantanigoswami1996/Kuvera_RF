@@ -12,7 +12,7 @@ Verify PostLogin EPF Portfolio Menu Navigation With KYC
         IF  ${isElementVisible}
             Exit For Loop
         ELSE
-            Sleep  100s
+            Sleep  200s
             Reload Page
         END
     END
