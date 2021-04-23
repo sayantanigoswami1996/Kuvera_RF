@@ -78,3 +78,5 @@ Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Portfolio/Portfolio_
 Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Portfolio/Portfolio_EPF.robot
 Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/SIPSTPSWP.robot
 Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Po_Features/Po_SetAGoal.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Po_Loans.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/SetAGoal_LeftBar.robot

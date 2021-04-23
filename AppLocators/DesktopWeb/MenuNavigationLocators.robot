@@ -295,7 +295,9 @@ ${KU_W_image4Description} =  xpath=(//div[@class='b-flow-chart__description'])[4
 ${KU_W_getLoanAgainstMF} =  xpath=//div[@class='b-start-save b-kuvera-get-loan']/div[1]/div[1]
 ${KU_W_getLoanAgainstMFMsg} =  xpath=//div[@class='b-start-save b-kuvera-get-loan']/div[1]/div[2]
 ${KU_W_startSaveCheckEligibilityBtn} =  xpath=//button[@class='button-primary b-start-save__btn b-start-save__btn-desktop']
- 
+# Loans Postlogin
+${KU_W_mobleNumPANPage} =  xpath=//span[normalize-space()='Enter mobile number']
+
 # Insure Navigation Page  
 ${KU_W_insureLink} =  xpath=//a[contains(text(),'Insure')]
 ${KU_W_insureHeaderTitle} =  xpath=(//div[@class='b-health-insurance-landing__title--main'])[1]
@@ -429,7 +431,7 @@ ${KU_W_feature_sg_monthlyExpenseTxt} =  xpath=//input[@name='expense']
 ${KU_W_feature_sg_retireAgeTxt} =  xpath=//input[@name='retireage']
 ${KU_W_feature_sg_goalNameTxt} =  xpath=//input[@name='goalname']
 # PostLogin
-${KU_W_feature_sg_addThisGoalBtn} =  xpath=//button[@type='button']
+${KU_W_feature_sg_needToInvest} =  xpath=//div[@class='investment-summary']//div//h2
 
 
 # Feature-TradeSmart Page

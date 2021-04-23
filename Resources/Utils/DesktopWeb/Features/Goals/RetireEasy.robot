@@ -17,7 +17,7 @@ Verify Retire Easy Questionnaire
     Wait For Element Visibility  ${KU_W_feature_sg_questionScreen}
 
     # Verify the questionnaires title and enter the input values
-    Verify Name And Age Questionnaire On PreLogin
+    Verify Name And Age Questionnaire On PreLogin  ${query1}  ${query2}
     Verify Question And Enter Input  ${KU_W_feature_sg_Q3}  ${query3}  ${KU_W_feature_sg_monthlyExpenseTxt}  ${e_feature_sg4_montlyExpense}
     Verify Question Title  ${KU_W_feature_sg_Q4}  ${query4} 
     Sleep  1s

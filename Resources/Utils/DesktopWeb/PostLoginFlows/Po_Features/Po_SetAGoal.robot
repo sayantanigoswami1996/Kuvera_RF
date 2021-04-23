@@ -2,24 +2,21 @@
 
 Verify PostLogin Set A Goal Menu Navigation
     Log To Console  Set A Goal Menu Navigation
+    Navigation To Set A Goal Under Features
+    Verify Set A Goal Landing Page 
+    Navigation To Goals
 
-    ${goal1}  Get Json Values  $.Goals.g1  Resources/TestData/Goals.json
-    ${goal2}  Get Json Values  $.Goals.g2  Resources/TestData/Goals.json
-    ${goal3}  Get Json Values  $.Goals.g3  Resources/TestData/Goals.json
-    ${goal4}  Get Json Values  $.Goals.g4  Resources/TestData/Goals.json
-    ${goal5}  Get Json Values  $.Goals.g5  Resources/TestData/Goals.json
-    ${goal6}  Get Json Values  $.Goals.g6  Resources/TestData/Goals.json
-    ${goal7}  Get Json Values  $.Goals.g7  Resources/TestData/Goals.json
-    ${goal8}  Get Json Values  $.Goals.g8  Resources/TestData/Goals.json
-
+Navigation To Set A Goal Under Features
     Wait And Click  ${KU_W_featureLink}
     Wait And Click  ${KU_W_feature_post_setAGoalLink}
-    
+
+Verify Set A Goal Landing Page 
     Wait For Element Visibility  ${KU_W_feature_sg_screenTitle}
     Verify Element And Text  ${KU_W_feature_sg_screenTitle}  ${e_feature_sg_screenTitle}
     Verify Element And Text  ${KU_W_feature_sg_screenSubTitle}  ${e_feature_sg_screenSubTitle}
     Verify Element And Text  ${KU_W_feature_sg_content}  ${e_feature_sg_content}
 
+Navigation To Goals
     # Own A Home
     Log To Console  Own A Home
     Verify Own A Home Questionnaire

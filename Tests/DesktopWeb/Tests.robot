@@ -342,9 +342,25 @@ SIP STP And SWP Navigation Postlogin With KYC
     Verify PAN Verifed KYC Details
     Verify PostLogin SIP STP And SWP Menu Navigation 
 
+# Set A Goal Navigation Postlogin Under Left Bar
+Set A Goal Navigation Postlogin Under Left Bar
+    [Tags]  TC49  Stage3
+    [Teardown]  Logout From App And Navigate To Home Page PostLogin
+    Verify PostLogin Account Creation
+    Verify PAN Verifed KYC Details
+    Verify PostLogin Set A Goal Under Left Bar
+
+# Loan Menu Navigation Postlogin
+Loan Menu Navigation Postlogin
+    [Tags]  TC50  Stage3
+    [Teardown]  Logout From App And Navigate To Home Page PostLogin
+    Verify PostLogin Account Creation
+    Verify PAN Verifed KYC Details
+    Verify PostLogin Loans Menu Navigation 
+
 # Set A Goal Navigation Postlogin Under Features
 Set A Goal Navigation Postlogin Under Features
-    [Tags]  TC49  Stage3
+    [Tags]  TC51  Stage3
     [Teardown]  Logout From App And Navigate To Home Page PostLogin
     Verify PostLogin Account Creation
     Verify PAN Verifed KYC Details

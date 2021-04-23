@@ -16,7 +16,7 @@ Verify Foreign Vacation Questionnaire
     Wait For Element Visibility  ${KU_W_feature_sg_questionScreen}
 
     # Verify the questionnaires title and enter the input values
-    Verify Name And Age Questionnaire On PreLogin
+    Verify Name And Age Questionnaire On PreLogin  ${query1}  ${query2}
     Verify Question And Enter Input  ${KU_W_feature_sg_Q3}  ${query3}  ${KU_W_feature_sg_costTxt}  ${e_feature_sg7_cost}
     Verify Question And Enter Input  ${KU_W_feature_sg_Q4}  ${query4}  ${KU_W_feature_sg_goalDurationTxt}  ${e_feature_sg7_goalDuration}
     Verify Question And Enter Input  ${KU_W_feature_sg_Q5}  ${query5}  ${KU_W_feature_sg_investUpfrontTxt}  ${e_feature_sg7_investUpfront}
