@@ -1,7 +1,6 @@
 *** Keywords ***
 
 Verify PostLogin Set A Goal Menu Navigation
-    Log To Console  Set A Goal Menu Navigation
     Navigation To Set A Goal Under Features
     Verify Set A Goal Landing Page 
     Navigation To Goals

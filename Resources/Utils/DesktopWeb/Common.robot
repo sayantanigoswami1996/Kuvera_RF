@@ -330,7 +330,7 @@ Verify Login And Signup On Prelogin
     IF  ${isLoginButtonVisible}  
         Verify Login And Signup Link
     ELSE  
-        Log To Console  Continue
+        Log To Console  We are on postlogin features
     END
 
 Navigate To PortFolio Tab And Verify Investment Title

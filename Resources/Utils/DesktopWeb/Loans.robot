@@ -6,12 +6,7 @@ Library     SeleniumLibrary
 
 Verify PreLogin Loans Page
     Wait And Click  ${KU_W_loanLink}
-    ${isLoginButtonVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_login}
-    IF  ${isLoginButtonVisible}  
-        Verify Login And Signup Link
-    ELSE  
-        Log To Console  We are on postlogin features
-    END
+    Verify Login And Signup On Prelogin
     Wait For Element Visibility  ${KU_W_loanHeaderTitle}  
     Verify Element And Text  ${KU_W_loanHeaderTitle}  ${e_loan_headerTitleText}
     Verify Element And Text  ${KU_W_loanHeaderMsg}  ${e_loan_headerMsgText} 

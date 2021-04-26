@@ -358,10 +358,18 @@ Loan Menu Navigation Postlogin
     Verify PAN Verifed KYC Details
     Verify PostLogin Loans Menu Navigation 
 
-# Set A Goal Navigation Postlogin Under Features
-Set A Goal Navigation Postlogin Under Features
+# Remit Menu Navigation Postlogin
+Remit Menu Navigation Postlogin
     [Tags]  TC51  Stage3
     [Teardown]  Logout From App And Navigate To Home Page PostLogin
     Verify PostLogin Account Creation
     Verify PAN Verifed KYC Details
-    Verify PostLogin Set A Goal Menu Navigation 
+    Verify PostLogin Remit Menu Navigation 
+
+# Postlogin Navigation Of Features
+Postlogin Navigation Of Features
+    [Tags]  TC52  Stage3
+    [Teardown]  Logout From App And Navigate To Home Page PostLogin
+    Verify PostLogin Account Creation
+    Verify PAN Verifed KYC Details
+    PostLogin Feature Sub Header Navigation 
