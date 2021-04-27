@@ -49,6 +49,7 @@ Verify Explore Section
     
 Verify Investments Navigation
     [Arguments]  ${link}  ${screenTitle}
+    Sleep  2s
     Wait And Click  ${link}
     Wait For Element Visibility  ${screenTitle}
     Verify Page Contains Element  ${screenTitle}

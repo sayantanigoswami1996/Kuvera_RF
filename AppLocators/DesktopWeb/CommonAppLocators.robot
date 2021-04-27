@@ -31,7 +31,7 @@ ${e_familyAccountLinkTitle} =  Joint And Family Accounts on Kuvera - Kuvera
 ${e_consolidateTrackBtn} =  Consolidate & track
 ${e_consolidateTrackLinkTitle} =  Automatic tracking of external transactions | Wealth Management Simplified | Kuvera
 ${e_manageTodayBtn} =  Manage Today
-${e_manageTodayLinkTitle} =  Managed Accounts: add a manager to handhold your Kuvera account - Kuvera
+${e_manageTodayLinkTitle} =  Managed Accounts: add a manager to handhold your Kuvera account - Kuvera
 ${e_setAGoalBtn} =  Set a goal
 ${e_setAGoalLinkTitle} =  Unified goal planning or how to invest less and achieve your financial goals? - Kuvera
 ${e_sendMoneyBtn} =  Send money
@@ -47,11 +47,11 @@ ${e_usersMsg} =   We revolutionized the way India invests. With your feedback we
 ${e_earnTitle} =  Earn up to 1.5% more returns*
 ${e_earnMsg} =  We pioneered commission free Direct Plan investing.\nEarn from our expertise and don't pay commission ever.
 ${e_earnLearnLink} =   Learn how!
-${e_coreAUAValue} =  ₹ 21,000
+${e_coreAUAValue} =  ₹ 20,000
 ${e_coreAUAText} =  Crore AUA       
 ${e_citiesValue} =  4 Lakh
 ${e_citiesText} =   Goals
-${e_transValue} =   2.6 Crore
+${e_transValue} =   2.4 Crore
 ${e_transText} =  Transactions
 
 ${e_stock_filterTitleText} =  Filter
@@ -220,3 +220,4 @@ ${KU_W_tc_twitterBtn} =  xpath=//div[@class='b-app-standard-social-options-conta
 ${KU_W_tc_whatsappBtn} =  xpath=//div[@class='b-app-standard-social-options-container']//a[3]
 ${KU_W_tc_telegramBtn} =  xpath=//div[@class='b-app-standard-social-options-container']//a[4]
 ${KU_W_tc_mailBtn} =  xpath=//div[@class='b-app-standard-social-options-container']//a[5]
+${KU_W_toastMssg} =  xpath=//div[@class='b-app-standard-snackbar__box-text']

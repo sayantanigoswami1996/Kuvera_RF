@@ -15,122 +15,122 @@ Suite Teardown  Close All Browsers
 
 *** Test Cases ***
 
-# Landing Page widgets verfication
-Landing Page Widgets Verification
-    [Tags]  TC01  Prod  Stage3  Stage2
-    [Teardown]  Navigate To Home Page
-    Verify PreLogin Widgets
+# # Landing Page widgets verfication
+# Landing Page Widgets Verification
+#     [Tags]  TC01  Prod  Stage3  Stage2
+#     [Teardown]  Navigate To Home Page
+#     Verify PreLogin Widgets
 
-# Header navigation - Insure, Loans, Remit
-Header Navigation
-    [Tags]  TC02  Prod  Stage3  Stage2
-    [Teardown]  Navigate To Home Page
-    PreLogin Header Navigation
+# # Header navigation - Insure, Loans, Remit
+# Header Navigation
+#     [Tags]  TC02  Prod  Stage3  Stage2
+#     [Teardown]  Navigate To Home Page
+#     PreLogin Header Navigation
 
-# Features sub headers navigation & goals - questionnaire
-Features Header Navigation
-    [Tags]  TC03  Prod  Stage3  Stage2
-    [Teardown]  Navigate To Home Page
-    PreLogin Feature Sub Header Navigation
+# # Features sub headers navigation & goals - questionnaire
+# Features Header Navigation
+#     [Tags]  TC03  Prod  Stage3  Stage2
+#     [Teardown]  Navigate To Home Page
+#     PreLogin Feature Sub Header Navigation
 
-# Verify all widgets in Login & Signup Page
-Login and Signup Page Navigation Test
-    [Tags]  TC04  Prod  Stage3  Stage2
-    [Teardown]  Navigate To Home Page
-    Verify PreLogin Login Page Widgets
-    Go Back
-    Verify PreLogin Signup Page Widgets
-    Go Back
+# # Verify all widgets in Login & Signup Page
+# Login and Signup Page Navigation Test
+#     [Tags]  TC04  Prod  Stage3  Stage2
+#     [Teardown]  Navigate To Home Page
+#     Verify PreLogin Login Page Widgets
+#     Go Back
+#     Verify PreLogin Signup Page Widgets
+#     Go Back
 
-# Invest Landing Page Navigation
-Invest Tiles And Widgets Navigation
-    [Tags]  TC05  Prod  Stage3  Stage2
-    [Teardown]  Navigate To Home Page
-    Verify PreLogin Invest Tiles
+# # Invest Landing Page Navigation
+# Invest Tiles And Widgets Navigation
+#     [Tags]  TC05  Prod  Stage3  Stage2
+#     [Teardown]  Navigate To Home Page
+#     Verify PreLogin Invest Tiles
 
-# Invest Mutual Fund
-Invest Mutual Fund Navigation
-    [Tags]  TC06  Prod  Stage3  Stage2
-    [Teardown]  Navigate To Home Page
-    Verify PreLogin Mutual Fund Landing Page
+# # Invest Mutual Fund
+# Invest Mutual Fund Navigation
+#     [Tags]  TC06  Prod  Stage3  Stage2
+#     [Teardown]  Navigate To Home Page
+#     Verify PreLogin Mutual Fund Landing Page
 
-# Invest Digital Gold
-Invest Digital Gold Navigation
-    [Tags]  TC07  Prod  Stage3  Stage2
-    [Teardown]  Navigate To Home Page
-    Verify PreLogin Digital Gold Landing Page
+# # Invest Digital Gold
+# Invest Digital Gold Navigation
+#     [Tags]  TC07  Prod  Stage3  Stage2
+#     [Teardown]  Navigate To Home Page
+#     Verify PreLogin Digital Gold Landing Page
 
-# Invest Stocks
-Invest Stocks Navigation
-    [Tags]  TC08  Prod  Stage3  Stage2
-    [Teardown]  Navigate To Home Page
-    Verify PreLogin Stocks Landing Page
+# # Invest Stocks
+# Invest Stocks Navigation
+#     [Tags]  TC08  Prod  Stage3  Stage2
+#     [Teardown]  Navigate To Home Page
+#     Verify PreLogin Stocks Landing Page
 
-# Invest US Stocks
-Invest US Stocks Navigation
-    [Tags]  TC09  Prod  Stage3  Stage2
-    [Teardown]  Navigate To Home Page
-    Verify PreLogin US Stocks Landing Page
+# # Invest US Stocks
+# Invest US Stocks Navigation
+#     [Tags]  TC09  Prod  Stage3  Stage2
+#     [Teardown]  Navigate To Home Page
+#     Verify PreLogin US Stocks Landing Page
 
-# Invest Save Smart
-Invest Save Smart Navigation
-    [Tags]  TC10  Prod  Stage3  Stage2
-    [Teardown]  Navigate To Home Page
-    Verify PreLogin Save Smart Landing Page
+# # Invest Save Smart
+# Invest Save Smart Navigation
+#     [Tags]  TC10  Prod  Stage3  Stage2
+#     [Teardown]  Navigate To Home Page
+#     Verify PreLogin Save Smart Landing Page
 
-# Invest Crypto
-Invest Crypto Navigation
-    [Tags]  TC11  Prod  Stage3  Stage2
-    [Teardown]  Navigate To Home Page
-    Verify PreLogin Crypto Landing Page
+# # Invest Crypto
+# Invest Crypto Navigation
+#     [Tags]  TC11  Prod  Stage3  Stage2
+#     [Teardown]  Navigate To Home Page
+#     Verify PreLogin Crypto Landing Page
 
-# Footer Section
-Verify Footer Section
-    [Tags]  TC12  Prod  Stage3  Stage2
-    [Teardown]  Navigate To Home Page
-    Verify PreLogin Footer
+# # Footer Section
+# Verify Footer Section
+#     [Tags]  TC12  Prod  Stage3  Stage2
+#     [Teardown]  Navigate To Home Page
+#     Verify PreLogin Footer
 
-# Fund House Details
-All Fund House Details Navigation
-    [Tags]  TC13  Prod  Stage3  Stage2
-    [Teardown]  Navigate To Home Page
-    Verify PreLogin All Fund House Details
+# # Fund House Details
+# All Fund House Details Navigation
+#     [Tags]  TC13  Prod  Stage3  Stage2
+#     [Teardown]  Navigate To Home Page
+#     Verify PreLogin All Fund House Details
 
-# ----------------- Unauthenticated Links -----------------
-# Unauthenticated Links - Liquid Fund
-Liquid Fund Page Navigation
-    [Tags]  TC14  Stage2
-    Verify PreLogin Liquid Fund Page
+# # ----------------- Unauthenticated Links -----------------
+# # Unauthenticated Links - Liquid Fund
+# Liquid Fund Page Navigation
+#     [Tags]  TC14  Stage2
+#     Verify PreLogin Liquid Fund Page
 
-# Unauthenticated Links - Forgot Password
-Forgot Password Page Navigation
-    [Tags]  TC15  Stage2
-     Verify PreLogin Forgot Password Page
+# # Unauthenticated Links - Forgot Password
+# Forgot Password Page Navigation
+#     [Tags]  TC15  Stage2
+#      Verify PreLogin Forgot Password Page
 
-# Unauthenticated Links - E Sign KYC- Failed
-E Sign KYC - Failed Navigation
-    [Tags]  TC16  Stage2
-    Verify PostLogin E Sign KYC Failed Page
+# # Unauthenticated Links - E Sign KYC- Failed
+# E Sign KYC - Failed Navigation
+#     [Tags]  TC16  Stage2
+#     Verify PostLogin E Sign KYC Failed Page
 
-# Unauthenticated Links - E Sign KYC- Completed
-E Sign KYC - Completed Navigation
-    [Tags]  TC17  Stage2
-    Verify PostLogin E Sign KYC Completed Page
+# # Unauthenticated Links - E Sign KYC- Completed
+# E Sign KYC - Completed Navigation
+#     [Tags]  TC17  Stage2
+#     Verify PostLogin E Sign KYC Completed Page
 
-# Unauthenticated Links - Amazon Save Shop
-Amazon Save Shop Navigation
-    [Tags]  TC18  Stage2
-    Verify PreLogin Amazon Save Shop Page
+# # Unauthenticated Links - Amazon Save Shop
+# Amazon Save Shop Navigation
+#     [Tags]  TC18  Stage2
+#     Verify PreLogin Amazon Save Shop Page
 
-# Unauthenticated Links - Gold Rush
-Gold Rush Navigation
-    [Tags]  TC19  Stage2
-    Verify PreLogin Gold Rush Page
+# # Unauthenticated Links - Gold Rush
+# Gold Rush Navigation
+#     [Tags]  TC19  Stage2
+#     Verify PreLogin Gold Rush Page
 
-# Unauthenticated Links - Dhanteras Gold Offer
-Dhanteras Gold Offer Navigation
-    [Tags]  TC20  Stage2
-    Verify PreLogin Dhanteras Gold Offer Page
+# # Unauthenticated Links - Dhanteras Gold Offer
+# Dhanteras Gold Offer Navigation
+#     [Tags]  TC20  Stage2
+#     Verify PreLogin Dhanteras Gold Offer Page
 
 # ----------------- Post Login -----------------
 # Account Creation and Fill In KYC From Dashboard
@@ -185,16 +185,30 @@ Invite Friends Menu Navigation
     Verify PostLogin Account Creation
     Verify PostLogin Invite Friends Menu Navigation
 
-# Manage Folio Menu Navigation
-Manage Folio Menu Navigation
+# Manage Folio Menu Navigation Without KYC
+Manage Folio Menu Navigation Without KYC
     [Tags]  TC28  Stage3
     [Teardown]  Logout From App And Navigate To Home Page PostLogin
     Verify PostLogin Account Creation
-    Verify PostLogin Manage Folio Menu Navigation
+    Verify PostLogin Manage Folio Menu Navigation Without KYC
 
-# Reports Menu Navigation
-Reports Menu Navigation
+# Manage Folio Menu Navigation With KYC
+Manage Folio Menu Navigation With KYC
     [Tags]  TC29  Stage3
     [Teardown]  Logout From App And Navigate To Home Page PostLogin
     Verify PostLogin Account Creation
-    Verify PostLogin Reports Menu Navigation
+    Verify PostLogin Manage Folio Navigation With KYC
+
+# Reports Menu Navigation Without KYC
+Reports Menu Navigation Without KYC
+    [Tags]  TC30  Stage3
+    [Teardown]  Logout From App And Navigate To Home Page PostLogin
+    Verify PostLogin Account Creation
+    Verify PostLogin Reports Menu Navigation Without KYC 
+
+# Reports Menu Navigation With KYC
+Reports Menu Navigation With KYC
+    [Tags]  TC31  Stage3
+    [Teardown]  Logout From App And Navigate To Home Page PostLogin
+    Verify PostLogin Account Creation
+    Verify PostLogin Reports Menu Navigation With KYC 

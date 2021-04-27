@@ -77,6 +77,10 @@ Verify Page Contains Image
     [Arguments]  ${image}
     Run Keyword And Continue On Failure  Page Should Contain Image  ${image}
 
+Verify Page Contains Text
+    [Arguments]  ${text}
+    Run Keyword And Continue On Failure  Page Should Contain  ${text}
+
 Scroll Untill View
     [Arguments]  ${element}
     Scroll Element Into View  ${element}
@@ -88,6 +92,10 @@ Verify Page Contains Link
 Verify Page Contains Button
     [Arguments]  ${button}
     Run Keyword And Continue On Failure  Page Should Contain Button  ${button}
+
+Verify Disabled Element
+    [Arguments]  ${element}
+    Run Keyword And Continue On Failure  Element Should Be Disabled  ${element}
 
 Compare Lists
     [Arguments]  ${actualList}   ${expectedList}
@@ -245,7 +253,7 @@ Logout From App And Navigate To Home Page PostLogin
     Go To  ${URL_stage3}
     Set Window Size  ${1920}  ${1080}
     Reload Page
-    Sleep  15s
+    Sleep  12s
 
 Generate Random Number
     [Arguments]  ${startingrange}  ${endingrange}
@@ -284,17 +292,77 @@ Verify Social Sharing Option
     Wait Scroll And Click Element  ${KU_W_HI_mailLink} 
 
 Logout From App Post Signup
+    Sleep  2s
     Wait And Click  ${KU_W_ca_caretDropdown}
     Sleep  2s
     Wait And Click  ${KU_W_ca_logoutBtn}
     Sleep  4s
     Go Back
 
+Login 
+    [Arguments]  ${email}  ${pwd}
+    Log To Console  Login 
+    Wait And Click  ${KU_W_emailTxt}  
+    Input Text  ${KU_W_emailTxt}  ${email}
+    Wait And Click  ${KU_W_passwordTxt}
+    Input Text  ${KU_W_passwordTxt}  ${pwd}
+    Wait And Click  ${KU_W_ca_loginBtn}
+
+Verify Login On Prod With Verifed KYC Account
+    Wait And Click  ${KU_W_login}
+    Login  ${e_postlogin_prod_KYCVerifiedEmail}  ${e_postlogin_pwd}
+
 Verify Registration Page Postlogin 
     [Arguments]  ${KYCMsg}  ${registrationBtn_link}
     Verify Page Contains Element  ${KU_W_postlogin_pageTitle} 
     Verify Element And Text  ${KU_W_postlogin_completeKYCMsg}  ${KYCMsg}
     Verify Page Contains Element  ${registrationBtn_link}
-    
+
+Verify Login And Signup On Prelogin
+    ${isLoginButtonVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_login}
+    IF  ${isLoginButtonVisible}  
+        Verify Login And Signup Link
+    ELSE  
+        Log To Console  We are on postlogin features
+    END
+
+Navigate To PortFolio Tab And Verify Investment Title
+    [Arguments]  ${title}  ${titleText}  ${subtitle}  ${subtitleText}
+    Sleep  4s
+    Wait And Click  ${KU_W_postlogin_portfolioTab}
+    Verify Element And Text  ${KU_W_postlogin_portfolio}  ${e_postlogin_portfolioTitle}
+    Verify Page Contains Element  ${KU_W_portfolio_startInvesting}
+    Scroll Untill View  ${subtitle}
+    Verify Element And Text  ${title}  ${titleText}
+    Verify Element And Text  ${subtitle}  ${subtitleText}
+
+Verify Explore Or Import Menus Page
+    [Arguments]  ${exploreFunds_stocks}  ${funds_stocksSubTitle}  ${importFolioTitle}  ${importFolioDesc}
+    Verify Page Contains Element  ${exploreFunds_stocks}
+    Verify Page Contains Element  ${funds_stocksSubTitle}
+    Verify Page Contains Element  ${importFolioTitle}
+    Verify Page Contains Element  ${importFolioDesc}
+
+Verify Navigation To Explore Funds And Import Tab
+    [Arguments]  ${exploreFunds_stocks}  ${allFunds_stocksTitle}  ${allFunds_stockText}  ${importMenu}  ${pageTitle}  ${pageText}
+    Wait And Click  ${exploreFunds_stocks}
+    Wait For Element Visibility  ${allFunds_stocksTitle}
+    Verify Element And Text  ${allFunds_stocksTitle}  ${allFunds_stockText}
+    Go Back
+    Wait And Click  ${importMenu}
+    Verify Element And Text  ${pageTitle}  ${pageText}
+
+Verify Update PAN Page
+    [Arguments]  ${updatePANTitle}  ${updatePANDesc}  ${PANDescText}  ${PANField}
+    Verify Page Contains Element  ${updatePANTitle}
+    Verify Element And Text  ${updatePANDesc}  ${PANDescText}
+    Verify Page Contains Element  ${PANField}
+
+Enter OTP Postlogin
+    Wait For Element Visibility  ${KU_W_ca_OTPField}
+    Click Element  ${KU_W_ca_OTPField}
+    Input Text  ${KU_W_ca_OTPField}  ${e_ca_OTP}
+    Click Element  ${KU_W_ca_submitOTPBtn}
+       
 Close Web Application
     Close All Browser
