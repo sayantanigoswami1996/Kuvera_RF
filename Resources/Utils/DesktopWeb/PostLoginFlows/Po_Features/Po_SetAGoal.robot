@@ -6,7 +6,6 @@ Verify PostLogin Set A Goal Menu Navigation
     Navigation To Goals
 
 Navigation To Set A Goal Under Features
-    Wait And Click  ${KU_W_featureLink}
     Wait And Click  ${KU_W_feature_post_setAGoalLink}
 
 Verify Set A Goal Landing Page 
@@ -52,3 +51,4 @@ Navigation To Goals
     Verify Page Contains Element  ${KU_W_dashboard_anniversary}
     Verify Page Contains Element  ${KU_W_dashboard_retireEasy} 
     Verify Page Contains Element  ${KU_W_dashboard_saveTax}
+    Wait And Click  ${KU_W_dashboard_closeGoalsPopup}

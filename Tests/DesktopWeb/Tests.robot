@@ -366,10 +366,23 @@ Remit Menu Navigation Postlogin
     Verify PAN Verifed KYC Details
     Verify PostLogin Remit Menu Navigation 
 
-# Postlogin Navigation Of Features
+# Postlogin Navigation Of Features Without KYC
 Postlogin Navigation Of Features
     [Tags]  TC52  Stage3
     [Teardown]  Logout From App And Navigate To Home Page PostLogin
     Verify PostLogin Account Creation
+    PostLogin Feature Sub Header Navigation Without KYC
+
+# Postlogin Navigation Of Features With KYC
+Postlogin Navigation Of Features
+    [Tags]  TC53  Stage3
+    [Teardown]  Logout From App And Navigate To Home Page PostLogin
+    Verify PostLogin Account Creation
     Verify PAN Verifed KYC Details
-    PostLogin Feature Sub Header Navigation 
+    PostLogin Feature Sub Header Navigation With KYC
+
+# Deactivate Account
+Deactivate Signed Up Account
+    [Tags]  TC54  Stage3
+    Verify PostLogin Account Creation
+    Verify PostLogin Account Deactivation

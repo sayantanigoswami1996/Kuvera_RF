@@ -83,3 +83,4 @@ Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Po_Loans.robot
 Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/SetAGoal_LeftBar.robot
 Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Po_Remit.robot
 Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Po_LandingPage.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/DeactivateAccount.robot

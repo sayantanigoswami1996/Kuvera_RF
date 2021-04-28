@@ -49,6 +49,7 @@ Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/Portfolio/Por
 Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/Portfolio/Portfolio_GoldLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/Portfolio/Portfolio_EPFLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/SIPSTPSWPLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/SettingsLocators.robot
 
 *** Keywords ***
 
