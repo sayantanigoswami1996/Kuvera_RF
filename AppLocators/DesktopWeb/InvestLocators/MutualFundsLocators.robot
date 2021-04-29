@@ -6,6 +6,7 @@ ${e_invest_mf_lumpsumAmount} =  50000
 ${e_invest_mf_addFundPopupHeader} =  Search and add fund
 ${e_invest_mf_bannerText} =  Import your MFs and switch to Direct. Start saving commissions.
 ${e_invest_mf_importExternalFunds} =  Import external mutual funds
+${e_invest_mf_notification} =  13 April is a Non-Business day for debt funds. Orders placed in debt funds on 13 April will be processed on next business day - 15 April
 # Application Locator 'KU_<locatorName>'
 # Mutual Fund Navigation Page
 # Mutual Fund
@@ -64,9 +65,14 @@ ${KU_W_invest_mf_fundManager} =  xpath=//*[@class='b-mf-other-info__fund-manager
 ${KU_W_invest_mf_fundOfferDocumentLink} =  xpath=//*[@class='b-mf-other-info__img--link']
 ${KU_W_invest_mf_AllFundsLink} =  xpath=(//*[@class='b-mf-other-info__img--link'])[2]
 # Postlogin - Order Summary
-${KU_W_invest_mf_dateOnOrderSIP} =  xpath=(//ul[@class='dropdown-menu']//li//a)[8]
-${KU_W_invest_mf_openDrpdownImg} =  xpath=//i[@class='open-indicator']
-${KU_W_invest_mf_newFolioLink} =  xpath=//a[normalize-space()='new']
+${KU_W_invest_mf_dateOnOrderSIP} =  xpath=//div[@class='b-date-text'][normalize-space()='8']
+${KU_W_invest_mf_openDrpdownImg} =  xpath=//div[@class='k-cursor--pointer']//img
+${KU_W_invest_mf_newFolioLink} =  xpath=//div[@class='b-cart-tile__folio--number k-cursor--pointer']
+${KU_W_invest_mf_newFolioMsg} =  xpath=//div[contains(text(),'Choose your folio for')]
+${KU_W_invest_mf_newFolioNumLabel} =  xpath=//div[.='Folio number']
+${KU_W_invest_mf_newFolioAmtLabel} =  xpath=//div[contains(text(),'Amount')]
+${KU_W_invest_mf_notification} =  xpath=//div[@class='ku-app app-standard-notification b-cart__notification']
+${KU_W_invest_mf_createNewLabel} =  xpath=//span[normalize-space()='Create new']
 ${KU_W_invest_mf_continueFolio} =  xpath=//button[@class='btn in-btn hidden-xs']
 ${KU_W_invest_mf_accBox} =  xpath=//div[@class='tile-option-container']
 ${KU_W_invest_mf_oneClickBox} =  xpath=//div[@id='create']//img
@@ -75,6 +81,7 @@ ${KU_W_invest_mf_continueToOrderBtn} =  xpath=//div[text()='Continue to order']
 ${KU_W_invest_mf_placeOrdersBtn} =  xpath=//button[normalize-space()='Place Orders']
 ${KU_W_invest_mf_continueBtn} =  xpath=//button[normalize-space()='Continue Payment']
 ${KU_W_invest_mf_orderSummary} =  xpath=//h1[normalize-space()='Order Summary']
+${KU_W_invest_mf_cartTitle} =  xpath=//div[contains(text(),'MF cart')]
 # Postlogin - MF Listing Page
 ${KU_W_invest_mf_bannerText} =  xpath=//span[@class='b-banner-text']
 ${KU_W_invest_mf_importNow} =  xpath=//span[text()='Import now >']

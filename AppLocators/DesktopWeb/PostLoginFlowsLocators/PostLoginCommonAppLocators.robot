@@ -40,7 +40,7 @@ ${KU_W_postlogin_setAGoalTopTab} =  xpath=//a[@class='dropdown-custom-option'][n
 ${KU_W_postlogin_noActiveSIPTitle} =  xpath=//div[@class='no-sip-title-text']
 ${KU_W_postlogin_completeKYCMsg} =  xpath=//div[@class='complete-account-setup']//p
 ${KU_W_postlogin_pageTitle} =  xpath=//h2[contains(text(),'Complete Registration')]
-${KU_W_postlogin_placeOrder} =  xpath=//button[@class='button-primary button-primary-cta place-order-button']
+${KU_W_postlogin_placeOrder} =  xpath=//button[normalize-space()='Place order']
 ${KU_W_postlogin_netBankingOption} =  xpath=//div[contains(text(),'Net Banking')]
 ${KU_W_postlogin_proceedToPay} =  xpath=//button[contains(text(),'Proceed to Pay')]
 ${KU_W_postlogin_chooseBank} =  xpath=//div[@class='fancy-radio-checkbox tick-mark']

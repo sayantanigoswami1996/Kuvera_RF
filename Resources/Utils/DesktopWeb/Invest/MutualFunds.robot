@@ -58,11 +58,12 @@ Verify Mutual Fund Details Page
     Sleep  2s
     Wait For Element Visibility  ${KU_W_invest_mf_sipAmountTxt}
     Input Text  ${KU_W_invest_mf_sipAmountTxt}  ${e_invest_mf_sipAmount}
-    Wait Scroll And Click Element  ${KU_W_invest_mf_investNowButton}
     ${isLoginButtonVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_login}
     IF  ${isLoginButtonVisible}
+        Wait Scroll And Click Element  ${KU_W_invest_mf_investNowButton}
         Verify Login Page
     ELSE
+        Wait Scroll And Click Element  ${KU_W_invest_mf_investNowButton}
         Verify Page Contains Element  ${KU_W_invest_mf_orderSummary}
         Wait And Click  ${KU_W_invest_mf_SIPDeleteIcon}
         Wait And Click  ${KU_W_postlogin_yesDeleteBtn}

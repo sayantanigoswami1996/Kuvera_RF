@@ -5,6 +5,9 @@ Verify PostLogin MF Menu Navigation
     Wait And Click  ${KU_W_mutualFund}
     Verify Import Now Banner 
     Verify Filter Selection For MF
+
+Verify Transactional Navigation On MF With KYC
+    Navigate To Invest Page And Verify Explore Options  ${KU_W_mutualFund}  ${e_invest_mf_titleText}
     Verify Buying Of SIP
     Verify Add To Cart And Buy Lumpsum
 
@@ -13,11 +16,14 @@ Verify Buying Of SIP
     Wait For Element Visibility  ${KU_W_invest_mf_sipAmountTxt}
     Input Text  ${KU_W_invest_mf_sipAmountTxt}  ${e_invest_mf_sipAmount}
     Wait Scroll And Click Element  ${KU_W_invest_mf_investNowButton}
+    Wait For Element Visibility  ${KU_W_invest_mf_notification}
+    Verify Element And Text  ${KU_W_invest_mf_notification}  ${e_invest_mf_notification}
+    Verify Page Contains Element  ${KU_W_invest_mf_cartTitle} 
     Wait And Click  ${KU_W_invest_mf_openDrpdownImg}
+    Sleep  1s
     Wait And Click  ${KU_W_invest_mf_dateOnOrderSIP}
-    Wait And Click  ${KU_W_invest_mf_newFolioLink}
-    Wait And Click  ${KU_W_invest_mf_continueFolio}
-    Wait And Click  ${KU_W_postlogin_placeOrder} 
+    Verify New Folio Popup
+    Wait And Click  ${KU_W_postlogin_placeOrder}  
     Wait And Click  ${KU_W_invest_mf_accBox} 
     Wait And Click  ${KU_W_invest_mf_oneClickBox}
     Wait And Click  ${KU_W_invest_mf_setOneClickBtn} 
@@ -37,9 +43,8 @@ Verify Add To Cart And Buy Lumpsum
     Input Text  ${KU_W_invest_mf_lumpsumAmountTxt}  ${e_invest_mf_lumpsumAmount}
     Wait Scroll And Click Element  ${KU_W_invest_mf_addToCartButton}
     Wait And Click  ${KU_W_postlogin_cartBtn}
-    Verify Page Contains Element  ${KU_W_invest_mf_orderSummary}
-    Wait And Click  ${KU_W_invest_mf_newFolioLink}
-    Wait And Click  ${KU_W_invest_mf_continueFolio}
+    Verify Page Contains Element  ${KU_W_invest_mf_cartTitle}
+    Verify New Folio Popup
     Wait And Click  ${KU_W_postlogin_placeOrder}
     Wait And Click  ${KU_W_invest_mf_continueBtn}
     Verify Payment Postlogin
@@ -57,6 +62,7 @@ Verify Filter Selection For MF
         ${subcategoryCount} =  Get Element Count  xpath=//div[@class='b-fund-category-filter__label']
         FOR  ${j}  IN RANGE  2    ${subcategoryCount}+1
             ${subcategoryName} =  Get Text  xpath=(//div[@class='b-fund-category-filter__label'])[${j}]
+            Sleep  2s
             Wait And Click  xpath=(//div[@class='b-fund-category-filter__label'])[${j}]
             Sleep  1s
             Verify Element And Text  ${KU_W_invest_mf_subcategoryName}  ${subcategoryName} 
@@ -71,3 +77,11 @@ Verify Import Now Banner
     Wait And Click  ${KU_W_invest_mf_importNow}
     Verify Element And Text  ${KU_W_invest_mf_importExternalFunds}  ${e_invest_mf_importExternalFunds}
     Go Back
+
+Verify New Folio Popup
+    Wait And Click  ${KU_W_invest_mf_newFolioLink}
+    Verify Page Contains Element  ${KU_W_invest_mf_newFolioMsg}
+    Verify Page Contains Element  ${KU_W_invest_mf_newFolioNumLabel}
+    Verify Page Contains Element  ${KU_W_invest_mf_newFolioAmtLabel}
+    Verify Page Contains Element  ${KU_W_invest_mf_createNewLabel}
+    Wait And Click  ${KU_W_postlogin_continue}

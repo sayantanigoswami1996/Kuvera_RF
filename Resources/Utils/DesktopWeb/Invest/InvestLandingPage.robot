@@ -335,7 +335,7 @@ Verify Pre And Post Login Action On Watchlist For Funds
         Verify Element And Text  ${KU_W_invest_watchlistHeader}  ${e_invest_watchlistHeader}
     ELSE  
         Wait And Click  ${wlistBtn}
-        Verify Element And Text  ${KU_W_toastMssg}   ${e_invest_fundToastMssgText}
+        Verify Page Contains Element  ${KU_W_toastMssg}
     END 
 
 Verify Pre And Post Login Action On Watchlist For Stocks  

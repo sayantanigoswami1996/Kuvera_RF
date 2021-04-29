@@ -10,8 +10,8 @@ ${e_portfolio_EPF_tab} =  EPF
 
 # Application Locator 'KU_<locatorName>'
 # Gold Portfolio Navigation Page
-${KU_W_portfolio_EPF_title} =  xpath=(//p[@class='tile-opt-label'])[6]
-${KU_W_portfolio_EPF_subtitle} =  xpath=(//div[@class='tile-opt-sub-label-container'])[6]
+${KU_W_portfolio_EPF_title} =  xpath=(//p[@class='tile-opt-label'])[7]
+${KU_W_portfolio_EPF_subtitle} =  xpath=(//div[@class='tile-opt-sub-label-container'])[7]
 ${KU_W_portfolio_EPF_importAndTrackTitle} =  xpath=//div[contains(text(),'Import & track your EPF')]
 ${KU_W_portfolio_EPF_enterUANLabel} =  xpath=//label[normalize-space()='Enter UAN no']
 ${KU_W_portfolio_EPF_pwdLabel} =  xpath=//label[normalize-space()='Enter password']

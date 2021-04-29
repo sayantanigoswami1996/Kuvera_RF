@@ -251,6 +251,13 @@ Click Link And Switch Window
 Navigate To Home Page
     Run keyword If  '${ENV}' == '${e_prod}'  Go To  ${URL_prod}
     ...    ELSE IF  '${ENV}' == '${e_stage3}'  Go To  ${URL_stage3}
+    ...    ELSE IF  '${ENV}' == '${e_stage2}'  Go To  ${URL_stage2}
+    ${isLoginButtonVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_login}
+    IF  ${isLoginButtonVisible}
+        Log To Console  PreLogin
+    ELSE
+        Logout From App Post Signup
+    END
     Set Window Size  ${1920}  ${1080}
     Reload Page
     Sleep  15s
