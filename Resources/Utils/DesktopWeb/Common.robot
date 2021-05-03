@@ -3,6 +3,7 @@
 Library     JSONLibrary
 Library     JsonValidator
 Library     SeleniumLibrary
+Library     DateTime
 Library     String
 Library     OperatingSystem
 Library     Collections
@@ -49,6 +50,7 @@ Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/Portfolio/Por
 Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/Portfolio/Portfolio_GoldLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/Portfolio/Portfolio_EPFLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/SIPSTPSWPLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/SettingsLocators.robot
 
 *** Keywords ***
 
@@ -250,6 +252,13 @@ Click Link And Switch Window
 Navigate To Home Page
     Run keyword If  '${ENV}' == '${e_prod}'  Go To  ${URL_prod}
     ...    ELSE IF  '${ENV}' == '${e_stage3}'  Go To  ${URL_stage3}
+    ...    ELSE IF  '${ENV}' == '${e_stage2}'  Go To  ${URL_stage2}
+    ${isLoginButtonVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_login}
+    IF  ${isLoginButtonVisible}
+        Log To Console  PreLogin
+    ELSE
+        Logout From App Post Signup
+    END
     Set Window Size  ${1920}  ${1080}
     Reload Page
     Sleep  15s
@@ -317,7 +326,7 @@ Login
 
 Verify Login On Prod With Verifed KYC Account
     Wait And Click  ${KU_W_login}
-    Login  ${e_postlogin_prod_KYCVerifiedEmail}  ${e_postlogin_prod_KYCVerifiedPWd}
+    Login  ${e_postlogin_prod_KYCVerifiedEmail}  ${e_postlogin_pwd}
 
 Verify Registration Page Postlogin 
     [Arguments]  ${KYCMsg}  ${registrationBtn_link}
@@ -330,11 +339,12 @@ Verify Login And Signup On Prelogin
     IF  ${isLoginButtonVisible}  
         Verify Login And Signup Link
     ELSE  
-        Log To Console  Continue
+        Log To Console  We are on postlogin features
     END
 
 Navigate To PortFolio Tab And Verify Investment Title
     [Arguments]  ${title}  ${titleText}  ${subtitle}  ${subtitleText}
+    Sleep  4s
     Wait And Click  ${KU_W_postlogin_portfolioTab}
     Verify Element And Text  ${KU_W_postlogin_portfolio}  ${e_postlogin_portfolioTitle}
     Verify Page Contains Element  ${KU_W_portfolio_startInvesting}

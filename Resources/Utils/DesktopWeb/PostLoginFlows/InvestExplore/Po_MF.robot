@@ -5,44 +5,171 @@ Verify PostLogin MF Menu Navigation
     Wait And Click  ${KU_W_mutualFund}
     Verify Import Now Banner 
     Verify Filter Selection For MF
+
+Verify Transactional Navigation On MF With KYC
+    Navigate To Invest Page And Verify Explore Options  ${KU_W_mutualFund}  ${e_invest_mf_titleText}
     Verify Buying Of SIP
     Verify Add To Cart And Buy Lumpsum
+    Verify Buying SIP And Lumpsum Together
 
-Verify Buying Of SIP
+Verify Transactional Navigation On MF Without KYC
+    Navigate To Invest Page And Verify Explore Options  ${KU_W_mutualFund}  ${e_invest_mf_titleText}
     Search For MF 
+    Sleep  1s
+    Wait For Element Visibility  ${KU_W_invest_mf_sipAmountTxt}
+    Input Text  ${KU_W_invest_mf_sipAmountTxt}  ${e_invest_mf_sipAmount}
+    Wait Scroll And Click Element  ${KU_W_invest_mf_investNowButton}
+    Wait And Click  ${KU_W_postlogin_placeOrder} 
+    Wait And Click  ${KU_W_postlogin_cancelBtn}
+    Verify Page Contains Element  ${KU_W_invest_mf_cartTitle} 
+    Wait And Click  ${KU_W_postlogin_placeOrder} 
+    Wait And Click  ${KU_W_postlogin_continue}
+    Verify Page Contains Element  ${KU_W_KYC_PANTextField}
+    Go Back
+
+Verify Transactional Navigation With Two Factor Authentication
+    Navigate To Invest Page And Verify Explore Options  ${KU_W_mutualFund}  ${e_invest_mf_titleText}
+    Search For MF 
+    Sleep  1s
     Wait For Element Visibility  ${KU_W_invest_mf_sipAmountTxt}
     Input Text  ${KU_W_invest_mf_sipAmountTxt}  ${e_invest_mf_sipAmount}
     Wait Scroll And Click Element  ${KU_W_invest_mf_investNowButton}
     Wait And Click  ${KU_W_invest_mf_openDrpdownImg}
+    Sleep  1s
     Wait And Click  ${KU_W_invest_mf_dateOnOrderSIP}
-    Wait And Click  ${KU_W_invest_mf_newFolioLink}
-    Wait And Click  ${KU_W_invest_mf_continueFolio}
-    Wait And Click  ${KU_W_postlogin_placeOrder} 
-    Wait And Click  ${KU_W_invest_mf_accBox} 
-    Wait And Click  ${KU_W_invest_mf_oneClickBox}
-    Wait And Click  ${KU_W_invest_mf_setOneClickBtn} 
-    Wait And Click  ${KU_W_invest_mf_continueToOrderBtn}
-    Wait And Click  ${KU_W_invest_mf_placeOrdersBtn}
-    Wait And Click  ${KU_W_invest_mf_continueBtn}
+    Verify Element And Text  ${KU_W_invest_mf_scheduledSIPAmt}  ${e_invest_mf_sipAmount}
+    Verify Element And Text  ${KU_W_invest_mf_payAmt}  ${e_invest_mf_SIPAmt}
+    Wait And Click  ${KU_W_postlogin_placeOrder}  
+    Wait And Click  ${KU_W_invest_mf_accBox}
+
+Verify Buying Of SIP
+    Search For MF 
+    Sleep  1s
+    Wait For Element Visibility  ${KU_W_invest_mf_sipAmountTxt}
+    Input Text  ${KU_W_invest_mf_sipAmountTxt}  ${e_invest_mf_sipAmount}
+    Wait And Click  ${KU_W_invest_mf_lumpsumAmountTxt}
+    # Fetching the amount
+    ${mininumValue} =  Fetch the Amount  ${KU_W_invest_mf_minLumpsumVal}
+    Wait Scroll And Click Element  ${KU_W_invest_mf_investNowButton}
+    # Header Notification
+    Wait For Element Visibility  ${KU_W_invest_mf_notification}
+    Verify Element And Text  ${KU_W_invest_mf_notification}  ${e_invest_mf_notification}
+    Verify Page Contains Element  ${KU_W_invest_mf_cartTitle} 
+    # FundName On Cart Page
+    Verify Page Contains Element  ${KU_W_invest_mf_fundN}
+    # Default Date
+    Verify Page Contains Element  ${KU_W_invest_mf_defaultDate}
+    # Lumpsum Label when SIP added
+    Verify Page Contains Element  ${KU_W_invest_mf_addLumpsumLabel}
+    # Data Validation Of SIP
+    # Amount cannnot be verified
+    # Wait For Element Visibility  ${KU_W_invest_mf_SIP_lumpAmt}
+    # Sleep  2s
+    # Verify Element And Text  ${KU_W_invest_mf_SIP_lumpAmt}  ${e_invest_mf_sipAmount}
+    Wait And Click  ${KU_W_invest_mf_openDrpdownImg}
+    Sleep  1s
+    Wait And Click  ${KU_W_invest_mf_dateOnOrderSIP}
+    Verify New Folio Popup
+    # SIP Panel
+    Verify Page Contains Element  ${KU_W_invest_mf_scheduledSIPLabel}
+    Verify Element And Text  ${KU_W_invest_mf_scheduledSIPAmt}  ${e_invest_mf_sipAmount}
+    Verify Page Contains Element  ${KU_W_invest_mf_payNow} 
+    #  Add Lumpsum and Validate Min Amount
+    Wait And Click  ${KU_W_invest_mf_addLumpsumLabel}
+    # Amount cannot be verified
+    # Wait For Element Visibility  ${KU_W_invest_mf_lumpsum_SIPVal} 
+    Sleep  3s
+    # Verify Element And Text  ${KU_W_invest_mf_lumpsum_SIPVal}  ${mininumValue}
+    Wait For Element Visibility  ${KU_W_invest_mf_payAmt}
+    Verify Element And Text  ${KU_W_invest_mf_payAmt}  ${mininumValue}
+    # Delete Lumpsum and Validate Pay Amount
+    Wait And Click  ${KU_W_invest_mf_lumpsumDelIcon}
+    Verify Page Contains Element  ${KU_W_invest_mf_delFund}
+    Verify Page Contains Element  ${KU_W_invest_mf_delFundDesc}
+    Verify Page Contains Element  ${KU_W_postlogin_noCancelBtn}
+    Wait And Click  ${KU_W_postlogin_yesDelBtn}
+    Wait For Element Visibility  ${KU_W_invest_mf_payAmt}
+    Verify Element And Text  ${KU_W_invest_mf_payAmt}  ${e_invest_mf_SIPAmt}
+    # Place Order
+    Place Order
+    Verify Amount While Placing Order  ${e_invest_mf_sipAmount}
     Verify Payment Postlogin 
+
+Verify Add To Cart And Buy Lumpsum
+    Wait For Element Visibility  ${KU_W_invest_mf_lumpsumAmountTxt}
+    Input Text  ${KU_W_invest_mf_lumpsumAmountTxt}  ${e_invest_mf_lumpsumAmount}
+    Wait And Click  ${KU_W_invest_mf_sipAmountTxt}
+    ${SIPminVal} =  Fetch the Amount  ${KU_W_invest_mf_minSIPVal}
+    Wait Scroll And Click Element  ${KU_W_invest_mf_addToCartButton}
+    Wait And Click  ${KU_W_postlogin_cartBtn}
+    Verify Page Contains Element  ${KU_W_invest_mf_cartTitle}
+    Verify Page Contains Element  ${KU_W_invest_mf_addSIPLabel}
+    # Data Validation For Lumpsum
+    # Amount cannot be verified
+    # Wait For Element Visibility  ${KU_W_invest_mf_SIP_lumpAmt}
+    # Sleep  2s
+    # Verify Element And Text  ${KU_W_invest_mf_SIP_lumpAmt}  ${e_invest_mf_lumpsumAmount}
+    Verify Element And Text  ${KU_W_invest_mf_scheduledSIPAmt}  ${e_invest_mf_scheduledSIP}
+    Verify Element And Text  ${KU_W_invest_mf_payAmt}  ${e_invest_mf_lumpsumAmt}
+    # Add SIP
+    Wait And Click  ${KU_W_invest_mf_addSIPLabel}
+    Sleep  2s
+    Wait For Element Visibility  ${KU_W_invest_mf_scheduledSIPAmt}
+    Verify Element And Text  ${KU_W_invest_mf_scheduledSIPAmt}  ${SIPminVal}
+    Verify Element And Text  ${KU_W_invest_mf_payAmt}  ${e_invest_mf_lumpsumAmt}
+    # Delete SIP
+    Wait And Click  ${KU_W_invest_mf_SIPDelIcon}
+    Wait And Click  ${KU_W_postlogin_yesDelBtn}
+    Sleep  2s
+    Wait For Element Visibility  ${KU_W_invest_mf_scheduledSIPAmt}
+    Verify Element And Text  ${KU_W_invest_mf_scheduledSIPAmt}  ${e_invest_mf_scheduledSIP}
+    Verify Element And Text  ${KU_W_invest_mf_payAmt}  ${e_invest_mf_lumpsumAmt}
+    Verify New Folio Popup
+    Wait And Click  ${KU_W_postlogin_placeOrder} 
+    Verify Amount While Placing Order  ${e_invest_mf_lumpsumAmt}
+    ${currentTime} =  Get Time  hour  NOW
+    Log To Console  ${currentTime}
+    IF  ${currentTime} < ${cutOffTime} and ${currentTime} > ${startTime}
+        Log To Console  Market Hours
+    ELSE
+        Log To Console  Non Market Hours
+    END
+    Verify Payment Postlogin
+
+Verify Buying SIP And Lumpsum Together
+    Wait For Element Visibility  ${KU_W_invest_mf_sipAmountTxt}
+    Input Text  ${KU_W_invest_mf_sipAmountTxt}  ${e_invest_mf_sipAmount}
+    Wait For Element Visibility  ${KU_W_invest_mf_lumpsumAmountTxt}
+    Input Text  ${KU_W_invest_mf_lumpsumAmountTxt}  ${e_invest_mf_lumpsumAmount}
+    Wait Scroll And Click Element  ${KU_W_invest_mf_investNowButton}
+    Wait And Click  ${KU_W_invest_mf_openDrpdownImg}
+    Sleep  1s
+    Wait And Click  ${KU_W_invest_mf_dateOnOrderSIP}
+    Verify Element And Text  ${KU_W_invest_mf_scheduledSIPAmt}  ${e_invest_mf_SIPAmt}
+    Verify Element And Text  ${KU_W_invest_mf_payAmt}  ${e_invest_mf_lumpsumAmount}
+    Wait And Click  ${KU_W_postlogin_placeOrder}  
+    Wait And Click  ${KU_W_invest_mf_accBox} 
+    Wait And Click  ${KU_W_invest_mf_selectBox}
+    Wait And Click  ${KU_W_invest_mf_placeOrdersBtn}
+    ${lumpAmount} =  Catenate  ${e_invest_mf_rupeeSymbol} ${e_invest_mf_lumpsumAmount}
+    Verify Element And Text  ${KU_W_invest_mf_SIPAmtOnPayment1}  ${lumpAmount}
+    ${SIPAmount} =  Catenate  ${e_invest_mf_rupeeSymbol} ${e_invest_mf_sipAmount}
+    Verify Element And Text  ${KU_W_invest_mf_SIPAmtOnPayment2}  ${SIPAmount}
+    ${totalAmount} =  Catenate  ${e_invest_mf_rupeeSymbol} ${e_invest_mf_lumpsumAndSIPAmt}
+    Verify Element And Text  ${KU_W_invest_mf_totalAmtOnPayment}  ${totalAmount}
+    Wait And Click  ${KU_W_invest_mf_continueBtn}
+    ${SIP_lumpAmt} =  Catenate  ${e_invest_mf_rupeeSymbol}${e_invest_mf_lumpsumAndSIPAmt}
+    Verify Element And Text  ${KU_W_invest_mf_SIPAmtOnSelectMode}  ${SIP_lumpAmt}
+    Verify Payment Postlogin
+
 
 Search For MF 
     @{mutualFundName} =  Get Json Values  $.MutualFunds.f2  Resources/TestData/MutualFunds.json 
     Log To Console  ${mutualFundName}
     Search Fund and Verify  ${mutualFundName} 
+    Sleep  1s
     Wait And Click  ${KU_W_invest_mf_fundName}
 
-Verify Add To Cart And Buy Lumpsum
-    Wait For Element Visibility  ${KU_W_invest_mf_lumpsumAmountTxt}
-    Input Text  ${KU_W_invest_mf_lumpsumAmountTxt}  ${e_invest_mf_lumpsumAmount}
-    Wait Scroll And Click Element  ${KU_W_invest_mf_addToCartButton}
-    Wait And Click  ${KU_W_postlogin_cartBtn}
-    Verify Page Contains Element  ${KU_W_invest_mf_orderSummary}
-    Wait And Click  ${KU_W_invest_mf_newFolioLink}
-    Wait And Click  ${KU_W_invest_mf_continueFolio}
-    Wait And Click  ${KU_W_postlogin_placeOrder}
-    Wait And Click  ${KU_W_invest_mf_continueBtn}
-    Verify Payment Postlogin
 
 Verify Filter Selection For MF
     Wait And Click  ${KU_W_invest_mf_categoryBox}
@@ -57,6 +184,7 @@ Verify Filter Selection For MF
         ${subcategoryCount} =  Get Element Count  xpath=//div[@class='b-fund-category-filter__label']
         FOR  ${j}  IN RANGE  2    ${subcategoryCount}+1
             ${subcategoryName} =  Get Text  xpath=(//div[@class='b-fund-category-filter__label'])[${j}]
+            Sleep  2s
             Wait And Click  xpath=(//div[@class='b-fund-category-filter__label'])[${j}]
             Sleep  1s
             Verify Element And Text  ${KU_W_invest_mf_subcategoryName}  ${subcategoryName} 
@@ -71,3 +199,35 @@ Verify Import Now Banner
     Wait And Click  ${KU_W_invest_mf_importNow}
     Verify Element And Text  ${KU_W_invest_mf_importExternalFunds}  ${e_invest_mf_importExternalFunds}
     Go Back
+
+Verify New Folio Popup
+    Wait And Click  ${KU_W_invest_mf_newFolioLink}
+    Verify Page Contains Element  ${KU_W_invest_mf_newFolioMsg}
+    Verify Page Contains Element  ${KU_W_invest_mf_newFolioNumLabel}
+    Verify Page Contains Element  ${KU_W_invest_mf_newFolioAmtLabel}
+    Verify Page Contains Element  ${KU_W_invest_mf_createNewLabel}
+    Wait And Click  ${KU_W_postlogin_continue}
+
+Fetch the Amount
+    [Arguments]  ${lumpsum_SIPVal}
+    ${lumpsum_SIPAmt} =  Get Text  ${lumpsum_SIPVal}
+    ${amtLength} =  Get Length  ${lumpsum_SIPAmt}
+    ${minVal} =  Get Substring  ${lumpsum_SIPAmt}  6  ${amtLength}
+    [Return]  ${minVal}
+
+Verify Amount While Placing Order
+    [Arguments]  ${SIPAndLumpAmount}
+    ${SIP_lumpamount} =  Catenate  ${e_invest_mf_rupeeSymbol} ${SIPAndLumpAmount}
+    Verify Element And Text  ${KU_W_invest_mf_SIPAmtOnPayment1}  ${SIP_lumpamount}
+    Verify Element And Text  ${KU_W_invest_mf_totalAmtOnPayment}  ${SIP_lumpamount}
+    Wait And Click  ${KU_W_invest_mf_continueBtn}
+    ${SIP_lumpAmt} =  Catenate  ${e_invest_mf_rupeeSymbol}${SIPAndLumpAmount}
+    Verify Element And Text  ${KU_W_invest_mf_SIPAmtOnSelectMode}  ${SIP_lumpAmt}
+    
+Place Order
+    Wait And Click  ${KU_W_postlogin_placeOrder}  
+    Wait And Click  ${KU_W_invest_mf_accBox} 
+    Wait And Click  ${KU_W_invest_mf_oneClickBox}
+    Wait And Click  ${KU_W_invest_mf_setOneClickBtn} 
+    Wait And Click  ${KU_W_invest_mf_continueToOrderBtn}
+    Wait And Click  ${KU_W_invest_mf_placeOrdersBtn}

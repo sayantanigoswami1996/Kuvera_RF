@@ -14,7 +14,6 @@ Verify PostLogin Reports Menu Navigation Without KYC
     Wait For Element Visibility  ${KU_W_reports_noRecord}
     Verify Element And Text  ${KU_W_reports_noRecord}  ${e_report_noRecordFound}
     
-
 Verify PostLogin Reports Menu Navigation With KYC 
     Log To Console  Reports Navigation With KYC
     Wait And Click  ${KU_W_postlogin_reportsTab}

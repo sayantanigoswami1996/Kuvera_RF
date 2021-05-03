@@ -219,17 +219,40 @@ Invest Tiles Navigation Postlogin
     Verify PostLogin Account Creation
     Verify PreLogin Invest Tiles
 
-# MF Navigation Postlogin 
-MF Navigation Postlogin
-    [Tags]  TC33  Stage3
+# MF Non Transactional Navigation Postlogin 
+MF Non Transactional Navigation Postlogin
+    [Tags]  TC33  Prod  Stage2
+    [Teardown]  Navigate To Home Page
+    Verify Login On Prod With Verifed KYC Account
+    Verify PostLogin MF Menu Navigation
+
+# MF Transactional Navigation Postlogin With KYC 
+MF Transactional Navigation Postlogin With KYC
+    [Tags]  TC34  Stage3
     [Teardown]  Logout From App And Navigate To Home Page PostLogin
     Verify PostLogin Account Creation
     Verify PAN Verifed KYC Details
-    Verify PostLogin MF Menu Navigation
+    Verify Transactional Navigation On MF With KYC
+
+# MF Transactional Navigation Postlogin Without KYC 
+MF Transactional Navigation Postlogin Without KYC
+    [Tags]  TC35  Stage3
+    [Teardown]  Logout From App And Navigate To Home Page PostLogin
+    Verify PostLogin Account Creation
+    Verify Transactional Navigation On MF Without KYC
+
+# MF Transactional Navigation Postlogin With Two Factor Authentication
+MF Transactional Navigation Postlogin With Two Factor Authentication
+    [Tags]  TC36  Stage3
+    [Teardown]  Logout From App And Navigate To Home Page PostLogin
+    Verify PostLogin Account Creation 
+    Enable Two Factor Authentication
+    Verify PAN Verifed KYC Details
+    Verify Transactional Navigation With Two Factor Authentication
 
 # SaveSmart Navigation Postlogin 
 SaveSmart Navigation Postlogin
-    [Tags]  TC34  Stage3
+    [Tags]  TC37  Stage3
     [Teardown]  Logout From App And Navigate To Home Page PostLogin
     Verify PostLogin Account Creation
     Verify PAN Verifed KYC Details
@@ -237,7 +260,7 @@ SaveSmart Navigation Postlogin
 
 # Crypto Navigation Postlogin 
 Crypto Navigation Postlogin
-    [Tags]  TC35  Stage3
+    [Tags]  TC38  Stage3
     [Teardown]  Logout From App And Navigate To Home Page PostLogin
     Verify PostLogin Account Creation
     Verify PAN Verifed KYC Details
@@ -245,7 +268,7 @@ Crypto Navigation Postlogin
 
 # Digital Gold Navigation Postlogin 
 Digital Gold Navigation Postlogin
-    [Tags]  TC36  Stage3
+    [Tags]  TC39  Stage3
     [Teardown]  Logout From App And Navigate To Home Page PostLogin
     Verify PostLogin Account Creation
     Verify PAN Verifed KYC Details
@@ -253,14 +276,14 @@ Digital Gold Navigation Postlogin
 
 # MF Portfolio Navigation Postlogin Without KYC
 MF Portfolio Navigation Postlogin Without KYC
-    [Tags]  TC37  Stage3
+    [Tags]  TC40  Stage3
     [Teardown]  Logout From App And Navigate To Home Page PostLogin
     Verify PostLogin Account Creation
     Verify PostLogin MF Portfolio Menu Navigation Without KYC
 
 # MF Portfolio Navigation Postlogin With KYC
 MF Portfolio Navigation Postlogin With KYC
-    [Tags]  TC38  Stage3
+    [Tags]  TC41  Stage3
     [Teardown]  Logout From App And Navigate To Home Page PostLogin
     Verify PostLogin Account Creation
     Verify PAN Verifed KYC Details
@@ -268,14 +291,14 @@ MF Portfolio Navigation Postlogin With KYC
 
 # US Stocks Portfolio Navigation Postlogin Without KYC
 US Stocks Portfolio Navigation Postlogin Without KYC
-    [Tags]  TC39  Stage3
+    [Tags]  TC42  Stage3
     [Teardown]  Logout From App And Navigate To Home Page PostLogin
     Verify PostLogin Account Creation
     Verify PostLogin US Stocks Portflio Menu Navigation Without KYC
 
 # US Stocks Portfolio Navigation Postlogin With KYC
 US Stocks Portfolio Navigation Postlogin With KYC
-    [Tags]  TC40  Stage3
+    [Tags]  TC43  Stage3
     [Teardown]  Logout From App And Navigate To Home Page PostLogin
     Verify PostLogin Account Creation
     Verify PAN Verifed KYC Details
@@ -283,14 +306,14 @@ US Stocks Portfolio Navigation Postlogin With KYC
 
 # Stocks Portfolio Navigation Postlogin Without KYC
 Stocks Portfolio Navigation Postlogin Without KYC
-    [Tags]  TC41  Stage3
+    [Tags]  TC44  Stage3
     [Teardown]  Logout From App And Navigate To Home Page PostLogin
     Verify PostLogin Account Creation
     Verify PostLogin Stocks Portflio Menu Navigation Without KYC
 
 # Stocks Portfolio Navigation Postlogin With KYC
 Stocks Portfolio Navigation Postlogin With KYC
-    [Tags]  TC42  Stage3
+    [Tags]  TC45  Stage3
     [Teardown]  Logout From App And Navigate To Home Page PostLogin
     Verify PostLogin Account Creation
     Verify PAN Verifed KYC Details
@@ -298,7 +321,7 @@ Stocks Portfolio Navigation Postlogin With KYC
 
 # Savesmart Portfolio Navigation Postlogin With KYC
 Savesmart Portfolio Navigation Postlogin With KYC
-    [Tags]  TC43  Stage3
+    [Tags]  TC46  Stage3
     [Teardown]  Logout From App And Navigate To Home Page PostLogin
     Verify PostLogin Account Creation
     Verify PAN Verifed KYC Details
@@ -306,14 +329,14 @@ Savesmart Portfolio Navigation Postlogin With KYC
 
 # Gold Portfolio Navigation Postlogin Without KYC
 Gold Portfolio Navigation Postlogin Without KYC
-    [Tags]  TC44  Stage3
+    [Tags]  TC47  Stage3
     [Teardown]  Logout From App And Navigate To Home Page PostLogin
     Verify PostLogin Account Creation
     Verify PostLogin Gold Portfolio Menu Navigation Without KYC
 
 # Gold Portfolio Navigation Postlogin With KYC
 Gold Portfolio Navigation Postlogin With KYC
-    [Tags]  TC45  Stage3
+    [Tags]  TC46  Stage3
     [Teardown]  Logout From App And Navigate To Home Page PostLogin
     Verify PostLogin Account Creation
     Verify PAN Verifed KYC Details
@@ -321,23 +344,67 @@ Gold Portfolio Navigation Postlogin With KYC
 
 # EPF Portfolio Navigation Postlogin With KYC
 EPF Portfolio Navigation Postlogin With KYC
-    [Tags]  TC46  Prod  Stage2
+    [Tags]  TC48  Prod  Stage2
     [Teardown]  Navigate To Home Page
     Verify Login On Prod With Verifed KYC Account  
     Verify PostLogin EPF Portfolio Menu Navigation With KYC
     
 # SIP STP And SWP Navigation Postlogin Without KYC
 SIP STP And SWP Navigation Postlogin Without KYC
-    [Tags]  TC47  Stage3
+    [Tags]  TC49  Stage3
     [Teardown]  Logout From App And Navigate To Home Page PostLogin
     Verify PostLogin Account Creation
-    Verify PAN Verifed KYC Details
-    Verify PostLogin SIP STP And SWP Menu Navigation Without KYC 
+    Verify PostLogin SIP STP And SWP Menu Navigation
 
 # SIP STP And SWP Navigation Postlogin With KYC
 SIP STP And SWP Navigation Postlogin With KYC
-    [Tags]  TC48  Stage3
+    [Tags]  TC50  Stage3
     [Teardown]  Logout From App And Navigate To Home Page PostLogin
     Verify PostLogin Account Creation
     Verify PAN Verifed KYC Details
-    Verify PostLogin SIP STP And SWP Menu Navigation With KYC 
+    Verify PostLogin SIP STP And SWP Menu Navigation 
+
+# Set A Goal Navigation Postlogin Under Left Bar
+Set A Goal Navigation Postlogin Under Left Bar
+    [Tags]  TC51  Stage3
+    [Teardown]  Logout From App And Navigate To Home Page PostLogin
+    Verify PostLogin Account Creation
+    Verify PAN Verifed KYC Details
+    Verify PostLogin Set A Goal Under Left Bar
+
+# Loan Menu Navigation Postlogin
+Loan Menu Navigation Postlogin
+    [Tags]  TC52  Stage3
+    [Teardown]  Logout From App And Navigate To Home Page PostLogin
+    Verify PostLogin Account Creation
+    Verify PAN Verifed KYC Details
+    Verify PostLogin Loans Menu Navigation 
+
+# Remit Menu Navigation Postlogin
+Remit Menu Navigation Postlogin
+    [Tags]  TC53  Stage3
+    [Teardown]  Logout From App And Navigate To Home Page PostLogin
+    Verify PostLogin Account Creation
+    Verify PAN Verifed KYC Details
+    Verify PostLogin Remit Menu Navigation 
+
+# Postlogin Navigation Of Features Without KYC
+Postlogin Navigation Of Features
+    [Tags]  TC54  Stage3
+    [Teardown]  Logout From App And Navigate To Home Page PostLogin
+    Verify PostLogin Account Creation
+    PostLogin Feature Sub Header Navigation Without KYC
+
+# Postlogin Navigation Of Features With KYC
+Postlogin Navigation Of Features
+    [Tags]  TC55  Stage3
+    [Teardown]  Logout From App And Navigate To Home Page PostLogin
+    Verify PostLogin Account Creation
+    Verify PAN Verifed KYC Details
+    PostLogin Feature Sub Header Navigation With KYC
+
+# Deactivate Account
+Deactivate Signed Up Account
+    [Tags]  TC56  Stage3
+    Verify PostLogin Account Creation
+    Verify PostLogin Account Deactivation

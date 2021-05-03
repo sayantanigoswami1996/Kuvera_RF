@@ -150,6 +150,8 @@ ${e_feature_helpTradeSmartTitleText} =  We help you trade smart
 ${e_feature_helpTradeSmartDesc1Text} =  See regular plan units as they become available to switch to direct plans with the least tax and exit load impact. Switching to Direct has never been easier or cheaper.
 ${e_feature_helpTradeSmartDesc2Text} =  See optimal number of fund units to switch or redeem before you transact. Make better decisions.
 ${e_feature_helpTradeSmartDesc3Text} =  We take care of all complexities. 1 year STCG for equity, 3 year for debt, indexation for debt, lock-in for ELSS schemes etc. We optimize over it all.
+# Postlogin 
+${e_feature_ts_accSetUpMSg} =  Please complete your account setup before activating TradeSmart. It takes only 2 minutes.
 
 # Feature-Family Account Navigation Page 
 ${e_feature_fa_screenContent} =  Just Sign up with one account, and manage investment for your relatives and family members. Multiple accounts under same login. All in one place. Even Joint Account too!
@@ -295,7 +297,9 @@ ${KU_W_image4Description} =  xpath=(//div[@class='b-flow-chart__description'])[4
 ${KU_W_getLoanAgainstMF} =  xpath=//div[@class='b-start-save b-kuvera-get-loan']/div[1]/div[1]
 ${KU_W_getLoanAgainstMFMsg} =  xpath=//div[@class='b-start-save b-kuvera-get-loan']/div[1]/div[2]
 ${KU_W_startSaveCheckEligibilityBtn} =  xpath=//button[@class='button-primary b-start-save__btn b-start-save__btn-desktop']
- 
+# Loans Postlogin
+${KU_W_mobleNumPANPage} =  xpath=//span[normalize-space()='Enter mobile number']
+
 # Insure Navigation Page  
 ${KU_W_insureLink} =  xpath=//a[contains(text(),'Insure')]
 ${KU_W_insureHeaderTitle} =  xpath=(//div[@class='b-health-insurance-landing__title--main'])[1]
@@ -378,6 +382,7 @@ ${KU_W_featureSubList} =  xpath=//div[@class='b-header__sub-content']/div/a
 
 # Feature - Set a Goal
 ${KU_W_feature_setAGoalLink} =  xpath=//a[contains(text(),'Set a Goal')]
+${KU_W_feature_post_setAGoalLink} =  xpath=(//a[contains(text(),'Set a goal')])[1]
 ${KU_W_feature_goalsList} =  xpath=//div[@class='b-flat-card b-more-goals-options__goal']//div[2]
 ${KU_W_feature_sg_screenTitle} =  xpath=//div[contains(text(),'Set your goal')]
 ${KU_W_feature_sg_screenSubTitle} =  xpath=//div[@class='k-ui__para--standard b-more-goal-list__about-subheading']
@@ -427,6 +432,8 @@ ${KU_W_feature_sg_monthlyInvestTxt} =  xpath=//input[@name='sip']
 ${KU_W_feature_sg_monthlyExpenseTxt} =  xpath=//input[@name='expense']
 ${KU_W_feature_sg_retireAgeTxt} =  xpath=//input[@name='retireage']
 ${KU_W_feature_sg_goalNameTxt} =  xpath=//input[@name='goalname']
+# PostLogin
+${KU_W_feature_sg_needToInvest} =  xpath=//div[@class='investment-summary']//div//h2
 
 
 # Feature-TradeSmart Page
@@ -442,6 +449,14 @@ ${KU_W_feature_helpTradeSmart1Msg} =  xpath=//div[@class='b-trade-smart__help-de
 ${KU_W_feature_helpTradeSmart2Msg} =  xpath=//div[@class='b-trade-smart__help-desc']/div[2]
 ${KU_W_feature_helpTradeSmart3Msg} =  xpath=//div[@class='b-trade-smart__help-desc']/div[3]
 ${KU_W_feature_aboutUs} =  xpath=(//ul[@class='list-unstyled']/li)[1]
+# Postlogin
+${KU_W_feature_ts_referFriend} =  xpath=//p[normalize-space()='Refer a Friend']
+${KU_W_feature_ts_buyCoins} =  xpath=(//div[@class='tile-opt-sub-label-container'])[1]
+${KU_W_feature_ts_referCoins} =  xpath=(//div[@class='tile-opt-sub-label-container'])[1]
+${KU_W_feature_ts_coinsTitle} =  xpath=//p[contains(.,'Get 300 coins more to activate this feature.')]
+${KU_W_feature_ts_accSetUpTitle} =  xpath=//div[contains(text(),'Account setup is not complete')]
+${KU_W_feature_ts_accSetUpDesc} =  xpath=//div[@class='b-confirm__description']
+${KU_W_feature_ts_activeMsg} =  xpath=//div[contains(text(),'TradeSmart is active for you.')]
 
 
 # Feature-Family Account

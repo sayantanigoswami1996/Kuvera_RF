@@ -5,14 +5,20 @@ Library     SeleniumLibrary
 *** Keywords ***
 
 Verify PreLogin Loans Page
-    Click Element  ${KU_W_loanLink}
-    Verify Login And Signup Link
+    Wait And Click  ${KU_W_loanLink}
+    Verify Login And Signup On Prelogin
     Wait For Element Visibility  ${KU_W_loanHeaderTitle}  
     Verify Element And Text  ${KU_W_loanHeaderTitle}  ${e_loan_headerTitleText}
     Verify Element And Text  ${KU_W_loanHeaderMsg}  ${e_loan_headerMsgText} 
     Verify Element And Text  ${KU_W_loanCheckEligibility}  ${e_loan_checkElibilityBtnText} 
     Click Element  ${KU_W_loanCheckEligibility}
-    Verify Login Page
+    ${isLoginButtonVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_login}
+    IF  ${isLoginButtonVisible}  
+        Verify Login Page
+    ELSE  
+        Verify Page Contains Element  ${KU_W_mobleNumPANPage}
+        Go Back
+    END
     Wait For Element Visibility  ${KU_W_loanCalculatorTitle}     
     Scroll Untill View  ${KU_W_loanCalculatorTitle}
     Verify Element and Text  ${KU_W_loanCalculatorTitle}  ${e_loan_calculatorTitleText}

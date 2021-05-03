@@ -6,6 +6,14 @@ ${e_invest_mf_lumpsumAmount} =  50000
 ${e_invest_mf_addFundPopupHeader} =  Search and add fund
 ${e_invest_mf_bannerText} =  Import your MFs and switch to Direct. Start saving commissions.
 ${e_invest_mf_importExternalFunds} =  Import external mutual funds
+${e_invest_mf_notification} =  13 April is a Non-Business day for debt funds. Orders placed in debt funds on 13 April will be processed on next business day - 15 April
+${e_invest_mf_SIPAmt} =  6,000
+${e_invest_mf_rupeeSymbol} =  ₹
+${e_invest_mf_scheduledSIP} =  0
+${e_invest_mf_lumpsumAmt} =  50,000
+${e_invest_mf_lumpsumAndSIPAmt} =  56,000
+${cutOffTime} =  15
+${startTime} =  9
 # Application Locator 'KU_<locatorName>'
 # Mutual Fund Navigation Page
 # Mutual Fund
@@ -64,17 +72,46 @@ ${KU_W_invest_mf_fundManager} =  xpath=//*[@class='b-mf-other-info__fund-manager
 ${KU_W_invest_mf_fundOfferDocumentLink} =  xpath=//*[@class='b-mf-other-info__img--link']
 ${KU_W_invest_mf_AllFundsLink} =  xpath=(//*[@class='b-mf-other-info__img--link'])[2]
 # Postlogin - Order Summary
-${KU_W_invest_mf_dateOnOrderSIP} =  xpath=(//ul[@class='dropdown-menu']//li//a)[8]
-${KU_W_invest_mf_openDrpdownImg} =  xpath=//i[@class='open-indicator']
-${KU_W_invest_mf_newFolioLink} =  xpath=//a[normalize-space()='new']
+${KU_W_invest_mf_dateOnOrderSIP} =  xpath=//div[@class='b-date-text'][normalize-space()='8']
+${KU_W_invest_mf_openDrpdownImg} =  xpath=//div[@class='k-cursor--pointer']//img
+${KU_W_invest_mf_newFolioLink} =  xpath=//div[@class='b-cart-tile__folio--number k-cursor--pointer']
+${KU_W_invest_mf_newFolioMsg} =  xpath=//div[contains(text(),'Choose your folio for')]
+${KU_W_invest_mf_newFolioNumLabel} =  xpath=//div[.='Folio number']
+${KU_W_invest_mf_newFolioAmtLabel} =  xpath=//div[contains(text(),'Amount')]
+${KU_W_invest_mf_notification} =  xpath=//div[@class='ku-app app-standard-notification b-cart__notification']
+${KU_W_invest_mf_createNewLabel} =  xpath=//span[normalize-space()='Create new']
 ${KU_W_invest_mf_continueFolio} =  xpath=//button[@class='btn in-btn hidden-xs']
 ${KU_W_invest_mf_accBox} =  xpath=//div[@class='tile-option-container']
 ${KU_W_invest_mf_oneClickBox} =  xpath=//div[@id='create']//img
+${KU_W_invest_mf_selectBox} =  xpath=//button[normalize-space()='Select']
 ${KU_W_invest_mf_setOneClickBtn} =  xpath=//div[text()='Set OneClick']
 ${KU_W_invest_mf_continueToOrderBtn} =  xpath=//div[text()='Continue to order']
 ${KU_W_invest_mf_placeOrdersBtn} =  xpath=//button[normalize-space()='Place Orders']
 ${KU_W_invest_mf_continueBtn} =  xpath=//button[normalize-space()='Continue Payment']
 ${KU_W_invest_mf_orderSummary} =  xpath=//h1[normalize-space()='Order Summary']
+${KU_W_invest_mf_cartTitle} =  xpath=//div[contains(text(),'MF cart')]
+${KU_W_invest_mf_defaultDate} =  xpath=//div[@class='b-fund-type-tile__next-sip']
+${KU_W_invest_mf_addLumpsumLabel} =  xpath=//div[contains(text(),'+ Add lumpsum')]
+${KU_W_invest_mf_fundN} =  xpath=//a[normalize-space()='Axis Bluechip Growth Direct Plan']
+${KU_W_invest_mf_SIP_lumpAmt} =  xpath=(//div[@class='b-input-currency']//div)[1]
+${KU_W_invest_mf_scheduledSIPLabel} =  xpath=//div[normalize-space()='Scheduled SIP(s)']
+${KU_W_invest_mf_scheduledSIPAmt} =  xpath=(//div[@class='cart-total__amount'])[1]
+${KU_W_invest_mf_payNow} =  xpath=//div[normalize-space()='Pay now']
+${KU_W_invest_mf_minLumpsumVal} =  xpath=//div[@class='b-mf-widget__minimum']
+${KU_W_invest_mf_minSIPVal} =  xpath=(//div[@class='b-mf-widget__minimum'])[1]
+${KU_W_invest_mf_lumpsum_SIPVal} =  xpath=(//div[@class='b-input-currency']//div)[2]
+${KU_W_invest_mf_payAmt} =  xpath=(//div[@class='cart-total__amount'])[2]
+${KU_W_invest_mf_lumpsumDelIcon} =  xpath=(//div[@class='b-fund-type-tile__remove k-cursor--pointer'])[2]
+${KU_W_invest_mf_SIPDelIcon} =  xpath=(//div[@class='b-fund-type-tile__remove k-cursor--pointer'])[1]
+${KU_W_invest_mf_delFund} =  xpath=//div[contains(text(),'Delete fund')]
+${KU_W_invest_mf_delFundDesc} =  xpath=//div[contains(text(),'Are you sure you wish to delete this order from your cart?')]
+${KU_W_invest_mf_SIPInputAmt} =  xpath=(//div[@class='b-mf-widget__input-text-field-container'])[1]
+${KU_W_invest_mf_SIPAmtOnPayment1} =  xpath=//div[@class='col-xs-3 col-sm-3 order-amount']
+${KU_W_invest_mf_SIPAmtOnPayment2} =  xpath=(//div[@class='col-xs-3 col-sm-3 order-amount'])[2]
+${KU_W_invest_mf_totalAmtOnPayment} =  xpath=(//div[@class='col-xs-3'])[2]
+${KU_W_invest_mf_SIPAmtOnSelectMode} =  xpath=(//div[@class='d-payment-breakup__info d-payment-breakup__info--base']//div)[2]
+${KU_W_invest_mf_addSIPLabel} =  xpath=//div[contains(text(),'+ Add SIP')]
+${KU_W_invest_mf_payNowToolTip} =  xpath=//img[@class='k-cursor--pointer b-k-info-tooltip']
 # Postlogin - MF Listing Page
 ${KU_W_invest_mf_bannerText} =  xpath=//span[@class='b-banner-text']
 ${KU_W_invest_mf_importNow} =  xpath=//span[text()='Import now >']

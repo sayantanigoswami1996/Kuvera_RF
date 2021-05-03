@@ -196,8 +196,8 @@ Verify Features Widgets
     Sleep  1s
     Wait For Element Visibility  ${KU_W_manageToday_learnMoreLink}
     Click Element  ${KU_W_manageToday_learnMoreLink}
-    # ${expectedManageTodayLinkTitle} =  Convert To String  ${e_manageTodayLinkTitle} 
-    Switch To Window Verify Title And Close  ${e_manageTodayLinkTitle}  
+    Sleep  2s
+    Verify Manage Account Title
     Sleep  1s
     Click Element  ${KU_W_next_button}
     Sleep  1s
@@ -273,3 +273,12 @@ Verify Fund Houses
     # Validation of Fund Houses List on the second column
     @{fundHouses_list2} =  Get WebElements  ${KU_W_fundHouses_secondColumn}
     Compare Lists  ${fundHouses_list2}  ${e_fndHouse_secondColumn}
+
+Verify Manage Account Title
+    Switch Window  locator=NEW
+    ${pageTitle} =  Get Title
+    ${expectedManageTodayLinkTitle} =  Replace String  ${pageTitle}  &nbsp  ${EMPTY}
+    Run Keyword And Continue On Failure  Title Should Be  ${expectedManageTodayLinkTitle}
+    Close Window
+    Sleep  2s
+    Switch Window  browser=Kuvera

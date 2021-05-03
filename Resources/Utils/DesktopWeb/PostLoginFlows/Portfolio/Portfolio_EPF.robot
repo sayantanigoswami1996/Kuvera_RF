@@ -7,20 +7,21 @@ Verify PostLogin EPF Portfolio Menu Navigation With KYC
     Verify Import EPF Popup And Enter Details
     Wait And Click  ${KU_W_postlogin_importPortfolioTab}
     Wait And Click  ${KU_W_dashboard_trackInvest_EPF}
-    FOR  ${i}  IN RANGE  1   6
-        ${isElementVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_portfolio_EPF_EPFTab}
+    FOR  ${i}  IN RANGE  1   20
+        ${isElementVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_portfolio_EPF_manageEPF}
         IF  ${isElementVisible}
             Exit For Loop
         ELSE
-            Sleep  900s
-            Reload Page 
-            Wait For Element Visibility  ${KU_W_portfolio_EPF_title}
-            Wait And Click  ${KU_W_portfolio_EPF_title}
+            Sleep  200s
+            Reload Page
         END
     END
     Wait For Element Visibility  ${KU_W_portfolio_EPF_EPFTab}
     Verify Element And Text  ${KU_W_portfolio_EPF_EPFTab}  ${e_portfolio_EPF_tab}
     Verify Page Contains Element  ${KU_W_portfolio_EPF_manageEPF}
+    Wait And Click  ${KU_W_portfolio_EPF_manageEPF}
+    Wait And Click  ${KU_W_portfolio_EPF_removeEPFAcc}
+    Wait And Click  ${KU_W_portfolio_EPF_removeEPFPopup}
 
 Verify Import EPF Popup And Enter Details
     Verify Page Contains Element  ${KU_W_portfolio_EPF_importAndTrackTitle}
