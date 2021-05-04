@@ -73,7 +73,7 @@ Verify Stock Details Screen
     Click Element  ${stockLink}
     Wait For Element Visibility  ${KU_W_invest_stocksDetails_stockName}
     Verify Page Contains Element  ${KU_W_invest_stocksDetails_stockName}
-    Verify Explore Tags For Stocks And USStocks  ${KU_W_invest_stocks_sortYear}
+    Verify Explore Tags For Stocks USStocks And Funds  ${KU_W_invest_stocks_sortYear}
     Wait For Element Visibility  ${KU_W_invest_stocks_currentMarketPrice}
     Verify Page Contains Element  ${KU_W_invest_stocks_currentMarketPrice}
     Sleep  2s

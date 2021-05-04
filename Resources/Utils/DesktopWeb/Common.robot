@@ -3,6 +3,7 @@
 Library     JSONLibrary
 Library     JsonValidator
 Library     SeleniumLibrary
+Library     DateTime
 Library     String
 Library     OperatingSystem
 Library     Collections
@@ -48,6 +49,7 @@ Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/Portfolio/Por
 Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/Portfolio/Portfolio_SaveSmartLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/Portfolio/Portfolio_GoldLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/Portfolio/Portfolio_EPFLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/Portfolio/Portfolio_FDLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/SIPSTPSWPLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/SettingsLocators.robot
 
@@ -248,15 +250,19 @@ Click Link And Switch Window
     Switch To Window
     Sleep  2s  
 
-Navigate To Home Page
+URL Navigation Based ENV
     Run keyword If  '${ENV}' == '${e_prod}'  Go To  ${URL_prod}
     ...    ELSE IF  '${ENV}' == '${e_stage3}'  Go To  ${URL_stage3}
     ...    ELSE IF  '${ENV}' == '${e_stage2}'  Go To  ${URL_stage2}
+
+Navigate To Home Page
+    URL Navigation Based ENV
     ${isLoginButtonVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_login}
     IF  ${isLoginButtonVisible}
         Log To Console  PreLogin
     ELSE
         Logout From App Post Signup
+        URL Navigation Based ENV       
     END
     Set Window Size  ${1920}  ${1080}
     Reload Page

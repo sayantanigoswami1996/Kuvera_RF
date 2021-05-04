@@ -5,6 +5,16 @@ Verify PreLogin Mutual Fund Landing Page
     Navigate To Invest Page And Verify Explore Options  ${KU_W_mutualFund}  ${e_invest_mf_titleText} 
     Sleep  1s
     Verify Login And Signup On Prelogin
+    Verify Page Contains Element  ${KU_W_invest_mf_searchFundsLabel}
+    Verify Page Contains Element  ${KU_W_invest_mf_sortByLabel}
+    Verify Element And Text  ${KU_W_invest_mf_defaultSort}  ${e_invest_mf_defaultSort}
+    Verify Page Contains Element  ${KU_W_invest_mf_filterLabel}
+    Wait For Element Visibility  ${KU_W_faqbot_icon}
+    Verify Presence Of FAQBOT Icon
+    Verify Pre And Post Login Action On Watchlist For Funds  ${KU_W_invest_watchListBtn}
+    Verify Filter Navigation For Funds
+    Go Back
+    Wait And Click  ${KU_W_mutualFund}
     Wait For Element Visibility  ${KU_W_invest_mf_fundName}
     Verify Page Contains Element  ${KU_W_invest_mf_growthDividendButton}
     # Iterate the Mutual Fund detail screen
@@ -34,6 +44,7 @@ Verify Mutual Fund Details Page
     Verify Page Contains Element  ${KU_W_invest_mf_watchlistButton}
     Verify Pre And Post Login Action On Watchlist For Funds  ${KU_W_invest_mf_watchlistButton}
     Verify Go Back Action On Pre And Post Login
+    Verify Explore Tags For Stocks USStocks And Funds  ${KU_W_invest_mf_defaultSort} 
     # Title Section
     Wait For Element Visibility  ${KU_W_invest_mf_title}
     Verify Page Contains Element  ${KU_W_invest_mf_title}

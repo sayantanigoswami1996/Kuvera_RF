@@ -264,7 +264,7 @@ Verify Filter Navigation For USStocks USETF and 52WkHighUS
     ...    ELSE IF  ${fundlist}==0  Verify No Stocks Screen For UTF and 52WkHighUS  ${KU_W_invest_US_SETFAnd52WUS_watchlistBtn} 
     ...    ELSE  Log To Console  Completed
 
-Verify Explore Tags For Stocks And USStocks
+Verify Explore Tags For Stocks USStocks And Funds
     [Arguments]  ${sortYear}  
     Verify Page Contains Element  ${KU_W_invest_US_stocks_exploreTags}
     Click Element  ${KU_W_invest_US_stocks_exploreTagLink1} 

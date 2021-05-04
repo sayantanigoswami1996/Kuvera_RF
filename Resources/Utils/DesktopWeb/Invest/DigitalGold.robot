@@ -115,14 +115,7 @@ Verify Buy Section
     Verify Page Contains Element  ${KU_W_dg_goldValue}
     Scroll Untill View  ${KU_W_dg_aboutUSLink}
     Verify T&C And Coming Soon Title Presence
-    Wait And Click  ${KU_W_buyNowBtn}
-    ${isLoginButtonVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_login}
-    IF  ${isLoginButtonVisible}
-        Verify Login Page
-    ELSE
-        Verify Page Contains Element  ${KU_W_postlogin_paymentPageTitle}
-        Go Back 
-    END 
+    Verify Login Page On Prelogin And Features On Postlogin  ${KU_W_buyNowBtn}  ${KU_W_postlogin_paymentPageTitle} 
     Scroll Page To Location  0  -500
 
 Verify Digital Gold Is Better Than MF Section
@@ -140,16 +133,8 @@ Verify Digital Gold Is Better Than MF Section
     Scroll Untill View  ${KU_W_addGoldHeading}
     Verify Element And Text  ${KU_W_addGoldHeading}  ${e_invest_addGoldTitleText}
     Verify Element And Text  ${KU_W_addGoldDesc}  ${e_invest_addGoldDescText}
-    Verify Element And Text  ${KU_W_dg_addGoldBtn}  ${e_invest_addGoldBtnText} 
-    Wait For Element Visibility  ${KU_W_dg_addGoldBtn}
-    Click Button  ${KU_W_dg_addGoldBtn}
-    ${isLoginButtonVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_login}
-    IF  ${isLoginButtonVisible}
-        Verify Login Page
-    ELSE
-        Verify Page Contains Element  ${KU_W_dg_gm_tolasBox}
-        Go Back
-    END  
+    Verify Element And Text  ${KU_W_dg_addGoldBtn}  ${e_invest_addGoldBtnText}
+    Verify Login Page On Prelogin And Features On Postlogin  ${KU_W_dg_addGoldBtn}  ${KU_W_dg_gm_tolasBox}
     #  Questions? We are happy to help
     Scroll Untill View  ${KU_W_dg_faqHeading}
     Verify Element And Text  ${KU_W_dg_faqHeading}  ${e_invest_faqTitleText} 
@@ -179,9 +164,10 @@ Verify SIP Section
     Scroll Page To Location  0  -500
     
 Verify Track Section
-    Sleep  2s
+    Sleep  3s
     Wait For Element Visibility  ${KU_W_dg_trackTab}
     Click Element  ${KU_W_dg_trackTab}
+    Wait For Element Visibility  ${KU_W_dg_SIP_Track_Heading}
     Verify Element And Text  ${KU_W_dg_SIP_Track_Heading}  ${e_invest_trackTitleText} 
     Verify Login Title For SIP And Track  ${e_invest_track_loginTitleText} 
 
@@ -201,3 +187,15 @@ Verify Gold Payment Section
     Wait And Click  ${KU_W_dg_goldTimerRefresh}
     Verify Page Contains Element  ${KU_W_dg_paymentTimerText}
     Wait And Click  ${KU_W_dg_paymentGoBackIcon}
+
+Verify Login Page On Prelogin And Features On Postlogin
+    [Arguments]  ${button}  ${feature}
+    ${isLoginButtonVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_login}
+    IF  ${isLoginButtonVisible}
+        Wait And Click  ${button}
+        Verify Login Page
+    ELSE
+        Wait And Click  ${button}
+        Verify Page Contains Element  ${feature}
+        Go Back
+    END  

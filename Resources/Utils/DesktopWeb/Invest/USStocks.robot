@@ -188,7 +188,7 @@ Verify US Stocks Details Screen
     Wait For Element Visibility  ${KU_W_invest_USStocks_stockName}
     Verify Page Contains Element  ${KU_W_invest_USStocks_stockName}
     # Explore Tags
-    Verify Explore Tags For Stocks And USStocks  ${KU_W_invest_USStocks_sortYear}
+    Verify Explore Tags For Stocks USStocks And Funds  ${KU_W_invest_USStocks_sortYear}
     Wait For Element Visibility  ${KU_W_invest_USStocks_marketPrice}
     Verify Page Contains Element  ${KU_W_invest_USStocks_marketPrice}
     Sleep  2s
