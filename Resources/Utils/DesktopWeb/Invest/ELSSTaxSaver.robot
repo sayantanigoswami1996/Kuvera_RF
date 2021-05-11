@@ -11,8 +11,6 @@ Verify PreLogin ELSS Tax Saver Landing Page
     Verify Element And Text  ${KU_W_invest_fundsScreenTitle}  ${e_invest_ELSS_screenText}
     Verify Element And Text  ${KU_W_invest_sortYear}  ${e_invest__funds_sortYearText}
     Verify Element And Text  ${KU_W_invest_filteredFund}  ${e_invest_ELSS_filteredFundText} 
-    Verify Watchlist Icon  ${KU_W_invest_watchListBtn}
-    # Watchlist
-    Verify Element And Text  ${KU_W_invest_watchlistHeader}  ${e_invest_watchlistHeader}
+    Verify Watchlist Icon  ${KU_W_watchlistIcon}
+    Verify Login Page
     Verify Filter Navigation For Funds
-    Go Back

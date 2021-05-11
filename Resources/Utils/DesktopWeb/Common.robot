@@ -135,12 +135,17 @@ Kuvera Web Close Regulatory Disclosure
     Click Element  ${KU_W_close}
 
 Close Hello Bar
-    Sleep  15s
-    Wait Until Element Is Visible  ${KU_W_bannerFrame}  timeout=40
-    Switch To Frame  ${KU_W_bannerFrame}
-    Wait For Element Visibility  ${KU_W_bannerCloseBtn}
-    Click Element  ${KU_W_bannerCloseBtn}
-    Unselect Frame
+    ${isBannerVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_bannerFrame}
+    IF  ${isBannerVisible}
+        Sleep  15s
+        Wait Until Element Is Visible  ${KU_W_bannerFrame}  timeout=40
+        Switch To Frame  ${KU_W_bannerFrame}
+        Wait For Element Visibility  ${KU_W_bannerCloseBtn}
+        Click Element  ${KU_W_bannerCloseBtn}
+        Unselect Frame
+    ELSE
+        Log To Console  Continue without hello bar
+    END
 
 Get Json Values
     [Arguments]  ${jsonPath}  ${jsonFilePath}
@@ -236,6 +241,7 @@ Replace Characters
 
 Click Link And Switch Window
     [Arguments]  ${websiteLink} 
+    Wait For Element Visibility  ${websiteLink}
     Click Element  ${websiteLink}
     Switch To Window
     Sleep  2s  

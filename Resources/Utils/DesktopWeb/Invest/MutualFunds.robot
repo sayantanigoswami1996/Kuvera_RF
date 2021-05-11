@@ -28,10 +28,12 @@ Verify Mutual Fund Details Page
     Wait For Element Visibility  ${fund}
     Click Element  ${fund}
     Verify Login And Signup Link
-    Wait For Element Visibility  ${KU_W_invest_mf_watchlistButton}
-    Verify Page Contains Element  ${KU_W_invest_mf_watchlistButton}
-    Verify Watchlist Icon  ${KU_W_invest_mf_watchlistButton}
+    Wait For Element Visibility  ${KU_W_watchlistIcon}
+    Verify Page Contains Element  ${KU_W_watchlistIcon}
+    Verify Watchlist Icon  ${KU_W_watchlistIcon}
+    Sleep  2s
     Go Back
+    Sleep  1s
     # Title Section
     Wait For Element Visibility  ${KU_W_invest_mf_title}
     Verify Page Contains Element  ${KU_W_invest_mf_title}

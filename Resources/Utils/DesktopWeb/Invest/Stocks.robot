@@ -13,11 +13,11 @@ Verify PreLogin Stocks Landing Page
     Verify Search Stocks
     Wait For Element Visibility  ${KU_W_faqbot_icon}
     Verify Presence Of FAQBOT Icon
-    Verify Filter Navigation For Stocks And 52 WkHighIndia  ${KU_W_invest_stocks_52WIndia_watchListHeader}  ${e_invest_stocks_watchlistHeader}  ${e_invest__52WHighLow_UTF_sortYearText}  ${KU_W_invest_stocks_52WIndia_watchListBtn}
+    Verify Filter Navigation For Stocks And 52 WkHighIndia  ${KU_W_invest_stocks_52WIndia_watchListHeader}  ${e_invest_stocks_watchlistHeader}  ${e_invest__52WHighLow_UTF_sortYearText}  ${KU_W_watchlistIcon}
     Click Element  ${KU_W_stocks}
     Sleep  1s
-    Wait For Element Visibility  ${KU_W_invest_stocks_52WIndia_watchListBtn}
-    Verify Watchlist Icon  ${KU_W_invest_stocks_52WIndia_watchListBtn}  
+    Wait For Element Visibility  ${KU_W_watchlistIcon}
+    Verify Watchlist Icon  ${KU_W_watchlistIcon}  
     Verify Login Page 
     # Iterate the Stocks detail screen
     FOR  ${i}  IN RANGE  1  6
@@ -81,7 +81,7 @@ Verify Stock Details Screen
     Verify Page Contains Element  ${KU_W_invest_stocks_change%}
     Verify Page Contains Element  ${KU_W_invest_stocks_timeStamp} 
     Verify Page Contains Element  ${KU_W_invest_stocks_currentGainLoss%}
-    Verify Share PDF And Watchlist Option  ${KU_W_invest_stocks_shareIcon}  ${KU_W_invest_stocks_sharePopup}  ${KU_W_invest_stocks_pdfIcon}  ${KU_W_invest_stocks_watchlistIcon}
+    Verify Share PDF And Watchlist Option  ${KU_W_invest_stocks_shareIcon}  ${KU_W_invest_stocks_sharePopup}  ${KU_W_invest_stocks_pdfIcon}  ${KU_W_watchlistIcon}
     # Buy Stocks Button
     Wait For Element Visibility  ${KU_W_invest_stocks_buyStocksBtn}
     Verify Element And Text  ${KU_W_invest_stocks_buyStocksBtn}  ${e_invest_stocks_buyStocksBtn}

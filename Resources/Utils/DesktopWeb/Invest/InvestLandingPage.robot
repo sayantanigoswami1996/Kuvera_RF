@@ -104,6 +104,7 @@ Navigate To Invest Page And Verify Explore Options
     Wait For Element Visibility  ${KU_W_investLink} 
     Click Element  ${KU_W_investLink}
     Scroll Page To Location  0  2000
+    Wait For Element Visibility  ${option}
     Verify Element And Text  ${option}  ${optionText}
     Wait Scroll And Click Element  ${option}
     
@@ -125,6 +126,10 @@ Verify Filter And Clear All
     Verify Element And Text  ${KU_W_clearAll}  ${e_invest_clearAllBtnTxt}
 
 Verify Filter Navigation For Funds
+    # Watchlist
+    Wait And Click  ${KU_W_invest_watchList}
+    Wait For Element Visibility  ${KU_W_invest_watchlistHeader}
+    Verify Page Contains Element  ${KU_W_invest_watchlistHeader}
     # InstaRedeem
     Wait For Element Visibility  ${KU_W_invest_instaRedeem}
     Click Element  ${KU_W_invest_instaRedeem}
@@ -140,16 +145,16 @@ Verify Filter Navigation For Funds
     # Investor Choice
     Click Element  ${KU_W_invest_investorChoice}
     Sleep  1s
-    Wait For Element Visibility  ${KU_W_invest_watchListBtn}
-    Verify Page Contains Element  ${KU_W_invest_watchListBtn}
+    Wait For Element Visibility  ${KU_W_watchlistIcon}
+    Verify Page Contains Element  ${KU_W_watchlistIcon}
     # New Funds
     Click Element  ${KU_W_invest_newFunds}
     Verify Element And Text  ${KU_W_invest_newfunds_openEndedSwitch}  ${e_invest__newfunds_openSwitchText}
     # Top Searched
     Click Element  ${KU_W_invest_topSearched}
     Sleep  1s
-    Wait For Element Visibility  ${KU_W_invest_watchListBtn}
-    Verify Page Contains Element  ${KU_W_invest_watchListBtn}
+    Wait For Element Visibility  ${KU_W_watchlistIcon}
+    Verify Page Contains Element  ${KU_W_watchlistIcon}
     Go Back
 
 Verify No Stocks Screen For 52WkHighIndia
@@ -167,7 +172,7 @@ Verify No Stocks Screen For 52WkHighIndia
     Go Back
 
 Verify WatchList Button For 52WkHighIndia
-    Verify Page Contains Element  ${KU_W_invest_stocks_52WIndia_watchListBtn}
+    Verify Page Contains Element  ${KU_W_watchlistIcon}
     Go Back
 
 Verify Filter Navigation For Stocks And 52 WkHighIndia   
@@ -200,7 +205,7 @@ Verify Filter Navigation For Stocks And 52 WkHighIndia
     Sleep  3s
     ${fundlist} =  Get Element Count   xpath=//div[@class='b-stocks-explore__stock-row-info']
     Run Keyword If  ${fundlist}>0  Verify WatchList Button For 52WkHighIndia
-    ...    ELSE IF  ${fundlist}==0  Verify No Stocks Screen For 52WkHighIndia  ${KU_W_invest_stocks_52WIndia_watchListBtn}
+    ...    ELSE IF  ${fundlist}==0  Verify No Stocks Screen For 52WkHighIndia  ${KU_W_watchlistIcon}
     ...    ELSE  Log To Console  Completed
 
 Verify No Stocks Screen For UTF and 52WkHighUS
@@ -216,7 +221,7 @@ Verify No Stocks Screen For UTF and 52WkHighUS
     Go Back
 
 Verify WatchList Button For UTF and 52WkHighUS
-    Verify Page Contains Element  ${KU_W_invest_US_SETFAnd52WUS_watchlistBtn} 
+    Verify Page Contains Element  ${KU_W_watchlistIcon} 
     Go Back
 
 Verify Filter Navigation For USStocks USETF and 52WkHighUS  
@@ -249,7 +254,7 @@ Verify Filter Navigation For USStocks USETF and 52WkHighUS
     Sleep  3s
     ${fundlist} =  Get Element Count   xpath=//div[@class='b-stock-item b-stock-items__content__item']
     Run Keyword If  ${fundlist}>0  Verify WatchList Button For UTF and 52WkHighUS
-    ...    ELSE IF  ${fundlist}==0  Verify No Stocks Screen For UTF and 52WkHighUS  ${KU_W_invest_US_SETFAnd52WUS_watchlistBtn} 
+    ...    ELSE IF  ${fundlist}==0  Verify No Stocks Screen For UTF and 52WkHighUS  ${KU_W_watchlistIcon}
     ...    ELSE  Log To Console  Completed
 
 Verify Explore Tags For Stocks And USStocks
