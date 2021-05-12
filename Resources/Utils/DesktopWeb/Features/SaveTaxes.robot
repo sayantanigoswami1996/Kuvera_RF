@@ -24,6 +24,7 @@ Verify PreLogin Save Taxes Page
 
     # Mutual Fund
     Sleep  2s
+    Reload Page
     Wait And Click  ${KU_W_watchlistIcon}
     Verify Login Page
 

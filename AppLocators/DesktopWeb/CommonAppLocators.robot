@@ -122,7 +122,7 @@ ${KU_W_loginButton} =   xpath=//button[@class='button-primary b-login-signup__lo
 ${KU_W_signUpButton} =  xpath=//button[@class='button-primary b-login-signup__register'] 
 ${KU_W_explore_MF} =  xpath=//button[contains(text(),'Explore mutual funds')] 
 
-${KU_W_watchlistIcon} =   xpath=(//*[local-name()='svg'])[1] 
+${KU_W_watchlistIcon} =   xpath=(//*[local-name()='svg'])[2]
 ${KU_W_mf_mfTab} =   xpath=(//div[contains(text(),'Mutual Funds')])[1]             
 ${KU_W_android_image} =  xpath=//img[@class='b-mobile-first__img-android']
 ${KU_W_apple_image} =   xpath=//img[@class='b-mobile-first__img-apple']
