@@ -135,9 +135,9 @@ Kuvera Web Close Regulatory Disclosure
     Click Element  ${KU_W_close}
 
 Close Hello Bar
+    Sleep  15s
     ${isBannerVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_bannerFrame}
     IF  ${isBannerVisible}
-        Sleep  15s
         Wait Until Element Is Visible  ${KU_W_bannerFrame}  timeout=40
         Switch To Frame  ${KU_W_bannerFrame}
         Wait For Element Visibility  ${KU_W_bannerCloseBtn}
