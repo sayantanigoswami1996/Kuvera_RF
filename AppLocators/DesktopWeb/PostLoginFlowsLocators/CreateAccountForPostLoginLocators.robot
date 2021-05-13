@@ -3,7 +3,7 @@
 ${e_ca_domainName} =  @kuvera.in
 ${e_ca_email} =  moolya+auto_
 ${e_ca_mobileNum} =  1234567890
-${e_ca_pwd} =  moolya123456
+${e_ca_pwd} =  moolya78901
 ${e_ca_inviteCode} =  20BM4
 ${e_ca_OTP} =  111111
 # Application Locator 'KU_<locatorName>'

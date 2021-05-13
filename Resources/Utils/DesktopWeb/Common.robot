@@ -73,7 +73,7 @@ Welcome Page Should Be Open
 
 Wait For Element Visibility
     [Arguments]  ${element}
-    Wait Until Element Is Visible  ${element}  timeout=110
+    Wait Until Element Is Visible  ${element}  timeout=150
 
 Verify Element And Text
     [Arguments]  ${element}  ${text}
@@ -106,6 +106,10 @@ Verify Page Contains Button
 Verify Disabled Element
     [Arguments]  ${element}
     Run Keyword And Continue On Failure  Element Should Be Disabled  ${element}
+
+Verify Enabled Element
+    [Arguments]  ${element}
+    Run Keyword And Continue On Failure  Element Should Be Enabled  ${element}
 
 Compare Lists
     [Arguments]  ${actualList}   ${expectedList}
@@ -270,6 +274,7 @@ Navigate To Home Page
 
 Logout From App And Navigate To Home Page PostLogin
     Go To  ${URL_stage3}
+    Reload Page
     Logout From App Post Signup
     Go To  ${URL_stage3}
     Set Window Size  ${1920}  ${1080}
@@ -384,6 +389,21 @@ Enter OTP Postlogin
     Click Element  ${KU_W_ca_OTPField}
     Input Text  ${KU_W_ca_OTPField}  ${e_ca_OTP}
     Click Element  ${KU_W_ca_submitOTPBtn}
+
+Move Slider
+    [Arguments]  ${slider}
+    Mouse Over  ${slider}
+    Wait For Element Visibility  ${slider}
+    Drag And Drop By Offset  ${slider}  -123  1
+
+Enter DOB
+    [Arguments]  ${dateField}  ${date}  ${monthField}  ${month}  ${yearField}  ${year}
+    Wait And Click  ${dateField}
+    Input Text  ${dateField}  ${date}
+    Wait And Click  ${monthField} 
+    Input Text  ${monthField}  ${month} 
+    Wait And Click  ${yearField}
+    Input Text  ${yearField}  ${year}
        
 Close Web Application
     Close All Browser

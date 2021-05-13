@@ -3,7 +3,7 @@
 Verify PAN Verifed KYC Details
     Wait For Element Visibility  ${KU_W_KYC_startBtn}
     Click Element  ${KU_W_KYC_startBtn}
-    KYC Form Details Page
+    KYC Form Details Page  ${e_KYC_PANNumber}  ${e_KYC_mobileNumField}
     Confirm Account Details Page
     Link Bank Account
 
@@ -45,12 +45,7 @@ Link Bank Account
     Input Text  ${KU_W_KYC_nomineeName}  ${e_KYC_nomineeName}
     Wait And Click  ${KU_W_KYC_nomineeRelationshipField}
     Wait And Click  ${KU_W_KYC_nomineeRelationship}
-    Wait And Click  ${KU_W_KYC_dateField}
-    Input Text  ${KU_W_KYC_dateField}  ${e_KYC_nomineeDOB}
-    Wait And Click  ${KU_W_KYC_monthField} 
-    Input Text  ${KU_W_KYC_monthField}  ${e_KYC_nomineeMOB} 
-    Wait And Click  ${KU_W_KYC_yearField}
-    Input Text  ${KU_W_KYC_yearField}  ${e_KYC_nomineeYOB}
+    Enter DOB  ${KU_W_KYC_dateField}  ${e_KYC_nomineeDOB}  ${KU_W_KYC_monthField}  ${e_KYC_nomineeMOB}  ${KU_W_KYC_yearField}  ${e_KYC_nomineeYOB}
     Wait And Click  ${KU_W_KYC_nomineeAddress} 
     Input Text  ${KU_W_KYC_nomineeAddress}  ${e_KYC_address1Field}
     Wait And Click  ${KU_W_KYC_DONEBtn}

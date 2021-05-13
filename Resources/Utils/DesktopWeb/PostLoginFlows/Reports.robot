@@ -21,7 +21,7 @@ Verify PostLogin Reports Menu Navigation With KYC
     Sleep  2s
     Wait And Click  ${KU_W_reports_ELSSReportTab}
     Wait And Click  ${KU_W_reports_registrationBtn}
-    KYC Form Details Page
+    KYC Form Details Page  ${e_KYC_PANNumber}  ${e_KYC_mobileNumField}
     Confirm Account Details Page
     Link Bank Account
     Wait And Click  ${KU_W_postlogin_reportsTab}

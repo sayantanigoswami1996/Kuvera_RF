@@ -65,6 +65,7 @@ ${KU_W_postlogin_yesDelBtn} =  xpath=//button[normalize-space()='Yes, delete']
 ${KU_W_postlogin_noCancelBtn} =  xpath=//button[normalize-space()='No, cancel']
 ${KU_W_postlogin_cancelBtn} =  xpath=//div[contains(text(),'Cancel')]
 ${KU_W_postlogin_OKButton} =  xpath=//button[normalize-space()='OK']
+${KU_W_postlogin_skipButton} =  xpath=//div[contains(text(),'Skip')]
 # Portfolio Page
 ${KU_W_portfolio_doYouWantTo} =  xpath=//div[contains(text(),'Do you want to')]
 ${KU_W_portfolio_importFolioTitle} =  xpath=//p[normalize-space()='Import Portfolio']
