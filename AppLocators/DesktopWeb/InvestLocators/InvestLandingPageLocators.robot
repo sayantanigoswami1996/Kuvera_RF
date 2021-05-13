@@ -10,25 +10,15 @@ ${e_invest_giltFundsSubText} =  Invest in govt bonds. Zero credit risk, but have
 ${e_invest_ultraShortTitleText} =  Ultra-short
 ${e_invest_ultraShortSubText} =  Park money for the short term
 ${e_invest_bank&PSUTitleText} =  Bank & PSU bonds
-${e_invest_ELSSTaxTitleText} =   ELSS tax saver
-${e_invest_ELSSTaxSubText} =  Save up to ₹46.8k in taxes.
-${e_invest_digitalGoldTitleText} =  Digital gold
-${e_invest_digitalGoldSubText} =  Diversify your portfolio with Gold.
+${e_invest_balancedAdvantageTitleText} =   Balanced advantage
 ${e_invest_USETFTitleText} =   US ETF
-${e_invest_USETFSubText} =  Go global with direct US ETF investing. We make it easy and cheap.
 ${e_invest_equityIndexTitleText} =  Equity index
-${e_invest_equityIndexSubText} =  Get index returns at low cost. 
 ${e_invest_sectorFundsTitleText} =   Sector funds 
-${e_invest_sectorFundsSubTitleText} =  Pharma, Tech & more
 ${e_invest_valueFundsTitleText} =   Value funds
-${e_invest_valueFundsSubTitleText} =  Invest in stocks selling below their intrinsic or book value.
 ${e_invest_cryptoTitleText} =   Crypto
-${e_invest_cryptoSubTitleText} =  BTC, ETH et al. Join the crypto revolution
 ${e_invest_52WHighIndiaTitleText} =   52 wk high India
-${e_invest_52WHighIndiaSubTitleText} =  Momentum stocks in India
 ${e_invest_52WHighIndiaUS_screenText} =   52W high 
 ${e_invest_52WHighUSTitleText} =   52 wk high US
-${e_invest_52WHighUSSubTitleText} =  Momentum stocks in US
 ${e_invest_healthPremiumTitleText} =  Get ₹50L health cover starting at ₹900 p.m. T&C apply
 ${e_invest_checkPremiumSubText} =  Check premium     
 ${e_invest_mf_titleText} =  MF
@@ -67,27 +57,26 @@ ${KU_W_giltFundsSubTitle} =  xpath=(//div[@class='k-cls b-invest-card']/p)[3]
 ${KU_W_ultraShortTitle} =  xpath=(//div[@class='k-cls b-invest-card']/h6)[2]
 ${KU_W_ultraShortSubTitle} =  xpath=(//div[@class='k-cls b-invest-card']/p)[2]
 ${KU_W_bank&PSUBondsTitle} =  xpath=(//h6[@class='b-invest-tile__title'])[4]
-${KU_W_ELSSTaxSaverTitle} =  xpath=(//div[@class='k-cls b-invest-card']/h6)[4]
-${KU_W_ELSSTaxSaverSubTitle} =  xpath=(//div[@class='k-cls b-invest-card']/p)[4]
-${KU_W_digitalGoldTitle} =  xpath=(//div[@class='k-cls b-invest-card']/h6)[5]
-${KU_W_digitalGoldSubTitle} =  xpath=(//div[@class='k-cls b-invest-card']/p)[5]
+${KU_W_balancedAdvantageTitle} =  xpath=(//div[@class='k-cls b-invest-card']/h6)[4]
+${KU_W_digitalGoldTitle} =  xpath=//h6[normalize-space()='Digital gold']
+${KU_W_digitalGoldSubTitle} =  xpath=//p[normalize-space()='Diversify your portfolio with Gold.']
 ${KU_W_goldIconImage} =  xpath=(//div[@class='k-cls b-invest-card']/img)[2]
 ${KU_W_USUTFImage} =  xpath=(//div[@class='k-cls b-invest-card']/img)[3]
 ${KU_W_UTFTitle} =  xpath=(//div[@class='k-cls b-invest-card']/h6)[6]
-${KU_W_UTFSubTitle} =  xpath=(//div[@class='k-cls b-invest-card']/p)[6]
+${KU_W_UTFSubTitle} =  xpath=//p[.='Go global with direct US ETF investing. We make it easy and cheap.']
 ${KU_W_equityIndexTitle} =  xpath=(//h6[@class='b-invest-tile__title'])[6]
-${KU_W_equityIndexSubTitle} =  xpath=(//p[@class='b-invest-tile__para'])[7]
+${KU_W_equityIndexSubTitle} =  xpath=//p[normalize-space()='Get index returns at low cost.']
 ${KU_W_sectorFundsTitle} =  xpath=(//h6[@class='b-invest-tile__title'])[7]
-${KU_W_sectorFundsSubTitle} =  xpath=(//p[@class='b-invest-tile__para'])[9]
+${KU_W_sectorFundsSubTitle} =  xpath=//p[normalize-space()='Pharma, Tech & more']
 ${KU_W_cryptoTitle} =  xpath=//h6[contains(text(),'Crypto')]
-${KU_W_cryptoSubTitle} =  xpath=(//p[@class='b-invest-tile__para'])[10]
+${KU_W_cryptoSubTitle} =  xpath=//p[normalize-space()='BTC, ETH et al. Join the crypto revolution']
 ${KU_W_valueFundsTitle} =  xpath=(//div[@class='k-cls b-invest-card']/h6)[8]
-${KU_W_valueFundsSubTitle} =  xpath=(//div[@class='k-cls b-invest-card']/p)[8]
+${KU_W_valueFundsSubTitle} =  xpath=//p[.='Invest in stocks selling below their intrinsic or book value.']
 ${KU_W_52WHighIndiaTitle} =  xpath=(//h6[@class='b-invest-tile__title'])[10]
-${KU_W_52WHighIndiaSubTitle} =  xpath=(//p[@class='b-invest-tile__para'])[12]
+${KU_W_52WHighIndiaSubTitle} =  xpath=//p[normalize-space()='Momentum stocks in India']
 ${KU_W_52WHighIndia_screenText} =   xpath=//div[@class='b-stocks-explore__tab-wrapper disable-browser-text-select']//div[5]
 ${KU_W_52WHighUSTitle} =  xpath=(//div[@class='k-cls b-invest-card']/h6)[9]
-${KU_W_52WHighUSSubTitle} =  xpath=(//div[@class='k-cls b-invest-card']/p)[9]
+${KU_W_52WHighUSSubTitle} =  xpath=//p[normalize-space()='Momentum stocks in US']
 ${KU_W_52WHighUS_screenText} =  xpath=//div[@class='disable-browser-text-select b-standard-tab__item b-standard-tab__item--active b-standard-tab__item--52-week-high']
 ${KU_W_healthPremiumTitle} =  xpath=//div[@class='b-invest-landing__other-container']//div[1]/p
 ${KU_W_checkPremiumBtn} =  xpath=//h6[contains(.,'Check premium')]
