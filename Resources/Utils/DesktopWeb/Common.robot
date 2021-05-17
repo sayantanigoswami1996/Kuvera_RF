@@ -265,12 +265,13 @@ Navigate To Home Page
 
 Logout From App And Navigate To Home Page PostLogin
     Go To  ${URL_stage3}
+    Reload Page
     Logout From App Post Signup
     Go To  ${URL_stage3}
     Set Window Size  ${1920}  ${1080}
     Reload Page
     Sleep  12s
-
+    
 Generate Random Number
     [Arguments]  ${startingrange}  ${endingrange}
     ${randomNum} =	Evaluate	random.randint(${startingrange}, ${endingrange})
