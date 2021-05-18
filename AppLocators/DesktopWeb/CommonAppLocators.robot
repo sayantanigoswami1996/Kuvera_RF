@@ -47,7 +47,7 @@ ${e_usersMsg} =   We revolutionized the way India invests. With your feedback we
 ${e_earnTitle} =  Earn up to 1.5% more returns*
 ${e_earnMsg} =  We pioneered commission free Direct Plan investing.\nEarn from our expertise and don't pay commission ever.
 ${e_earnLearnLink} =   Learn how!
-${e_coreAUAValue} =  ₹ 21,000
+${e_coreAUAValue} =  ₹ 22,000
 ${e_coreAUAText} =  Crore AUA       
 ${e_citiesValue} =  4 Lakh
 ${e_citiesText} =   Goals
@@ -122,7 +122,7 @@ ${KU_W_loginButton} =   xpath=//button[@class='button-primary b-login-signup__lo
 ${KU_W_signUpButton} =  xpath=//button[@class='button-primary b-login-signup__register'] 
 ${KU_W_explore_MF} =  xpath=//button[contains(text(),'Explore mutual funds')] 
 
-${KU_W_mf_listIcon} =   xpath=//img[@class='b-fund-list__watchlist-icon']  
+${KU_W_watchlistIcon} =   xpath=(//*[local-name()='svg'])[2]
 ${KU_W_mf_mfTab} =   xpath=(//div[contains(text(),'Mutual Funds')])[1]             
 ${KU_W_android_image} =  xpath=//img[@class='b-mobile-first__img-android']
 ${KU_W_apple_image} =   xpath=//img[@class='b-mobile-first__img-apple']
@@ -141,7 +141,6 @@ ${KU_W_USStockButton} =  xpath=//div[contains(text(),'US stocks')]
 ${KU_W_usstock_filter} =  xpath=//div[@class='b-action-bar__filter__item__sector']
 ${KU_W_usstock_subFilter} =  xpath=//div[@class='b-action-bar__filter__item__geography__label']
 ${KU_W_usstock_fundList} =  xpath=//div[@class='b-us-stocks--widget-container']
-${KU_W_usstock_listIcon} =  xpath=(//img[@class='b-stock-item__row1__bookmark'])[1]
 ${KU_W_usstock_filterTitle} =  xpath=//div[@class='b-action-bar__filter__header__label']
 ${KU_W_usstock_header} =  xpath=//div[@class='b-us-stocks-widget__introduction__detail__title1']
 ${KU_W_usstock_subHeader} =  xpath=//div[@class='b-us-stocks-widget__introduction__detail__sign-up']

@@ -101,7 +101,7 @@ ${KU_W_invest_USStocks_defaultFilter} =  xpath=//div[@class='b-action-bar__filte
 ${KU_W_invest_USStocks_healthcareFilter} =  xpath=//div[contains(text(),'Healthcare')]
 ${KU_W_invest_USStocks_clearAll} =  xpath=//div[@class='b-action-bar__filter__header__btn-clear']
 ${KU_W_invest_USStocks_searchField} =  xpath=//input[@class='b-action-bar__search__item__text-field']
-${KU_W_invest_USStocks_USStockLink} =  xpath=(//div[@class='b-stock-items__content'])/div//a[1]
+${KU_W_invest_USStocks_USStockLink} =  xpath=(//div[@class='b-stock-item b-stock-items__content__item'])/div//a[1]
 ${KU_W_invest_USStocks_stockName} =  xpath=//div[@class='b-us-stock-basic-info__header--name']
 ${KU_W_invest_USStocks_marketPrice} =  xpath=//div[@class='b-us-stock-basic-info__price']
 ${KU_W_invest_USStocks_change%} =  xpath=//div[contains(@class,'b-us-stock-basic-info__return b-us-stock-basic-info')]

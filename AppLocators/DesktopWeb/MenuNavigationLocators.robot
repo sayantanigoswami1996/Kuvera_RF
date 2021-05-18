@@ -381,8 +381,7 @@ ${KU_W_remit_transferNoBottomBtn} =  xpath=//button[@class='button-primary b-how
 ${KU_W_featureSubList} =  xpath=//div[@class='b-header__sub-content']/div/a
 
 # Feature - Set a Goal
-${KU_W_feature_setAGoalLink} =  xpath=//a[contains(text(),'Set a Goal')]
-${KU_W_feature_post_setAGoalLink} =  xpath=(//a[contains(text(),'Set a goal')])[1]
+${KU_W_feature_setAGoalLink} =  xpath=(//a[contains(text(),'Set a goal')])[1]
 ${KU_W_feature_goalsList} =  xpath=//div[@class='b-flat-card b-more-goals-options__goal']//div[2]
 ${KU_W_feature_sg_screenTitle} =  xpath=//div[contains(text(),'Set your goal')]
 ${KU_W_feature_sg_screenSubTitle} =  xpath=//div[@class='k-ui__para--standard b-more-goal-list__about-subheading']
@@ -516,7 +515,6 @@ ${KU_W_feature_saveFeesHeading} =  xpath=(//div[@class='b-tax-saver-info__save__
 ${KU_W_feature_saveTaxesDesc} =  xpath=(//div[@class='b-tax-saver-info__save__des'])[1]
 ${KU_W_feature_saveCommissionDesc} =  xpath=(//div[@class='b-tax-saver-info__save__des'])[2]
 ${KU_W_feature_saveFeesDesc} =  xpath=(//div[@class='b-tax-saver-info__save__des'])[3]
-${KU_W_feature_st_watchlistBtn} =  xpath=(//div[@class='b-fund-list__watchlist']/img)[1]
 ${KU_W_feature_st_fundingTitle} =  xpath=//div[@class='b-tax-saver-details__working__heading']
 ${KU_W_feature_st_fundingDesc} =  xpath=//div[@class='b-tax-saver-details__working__text']
 ${KU_W_feature_st_learnHowLink} =  xpath=//a[@class='b-tax-saver-details__working__learn-how']
@@ -528,6 +526,7 @@ ${KU_W_feature_st_tableRow2} =  xpath= //tbody/tr[2]
 ${KU_W_feature_st_tableRow3} =  xpath= //tbody/tr[3]
 ${KU_W_feature_st_tableRow4} =  xpath= //tbody/tr[4]
 ${KU_W_feature_st_tableRow5} =  xpath= //tbody/tr[5]
+
 
 # Features-Consolidate Page
 ${KU_W_feature_consolidateLink} =  xpath=//a[contains(text(),'Consolidate')]

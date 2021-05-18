@@ -36,15 +36,14 @@ Verify PreLogin Invest Tiles
     Wait For Element Visibility  ${KU_W_bank&PSUBondsTitle} 
     Verify Element And Text  ${KU_W_bank&PSUBondsTitle}  ${e_invest_bank&PSUTitleText}
     Verify PreLogin Bank And PSU Bonds Landing Page
-    # ELSS Tax Saver
-    Wait For Element Visibility  ${KU_W_ELSSTaxSaverTitle}
-    Verify Element And Text  ${KU_W_ELSSTaxSaverTitle}  ${e_invest_ELSSTaxTitleText}
-    Verify Element And Text  ${KU_W_ELSSTaxSaverSubTitle}  ${e_invest_ELSSTaxSubText}
-    Verify PreLogin ELSS Tax Saver Landing Page
+    # Balanced Advantage
+    Wait For Element Visibility  ${KU_W_balancedAdvantageTitle}
+    Verify Element And Text  ${KU_W_balancedAdvantageTitle}  ${e_invest_balancedAdvantageTitleText}
+    Verify PreLogin Balanced Advantage Landing Page
     # Digital Gold
     Wait For Element Visibility  ${KU_W_digitalGoldTitle}
-    Verify Element And Text  ${KU_W_digitalGoldTitle}  ${e_invest_digitalGoldTitleText}
-    Verify Element And Text  ${KU_W_digitalGoldSubTitle}  ${e_invest_digitalGoldSubText}
+    Verify Page Contains Element  ${KU_W_digitalGoldTitle}
+    Verify Page Contains Element  ${KU_W_digitalGoldSubTitle}
     Verify Page Contains Image  ${KU_W_goldIconImage} 
     Click Element  ${KU_W_digitalGoldTitle}
     Log To Console  Digital Gold Tiles
@@ -55,28 +54,28 @@ Verify PreLogin Invest Tiles
     Wait For Element Visibility  ${KU_W_UTFTitle}
     Sleep  2s
     Verify Element And Text  ${KU_W_UTFTitle}  ${e_invest_USETFTitleText}
-    Verify Element And Text  ${KU_W_UTFSubTitle}  ${e_invest_USETFSubText}
+    Verify Page Contains Element  ${KU_W_UTFSubTitle}
     Verify Page Contains Image   ${KU_W_USUTFImage}  
     Verify PreLogin US ETF Landing Page
     # Equity Index
     Wait For Element Visibility  ${KU_W_equityIndexTitle}
     Verify Element And Text  ${KU_W_equityIndexTitle}  ${e_invest_equityIndexTitleText}
-    Verify Element And Text  ${KU_W_equityIndexSubTitle}  ${e_invest_equityIndexSubText} 
+    Verify Page Contains Element  ${KU_W_equityIndexSubTitle}
     Verify PreLogin Equity Index Landing Page
     # Sector Funds
     Wait For Element Visibility  ${KU_W_sectorFundsTitle}
     Verify Element And Text  ${KU_W_sectorFundsTitle}   ${e_invest_sectorFundsTitleText}
-    Verify Element And Text  ${KU_W_sectorFundsSubTitle}  ${e_invest_sectorFundsSubTitleText} 
+    Verify Page Contains Element  ${KU_W_sectorFundsSubTitle}
     Verify PreLogin Sector Funds Landing Page
     # Value Funds
     Wait For Element Visibility  ${KU_W_valueFundsTitle} 
     Verify Element And Text  ${KU_W_valueFundsTitle}  ${e_invest_valueFundsTitleText}
-    Verify Element And Text  ${KU_W_valueFundsSubTitle}  ${e_invest_valueFundsSubTitleText}
+    Verify Page Contains Element  ${KU_W_valueFundsSubTitle}
     Verify PreLogin Value Funds Landing Page
     # Crypto
     Wait For Element Visibility  ${KU_W_cryptoTitle}
     Verify Element And Text  ${KU_W_cryptoTitle}  ${e_invest_cryptoTitleText} 
-    Verify Element And Text  ${KU_W_cryptoSubTitle}  ${e_invest_cryptoSubTitleText}
+    Verify Page Contains Element  ${KU_W_cryptoSubTitle}
     Wait And Click  ${KU_W_cryptoTitle}
     Log To Console  Crypto Tiles
     Sleep  2s
@@ -86,12 +85,12 @@ Verify PreLogin Invest Tiles
     # 52 W High India
     Wait For Element Visibility  ${KU_W_52WHighIndiaTitle}  
     Verify Element And Text  ${KU_W_52WHighIndiaTitle}  ${e_invest_52WHighIndiaTitleText} 
-    Verify Element And Text  ${KU_W_52WHighIndiaSubTitle}  ${e_invest_52WHighIndiaSubTitleText}
+    Verify Page Contains Element  ${KU_W_52WHighIndiaSubTitle}
     Verify PreLogin 52WkHigh India Landing Page
     # 52 W High USA
     Wait For Element Visibility  ${KU_W_52WHighUSTitle}
     Verify Element And Text  ${KU_W_52WHighUSTitle}  ${e_invest_52WHighUSTitleText} 
-    Verify Element And Text  ${KU_W_52WHighUSSubTitle}  ${e_invest_52WHighUSSubTitleText}
+    Verify Page Contains Element  ${KU_W_52WHighUSSubTitle}
     Verify PreLogin 52WkHigh US Landing Page
     # Explore More
     Scroll Untill View  ${KU_W_exploreTitle}
@@ -104,6 +103,7 @@ Navigate To Invest Page And Verify Explore Options
     Wait For Element Visibility  ${KU_W_investLink} 
     Click Element  ${KU_W_investLink}
     Scroll Page To Location  0  2000
+    Wait For Element Visibility  ${option}
     Verify Element And Text  ${option}  ${optionText}
     Sleep  2s
     Wait Scroll And Click Element  ${option}
@@ -126,6 +126,10 @@ Verify Filter And Clear All
     Verify Element And Text  ${KU_W_clearAll}  ${e_invest_clearAllBtnTxt}
 
 Verify Filter Navigation For Funds
+    # Watchlist
+    Wait And Click  ${KU_W_invest_watchList}
+    Wait For Element Visibility  ${KU_W_invest_watchlistHeader}
+    Verify Page Contains Element  ${KU_W_invest_watchlistHeader}
     # InstaRedeem
     Wait For Element Visibility  ${KU_W_invest_instaRedeem}
     Click Element  ${KU_W_invest_instaRedeem}
@@ -141,16 +145,16 @@ Verify Filter Navigation For Funds
     # Investor Choice
     Click Element  ${KU_W_invest_investorChoice}
     Sleep  1s
-    Wait For Element Visibility  ${KU_W_invest_watchListBtn}
-    Verify Page Contains Element  ${KU_W_invest_watchListBtn}
+    Wait For Element Visibility  ${KU_W_watchlistIcon}
+    Verify Page Contains Element  ${KU_W_watchlistIcon}
     # New Funds
     Click Element  ${KU_W_invest_newFunds}
     Verify Element And Text  ${KU_W_invest_newfunds_openEndedSwitch}  ${e_invest__newfunds_openSwitchText}
     # Top Searched
     Click Element  ${KU_W_invest_topSearched}
     Sleep  1s
-    Wait For Element Visibility  ${KU_W_invest_watchListBtn}
-    Verify Page Contains Element  ${KU_W_invest_watchListBtn}
+    Wait For Element Visibility  ${KU_W_watchlistIcon}
+    Verify Page Contains Element  ${KU_W_watchlistIcon}
     Go Back
 
 Verify No Stocks Screen For 52WkHighIndia
@@ -168,7 +172,7 @@ Verify No Stocks Screen For 52WkHighIndia
     Go Back
 
 Verify WatchList Button For 52WkHighIndia
-    Verify Page Contains Element  ${KU_W_invest_stocks_52WIndia_watchListBtn}
+    Verify Page Contains Element  ${KU_W_watchlistIcon}
     Go Back
 
 Verify Filter Navigation For Stocks And 52 WkHighIndia   
@@ -207,7 +211,7 @@ Verify Filter Navigation For Stocks And 52 WkHighIndia
     Sleep  3s
     ${fundlist} =  Get Element Count   xpath=//div[@class='b-stocks-explore__stock-row-info']
     Run Keyword If  ${fundlist}>0  Verify WatchList Button For 52WkHighIndia
-    ...    ELSE IF  ${fundlist}==0  Verify No Stocks Screen For 52WkHighIndia  ${KU_W_invest_stocks_52WIndia_watchListBtn}
+    ...    ELSE IF  ${fundlist}==0  Verify No Stocks Screen For 52WkHighIndia  ${KU_W_watchlistIcon}
     ...    ELSE  Log To Console  Completed
 
 Verify No Stocks Screen For UTF and 52WkHighUS
@@ -223,7 +227,7 @@ Verify No Stocks Screen For UTF and 52WkHighUS
     Go Back
 
 Verify WatchList Button For UTF and 52WkHighUS
-    Verify Page Contains Element  ${KU_W_invest_US_SETFAnd52WUS_watchlistBtn} 
+    Verify Page Contains Element  ${KU_W_watchlistIcon} 
     Go Back
 
 Verify Filter Navigation For USStocks USETF and 52WkHighUS  
@@ -261,7 +265,7 @@ Verify Filter Navigation For USStocks USETF and 52WkHighUS
     Sleep  3s
     ${fundlist} =  Get Element Count   xpath=//div[@class='b-stock-item b-stock-items__content__item']
     Run Keyword If  ${fundlist}>0  Verify WatchList Button For UTF and 52WkHighUS
-    ...    ELSE IF  ${fundlist}==0  Verify No Stocks Screen For UTF and 52WkHighUS  ${KU_W_invest_US_SETFAnd52WUS_watchlistBtn} 
+    ...    ELSE IF  ${fundlist}==0  Verify No Stocks Screen For UTF and 52WkHighUS  ${KU_W_watchlistIcon}
     ...    ELSE  Log To Console  Completed
 
 Verify Explore Tags For Stocks USStocks And Funds

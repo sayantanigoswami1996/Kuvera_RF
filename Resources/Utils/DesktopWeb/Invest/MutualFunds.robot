@@ -34,7 +34,6 @@ Search Fund and Verify
     Click Element  ${KU_W_searchBarForFunds}
     Input Text  ${KU_W_invest_mf_searchBar}  ${fundName}  clear=true
     Press Enter Key  ${KU_W_invest_mf_searchBar}
-
 Verify Mutual Fund Details Page
     [Arguments]  ${fund}
     Wait For Element Visibility  ${fund}

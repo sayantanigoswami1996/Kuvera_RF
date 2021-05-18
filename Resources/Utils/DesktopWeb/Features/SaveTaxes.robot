@@ -23,7 +23,9 @@ Verify PreLogin Save Taxes Page
     Verify Element And Text  ${KU_W_feature_saveCommissionDesc}  ${e_feature_st_commissionDescText} 
 
     # Mutual Fund
-    Wait Scroll And Click Element  ${KU_W_feature_st_watchlistBtn}
+    Sleep  2s
+    Reload Page
+    Wait And Click  ${KU_W_watchlistIcon}
     Verify Login Page
 
     # Save Fees

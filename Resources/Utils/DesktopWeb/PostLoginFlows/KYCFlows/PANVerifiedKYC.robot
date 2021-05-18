@@ -3,7 +3,7 @@
 Verify PAN Verifed KYC Details
     Wait For Element Visibility  ${KU_W_KYC_startBtn}
     Click Element  ${KU_W_KYC_startBtn}
-    KYC Form Details Page  ${e_KYC_PANNumber}  ${e_KYC_mobileNumField}
+    KYC Form Details Page  ${e_KYC_PANNumber}  ${e_KYC_mobileNumField}  ${e_KYC_dateField}  ${e_KYC_monthField}  ${e_KYC_yearField}
     Confirm Account Details Page
     Link Bank Account  ${e_KYC_bankCertifyText}
 

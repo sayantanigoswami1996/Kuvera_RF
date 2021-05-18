@@ -1,10 +1,10 @@
 *** Keywords ***
 
-Verify PreLogin ELSS Tax Saver Landing Page
-    Log To Console  ELSS Tax Saver
+Verify PreLogin Balanced Advantage Landing Page
+    Log To Console  Balanced Advantage
     Sleep  1s
-    Wait For Element Visibility  ${KU_W_ELSSTaxSaverTitle}
-    Click Element  ${KU_W_ELSSTaxSaverTitle}
+    Wait For Element Visibility  ${KU_W_balancedAdvantageTitle}
+    Click Element  ${KU_W_balancedAdvantageTitle}
     Wait For Element Visibility  ${KU_W_invest_fundsScreenTitle} 
     Verify Login And Signup On Prelogin 
     Verify Search And Sort  ${KU_W_searchBarForFunds}  ${e_invest_searchBarText}  ${KU_W_invest_searchTextFieldForFunds}  ${KU_W_invest_sort}
