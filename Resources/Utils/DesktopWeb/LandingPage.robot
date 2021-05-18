@@ -18,7 +18,7 @@ Verify Presence Of Fundlist And WatchList Icon
     [Arguments]  ${fundList}  ${watchListIcon} 
     Wait For Element Visibility  ${fundList} 
     Verify Page Contains Element  ${fundList} 
-    Verify Page Contains Image  ${watchListIcon}
+    Verify Page Contains Element  ${watchListIcon}
 
 PreLogin Header Navigation
     ${invest}  Get Json Values  $.MenuHeaders.h0  Resources/TestData/Headers.json
@@ -50,8 +50,8 @@ PreLogin Feature Sub Header Navigation
     FOR  ${k}  IN RANGE  1  8
         Wait For Element Visibility  ${KU_W_featureLink}
         Click Element  ${KU_W_featureLink} 
-        Sleep  1s
-        ${subHeaders} =  Get Text  xpath=//div[@class='b-header__sub-content__feature']/a[${k}]
+        Sleep  2s
+        ${subHeaders} =  Get Text  xpath=//div[@class='b-header__sub-content__feature']//a[${k}]
         Log To Console  ${subHeaders}
         Run keyword If  ['${subHeaders}'] == ${setAGoal}  Verify PreLogin Set A Goal Page
         ...    ELSE IF  ['${subHeaders}'] == ${tradeSmart}   Verify PreLogin TradeSmart Page
@@ -72,7 +72,7 @@ Verify Mutual Funds Widgets
     Verify Element And Text  ${KU_W_mf_welcomeText}  ${e_mf_welcomeText}
     Wait For Element Visibility  ${KU_W_fund_list} 
     Verify Page Contains Element  ${KU_W_fund_list} 
-    Verify Page Contains Image  ${KU_W_mf_listIcon}
+    Verify Page Contains Element  ${KU_W_watchlistIcon} 
     Verify Element And Text  ${KU_W_loginButton}  ${e_login}
     Verify Element And Text  ${KU_W_signUpButton}  ${e_signup}
     Verify Element And Text  ${KU_W_coreaua_val}  ${e_coreAUAValue}
@@ -89,14 +89,14 @@ Verify Mutual Funds Widgets
 Verify Stock Widgets
     Wait For Element Visibility  ${KU_W_mf_stock_button}
     Click Element  ${KU_W_mf_stock_button}
-    Verify Presence Of Fundlist And WatchList Icon  ${KU_W_stock_fundList}  ${KU_W_stock_listIcon}
+    Verify Presence Of Fundlist And WatchList Icon  ${KU_W_stock_fundList}  ${KU_W_watchlistIcon}
     Verify Element And Text  ${KU_W_stock_header}  ${e_stock_headerTxt}
     Verify Element And Text  ${KU_W_stock_subHeader}   ${e_stock_subHeaderTxt} 
 
 Verify US Stock Widgets
     Wait For Element Visibility  ${KU_W_USStockButton}
     Click Element  ${KU_W_USStockButton}
-    Verify Presence Of Fundlist And WatchList Icon  ${KU_W_usstock_fundList}  ${KU_W_usstock_listIcon}
+    Verify Presence Of Fundlist And WatchList Icon  ${KU_W_usstock_fundList}  ${KU_W_watchlistIcon} 
     Verify Element And Text  ${KU_W_usstock_header}  ${e_usstock_headerTxt}
     Verify Element And Text  ${KU_W_usstock_subHeader}  ${e_usstock_subHeaderTxt} 
 
@@ -196,8 +196,8 @@ Verify Features Widgets
     Sleep  1s
     Wait For Element Visibility  ${KU_W_manageToday_learnMoreLink}
     Click Element  ${KU_W_manageToday_learnMoreLink}
-    # ${expectedManageTodayLinkTitle} =  Convert To String  ${e_manageTodayLinkTitle} 
-    Switch To Window Verify Title And Close  ${e_manageTodayLinkTitle}  
+    Sleep  2s
+    Verify Manage Account Title
     Sleep  1s
     Click Element  ${KU_W_next_button}
     Sleep  1s
@@ -273,3 +273,12 @@ Verify Fund Houses
     # Validation of Fund Houses List on the second column
     @{fundHouses_list2} =  Get WebElements  ${KU_W_fundHouses_secondColumn}
     Compare Lists  ${fundHouses_list2}  ${e_fndHouse_secondColumn}
+
+Verify Manage Account Title
+    Switch Window  locator=NEW
+    ${pageTitle} =  Get Title
+    ${expectedManageTodayLinkTitle} =  Replace String  ${pageTitle}  &nbsp  ${EMPTY}
+    Run Keyword And Continue On Failure  Title Should Be  ${expectedManageTodayLinkTitle}
+    Close Window
+    Sleep  2s
+    Switch Window  browser=Kuvera

@@ -1,7 +1,3 @@
-*** Settings ***
-
-Library     SeleniumLibrary
-
 *** Keywords ***
 
 Verify PreLogin 52WkHigh India Landing Page 
@@ -18,6 +14,6 @@ Verify PreLogin 52WkHigh India Landing Page
     Verify Element And Text  ${KU_W_filterText_52WIndia}  ${e_invest_filterBtnText}
     Verify Element And Text  ${KU_W_invest_sortYear}  ${e_invest__52WHighLow_UTF_sortYearText}
     # WatchList
-    Verify Watchlist Icon  ${KU_W_invest_stocks_52WIndia_watchListBtn}  
+    Verify Watchlist Icon  ${KU_W_watchlistIcon}  
     Verify Login Page
-    Verify Filter Navigation For Stocks And 52 WkHighIndia  ${KU_W_invest_stocks_52WIndia_watchListHeader}  ${e_invest_stocks_watchlistHeader}  ${e_invest__52WHighLow_UTF_sortYearText}  ${KU_W_invest_stocks_52WIndia_watchListBtn}
+    Verify Filter Navigation For Stocks And 52 WkHighIndia  ${KU_W_invest_stocks_52WIndia_watchListHeader}  ${e_invest_stocks_watchlistHeader}  ${e_invest__52WHighLow_UTF_sortYearText}  ${KU_W_watchlistIcon}

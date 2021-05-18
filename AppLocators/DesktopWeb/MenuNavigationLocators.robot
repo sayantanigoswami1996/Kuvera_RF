@@ -268,7 +268,7 @@ ${e_feature_cd_manageTodayBtnText} =   MANAGE TODAY
 # Button 
 ${KU_W_button} =  xpath=(//button[@class='button-primary'])[1]
 # Loan Navigation Page
-${KU_W_loanLink} =  xpath=//a[contains(text(),'Loans')]
+${KU_W_loanLink} =  xpath=//a[contains(text(),'Loan')]
 ${KU_W_loanHeaderTitle} =  xpath=//div[@class='b-header__title']
 ${KU_W_loanHeaderMsg} =  xpath=//div[contains(text(),'Let your investments work for you. The only loan a')]
 ${KU_W_loanCheckEligibility} =  class=b-state-save-btn__text
@@ -295,7 +295,9 @@ ${KU_W_image4Description} =  xpath=(//div[@class='b-flow-chart__description'])[4
 ${KU_W_getLoanAgainstMF} =  xpath=//div[@class='b-start-save b-kuvera-get-loan']/div[1]/div[1]
 ${KU_W_getLoanAgainstMFMsg} =  xpath=//div[@class='b-start-save b-kuvera-get-loan']/div[1]/div[2]
 ${KU_W_startSaveCheckEligibilityBtn} =  xpath=//button[@class='button-primary b-start-save__btn b-start-save__btn-desktop']
- 
+# Loans Postlogin
+${KU_W_mobleNumPANPage} =  xpath=//span[normalize-space()='Enter mobile number']
+
 # Insure Navigation Page  
 ${KU_W_insureLink} =  xpath=//a[contains(text(),'Insure')]
 ${KU_W_insureHeaderTitle} =  xpath=(//div[@class='b-health-insurance-landing__title--main'])[1]
@@ -377,7 +379,7 @@ ${KU_W_remit_transferNoBottomBtn} =  xpath=//button[@class='button-primary b-how
 ${KU_W_featureSubList} =  xpath=//div[@class='b-header__sub-content']/div/a
 
 # Feature - Set a Goal
-${KU_W_feature_setAGoalLink} =  xpath=//a[contains(text(),'Set a Goal')]
+${KU_W_feature_setAGoalLink} =  xpath=(//a[contains(text(),'Set a goal')])[1]
 ${KU_W_feature_goalsList} =  xpath=//div[@class='b-flat-card b-more-goals-options__goal']//div[2]
 ${KU_W_feature_sg_screenTitle} =  xpath=//div[contains(text(),'Set your goal')]
 ${KU_W_feature_sg_screenSubTitle} =  xpath=//div[@class='k-ui__para--standard b-more-goal-list__about-subheading']
@@ -427,6 +429,8 @@ ${KU_W_feature_sg_monthlyInvestTxt} =  xpath=//input[@name='sip']
 ${KU_W_feature_sg_monthlyExpenseTxt} =  xpath=//input[@name='expense']
 ${KU_W_feature_sg_retireAgeTxt} =  xpath=//input[@name='retireage']
 ${KU_W_feature_sg_goalNameTxt} =  xpath=//input[@name='goalname']
+# PostLogin
+${KU_W_feature_sg_needToInvest} =  xpath=//div[@class='investment-summary']//div//h2
 
 
 # Feature-TradeSmart Page
@@ -501,7 +505,6 @@ ${KU_W_feature_saveFeesHeading} =  xpath=(//div[@class='b-tax-saver-info__save__
 ${KU_W_feature_saveTaxesDesc} =  xpath=(//div[@class='b-tax-saver-info__save__des'])[1]
 ${KU_W_feature_saveCommissionDesc} =  xpath=(//div[@class='b-tax-saver-info__save__des'])[2]
 ${KU_W_feature_saveFeesDesc} =  xpath=(//div[@class='b-tax-saver-info__save__des'])[3]
-${KU_W_feature_st_watchlistBtn} =  xpath=(//div[@class='b-fund-list__watchlist']/img)[1]
 ${KU_W_feature_st_fundingTitle} =  xpath=//div[@class='b-tax-saver-details__working__heading']
 ${KU_W_feature_st_fundingDesc} =  xpath=//div[@class='b-tax-saver-details__working__text']
 ${KU_W_feature_st_learnHowLink} =  xpath=//a[@class='b-tax-saver-details__working__learn-how']
@@ -513,6 +516,7 @@ ${KU_W_feature_st_tableRow2} =  xpath= //tbody/tr[2]
 ${KU_W_feature_st_tableRow3} =  xpath= //tbody/tr[3]
 ${KU_W_feature_st_tableRow4} =  xpath= //tbody/tr[4]
 ${KU_W_feature_st_tableRow5} =  xpath= //tbody/tr[5]
+
 
 # Features-Consolidate Page
 ${KU_W_feature_consolidateLink} =  xpath=//a[contains(text(),'Consolidate')]

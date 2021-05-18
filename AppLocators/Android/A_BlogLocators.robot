@@ -1,7 +1,6 @@
 *** Variables ***
 # Application Expected Values 'e_<VariableName>'
 ${e_blogLink} =  Blog
-${e_blog_kuveraWeeklyTitle} =  KUVERA WEEKLY
 ${e_blog_kuverianStories} =  Happy Kuverians’ Stories            
 
 # Application Expected Values 'e_<VariableName>'
