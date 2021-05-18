@@ -8,19 +8,31 @@ ${e_FD_payout1} =  Monthly
 ${e_FD_payout2} =  Quarterly  
 ${e_FD_payout3} =  Half yearly
 ${e_FD_payout4} =  Yearly
-${e_FD_nameOnPAN} =  Somaraju Venkata Naga Bhavani Sruti
+${e_FD_nameOnPAN} =  Shivam Singh
 ${e_FD_nomineeDOB} =  02
 ${e_FD_nomineeMOB} =  09
 ${e_FD_nomineeYOB} =  2005
 ${e_FD_nomineeMajorYOB} =  1998
 ${e_FD_nomineeName} =  Son Tester
 ${e_FD_minorNomineeMsg} =  Since your nominee is a minor, please enter his/her guardian’s details. The guardian should not be the same as the primary applicant - that’s you!
-${e_FD_IFSC} =  HDFC0000133
-${e_FD_accNum} =  50100174025730
+${e_FD_IFSC} =  CNRB0008693
+${e_FD_accNum} =  1488101055962
+${e_FD_PAN} =  EYWPS8144F
+${e_FD_mobileNum} =  7204801946
+${e_FD_dateField} =  20
+${e_FD_monthField} =  12
+${e_FD_yearField} =  1994
+${e_FD_KYCBankCertifyText} =  I certify that SHIVAM SINGH is an account holder of this bank account.
 ${e_FD_nomineeName} =  Son Tester
 ${e_FD_tellUsAbout} =  Tell us about yourself
 ${e_FD_invalidPANMsg} =  GLXPS3071R is not CKYC verified.\nCKYC is needed to create an FD.\n\nCKYC verification\ncoming soon on Kuvera!
 ${e_FD_invalidDOBMsg} =  Bajaj Finance could not validate your PAN. Please try again later
+${e_FD_disclaimerDesc1} =  1) I have gone through the financials and other statements/ particulars / representations furnished/ made by the company and after careful consideration, I am making the deposit with the company at my own risk and volition. Funds are transferred to Bajaj Finance Ltd.'s bank account through payment gateway by an intermediary. Interest date will be at T+1 working days based on fund realisation from payment gateway.
+${e_FD_disclaimerDesc2} =  2)  I confirm the above information and my profile details are correct.\nI consent to Kuvera to share my personal & KYC details with Bajaj\nFinance Ltd and I read & agree to Terms and Conditions of 
+${e_FD_T&CText} =  I confirm the above information and all details\nprovided by me are correct. I consent Kuvera to\nshare my KYC and profile data with Bajaj Finance\nLtd. I have read and agree to the T&C of
+${e_FD_FDName} =  Bajaj Finance Ltd.
+${e_FD_FDAmtInvested} =  ₹25,000
+
 # Application Locator 'KU_<locatorName>'
 # FD Landing Navigation Page
 ${KU_W_FD_allFDTab} =  xpath=//div[contains(text(),'All FDs')]
@@ -44,7 +56,7 @@ ${KU_W_FD_nonCumulativeBtn} =  xpath=//div[contains(text(),'Non Cumulative')]
 ${KU_W_FD_cumulativeBtn} =  xpath=(//div[contains(text(),'Cumulative')])[1]
 ${KU_W_FD_interestRateLabel} =  xpath=//div[normalize-space()='Interest rate']
 ${KU_W_FD_maturityAmtLabel} =  xpath=//div[normalize-space()='On maturity, you will receive']
-${KU_W_FD_interestRateCummulative} =  xpath=//div[contains(text(),'7.0%')]
+${KU_W_FD_interestRateCummulative} =  xpath=//div[@class='k-description__2b3d51 k-fs16 k-mt4']
 ${KU_W_FD_beforeTaxesLabel} =  xpath=//div[contains(text(),'*Before taxes')]
 ${KU_W_FD_seniorCitizenLabel} =  xpath=//div[contains(text(),'I am a senior citizen.')]
 ${KU_W_FD_maturityLabel} =  xpath=//div[@class='b-fd-invest-card']//div//div[@class='k-flex']
@@ -136,13 +148,48 @@ ${KU_W_FD_confirmAccNumField} =  xpath=//input[@placeholder='Confirm account num
 ${KU_W_FD_savingsField} =  xpath=//div[contains(text(),'Savings')]
 ${KU_W_FD_currentField} =  xpath=//div[text()='Current ']
 ${KU_W_FD_consentMsg} =  xpath=//div[contains(text(),'I have verified the account number entered                            above. Changes to bank account details later                            require paperwork and will impact redemption                            orders.')]
-${KU_W_FD_bankBranchDets} =  xpath=//div[contains(text(),'HDFC BANK - BANGALORE - J P NAGAR - BANGALORE')]
+${KU_W_FD_bankBranchDets} =  xpath=//div[contains(text(),'CANARA BANK - TOWN HALL WELFARE CENTRE, BANGALORE - BANGALORE')]
 ${KU_W_FD_selectedBankName} =  xpath=//div[contains(text(),'HDFC BANK')]
-${KU_W_FD_selectedBankAccDets} =  xpath=//div[contains(text(),'Account no. ***********5730')]
+${KU_W_FD_selectedBankAccDets} =  xpath=//div[contains(text(),'Account no. ***********962')]
 ${KU_W_FD_selectBankBtn} =  xpath=//button[normalize-space()='Select bank']
+# Confirm FD Details
+${KU_W_FD_confirmFDDetsTitle} =  xpath=//span[contains(text(),'Confirm FD details')]
+${KU_W_FD_FDName} =  xpath=//div[contains(text(),'Bajaj finance ltd.')]
+${KU_W_FD_nameLabel} =  xpath=//div[text()='Name ']
+${KU_W_FD_holderName} =  xpath=//div[contains(text(),'Shivam Singh')]
+${KU_W_FD_amtLabel} =  xpath=//div[normalize-space()='Amount']
+${KU_W_FD_FDAmt} =  xpath=//div[text()='₹25,000 ']
+${KU_W_FD_FDRateLabel} =  xpath=//div[normalize-space()='FD rate']
+${KU_W_FD_tenureLabel} =  xpath=//div[text()='Tenure ']
+${KU_W_FD_tenure} =  xpath=//div[normalize-space()='41 months']
+${KU_W_FD_payoutLabel} =  xpath=//div[normalize-space()='Payout']
+${KU_W_FD_payout} =  xpath=//div[normalize-space()='Monthly']
+${KU_W_FD_payByLabel} =  xpath=//div[normalize-space()='Pay by']
+${KU_W_FD_payByBank} =  xpath=//div[normalize-space()='CANARA BANK Bank']
+${KU_W_FD_payByAcc} =  xpath=//div[contains(text(),'Account no. ********5962')]
+${KU_W_FD_completeDisclaimer} =  xpath=//div[contains(text(),'See complete disclaimer >')]
+${KU_W_FD_disclaimerTitle} =  xpath=//div[contains(text(),'Bajaj Finance Limited disclaimer')]
+${KU_W_FD_disclaimerDesc1} =  xpath=//div[@class='b-invest-fd-disclamer']//div//div[1]
+${KU_W_FD_disclaimerDesc2} =  xpath=//div[@class='b-invest-fd-disclamer']//div[2]
+${KU_W_FD_T&CText} =  xpath=//div[@class='b-standard-checkbox__content__option--label']
+${KU_W_FD_T&CCheckBox} =  xpath=//img[@class='b-check-box__img k-asc']
+# FD Order Placed
+${KU_W_FD_FDOrderPlaced} =  xpath=//div[contains(text(),'FD order placed')]
+${KU_W_FD_FDOrderPlacedDesc} =  xpath=//div[contains(text(),'It will take 2-3 business days for your FD to get approved.')]
+${KU_W_FD_FDOrdered} =  xpath=//div[contains(text(),'Bajaj Finance Limited')]
+${KU_W_FD_orderPlacedLabel} =  xpath=//div[normalize-space()='Order placed']
+${KU_W_FD_amtInvestedLabel} =  xpath=//div[normalize-space()='Amount invested']
+${KU_W_FD_orderPlacedDate} =  xpath=(//div[@class='k-ui-information-card']//div)[2]
+${KU_W_FD_orderPlacedIntRate} =  xpath=(//div[@class='k-ui-information-card']//div)[8]
+${KU_W_FD_orderOnInProcess} =  xpath=//div[@class='b-order-row order-status__row']
+${KU_W_FD_FDOrderedName} =  xpath=//div[@class='b-order-row__title']//a
+${KU_W_FD_inProcessTag} =  xpath=(//div[@class='b-order-row__tag'])[2]
+${KU_W_FD_orderStatusLabel} =  xpath=//div[contains(text(),'Order status')]
+${KU_W_FD_FDAmtInvested} =  xpath=(//div[@class='b-order-row__value'])[4]
 # NON-KYC PAN user
 ${KU_W_FD_enterPAN} =  xpath=//input[@placeholder='Enter your PAN']
 ${KU_W_FD_tellUsAboutYourself} =  xpath=//div[@class='b-standard-nav-nav__container k-bgfff k-flex']
 ${KU_W_FD_tellUsAboutYourselfDesc} =  xpath=//div[contains(text(),'A bit about your current financial situation.')]
 # Invalid PAN 
 ${KU_W_FD_invalidPAN_DOBMsg} =  xpath=//div[contains(@class,'k-description__2b3d51 k-fs14 k-mt16 k-tac')]
+

@@ -3,16 +3,16 @@
 Verify Fill In Of KYC Form Details
     Wait For Element Visibility  ${KU_W_KYC_startBtn}
     Click Element  ${KU_W_KYC_startBtn}
-    KYC Form Details Page  ${e_KYC_PANNumber}  ${e_KYC_mobileNumField} 
+    KYC Form Details Page  ${e_KYC_PANNumber}  ${e_KYC_mobileNumField}  ${e_KYC_dateField}  ${e_KYC_monthField}  ${e_KYC_yearField}
     Wait And Click  ${KU_W_postlogin_kuverLogo} 
 
 KYC Form Details Page
-    [Arguments]  ${PANNum}  ${PhoneNum}
+    [Arguments]  ${PANNum}  ${PhoneNum}  ${DOB}  ${MOB}  ${YOB}
     Log To Console  KYC Form
     Wait For Element Visibility  ${KU_W_KYC_formTitle}
     Verify Element And Text  ${KU_W_KYC_formTitle}  ${e_KYC_formTitle}
     Verify Element And Text  ${KU_W_KYC_formSubTitle}  ${e_KYC_formSubTitle}  
-    Enter PAN Details  ${PANNum}  ${PhoneNum}
+    Enter PAN Details  ${PANNum}  ${PhoneNum}  ${DOB}  ${MOB}  ${YOB}
     Wait Scroll And Click Element  ${KU_W_KYC_residenceStatus}
     Wait Scroll And Click Element  ${KU_W_KYC_residentIndividual}
     Click Element  ${KU_W_KYC_address1Field}
@@ -57,12 +57,12 @@ Visibility Of The Popup
     Element Should Be Visible  ${KU_W_postlogin_OkBtn} 
 
 Enter PAN Details
-    [Arguments]  ${PANNumber}  ${phoneNum}
+    [Arguments]  ${PANNumber}  ${phoneNum}  ${date}  ${month}  ${year}
     Verify Element And Text  ${KU_W_KYC_PANLabel}  ${e_KYC_PANLabel}
     Click Element  ${KU_W_KYC_PANTextField}
     Input Text  ${KU_W_KYC_PANTextField}  ${PANNumber}
     Verify Element And Text  ${KU_W_KYC_DOBLabel}  ${e_KYC_DOBLabel}
-    Enter DOB  ${KU_W_KYC_dateField}  ${e_KYC_dateField}  ${KU_W_KYC_monthField}  ${e_KYC_monthField}  ${KU_W_KYC_yearField}  ${e_KYC_yearField}
+    Enter DOB  ${KU_W_KYC_dateField}  ${date}  ${KU_W_KYC_monthField}  ${month}  ${KU_W_KYC_yearField}  ${year}
     Verify Element And Text  ${KU_W_KYC_mobileNumLabel}  ${e_KYC_mobileNumLabel}
     Click Element  ${KU_W_KYC_mobileNumField}
     Input Text  ${KU_W_KYC_mobileNumField}  ${phoneNum}

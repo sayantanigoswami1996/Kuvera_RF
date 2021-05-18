@@ -5,7 +5,7 @@ Verify PAN Verifed KYC Details
     Click Element  ${KU_W_KYC_startBtn}
     KYC Form Details Page  ${e_KYC_PANNumber}  ${e_KYC_mobileNumField}
     Confirm Account Details Page
-    Link Bank Account
+    Link Bank Account  ${e_KYC_bankCertifyText}
 
 Confirm Account Details Page
     # Tell Us About Yourself
@@ -14,6 +14,7 @@ Confirm Account Details Page
     Wait Scroll And Click Element  ${KU_W_postlogin_continueBtn} 
 
 Link Bank Account
+    [Arguments]  ${bankCertifyText}
     Log To Console  Link Bank Account
     # Bank Account Details
     Verify Page Contains Element  ${KU_W_KYC_linkBankAccTitle}
@@ -27,7 +28,7 @@ Link Bank Account
     Verify Element And Text  ${KU_W_KYC_reBankAccLabel}  ${e_KYC_reBankAccLabel}
     Wait And Click  ${KU_W_KYC_reBankAccField} 
     Input Text  ${KU_W_KYC_reBankAccField}  ${e_KYC_bankAccField}
-    Verify Element And Text  ${KU_W_KYC_bankCertifyText}  ${e_KYC_bankCertifyText} 
+    Verify Element And Text  ${KU_W_KYC_bankCertifyText}  ${bankCertifyText} 
     Wait And Click  ${KU_W_KYC_bankCertifyCheckBox} 
     Verify Element And Text  ${KU_W_KYC_bankConfirmedText}  ${e_KYC_bankConfirmedText}
     Wait And Click  ${KU_W_KYC_bankConfirmedCheckBox}

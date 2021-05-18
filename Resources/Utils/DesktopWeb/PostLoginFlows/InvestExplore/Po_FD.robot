@@ -8,6 +8,8 @@ Verify PostLogin FD Menu Navigation With KYC
     Verify PAN Details Popup
     Add Address Details
     Add Nominees Details
+    Confirm FD Details
+    FD Order Placed And Verify In Process Page
 
 Verify PostLogin FD Menu Navigation Without KYC
     Log To Console  FD-NONKYC
@@ -53,6 +55,13 @@ Navigate To FD And Start FD
     Verify Login And Signup On Prelogin
     Wait And Click  ${KU_W_FD_bajajFinance}
     Wait And Click  ${KU_W_FD_startFDBtn}
+
+Fill in KYC For FD
+    Wait For Element Visibility  ${KU_W_KYC_startBtn}
+    Click Element  ${KU_W_KYC_startBtn}
+    KYC Form Details Page  ${e_FD_PAN}  ${e_FD_mobileNum}  ${e_FD_dateField}  ${e_FD_monthField}  ${e_FD_yearField}
+    Confirm Account Details Page
+    Link Bank Account  ${e_FD_KYCBankCertifyText}
 
 Verify Cumulative And Non Cumulative Popup
     # Cumulative
@@ -112,7 +121,7 @@ Verify PAN Details Popup
     Verify Page Contains Element  ${KU_W_FD_verifyDetailsTitle}
     Verify Page Contains Element  ${KU_W_FD_PANLabel}
     Verify Disabled Element  ${KU_W_FD_PANNum}
-    Verify Element And Text  ${KU_W_FD_PANNum}  ${e_KYC_PANNumber}
+    Verify Element And Text  ${KU_W_FD_PANNum}  ${e_FD_PAN}
     Verify Page Contains Element  ${KU_W_FD_unslectedRadioBtn1} 
     Verify Page Contains Element  ${KU_W_FD_unslectedRadioBtn2} 
     Verify Page Contains Element  ${KU_W_FD_unslectedRadioBtn3} 
@@ -138,8 +147,8 @@ Verify PAN Details Popup
     Verify Page Contains Element  ${KU_W_FD_othersLabel}
     Verify Associated With Bajaj Popup
     Verify Disabled Element  ${KU_W_FD_disabledBtn} 
-    Wait And Click  ${KU_W_FD_mrsLabel}
-    Wait And Click  ${KU_W_FD_femaleLabel}
+    Wait And Click  ${KU_W_FD_mrLabel}
+    Wait And Click  ${KU_W_FD_maleLabel}
     Wait And Click  ${KU_W_FD_verifyDetailsBtn} 
 
 Verify Associated With Bajaj Popup
@@ -233,6 +242,7 @@ Add Bank Account Details
     Verify Page Contains Element  ${KU_W_FD_selectedBankAccDets} 
     Wait And Click  ${KU_W_FD_selectedBankName}
     Wait And Click  ${KU_W_FD_selectBankBtn}
+    Sleep  5s
 
 Navigation To FD For NONKYC
     [Arguments]  ${PANNumber}  ${date}  ${month}  ${year}
@@ -242,5 +252,52 @@ Navigation To FD For NONKYC
     Verify Page Contains Element  ${KU_W_FD_enterPAN}
     Input Text  ${KU_W_FD_enterPAN}  ${PANNumber}
     Enter DOB  ${KU_W_KYC_dateField}  ${date}  ${KU_W_KYC_monthField}  ${month}  ${KU_W_KYC_yearField}  ${year}
-    Wait And Click  ${KU_W_postlogin_continue}
-    
+    Wait And Click  ${KU_W_postlogin_continue}    
+
+Confirm FD Details
+    Wait For Element Visibility  ${KU_W_FD_confirmFDDetsTitle} 
+    Verify Page Contains Element  ${KU_W_FD_confirmFDDetsTitle} 
+    Verify Page Contains Element  ${KU_W_FD_FDName}
+    Verify Page Contains Element  ${KU_W_FD_nameLabel}
+    Verify Page Contains Element  ${KU_W_FD_holderName}
+    Verify Page Contains Element  ${KU_W_FD_amtLabel}
+    Verify Page Contains Element  ${KU_W_FD_FDAmt}
+    Verify Page Contains Element  ${KU_W_FD_FDRateLabel}
+    Verify Page Contains Element  ${KU_W_FD_tenureLabel}
+    Verify Page Contains Element  ${KU_W_FD_tenure} 
+    Verify Page Contains Element  ${KU_W_FD_payoutLabel}
+    Verify Page Contains Element  ${KU_W_FD_payout}
+    Verify Page Contains Element  ${KU_W_FD_payByLabel} 
+    Verify Page Contains Element  ${KU_W_FD_payByBank}
+    Verify Page Contains Element  ${KU_W_FD_payByAcc}
+    Verify Page Contains Element  ${KU_W_FD_completeDisclaimer}
+    Wait And Click  ${KU_W_FD_completeDisclaimer}
+    Verify Page Contains Element  ${KU_W_FD_disclaimerTitle} 
+    Verify Element And Text  ${KU_W_FD_disclaimerDesc1}  ${e_FD_disclaimerDesc1}
+    Verify Element And Text  ${KU_W_FD_disclaimerDesc2}  ${e_FD_disclaimerDesc2}
+    Verify Element And Text  ${KU_W_FD_T&CText}  ${e_FD_T&CText}
+    Wait And Click  ${KU_W_FD_T&CCheckBox}
+    Wait And Click  ${KU_W_postlogin_placeOrder}
+    Wait And Click  ${KU_W_postlogin_successBtn}
+
+FD Order Placed And Verify In Process Page
+    Wait For Element Visibility  ${KU_W_FD_FDOrderPlaced} 
+    Verify Page Contains Element  ${KU_W_FD_FDOrderPlaced} 
+    Verify Page Contains Element  ${KU_W_FD_FDOrderPlacedDesc}
+    Verify Page Contains Element  ${KU_W_FD_FDOrdered}
+    Verify Page Contains Element  ${KU_W_FD_orderPlacedLabel}
+    Verify Page Contains Element  ${KU_W_FD_orderPlacedDate} 
+    Verify Page Contains Element  ${KU_W_FD_tenureLabel}
+    Verify Page Contains Element  ${KU_W_FD_tenure}
+    Scroll Untill View  ${KU_W_FD_FDAmt}
+    Verify Page Contains Element  ${KU_W_FD_FDAmt}
+    Verify Page Contains Element  ${KU_W_FD_amtInvestedLabel}
+    Scroll Untill View  ${KU_W_FD_orderPlacedIntRate}
+    Verify Page Contains Element  ${KU_W_FD_orderPlacedIntRate}
+    Wait And Click  ${KU_W_postlogin_greatBtn} 
+    Verify Page Contains Element  ${KU_W_FD_orderOnInProcess}
+    Verify Element And Text  ${KU_W_FD_FDOrderedName}  ${e_FD_FDName} 
+    Verify Page Contains Element  ${KU_W_FD_inProcessTag}
+    Verify Page Contains Element  ${KU_W_FD_tenure} 
+    Verify Page Contains Element  ${KU_W_FD_orderStatusLabel} 
+    Verify Element And Text  ${KU_W_FD_FDAmtInvested}  ${e_FD_FDAmtInvested}

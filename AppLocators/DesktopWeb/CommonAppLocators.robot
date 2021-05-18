@@ -132,7 +132,6 @@ ${KU_W_coreaua_text} =  xpath=//div[@class='b-investment-count__count__aua__text
 ${KU_W_stock_filterTitle} =   xpath=//span[@class='b-explore-stock__action-title b-explore-stock__filter-action-title']
 ${KU_W_stock_filter} =   xpath=//div[@class='b-filter-stock__box-sector']
 ${KU_W_stock_fundList} =   xpath=//div[@class='b-explore-stocks--widget-container']
-${KU_W_stock_listIcon} =   xpath=(//img[@class='b-stocks-explore__watchlist-icon'])[1]
 ${KU_W_mf_stock_button} =   xpath=//div[contains(text(),'Stocks')]
 ${KU_W_stock_subFilter} =  xpath=//div[@class='b-filter-stock__box b-filter-stock--dropdown-title--disabled b-filter-stock__box--widget']
 ${KU_W_stock_subHeader} =  xpath=//div[@class='b-stocks-home__text']
