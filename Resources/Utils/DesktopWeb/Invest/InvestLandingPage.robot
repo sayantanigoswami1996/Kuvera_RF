@@ -99,7 +99,7 @@ Verify PreLogin Invest Tiles
 
 Navigate To Invest Page And Verify Explore Options
     [Arguments]  ${option}  ${optionText}
-    Sleep  1s
+    Sleep  2s
     Wait For Element Visibility  ${KU_W_investLink} 
     Click Element  ${KU_W_investLink}
     Scroll Page To Location  0  2000
@@ -128,8 +128,13 @@ Verify Filter And Clear All
 Verify Filter Navigation For Funds
     # Watchlist
     Wait And Click  ${KU_W_invest_watchList}
-    Wait For Element Visibility  ${KU_W_invest_watchlistHeader}
-    Verify Page Contains Element  ${KU_W_invest_watchlistHeader}
+    ${isLoginButtonVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_login}
+    IF  ${isLoginButtonVisible}  
+        Wait For Element Visibility  ${KU_W_invest_watchlistHeader}
+        Verify Page Contains Element  ${KU_W_invest_watchlistHeader}
+    ELSE  
+        Verify Page Contains Element  ${KU_W_watchlistIcon}
+    END  
     # InstaRedeem
     Wait For Element Visibility  ${KU_W_invest_instaRedeem}
     Click Element  ${KU_W_invest_instaRedeem}
@@ -270,13 +275,13 @@ Verify Filter Navigation For USStocks USETF and 52WkHighUS
 
 Verify Explore Tags For Stocks USStocks And Funds
     [Arguments]  ${sortYear}  
-    Verify Page Contains Element  ${KU_W_invest_US_stocks_exploreTags}
-    Click Element  ${KU_W_invest_US_stocks_exploreTagLink1} 
+    Verify Page Contains Element  ${KU_W_invest_funds_stocks_exploreTags}
+    Wait And Click  ${KU_W_invest_funds_stocks_exploreTagLink1} 
     Wait For Element Visibility  ${sortYear}
     Verify Element And Text  ${sortYear}  ${e_invest_stocks_sortYear}
     Go Back
-    Wait For Element Visibility  ${KU_W_invest_US_stocks_exploreTagLink2}
-    Click Element  ${KU_W_invest_US_stocks_exploreTagLink2}
+    Wait For Element Visibility  ${KU_W_invest_funds_stocks_exploreTagLink2}
+    Wait And Click  ${KU_W_invest_funds_stocks_exploreTagLink2}
     Wait For Element Visibility  ${sortYear}
     Verify Element And Text  ${sortYear}  ${e_invest_stocks_sortYear}
     Go Back
@@ -326,8 +331,7 @@ Verify Share PDF And Watchlist Option
     Verify Page Contains Element  ${PDFIcon}
     Click Element  ${PDFIcon}
     Verify Page Contains Element  ${watchlistIcon}
-    Click Element  ${watchlistIcon}
-    Verify Login Page
+    Verify Watchlist Icon Action On Pre And Postlogin
 
 Verify Pre And Post Login Action On Watchlist For Funds
     [Arguments]  ${wlistBtn}

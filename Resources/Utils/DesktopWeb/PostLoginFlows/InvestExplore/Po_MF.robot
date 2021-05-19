@@ -3,9 +3,9 @@
 Verify PostLogin MF Menu Navigation
     Verify PreLogin Mutual Fund Landing Page 
     Wait And Click  ${KU_W_mutualFund}
-    Verify Import Now Banner 
+    Verify Import Now Banner  ${e_invest_mf_bannerText}  ${KU_W_invest_mf_importExternalFunds}  ${e_invest_mf_importExternalFunds}
     Verify Filter Selection For MF
-
+  
 Verify Transactional Navigation On MF With KYC
     Navigate To Invest Page And Verify Explore Options  ${KU_W_mutualFund}  ${e_invest_mf_titleText}
     Verify Buying Of SIP
@@ -57,6 +57,20 @@ Verify Transactional Navigation With Two Factor Authentication
 Verify Buying Of SIP
     Search For MF 
     Sleep  1s
+    # Graph Validation with Nifty
+    Verify Page Contains Element  ${KU_W_invest_mf_V/STitle}
+    Wait And Click  ${KU_W_invest_mf_dropdownIcon} 
+    ${niftyGraphCount} =  Get Element Count  xpath=//div[@class='b-mf-sector-filter__option']
+    FOR  ${k}  IN RANGE  1  ${niftyGraphCount}+1
+        Wait And Click  xpath=(//div[@class='b-mf-sector-filter__option'])[${k}]
+        FOR  ${j}  IN RANGE  1  6
+            Sleep  3s
+            Wait And Click  xpath=(//div[contains(@class,'b-period-option_item')])[${j}]
+            Verify Page Contains Element  ${KU_W_invest_mf_performaceCart}
+            Verify Page Contains Element  ${KU_W_invest_mf_performanceRateCount}
+        END
+    Wait And Click  ${KU_W_invest_mf_dropdownIcon} 
+    END
     Wait For Element Visibility  ${KU_W_invest_mf_sipAmountTxt}
     Input Text  ${KU_W_invest_mf_sipAmountTxt}  ${e_invest_mf_sipAmount}
     Wait And Click  ${KU_W_invest_mf_lumpsumAmountTxt}
@@ -74,10 +88,6 @@ Verify Buying Of SIP
     # Lumpsum Label when SIP added
     Verify Page Contains Element  ${KU_W_invest_mf_addLumpsumLabel}
     # Data Validation Of SIP
-    # Amount cannnot be verified
-    # Wait For Element Visibility  ${KU_W_invest_mf_SIP_lumpAmt}
-    # Sleep  2s
-    # Verify Element And Text  ${KU_W_invest_mf_SIP_lumpAmt}  ${e_invest_mf_sipAmount}
     Wait And Click  ${KU_W_invest_mf_openDrpdownImg}
     Sleep  1s
     Wait And Click  ${KU_W_invest_mf_dateOnOrderSIP}
@@ -88,10 +98,7 @@ Verify Buying Of SIP
     Verify Page Contains Element  ${KU_W_invest_mf_payNow} 
     #  Add Lumpsum and Validate Min Amount
     Wait And Click  ${KU_W_invest_mf_addLumpsumLabel}
-    # Amount cannot be verified
-    # Wait For Element Visibility  ${KU_W_invest_mf_lumpsum_SIPVal} 
     Sleep  3s
-    # Verify Element And Text  ${KU_W_invest_mf_lumpsum_SIPVal}  ${mininumValue}
     Wait For Element Visibility  ${KU_W_invest_mf_payAmt}
     Verify Element And Text  ${KU_W_invest_mf_payAmt}  ${mininumValue}
     # Delete Lumpsum and Validate Pay Amount
@@ -117,14 +124,11 @@ Verify Add To Cart And Buy Lumpsum
     Wait And Click  ${KU_W_invest_mf_sipAmountTxt}
     ${SIPminVal} =  Fetch the Amount  ${KU_W_invest_mf_minSIPVal}
     Wait Scroll And Click Element  ${KU_W_invest_mf_addToCartButton}
+    Verify Element And Text  ${KU_W_toastMssg}  ${e_invest_mf_orderToCartMsg}
     Wait And Click  ${KU_W_postlogin_cartBtn}
     Verify Page Contains Element  ${KU_W_invest_mf_cartTitle}
     Verify Page Contains Element  ${KU_W_invest_mf_addSIPLabel}
     # Data Validation For Lumpsum
-    # Amount cannot be verified
-    # Wait For Element Visibility  ${KU_W_invest_mf_SIP_lumpAmt}
-    # Sleep  2s
-    # Verify Element And Text  ${KU_W_invest_mf_SIP_lumpAmt}  ${e_invest_mf_lumpsumAmount}
     Verify Element And Text  ${KU_W_invest_mf_scheduledSIPAmt}  ${e_invest_mf_zeroSIP_payNow}
     Verify Element And Text  ${KU_W_invest_mf_payAmt}  ${e_invest_mf_lumpsumAmt}
     # Add SIP
@@ -143,7 +147,7 @@ Verify Add To Cart And Buy Lumpsum
     Verify New Folio Popup
     Wait And Click  ${KU_W_postlogin_placeOrder} 
     ${currentTime} =  Get Time  hour  NOW
-    IF  ${currentTime} < ${cutOffTime} and ${currentTime} > ${startTime}
+    IF  ${currentTime} < ${e_invest_mf_cutOffTime} and ${currentTime} > ${e_invest_mf_startTime}
         Log To Console  Market Hours
     ELSE
         Log To Console  Non Market Hours
@@ -187,14 +191,14 @@ Search For MF
     @{mutualFundName} =  Get Json Values  $.MutualFunds.f2  Resources/TestData/MutualFunds.json 
     Log To Console  ${mutualFundName}
     Search Fund and Verify  ${mutualFundName} 
-    Sleep  3s
+    Sleep  1s
     Wait And Click  ${KU_W_invest_mf_fundName}
 
 
 Verify Filter Selection For MF
     Wait And Click  ${KU_W_invest_mf_categoryBox}
     ${categoryCount} =  Get Element Count  xpath=//div[@class='b-fund-category-filter__option']   
-    # Iterate and verify all fund house details 
+    # Iterate and verify all fund details 
     # Nested for loop is used as based on category subacategory is choosen and then validated
     FOR  ${i}  IN RANGE  2   ${categoryCount}+1
         ${categoryName} =  Get Text  xpath=(//div[@class='b-fund-category-filter__option'])[${i}]
@@ -212,13 +216,6 @@ Verify Filter Selection For MF
         END
         Wait And Click  ${KU_W_invest_mf_categoryBox}
     END
-
-Verify Import Now Banner 
-    Scroll Untill View  ${KU_W_invest_mf_bannerText}
-    Verify Element And Text  ${KU_W_invest_mf_bannerText}  ${e_invest_mf_bannerText}
-    Wait And Click  ${KU_W_invest_mf_importNow}
-    Verify Element And Text  ${KU_W_invest_mf_importExternalFunds}  ${e_invest_mf_importExternalFunds}
-    Go Back
 
 Verify New Folio Popup
     Wait And Click  ${KU_W_invest_mf_newFolioLink}
@@ -261,6 +258,28 @@ Verify OTP Message With 2FA Account
 Verify In Process Page After Placing Order
     Wait And Click  ${KU_W_postlogin_cartBtn}
     Wait And Click  ${KU_W_invest_mf_inProcessTab} 
+    Wait For Element Visibility   ${KU_W_invest_mf_inProcessOrders}
     Verify Page Contains Element  ${KU_W_invest_mf_inProcessOrders} 
     Verify Page Contains Element  ${KU_W_invest_mf_processOrderRow} 
-    
+    Verify Page Contains Element  ${KU_W_invest_mf_boughtFundName}
+    Verify Page Contains Element  ${KU_W_invest_mf_folioNumLabel}
+    Verify Page Contains Element  ${KU_W_invest_mf_navLabel}
+    Verify Page Contains Element  ${KU_W_invest_mf_typeLabel}
+    Verify Page Contains Element  ${KU_W_invest_mf_amtLabel} 
+    Verify Page Contains Element  ${KU_W_postlogin_orderStatusLabel}
+    Verify Page Contains Element  ${KU_W_invest_mf_triggerTimeLabel}
+    Reload Page
+    Wait For Element Visibility   ${KU_W_invest_mf_payStatusLabel} 
+    Verify Page Contains Element  ${KU_W_invest_mf_payStatusLabel} 
+    Verify Page Contains Element  ${KU_W_invest_mf_payModeLabel}
+    Verify Page Contains Element  ${KU_W_invest_mf_bankLabel}
+    Verify Page Contains Element  ${KU_W_postlogin_inProcessTag}
+    Verify Element And Text  ${KU_W_invest_mf_folioType}  ${e_invest_mf_folioType} 
+    Verify Element And Text  ${KU_W_invest_mf_type}  ${e_invest_mf_type}
+    Verify Page Contains Element  ${KU_W_invest_mf_amt}
+    Verify Page Contains Element  ${KU_W_invest_mf_triggerTime}
+    Wait For Element Visibility  ${KU_W_invest_mf_paymentStatus}
+    Verify Element And Text  ${KU_W_invest_mf_paymentStatus}  ${e_invest_mf_paymentStatus}
+    Verify Element And Text  ${KU_W_invest_mf_paymentMode}  ${e_invest_mf_paymentMode} 
+    Verify Element And Text  ${KU_W_invest_mf_bankName}  ${e_invest_mf_bankName}
+    Verify Page Contains Element  ${KU_W_invest_mf_navDateMsg}

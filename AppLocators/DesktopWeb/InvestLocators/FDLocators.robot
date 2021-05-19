@@ -183,8 +183,6 @@ ${KU_W_FD_orderPlacedDate} =  xpath=(//div[@class='k-ui-information-card']//div)
 ${KU_W_FD_orderPlacedIntRate} =  xpath=(//div[@class='k-ui-information-card']//div)[8]
 ${KU_W_FD_orderOnInProcess} =  xpath=//div[@class='b-order-row order-status__row']
 ${KU_W_FD_FDOrderedName} =  xpath=//div[@class='b-order-row__title']//a
-${KU_W_FD_inProcessTag} =  xpath=(//div[@class='b-order-row__tag'])[2]
-${KU_W_FD_orderStatusLabel} =  xpath=//div[contains(text(),'Order status')]
 ${KU_W_FD_FDAmtInvested} =  xpath=(//div[@class='b-order-row__value'])[4]
 # NON-KYC PAN user
 ${KU_W_FD_enterPAN} =  xpath=//input[@placeholder='Enter your PAN']

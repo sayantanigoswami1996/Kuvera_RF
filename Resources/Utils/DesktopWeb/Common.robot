@@ -411,6 +411,38 @@ Enter DOB
     Input Text  ${monthField}  ${month} 
     Wait And Click  ${yearField}
     Input Text  ${yearField}  ${year}
+
+Verify Watchlist Icon Action On Pre And Postlogin
+    ${isLoginButtonVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_login}
+    IF  ${isLoginButtonVisible}
+        Wait For Element Visibility  ${KU_W_watchlistIcon}
+        Verify Watchlist Icon  ${KU_W_watchlistIcon}
+        Verify Login Page
+    ELSE
+        Wait For Element Visibility  ${KU_W_watchlistIcon}
+        Verify Watchlist Icon  ${KU_W_watchlistIcon}
+        Verify Page Contains Element  ${KU_W_toastMssg}
+    END
+
+Verify Login Page On Pre And Postlogin
+    [Arguments]  ${button}  ${navigatedPage}
+    ${isLoginButtonVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_login}
+    IF  ${isLoginButtonVisible}
+        Wait And Click  ${button}
+        Verify Login Page
+    ELSE
+        Wait And Click  ${button}
+        Verify Page Contains Element  ${navigatedPage}
+        Go Back
+    END 
+
+Verify Import Now Banner 
+    [Arguments]  ${bannerText}  ${externalFunds}  ${externalFundsText}
+    Scroll Untill View  ${KU_W_invest_bannerText} 
+    Verify Element And Text  ${KU_W_invest_bannerText}  ${bannerText}
+    Wait And Click  ${KU_W_invest_importNow}
+    Verify Element And Text  ${externalFunds}  ${externalFundsText}
+    Go Back
        
 Close Web Application
     Close All Browser

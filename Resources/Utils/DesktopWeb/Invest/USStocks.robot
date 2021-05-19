@@ -5,15 +5,14 @@ Verify PreLogin US Stocks Landing Page
     Navigate To Invest Page And Verify Explore Options  ${KU_W_USStocks}  ${e_invest_USStocks}
     Wait For Element Visibility  ${KU_W_invest_USStocksTitle}
     Verify Element And Text  ${KU_W_invest_USStocksTitle}  ${e_invest_USStocks_title}
-    Verify Login And Signup Link 
+    Verify Login And Signup On Prelogin 
     Wait For Element Visibility  ${KU_W_invest_USStocks_exploreBtn}
     Click Element  ${KU_W_invest_USStocks_exploreBtn}
     Wait For Element Visibility  ${KU_W_invest_USStocks_sortYear}
     Verify Element And Text  ${KU_W_invest_USStocks_sortYear}  ${e_invest_stocks_sortYear}
     Verify Page Contains Element  ${KU_W_invest_USStocks_filteredTag}
     Verify Page Contains Element  ${KU_W_invest_USStocks_stockPrice}
-    Verify Watchlist Icon  ${KU_W_watchlistIcon}
-    Verify Login Page
+    Verify Watchlist Icon Action On Pre And Postlogin
     Verify Filter For US Stocks
     Verify Presence Of FAQBOT Icon
     Verify Filter Navigation For USStocks USETF and 52WkHighUS  ${KU_W_invest_stocks_52WIndia_watchListHeader}  ${e_invest_stocks_watchlistHeader}  ${e_invest__52WHighLow_UTF_sortYearText}  ${KU_W_watchlistIcon}
@@ -35,9 +34,8 @@ Verify US Stocks Landing Page Widgets
     Verify Element And Text  ${KU_W_invest_USStocksSubTitle}  ${e_invest_USStocks_subTitle}
     Verify Page Contains Image  ${KU_W_invest_USStocksLandingScreen_vestedLogo}
     Verify Element And Text  ${KU_W_invest_USStocks_signupDetail}  ${e_invest_USStocks_signupDetail}
-    Wait For Element Visibility  ${KU_W_invest_USStocks_startTodayBtn}   
-    Click Element  ${KU_W_invest_USStocks_startTodayBtn}
-    Verify Login Page
+    Wait For Element Visibility  ${KU_W_invest_USStocks_startInvestingBtn}
+    Verify Login Page On Pre And Postlogin  ${KU_W_invest_USStocks_startInvestingBtn}  ${KU_W_invest_USStocks_investUSStocks}
     Wait For Element Visibility  ${KU_W_invest_USStocks_exploreBtn}
     Click Element  ${KU_W_invest_USStocks_exploreBtn}
     Wait For Element Visibility  ${KU_W_US_SETF52WUS_searchBar}
@@ -154,9 +152,8 @@ Verify US Stocks Landing Page Widgets
     Scroll Untill View  ${KU_W_invest_USStocks_goGlobalTitle}
     Verify Element And Text  ${KU_W_invest_USStocks_goGlobalTitle}  ${e_invest_USStocks_goGlobalTitle}
     Verify Element And Text  ${KU_W_invest_USStocks_goGlobalSubTitle}  ${e_invest_USStocks_signupDetail}
-    Wait For Element Visibility  ${KU_W_invest_USStocks_goGlobalStartTodayBtn}
-    Click Element  ${KU_W_invest_USStocks_goGlobalStartTodayBtn}
-    Verify Login Page
+    Wait For Element Visibility  ${KU_W_invest_USStocks_goGlobalStartInvestBtn} 
+    Verify Login Page On Pre And Postlogin  ${KU_W_invest_USStocks_goGlobalStartInvestBtn}  ${KU_W_invest_USStocks_investUSStocks}
     Verify Page Contains Image  ${KU_W_invest_USStocks_goGlobalImg}
     Verify Question On FAQBOT Icon  ${KU_W_faqbot_icon}  ${e_invest_USStocks_botQA_ques1}
     Verify Google Play & Apple Store Icons
@@ -204,13 +201,11 @@ Verify US Stocks Details Screen
     Verify Page Contains Image  ${KU_W_invest_USStocks_vestedLogo}
     Wait For Element Visibility  ${KU_W_invest_USStocks_buyBtn}
     Verify Element And Text  ${KU_W_invest_USStocks_buyBtn}  ${e_invest_USStocks_buyBtn} 
-    Click Element  ${KU_W_invest_USStocks_buyBtn}
-    Verify Login Page
+    Verify Login Page On Pre And Postlogin  ${KU_W_invest_USStocks_buyBtn}  ${KU_W_invest_USStocks_investUSStocks}
     Sleep  3s
     Wait For Element Visibility  ${KU_W_invest_USStocks_importHoldingsBtn}
     Verify Element And Text  ${KU_W_invest_USStocks_importHoldingsBtn}  ${e_invest_USStocks_importHoldingsBtn}
-    Click Element  ${KU_W_invest_USStocks_importHoldingsBtn}
-    Verify Login Page
+    Verify Login Page On Pre And Postlogin  ${KU_W_invest_USStocks_importHoldingsBtn}  ${KU_W_postlogin_USStocks_linkYourVestedAcc}
     # FAQ
     Verify Presence Of FAQBOT Icon
     # Graph Section

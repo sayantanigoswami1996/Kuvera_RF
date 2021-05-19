@@ -6,7 +6,7 @@ Verify PostLogin Stocks Portflio Menu Navigation With KYC
     Wait And Click  ${KU_W_portfolio_stocks_title}
     Verify Page Contains Element  ${KU_W_portfolio_doYouWantTo}
     Verify Explore Or Import Menus Page  ${KU_W_portfolio_stocks_exploreStocks}  ${KU_W_portfolio_stocks_exploreStocksDesc}  ${KU_W_portfolio_stocks_importStocks}  ${KU_W_portfolio_stocks_importStocksDesc}
-    Verify Navigation To Explore Funds And Import Tab  ${KU_W_portfolio_stocks_exploreStocks}  ${KU_W_portfolio_stocks_allStocks}  ${e_portfolio_stocks_allStocksText}   ${KU_W_portfolio_stocks_importStocks}  ${KU_W_portfolio_stocks_importStocksPopup}  ${e_portfolio_stocks_importPopup}
+    Verify Navigation To Explore Funds And Import Tab  ${KU_W_portfolio_stocks_exploreStocks}  ${KU_W_portfolio_stocks_allStocks}  ${e_portfolio_stocks_allStocksText}   ${KU_W_portfolio_stocks_importStocks}  ${KU_W_postlogin_stocks_importStocksPopup}  ${e_postlogin_stocks_importPopup}
     Go Back
     Go Back
     Wait And Click  ${KU_W_postlogin_importPortfolioTab}
@@ -59,9 +59,6 @@ Verify PostLogin Stocks Portflio Menu Navigation With KYC
     Close Window
     Sleep  2s
     Switch Window  browser=Kuvera
-
-
-
 
 Verify PostLogin Stocks Portflio Menu Navigation Without KYC
     Log To Console  Stocks Portfolio Navigation Without KYC

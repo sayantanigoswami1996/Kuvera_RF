@@ -15,10 +15,8 @@ Verify PreLogin Stocks Landing Page
     Verify Presence Of FAQBOT Icon
     Verify Filter Navigation For Stocks And 52 WkHighIndia  ${KU_W_invest_stocks_52WIndia_watchListHeader}  ${e_invest_stocks_watchlistHeader}  ${e_invest__52WHighLow_UTF_sortYearText}  ${KU_W_watchlistIcon}
     Click Element  ${KU_W_stocks}
-    Sleep  1s
-    Wait For Element Visibility  ${KU_W_watchlistIcon}
-    Verify Watchlist Icon  ${KU_W_watchlistIcon}  
-    Verify Login Page 
+    Sleep  1s  
+    Verify Watchlist Icon Action On Pre And Postlogin
     # Iterate the Stocks detail screen
     FOR  ${i}  IN RANGE  1  6
         @{stockName} =  Get Json Values  $.Stocks.f${i}  Resources/TestData/Stocks.json 
@@ -85,9 +83,13 @@ Verify Stock Details Screen
     # Buy Stocks Button
     Wait For Element Visibility  ${KU_W_invest_stocks_buyStocksBtn}
     Verify Element And Text  ${KU_W_invest_stocks_buyStocksBtn}  ${e_invest_stocks_buyStocksBtn}
-    Wait For Element Visibility  ${KU_W_invest_stocks_buyStocksBtn} 
-    Click Element  ${KU_W_invest_stocks_buyStocksBtn} 
-    Verify Login Page
+    Wait And Click  ${KU_W_invest_stocks_buyStocksBtn}
+    ${isLoginButtonVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_login}
+    IF  ${isLoginButtonVisible}
+        Verify Login Page
+    ELSE
+        Go Back
+    END
     # FAQ
     Wait For Element Visibility  ${KU_W_faqbot_icon}
     Verify Presence Of FAQBOT Icon

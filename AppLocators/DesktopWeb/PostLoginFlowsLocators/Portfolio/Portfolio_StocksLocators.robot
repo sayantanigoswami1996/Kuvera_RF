@@ -2,7 +2,6 @@
 # Application Expected Values 'e_<variableName>'              
 ${e_portfolio_stocks_subTitle} =  Explore, invest & track your stocks                               
 ${e_portfolio_stocks_allStocksText} =   All stocks     
-${e_portfolio_stocks_importPopup} =  Import stocks
 ${e_portfolio_stocks_updatePANDesc} =  A KYC compliant PAN is required to import your holdings so we can correctly map them against your account.
 ${e_portfolio_stocks_zerodhaUserID} =  ZH0191
 ${e_portfolio_stocks_brokerPWD} =  Kuvera@1234
@@ -23,7 +22,6 @@ ${KU_W_portfolio_stocks_exploreStocksDesc} =  xpath=//p[normalize-space()='Brows
 ${KU_W_portfolio_stocks_importStocks} =  xpath=//p[normalize-space()='Import stocks']
 ${KU_W_portfolio_stocks_importStocksDesc} =  xpath=//p[contains(text(),'Import stocks you already own and manage them on K')]
 ${KU_W_portfolio_stocks_allStocks} =  xpath=//div[@class='b-stocks-explore__tab_item b-stocks-explore__tab--selected']
-${KU_W_portfolio_stocks_importStocksPopup} =  xpath=//div[@class='b-upload-stock__heading']
 ${KU_W_portfolio_stocks_updatePANDesc} =  xpath=//div[@class='b-update-pan__para']
 ${KU_W_portfolio_stocks_updatePANField} =  xpath=//div[@class='b-update-pan__input-box-wrapper']
 ${KU_W_portfolio_stocks_updatePANClose} =  xpath=//img[@class='b-update-pan__close']

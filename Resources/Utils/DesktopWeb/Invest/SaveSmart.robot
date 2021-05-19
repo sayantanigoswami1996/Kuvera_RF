@@ -93,6 +93,7 @@ Verify SaveNow Button Action On Pre And Post Login
         Verify Login Page
     ELSE
         Click Element  ${saveBtn}
+        Wait For Element Visibility  ${pageTitle}
         Verify Page Contains Element  ${pageTitle}
         Go Back
     END

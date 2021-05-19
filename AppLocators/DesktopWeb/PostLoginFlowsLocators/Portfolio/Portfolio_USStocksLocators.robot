@@ -1,8 +1,7 @@
 *** Variables *** 
 # Application Expected Values 'e_<variableName>'               
 ${e_portfolio_USStocks_subTitle} =  Diversify with US Equities, create or link your existing portfolio.                                             
-${e_portfolio_USStocks_allUSStocks} =   All US stocks    
-${e_portfolio_USStocks_linkYourVestedAcc} =  Link your Vested account       
+${e_portfolio_USStocks_allUSStocks} =   All US stocks         
 ${e_portfolio_USStocks_updatePANDesc} =  A KYC compliant PAN is required to import your holdings so we can correctly map them against your account.
 ${e_portfolio_USStocks_onbaoarding} =  By proceeding, you agree to Vested's Terms of Service, Privacy policy and Disclaimers.
 ${e_portfolio_USStocks_selectAccDesc} =  Confirm the family account where you’d like to associate US stocks holding. Only single holders account t can be linked.
@@ -21,7 +20,6 @@ ${KU_W_portfolio_USStocks_exploreUSSDesc} =  xpath=//p[normalize-space()='Browse
 ${KU_W_portfolio_USStocks_importTitle} =  xpath=//p[normalize-space()='Import & track']
 ${KU_W_portfolio_USStocks_importDesc} =  xpath=//p[normalize-space()='Link and manage existing Vested portfolio.']
 ${KU_W_portfolio_USStocks_allUSSStocks} =  xpath=//div[@class='disable-browser-text-select b-standard-tab__item b-standard-tab__item--active b-standard-tab__item--all']
-${KU_W_portfolio_USStocks_linkYourVestedAcc} =  xpath=//div[@class='b-input__content__col1__title']
 ${KU_W_portfolio_USStocks_closePopup} =  xpath=//div[@class='b-us-equity-options-close']//img
 ${KU_W_portfolio_USStocks_vestedAccEmail} =  xpath=//input[@name='email']
 ${KU_W_portfolio_USStocks_vestedAccDesc} =  xpath=//div[contains(text(),'Confirm your Vested login email.')]

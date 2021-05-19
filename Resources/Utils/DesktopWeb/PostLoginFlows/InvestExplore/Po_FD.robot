@@ -297,7 +297,7 @@ FD Order Placed And Verify In Process Page
     Wait And Click  ${KU_W_postlogin_greatBtn} 
     Verify Page Contains Element  ${KU_W_FD_orderOnInProcess}
     Verify Element And Text  ${KU_W_FD_FDOrderedName}  ${e_FD_FDName} 
-    Verify Page Contains Element  ${KU_W_FD_inProcessTag}
+    Verify Page Contains Element  ${KU_W_postlogin_inProcessTag}
     Verify Page Contains Element  ${KU_W_FD_tenure} 
-    Verify Page Contains Element  ${KU_W_FD_orderStatusLabel} 
+    Verify Page Contains Element  ${KU_W_postlogin_orderStatusLabel} 
     Verify Element And Text  ${KU_W_FD_FDAmtInvested}  ${e_FD_FDAmtInvested}

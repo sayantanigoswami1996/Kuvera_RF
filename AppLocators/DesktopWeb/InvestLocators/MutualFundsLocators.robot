@@ -7,6 +7,7 @@ ${e_invest_mf_lumpsumAmount} =  50000
 ${e_invest_mf_addFundPopupHeader} =  Search and add fund
 ${e_invest_mf_bannerText} =  Import your MFs and switch to Direct. Start saving commissions.
 ${e_invest_mf_importExternalFunds} =  Import external mutual funds
+${e_invest_mf_orderToCartMsg} =  Order added to your cart.
 ${e_invest_mf_notification} =  13 April is a Non-Business day for debt funds. Orders placed in debt funds on 13 April will be processed on next business day - 15 April
 ${e_invest_mf_SIPAmt} =  6,000
 ${e_invest_mf_rupeeSymbol} =  ₹
@@ -14,8 +15,14 @@ ${e_invest_mf_zeroSIP_payNow} =  0
 ${e_invest_mf_lumpsumAmt} =  50,000
 ${e_invest_mf_lumpsumAndSIPMinAmt} =  50,500
 ${e_invest_mf_lumpsumAndSIPAmt} =  56,000
-${cutOffTime} =  15
-${startTime} =  9      
+${e_invest_mf_cutOffTime} =  15
+${e_invest_mf_startTime} =  9  
+${e_invest_mf_folioType} =  NEW  
+${e_invest_mf_type} =  SIP
+${e_invest_mf_paymentStatus} =  Approved
+${e_invest_mf_paymentMode} =  Net Banking
+${e_invest_mf_bankName} =  INDIAN BANK
+                            
 # Application Locator 'KU_<locatorName>'
 # Mutual Fund Navigation Page
 # Mutual Fund
@@ -54,6 +61,9 @@ ${KU_W_invest_mf_performaceCart} =  id=container-chart
 ${KU_W_invest_mf_pc_durationsList}  =  xpath=//*[@class='b-mf-performance-chart__select']
 # Past Performace
 ${KU_W_invest_mf_compareTitle} =  xpath=//*[@class='b-mf-compare__title']
+${KU_W_invest_mf_V/STitle} =  xpath=//div[@class='mf-perf-chart-compare__heading']
+${KU_W_invest_mf_dropdownIcon} =  xpath=//img[@class='b-filter-mf__dropdown-icon']
+${KU_W_invest_mf_performanceRateCount} =  xpath=//div[contains(@class,'b-performance-chart__xirr b-performance-chart__xirr')]
 ${KU_W_invest_mf_compareTableContent} =  xpath=//*[@class='b-app-standard-table']
 ${KU_W_invest_mf_tableHeader} =  xpath=(//*[@class='b-app-standard-table__column-header'])[5]
 ${KU_W_invest_mf_addFundBtn} =  xpath=//*[@class='b-mf-compare-m__add-label']
@@ -65,6 +75,10 @@ ${KU_W_invest_mf_performanceNumField} =  xpath=//*[@class='b-mf-past-performance
 ${KU_W_invest_mf_performanceDuration1Y} =  xpath=//*[@class='b-mf-past-performance__duration-container__tile']/div[1]
 ${KU_W_invest_mf_performanceDuration3Y} =  xpath=//*[@class='b-mf-past-performance__duration-container__tile']/div[2]
 ${KU_W_invest_mf_performanceDurationAll} =  xpath=//*[@class='b-mf-past-performance__duration-container__tile']/div[3]
+${KU_W_invest_mf_FDLabel} =  xpath=//div[normalize-space()='Fixed deposit']
+${KU_W_invest_mf_FDIntRate} =  xpath=//div[normalize-space()='6.5%']
+${KU_W_invest_mf_bankSavingsLabel} =  xpath=//div[normalize-space()='Bank savings']
+${KU_W_invest_mf_BSIntRate} =  xpath=//div[normalize-space()='3.5%']
 ${KU_W_invest_mf_seeFundHoldings} =  xpath=//*[@class='b-mf-holdings__heading']
 ${KU_W_invest_mf_topHoldings} =  xpath=//*[@class='b-mf-institutional-holders__heading']
 ${KU_W_invest_mf_holdingsTable} =  xpath=//*[@class='b-mf-institutional-holders__table']
@@ -94,7 +108,6 @@ ${KU_W_invest_mf_setOneClickBtn} =  xpath=//div[text()='Set OneClick']
 ${KU_W_invest_mf_continueToOrderBtn} =  xpath=//div[text()='Continue to order']
 ${KU_W_invest_mf_placeOrdersBtn} =  xpath=//button[normalize-space()='Place Orders']
 ${KU_W_invest_mf_continueBtn} =  xpath=//button[normalize-space()='Continue Payment']
-${KU_W_invest_mf_orderSummary} =  xpath=//h1[normalize-space()='Order Summary']
 ${KU_W_invest_mf_cartTitle} =  xpath=//div[contains(text(),'MF cart')]
 ${KU_W_invest_mf_defaultDate} =  xpath=//div[@class='b-fund-type-tile__next-sip']
 ${KU_W_invest_mf_addLumpsumLabel} =  xpath=//div[contains(text(),'+ Add lumpsum')]
@@ -123,17 +136,29 @@ ${KU_W_invest_mf_2FANotification} =  xpath=//p[@class='sub-title']
 ${KU_W_invest_mf_offlineModeActive} =  xpath=//strong[normalize-space()='Offline Mode Active:']
 ${KU_W_invest_mf_orderPlacedMsg} =  xpath=//div[@class='row']//div[contains(text(),' Orders placed now will be processed on/as orders')]
 # Postlogin - MF Listing Page
-${KU_W_invest_mf_bannerText} =  xpath=//span[@class='b-banner-text']
-${KU_W_invest_mf_importNow} =  xpath=//span[text()='Import now >']
 ${KU_W_invest_mf_importExternalFunds} =  xpath=//div[@class='b-import-portfolio__get-start__label']
 ${KU_W_invest_mf_categoryBox} =  xpath=(//div[@class='b-filter-fund__box'])[1]
 ${KU_W_invest_mf_subcategoryBox} =  xpath=(//div[@class='b-filter-fund__box'])[2]
 ${KU_W_invest_mf_categoryName} =  xpath=(//div[@class='b-mutual-funds-explore__fund-row-industry'])[1]
 ${KU_W_invest_mf_subcategoryName} =  xpath=(//div[@class='b-mutual-funds-explore__fund-row-content-industry-wrapper']//div)[6]
-${KU_W_invest_mf_SIPDeleteIcon} =  xpath=//div[@class='row sip']//img
-${KU_W_invest_mf_lumpsumDeleteIcon} =  xpath=//div[@class='row lumpsum']//img
 # Postlogin - In Process Tab
 ${KU_W_invest_mf_inProcessTab} =  xpath=//div[normalize-space()='In process']
 ${KU_W_invest_mf_inProcessOrders} =  xpath=//h1[normalize-space()='In process orders']
 ${KU_W_invest_mf_processOrderRow} =  xpath=(//div[@class='b-order-row order-status__row'])[1]
-
+${KU_W_invest_mf_boughtFundName} =  xpath=//div[@class='b-order-row__title']
+${KU_W_invest_mf_folioNumLabel} =  xpath=//div[normalize-space()='Folio no.']
+${KU_W_invest_mf_navLabel} =  xpath=//div[normalize-space()='NAV date']
+${KU_W_invest_mf_typeLabel} =  xpath=//div[normalize-space()='Type']
+${KU_W_invest_mf_amtLabel} =  xpath=//div[normalize-space()='Amount']
+${KU_W_invest_mf_triggerTimeLabel} =  xpath=//div[normalize-space()='Trigger time']
+${KU_W_invest_mf_payStatusLabel} =  xpath=//div[normalize-space()='Payment Status']
+${KU_W_invest_mf_payModeLabel} =  xpath=//div[normalize-space()='Payment Mode']
+${KU_W_invest_mf_bankLabel} =  xpath=//div[normalize-space()='Bank']
+${KU_W_invest_mf_folioType} =  xpath=(//div[@class='b-order-row__value'])[4]
+${KU_W_invest_mf_type} =  xpath=(//div[@class='b-order-row__value'])[6]
+${KU_W_invest_mf_amt} =  xpath=(//div[@class='b-order-row__value'])[7]
+${KU_W_invest_mf_triggerTime} =  xpath=(//div[@class='b-order-row__value'])[8]
+${KU_W_invest_mf_paymentStatus} =  xpath=(//div[@class='b-order-row__value'])[9]
+${KU_W_invest_mf_paymentMode} =  xpath=(//div[@class='b-order-row__value'])[10]
+${KU_W_invest_mf_bankName} =  xpath=(//div[@class='b-order-row__value'])[11]
+${KU_W_invest_mf_navDateMsg} =  xpath=//div[contains(text(),'NAV Date is subject to fund realization')]
