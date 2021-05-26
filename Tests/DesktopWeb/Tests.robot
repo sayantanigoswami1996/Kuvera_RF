@@ -212,3 +212,55 @@ Reports Menu Navigation With KYC
     [Teardown]  Logout From App And Navigate To Home Page PostLogin
     Verify PostLogin Account Creation
     Verify PostLogin Reports Menu Navigation With KYC 
+
+#---------------------------Invest--------------------------------------------
+# Invest Tiles Navigation Postlogin 
+Invest Tiles Navigation Postlogin
+    [Tags]  TC32  Stage3  NONKYC
+    [Teardown]  Logout From App And Navigate To Home Page PostLogin
+    Verify PostLogin Account Creation
+    Verify PreLogin Invest Tiles
+
+# MF Non Transactional Navigation Postlogin 
+MF Non Transactional Navigation Postlogin
+    [Tags]  TC33  Prod  Stage2
+    [Teardown]  Navigate To Home Page
+    Verify Login On Prod With Verifed KYC Account
+    Verify PostLogin MF Menu Navigation
+
+# Stocks Non Transactional Navigation Postlogin 
+Stocks Non Transactional Navigation Postlogin
+    [Tags]  TC34  Prod  Stage2
+    [Teardown]  Navigate To Home Page
+    Verify Login On Prod With Verifed KYC Account
+    Verify PostLogin Stocks Menu Navigation
+
+# US Stocks Non Transactional Navigation Postlogin 
+US Stocks Non Transactional Navigation Postlogin
+    [Tags]  TC35  Prod  Stage2
+    [Teardown]  Navigate To Home Page
+    Verify Login On Prod With Verifed KYC Account
+    Verify PostLogin US Stocks Menu Navigation
+
+# SaveSmart Navigation Postlogin 
+SaveSmart Navigation Postlogin
+    [Tags]  TC36  Stage3  KYC
+    [Teardown]  Logout From App And Navigate To Home Page PostLogin
+    Verify PostLogin Account Creation
+    Verify PAN Verifed KYC Details
+    Verify PostLogin SaveSmart Menu Navigation
+
+# Crypto Navigation Postlogin 
+Crypto Navigation Postlogin
+    [Tags]  TC37  Prod  Stage2
+    [Teardown]  Navigate To Home Page
+    Verify Login On Prod With Verifed KYC Account
+    Verify PostLogin Crypto Menu Navigation
+
+# Digital Gold Navigation Postlogin 
+Digital Gold Navigation Postlogin
+    [Tags]  TC38  Stage3  KYC
+    [Teardown]  Logout From App And Navigate To Home Page PostLogin
+    Verify PostLogin Account Creation
+    Verify PAN Verifed KYC Details
+    Verify PostLogin Digi Gold Menu Navigation

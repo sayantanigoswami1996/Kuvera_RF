@@ -3,6 +3,7 @@
 Library     JSONLibrary
 Library     JsonValidator
 Library     SeleniumLibrary
+Library     DateTime
 Library     String
 Library     OperatingSystem
 Library     Collections
@@ -63,7 +64,7 @@ Welcome Page Should Be Open
 
 Wait For Element Visibility
     [Arguments]  ${element}
-    Wait Until Element Is Visible  ${element}  timeout=110
+    Wait Until Element Is Visible  ${element}  timeout=150
 
 Verify Element And Text
     [Arguments]  ${element}  ${text}
@@ -96,6 +97,10 @@ Verify Page Contains Button
 Verify Disabled Element
     [Arguments]  ${element}
     Run Keyword And Continue On Failure  Element Should Be Disabled  ${element}
+
+Verify Enabled Element
+    [Arguments]  ${element}
+    Run Keyword And Continue On Failure  Element Should Be Enabled  ${element}
 
 Compare Lists
     [Arguments]  ${actualList}   ${expectedList}
@@ -246,15 +251,27 @@ Click Link And Switch Window
     Switch To Window
     Sleep  2s  
 
-Navigate To Home Page
+URL Navigation Based ENV
     Run keyword If  '${ENV}' == '${e_prod}'  Go To  ${URL_prod}
     ...    ELSE IF  '${ENV}' == '${e_stage3}'  Go To  ${URL_stage3}
+    ...    ELSE IF  '${ENV}' == '${e_stage2}'  Go To  ${URL_stage2}
+
+Navigate To Home Page
+    URL Navigation Based ENV
+    ${isLoginButtonVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_login}
+    IF  ${isLoginButtonVisible}
+        Log To Console  PreLogin
+    ELSE
+        Logout From App Post Signup
+        URL Navigation Based ENV       
+    END
     Set Window Size  ${1920}  ${1080}
     Reload Page
     Sleep  15s
 
 Logout From App And Navigate To Home Page PostLogin
     Go To  ${URL_stage3}
+    Reload Page
     Logout From App Post Signup
     Go To  ${URL_stage3}
     Set Window Size  ${1920}  ${1080}
@@ -299,11 +316,21 @@ Verify Social Sharing Option
 
 Logout From App Post Signup
     Sleep  2s
+    ${ismandateVisible} =  Run Keyword And Return Status  Verify Mandate Screen
+    IF  ${ismandateVisible}
+        Wait And Click  ${KU_W_postlogin_mandate_doItLaterBtn}
+    ELSE
+        Log To Console  Continue without mandate
+    END
     Wait And Click  ${KU_W_ca_caretDropdown}
     Sleep  2s
     Wait And Click  ${KU_W_ca_logoutBtn}
     Sleep  4s
     Go Back
+
+Verify Mandate Screen
+    Wait For Element Visibility  ${KU_W_postlogin_mandate_doItLaterBtn}
+    Element Should Be Visible  ${KU_W_postlogin_mandate_doItLaterBtn}
 
 Login 
     [Arguments]  ${email}  ${pwd}
@@ -369,6 +396,57 @@ Enter OTP Postlogin
     Click Element  ${KU_W_ca_OTPField}
     Input Text  ${KU_W_ca_OTPField}  ${e_ca_OTP}
     Click Element  ${KU_W_ca_submitOTPBtn}
+
+Move Slider
+    [Arguments]  ${slider}
+    Mouse Over  ${slider}
+    Wait For Element Visibility  ${slider}
+    Drag And Drop By Offset  ${slider}  -123  1
+
+Enter DOB
+    [Arguments]  ${dateField}  ${date}  ${monthField}  ${month}  ${yearField}  ${year}
+    Wait And Click  ${dateField}
+    Input Text  ${dateField}  ${date}
+    Wait And Click  ${monthField} 
+    Input Text  ${monthField}  ${month} 
+    Wait And Click  ${yearField}
+    Input Text  ${yearField}  ${year}
+
+Verify Watchlist Icon Action On Pre And Postlogin
+    ${isLoginButtonVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_login}
+    IF  ${isLoginButtonVisible}
+        Wait For Element Visibility  ${KU_W_watchlistIcon}
+        Verify Watchlist Icon  ${KU_W_watchlistIcon}
+        Verify Login Page
+    ELSE
+        Wait For Element Visibility  ${KU_W_watchlistIcon}
+        Verify Watchlist Icon  ${KU_W_watchlistIcon}
+        Verify Page Contains Element  ${KU_W_toastMssg}
+    END
+
+Verify Login Page On Pre And Postlogin
+    [Arguments]  ${button}  ${navigatedPage}
+    ${isLoginButtonVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_login}
+    IF  ${isLoginButtonVisible}
+        Wait And Click  ${button}
+        Verify Login Page
+    ELSE
+        Wait And Click  ${button}
+        Verify Page Contains Element  ${navigatedPage}
+        Go Back
+    END 
+
+Verify Import Now Banner 
+    [Arguments]  ${bannerText}  ${externalFunds}  ${externalFundsText}
+    Scroll Untill View  ${KU_W_invest_bannerText} 
+    Verify Element And Text  ${KU_W_invest_bannerText}  ${bannerText}
+    Wait And Click  ${KU_W_invest_importNow}
+    Verify Element And Text  ${externalFunds}  ${externalFundsText}
+    Go Back
+
+Verify User Login With Investment
+    Wait And Click  ${KU_W_login}
+    Login  ${e_postlogin_stage3_MFSIPAcc}  ${e_postlogin_pwd}
        
 Close Web Application
     Close All Browser

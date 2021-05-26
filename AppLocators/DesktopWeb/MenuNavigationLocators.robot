@@ -150,6 +150,8 @@ ${e_feature_helpTradeSmartTitleText} =  We help you trade smart
 ${e_feature_helpTradeSmartDesc1Text} =  See regular plan units as they become available to switch to direct plans with the least tax and exit load impact. Switching to Direct has never been easier or cheaper.
 ${e_feature_helpTradeSmartDesc2Text} =  See optimal number of fund units to switch or redeem before you transact. Make better decisions.
 ${e_feature_helpTradeSmartDesc3Text} =  We take care of all complexities. 1 year STCG for equity, 3 year for debt, indexation for debt, lock-in for ELSS schemes etc. We optimize over it all.
+# Postlogin 
+${e_feature_ts_accSetUpMSg} =  Please complete your account setup before activating TradeSmart. It takes only 2 minutes.
 
 # Feature-Family Account Navigation Page 
 ${e_feature_fa_screenContent} =  Just Sign up with one account, and manage investment for your relatives and family members. Multiple accounts under same login. All in one place. Even Joint Account too!
@@ -446,6 +448,14 @@ ${KU_W_feature_helpTradeSmart1Msg} =  xpath=//div[@class='b-trade-smart__help-de
 ${KU_W_feature_helpTradeSmart2Msg} =  xpath=//div[@class='b-trade-smart__help-desc']/div[2]
 ${KU_W_feature_helpTradeSmart3Msg} =  xpath=//div[@class='b-trade-smart__help-desc']/div[3]
 ${KU_W_feature_aboutUs} =  xpath=(//ul[@class='list-unstyled']/li)[1]
+# Postlogin
+${KU_W_feature_ts_referFriend} =  xpath=//p[normalize-space()='Refer a Friend']
+${KU_W_feature_ts_buyCoins} =  xpath=(//div[@class='tile-opt-sub-label-container'])[1]
+${KU_W_feature_ts_referCoins} =  xpath=(//div[@class='tile-opt-sub-label-container'])[1]
+${KU_W_feature_ts_coinsTitle} =  xpath=//p[contains(.,'Get 300 coins more to activate this feature.')]
+${KU_W_feature_ts_accSetUpTitle} =  xpath=//div[contains(text(),'Account setup is not complete')]
+${KU_W_feature_ts_accSetUpDesc} =  xpath=//div[@class='b-confirm__description']
+${KU_W_feature_ts_activeMsg} =  xpath=//div[contains(text(),'TradeSmart is active for you.')]
 
 
 # Feature-Family Account

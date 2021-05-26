@@ -43,7 +43,8 @@ ${e_invest__USETF_allStockLinkText} =  Go to “All stocks”
 ${e_invest__instaredeem_fundText} =  Liquid Fund
 ${e_invest__newfunds_openSwitchText} =  Open Ended	
 ${e_invest_stocks_watchlistHeader} =  Login to track your favorite stocks by adding them to your watchlist.
-${e_invest_US_stocks_defaultFilter} =  Sector    
+${e_invest_US_stocks_defaultFilter} =  Sector
+${e_invest_fundToastMssgText} =  This fund has been added to your watchlist. 
 	
 # Application Locator 'KU_<locatorName>'
 # Invest Landing Navigation Page
@@ -129,7 +130,11 @@ ${KU_W_invest_stocks_52WIndia_watchListHeader} =  xpath=//p[contains(.,'Login to
 ${KU_W_invest_52WHighLow_allStockLink} =  xpath=//div[@class='b-stocks-filter__redirect-link disable-browser-text-select']
 ${KU_W_invest_noStocksForUTFAnd52WUS} =  xpath=//div[@class='b-zero-item__label']
 ${KU_W_invest_allStockLinkForUTFAnd52WUS} =  xpath=//div[@class='b-zero-item__btn']
-${KU_W_invest_US_stocks_exploreTags} =  xpath=//div[@class='b-explore-tags__container']
-${KU_W_invest_US_stocks_exploreTagLink1} =  xpath=(//a[@class='b-app-standard-chip disable-browser-text-select b-explore-tags__chip'])[1]
-${KU_W_invest_US_stocks_exploreTagLink2} =  xpath=(//a[@class='b-app-standard-chip disable-browser-text-select b-explore-tags__chip'])[2]
+${KU_W_invest_funds_stocks_exploreTags} =  xpath=//div[@class='b-explore-tags__container']
+${KU_W_invest_funds_stocks_exploreTagLink1} =  xpath=(//a[@class='b-app-standard-chip disable-browser-text-select b-explore-tags__chip'])[1]
+${KU_W_invest_funds_stocks_exploreTagLink2} =  xpath=(//a[@class='b-app-standard-chip disable-browser-text-select b-explore-tags__chip'])[2]
 ${KU_W_invest_US_stocks_performancePeriod} =  xpath=//div[@class='b-period-option_wrapper disable-browser-text-select']
+${KU_W_invest_US_stocks_watchlistIcon} =  xpath=(//*[local-name()='svg'])[1]
+# Postlogin
+${KU_W_invest_bannerText} =  xpath=//span[@class='b-banner-text']
+${KU_W_invest_importNow} =  xpath=//span[text()='Import now >']

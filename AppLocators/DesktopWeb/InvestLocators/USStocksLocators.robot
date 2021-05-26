@@ -37,6 +37,7 @@ ${e_invest_USStocks_buyBtn} =  Buy
 ${e_invest_USStocks_importHoldingsBtn} =  Import holdings
 ${e_invest_USStocks_companyHeader_about} =  About 
 ${e_invest_USStocks_botQA_ques1} =  What if Kuvera or Vested shut down?
+${e_invest_USStocks_bannerText} =  Import US stocks & track your wealth in one place.
 
 # Application Locator 'KU_<locatorName>'
 # US Stocks Navigation Page
@@ -45,7 +46,7 @@ ${KU_W_invest_USStocksTitle} =  xpath=//div[@class='b-introduction__detail__titl
 ${KU_W_invest_USStocksSubTitle} =  xpath=//div[@class='b-introduction__detail__title2']
 ${KU_W_invest_USStocksLandingScreen_vestedLogo} =  xpath=//img[@class='b-introduction__detail__title2__img']
 ${KU_W_invest_USStocks_signupDetail} =  xpath=//div[@class='b-introduction__detail__sign-up']
-${KU_W_invest_USStocks_startTodayBtn} =  xpath=//button[@class='button-primary b-introduction__btn__start-today']
+${KU_W_invest_USStocks_startInvestingBtn} =  xpath=//button[@class='button-primary b-introduction__btn__start-today']
 ${KU_W_invest_USStocks_introductoryImg} =  xpath=//img[@class='b-introduction__img-title__item']
 ${KU_W_invest_USStocks_investTitleDesc} =  xpath=//div[@class='b-invest__desc__title']
 ${KU_W_invest_USStocks_investSubTitle1} =  xpath=//div[@class='b-invest__desc__features']/div[1]
@@ -81,7 +82,7 @@ ${KU_W_invest_USStocks_investmentProcessLabel2} =  xpath=(//div[@class='b-invest
 ${KU_W_invest_USStocks_investmentProcessLabel3} =  xpath=(//div[@class='b-investment-process__steps__item__label'])[3]
 ${KU_W_invest_USStocks_goGlobalTitle} =  xpath=//div[@class='b-sign-invest__desc__title']
 ${KU_W_invest_USStocks_goGlobalSubTitle} =  xpath=//div[@class='b-sign-invest__desc__content']
-${KU_W_invest_USStocks_goGlobalStartTodayBtn} =  xpath=//button[@class='button-primary b-sign-invest__desc__btn']
+${KU_W_invest_USStocks_goGlobalStartInvestBtn} =  xpath=//button[@class='button-primary b-sign-invest__desc__btn']
 ${KU_W_invest_USStocks_goGlobalImg} =  xpath=//img[@class='b-sign-invest__img-title__item']
 ${KU_W_invest_USStocks_faq_question1} =  xpath=(//div[@class='b-faq__list__content__question'])[1]
 ${KU_W_invest_USStocks_faq_question2} =  xpath=(//div[@class='b-faq__list__content__question'])[2]
@@ -123,3 +124,8 @@ ${KU_W_invest_USStocks_addBtn} =  xpath=//div[@class='b-us-stock-compare-m__add-
 ${KU_W_invest_USStocks_addStocksPopupHeader} =  xpath=//div[@class='b-us-stock-add-stock-m__heading']
 ${KU_W_invest_USStocks_closePopup} =  xpath=//div[@class='b-us-stock-add-stock-m__close-container']
 ${KU_W_invest_USStocks_sharePopup} =  xpath=//div[@class='b-us-stock-info__share-popup-text']
+# Postlogin
+${KU_W_invest_USStocks_investUSStocks} =  xpath=//div[contains(text(),'Invest in US stocks')]
+${KU_W_invest_USStocks_categoryBox} =  xpath=//div[@class='b-action-bar__filter__item__sector']
+${KU_W_invest_USStocks_subcategoryBox} =  xpath=//div[@class='b-action-bar__filter__item__geography']
+${KU_W_invest_USStocks_category_subCategoryName} =  xpath=(//div[@class='b-stock-item__col1__meta-info'])[1]

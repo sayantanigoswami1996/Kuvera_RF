@@ -4,7 +4,7 @@ Verify PreLogin Invest Tiles
     Wait For Element Visibility  ${KU_W_investLink} 
     Click Element  ${KU_W_investLink}
     Sleep  1s
-    Verify Login And Signup Link
+    Verify Login And Signup On Prelogin
     # Save Smart
     Sleep  2s
     Wait For Element Visibility  ${KU_W_invest_saveSmartTitle}  
@@ -55,7 +55,7 @@ Verify PreLogin Invest Tiles
     Sleep  2s
     Verify Element And Text  ${KU_W_UTFTitle}  ${e_invest_USETFTitleText}
     Verify Page Contains Element  ${KU_W_UTFSubTitle}
-    Verify Page Contains Image   ${KU_W_USUTFImage}  
+    Verify Page Contains Image  ${KU_W_USUTFImage}  
     Verify PreLogin US ETF Landing Page
     # Equity Index
     Wait For Element Visibility  ${KU_W_equityIndexTitle}
@@ -80,7 +80,7 @@ Verify PreLogin Invest Tiles
     Log To Console  Crypto Tiles
     Sleep  2s
     Verify Page Contains Element  ${KU_W_crypto_tabName}
-    Verify Login And Signup Link
+    Verify Login And Signup On Prelogin
     Go Back
     # 52 W High India
     Wait For Element Visibility  ${KU_W_52WHighIndiaTitle}  
@@ -99,12 +99,13 @@ Verify PreLogin Invest Tiles
 
 Navigate To Invest Page And Verify Explore Options
     [Arguments]  ${option}  ${optionText}
-    Sleep  1s
+    Sleep  2s
     Wait For Element Visibility  ${KU_W_investLink} 
     Click Element  ${KU_W_investLink}
     Scroll Page To Location  0  2000
     Wait For Element Visibility  ${option}
     Verify Element And Text  ${option}  ${optionText}
+    Sleep  2s
     Wait Scroll And Click Element  ${option}
     
 Verify Watchlist Icon 
@@ -127,8 +128,13 @@ Verify Filter And Clear All
 Verify Filter Navigation For Funds
     # Watchlist
     Wait And Click  ${KU_W_invest_watchList}
-    Wait For Element Visibility  ${KU_W_invest_watchlistHeader}
-    Verify Page Contains Element  ${KU_W_invest_watchlistHeader}
+    ${isLoginButtonVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_login}
+    IF  ${isLoginButtonVisible}  
+        Wait For Element Visibility  ${KU_W_invest_watchlistHeader}
+        Verify Page Contains Element  ${KU_W_invest_watchlistHeader}
+    ELSE  
+        Verify Page Contains Element  ${KU_W_watchlistIcon}
+    END  
     # InstaRedeem
     Wait For Element Visibility  ${KU_W_invest_instaRedeem}
     Click Element  ${KU_W_invest_instaRedeem}
@@ -171,7 +177,7 @@ Verify No Stocks Screen For 52WkHighIndia
     Go Back
 
 Verify WatchList Button For 52WkHighIndia
-    Verify Page Contains Element  ${KU_W_watchlistIcon}
+    Verify Page Contains Element  ${KU_W_invest_US_stocks_watchlistIcon}
     Go Back
 
 Verify Filter Navigation For Stocks And 52 WkHighIndia   
@@ -181,7 +187,13 @@ Verify Filter Navigation For Stocks And 52 WkHighIndia
     Verify Search And Sort  ${KU_W_stockAnd52WIndia_searchBar}  ${e_invest_stock_searchBarTxt}  ${KU_W_invest_stockAndindia_searchTextField}  ${KU_W_invest_sort_52WIndia}
     # WatchList
     Click Element  ${KU_W_invest_watchList}
-    Verify Element And Text  ${watchListHeader}  ${watchlistHeaderText} 
+    ${isLoginButtonVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_login}
+    IF  ${isLoginButtonVisible}  
+        Wait For Element Visibility  ${watchListHeader}
+        Verify Element And Text  ${watchListHeader}  ${watchlistHeaderText}
+    ELSE  
+        Verify Page Contains Element  ${watchListBtn}
+    END 
     # Gainers
     Click Element  ${KU_W_invest_stocks_gainers}
     Verify Element And Text  ${KU_W_invest_sortYear}  ${e_invest__stocks_sortYearText}
@@ -204,7 +216,7 @@ Verify Filter Navigation For Stocks And 52 WkHighIndia
     Sleep  3s
     ${fundlist} =  Get Element Count   xpath=//div[@class='b-stocks-explore__stock-row-info']
     Run Keyword If  ${fundlist}>0  Verify WatchList Button For 52WkHighIndia
-    ...    ELSE IF  ${fundlist}==0  Verify No Stocks Screen For 52WkHighIndia  ${KU_W_watchlistIcon}
+    ...    ELSE IF  ${fundlist}==0  Verify No Stocks Screen For 52WkHighIndia  ${KU_W_invest_US_stocks_watchlistIcon}
     ...    ELSE  Log To Console  Completed
 
 Verify No Stocks Screen For UTF and 52WkHighUS
@@ -220,7 +232,7 @@ Verify No Stocks Screen For UTF and 52WkHighUS
     Go Back
 
 Verify WatchList Button For UTF and 52WkHighUS
-    Verify Page Contains Element  ${KU_W_watchlistIcon} 
+    Verify Page Contains Element  ${KU_W_invest_US_stocks_watchlistIcon} 
     Go Back
 
 Verify Filter Navigation For USStocks USETF and 52WkHighUS  
@@ -230,8 +242,13 @@ Verify Filter Navigation For USStocks USETF and 52WkHighUS
     Verify Search And Sort  ${KU_W_US_SETF52WUS_searchBar}  ${e_invest_stock_searchBarTxt}  ${KU_W_invest_US_SETFAnd52WUS_searchTextField}  ${KU_W_invest_sort_US_S_UTF_USA}
     # WatchList
     Click Element  ${KU_W_invest_watchList}
-    Wait For Element Visibility  ${watchListHeader}
-    Verify Element And Text  ${watchListHeader}  ${watchlistHeaderText} 
+    ${isLoginButtonVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_login}
+    IF  ${isLoginButtonVisible}  
+        Wait For Element Visibility  ${watchListHeader}
+        Verify Element And Text  ${watchListHeader}  ${watchlistHeaderText}
+    ELSE  
+        Verify Page Contains Element  ${watchListBtn}
+    END   
     # Gainers
     Click Element  ${KU_W_invest_stocks_gainers}
     Verify Element And Text  ${KU_W_invest_sortYear}  ${e_invest__stocks_sortYearText}
@@ -253,18 +270,18 @@ Verify Filter Navigation For USStocks USETF and 52WkHighUS
     Sleep  3s
     ${fundlist} =  Get Element Count   xpath=//div[@class='b-stock-item b-stock-items__content__item']
     Run Keyword If  ${fundlist}>0  Verify WatchList Button For UTF and 52WkHighUS
-    ...    ELSE IF  ${fundlist}==0  Verify No Stocks Screen For UTF and 52WkHighUS  ${KU_W_watchlistIcon}
+    ...    ELSE IF  ${fundlist}==0  Verify No Stocks Screen For UTF and 52WkHighUS  ${KU_W_invest_US_stocks_watchlistIcon}
     ...    ELSE  Log To Console  Completed
 
-Verify Explore Tags For Stocks And USStocks
+Verify Explore Tags For Stocks USStocks And Funds
     [Arguments]  ${sortYear}  
-    Verify Page Contains Element  ${KU_W_invest_US_stocks_exploreTags}
-    Click Element  ${KU_W_invest_US_stocks_exploreTagLink1} 
+    Verify Page Contains Element  ${KU_W_invest_funds_stocks_exploreTags}
+    Wait And Click  ${KU_W_invest_funds_stocks_exploreTagLink1} 
     Wait For Element Visibility  ${sortYear}
     Verify Element And Text  ${sortYear}  ${e_invest_stocks_sortYear}
     Go Back
-    Wait For Element Visibility  ${KU_W_invest_US_stocks_exploreTagLink2}
-    Click Element  ${KU_W_invest_US_stocks_exploreTagLink2}
+    Wait For Element Visibility  ${KU_W_invest_funds_stocks_exploreTagLink2}
+    Wait And Click  ${KU_W_invest_funds_stocks_exploreTagLink2}
     Wait For Element Visibility  ${sortYear}
     Verify Element And Text  ${sortYear}  ${e_invest_stocks_sortYear}
     Go Back
@@ -314,5 +331,34 @@ Verify Share PDF And Watchlist Option
     Verify Page Contains Element  ${PDFIcon}
     Click Element  ${PDFIcon}
     Verify Page Contains Element  ${watchlistIcon}
-    Click Element  ${watchlistIcon}
-    Verify Login Page
+    Verify Watchlist Icon Action On Pre And Postlogin
+
+Verify Pre And Post Login Action On Watchlist For Funds
+    [Arguments]  ${wlistBtn}
+    ${isLoginButtonVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_login}
+    IF  ${isLoginButtonVisible}  
+        Verify Watchlist Icon  ${wlistBtn}
+        Verify Login Page
+    ELSE  
+        Wait And Click  ${wlistBtn}
+        Verify Page Contains Element  ${KU_W_toastMssg}
+    END 
+
+Verify Pre And Post Login Action On Watchlist For Stocks  
+    [Arguments]  ${watchlist}
+    ${isLoginButtonVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_login}
+    IF  ${isLoginButtonVisible}  
+        Verify Watchlist Icon  ${watchlist} 
+        Verify Login Page
+    ELSE  
+        Verify Watchlist Icon  ${watchlist}
+        Verify Page Contains Element  ${KU_W_toastMssg} 
+    END 
+
+Verify Payment Postlogin
+    Wait And Click  ${KU_W_postlogin_netBankingOption}
+    Wait And Click  ${KU_W_postlogin_proceedToPay}
+    Wait And Click  ${KU_W_postlogin_chooseBank}
+    Wait And Click  ${KU_W_postlogin_payNow}
+    Wait And Click  ${KU_W_postlogin_goBackBtn}
+    Go Back

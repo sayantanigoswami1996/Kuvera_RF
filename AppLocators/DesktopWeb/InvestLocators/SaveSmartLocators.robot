@@ -3,6 +3,7 @@
 # SaveSmart
 ${e_invest_ss_screenText} =  Start SaveSmart today
 ${e_invest_ss_amount} =  2000
+${e_invest_ss_amount1} =  1999
 ${e_invest_ss_saveBtnText} =  Save now 
 ${e_invest_ss_headerTitleText} =  The smart way to save!
 ${e_invest_ss_headerMsgText} =  Liquid fund returns, higher instant withdrawal\n(upto ₹2 lakhs or 90% of holdings within 30 min)
@@ -85,3 +86,8 @@ ${KU_W_ss_highChart} =  xpath=//section[@id='container-chart']
 ${KU_W_ss_startSaveTitle} =  xpath=//div[@class='b-start-save__title']
 ${KU_W_ss_startSaveMsg} =  xpath=//div[@class='b-start-save__msg']
 ${KU_W_ss_saveNowBtn} =  xpath=//button[@class='button-primary b-start-save__btn']
+# Postlogin
+${KU_W_ss_savesmartTitle} =  xpath=//div[.='SaveSmart']
+${KU_W_ss_disabledSaveNowBtn} =  xpath=//button[@class='button-primary b-save-now__btn-save button-primary-disabled']
+${KU_W_ss_5000AmtBtn} =  xpath=//div[@class='b-helper-buttons']//div[2]
+${KU_W_ss_saveNow} =  xpath=//button[normalize-space()='Save Now']

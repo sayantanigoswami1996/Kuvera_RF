@@ -1,15 +1,14 @@
 *** Keywords ***
 
 Verify PreLogin Save Smart Landing Page
-    Log To Console  Save Smart - Explore More
+    Log To Console  Save Smart - Explore
     Navigate To Invest Page And Verify Explore Options  ${KU_W_saveSmart}  ${e_invest_saveSmart}
     Sleep  1s
-    Verify Login And Signup Link
+    Verify Login And Signup On Prelogin
     Verify Element And Text  ${KU_W_ss_screenTitle}  ${e_invest_ss_screenText}
     Input Text  ${KU_W_ss_inputAmount}  ${e_invest_ss_amount}
     Verify Element And Text  ${KU_W_ss_saveBtn}  ${e_invest_ss_saveBtnText}
-    Click Element  ${KU_W_ss_saveBtn}
-    Verify Login Page
+    Verify SaveNow Button Action On Pre And Post Login  ${KU_W_ss_saveBtn}  ${KU_W_postlogin_paymentPageTitle}
 
     # Smart Way To Save
     Scroll Untill View  ${KU_W_ss_headerTitle}
@@ -83,6 +82,18 @@ Verify PreLogin Save Smart Landing Page
     Verify Element And Text  ${KU_W_ss_saveNowBtn}  ${e_invest_ss_saveBtnText}
     Verify Google Play & Apple Store Icons
     Wait For Element Visibility  ${KU_W_ss_saveNowBtn} 
-    Click Element  ${KU_W_ss_saveNowBtn} 
-    Verify Login Page
-    Go Back
+    Verify SaveNow Button Action On Pre And Post Login  ${KU_W_ss_saveNowBtn}  ${KU_W_ss_savesmartTitle}
+    Go Back  
+
+Verify SaveNow Button Action On Pre And Post Login
+    [Arguments]  ${saveBtn}  ${pageTitle}
+    ${isLoginButtonVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_login}
+    IF  ${isLoginButtonVisible}
+        Click Element  ${saveBtn}
+        Verify Login Page
+    ELSE
+        Click Element  ${saveBtn}
+        Wait For Element Visibility  ${pageTitle}
+        Verify Page Contains Element  ${pageTitle}
+        Go Back
+    END
