@@ -3,9 +3,11 @@
 ${e_prod} =  Prod
 ${e_stage3} =  Stage3
 ${e_stage2} =  Stage2
+${e_equity} =  Equity
 ${URL_prod} =  https://kuvera.in/
 ${URL_stage3} =  https://staging3.kuvera.in/branch-1.179/#/
 ${URL_stage2} =  https://staging2.kuvera.in/
+${URL_equity} =  https://equity-test.kuvera.in/branch-1.180 
 ${e_title} =  Kuvera - Direct Mutual Funds | Stocks | Loans | Gold | Remit on Kuvera- Wealth Management Simplified
 ${e_regulatoryDisclosure} =  Regulatory Disclosure
 ${e_login} =  Log in 

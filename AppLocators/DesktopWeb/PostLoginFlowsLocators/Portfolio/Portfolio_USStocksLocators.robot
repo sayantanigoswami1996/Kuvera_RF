@@ -13,8 +13,8 @@ ${e_portfolio_USStocks_subTitle4} =  Track your holdings from the portfolio sect
 
 # Application Locator 'KU_<locatorName>'
 # US Stocks Portfolio Navigation Page
-${KU_W_portfolio_USStocks_title} =  xpath=(//p[@class='tile-opt-label'])[3]
-${KU_W_portfolio_USStocks_subtitle} =  xpath=(//div[@class='tile-opt-sub-label-container'])[3]
+${KU_W_portfolio_USStocks_title} =  xpath=(//p[@class='tile-opt-label'])[4]
+${KU_W_portfolio_USStocks_subtitle} =  xpath=(//div[@class='tile-opt-sub-label-container'])[4]
 ${KU_W_portfolio_USStocks_exploreUSStocks} =  xpath=(//p[contains(text(),'Explore & invest')])[1]
 ${KU_W_portfolio_USStocks_exploreUSSDesc} =  xpath=//p[normalize-space()='Browse and invest in US stocks and ETFs.']
 ${KU_W_portfolio_USStocks_importTitle} =  xpath=//p[normalize-space()='Import & track']
@@ -43,4 +43,9 @@ ${KU_W_portfolio_USStocks_img2} =  xpath=(//img[@class='b-instruction__steps__im
 ${KU_W_portfolio_USStocks_img3} =  xpath=(//img[@class='b-instruction__steps__img'])[3]
 ${KU_W_portfolio_USStocks_img4} =  xpath=(//img[@class='b-instruction__steps__img'])[4]
 ${KU_W_portfolio_USStocks_stepsPopupClose} =  xpath=//img[@class='b-instruction__close-icon']
-${KU_W_portfolio_USStocks_completeAccSetup} =  xpath//div[contains(text(),'Complete account setup on Vested.')]
+${KU_W_portfolio_USStocks_completeAccSetup} =  xpath=//div[text()='Complete account setup on Vested.']
+${KU_W_portfolio_USStocks_USStocksTab} =  xpath=//div[contains(text(),'US stocks')]
+${KU_W_portfolio_USStocks_totalValLabel} =  xpath=//div[contains(text(),'Total value')]
+${KU_W_portfolio_USStocks_investedLabel} =  xpath=//div[@class='b-summary__invested-val__header'][normalize-space()='Invested']
+${KU_W_portfolio_USStocks_cashLabel} =  xpath=//div[normalize-space()='Cash']
+${KU_W_portfolio_USStocks_summaryRow} =  xpath=//div[@class='b-summary']

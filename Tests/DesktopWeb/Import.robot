@@ -87,3 +87,4 @@ Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Po_Remit.robot
 Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Po_LandingPage.robot
 Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Settings/DeactivateAccount.robot
 Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Settings/TwoFactorAuthentication.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/UserWithInvestment/MF.robot

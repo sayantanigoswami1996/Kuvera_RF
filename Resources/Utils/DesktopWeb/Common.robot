@@ -60,6 +60,8 @@ Launch URL
     Run keyword If  '${ENV}' == '${e_prod}'  Open Browser  ${URL_prod}  ${BROWSER}  alias=Kuvera
     ...    ELSE IF  '${ENV}' == '${e_stage3}'  Open Browser  ${URL_stage3}  ${BROWSER}  alias=Kuvera
     ...    ELSE IF  '${ENV}' == '${e_stage2}'  Open Browser  ${URL_stage2}  ${BROWSER}  alias=Kuvera
+    ...    ELSE IF  '${ENV}' == '${e_equity}'  Open Browser  ${URL_equity}  ${BROWSER}  alias=Kuvera
+    
     Log To Console  ${ENV}
     # Maximize Browser Window
     Set Window Size  ${1920}  ${1080}
@@ -265,6 +267,7 @@ URL Navigation Based ENV
     Run keyword If  '${ENV}' == '${e_prod}'  Go To  ${URL_prod}
     ...    ELSE IF  '${ENV}' == '${e_stage3}'  Go To  ${URL_stage3}
     ...    ELSE IF  '${ENV}' == '${e_stage2}'  Go To  ${URL_stage2}
+    ...    ELSE IF  '${ENV}' == '${e_equity}'  Go To  ${URL_equity}  
 
 Navigate To Home Page
     URL Navigation Based ENV
@@ -272,6 +275,7 @@ Navigate To Home Page
     IF  ${isLoginButtonVisible}
         Log To Console  PreLogin
     ELSE
+        Reload Page
         Logout From App Post Signup
         URL Navigation Based ENV       
     END
@@ -326,11 +330,21 @@ Verify Social Sharing Option
 
 Logout From App Post Signup
     Sleep  2s
+    ${ismandateVisible} =  Run Keyword And Return Status  Verify Mandate Screen
+    IF  ${ismandateVisible}
+        Wait And Click  ${KU_W_postlogin_mandate_doItLaterBtn}
+    ELSE
+        Log To Console  Continue without mandate
+    END
     Wait And Click  ${KU_W_ca_caretDropdown}
     Sleep  2s
     Wait And Click  ${KU_W_ca_logoutBtn}
     Sleep  4s
     Go Back
+
+Verify Mandate Screen
+    Wait For Element Visibility  ${KU_W_postlogin_mandate_doItLaterBtn}
+    Element Should Be Visible  ${KU_W_postlogin_mandate_doItLaterBtn}
 
 Login 
     [Arguments]  ${email}  ${pwd}
@@ -443,6 +457,10 @@ Verify Import Now Banner
     Wait And Click  ${KU_W_invest_importNow}
     Verify Element And Text  ${externalFunds}  ${externalFundsText}
     Go Back
+
+Verify User Login With Investment
+    Wait And Click  ${KU_W_login}
+    Login  ${e_postlogin_stage3_MFSIPAcc}  ${e_postlogin_pwd}
        
 Close Web Application
     Close All Browser

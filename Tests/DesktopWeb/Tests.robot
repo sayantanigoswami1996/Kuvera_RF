@@ -216,7 +216,7 @@ Reports Menu Navigation With KYC
 # Invest Tiles Navigation Postlogin 
 Invest Tiles Navigation Postlogin
     [Tags]  TC32  Stage3  NONKYC
-    [Teardown]  Logout From App And Navigate To Home Page PostLogin
+    # [Teardown]  Logout From App And Navigate To Home Page PostLogin
     Verify PostLogin Account Creation
     Verify PreLogin Invest Tiles
 
@@ -269,14 +269,14 @@ Digital Gold Navigation Postlogin
 # MF Portfolio Navigation Postlogin Without KYC
 MF Portfolio Navigation Postlogin Without KYC
     [Tags]  TC39  Stage3  NONKYC
-    [Teardown]  Logout From App And Navigate To Home Page PostLogin
+    [Teardown]  Navigate To Home Page
     Verify PostLogin Account Creation
     Verify PostLogin MF Portfolio Menu Navigation Without KYC
 
 # MF Portfolio Navigation Postlogin With KYC
 MF Portfolio Navigation Postlogin With KYC
     [Tags]  TC40  Stage3  KYC
-    [Teardown]  Logout From App And Navigate To Home Page PostLogin
+    [Teardown]  Navigate To Home Page
     Verify PostLogin Account Creation
     Verify PAN Verifed KYC Details
     Verify PostLogin MF Portfolio Menu Navigation With KYC  
@@ -284,14 +284,14 @@ MF Portfolio Navigation Postlogin With KYC
 # US Stocks Portfolio Navigation Postlogin Without KYC
 US Stocks Portfolio Navigation Postlogin Without KYC
     [Tags]  TC41  Stage3  NONKYC
-    [Teardown]  Logout From App And Navigate To Home Page PostLogin
+    [Teardown]  Navigate To Home Page
     Verify PostLogin Account Creation
     Verify PostLogin US Stocks Portflio Menu Navigation Without KYC
 
 # US Stocks Portfolio Navigation Postlogin With KYC
 US Stocks Portfolio Navigation Postlogin With KYC
     [Tags]  TC42  Stage3  KYC
-    [Teardown]  Logout From App And Navigate To Home Page PostLogin
+    [Teardown]  Navigate To Home Page
     Verify PostLogin Account Creation
     Verify PAN Verifed KYC Details
     Verify PostLogin US Stocks Portflio Menu Navigation With KYC  
@@ -299,14 +299,14 @@ US Stocks Portfolio Navigation Postlogin With KYC
 # Stocks Portfolio Navigation Postlogin Without KYC
 Stocks Portfolio Navigation Postlogin Without KYC
     [Tags]  TC43  Stage3  NONKYC
-    [Teardown]  Logout From App And Navigate To Home Page PostLogin
+    [Teardown]  Navigate To Home Page
     Verify PostLogin Account Creation
     Verify PostLogin Stocks Portflio Menu Navigation Without KYC
 
 # Stocks Portfolio Navigation Postlogin With KYC
 Stocks Portfolio Navigation Postlogin With KYC
-    [Tags]  TC44  Stage3  KYC
-    [Teardown]  Logout From App And Navigate To Home Page PostLogin
+    [Tags]  TC44  Equity  KYC
+    [Teardown]  Navigate To Home Page
     Verify PostLogin Account Creation
     Verify PAN Verifed KYC Details
     Verify PostLogin Stocks Portflio Menu Navigation With KYC
@@ -314,7 +314,7 @@ Stocks Portfolio Navigation Postlogin With KYC
 # Savesmart Portfolio Navigation Postlogin With KYC
 Savesmart Portfolio Navigation Postlogin With KYC
     [Tags]  TC45  Stage3  KYC
-    [Teardown]  Logout From App And Navigate To Home Page PostLogin
+    [Teardown]  Navigate To Home Page
     Verify PostLogin Account Creation
     Verify PAN Verifed KYC Details
     Verify PostLogin Savesmart Portflio Menu Navigation With KYC
@@ -322,14 +322,14 @@ Savesmart Portfolio Navigation Postlogin With KYC
 # Gold Portfolio Navigation Postlogin Without KYC
 Gold Portfolio Navigation Postlogin Without KYC
     [Tags]  TC46  Stage3  NONKYC
-    [Teardown]  Logout From App And Navigate To Home Page PostLogin
+    [Teardown]  Navigate To Home Page
     Verify PostLogin Account Creation
     Verify PostLogin Gold Portfolio Menu Navigation Without KYC
 
 # Gold Portfolio Navigation Postlogin With KYC
 Gold Portfolio Navigation Postlogin With KYC
     [Tags]  TC47  Stage3  KYC
-    [Teardown]  Logout From App And Navigate To Home Page PostLogin
+    # [Teardown]  Navigate To Home Page
     Verify PostLogin Account Creation
     Verify PAN Verifed KYC Details
     Verify PostLogin Gold Portfolio Menu Navigation With KYC
@@ -344,7 +344,7 @@ EPF Portfolio Navigation Postlogin With KYC
 # FD Portfolio Navigation Postlogin With KYC
 FD Portfolio Navigation Postlogin With KYC
     [Tags]  TC49  Stage3  KYC
-    [Teardown]  Logout From App And Navigate To Home Page PostLogin
+    # [Teardown]  Navigate To Home Page
     Verify PostLogin Account Creation
     Verify PAN Verifed KYC Details
     Verify PostLogin FD Portfolio Menu Navigation With KYC
@@ -466,3 +466,9 @@ FD Navigation Postlogin With Invalid PAN
     Verify PostLogin FD Menu Navigation With Invalid PAN
 
 #--------------MF - User With Investment---------------------
+# MF Navigation Postlogin User Investment With SIP
+MF Navigation Postlogin With SIP
+    [Tags]  TC65  Stage3  NONKYC
+    [Teardown]  Logout From App And Navigate To Home Page PostLogin
+    Verify User Login With Investment
+    Verify PostLogin MF Navigation With SIP 

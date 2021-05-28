@@ -134,6 +134,7 @@ ${KU_W_invest_funds_stocks_exploreTags} =  xpath=//div[@class='b-explore-tags__c
 ${KU_W_invest_funds_stocks_exploreTagLink1} =  xpath=(//a[@class='b-app-standard-chip disable-browser-text-select b-explore-tags__chip'])[1]
 ${KU_W_invest_funds_stocks_exploreTagLink2} =  xpath=(//a[@class='b-app-standard-chip disable-browser-text-select b-explore-tags__chip'])[2]
 ${KU_W_invest_US_stocks_performancePeriod} =  xpath=//div[@class='b-period-option_wrapper disable-browser-text-select']
+${KU_W_invest_US_stocks_watchlistIcon} =  xpath=(//*[local-name()='svg'])[1]
 # Postlogin
 ${KU_W_invest_bannerText} =  xpath=//span[@class='b-banner-text']
 ${KU_W_invest_importNow} =  xpath=//span[text()='Import now >']

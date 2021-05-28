@@ -1,7 +1,7 @@
 *** Keywords ***
 
 Verify PostLogin US Stocks Menu Navigation
-    # Verify PreLogin US Stocks Landing Page
+    Verify PreLogin US Stocks Landing Page
     Wait And Click  ${KU_W_USStocks}
     Wait And Click  ${KU_W_invest_USStocks_exploreBtn}
     Verify Import Now Banner  ${e_invest_USStocks_bannerText}  ${KU_W_postlogin_USStocks_linkYourVestedAcc}  ${e_postlogin_USStocks_linkYourVestedAcc}
@@ -25,9 +25,10 @@ Verify PostLogin US Stocks Menu Navigation
             Wait And Click  xpath=(//div[@class='b-stock-sector-filter__label'])[${j}]
             Sleep  6s
             ${text} =  Set Variable  xpath=(//div[contains(text(),
-            ${USStockName} =  Set Variable  '${subcategoryName}'])[3]
+            ${USStockName} =  Set Variable  '${subcategoryName}')])[2]
             ${USStkName} =  Set Variable  ${text}${USStockName}
             Verify Page Contains Element  ${USStkName}
+            Scroll Untill View  xpath=(//div[@class='b-stock-sector-filter__label'])[${j}]
             Press Keys  xpath=(//div[@class='b-stock-sector-filter__label'])[${j}]  ARROW_DOWN
             END   
         END

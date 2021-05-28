@@ -14,8 +14,8 @@ ${e_portfolio_dg_buyGold} =  Buy Gold
 
 # Application Locator 'KU_<locatorName>'
 # Gold Portfolio Navigation Page
-${KU_W_portfolio_dg_title} =  xpath=(//p[@class='tile-opt-label'])[5]
-${KU_W_portfolio_dg_subtitle} =  xpath=(//div[@class='tile-opt-sub-label-container'])[5]
+${KU_W_portfolio_dg_title} =  xpath=(//p[@class='tile-opt-label'])[6]
+${KU_W_portfolio_dg_subtitle} =  xpath=(//div[@class='tile-opt-sub-label-container'])[6]
 ${KU_W_portfolio_dg_investGoldTitle} =  xpath=//p[normalize-space()='Invest in Gold SIP']
 ${KU_W_portfolio_dg_investGoldDesc} =  xpath=(//div[@class='tile-opt-sub-label-container'])[1]
 ${KU_W_portfolio_dg_buyGoldDesc} =  xpath=(//div[@class='tile-opt-sub-label-container'])[2]

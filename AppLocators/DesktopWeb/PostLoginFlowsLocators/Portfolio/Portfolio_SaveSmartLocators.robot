@@ -5,5 +5,5 @@ ${e_portfolio_ss_subTitle} =  Higher returns, instant withdrawal, better than an
                     
 # Application Locator 'KU_<locatorName>'
 # Savesmart Portfolio Navigation Page
-${KU_W_portfolio_ss_title} =  xpath=(//p[@class='tile-opt-label'])[4]
-${KU_W_portfolio_ss_subtitle} =  xpath=(//div[@class='tile-opt-sub-label-container'])[4]
+${KU_W_portfolio_ss_title} =  xpath=(//p[@class='tile-opt-label'])[5]
+${KU_W_portfolio_ss_subtitle} =  xpath=(//div[@class='tile-opt-sub-label-container'])[5]

@@ -44,8 +44,7 @@ Verify PostLogin FD Menu Navigation With Invalid DOB
     Verify Element And Text  ${KU_W_FD_invalidPAN_DOBMsg}  ${e_FD_invalidDOBMsg}
     Wait And Click  ${KU_W_postlogin_okayBtn}
     
-
-    
+   
 Navigate To FD And Start FD
     Wait And Click  ${KU_W_investLink}
     Sleep  1s

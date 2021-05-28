@@ -83,7 +83,7 @@ Verify Add Own Gold Page
     Verify Page Contains Element  ${KU_W_dg_slider}
     
 Add Gold
-    Move Slider
+    Move Slider  ${KU_W_dg_slider}
     Wait And Click  ${KU_W_portfolio_dg_addGoldBtn}
 
 Verify Add External Gold From Import Portfolio
@@ -91,4 +91,3 @@ Verify Add External Gold From Import Portfolio
     Wait And Click  ${KU_W_dashboard_trackInvest_digiGold}
     Add Gold
     Verify Element And Text  ${KU_W_toastMssg}  ${e_invest_trackToastMsg}
-    Verify Page Contains Element  ${KU_W_dg_externalGoldTitle}

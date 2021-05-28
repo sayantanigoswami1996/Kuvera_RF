@@ -55,7 +55,7 @@ Verify PreLogin Invest Tiles
     Sleep  2s
     Verify Element And Text  ${KU_W_UTFTitle}  ${e_invest_USETFTitleText}
     Verify Page Contains Element  ${KU_W_UTFSubTitle}
-    Verify Page Contains Image   ${KU_W_USUTFImage}  
+    Verify Page Contains Image  ${KU_W_USUTFImage}  
     Verify PreLogin US ETF Landing Page
     # Equity Index
     Wait For Element Visibility  ${KU_W_equityIndexTitle}
@@ -177,7 +177,7 @@ Verify No Stocks Screen For 52WkHighIndia
     Go Back
 
 Verify WatchList Button For 52WkHighIndia
-    Verify Page Contains Element  ${KU_W_watchlistIcon}
+    Verify Page Contains Element  ${KU_W_invest_US_stocks_watchlistIcon}
     Go Back
 
 Verify Filter Navigation For Stocks And 52 WkHighIndia   
@@ -216,7 +216,7 @@ Verify Filter Navigation For Stocks And 52 WkHighIndia
     Sleep  3s
     ${fundlist} =  Get Element Count   xpath=//div[@class='b-stocks-explore__stock-row-info']
     Run Keyword If  ${fundlist}>0  Verify WatchList Button For 52WkHighIndia
-    ...    ELSE IF  ${fundlist}==0  Verify No Stocks Screen For 52WkHighIndia  ${KU_W_watchlistIcon}
+    ...    ELSE IF  ${fundlist}==0  Verify No Stocks Screen For 52WkHighIndia  ${KU_W_invest_US_stocks_watchlistIcon}
     ...    ELSE  Log To Console  Completed
 
 Verify No Stocks Screen For UTF and 52WkHighUS
@@ -232,7 +232,7 @@ Verify No Stocks Screen For UTF and 52WkHighUS
     Go Back
 
 Verify WatchList Button For UTF and 52WkHighUS
-    Verify Page Contains Element  ${KU_W_watchlistIcon} 
+    Verify Page Contains Element  ${KU_W_invest_US_stocks_watchlistIcon} 
     Go Back
 
 Verify Filter Navigation For USStocks USETF and 52WkHighUS  
@@ -270,7 +270,7 @@ Verify Filter Navigation For USStocks USETF and 52WkHighUS
     Sleep  3s
     ${fundlist} =  Get Element Count   xpath=//div[@class='b-stock-item b-stock-items__content__item']
     Run Keyword If  ${fundlist}>0  Verify WatchList Button For UTF and 52WkHighUS
-    ...    ELSE IF  ${fundlist}==0  Verify No Stocks Screen For UTF and 52WkHighUS  ${KU_W_watchlistIcon}
+    ...    ELSE IF  ${fundlist}==0  Verify No Stocks Screen For UTF and 52WkHighUS  ${KU_W_invest_US_stocks_watchlistIcon}
     ...    ELSE  Log To Console  Completed
 
 Verify Explore Tags For Stocks USStocks And Funds
@@ -338,9 +338,7 @@ Verify Pre And Post Login Action On Watchlist For Funds
     ${isLoginButtonVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_login}
     IF  ${isLoginButtonVisible}  
         Verify Watchlist Icon  ${wlistBtn}
-        Wait For Element Visibility  ${KU_W_invest_watchlistHeader}
-        # WatchList
-        Verify Element And Text  ${KU_W_invest_watchlistHeader}  ${e_invest_watchlistHeader}
+        Verify Login Page
     ELSE  
         Wait And Click  ${wlistBtn}
         Verify Page Contains Element  ${KU_W_toastMssg}
@@ -356,14 +354,6 @@ Verify Pre And Post Login Action On Watchlist For Stocks
         Verify Watchlist Icon  ${watchlist}
         Verify Page Contains Element  ${KU_W_toastMssg} 
     END 
-
-Verify Go Back Action On Pre And Post Login
-    ${isLoginButtonVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_login}
-    IF  ${isLoginButtonVisible}  
-        Go Back
-    ELSE  
-        Log To Console  Continue
-    END
 
 Verify Payment Postlogin
     Wait And Click  ${KU_W_postlogin_netBankingOption}

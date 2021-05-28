@@ -71,6 +71,16 @@ Verify Buying Of SIP
         END
     Wait And Click  ${KU_W_invest_mf_dropdownIcon} 
     END
+    # Add and Remove Fund
+    Scroll Untill View  ${KU_W_invest_mf_addFundBtn}
+    Wait And Click  ${KU_W_invest_mf_addFundBtn}
+    Wait And Click  ${KU_W_invest_mf_search_addFund}
+    Input Text  ${KU_W_invest_mf_search_addFund}  ${e_invest_mf_search_addFund}
+    Wait And Click  ${KU_W_invest_mf_search_addIcon}
+    Verify Element And Text  ${KU_W_toastMssg}  ${e_invest_mf_search_addFundToastMsg}
+    Wait And Click  ${KU_W_invest_mf_search_removeIcon}
+    Verify Element And Text  ${KU_W_toastMssg}  ${e_invest_mf_search_removeFundToastMsg}
+    # Buy SIP
     Wait For Element Visibility  ${KU_W_invest_mf_sipAmountTxt}
     Input Text  ${KU_W_invest_mf_sipAmountTxt}  ${e_invest_mf_sipAmount}
     Wait And Click  ${KU_W_invest_mf_lumpsumAmountTxt}

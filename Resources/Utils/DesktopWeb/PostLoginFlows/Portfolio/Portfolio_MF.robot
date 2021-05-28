@@ -9,6 +9,10 @@ Verify PostLogin MF Portfolio Menu Navigation With KYC
     Verify Navigation To Explore Funds And Import Tab  ${KU_W_portfolio_mf_exploreFunds}  ${KU_W_portfolio_mf_allFundsTitle}  ${e_portfolio_mf_allFundsText}  ${KU_W_portfolio_importFolioTitle}  ${KU_W_invest_mf_importExternalFunds}  ${e_invest_mf_importExternalFunds}
     Verify Import MF Portfolio
     Verify Upload CAS File
+    Wait And Click  ${KU_W_postlogin_portfolioTab}
+    Wait For Element Visibility  ${KU_W_postlogin_portfolio}
+    Verify Page Contains Element  ${KU_W_postlogin_portfolio}
+    Verify Element And Text  ${KU_W_portfolio_mf_MFTab}  ${e_portfolio_mf_title}
 
 Verify PostLogin MF Portfolio Menu Navigation Without KYC
     Log To Console  MF Portfolio Navigation Without KYC
@@ -47,13 +51,14 @@ Verify Upload CAS File
     Verify Element And Text  ${KU_W_portfolio_mf_uploadCASSubTitle}  ${e_portfolio_mf_uploadCASSubTitle}
     Verify Element And Text  ${KU_W_portfolio_mf_uploadCASLabel}  ${e_portfolio_mf_uploadCAS}
     Verify Page Contains Element  ${KU_W_portfolio_mf_CASPwdLabel}
-    # Wait And Click  ${KU_W_portfolio_mf_uploadLink}
-    Sleep  6s
-    Input Text  ${KU_W_portfolio_mf_uploadFile}  D:\Phase4\Kuvera_RF\Resources\Utils\Files\CAS.pdf
+    Sleep  2s
+    Choose File  ${KU_W_portfolio_mf_uploadFile}  ${e_portfolio_mf_CASPath}
+    Sleep  3s
     Input Text  ${KU_W_postlogin_pwdField}  ${e_portfolio_mf_CASPwd}
     Wait And Click  ${KU_W_postlogin_submitBtn}
-    # Enter OTP
+    Wait For Element Visibility  ${KU_W_portfolio_mf_importedInvest}
     Verify Page Contains Element  ${KU_W_portfolio_mf_importedInvest}
+    Wait For Element Visibility  ${KU_W_portfolio_mf_importedInvestDesc}
     Verify Element And Text  ${KU_W_portfolio_mf_importedInvestDesc}  ${e_portfolio_mf_popupDesc}
     Wait And Click  ${KU_W_postlogin_OkBtn}
     Verify Page Contains Element  ${KU_W_portfolio_mf_mailID}

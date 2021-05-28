@@ -11,6 +11,14 @@ Verify PostLogin US Stocks Portflio Menu Navigation With KYC
     Wait And Click  ${KU_W_postlogin_importPortfolioTab}
     Wait And Click  ${KU_W_dashboard_trackInvest_USStocks}
     Verify Link Your Vested Account And Select Account Screen
+    Verify 4 Steps Screen
+    Wait For Element Visibility  ${KU_W_postlogin_portfolio}
+    Verify Page Contains Element  ${KU_W_postlogin_portfolio}
+    Verify Page Contains Element  ${KU_W_portfolio_USStocks_USStocksTab}
+    Verify Page Contains Element  ${KU_W_portfolio_USStocks_totalValLabel}
+    Verify Page Contains Element  ${KU_W_portfolio_USStocks_investedLabel} 
+    Verify Page Contains Element  ${KU_W_portfolio_USStocks_cashLabel} 
+    Verify Page Contains Element  ${KU_W_portfolio_USStocks_summaryRow}
     
 Verify PostLogin US Stocks Portflio Menu Navigation Without KYC
     Log To Console  US Stocks Portfolio Navigation Without KYC
@@ -21,7 +29,7 @@ Verify PostLogin US Stocks Portflio Menu Navigation Without KYC
     Verify 4 Steps Screen
     Wait For Element Visibility  ${KU_W_portfolio_USStocks_completeAccSetup}
     Verify Page Contains Element  ${KU_W_portfolio_USStocks_completeAccSetup}
-
+       
 Verify Link Your Vested Account And Select Account Screen
     Wait For Element Visibility  ${KU_W_portfolio_USStocks_vestedAccDesc} 
     Verify Page Contains Element  ${KU_W_portfolio_USStocks_vestedAccDesc} 

@@ -9,6 +9,7 @@ ${e_postlogin_pwd} =  kuveratesting123
 ${e_postlogin_prod_KYCVerifiedEmail} =  moolya+automation@kuvera.in 
 ${e_postlogin_stocks_importPopup} =  Import stocks
 ${e_postlogin_USStocks_linkYourVestedAcc} =  Link your Vested account  
+${e_postlogin_stage3_MFSIPAcc} =  moolya+MFSIP@kuvera.in
 
 # Application Locator 'KU_<locatorName>'
 # Kuvera :: Wealth Management Simplified
@@ -75,3 +76,7 @@ ${KU_W_postlogin_orderStatusLabel} =  xpath=//div[contains(text(),'Order status'
 ${KU_W_postlogin_inProcessTag} =  xpath=(//div[@class='b-order-row__tag'])[2]
 ${KU_W_postlogin_clearFiltersBtn} =  xpath=//button[normalize-space()='Clear filters']
 ${KU_W_postlogin_USStocks_linkYourVestedAcc} =  xpath=//div[@class='b-input__content__col1__title']
+${KU_W_postlogin_mandate_doItLaterBtn} =  xpath=//p[contains(.,'Do it later')]
+${KU_W_postlogin_okThanksBtn} =  xpath=//button[normalize-space()='OK, THANKS']
+${KU_W_postlogin_saveBtn} =  xpath=//button[normalize-space()='Save']
+${KU_W_postlogin_okaySureBtn} =  xpath=//button[normalize-space()='OK, SURE']
