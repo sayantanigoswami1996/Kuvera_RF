@@ -412,6 +412,7 @@ Verify Cover Plan Summary Details
 Verify Payment With Net Banking
     [Arguments]  ${merchantDesc}
     Switch To Frame  ${KU_W_postlogin_razorPayFrame} 
+    Sleep  2s
     Wait For Element Visibility  ${KU_W_SPM_merchantName}
     Verify Element And Text  ${KU_W_SPM_merchantName}  ${e_SPM_merchantName}
     Verify Element And Text  ${KU_W_SPM_merchanteDesc}  ${merchantDesc}

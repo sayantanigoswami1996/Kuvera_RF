@@ -328,24 +328,30 @@ Verify Social Sharing Option
     Sleep  2s
     Wait Scroll And Click Element  ${KU_W_HI_mailLink} 
 
-Logout From App Post Signup
-    Sleep  2s
-    ${ismandateVisible} =  Run Keyword And Return Status  Verify Mandate Screen
-    IF  ${ismandateVisible}
-        Wait And Click  ${KU_W_postlogin_mandate_doItLaterBtn}
-    ELSE
-        Log To Console  Continue without mandate
-    END
+Logout
     Wait And Click  ${KU_W_ca_caretDropdown}
     Sleep  2s
     Wait And Click  ${KU_W_ca_logoutBtn}
     Sleep  4s
     Go Back
 
+Check Mandate Screen
+    ${ismandateVisible} =  Run Keyword And Return Status  Verify Mandate Screen
+    IF  ${ismandateVisible}
+        Wait And Click  ${KU_W_postlogin_mandate_doItLaterBtn}
+    ELSE
+        Log To Console  Continue without mandate
+    END 
+    
+Logout From App Post Signup
+    Sleep  2s
+    Check Mandate Screen
+    Logout
+    
 Verify Mandate Screen
     Wait For Element Visibility  ${KU_W_postlogin_mandate_doItLaterBtn}
     Element Should Be Visible  ${KU_W_postlogin_mandate_doItLaterBtn}
-
+    
 Login 
     [Arguments]  ${email}  ${pwd}
     Log To Console  Login 

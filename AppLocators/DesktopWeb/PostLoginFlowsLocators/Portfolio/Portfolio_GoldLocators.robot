@@ -39,3 +39,5 @@ ${KU_W_portfolio_dg_externalGoldTitle} =  xpath=//div[contains(text(),'Gold (Bou
 ${KU_W_portfolio_dg_addGoldBtn} =  xpath=(//button[@class='k-base-button--primary'])[1]
 ${KU_W_portfolio_dg_taxInvoiceClose} =  xpath=//img[@class='b-tax-invoice-desktop__header__close-logo']
 ${KU_W_portfolio_dg_buyGoldClose} =  xpath=//img[@class='b-buy-gold__close']
+${KU_W_portfolio_dg_buyNow} =  xpath=//button[contains(text(),'Buy Now')]
+${KU_W_portfolio_dg_autofilledGramVal} =  xpath=//div[@class='b-buy-gold__auto-filled-options-container']//div[2]

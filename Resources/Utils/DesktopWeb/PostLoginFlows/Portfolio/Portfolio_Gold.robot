@@ -10,9 +10,6 @@ Verify PostLogin Gold Portfolio Menu Navigation With KYC
     Verify Add Own Gold Page
     Go Back
     Verify Buy Gold Page
-    Verify Page Contains Element  ${KU_W_postlogin_paymentPageTitle}
-    Wait And Click  ${KU_W_dg_paymentCrossIcon}
-    Wait And Click  ${KU_W_postlogin_yesQuit1} 
     Sleep  2s
     Verify Add External Gold From Import Portfolio
     
@@ -72,9 +69,24 @@ Verify Buy Gold Page
     Wait For Element Visibility  ${KU_W_dg_screenTitle}
     Verify Element And Text  ${KU_W_dg_screenTitle}  ${e_invest_digiGold_screenText}
     Go Back
+    Reload Page
     Wait And Click  ${KU_W_portfolio_dg_buyAmt}
-    Sleep  3s
-    Wait And Click  ${KU_W_buyNowBtn}
+    Sleep  1s
+    Wait And Click  ${KU_W_portfolio_dg_buyNow}
+    Verify Page Contains Element  ${KU_W_postlogin_paymentPageTitle}
+    Wait And Click  ${KU_W_dg_paymentCrossIcon}
+    Wait And Click  ${KU_W_postlogin_yesQuit1}
+    Sleep  2s
+    Scroll Untill View  ${KU_W_portfolio_dg_subtitle}
+    Wait And Click  ${KU_W_portfolio_dg_title}
+    Wait And Click  ${KU_W_portfolio_dg_buyGoldTitle}
+    Wait And Click  ${KU_W_dg_enterGramLabel} 
+    Wait And Click  ${KU_W_portfolio_dg_autofilledGramVal} 
+    Sleep  1s
+    Wait And Click  ${KU_W_portfolio_dg_buyNow}
+    Verify Page Contains Element  ${KU_W_postlogin_paymentPageTitle}
+    Wait And Click  ${KU_W_dg_paymentCrossIcon}
+    Wait And Click  ${KU_W_postlogin_yesQuit1}
 
 Verify Add Own Gold Page
     Wait And Click  ${KU_W_portfolio_dg_addOwnGoldTitle}
