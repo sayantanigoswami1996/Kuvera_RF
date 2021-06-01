@@ -21,7 +21,7 @@ Verify PreLogin Mutual Fund Landing Page
         @{mutualFundName} =  Get Json Values  $.MutualFunds.f${i}  Resources/TestData/MutualFunds.json 
         Log To Console  ${mutualFundName}
         Search Fund and Verify  ${mutualFundName}
-        Run Keyword If    ${mutualFundName} == ['Tata Digital India Dividend Reinvest Direct Plan']  Click Element  ${KU_W_invest_mf_growthDividendButton}
+        Run Keyword If    ${mutualFundName} == ['${e_invest_mf_dividendFundName}']  Click Element  ${KU_W_invest_mf_growthDividendButton}
         Verify Mutual Fund Details Page  ${KU_W_invest_mf_fundName}
     END
     Go Back

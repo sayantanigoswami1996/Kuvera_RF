@@ -2,6 +2,8 @@
 
 Verify PostLogin US Stocks Menu Navigation
     Verify PreLogin US Stocks Landing Page
+    Scroll Page To Location  0  -500
+    Wait And Click  ${KU_W_investLink}
     Wait And Click  ${KU_W_USStocks}
     Wait And Click  ${KU_W_invest_USStocks_exploreBtn}
     Verify Import Now Banner  ${e_invest_USStocks_bannerText}  ${KU_W_postlogin_USStocks_linkYourVestedAcc}  ${e_postlogin_USStocks_linkYourVestedAcc}

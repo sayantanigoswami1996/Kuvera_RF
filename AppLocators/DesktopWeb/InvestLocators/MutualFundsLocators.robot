@@ -3,6 +3,7 @@ ${e_invest_mf_lumpsumAmountLabel} =  Lumpsum amount
 ${e_invest_mf_sipAmountLabel} =  SIP amount
 ${e_invest_mf_defaultSort} =  1Y
 ${e_invest_mf_sipAmount} =  6000
+${e_invest_mf_dividendFundName} =  Tata Digital India Dividend Reinvest Direct Plan
 ${e_invest_mf_lumpsumAmount} =  50000
 ${e_invest_mf_addFundPopupHeader} =  Search and add fund
 ${e_invest_mf_bannerText} =  Import your MFs and switch to Direct. Start saving commissions.
@@ -73,6 +74,7 @@ ${KU_W_invest_mf_pc_durationsList}  =  xpath=//*[@class='b-mf-performance-chart_
 ${KU_W_invest_mf_compareTitle} =  xpath=//*[@class='b-mf-compare__title']
 ${KU_W_invest_mf_V/STitle} =  xpath=//div[@class='mf-perf-chart-compare__heading']
 ${KU_W_invest_mf_dropdownIcon} =  xpath=//img[@class='b-filter-mf__dropdown-icon']
+${KU_W_invest_mf_niftyGraphDropdownList} =  xpath=//div[@class='b-mf-sector-filter__option']
 ${KU_W_invest_mf_performanceRateCount} =  xpath=//div[contains(@class,'b-performance-chart__xirr b-performance-chart__xirr')]
 ${KU_W_invest_mf_compareTableContent} =  xpath=//*[@class='b-app-standard-table']
 ${KU_W_invest_mf_tableHeader} =  xpath=(//*[@class='b-app-standard-table__column-header'])[5]
@@ -258,4 +260,5 @@ ${KU_W_invest_mf_stopBtn} =  xpath=//div[contains(text(),'Stop')]
 ${KU_W_invest_mf_skip_sipDateLabel} =  xpath=//div[normalize-space()='SIP Date']
 ${KU_W_invest_mf_skip_sipDateField} =  xpath=(//div[@class='b-transfer-detail__display-column__row']//div)[2]
 ${KU_W_invest_mf_skip_nextInstallmentText} =  xpath=/div[@class='b-transfer-details__skip-info']
-
+${KU_W_invest_mf_categoryList} =  xpath=//div[@class='b-fund-category-filter__option']
+${KU_W_invest_mf_subcategoryList} =  xpath=//div[@class='b-fund-category-filter__label']

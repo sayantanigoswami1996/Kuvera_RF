@@ -6,10 +6,9 @@ Verify PostLogin Stocks Menu Navigation
     Verify Import Now Banner  ${e_invest_stocks_bannerText}  ${KU_W_postlogin_stocks_importStocksPopup}  ${e_postlogin_stocks_importPopup}
     Verify Filter Selection For Stocks
     
-
 Verify Filter Selection For Stocks
     Wait And Click  ${KU_W_invest_stocks_categoryBox}
-    ${categoryCount} =  Get Element Count  xpath=//div[@class='b-stock-sector-filter__option']   
+    ${categoryCount} =  Get Element Count  ${KU_W_invest_stocks_categoryList}
     # Iterate and verify all stocks details 
     # Nested for loop is used as based on category subacategory is choosen and then validated
     FOR  ${i}  IN RANGE  1   ${categoryCount}+1
@@ -19,7 +18,7 @@ Verify Filter Selection For Stocks
         Sleep  2s
         Verify Page Contains Element  ${KU_W_invest_stocks_category_subcategoryName}
         Wait And Click  ${KU_W_invest_stocks_subcategoryBox} 
-        ${subcategoryCount} =  Get Element Count  xpath=//div[@class='b-stock-sector-filter__label']
+        ${subcategoryCount} =  Get Element Count  ${KU_W_invest_stocks_subcategoryList}
         FOR  ${j}  IN RANGE  1    ${subcategoryCount}+1
             ${subcategoryName} =  Get Text  xpath=(//div[@class='b-stock-sector-filter__label'])[${j}]
             Sleep  2s

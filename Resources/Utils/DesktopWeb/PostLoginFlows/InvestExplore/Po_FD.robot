@@ -162,12 +162,12 @@ Verify Associated With Bajaj Popup
     Verify Page Contains Element  ${KU_W_FD_BFLLabel}
     Verify Page Contains Element  ${KU_W_FD_shareholderLabel} 
     Verify Page Contains Element  ${KU_W_FD_employeeLabel}
-    ${checkBoxCount} =  Get Element Count  xpath=//img[@class='b-check-box__img k-asc']
+    ${checkBoxCount} =  Get Element Count  ${KU_W_FD_checkBoxList}
     FOR  ${i}  IN RANGE  2   ${checkBoxCount}+1
         Wait Scroll And Click Element  xpath=(//img[@class='b-check-box__img k-asc'])[${i}]
     END
     Wait And Click  ${KU_W_FD_noTitle}
-    ${uncheckBoxCount} =  Get Element Count  xpath=//div[@class='b-standard-checkbox__checkmark k-mr16 k-cursor--pointer k-flex']
+    ${uncheckBoxCount} =  Get Element Count  ${KU_W_FD_uncheckBoxList}
     FOR  ${i}  IN RANGE  1   ${uncheckBoxCount}+1
         Verify Page Contains Element  xpath=(//div[@class='b-standard-checkbox__checkmark k-mr16 k-cursor--pointer k-flex'])[${i}]
     END

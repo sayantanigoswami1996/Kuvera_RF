@@ -57,7 +57,11 @@ ${e_invest_IFSC} =  HDFC0000022
 ${e_invest_trackToastMsg} =  Your entry for gold (bought externally) has been updated.
 ${e_invest_deleteTrackMsg} =  Your entry for gold (bought externally) has been deleted.
 ${e_invest_sellAmtVal} =  5000
+<<<<<<< HEAD
 ${e_invest_sellAmtVal1} =  500
+=======
+${e_invest_sellAmtVal1} =  0.1
+>>>>>>> 5112034d1b93eb04d352ea2843b3b89a4251edfb
 ${e_invest_bankAccField} =  123456789
 ${e_invest_merchantDesc} =  Buy Gold
 
@@ -126,6 +130,10 @@ ${KU_W_dg_minGoldInGram} =  xpath=//div[@class='b-buy-gold__offer-text-available
 ${KU_W_dg_congratsMsg} =  xpath=//div[text()='Congratulations!']
 ${KU_W_dg_buyGoldSuccessMsg} =  xpath=//div[@class='b-buy-success-desc']
 ${KU_W_dg_enterGramLabel} =  xpath=(//div[contains(text(),'Enter Grams')])[1]
+<<<<<<< HEAD
+=======
+${KU_W_dg_sell_gramVal} =  xpath=(//div[@class='b-sell-gold__auto-filled-options-button'])[2]
+>>>>>>> 5112034d1b93eb04d352ea2843b3b89a4251edfb
 ${KU_W_dg_enterAmtLabel} =  xpath=(//div[contains(text(),'Enter Amount')])[1]
 ${KU_W_dg_paymentModeSubText} =  xpath=//div[.="Choose how you’d like to pay for your purchase"]
 ${KU_W_dg_paymentBreakup} =  xpath=//div[@class='d-payment-breakup__info d-payment-breakup__info--base']

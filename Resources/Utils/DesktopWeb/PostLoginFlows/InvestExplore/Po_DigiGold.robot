@@ -22,15 +22,9 @@ Verify PostLogin Digi Gold Buy And Sell Menu Navigation
     Verify Buying Of Gold
     Verify Sell Gold Post Buy
     # BUY Gold With Moolya Account
-    Logout From App Post Signup
+    Logout
     Login  ${e_postlogin_emailID}  ${e_postlogin_pwd}
-    Sleep  7s
-    ${isElementVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_postlogin_mandate_doItLaterBtn}
-    IF  ${isElementVisible}  
-        Wait And Click  ${KU_W_postlogin_mandate_doItLaterBtn}
-    ELSE
-        Log To Console  Continue With The Flow
-    END
+    Check Mandate Screen
     ${isPortfolioVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_postlogin_rajaGPortfolio}
     IF  ${isPortfolioVisible}  
         Log To Console  Continue With Rajagopal Profile
@@ -52,7 +46,8 @@ Verify PostLogin Digi Gold Buy And Sell Menu Navigation
     # Sell Gold With Moolya Account
     Verify Sell Gold 7 Days After Purchased
     
-    
+
+
 Verify Sell Section Postlogin
     Navigate To Invest Page And Verify Explore Options  ${KU_W_digitalGold}  ${e_invest_digGold}
     Wait For Element Visibility  ${KU_W_dg_sellGoldTab}
