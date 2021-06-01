@@ -255,6 +255,7 @@ URL Navigation Based ENV
     Run keyword If  '${ENV}' == '${e_prod}'  Go To  ${URL_prod}
     ...    ELSE IF  '${ENV}' == '${e_stage3}'  Go To  ${URL_stage3}
     ...    ELSE IF  '${ENV}' == '${e_stage2}'  Go To  ${URL_stage2}
+    ...    ELSE IF  '${ENV}' == '${e_equity}'  Go To  ${URL_equity}  
 
 Navigate To Home Page
     URL Navigation Based ENV
@@ -262,6 +263,7 @@ Navigate To Home Page
     IF  ${isLoginButtonVisible}
         Log To Console  PreLogin
     ELSE
+        Reload Page
         Logout From App Post Signup
         URL Navigation Based ENV       
     END
