@@ -109,6 +109,8 @@ ${KU_W_FD_RDLabel} =  xpath=//div[@id='relative of director']
 ${KU_W_FD_BFLLabel} =  xpath=//div[@id='director & promoter of bfl']
 ${KU_W_FD_shareholderLabel} =  xpath=//div[@id='shareholder']
 ${KU_W_FD_employeeLabel} =  xpath=//div[@id='employee']
+${KU_W_FD_checkBoxList} =  xpath=//img[@class='b-check-box__img k-asc']
+${KU_W_FD_uncheckBoxList} =  xpath=xpath=//div[@class='b-standard-checkbox__checkmark k-mr16 k-cursor--pointer k-flex']
 ${KU_W_FD_closeBajajPopup} =  xpath=//img[@class='b-standard-multi-select-mobile__content__close-action-icon k-cursor--pointer']
 # Address
 ${KU_W_FD_addDetsLabel} =  xpath=//span[contains(.,'Address details')]

@@ -60,7 +60,7 @@ Verify Buying Of SIP
     # Graph Validation with Nifty
     Verify Page Contains Element  ${KU_W_invest_mf_V/STitle}
     Wait And Click  ${KU_W_invest_mf_dropdownIcon} 
-    ${niftyGraphCount} =  Get Element Count  xpath=//div[@class='b-mf-sector-filter__option']
+    ${niftyGraphCount} =  Get Element Count  ${KU_W_invest_mf_niftyGraphDropdownList} 
     FOR  ${k}  IN RANGE  1  ${niftyGraphCount}+1
         Wait And Click  xpath=(//div[@class='b-mf-sector-filter__option'])[${k}]
         FOR  ${j}  IN RANGE  1  6
@@ -207,7 +207,7 @@ Search For MF
 
 Verify Filter Selection For MF
     Wait And Click  ${KU_W_invest_mf_categoryBox}
-    ${categoryCount} =  Get Element Count  xpath=//div[@class='b-fund-category-filter__option']   
+    ${categoryCount} =  Get Element Count  ${KU_W_invest_mf_categoryList}   
     # Iterate and verify all fund details 
     # Nested for loop is used as based on category subacategory is choosen and then validated
     FOR  ${i}  IN RANGE  2   ${categoryCount}+1
@@ -215,7 +215,7 @@ Verify Filter Selection For MF
         Wait Scroll And Click Element  xpath=(//div[@class='b-fund-category-filter__option'])[${i}]
         Verify Element And Text  ${KU_W_invest_mf_categoryName}  ${categoryName}
         Wait And Click  ${KU_W_invest_mf_subcategoryBox} 
-        ${subcategoryCount} =  Get Element Count  xpath=//div[@class='b-fund-category-filter__label']
+        ${subcategoryCount} =  Get Element Count  ${KU_W_invest_mf_subcategoryList}
         FOR  ${j}  IN RANGE  2    ${subcategoryCount}+1
             ${subcategoryName} =  Get Text  xpath=(//div[@class='b-fund-category-filter__label'])[${j}]
             Sleep  2s

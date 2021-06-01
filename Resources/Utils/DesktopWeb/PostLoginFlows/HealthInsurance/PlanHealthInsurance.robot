@@ -408,12 +408,12 @@ Verify Cover Plan Summary Details
     Click Image  ${KU_W_CoverageDets_policyDropDown}
 
 Verify Payment With Net Banking
-    Wait And Click  ${KU_W_SPM_netBankingPaymentMode}
-    Wait Scroll And Click Element  ${KU_W_SPM_payAmtBtn}
-    Switch To Frame  ${KU_W_SPM_razorPayFrame} 
+    [Arguments]  ${merchantDesc}
+    Switch To Frame  ${KU_W_postlogin_razorPayFrame} 
+    Sleep  2s
     Wait For Element Visibility  ${KU_W_SPM_merchantName}
     Verify Element And Text  ${KU_W_SPM_merchantName}  ${e_SPM_merchantName}
-    Verify Element And Text  ${KU_W_SPM_merchanteDesc}  ${e_SPM_merchantDesc}
+    Verify Element And Text  ${KU_W_SPM_merchanteDesc}  ${merchantDesc}
     Verify Page Contains Element  ${KU_W_SPM_mobile_emailDetails}
     Verify Element And Text  ${KU_W_SPM_payViaNetBanking}  ${e_SPM_payViaNetBanking}
     Wait And Click  ${KU_W_SPM_netBankingOption}

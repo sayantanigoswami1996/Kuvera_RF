@@ -182,7 +182,7 @@ Verify Gold Payment Section
     Verify Page Contains Element  ${KU_W_dg_paymentCrossIcon}
     Verify Page Contains Element  ${KU_W_dg_paymentTimer}
     Verify Page Contains Element  ${KU_W_dg_paymentTimerText}
-    Sleep  305s
+    Wait Until Element Is Visible  ${KU_W_dg_timerExpired}  timeout=350
     Verify Page Contains Element  ${KU_W_dg_timerExpired}
     Wait And Click  ${KU_W_dg_goldTimerRefresh}
     Verify Page Contains Element  ${KU_W_dg_paymentTimerText}

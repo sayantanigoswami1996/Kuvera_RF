@@ -69,5 +69,7 @@ ${KU_W_invest_stocks_closePopup} =  xpath=//img[@class='b-add-stock-m__close']
 ${KU_W_invest_stocks_sharePopup} =  xpath=//div[@class='b-stocks-info__share-popup-text']
 # Postlogin
 ${KU_W_invest_stocks_categoryBox} =  xpath=(//div[@class='b-filter-stock__box'])[1]
+${KU_W_invest_stocks_categoryList} =  xpath=//div[@class='b-stock-sector-filter__option']
 ${KU_W_invest_stocks_subcategoryBox} =  xpath=(//div[@class='b-filter-stock__box'])[2]
+${KU_W_invest_stocks_subcategoryList} =  xpath=//div[@class='b-stock-sector-filter__label']
 ${KU_W_invest_stocks_category_subcategoryName} =  xpath=(//div[@class='b-stocks-explore__stock-row-industry'])[1]

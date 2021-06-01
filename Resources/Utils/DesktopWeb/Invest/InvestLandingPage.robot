@@ -104,6 +104,7 @@ Navigate To Invest Page And Verify Explore Options
     Click Element  ${KU_W_investLink}
     Scroll Page To Location  0  2000
     Wait For Element Visibility  ${option}
+    Sleep  2s
     Verify Element And Text  ${option}  ${optionText}
     Sleep  2s
     Wait Scroll And Click Element  ${option}
@@ -214,7 +215,7 @@ Verify Filter Navigation For Stocks And 52 WkHighIndia
     Click Element  ${KU_W_invest_stocks_52WLow}
     Verify Element And Text  ${KU_W_invest_sortYear}  ${sortYearFor52High}
     Sleep  3s
-    ${fundlist} =  Get Element Count   xpath=//div[@class='b-stocks-explore__stock-row-info']
+    ${fundlist} =  Get Element Count  ${KU_W_invest_52WkHighIndia_fundlist}
     Run Keyword If  ${fundlist}>0  Verify WatchList Button For 52WkHighIndia
     ...    ELSE IF  ${fundlist}==0  Verify No Stocks Screen For 52WkHighIndia  ${KU_W_invest_US_stocks_watchlistIcon}
     ...    ELSE  Log To Console  Completed
@@ -268,7 +269,7 @@ Verify Filter Navigation For USStocks USETF and 52WkHighUS
     Click Element  ${KU_W_invest_stocks_52WLow}
     Verify Element And Text  ${KU_W_invest_sortYear}  ${sortYearFor52High}
     Sleep  3s
-    ${fundlist} =  Get Element Count   xpath=//div[@class='b-stock-item b-stock-items__content__item']
+    ${fundlist} =  Get Element Count  ${KU_W_invest_US_ETF_stocklist}
     Run Keyword If  ${fundlist}>0  Verify WatchList Button For UTF and 52WkHighUS
     ...    ELSE IF  ${fundlist}==0  Verify No Stocks Screen For UTF and 52WkHighUS  ${KU_W_invest_US_stocks_watchlistIcon}
     ...    ELSE  Log To Console  Completed
@@ -292,7 +293,7 @@ Verify Performance Chart For Stocks And Crypto
     Verify Page Contains Element  ${performanceChart}
     Scroll Untill View  ${KU_W_invest_US_stocks_performancePeriod}
     Verify Page Contains Element  ${KU_W_invest_US_stocks_performancePeriod}
-    ${periodlist} =  Get Element Count  xpath=(//div[contains(@class,'b-period-option_item')])
+    ${periodlist} =  Get Element Count  ${KU_W_invest_performanceChart_chartList}
     FOR  ${i}  IN RANGE  1  ${periodlist}+1
         Sleep  2s
         Click Element  xpath=(//div[contains(@class,'b-period-option_item')])[${i}]
@@ -301,7 +302,7 @@ Verify Performance Chart For Stocks And Crypto
     END
 
 Verify Compare With Other
-    ${comparePeriodlist} =  Get Element Count  xpath=//img[@class='b-app-standard-table__sort b-app-standard-table__sort--asc']
+    ${comparePeriodlist} =  Get Element Count  ${KU_W_invest_compareWithOther_chartList}
     FOR  ${i}  IN RANGE  1  ${comparePeriodlist}+1
         Sleep  2s
         Verify Page Contains Image  xpath=(//img[@class='b-app-standard-table__sort b-app-standard-table__sort--asc'])[${i}]

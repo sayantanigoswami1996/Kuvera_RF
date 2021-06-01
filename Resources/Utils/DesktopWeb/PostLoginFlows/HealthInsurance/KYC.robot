@@ -3,15 +3,16 @@
 Verify Fill In Of KYC Form Details
     Wait For Element Visibility  ${KU_W_KYC_startBtn}
     Click Element  ${KU_W_KYC_startBtn}
-    KYC Form Details Page
+    KYC Form Details Page  ${e_KYC_PANNumber}  ${e_KYC_mobileNumField}  ${e_KYC_dateField}  ${e_KYC_monthField}  ${e_KYC_yearField}
     Wait And Click  ${KU_W_postlogin_kuverLogo} 
 
 KYC Form Details Page
+    [Arguments]  ${PANNum}  ${PhoneNum}  ${DOB}  ${MOB}  ${YOB}
     Log To Console  KYC Form
     Wait For Element Visibility  ${KU_W_KYC_formTitle}
     Verify Element And Text  ${KU_W_KYC_formTitle}  ${e_KYC_formTitle}
     Verify Element And Text  ${KU_W_KYC_formSubTitle}  ${e_KYC_formSubTitle}  
-    Enter PAN Details  ${e_KYC_PANNumber}
+    Enter PAN Details  ${PANNum}  ${PhoneNum}  ${DOB}  ${MOB}  ${YOB}
     Wait Scroll And Click Element  ${KU_W_KYC_residenceStatus}
     Wait Scroll And Click Element  ${KU_W_KYC_residentIndividual}
     Click Element  ${KU_W_KYC_address1Field}
@@ -52,24 +53,19 @@ Add Signature
     Click Element At Coordinates  ${KU_W_KYC_canvasSpace}  250  140
 
 Visibility Of The Popup
-    Wait Until Element Is Visible  ${KU_W_postlogin_OkBtn}   timeout=20 
+    Wait Until Element Is Visible  ${KU_W_postlogin_OkBtn}   timeout=10 
     Element Should Be Visible  ${KU_W_postlogin_OkBtn} 
 
 Enter PAN Details
-    [Arguments]  ${PANNumber}
+    [Arguments]  ${PANNumber}  ${phoneNum}  ${date}  ${month}  ${year}
     Verify Element And Text  ${KU_W_KYC_PANLabel}  ${e_KYC_PANLabel}
     Click Element  ${KU_W_KYC_PANTextField}
     Input Text  ${KU_W_KYC_PANTextField}  ${PANNumber}
     Verify Element And Text  ${KU_W_KYC_DOBLabel}  ${e_KYC_DOBLabel}
-    Click Element  ${KU_W_KYC_dateField}
-    Input Text  ${KU_W_KYC_dateField}  ${e_KYC_dateField}
-    Click Element  ${KU_W_KYC_monthField} 
-    Input Text  ${KU_W_KYC_monthField}  ${e_KYC_monthField}
-    Click Element  ${KU_W_KYC_yearField}
-    Input Text  ${KU_W_KYC_yearField}  ${e_KYC_yearField}
+    Enter DOB  ${KU_W_KYC_dateField}  ${date}  ${KU_W_KYC_monthField}  ${month}  ${KU_W_KYC_yearField}  ${year}
     Verify Element And Text  ${KU_W_KYC_mobileNumLabel}  ${e_KYC_mobileNumLabel}
     Click Element  ${KU_W_KYC_mobileNumField}
-    Input Text  ${KU_W_KYC_mobileNumField}  ${e_KYC_mobileNumField}
+    Input Text  ${KU_W_KYC_mobileNumField}  ${phoneNum}
     Wait Scroll And Click Element  ${KU_W_kyc_nextBtn}
     ${isPopupVisible} =  Run Keyword And Return Status  Visibility Of The Popup
     Run Keyword If  ${isPopupVisible}  Log To Console  CVL Server Down

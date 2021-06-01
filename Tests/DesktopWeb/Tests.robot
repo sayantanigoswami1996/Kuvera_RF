@@ -136,14 +136,14 @@ Dhanteras Gold Offer Navigation
 # Account Creation and Fill In KYC From Dashboard
 Create Account And Fill In KYC
     [Tags]  TC21  Stage3
-    [Teardown]  Logout From App And Navigate To Home Page PostLogin
+    [Teardown]  Navigate To Home Page
     Verify PostLogin Account Creation
     Verify Fill In Of KYC Form Details
 
 # Create Account And Health Insurance End To End Flow
 Health Insurance Navigation
     [Tags]  TC22  Stage3
-    [Teardown]  Logout From App And Navigate To Home Page PostLogin
+    [Teardown]  Navigate To Home Page
     Verify PostLogin Account Creation
     Verify PostLogin Insure Landing Page
     Verify PostLogin Add Family Details
@@ -152,28 +152,28 @@ Health Insurance Navigation
 # Complete PAN Verified KYC Navigation
 PAN Verified KYC Navigation
     [Tags]  TC23  Stage3
-    [Teardown]  Logout From App And Navigate To Home Page PostLogin
+    [Teardown]  Navigate To Home Page
     Verify PostLogin Account Creation
     Verify PAN Verifed KYC Details
 
 # Complete  UnVerified KYC Navigation
 UnVerified KYC Navigation
     [Tags]  TC24  Stage3
-    [Teardown]  Logout From App And Navigate To Home Page PostLogin
+    [Teardown]  Navigate To Home Page
     Verify PostLogin Account Creation
     Verify Unverifed KYC Navigation
 
 # Dashboard Widgets Navigation
 Dashboard Widgets Navigation
     [Tags]  TC25  Stage3
-    [Teardown]  Logout From App And Navigate To Home Page PostLogin
+    [Teardown]  Navigate To Home Page
     Verify PostLogin Account Creation
     Verify PostLogin Dashboard Widgets Navigation
 
 # Top And Left Bar Navigation
 Top And Left Bar Navigation
     [Tags]  TC26  Stage3
-    [Teardown]  Logout From App And Navigate To Home Page PostLogin
+    [Teardown]  Navigate To Home Page
     Verify PostLogin Account Creation
     Verify PostLogin Top Headers Verification
     Verify PostLogin Left Bar Navigation
@@ -181,35 +181,35 @@ Top And Left Bar Navigation
 # Invite Friends Menu Navigation
 Invite Friends Menu Navigation
     [Tags]  TC27  Stage3
-    [Teardown]  Logout From App And Navigate To Home Page PostLogin
+    [Teardown]  Navigate To Home Page
     Verify PostLogin Account Creation
     Verify PostLogin Invite Friends Menu Navigation
 
 # Manage Folio Menu Navigation Without KYC
 Manage Folio Menu Navigation Without KYC
     [Tags]  TC28  Stage3
-    [Teardown]  Logout From App And Navigate To Home Page PostLogin
+    [Teardown]  Navigate To Home Page
     Verify PostLogin Account Creation
     Verify PostLogin Manage Folio Menu Navigation Without KYC
 
 # Manage Folio Menu Navigation With KYC
 Manage Folio Menu Navigation With KYC
     [Tags]  TC29  Stage3
-    [Teardown]  Logout From App And Navigate To Home Page PostLogin
+    [Teardown]  Navigate To Home Page
     Verify PostLogin Account Creation
     Verify PostLogin Manage Folio Navigation With KYC
 
 # Reports Menu Navigation Without KYC
 Reports Menu Navigation Without KYC
     [Tags]  TC30  Stage3
-    [Teardown]  Logout From App And Navigate To Home Page PostLogin
+    [Teardown]  Navigate To Home Page
     Verify PostLogin Account Creation
     Verify PostLogin Reports Menu Navigation Without KYC 
 
 # Reports Menu Navigation With KYC
 Reports Menu Navigation With KYC
     [Tags]  TC31  Stage3
-    [Teardown]  Logout From App And Navigate To Home Page PostLogin
+    [Teardown]  Navigate To Home Page
     Verify PostLogin Account Creation
     Verify PostLogin Reports Menu Navigation With KYC 
 
@@ -217,7 +217,7 @@ Reports Menu Navigation With KYC
 # Invest Tiles Navigation Postlogin 
 Invest Tiles Navigation Postlogin
     [Tags]  TC32  Stage3  NONKYC
-    [Teardown]  Logout From App And Navigate To Home Page PostLogin
+    [Teardown]  Navigate To Home Page
     Verify PostLogin Account Creation
     Verify PreLogin Invest Tiles
 
@@ -245,7 +245,7 @@ US Stocks Non Transactional Navigation Postlogin
 # SaveSmart Navigation Postlogin 
 SaveSmart Navigation Postlogin
     [Tags]  TC36  Stage3  KYC
-    [Teardown]  Logout From App And Navigate To Home Page PostLogin
+    [Teardown]  Navigate To Home Page
     Verify PostLogin Account Creation
     Verify PAN Verifed KYC Details
     Verify PostLogin SaveSmart Menu Navigation
@@ -257,10 +257,18 @@ Crypto Navigation Postlogin
     Verify Login On Prod With Verifed KYC Account
     Verify PostLogin Crypto Menu Navigation
 
-# Digital Gold Navigation Postlogin 
-Digital Gold Navigation Postlogin
+# Digital Gold SIP and Track Navigation Postlogin 
+Digital Gold SIP and Track Navigation Postlogin
     [Tags]  TC38  Stage3  KYC
-    [Teardown]  Logout From App And Navigate To Home Page PostLogin
+    [Teardown]  Navigate To Home Page
     Verify PostLogin Account Creation
     Verify PAN Verifed KYC Details
-    Verify PostLogin Digi Gold Menu Navigation
+    Verify PostLogin Digi Gold Track And SIP Menu Navigation 
+
+# Digital Gold Buy and Sell Navigation Postlogin 
+Digital Gold Buy and Sell Navigation Postlogin
+    [Tags]  TC39  Stage3  KYC
+    [Teardown]  Navigate To Home Page
+    Verify PostLogin Account Creation
+    Verify PAN Verifed KYC Details
+    Verify PostLogin Digi Gold Buy And Sell Menu Navigation 

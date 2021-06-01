@@ -57,7 +57,7 @@ ${e_invest_IFSC} =  HDFC0000022
 ${e_invest_trackToastMsg} =  Your entry for gold (bought externally) has been updated.
 ${e_invest_deleteTrackMsg} =  Your entry for gold (bought externally) has been deleted.
 ${e_invest_sellAmtVal} =  5000
-${e_invest_sellAmtVal1} =  500
+${e_invest_sellAmtVal1} =  0.1
 ${e_invest_bankAccField} =  123456789
 ${e_invest_merchantDesc} =  Buy Gold
 
@@ -126,6 +126,7 @@ ${KU_W_dg_minGoldInGram} =  xpath=//div[@class='b-buy-gold__offer-text-available
 ${KU_W_dg_congratsMsg} =  xpath=//div[text()='Congratulations!']
 ${KU_W_dg_buyGoldSuccessMsg} =  xpath=//div[@class='b-buy-success-desc']
 ${KU_W_dg_enterGramLabel} =  xpath=(//div[contains(text(),'Enter Grams')])[1]
+${KU_W_dg_sell_gramVal} =  xpath=(//div[@class='b-sell-gold__auto-filled-options-button'])[2]
 ${KU_W_dg_enterAmtLabel} =  xpath=(//div[contains(text(),'Enter Amount')])[1]
 ${KU_W_dg_paymentModeSubText} =  xpath=//div[.="Choose how you’d like to pay for your purchase"]
 ${KU_W_dg_paymentBreakup} =  xpath=//div[@class='d-payment-breakup__info d-payment-breakup__info--base']
@@ -149,7 +150,7 @@ ${KU_W_dg_disabledSellNowBtn} =  xpath=//button[@class='button-primary b-sell-go
 ${KU_W_dg_enterSIPAmt} =  xpath=//div[contains(text(),'Enter monthly SIP Amount')]
 ${KU_W_dg_minSIP} =  xpath=//div[contains(text(),'Min. amount ₹1,000')]
 ${KU_W_dg_SIPDropdown} =  xpath=//img[@class='b-gold-sip-date-dropdown']
-${KU_W_dg_SIPDate} =  xpath=//div[contains(text(),'15th')]
+${KU_W_dg_SIPDate} =  xpath=//div[contains(text(),'15')]
 ${KU_W_dg_nextInstallment} =  xpath=//div[@class='b-gold-sip--next-date b-gold-sip--next-date--widget']
 ${KU_W_dg_startSIPBtn} =  xpath=//button[normalize-space()='Start SIP']
 ${KU_W_dg_bankAccForSIP} =  xpath=//div[@class='b-portfolio-radio-button b-bank-list__content__banks-item']
