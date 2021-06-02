@@ -3,7 +3,7 @@
 Verify PostLogin Add Family Details
     Wait Scroll And Click Element  ${KU_W_insure_checkPremiumBtn2} 
     Wait And Click  ${KU_W_HI_missingPANOkayBtn}
-    KYC Form Details Page
+    KYC Form Details Page  ${e_KYC_PANNumber}  ${e_KYC_mobileNumField}  ${e_KYC_dateField}  ${e_KYC_monthField}  ${e_KYC_yearField}
     Wait And Click  ${KU_W_postlogin_kuverLogo}
     Navigate To Insure Page And Click Premium Button
     Wait For Element Visibility  ${KU_W_HI_pageTitle}

@@ -216,7 +216,7 @@ Reports Menu Navigation With KYC
 # Invest Tiles Navigation Postlogin 
 Invest Tiles Navigation Postlogin
     [Tags]  TC32  Stage3  NONKYC
-    # [Teardown]  Navigate To Home Page
+    [Teardown]  Navigate To Home Page
     Verify PostLogin Account Creation
     Verify PreLogin Invest Tiles
 

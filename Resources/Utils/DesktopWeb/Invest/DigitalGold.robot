@@ -50,12 +50,12 @@ Verify T&C And Coming Soon Title Presence
 
 Verify Buy Now Button
     Verify Element And Text  ${KU_W_buyNowBtn}  ${e_invest_buyNowBtnText}
-    Wait For Element Visibility  ${KU_W_buyNowBtn}
-    Click Element  ${KU_W_buyNowBtn}
     ${isLoginButtonVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_login}
     IF  ${isLoginButtonVisible}
+        Wait And Click  ${KU_W_buyNowBtn}
         Verify Login Page
     ELSE
+        Wait And Click  ${KU_W_buyNowBtn}
         Verify Gold Payment Section 
     END 
 

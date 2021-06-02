@@ -11,9 +11,9 @@ Verify PostLogin Manage Folio Navigation With KYC
     Wait And Click  ${KU_W_postlogin_manageFolioTab}
     Wait And Click  ${KU_W_managefolio_registrationBtn}
     # Fill in KYC
-    KYC Form Details Page
+    KYC Form Details Page  ${e_KYC_PANNumber}  ${e_KYC_mobileNumField}  ${e_KYC_dateField}  ${e_KYC_monthField}  ${e_KYC_yearField}
     Confirm Account Details Page
-    Link Bank Account  
+    Link Bank Account  ${e_KYC_bankCertifyText} 
     Wait And Click  ${KU_W_postlogin_manageFolioTab}
     # Validation after KYC
     Verify Page Contains Element  ${KU_W_managefolio_selectKuveraAcc}

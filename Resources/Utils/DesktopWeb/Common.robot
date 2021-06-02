@@ -193,6 +193,7 @@ Verify Google Play & Apple Store Icons
 
 Verify Login And Signup Link
     Wait For Element Visibility  ${KU_W_login}
+    Sleep  2s
     Verify Element And Text  ${KU_W_login}  ${e_login}
     Sleep  1s
     Wait For Element Visibility  ${KU_W_signup}
