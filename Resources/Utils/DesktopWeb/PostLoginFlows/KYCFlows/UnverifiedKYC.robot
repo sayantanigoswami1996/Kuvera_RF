@@ -4,7 +4,7 @@ Verify Unverifed KYC Navigation
     Log To Console  Unverifed KYC
     Wait For Element Visibility  ${KU_W_KYC_startBtn}
     Wait And Click  ${KU_W_KYC_startBtn}
-    Enter PAN Details  ${e_KYC_invalidPANNumber}
+    Enter PAN Details  ${e_KYC_invalidPANNumber}  ${e_KYC_mobileNumField}  ${e_KYC_dateField}  ${e_KYC_monthField}  ${e_KYC_yearField}
     Verify Element And Text  ${KU_W_KYC_KYCNotCertifiedTitle}  ${e_KYC_KYCNotVerified}
     Verify Element And Text  ${KU_W_KYC_KYCNotCertifiedSubTitle}  ${e_KYC_KYCNotVerifiedDesc}
     Wait And Click  ${KU_W_postlogin_playStoreBtn} 
