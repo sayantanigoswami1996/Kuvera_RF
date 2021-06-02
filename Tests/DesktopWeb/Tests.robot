@@ -159,7 +159,7 @@ PAN Verified KYC Navigation
 # Complete  UnVerified KYC Navigation
 UnVerified KYC Navigation
     [Tags]  TC24  Stage3
-    # [Teardown]  Navigate To Home Page
+    [Teardown]  Navigate To Home Page
     Verify PostLogin Account Creation
     Verify Unverifed KYC Navigation
 

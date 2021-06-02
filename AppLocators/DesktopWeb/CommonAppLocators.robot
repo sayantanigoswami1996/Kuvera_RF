@@ -47,11 +47,11 @@ ${e_usersMsg} =   We revolutionized the way India invests. With your feedback we
 ${e_earnTitle} =  Earn up to 1.5% more returns*
 ${e_earnMsg} =  We pioneered commission free Direct Plan investing.\nEarn from our expertise and don't pay commission ever.
 ${e_earnLearnLink} =   Learn how!
-${e_coreAUAValue} =  ₹ 22,000
+${e_coreAUAValue} =  ₹ 23,000
 ${e_coreAUAText} =  Crore AUA       
-${e_citiesValue} =  4 Lakh
+${e_citiesValue} =  5 Lakh
 ${e_citiesText} =   Goals
-${e_transValue} =   2.6 Crore
+${e_transValue} =   2.8 Crore
 ${e_transText} =  Transactions
 
 ${e_stock_filterTitleText} =  Filter
