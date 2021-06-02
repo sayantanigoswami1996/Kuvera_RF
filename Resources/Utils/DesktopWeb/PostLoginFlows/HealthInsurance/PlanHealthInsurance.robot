@@ -178,7 +178,7 @@ Verify PostLogin Add Family Details
     Verify Page Contains Image  ${KU_W_SPM_netBankingImg}
     Verify Element And Text  ${KU_W_SPM_creditCardLabel}  ${e_SPM_creditCardLabel} 
     Verify Page Contains Image  ${KU_W_SPM_creditCardImg}
-    Verify Payment With Net Banking
+    Verify Payment With Net Banking  ${e_SPM_merchantDesc}
     
     # Health Protect Enabled
     Log To Console  Health Protect
