@@ -352,11 +352,7 @@ Logout From App Post Signup
 Verify Mandate Screen
     Wait For Element Visibility  ${KU_W_postlogin_mandate_doItLaterBtn}
     Element Should Be Visible  ${KU_W_postlogin_mandate_doItLaterBtn}
-<<<<<<< HEAD
     
-=======
-
->>>>>>> 5112034d1b93eb04d352ea2843b3b89a4251edfb
 Login 
     [Arguments]  ${email}  ${pwd}
     Log To Console  Login 

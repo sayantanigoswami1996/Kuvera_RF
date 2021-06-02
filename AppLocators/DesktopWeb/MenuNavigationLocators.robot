@@ -269,6 +269,8 @@ ${e_feature_cd_manageTodayBtnText} =   MANAGE TODAY
 
 # Button 
 ${KU_W_button} =  xpath=(//button[@class='button-primary'])[1]
+# Postlogin
+${KU_W_feature_getCoinText} =  xpath=//p[@class='m-subheading']
 # Loan Navigation Page
 ${KU_W_loanLink} =  xpath=//a[contains(text(),'Loan')]
 ${KU_W_loanHeaderTitle} =  xpath=//div[@class='b-header__title']
@@ -449,9 +451,6 @@ ${KU_W_feature_helpTradeSmart2Msg} =  xpath=//div[@class='b-trade-smart__help-de
 ${KU_W_feature_helpTradeSmart3Msg} =  xpath=//div[@class='b-trade-smart__help-desc']/div[3]
 ${KU_W_feature_aboutUs} =  xpath=(//ul[@class='list-unstyled']/li)[1]
 # Postlogin
-${KU_W_feature_ts_referFriend} =  xpath=//p[normalize-space()='Refer a Friend']
-${KU_W_feature_ts_buyCoins} =  xpath=(//div[@class='tile-opt-sub-label-container'])[1]
-${KU_W_feature_ts_referCoins} =  xpath=(//div[@class='tile-opt-sub-label-container'])[1]
 ${KU_W_feature_ts_coinsTitle} =  xpath=//p[contains(.,'Get 300 coins more to activate this feature.')]
 ${KU_W_feature_ts_accSetUpTitle} =  xpath=//div[contains(text(),'Account setup is not complete')]
 ${KU_W_feature_ts_accSetUpDesc} =  xpath=//div[@class='b-confirm__description']
@@ -461,6 +460,8 @@ ${KU_W_feature_ts_activeMsg} =  xpath=//div[contains(text(),'TradeSmart is activ
 # Feature-Family Account
 ${KU_W_feature_familyAccountLink} =  xpath=//a[contains(text(),'Family Account')]  
 ${KU_W_feature_fa_screenContent} =  xpath=//div[@class='b-family-account__what__des']
+# Postlogin
+${KU_W_feature_fa_coinsTitle} =  xpath=//p[contains(.,'Get 200 coins more to activate this feature.')]
 
 # Feature-ManageAccount Page
 ${KU_W_feature_manageAccountLink} =  xpath=//a[contains(text(),'Manage Account')]

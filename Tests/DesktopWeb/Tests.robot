@@ -476,7 +476,9 @@ FD Navigation Postlogin With Invalid PAN
 #--------------MF - User With Investment---------------------
 # MF Navigation Postlogin User Investment With SIP
 MF Navigation Postlogin With SIP
-    [Tags]  TC66  Stage3  NONKYC
+    [Tags]  TC66  Stage3 KYC
     [Teardown]  Navigate To Home Page
     Verify User Login With Investment
     Verify PostLogin MF Navigation With SIP 
+#-------------- End of MF- User With Investment---------------------
+
