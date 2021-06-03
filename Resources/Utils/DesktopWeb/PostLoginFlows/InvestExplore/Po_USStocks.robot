@@ -31,8 +31,7 @@ Verify PostLogin US Stocks Menu Navigation
             ${USStkName} =  Set Variable  ${text}${USStockName}
             Verify Page Contains Element  ${USStkName}
             Scroll Untill View  xpath=(//div[@class='b-stock-sector-filter__label'])[${j}]
-            Press Keys  xpath=(//div[@class='b-stock-sector-filter__label'])[${j}]  ARROW_DOWN
-            END   
+            Press Keys  xpath=(//div[@class='b-stock-sector-filter__label'])[${j}]  ARROW_DOWN  
         END
         Wait And Click  ${KU_W_invest_USStocks_categoryBox}
     END
