@@ -6,7 +6,7 @@ ${e_portfolio_mf_allFundsText} =  All funds
 ${e_portfolio_mf_externalFundsDesc} =  Consolidate and track all your mutual\nfund investments in one place.        
 ${e_portfolio_mf_emailLabel} =  Import Portfolio
 ${e_portfolio_mf_emailDesc} =  Enter an email address you use for investments external to Kuvera. We’ll use this to request the Consolidated Account Statement (CAS) of all mutual fund investments linked with that email. 
-${e_portfolio_mf_investmentEmailID} =  sayantani.goswami@moolya.com
+${e_portfolio_mf_investmentEmailID} =  moolya@kuvera.in
 ${e_portfolio_mf_importDesc} =  Visit CAMS website and follow the instructions given in the video:
 ${e_portfolio_mf_CMSPageTitle} =  Get Consolidated Account Statement - CAMS+KFintech+FTAMIL+SBFS
 ${e_portfolio_mf_alreadyHaveCAS} =  Already have a CAS?
@@ -16,7 +16,7 @@ ${e_portfolio_mf_uploadCAS} =  Upload PDF received from Karvy or CAMS.
 ${e_portfolio_mf_CASPwd} =  1234567890
 ${e_portfolio_mf_popupDesc} =  We have successully imported all your historic transactions. You can now track them in the Portfolio page.
 ${e_portfolio_mf_updatePANDesc} =  A KYC compliant PAN is required to import your portfolio so we can correctly map them against your account.
-
+${e_portfolio_mf_CASPath} =  D:\\Phase4\\Kuvera_RF\\Resources\\Utils\\Files\\CAS.pdf
 # Application Locator 'KU_<locatorName>'
 # MF Portfolio Navigation Page
 ${KU_W_portfolio_mf_title} =  xpath=(//p[@class='tile-opt-label'])[1]
@@ -41,9 +41,10 @@ ${KU_W_portfolio_mf_uploadCASSubTitle} =  xpath=//div[@class='b-upload-cas__desc
 ${KU_W_portfolio_mf_uploadCASLabel} =  xpath=//p[@class='b-upload-cas__btn-box__msg']
 ${KU_W_portfolio_mf_CASPwdLabel} =  xpath=//label[normalize-space()='Password to open CAS']
 ${KU_W_portfolio_mf_uploadLink} =  xpath=//span[@class='b-upload-cas__btn-box__content__label']
-${KU_W_portfolio_mf_uploadFile} =  xpath=//div[@class='b-upload-cas__btn-box__content__file-info']
-${KU_W_portfolio_mf_importedInvest} =  xpath=///div[contains(text(),'Imported your Investments')]
+${KU_W_portfolio_mf_uploadFile} =  xpath=//input[@class='b-upload-cas__btn-box__file-upload']
+${KU_W_portfolio_mf_importedInvest} =  xpath=//div[contains(text(),'Imported your Investments')]
 ${KU_W_portfolio_mf_importedInvestDesc} =  xpath=(//div[@class='message'])[1]
+${KU_W_portfolio_mf_MFTab} =  xpath=//div[@class='b-portfolio-tab__key b-portfolio-tab__key--selected']
 # Update PAN Page
 ${KU_W_portfolio_mf_updatePANDesc} =  xpath=//div[@class='b-update-pan__message']
 ${KU_W_portfolio_mf_updatePANField} =  xpath=//div[@class='b-text-field b-update-pan__input__field']

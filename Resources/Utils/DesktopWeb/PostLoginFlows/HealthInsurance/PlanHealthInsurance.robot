@@ -3,7 +3,7 @@
 Verify PostLogin Add Family Details
     Wait Scroll And Click Element  ${KU_W_insure_checkPremiumBtn2} 
     Wait And Click  ${KU_W_HI_missingPANOkayBtn}
-    KYC Form Details Page
+    KYC Form Details Page  ${e_KYC_PANNumber}  ${e_KYC_mobileNumField}  ${e_KYC_dateField}  ${e_KYC_monthField}  ${e_KYC_yearField}
     Wait And Click  ${KU_W_postlogin_kuverLogo}
     Navigate To Insure Page And Click Premium Button
     Wait For Element Visibility  ${KU_W_HI_pageTitle}
@@ -394,7 +394,7 @@ Verify Cover Plan Summary Details
     Verify Element And Text  ${KU_W_HI_sectionSubTitle2}  ${e_CoverageDets_coveringSubTitle}
     Click Image  ${KU_W_CoverageDets_coveringDropDown}
     Verify Element And Text  ${KU_W_CoverageDets_dropdownDetail1}  ${e_CoverageDets_applicantDetails}
-    Verify Element And Text  ${KU_W_CoverageDets_dropdownDetail2}  ${e_CoverageDets_familyMemberDetails} 
+    Verify Page Contains Element  ${KU_W_CoverageDets_dropdownDetail2}
     Click Image  ${KU_W_CoverageDets_coveringDropDown}
     # Nominee
     Verify Element And Text  ${KU_W_CoverageDets_nomineesTitle}  ${e_CoverageDets_nomineesTitle}
@@ -412,6 +412,7 @@ Verify Cover Plan Summary Details
 Verify Payment With Net Banking
     [Arguments]  ${merchantDesc}
     Switch To Frame  ${KU_W_postlogin_razorPayFrame} 
+    Sleep  2s
     Wait For Element Visibility  ${KU_W_SPM_merchantName}
     Verify Element And Text  ${KU_W_SPM_merchantName}  ${e_SPM_merchantName}
     Verify Element And Text  ${KU_W_SPM_merchanteDesc}  ${merchantDesc}

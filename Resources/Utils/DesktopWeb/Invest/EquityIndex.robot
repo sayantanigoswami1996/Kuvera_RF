@@ -12,6 +12,5 @@ Verify PreLogin Equity Index Landing Page
     Verify Filter And Clear All
     Verify Element And Text  ${KU_W_invest_sortYear}   ${e_invest__funds_sortYearText}
     Verify Element And Text  ${KU_W_invest_filteredFund}  ${e_invest_equIndex_filteredFundText}
-    Verify Pre And Post Login Action On Watchlist For Funds  ${KU_W_invest_watchListBtn}
+    Verify Pre And Post Login Action On Watchlist For Funds  ${KU_W_watchlistIcon}
     Verify Filter Navigation For Funds
-    Verify Go Back Action On Pre And Post Login

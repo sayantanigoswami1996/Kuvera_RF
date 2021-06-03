@@ -8,6 +8,7 @@ ${e_invest_MF_mf4} =  LIC MF Childrens (G)
 ${e_invest_MF_mf5} =  ICICI Pru Constant Maturity Gilt (G)
 ${e_invest_MF_AUM} =  AUM 
 ${e_invest_MF_TER} =  TER 
+${e_invest_MF_risk} =  Risk
 ${e_invest_MF_sipAmt} =  SIP amount
 ${e_invest_MF_sipMinVal1} =  Min. ₹500
 ${e_invest_MF_sipMinVal2} =  Min. ₹1,000

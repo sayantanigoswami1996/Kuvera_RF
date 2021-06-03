@@ -5,6 +5,15 @@ Verify PreLogin Mutual Fund Landing Page
     Navigate To Invest Page And Verify Explore Options  ${KU_W_mutualFund}  ${e_invest_mf_titleText} 
     Sleep  1s
     Verify Login And Signup On Prelogin
+    Verify Page Contains Element  ${KU_W_invest_mf_searchFundsLabel}
+    Verify Page Contains Element  ${KU_W_invest_mf_sortByLabel}
+    Verify Element And Text  ${KU_W_invest_mf_defaultSort}  ${e_invest_mf_defaultSort}
+    Verify Page Contains Element  ${KU_W_invest_mf_filterLabel}
+    Wait For Element Visibility  ${KU_W_faqbot_icon}
+    Verify Presence Of FAQBOT Icon
+    Verify Watchlist Icon Action On Pre And Postlogin
+    Verify Filter Navigation For Funds
+    Wait And Click  ${KU_W_mutualFund}
     Wait For Element Visibility  ${KU_W_invest_mf_fundName}
     Verify Page Contains Element  ${KU_W_invest_mf_growthDividendButton}
     # Iterate the Mutual Fund detail screen
@@ -12,7 +21,7 @@ Verify PreLogin Mutual Fund Landing Page
         @{mutualFundName} =  Get Json Values  $.MutualFunds.f${i}  Resources/TestData/MutualFunds.json 
         Log To Console  ${mutualFundName}
         Search Fund and Verify  ${mutualFundName}
-        Run Keyword If    ${mutualFundName} == ['Tata Digital India Dividend Reinvest Direct Plan']  Click Element  ${KU_W_invest_mf_growthDividendButton}
+        Run Keyword If    ${mutualFundName} == ['${e_invest_mf_dividendFundName}']  Click Element  ${KU_W_invest_mf_growthDividendButton}
         Verify Mutual Fund Details Page  ${KU_W_invest_mf_fundName}
     END
     Go Back
@@ -23,6 +32,7 @@ Search Fund and Verify
     Wait For Element Visibility  ${KU_W_searchBarForFunds}
     Click Element  ${KU_W_searchBarForFunds}
     Input Text  ${KU_W_invest_mf_searchBar}  ${fundName}  clear=true
+    Sleep  2s
     Press Enter Key  ${KU_W_invest_mf_searchBar}
 
 Verify Mutual Fund Details Page
@@ -30,10 +40,8 @@ Verify Mutual Fund Details Page
     Wait For Element Visibility  ${fund}
     Click Element  ${fund}
     Verify Login And Signup On Prelogin
-    Wait For Element Visibility  ${KU_W_invest_mf_watchlistButton}
-    Verify Page Contains Element  ${KU_W_invest_mf_watchlistButton}
-    Verify Pre And Post Login Action On Watchlist For Funds  ${KU_W_invest_mf_watchlistButton}
-    Verify Go Back Action On Pre And Post Login
+    Verify Watchlist Icon Action On Pre And Postlogin
+    Verify Explore Tags For Stocks USStocks And Funds  ${KU_W_invest_mf_defaultSort} 
     # Title Section
     Wait For Element Visibility  ${KU_W_invest_mf_title}
     Verify Page Contains Element  ${KU_W_invest_mf_title}
@@ -64,8 +72,8 @@ Verify Mutual Fund Details Page
         Verify Login Page
     ELSE
         Wait Scroll And Click Element  ${KU_W_invest_mf_investNowButton}
-        Verify Page Contains Element  ${KU_W_invest_mf_orderSummary}
-        Wait And Click  ${KU_W_invest_mf_SIPDeleteIcon}
+        Verify Page Contains Element  ${KU_W_invest_mf_cartTitle} 
+        Wait And Click  ${KU_W_invest_mf_SIPDelIcon}
         Wait And Click  ${KU_W_postlogin_yesDeleteBtn}
         Go Back
     END 
@@ -78,9 +86,9 @@ Verify Mutual Fund Details Page
         Verify Login Page
     ELSE
         Wait Scroll And Click Element  ${KU_W_invest_mf_addToCartButton}
-        Verify Page Contains Element  ${KU_W_toastMssg}
+        Verify Element And Text  ${KU_W_toastMssg}  ${e_invest_mf_orderToCartMsg}
         Wait And Click  ${KU_W_postlogin_cartBtn}
-        Wait And Click  ${KU_W_invest_mf_lumpsumDeleteIcon} 
+        Wait And Click  ${KU_W_invest_mf_SIPDelIcon}
         Wait And Click  ${KU_W_postlogin_yesDeleteBtn}
         Go Back
     END 
@@ -97,7 +105,7 @@ Verify Mutual Fund Details Page
     Scroll Untill View  ${KU_W_invest_mf_compareTitle}
     Verify Page Contains Element  ${KU_W_invest_mf_compareTitle}
     Verify Page Contains Element  ${KU_W_invest_mf_compareTableContent}
-    #Verify Compare With Other
+    # Verify Compare With Other
     Verify Add Option  ${KU_W_invest_mf_addFundBtn}  ${KU_W_invest_mf_addFundPopupHeader}  ${KU_W_invest_mf_addFundPopupCloseBtn}
     # Past Performace section
     Scroll Untill View  ${KU_W_invest_mf_performanceHeading}
@@ -105,10 +113,13 @@ Verify Mutual Fund Details Page
     Verify Page Contains Element  ${KU_W_invest_mf_performanceNumField}
     Verify Page Contains Element  ${KU_W_invest_mf_performanceDuration1Y}
     Click Element  ${KU_W_invest_mf_performanceDuration1Y}
+    Verify FD And Bank Savings Interest Rate
     Verify Page Contains Element  ${KU_W_invest_mf_performanceDuration3Y}
     Click Element  ${KU_W_invest_mf_performanceDuration3Y}
+    Verify FD And Bank Savings Interest Rate
     Verify Page Contains Element  ${KU_W_invest_mf_performanceDurationAll}
     Click Element  ${KU_W_invest_mf_performanceDurationAll}
+    Verify FD And Bank Savings Interest Rate
     # See fund holding section
     Scroll Untill View  ${KU_W_invest_mf_seeFundHoldings}
     Verify Page Contains Element  ${KU_W_invest_mf_seeFundHoldings}
@@ -137,3 +148,9 @@ Verify Mutual Fund Details Page
     Click Element  ${KU_W_invest_mf_AllFundsLink}
     Go Back
     Go Back
+
+Verify FD And Bank Savings Interest Rate
+    Verify Page Contains Element  ${KU_W_invest_mf_FDLabel}
+    Verify Page Contains Element  ${KU_W_invest_mf_FDIntRate}
+    Verify Page Contains Element  ${KU_W_invest_mf_bankSavingsLabel}
+    Verify Page Contains Element  ${KU_W_invest_mf_BSIntRate}

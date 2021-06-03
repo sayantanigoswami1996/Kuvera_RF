@@ -1,6 +1,6 @@
 *** Keywords ***
 
-Verify PostLogin Digi Gold Menu Navigation
+Verify PostLogin Digi Gold Track And SIP Menu Navigation 
     Log To Console  Digital Gold - Explore
     Navigate To Invest Page And Verify Explore Options  ${KU_W_digitalGold}  ${e_invest_digGold}
     Verify Content Of Left Section
@@ -14,22 +14,34 @@ Verify PostLogin Digi Gold Menu Navigation
     Verify Adding Five Bank Account And Quit Of Buying SIP 
     # SELL
     Verify Sell Section Postlogin
+
+Verify PostLogin Digi Gold Buy And Sell Menu Navigation 
+    Log To Console  Digital Gold - Buy and Sell
+    Navigate To Invest Page And Verify Explore Options  ${KU_W_digitalGold}  ${e_invest_digGold}
     # BUY
     Verify Buying Of Gold
     Verify Sell Gold Post Buy
     # BUY Gold With Moolya Account
-    Logout From App Post Signup
+    Logout
     Login  ${e_postlogin_emailID}  ${e_postlogin_pwd}
-    Sleep  7s
-    ${isElementVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_portfolio_doItLater}
-    IF  ${isElementVisible}  
-        Wait And Click  ${KU_W_portfolio_doItLater}
+    Check Mandate Screen
+    ${isPortfolioVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_postlogin_rajaGPortfolio}
+    IF  ${isPortfolioVisible}  
+        Log To Console  Continue With Rajagopal Profile
     ELSE
-        Log To Console  Continue
+        Wait And Click  ${KU_W_ca_caretDropdown}
+        Wait And Click  ${KU_W_postlogin_rajaGPortfolio}
+        Sleep  5s
+        Wait And Click  ${KU_W_postlogin_mandate_doItLaterBtn}
     END
     Navigate To Invest Page And Verify Explore Options  ${KU_W_digitalGold}  ${e_invest_digGold}
     Verify Buy Section
-    Verify Buying Of Gold
+    Wait And Click  ${KU_W_dg_enterAmtLabel}
+    Input Text  ${KU_W_dg_enterGram_AmtField}  ${e_invest_enterAmountValue}
+    Wait And Click  ${KU_W_buyNowBtn}
+    Wait And Click  ${KU_W_postlogin_netBankingOption}
+    Wait And Click  ${KU_W_postlogin_proceedToPay}
+    Sleep  2s
     Verify Transaction With Moolya Account
     # Sell Gold With Moolya Account
     Verify Sell Gold 7 Days After Purchased
@@ -63,11 +75,12 @@ Verify Sell Gold Post Buy
     Verify Disabled Element  ${KU_W_dg_disabledSellNowBtn}
     Wait For Element Visibility  ${KU_W_dg_enterGramLabel}
     Click Element  ${KU_W_dg_enterGramLabel}
-    Click Element  ${KU_W_enterGram}
+    Click Element  ${KU_W_dg_sell_gramVal}
     Verify Disabled Element  ${KU_W_dg_disabledSellNowBtn}
 
 Verify Sell Gold 7 Days After Purchased
     Navigate To Invest Page And Verify Explore Options  ${KU_W_digitalGold}  ${e_invest_digGold}
+    Wait And Click  ${KU_W_dg_sellGoldTab}
     Verify Page Contains Element  ${KU_W_dg_availableToSell}
     Verify Page Contains Element  ${KU_W_dg_sellWeight}
     Wait And Click  ${KU_W_dg_sell_enterAmt_Gms}
@@ -75,7 +88,8 @@ Verify Sell Gold 7 Days After Purchased
     Element Should be Enabled  ${KU_W_dg_sell_sellNowBtn}
     ${gramValue} =  Get Text  ${KU_W_dg_sellWeight}
     Wait And Click  ${KU_W_dg_sell_sellAll}
-    Verify Element And Text  ${KU_W_dg_sell_enterGm}  ${gramValue}
+    Wait For Element Visibility  ${KU_W_dg_sell_enterGm}
+    Verify Page Contains Element  ${KU_W_dg_sell_enterGm}
     Element Should be Enabled  ${KU_W_dg_sell_sellNowBtn}
     Clear Text Field  ${KU_W_dg_sell_enterAmt_Gms}
     Wait And Click  ${KU_W_dg_sell_enterAmt}
@@ -90,7 +104,7 @@ Verify Sell Gold 7 Days After Purchased
     Wait And Click  ${KU_W_dg_sell_modifyLink} 
     Wait And Click  ${KU_W_dg_sell_close}
     Wait And Click  ${KU_W_postlogin_confirmBtn}
-    # Enter OTP
+    Enter OTP Postlogin
     Verify Page Contains Element  ${KU_W_dg_congratsSubText}
     Wait And Click  ${KU_W_postlogin_continue}
     Verify Element And Text  ${KU_W_postlogin_portfolio}  ${e_postlogin_portfolioTitle}
@@ -212,7 +226,7 @@ Verify Track Section Postlogin
     Verify Page Contains Element  ${KU_W_dg_addTrackTitle}
     Verify Page Contains Element  ${KU_W_dg_quantityAddedLabel}
     Verify Page Contains Element  ${KU_W_dg_gm_tolasBox}
-    Move Slider
+    Move Slider  ${KU_W_dg_slider}
     Sleep  10s
     Wait And Click  ${KU_W_dg_updateToTrack}
     Verify Element And Text  ${KU_W_toastMssg}  ${e_invest_trackToastMsg}
@@ -224,11 +238,6 @@ Verify Track Section Postlogin
     Verify Element And Text  ${KU_W_toastMssg}  ${e_invest_deleteTrackMsg} 
     Scroll Page To Location  0  2000
     Verify Page Contains Element  ${KU_W_digitalGold}
-
-Move Slider
-    Mouse Over  ${KU_W_dg_slider}
-    Wait For Element Visibility  ${KU_W_dg_slider}
-    Drag And Drop By Offset  ${KU_W_dg_slider}  -123  1
 
 Verify Buying Of Gold
     # Checking Min Amount Label Validation
@@ -250,10 +259,25 @@ Verify Buying Of Gold
     Wait And Click  ${KU_W_buyNowBtn}
     Wait And Click  ${KU_W_postlogin_netBankingOption}
     Wait And Click  ${KU_W_postlogin_proceedToPay}
-    # Enter OTP
+    Enter OTP Postlogin
+    Verify Payment With Net Banking  ${e_invest_merchantDesc}
+    Wait And Click  ${KU_W_postlogin_continue} 
+    Verify Element And Text  ${KU_W_postlogin_portfolio}  ${e_postlogin_portfolioTitle}
+    Navigate To Invest Page And Verify Explore Options  ${KU_W_digitalGold}  ${e_invest_digGold}
 
 Verify Transaction With Moolya Account
-    Verify Payment With Net Banking  ${e_invest_merchantDesc}
+    Switch To Frame  ${KU_W_postlogin_razorPayFrame2}
+    Wait And Click  ${KU_W_SPM_netBankingOption}
+    Wait And Click  ${KU_W_SPM_SBIBank} 
+    Wait Scroll And Click Element  ${KU_W_SPM_footerPayBtn}
+    Unselect Frame
+    Sleep  5s
+    Switch Window  ${e_SPM_title}
+    Sleep  2s
+    Wait For Element Visibility  ${KU_W_SPM_razorPayTitle}
+    Verify Element And Text  ${KU_W_SPM_razorPayTitle}  ${e_SPM_razorPayTitle}
+    Wait And Click  ${KU_W_SPM_razorPaySuccessBtn}
+    Switch Window  browser=Kuvera
     Verify Page Contains Element  ${KU_W_dg_congratsMsg}
     Verify Page Contains Element  ${KU_W_dg_buyGoldSuccessMsg}
     Wait And Click  ${KU_W_postlogin_continue}

@@ -18,9 +18,9 @@ PostLogin Feature Sub Header Navigation With KYC
         ELSE IF  ['${subHeaders}'] == ${tradeSmart}   
             Verify PostLogin Trade Smart Menu Navigation
         ELSE IF  ['${subHeaders}'] == ${familyAccount}  
-            Log To Console  Pending
+            Verify PostLogin Family Account Menu Navigation
         ELSE IF  ['${subHeaders}'] == ${manageAccount}  
-            Log To Console  Pending
+            Verify PostLogin Manage Account Menu Navigation
         ELSE IF  ['${subHeaders}'] == ${taxHarvesting}  
             Log To Console  Pending
         ELSE IF  ['${subHeaders}'] == ${savesTaxes}  
@@ -45,7 +45,7 @@ PostLogin Feature Sub Header Navigation Without KYC
         IF  ['${subHeaders}'] == ${tradeSmart}   
             Verify PostLogin Trade Smart Menu Navigation Without KYC
         ELSE IF  ['${subHeaders}'] == ${familyAccount}  
-            Log To Console  Pending
+            Log To Console  No NONKYC Flow
         ELSE IF  ['${subHeaders}'] == ${manageAccount}  
             Log To Console  Pending
         ELSE IF  ['${subHeaders}'] == ${taxHarvesting}  

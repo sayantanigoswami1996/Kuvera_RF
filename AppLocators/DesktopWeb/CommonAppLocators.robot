@@ -3,9 +3,11 @@
 ${e_prod} =  Prod
 ${e_stage3} =  Stage3
 ${e_stage2} =  Stage2
+${e_equity} =  Equity
 ${URL_prod} =  https://kuvera.in/
-${URL_stage3} =  https://staging3.kuvera.in/branch-1.179/#/
+${URL_stage3} =  https://staging3.kuvera.in/#/
 ${URL_stage2} =  https://staging2.kuvera.in/
+${URL_equity} =  https://equity-test.kuvera.in/branch-1.180 
 ${e_title} =  Kuvera - Direct Mutual Funds | Stocks | Loans | Gold | Remit on Kuvera- Wealth Management Simplified
 ${e_regulatoryDisclosure} =  Regulatory Disclosure
 ${e_login} =  Log in 
@@ -47,11 +49,11 @@ ${e_usersMsg} =   We revolutionized the way India invests. With your feedback we
 ${e_earnTitle} =  Earn up to 1.5% more returns*
 ${e_earnMsg} =  We pioneered commission free Direct Plan investing.\nEarn from our expertise and don't pay commission ever.
 ${e_earnLearnLink} =   Learn how!
-${e_coreAUAValue} =  ₹ 21,000
+${e_coreAUAValue} =  ₹ 23,000
 ${e_coreAUAText} =  Crore AUA       
-${e_citiesValue} =  4 Lakh
+${e_citiesValue} =  5 Lakh
 ${e_citiesText} =   Goals
-${e_transValue} =   2.6 Crore
+${e_transValue} =   2.8 Crore
 ${e_transText} =  Transactions
 
 ${e_stock_filterTitleText} =  Filter
@@ -122,7 +124,7 @@ ${KU_W_loginButton} =   xpath=//button[@class='button-primary b-login-signup__lo
 ${KU_W_signUpButton} =  xpath=//button[@class='button-primary b-login-signup__register'] 
 ${KU_W_explore_MF} =  xpath=//button[contains(text(),'Explore mutual funds')] 
 
-${KU_W_mf_listIcon} =   xpath=//img[@class='b-fund-list__watchlist-icon']  
+${KU_W_watchlistIcon} =   xpath=(//*[local-name()='svg'])[2]
 ${KU_W_mf_mfTab} =   xpath=(//div[contains(text(),'Mutual Funds')])[1]             
 ${KU_W_android_image} =  xpath=//img[@class='b-mobile-first__img-android']
 ${KU_W_apple_image} =   xpath=//img[@class='b-mobile-first__img-apple']
@@ -132,7 +134,6 @@ ${KU_W_coreaua_text} =  xpath=//div[@class='b-investment-count__count__aua__text
 ${KU_W_stock_filterTitle} =   xpath=//span[@class='b-explore-stock__action-title b-explore-stock__filter-action-title']
 ${KU_W_stock_filter} =   xpath=//div[@class='b-filter-stock__box-sector']
 ${KU_W_stock_fundList} =   xpath=//div[@class='b-explore-stocks--widget-container']
-${KU_W_stock_listIcon} =   xpath=(//img[@class='b-stocks-explore__watchlist-icon'])[1]
 ${KU_W_mf_stock_button} =   xpath=//div[contains(text(),'Stocks')]
 ${KU_W_stock_subFilter} =  xpath=//div[@class='b-filter-stock__box b-filter-stock--dropdown-title--disabled b-filter-stock__box--widget']
 ${KU_W_stock_subHeader} =  xpath=//div[@class='b-stocks-home__text']
@@ -142,7 +143,6 @@ ${KU_W_USStockButton} =  xpath=//div[contains(text(),'US stocks')]
 ${KU_W_usstock_filter} =  xpath=//div[@class='b-action-bar__filter__item__sector']
 ${KU_W_usstock_subFilter} =  xpath=//div[@class='b-action-bar__filter__item__geography__label']
 ${KU_W_usstock_fundList} =  xpath=//div[@class='b-us-stocks--widget-container']
-${KU_W_usstock_listIcon} =  xpath=(//img[@class='b-stock-item__row1__bookmark'])[1]
 ${KU_W_usstock_filterTitle} =  xpath=//div[@class='b-action-bar__filter__header__label']
 ${KU_W_usstock_header} =  xpath=//div[@class='b-us-stocks-widget__introduction__detail__title1']
 ${KU_W_usstock_subHeader} =  xpath=//div[@class='b-us-stocks-widget__introduction__detail__sign-up']

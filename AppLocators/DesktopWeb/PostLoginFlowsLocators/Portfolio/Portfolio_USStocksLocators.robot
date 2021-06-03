@@ -1,8 +1,7 @@
 *** Variables *** 
 # Application Expected Values 'e_<variableName>'               
 ${e_portfolio_USStocks_subTitle} =  Diversify with US Equities, create or link your existing portfolio.                                             
-${e_portfolio_USStocks_allUSStocks} =   All US stocks    
-${e_portfolio_USStocks_linkYourVestedAcc} =  Link your Vested account       
+${e_portfolio_USStocks_allUSStocks} =   All US stocks         
 ${e_portfolio_USStocks_updatePANDesc} =  A KYC compliant PAN is required to import your holdings so we can correctly map them against your account.
 ${e_portfolio_USStocks_onbaoarding} =  By proceeding, you agree to Vested's Terms of Service, Privacy policy and Disclaimers.
 ${e_portfolio_USStocks_selectAccDesc} =  Confirm the family account where you’d like to associate US stocks holding. Only single holders account t can be linked.
@@ -14,14 +13,13 @@ ${e_portfolio_USStocks_subTitle4} =  Track your holdings from the portfolio sect
 
 # Application Locator 'KU_<locatorName>'
 # US Stocks Portfolio Navigation Page
-${KU_W_portfolio_USStocks_title} =  xpath=(//p[@class='tile-opt-label'])[3]
-${KU_W_portfolio_USStocks_subtitle} =  xpath=(//div[@class='tile-opt-sub-label-container'])[3]
+${KU_W_portfolio_USStocks_title} =  xpath=(//p[@class='tile-opt-label'])[4]
+${KU_W_portfolio_USStocks_subtitle} =  xpath=(//div[@class='tile-opt-sub-label-container'])[4]
 ${KU_W_portfolio_USStocks_exploreUSStocks} =  xpath=(//p[contains(text(),'Explore & invest')])[1]
 ${KU_W_portfolio_USStocks_exploreUSSDesc} =  xpath=//p[normalize-space()='Browse and invest in US stocks and ETFs.']
 ${KU_W_portfolio_USStocks_importTitle} =  xpath=//p[normalize-space()='Import & track']
 ${KU_W_portfolio_USStocks_importDesc} =  xpath=//p[normalize-space()='Link and manage existing Vested portfolio.']
 ${KU_W_portfolio_USStocks_allUSSStocks} =  xpath=//div[@class='disable-browser-text-select b-standard-tab__item b-standard-tab__item--active b-standard-tab__item--all']
-${KU_W_portfolio_USStocks_linkYourVestedAcc} =  xpath=//div[@class='b-input__content__col1__title']
 ${KU_W_portfolio_USStocks_closePopup} =  xpath=//div[@class='b-us-equity-options-close']//img
 ${KU_W_portfolio_USStocks_vestedAccEmail} =  xpath=//input[@name='email']
 ${KU_W_portfolio_USStocks_vestedAccDesc} =  xpath=//div[contains(text(),'Confirm your Vested login email.')]
@@ -45,4 +43,9 @@ ${KU_W_portfolio_USStocks_img2} =  xpath=(//img[@class='b-instruction__steps__im
 ${KU_W_portfolio_USStocks_img3} =  xpath=(//img[@class='b-instruction__steps__img'])[3]
 ${KU_W_portfolio_USStocks_img4} =  xpath=(//img[@class='b-instruction__steps__img'])[4]
 ${KU_W_portfolio_USStocks_stepsPopupClose} =  xpath=//img[@class='b-instruction__close-icon']
-${KU_W_portfolio_USStocks_completeAccSetup} =  xpath//div[contains(text(),'Complete account setup on Vested.')]
+${KU_W_portfolio_USStocks_completeAccSetup} =  xpath=//div[text()='Complete account setup on Vested.']
+${KU_W_portfolio_USStocks_USStocksTab} =  xpath=//div[contains(text(),'US stocks')]
+${KU_W_portfolio_USStocks_totalValLabel} =  xpath=//div[contains(text(),'Total value')]
+${KU_W_portfolio_USStocks_investedLabel} =  xpath=//div[@class='b-summary__invested-val__header'][normalize-space()='Invested']
+${KU_W_portfolio_USStocks_cashLabel} =  xpath=//div[normalize-space()='Cash']
+${KU_W_portfolio_USStocks_summaryRow} =  xpath=//div[@class='b-summary']

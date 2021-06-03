@@ -49,6 +49,8 @@ Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/Portfolio/Por
 Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/Portfolio/Portfolio_SaveSmartLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/Portfolio/Portfolio_GoldLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/Portfolio/Portfolio_EPFLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/Portfolio/Portfolio_FDLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/Portfolio/Portfolio_CommonLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/SIPSTPSWPLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/SettingsLocators.robot
 
@@ -58,6 +60,8 @@ Launch URL
     Run keyword If  '${ENV}' == '${e_prod}'  Open Browser  ${URL_prod}  ${BROWSER}  alias=Kuvera
     ...    ELSE IF  '${ENV}' == '${e_stage3}'  Open Browser  ${URL_stage3}  ${BROWSER}  alias=Kuvera
     ...    ELSE IF  '${ENV}' == '${e_stage2}'  Open Browser  ${URL_stage2}  ${BROWSER}  alias=Kuvera
+    ...    ELSE IF  '${ENV}' == '${e_equity}'  Open Browser  ${URL_equity}  ${BROWSER}  alias=Kuvera
+    
     Log To Console  ${ENV}
     # Maximize Browser Window
     Set Window Size  ${1920}  ${1080}
@@ -72,7 +76,7 @@ Welcome Page Should Be Open
 
 Wait For Element Visibility
     [Arguments]  ${element}
-    Wait Until Element Is Visible  ${element}  timeout=110
+    Wait Until Element Is Visible  ${element}  timeout=150
 
 Verify Element And Text
     [Arguments]  ${element}  ${text}
@@ -105,6 +109,10 @@ Verify Page Contains Button
 Verify Disabled Element
     [Arguments]  ${element}
     Run Keyword And Continue On Failure  Element Should Be Disabled  ${element}
+
+Verify Enabled Element
+    [Arguments]  ${element}
+    Run Keyword And Continue On Failure  Element Should Be Enabled  ${element}
 
 Compare Lists
     [Arguments]  ${actualList}   ${expectedList}
@@ -145,11 +153,16 @@ Kuvera Web Close Regulatory Disclosure
 
 Close Hello Bar
     Sleep  15s
-    Wait Until Element Is Visible  ${KU_W_bannerFrame}  timeout=40
-    Switch To Frame  ${KU_W_bannerFrame}
-    Wait For Element Visibility  ${KU_W_bannerCloseBtn}
-    Click Element  ${KU_W_bannerCloseBtn}
-    Unselect Frame
+    ${isBannerVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_bannerFrame}
+    IF  ${isBannerVisible}
+        Wait Until Element Is Visible  ${KU_W_bannerFrame}  timeout=40
+        Switch To Frame  ${KU_W_bannerFrame}
+        Wait For Element Visibility  ${KU_W_bannerCloseBtn}
+        Click Element  ${KU_W_bannerCloseBtn}
+        Unselect Frame
+    ELSE
+        Log To Console  Continue without hello bar
+    END
 
 Get Json Values
     [Arguments]  ${jsonPath}  ${jsonFilePath}
@@ -180,6 +193,7 @@ Verify Google Play & Apple Store Icons
 
 Verify Login And Signup Link
     Wait For Element Visibility  ${KU_W_login}
+    Sleep  2s
     Verify Element And Text  ${KU_W_login}  ${e_login}
     Sleep  1s
     Wait For Element Visibility  ${KU_W_signup}
@@ -245,19 +259,26 @@ Replace Characters
 
 Click Link And Switch Window
     [Arguments]  ${websiteLink} 
+    Wait For Element Visibility  ${websiteLink}
     Click Element  ${websiteLink}
     Switch To Window
     Sleep  2s  
 
-Navigate To Home Page
+URL Navigation Based ENV
     Run keyword If  '${ENV}' == '${e_prod}'  Go To  ${URL_prod}
     ...    ELSE IF  '${ENV}' == '${e_stage3}'  Go To  ${URL_stage3}
     ...    ELSE IF  '${ENV}' == '${e_stage2}'  Go To  ${URL_stage2}
+    ...    ELSE IF  '${ENV}' == '${e_equity}'  Go To  ${URL_equity}  
+
+Navigate To Home Page
+    URL Navigation Based ENV
     ${isLoginButtonVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_login}
     IF  ${isLoginButtonVisible}
         Log To Console  PreLogin
     ELSE
+        Reload Page
         Logout From App Post Signup
+        URL Navigation Based ENV       
     END
     Set Window Size  ${1920}  ${1080}
     Reload Page
@@ -271,7 +292,7 @@ Logout From App And Navigate To Home Page PostLogin
     Set Window Size  ${1920}  ${1080}
     Reload Page
     Sleep  12s
-    
+
 Generate Random Number
     [Arguments]  ${startingrange}  ${endingrange}
     ${randomNum} =	Evaluate	random.randint(${startingrange}, ${endingrange})
@@ -308,14 +329,30 @@ Verify Social Sharing Option
     Sleep  2s
     Wait Scroll And Click Element  ${KU_W_HI_mailLink} 
 
-Logout From App Post Signup
-    Sleep  2s
+Logout
     Wait And Click  ${KU_W_ca_caretDropdown}
     Sleep  2s
     Wait And Click  ${KU_W_ca_logoutBtn}
     Sleep  4s
     Go Back
 
+Check Mandate Screen
+    ${ismandateVisible} =  Run Keyword And Return Status  Verify Mandate Screen
+    IF  ${ismandateVisible}
+        Wait And Click  ${KU_W_postlogin_mandate_doItLaterBtn}
+    ELSE
+        Log To Console  Continue without mandate
+    END 
+    
+Logout From App Post Signup
+    Sleep  2s
+    Check Mandate Screen
+    Logout
+    
+Verify Mandate Screen
+    Wait For Element Visibility  ${KU_W_postlogin_mandate_doItLaterBtn}
+    Element Should Be Visible  ${KU_W_postlogin_mandate_doItLaterBtn}
+    
 Login 
     [Arguments]  ${email}  ${pwd}
     Log To Console  Login 
@@ -380,6 +417,57 @@ Enter OTP Postlogin
     Click Element  ${KU_W_ca_OTPField}
     Input Text  ${KU_W_ca_OTPField}  ${e_ca_OTP}
     Click Element  ${KU_W_ca_submitOTPBtn}
+
+Move Slider
+    [Arguments]  ${slider}
+    Mouse Over  ${slider}
+    Wait For Element Visibility  ${slider}
+    Drag And Drop By Offset  ${slider}  -123  1
+
+Enter DOB
+    [Arguments]  ${dateField}  ${date}  ${monthField}  ${month}  ${yearField}  ${year}
+    Wait And Click  ${dateField}
+    Input Text  ${dateField}  ${date}
+    Wait And Click  ${monthField} 
+    Input Text  ${monthField}  ${month} 
+    Wait And Click  ${yearField}
+    Input Text  ${yearField}  ${year}
+
+Verify Watchlist Icon Action On Pre And Postlogin
+    ${isLoginButtonVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_login}
+    IF  ${isLoginButtonVisible}
+        Wait For Element Visibility  ${KU_W_watchlistIcon}
+        Verify Watchlist Icon  ${KU_W_watchlistIcon}
+        Verify Login Page
+    ELSE
+        Wait For Element Visibility  ${KU_W_watchlistIcon}
+        Verify Watchlist Icon  ${KU_W_watchlistIcon}
+        Verify Page Contains Element  ${KU_W_toastMssg}
+    END
+
+Verify Login Page On Pre And Postlogin
+    [Arguments]  ${button}  ${navigatedPage}
+    ${isLoginButtonVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_login}
+    IF  ${isLoginButtonVisible}
+        Wait And Click  ${button}
+        Verify Login Page
+    ELSE
+        Wait And Click  ${button}
+        Verify Page Contains Element  ${navigatedPage}
+        Go Back
+    END 
+
+Verify Import Now Banner 
+    [Arguments]  ${bannerText}  ${externalFunds}  ${externalFundsText}
+    Scroll Untill View  ${KU_W_invest_bannerText} 
+    Verify Element And Text  ${KU_W_invest_bannerText}  ${bannerText}
+    Wait And Click  ${KU_W_invest_importNow}
+    Verify Element And Text  ${externalFunds}  ${externalFundsText}
+    Go Back
+
+Verify User Login With Investment
+    Wait And Click  ${KU_W_login}
+    Login  ${e_postlogin_stage3_MFSIPAcc}  ${e_postlogin_pwd}
        
 Close Web Application
     Close All Browser

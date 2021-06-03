@@ -14,8 +14,8 @@ ${e_portfolio_dg_buyGold} =  Buy Gold
 
 # Application Locator 'KU_<locatorName>'
 # Gold Portfolio Navigation Page
-${KU_W_portfolio_dg_title} =  xpath=(//p[@class='tile-opt-label'])[5]
-${KU_W_portfolio_dg_subtitle} =  xpath=(//div[@class='tile-opt-sub-label-container'])[5]
+${KU_W_portfolio_dg_title} =  xpath=(//p[@class='tile-opt-label'])[6]
+${KU_W_portfolio_dg_subtitle} =  xpath=(//div[@class='tile-opt-sub-label-container'])[6]
 ${KU_W_portfolio_dg_investGoldTitle} =  xpath=//p[normalize-space()='Invest in Gold SIP']
 ${KU_W_portfolio_dg_investGoldDesc} =  xpath=(//div[@class='tile-opt-sub-label-container'])[1]
 ${KU_W_portfolio_dg_buyGoldDesc} =  xpath=(//div[@class='tile-opt-sub-label-container'])[2]
@@ -39,3 +39,5 @@ ${KU_W_portfolio_dg_externalGoldTitle} =  xpath=//div[contains(text(),'Gold (Bou
 ${KU_W_portfolio_dg_addGoldBtn} =  xpath=(//button[@class='k-base-button--primary'])[1]
 ${KU_W_portfolio_dg_taxInvoiceClose} =  xpath=//img[@class='b-tax-invoice-desktop__header__close-logo']
 ${KU_W_portfolio_dg_buyGoldClose} =  xpath=//img[@class='b-buy-gold__close']
+${KU_W_portfolio_dg_buyNow} =  xpath=//button[contains(text(),'Buy Now')]
+${KU_W_portfolio_dg_autofilledGramVal} =  xpath=//div[@class='b-buy-gold__auto-filled-options-container']//div[2]

@@ -7,6 +7,9 @@ ${e_postlogin_noActiveSIPTitle} =  You have no Active SIP. It’s easy to start 
 ${e_postlogin_emailID} =  moolya@kuvera.in 
 ${e_postlogin_pwd} =  kuveratesting123
 ${e_postlogin_prod_KYCVerifiedEmail} =  moolya+automation@kuvera.in 
+${e_postlogin_stocks_importPopup} =  Import stocks
+${e_postlogin_USStocks_linkYourVestedAcc} =  Link your Vested account  
+${e_postlogin_stage3_MFSIPAcc} =  moolya+MFSIP@kuvera.in
 
 # Application Locator 'KU_<locatorName>'
 # Kuvera :: Wealth Management Simplified
@@ -28,7 +31,7 @@ ${KU_W_postlogin_portfolioTab} =  xpath=//a[normalize-space()='Portfolio']
 ${KU_W_postlogin_rewardsTab} =  xpath=//a[contains(text(),'Rewards')]
 ${KU_W_postlogin_blogTab} =  xpath=//a[contains(text(),'Blog')]
 ${KU_W_postlogin_appStoreScreen} =  xpath=//div[@class='localnav-title we-localnav__title']
-${KU_W_postlogin_kuveraAppIcon} =  xpath=//picture[@id='ember102']
+${KU_W_postlogin_kuveraAppIcon} =  xpath=//img[@class='we-artwork__image ember101']
 ${KU_W_postlogin_reportsTab} =  xpath=//a[contains(text(),'Reports')]
 ${KU_W_postlogin_importPortfolioTab} =  xpath=//a[text()='Import Portfolio']
 ${KU_W_postlogin_primaryPortfolioTab} =  xpath=//span[@class='username']
@@ -46,7 +49,7 @@ ${KU_W_postlogin_proceedToPay} =  xpath=//button[contains(text(),'Proceed to Pay
 ${KU_W_postlogin_chooseBank} =  xpath=//div[@class='fancy-radio-checkbox tick-mark']
 ${KU_W_postlogin_payNow} =  xpath=//button[normalize-space()='PAY NOW']
 ${KU_W_postlogin_cartBtn} =  xpath=//li[@id='top-nav-desktop-cart']//a
-${KU_W_postlogin_yesDeleteBtn} =  xpath=//button[text()='YES DELETE']
+${KU_W_postlogin_yesDeleteBtn} =  xpath=//button[contains(text(),'Yes, delete')]
 ${KU_W_postlogin_goBackBtn} =  xpath=//button[normalize-space()='Go Back']
 ${KU_W_postlogin_paymentPageTitle} =  xpath=//span[normalize-space()='Select Payment Mode']
 ${KU_W_postlogin_confirmBtn} =  xpath=//button[normalize-space()='Confirm']
@@ -65,15 +68,24 @@ ${KU_W_postlogin_yesDelBtn} =  xpath=//button[normalize-space()='Yes, delete']
 ${KU_W_postlogin_noCancelBtn} =  xpath=//button[normalize-space()='No, cancel']
 ${KU_W_postlogin_cancelBtn} =  xpath=//div[contains(text(),'Cancel')]
 ${KU_W_postlogin_OKButton} =  xpath=//button[normalize-space()='OK']
-# Portfolio Page
-${KU_W_portfolio_doYouWantTo} =  xpath=//div[contains(text(),'Do you want to')]
-${KU_W_portfolio_importFolioTitle} =  xpath=//p[normalize-space()='Import Portfolio']
-${KU_W_portfolio_getStartedBtn} =  xpath=//button[normalize-space()='Get Started']
-${KU_W_portfolio_startInvesting} =  xpath=//p[contains(text(),'Start Investing!')]
-${KU_W_portfolio_updatePAN} =  xpath=//div[contains(text(),'Update your PAN')]
-${KU_W_portfolio_loginBtn} =  xpath=//button[normalize-space()='Login']
-${KU_W_portfolio_logIN} =  xpath=//button[normalize-space()='LOG IN']
-${KU_W_portfolio_signIN} =  xpath=//button[normalize-space()='SIGN IN']
-${KU_W_portfolio_signinBtn} =  xpath=//button[normalize-space()='Sign In']
-${KU_W_portfolio_doItLater} =  xpath=//p[contains(.,'Do it later')]
-
+${KU_W_postlogin_skipButton} =  xpath=//div[contains(text(),'Skip')]
+${KU_W_postlogin_successBtn} =  xpath=//button[normalize-space()='success']
+${KU_W_postlogin_greatBtn} =  xpath=//button[normalize-space()='Great']
+${KU_W_postlogin_stocks_importStocksPopup} =  xpath=//div[@class='b-upload-stock__heading']
+${KU_W_postlogin_orderStatusLabel} =  xpath=//div[contains(text(),'Order status')]
+${KU_W_postlogin_inProcessTag} =  xpath=(//div[@class='b-order-row__tag'])[2]
+${KU_W_postlogin_clearFiltersBtn} =  xpath=//button[normalize-space()='Clear filters']
+${KU_W_postlogin_USStocks_linkYourVestedAcc} =  xpath=//div[@class='b-input__content__col1__title']
+${KU_W_postlogin_mandate_doItLaterBtn} =  xpath=//p[contains(.,'Do it later')]
+${KU_W_postlogin_okThanksBtn} =  xpath=//button[normalize-space()='OK, THANKS']
+${KU_W_postlogin_saveBtn} =  xpath=//button[normalize-space()='Save']
+${KU_W_postlogin_okaySureBtn} =  xpath=//button[normalize-space()='OK, SURE']
+${KU_W_postlogin_chooserajaGPortfolio} =  xpath=//span[normalize-space()='Rajagopal (MF+GOLD+SS+EPF))']
+${KU_W_postlogin_rajaGPortfolio} =  xpath=(//span[normalize-space()='Rajagopal (MF+GOLD+SS+EPF))'])[1]
+${KU_W_postlogin_feature_referFriendTitle} =  xpath=//p[normalize-space()='Refer a Friend']
+${KU_W_postlogin_feature_referCoins} =  xpath=(//div[@class='tile-opt-sub-label-container'])[1]
+${KU_W_postlogin_authorizeAccessBtn} =  xpath=//button[normalize-space()='Authorize Access']
+${KU_W_postlogin_takeMeBackLink} =  xpath=//a[normalize-space()='No, Take me back']
+${KU_W_postlogin_resendBtn} =  xpath=//button[contains(text(),'Resend')]
+${KU_W_postlogin_revokeBtn} =  xpath=//button[normalize-space()='Revoke']
+${KU_W_postlogin_learnMoreLink} =  xpath=//a[normalize-space()='Learn More']

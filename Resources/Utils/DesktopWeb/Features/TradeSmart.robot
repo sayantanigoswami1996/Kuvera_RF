@@ -11,14 +11,8 @@ Verify PreLogin TradeSmart Page
     Verify Element And Text  ${KU_W_feature_ts_activationMsg}  ${e_feature_ts_activationSubTitle}
     Scroll Untill View  ${KU_W_feature_ts_activateBtn} 
     Verify Element And Text  ${KU_W_feature_ts_activateBtn}  ${e_ts_activateBtnText}
-    Verify Page Contains Image  ${KU_W_feature_ts_coinImage}
-    Click Button  ${KU_W_feature_ts_activateBtn} 
-    ${isLoginBtnVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_login}
-    IF  ${isLoginBtnVisible}  
-        Verify Login Page
-    ELSE
-        Go Back
-    END
+    Verify Page Contains Image  ${KU_W_feature_ts_coinImage} 
+    Verify Login Page On Pre And Postlogin  ${KU_W_feature_ts_activateBtn}  ${KU_W_feature_getCoinText}
     # We help Trade Smart    
     Scroll Untill View  ${KU_W_feature_helpTradeSmartTitle}
     Verify Element and Text  ${KU_W_feature_helpTradeSmartTitle}  ${e_feature_helpTradeSmartTitleText} 

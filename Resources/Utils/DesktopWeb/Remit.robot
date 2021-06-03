@@ -34,10 +34,11 @@ Verify PreLogin Remit Page
     Switch To Window Verify Title And Close  ${e_remit_transferWiseCross-borderTitle}
     # Verify Third party - Transferwise redirection
     Switch To Frame  ${KU_W_remit_calculator_iFrame}
-    Sleep  1s
+    Sleep  2s
     Click Button  Send money
     Scroll Untill View  ${KU_W_remit_calculatorTarget}
     Verify Page Contains Element  ${KU_W_remit_calculatorTarget}
     Switch To Window Verify Title And Close  ${e_remit_transferWiseSignUpTitle}
+    Sleep  2s
     Scroll Untill View  ${KU_W_remit_transferNoBottomBtn}
     Verify Transfer Now  ${KU_W_remit_transferNoBottomBtn}

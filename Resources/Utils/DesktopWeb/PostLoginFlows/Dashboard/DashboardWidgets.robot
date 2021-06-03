@@ -52,8 +52,9 @@ Verify Investments Navigation
     Wait And Click  ${link}
     Wait For Element Visibility  ${screenTitle}
     Verify Page Contains Element  ${screenTitle}
+    Sleep  2s
     Go Back
-
+    
 Verify Add SIP Goals And SuperCharge Portfolio
     # Add SIPs
     Scroll Untill View  ${KU_W_dashboard_addSIPsTitle}

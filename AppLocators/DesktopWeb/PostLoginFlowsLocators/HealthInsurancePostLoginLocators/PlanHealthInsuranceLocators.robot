@@ -127,7 +127,6 @@ ${e_CoverageDets_dailyAllowance} =  Daily allowance\n₹2 K/day
 ${e_CoverageDets_coveringTitle} =  Covering
 ${e_CoverageDets_coveringSubTitle} =  Self (27Y) + 1 more
 ${e_CoverageDets_applicantDetails} =  Bhavani Sruti Somaraju Venkata Naga\n27Y - (1993-08-13) 
-${e_CoverageDets_familyMemberDetails} =  Moolya\n1Y - (2019-08-07)
 ${e_CoverageDets_nomineesTitle} =  Nominees
 ${e_CoverageDets_nominee_userDetail1} =  Base indemnity - Tester (husband)
 ${e_CoverageDets_nominee_userDetail2} =  Super top up - Tester (husband)

@@ -13,11 +13,10 @@ Verify PreLogin Stocks Landing Page
     Verify Search Stocks
     Wait For Element Visibility  ${KU_W_faqbot_icon}
     Verify Presence Of FAQBOT Icon
-    Verify Filter Navigation For Stocks And 52 WkHighIndia  ${KU_W_invest_stocks_52WIndia_watchListHeader}  ${e_invest_stocks_watchlistHeader}  ${e_invest__52WHighLow_UTF_sortYearText}  ${KU_W_invest_stocks_52WIndia_watchListBtn}
+    Verify Filter Navigation For Stocks And 52 WkHighIndia  ${KU_W_invest_stocks_52WIndia_watchListHeader}  ${e_invest_stocks_watchlistHeader}  ${e_invest__52WHighLow_UTF_sortYearText}  ${KU_W_watchlistIcon}
     Click Element  ${KU_W_stocks}
-    Sleep  1s
-    Wait For Element Visibility  ${KU_W_invest_stocks_52WIndia_watchListBtn}
-    Verify Pre And Post Login Action On Watchlist For Stocks  ${KU_W_invest_stocks_52WIndia_watchListBtn}  
+    Sleep  1s  
+    Verify Watchlist Icon Action On Pre And Postlogin
     # Iterate the Stocks detail screen
     FOR  ${i}  IN RANGE  1  6
         @{stockName} =  Get Json Values  $.Stocks.f${i}  Resources/TestData/Stocks.json 
@@ -73,20 +72,24 @@ Verify Stock Details Screen
     Click Element  ${stockLink}
     Wait For Element Visibility  ${KU_W_invest_stocksDetails_stockName}
     Verify Page Contains Element  ${KU_W_invest_stocksDetails_stockName}
-    Verify Explore Tags For Stocks And USStocks  ${KU_W_invest_stocks_sortYear}
+    Verify Explore Tags For Stocks USStocks And Funds  ${KU_W_invest_stocks_sortYear}
     Wait For Element Visibility  ${KU_W_invest_stocks_currentMarketPrice}
     Verify Page Contains Element  ${KU_W_invest_stocks_currentMarketPrice}
     Sleep  2s
     Verify Page Contains Element  ${KU_W_invest_stocks_change%}
     Verify Page Contains Element  ${KU_W_invest_stocks_timeStamp} 
     Verify Page Contains Element  ${KU_W_invest_stocks_currentGainLoss%}
-    Verify Share PDF And Watchlist Option  ${KU_W_invest_stocks_shareIcon}  ${KU_W_invest_stocks_sharePopup}  ${KU_W_invest_stocks_pdfIcon}  ${KU_W_invest_stocks_watchlistIcon}
+    Verify Share PDF And Watchlist Option  ${KU_W_invest_stocks_shareIcon}  ${KU_W_invest_stocks_sharePopup}  ${KU_W_invest_stocks_pdfIcon}  ${KU_W_watchlistIcon}
     # Buy Stocks Button
     Wait For Element Visibility  ${KU_W_invest_stocks_buyStocksBtn}
     Verify Element And Text  ${KU_W_invest_stocks_buyStocksBtn}  ${e_invest_stocks_buyStocksBtn}
-    Wait For Element Visibility  ${KU_W_invest_stocks_buyStocksBtn} 
-    Click Element  ${KU_W_invest_stocks_buyStocksBtn} 
-    Verify Login Page
+    Wait And Click  ${KU_W_invest_stocks_buyStocksBtn}
+    ${isLoginButtonVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_login}
+    IF  ${isLoginButtonVisible}
+        Verify Login Page
+    ELSE
+        Go Back
+    END
     # FAQ
     Wait For Element Visibility  ${KU_W_faqbot_icon}
     Verify Presence Of FAQBOT Icon
