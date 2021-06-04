@@ -86,6 +86,10 @@ Verify Page Contains Element
     [Arguments]  ${element}
     Run Keyword And Continue On Failure  Page Should Contain Element  ${element}
 
+Verify Page Do Not Contain Element
+    [Arguments]  ${element}
+    Run Keyword And Continue On Failure  Page Should Not Contain Element  ${element}
+
 Verify Page Contains Image
     [Arguments]  ${image}
     Run Keyword And Continue On Failure  Page Should Contain Image  ${image}

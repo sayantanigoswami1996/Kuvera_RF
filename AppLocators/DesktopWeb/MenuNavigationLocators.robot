@@ -501,7 +501,8 @@ ${KU_W_feature_managedAccountTab} =  xpath=//span[normalize-space()='Managed Acc
 ${KU_W_feature_familyAccIcon} =  xpath=//div[@class='family-account-icon']
 ${KU_W_feature_managedAccInfo} =  xpath=//div[@class='info-text']
 ${KU_W_feature_familyAccTab} =  xpath=//span[normalize-space()='Family Account']
-${KU_W_feature_T&CCheckBox} =  xpath=//label[@for='risk-understood']
+${KU_W_feature_T&CCheckBox} =  xpath=//input[@class='pristine untouched']
+${KU_W_feature_container} =  xpath=//div[@class='stop-sip add-manager-container']
 ${KU_W_feature_completeRegistrationTitle} =  xpath=//div[normalize-space()='Complete Registration']
 ${KU_W_feature_accSetupDesc} =  xpath=(//div[@class='message'])[2]
 

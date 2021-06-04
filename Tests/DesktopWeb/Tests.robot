@@ -400,14 +400,14 @@ Remit Menu Navigation Postlogin
 # Postlogin Navigation Of Features Without KYC
 Postlogin Navigation Of Features
     [Tags]  TC56  Stage3  NONKYC
-    [Teardown]  Navigate To Home Page
+    # [Teardown]  Navigate To Home Page
     Verify PostLogin Account Creation
     PostLogin Feature Sub Header Navigation Without KYC
 
 # Postlogin Navigation Of Features With KYC
 Postlogin Navigation Of Features
     [Tags]  TC57  Stage3  KYC
-    # [Teardown]  Navigate To Home Page
+    [Teardown]  Navigate To Home Page
     Verify PostLogin Account Creation
     Verify PAN Verifed KYC Details
     PostLogin Feature Sub Header Navigation With KYC

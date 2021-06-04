@@ -17,6 +17,7 @@ Verify PostLogin Trade Smart Menu Navigation
     # Verify Page Contains Element  ${KU_W_feature_ts_activeMsg}
 
 Verify PostLogin Trade Smart Menu Navigation Without KYC
+    Wait And Click  ${KU_W_featureLink}
     Wait And Click  ${KU_W_feature_ts_link}
     Verify Login And Signup On Prelogin
     Verify Page Contains Image  ${KU_W_feature_ts_coinImage}

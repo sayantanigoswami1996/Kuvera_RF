@@ -13,7 +13,17 @@ Verify PostLogin Manage Account Menu Navigation
     # Invite Manager Page
     Verify Invite Manager Screen
 
-
+Verify PostLogin Manage Account Menu Navigation Without KYC
+    Log To Console  Manage Account Non KYC Flow
+    Wait And Click  ${KU_W_featureLink} 
+    Wait And Click  ${KU_W_feature_manageAccountLink}
+    Wait And Click  ${KU_W_feature_addMangrBtn}
+    # Managed Account Tab
+    Verify Managed Account Tab
+    # Family Account
+    Verify Family Account Tab
+    # Complete Registration Page
+    Verify Compelete Registration Screen For NONKYC Flow  ${KU_W_feature_completeRegistrationTitle}  ${KU_W_feature_accSetupDesc}  ${e_feature_accSetupMsg}   ${KU_W_postlogin_registrationBtn}
 
 Verify Managed Account Tab
     Wait And Click  ${KU_W_feature_managedAccountTab}
@@ -31,8 +41,8 @@ Verify Invite Manager Screen
     Verify Page Contains Element  ${KU_W_feature_allowAccessMsg}
     Verify Page Contains Element  ${KU_W_postlogin_takeMeBackLink}
     Sleep  2s
-    # Mouse Over  ${KU_W_feature_T&CCheckBox}
-    # Press Keys  ${KU_W_feature_T&CCheckBox}  SPACE 
+    # Switch To Frame  ${KU_W_feature_container}
+    Wait And Click  ${KU_W_feature_T&CCheckBox}
     Scroll Untill View  ${KU_W_feature_allowAccessMsg}
     Wait And Click  ${KU_W_feature_allowAccessMsg}
     Wait And Click  ${KU_W_postlogin_authorizeAccessBtn}

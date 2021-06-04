@@ -56,3 +56,5 @@ Link Bank Account
     Wait And Click  ${KU_W_postlogin_OkBtn}
     Sleep  1s
     Verify Page Contains Element  ${KU_W_postlogin_homeTab}
+    Sleep  2s
+    Verify Page Do Not Contain Element  ${KU_W_KYC_startBtn} 
