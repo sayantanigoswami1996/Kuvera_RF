@@ -21,11 +21,7 @@ Verify PostLogin Trade Smart Menu Navigation Without KYC
     Verify Login And Signup On Prelogin
     Verify Page Contains Image  ${KU_W_feature_ts_coinImage}
     Wait And Click  ${KU_W_feature_ts_activateBtn}
-    Verify Page Contains Element  ${KU_W_feature_ts_accSetUpTitle}
-    Verify Element And Text  ${KU_W_feature_ts_accSetUpDesc}  ${e_feature_ts_accSetUpMSg}
-    Wait And Click  ${KU_W_postlogin_continue}
-    Verify Page Contains Element  ${KU_W_KYC_PANTextField} 
-    Go Back
+    Verify Compelete Registration Screen For NONKYC Flow  ${KU_W_feature_ts_accSetUpTitle}  ${KU_W_feature_ts_accSetUpDesc}  ${e_feature_ts_accSetUpMSg}  ${KU_W_postlogin_continue}
        
 Verify Payement Of TradeSmart
     Wait And Click  ${KU_W_feature_ts_buyCoins}

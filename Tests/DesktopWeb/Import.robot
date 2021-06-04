@@ -82,6 +82,7 @@ Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/SIPSTPSWP.robot
 Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Po_Features/Po_SetAGoal.robot
 Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Po_Features/Po_TradeSmart.robot
 Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Po_Features/Po_FamilyAccount.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Po_Features/Po_ManageAccount.robot
 Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Po_Loans.robot
 Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/SetAGoal_LeftBar.robot
 Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Po_Remit.robot

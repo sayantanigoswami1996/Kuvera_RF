@@ -49,7 +49,7 @@ Invest Tiles And Widgets Navigation
 
 # Invest Mutual Fund
 Invest Mutual Fund Navigation
-    [Tags]  TC06  Prod  Stage3  Stage2
+    [Tags]  TC06  Prod  Stage3  Stage2  MutualFund
     [Teardown]  Navigate To Home Page
     Verify PreLogin Mutual Fund Landing Page
 
@@ -222,7 +222,7 @@ Invest Tiles Navigation Postlogin
 
 # MF Non Transactional Navigation Postlogin 
 MF Non Transactional Navigation Postlogin
-    [Tags]  TC33  Prod  Stage2
+    [Tags]  TC33  Prod  Stage2  MutualFund
     [Teardown]  Navigate To Home Page
     Verify Login On Prod With Verifed KYC Account
     Verify PostLogin MF Menu Navigation
@@ -276,14 +276,14 @@ Digital Gold Buy and Sell Navigation Postlogin
 #----------------------Portfolios-------------------------------------
 # MF Portfolio Navigation Postlogin Without KYC
 MF Portfolio Navigation Postlogin Without KYC
-    [Tags]  TC40  Stage3  NONKYC
+    [Tags]  TC40  Stage3  NONKYC  MutualFund
     [Teardown]  Navigate To Home Page
     Verify PostLogin Account Creation
     Verify PostLogin MF Portfolio Menu Navigation Without KYC
 
 # MF Portfolio Navigation Postlogin With KYC
 MF Portfolio Navigation Postlogin With KYC
-    [Tags]  TC41  Stage3  KYC
+    [Tags]  TC41  Stage3  KYC  MutualFund
     [Teardown]  Navigate To Home Page
     Verify PostLogin Account Creation
     Verify PAN Verifed KYC Details
@@ -351,7 +351,7 @@ EPF Portfolio Navigation Postlogin With KYC
 
 # FD Portfolio Navigation Postlogin With KYC
 FD Portfolio Navigation Postlogin With KYC
-    [Tags]  TC50  Stage3  KYC
+    [Tags]  TC50  Stage3  KYC  FD
     [Teardown]  Navigate To Home Page
     Verify PostLogin Account Creation
     Verify PAN Verifed KYC Details
@@ -407,7 +407,7 @@ Postlogin Navigation Of Features
 # Postlogin Navigation Of Features With KYC
 Postlogin Navigation Of Features
     [Tags]  TC57  Stage3  KYC
-    [Teardown]  Navigate To Home Page
+    # [Teardown]  Navigate To Home Page
     Verify PostLogin Account Creation
     Verify PAN Verifed KYC Details
     PostLogin Feature Sub Header Navigation With KYC
@@ -421,7 +421,7 @@ Deactivate Signed Up Account
 #--------------MF - New User Transactional Navigation From Invest-------------------
 # MF Transactional Navigation Postlogin With KYC 
 MF Transactional Navigation Postlogin With KYC
-    [Tags]  TC59  Stage3  KYC
+    [Tags]  TC59  Stage3  KYC  MutualFund
     [Teardown]  Navigate To Home Page
     Verify PostLogin Account Creation
     Verify PAN Verifed KYC Details
@@ -429,14 +429,14 @@ MF Transactional Navigation Postlogin With KYC
 
 # MF Transactional Navigation Postlogin Without KYC 
 MF Transactional Navigation Postlogin Without KYC
-    [Tags]  TC60  Stage3  NONKYC
+    [Tags]  TC60  Stage3  NONKYC  MutualFund
     [Teardown]  Navigate To Home Page
     Verify PostLogin Account Creation
     Verify Transactional Navigation On MF Without KYC
 
 # MF Transactional Navigation Postlogin With Two Factor Authentication
 MF Transactional Navigation Postlogin With Two Factor Authentication
-    [Tags]  TC61  Stage3  KYC
+    [Tags]  TC61  Stage3  KYC  MutualFund
     [Teardown]  Navigate To Home Page
     Verify PostLogin Account Creation 
     Enable Two Factor Authentication
@@ -446,7 +446,7 @@ MF Transactional Navigation Postlogin With Two Factor Authentication
 #--------------FD - New User Transactional Navigation From Invest-------------------
 # FD Navigation Postlogin With KYC
 FD Navigation Postlogin With KYC
-    [Tags]  TC62  Stage3  KYC
+    [Tags]  TC62  Stage3  KYC  FD
     [Teardown]  Navigate To Home Page
     Verify PostLogin Account Creation
     Fill in KYC For FD
@@ -454,21 +454,21 @@ FD Navigation Postlogin With KYC
 
 # FD Navigation Postlogin Without KYC
 FD Navigation Postlogin Without KYC
-    [Tags]  TC63  Stage3  NONKYC
+    [Tags]  TC63  Stage3  NONKYC  FD
     [Teardown]  Navigate To Home Page
     Verify PostLogin Account Creation
     Verify PostLogin FD Menu Navigation Without KYC
 
 # FD Navigation Postlogin With Invalid DOB
 FD Navigation Postlogin With Invalid DOB
-    [Tags]  TC64  Stage3  NONKYC
+    [Tags]  TC64  Stage3  NONKYC  FD
     [Teardown]  Navigate To Home Page
     Verify PostLogin Account Creation
     Verify PostLogin FD Menu Navigation With Invalid DOB
 
 # FD Navigation Postlogin With Invalid PAN
 FD Navigation Postlogin With Invalid PAN
-    [Tags]  TC65  Stage3  NONKYC
+    [Tags]  TC65  Stage3  NONKYC  FD
     [Teardown]  Navigate To Home Page
     Verify PostLogin Account Creation
     Verify PostLogin FD Menu Navigation With Invalid PAN
@@ -476,7 +476,7 @@ FD Navigation Postlogin With Invalid PAN
 #--------------MF - User With Investment---------------------
 # MF Navigation Postlogin User Investment With SIP
 MF Navigation Postlogin With SIP
-    [Tags]  TC66  Stage3 KYC
+    [Tags]  TC66  Stage3  KYC  MutualFund
     [Teardown]  Navigate To Home Page
     Verify User Login With Investment
     Verify PostLogin MF Navigation With SIP 

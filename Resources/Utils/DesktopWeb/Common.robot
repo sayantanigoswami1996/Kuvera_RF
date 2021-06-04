@@ -468,6 +468,14 @@ Verify Import Now Banner
 Verify User Login With Investment
     Wait And Click  ${KU_W_login}
     Login  ${e_postlogin_stage3_MFSIPAcc}  ${e_postlogin_pwd}
+
+Verify Compelete Registration Screen For NONKYC Flow
+    [Arguments]  ${title}  ${accSetupDesc}  ${accSetupMSg}  ${button}
+    Verify Page Contains Element  ${title}
+    Verify Element And Text  ${accSetupDesc}  ${accSetupMSg}
+    Wait And Click  ${button}
+    Verify Page Contains Element  ${KU_W_KYC_PANTextField} 
+    Go Back
        
 Close Web Application
     Close All Browser
