@@ -243,7 +243,7 @@ US Stocks Non Transactional Navigation Postlogin
 
 # SaveSmart Navigation Postlogin 
 SaveSmart Navigation Postlogin
-    [Tags]  TC36  Stage3  KYC
+    [Tags]  TC36  Stage3  KYC  Staging3
     [Teardown]  Navigate To Home Page
     Verify PostLogin Account Creation
     Verify PAN Verifed KYC Details
@@ -251,7 +251,7 @@ SaveSmart Navigation Postlogin
 
 # Crypto Navigation Postlogin 
 Crypto Navigation Postlogin
-    [Tags]  TC37  Stage3  KYC
+    [Tags]  TC37  Stage3  KYC  Staging3
     [Teardown]  Navigate To Home Page
     Verify PostLogin Account Creation
     Verify PAN Verifed KYC Details
@@ -259,7 +259,7 @@ Crypto Navigation Postlogin
 
 # Digital Gold SIP and Track Navigation Postlogin 
 Digital Gold SIP and Track Navigation Postlogin
-    [Tags]  TC38  Stage3  KYC
+    [Tags]  TC38  Stage3  KYC  Staging3
     [Teardown]  Navigate To Home Page
     Verify PostLogin Account Creation
     Verify PAN Verifed KYC Details
@@ -267,7 +267,7 @@ Digital Gold SIP and Track Navigation Postlogin
 
 # Digital Gold Buy and Sell Navigation Postlogin 
 Digital Gold Buy and Sell Navigation Postlogin
-    [Tags]  TC39  Stage3  KYC
+    [Tags]  TC39  Stage3  KYC  Staging3 
     [Teardown]  Navigate To Home Page
     Verify PostLogin Account Creation
     Verify PAN Verifed KYC Details
