@@ -178,6 +178,8 @@ Verify PostLogin Add Family Details
     Verify Page Contains Image  ${KU_W_SPM_netBankingImg}
     Verify Element And Text  ${KU_W_SPM_creditCardLabel}  ${e_SPM_creditCardLabel} 
     Verify Page Contains Image  ${KU_W_SPM_creditCardImg}
+    Wait And Click  ${KU_W_SPM_netBankingPaymentMode}
+    Wait Scroll And Click Element  ${KU_W_SPM_payAmtBtn}
     Verify Payment With Net Banking  ${e_SPM_merchantDesc}
     
     # Health Protect Enabled
