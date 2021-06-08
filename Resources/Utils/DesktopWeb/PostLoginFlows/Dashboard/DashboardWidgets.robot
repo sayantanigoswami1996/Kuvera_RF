@@ -15,11 +15,15 @@ Verify Add Acount And Track Investment Section
     # Add Account Section
     Verify Page Contains Element  ${KU_W_dashboard_addAccTitle}
     Verify Page Contains Element  ${KU_W_dashboard_addAccSubTitle} 
+    Sleep  2s
     Wait And Click  ${KU_W_dashboard_addAccTitle}
+    Wait For Element Visibility  ${KU_W_dashboard_addAccNavigatedTitle}
     Verify Element And Text  ${KU_W_dashboard_addAccNavigatedTitle}  ${e_dashboard_addAccNavigatedTitle}
     Go Back
     # Track External Investment
+    Wait For Element Visibility  ${KU_W_dashboard_trackInvestTitle}
     Verify Element And Text  ${KU_W_dashboard_trackInvestTitle}  ${e_dashboard_trackInvestTitle} 
+    Wait For Element Visibility  ${KU_W_dashboard_trackInvestSubTitle}
     Verify Page Contains Element  ${KU_W_dashboard_trackInvestSubTitle}
     Wait And Click  ${KU_W_dashboard_trackInvestTitle}
     Verify Track Investment Popup
