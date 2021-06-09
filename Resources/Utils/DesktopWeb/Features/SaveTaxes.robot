@@ -1,7 +1,3 @@
-*** Settings ***
-
-Library     SeleniumLibrary
-
 *** Keywords ***
 
 Verify PreLogin Save Taxes Page
@@ -25,9 +21,8 @@ Verify PreLogin Save Taxes Page
     # Mutual Fund
     Sleep  2s
     Reload Page
-    Wait And Click  ${KU_W_watchlistIcon}
-    Verify Login Page
-
+    Verify Login Page On Pre And Postlogin  ${KU_W_watchlistIcon}  ${KU_W_postlogin_feature_watchlistHeader}
+  
     # Save Fees
     Scroll Untill View  ${KU_W_feature_saveFeesHeading}
     Verify Element And Text  ${KU_W_feature_saveFeesHeading}  ${e_feature_st_feesHeadingText}

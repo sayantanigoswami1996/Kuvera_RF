@@ -37,12 +37,12 @@ Verify Invite Manager Screen
     Verify Page Contains Element  ${KU_W_feature_accountNameDets}
     Verify Invite Manager Details
     Input Text  ${KU_W_feature_managerMailID}  ${e_postlogin_emailID}
+    Press Keys  ${KU_W_feature_managerMailID}  \ue004
+    Press Keys  None  \ue00d
     Verify Page Contains Element  ${KU_W_feature_T&C}
     Verify Page Contains Element  ${KU_W_feature_allowAccessMsg}
     Verify Page Contains Element  ${KU_W_postlogin_takeMeBackLink}
     Sleep  2s
-    # Switch To Frame  ${KU_W_feature_container}
-    Wait And Click  ${KU_W_feature_T&CCheckBox}
     Scroll Untill View  ${KU_W_feature_allowAccessMsg}
     Wait And Click  ${KU_W_feature_allowAccessMsg}
     Wait And Click  ${KU_W_postlogin_authorizeAccessBtn}

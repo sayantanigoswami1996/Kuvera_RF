@@ -6,7 +6,7 @@ Verify PostLogin Set A Goal Menu Navigation
     Navigation To Goals
 
 Navigation To Set A Goal Under Features
-    Wait And Click  ${KU_W_feature_post_setAGoalLink}
+    Wait And Click  ${KU_W_feature_setAGoalLink}
 
 Verify Set A Goal Landing Page 
     Wait For Element Visibility  ${KU_W_feature_sg_screenTitle}

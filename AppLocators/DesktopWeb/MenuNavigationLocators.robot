@@ -273,8 +273,7 @@ ${e_feature_cd_manageTodayBtnText} =   MANAGE TODAY
 
 # Button 
 ${KU_W_button} =  xpath=(//button[@class='button-primary'])[1]
-# Postlogin
-${KU_W_feature_getCoinText} =  xpath=//p[@class='m-subheading']
+
 # Loan Navigation Page
 ${KU_W_loanLink} =  xpath=//a[contains(text(),'Loan')]
 ${KU_W_loanHeaderTitle} =  xpath=//div[@class='b-header__title']
@@ -455,7 +454,7 @@ ${KU_W_feature_helpTradeSmart2Msg} =  xpath=//div[@class='b-trade-smart__help-de
 ${KU_W_feature_helpTradeSmart3Msg} =  xpath=//div[@class='b-trade-smart__help-desc']/div[3]
 ${KU_W_feature_aboutUs} =  xpath=(//ul[@class='list-unstyled']/li)[1]
 # Postlogin
-${KU_W_feature_ts_coinsTitle} =  xpath=//p[contains(.,'Get 300 coins more to activate this feature.')]
+${KU_W_feature_ts_coinsTitle} =  xpath=//p[contains(.,'Get 150 coins more to activate this feature.')]
 ${KU_W_feature_ts_accSetUpTitle} =  xpath=//div[contains(text(),'Account setup is not complete')]
 ${KU_W_feature_ts_accSetUpDesc} =  xpath=//div[@class='b-confirm__description']
 ${KU_W_feature_ts_activeMsg} =  xpath=//div[contains(text(),'TradeSmart is active for you.')]
@@ -465,7 +464,7 @@ ${KU_W_feature_ts_activeMsg} =  xpath=//div[contains(text(),'TradeSmart is activ
 ${KU_W_feature_familyAccountLink} =  xpath=//a[contains(text(),'Family Account')]  
 ${KU_W_feature_fa_screenContent} =  xpath=//div[@class='b-family-account__what__des']
 # Postlogin
-${KU_W_feature_fa_coinsTitle} =  xpath=//p[contains(.,'Get 200 coins more to activate this feature.')]
+${KU_W_feature_fa_coinsTitle} =  xpath=//p[contains(.,'Get 50 coins more to activate this feature.')]
 
 # Feature-ManageAccount Page
 ${KU_W_feature_manageAccountLink} =  xpath=//a[contains(text(),'Manage Account')]
@@ -501,7 +500,7 @@ ${KU_W_feature_managedAccountTab} =  xpath=//span[normalize-space()='Managed Acc
 ${KU_W_feature_familyAccIcon} =  xpath=//div[@class='family-account-icon']
 ${KU_W_feature_managedAccInfo} =  xpath=//div[@class='info-text']
 ${KU_W_feature_familyAccTab} =  xpath=//span[normalize-space()='Family Account']
-${KU_W_feature_T&CCheckBox} =  xpath=//input[@class='pristine untouched']
+${KU_W_feature_T&CCheckBox} =  xpath=//*[@class='login-inputs']/div/div/input[1]
 ${KU_W_feature_container} =  xpath=//div[@class='stop-sip add-manager-container']
 ${KU_W_feature_completeRegistrationTitle} =  xpath=//div[normalize-space()='Complete Registration']
 ${KU_W_feature_accSetupDesc} =  xpath=(//div[@class='message'])[2]
@@ -544,6 +543,10 @@ ${KU_W_feature_th_pricingcheckDesc3} =  xpath=(//p[@class='check-label'])[3]
 ${KU_W_feature_th_startHarvestTitle} =  xpath=//h2[@class='start-harvesting-today-heading']
 ${KU_W_feature_th_coinImage3} =  xpath=(//img[@class='btn-coin-icon'])[3]
 ${KU_W_feature_th_subscribe3Btn} =  xpath=(//button[@class='button-primary'])[3]
+# Postlogin
+${KU_W_feature_th_coinTitle} =  xpath=//p[contains(.,'Get 349 coins more to activate this feature.')]
+${KU_W_feature_th_completeYourSetup} =  xpath=//div[contains(text(),'Complete your Acount Setup')]
+${KU_W_feature_th_completeYourSetupDesc} =  xpath=//div[normalize-space()='A valid account is required to continue. Please complete your account registration.']
 
 # Feature-SaveTaxes Page
 ${KU_W_feature_saveTaxesLink} =  xpath=(//a[contains(text(),'Save Taxes')])[1]
@@ -562,10 +565,10 @@ ${KU_W_feature_st_investmentTitle} =  xpath=//th[contains(text(),'Investment')]
 ${KU_W_feature_st_lockInTitle} =  xpath=//th[contains(text(),'Lock In')]
 ${KU_W_feature_st_historicalReturnsTitle} =  xpath=//th[contains(text(),'Historical Returns')]
 ${KU_W_feature_st_tableRow1} =  xpath=//tr[@class='b-tax-saver-row']
-${KU_W_feature_st_tableRow2} =  xpath= //tbody/tr[2]
-${KU_W_feature_st_tableRow3} =  xpath= //tbody/tr[3]
-${KU_W_feature_st_tableRow4} =  xpath= //tbody/tr[4]
-${KU_W_feature_st_tableRow5} =  xpath= //tbody/tr[5]
+${KU_W_feature_st_tableRow2} =  xpath=//tbody/tr[2]
+${KU_W_feature_st_tableRow3} =  xpath=//tbody/tr[3]
+${KU_W_feature_st_tableRow4} =  xpath=//tbody/tr[4]
+${KU_W_feature_st_tableRow5} =  xpath=//tbody/tr[5]
 
 
 # Features-Consolidate Page

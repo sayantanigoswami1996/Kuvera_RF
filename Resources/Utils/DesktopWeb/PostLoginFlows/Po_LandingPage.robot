@@ -8,7 +8,7 @@ PostLogin Feature Sub Header Navigation With KYC
     ${manageAccount}  Get Json Values  $.MenuHeaders.h4.fsh3  Resources/TestData/Headers.json
     ${taxHarvesting}  Get Json Values  $.MenuHeaders.h4.fsh4  Resources/TestData/Headers.json
     ${savesTaxes}  Get Json Values  $.MenuHeaders.h4.fsh5  Resources/TestData/Headers.json
-    FOR  ${k}  IN RANGE  4  5
+    FOR  ${k}  IN RANGE  1  7
         Wait And Click  ${KU_W_featureLink} 
         Sleep  1s
         ${subHeaders} =  Get Text  xpath=//ul[@class='dropdown-menu dropdown-menu-right dropdown-custom-box']//li[${k}]
@@ -22,9 +22,9 @@ PostLogin Feature Sub Header Navigation With KYC
         ELSE IF  ['${subHeaders}'] == ${manageAccount}  
             Verify PostLogin Manage Account Menu Navigation
         ELSE IF  ['${subHeaders}'] == ${taxHarvesting}  
-            Log To Console  Pending
+            Verify PostLogin Tax Harvesting Menu Navigation
         ELSE IF  ['${subHeaders}'] == ${savesTaxes}  
-            Log To Console  Pending
+            Verify PostLogin Save Taxes Menu Navigation
         ELSE  
             Log To Console  Completed
         END
@@ -37,4 +37,4 @@ PostLogin Feature Sub Header Navigation Without KYC
     # Manage Account
     Verify PostLogin Manage Account Menu Navigation Without KYC
     # Tax Harvesting
-    # Save Taxes
+    Verify PostLogin Tax Harvesting Menu Navigation Without KYC

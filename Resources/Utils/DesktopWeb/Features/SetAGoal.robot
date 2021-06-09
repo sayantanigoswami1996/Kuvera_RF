@@ -107,7 +107,7 @@ Verify Profile Page Or Add Goal Action On Pre And PostLogin
         Wait And Click  ${KU_W_feature_sg_seeYourPlan}
         Wait And Click  ${KU_W_feature_sg_getThisPlan}
         Wait And Click  ${KU_W_featureLink}
-        Wait And Click  ${KU_W_feature_post_setAGoalLink}       
+        Wait And Click  ${KU_W_feature_setAGoalLink}       
     ELSE
         Verify Recommendation And Navigation  ${profile}
     END

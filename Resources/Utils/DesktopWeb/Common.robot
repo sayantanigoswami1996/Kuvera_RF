@@ -480,6 +480,17 @@ Verify Compelete Registration Screen For NONKYC Flow
     Wait And Click  ${button}
     Verify Page Contains Element  ${KU_W_KYC_PANTextField} 
     Go Back
+
+Verify Refer Coin Page From Features
+    [Arguments]  ${coinTitle}
+    Verify Page Contains Element  ${coinTitle}
+    Verify Page Contains Element  ${KU_W_postlogin_feature_referFriendTitle}
+    Verify Page Contains Element  ${KU_W_postlogin_feature_referCoins}
+    Wait And Click  ${KU_W_postlogin_feature_referFriendTitle}
+    Wait For Element Visibility  ${KU_W_IF_inviteFriendsTitle}
+    Verify Element And Text  ${KU_W_IF_inviteFriendsTitle}  ${e_IF_inviteFriendsTitle}
+    Go Back
+    Go Back
        
 Close Web Application
     Close All Browser

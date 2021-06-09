@@ -8,4 +8,4 @@ Verify PreLogin Family Account Page
     Verify Element And Text  ${KU_W_feature_fa_screenTitle}  ${e_feature_fa_screenTitle}
     Verify Element And Text  ${KU_W_feature_fa_screenContent}  ${e_feature_fa_screenContent}
     Verify Element And Text  ${KU_W_button}  ${e_activateWithBtn}
-    Verify Login Page On Pre And Postlogin  ${KU_W_button}  ${KU_W_feature_getCoinText}
+    Verify Login Page On Pre And Postlogin  ${KU_W_button}  ${KU_W_postlogin_feature_getCoinText}

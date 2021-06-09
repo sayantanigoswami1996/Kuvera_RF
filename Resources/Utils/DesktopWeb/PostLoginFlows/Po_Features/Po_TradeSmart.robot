@@ -3,13 +3,7 @@
 Verify PostLogin Trade Smart Menu Navigation
     Verify PreLogin TradeSmart Page
     Wait And Click  ${KU_W_feature_ts_activateBtn}
-    Verify Page Contains Element  ${KU_W_feature_ts_coinsTitle}
-    Verify Page Contains Element  ${KU_W_postlogin_feature_referFriendTitle}
-    Verify Page Contains Element  ${KU_W_postlogin_feature_referCoins}
-    Wait And Click  ${KU_W_postlogin_feature_referFriendTitle}
-    Verify Element And Text  ${KU_W_IF_inviteFriendsTitle}  ${e_IF_inviteFriendsTitle}
-    Go Back
-    Go Back
+    Verify Refer Coin Page From Features  ${KU_W_feature_ts_coinsTitle}
     # Verify Payement Of TradeSmart
     # Verify Element And Text  ${KU_W_postlogin_portfolio}  ${e_postlogin_portfolioTitle}
     # Wait And Click  ${KU_W_featureLink}
