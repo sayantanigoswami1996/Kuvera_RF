@@ -345,7 +345,7 @@ Gold Portfolio Navigation Postlogin With KYC
 # EPF Portfolio Navigation Postlogin With KYC
 EPF Portfolio Navigation Postlogin With KYC
     [Tags]  TC49  Prod  Stage2  
-    # [Teardown]  Navigate To Home Page
+    [Teardown]  Navigate To Home Page
     Verify Login On Prod With Verifed KYC Account  
     Verify PostLogin EPF Portfolio Menu Navigation With KYC
 
