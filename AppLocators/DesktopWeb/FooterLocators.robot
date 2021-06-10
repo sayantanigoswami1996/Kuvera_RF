@@ -15,7 +15,6 @@ ${e_footer_tweeterIcon} =  Profile / Twitter
 ${e_footer_switchToDirectFunds} =  Switch to Direct Funds
 ${e_footer_switchToDirectTitle} =  Introducing 1-Click Switch to Direct Plans.
 ${e_footer_exploreFunds} =  Explore Funds
-${e_mutualFundPageTitle} =  Kuvera - Direct Mutual Funds | Stocks | Loans | Gold | Remit on Kuvera- Wealth Management Simplified
 ${e_blog} =  Blog
 ${e_blogScreenTitle} =  Your Investment Magazine
 ${e_getFinanceInsightsTitle} =  Subscribe to weekly updates

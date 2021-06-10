@@ -34,7 +34,7 @@ Verify PreLogin Footer
     Scroll To About Us Section
     # Explore Funds
     Wait Scroll And Click Element  ${KU_W_footer_exploreFunds}
-    Verify Screen Title  ${e_mutualFundPageTitle}
+    Verify Screen Title  ${e_navigatedLinkTitle}
     # Verify Blog 
     Verify Blog
     Scroll To About Us Section

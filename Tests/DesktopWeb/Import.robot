@@ -70,3 +70,10 @@ Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/InvestExplore/Po_USS
 Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/InvestExplore/Po_SaveSmart.robot
 Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/InvestExplore/Po_Crypto.robot
 Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/InvestExplore/Po_DigiGold.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Portfolio/Portfolio_MF.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Portfolio/Portfolio_Stocks.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Portfolio/Portfolio_USStocks.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Portfolio/Portfolio_SaveSmart.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Portfolio/Portfolio_Gold.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Portfolio/Portfolio_EPF.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Portfolio/Portfolio_FD.robot

@@ -272,3 +272,88 @@ Digital Gold Buy and Sell Navigation Postlogin
     Verify PostLogin Account Creation
     Verify PAN Verifed KYC Details
     Verify PostLogin Digi Gold Buy And Sell Menu Navigation 
+
+#----------------------Portfolios-------------------------------------
+# MF Portfolio Navigation Postlogin Without KYC
+MF Portfolio Navigation Postlogin Without KYC
+    [Tags]  TC40  Stage3  NONKYC  MutualFund
+    [Teardown]  Navigate To Home Page
+    Verify PostLogin Account Creation
+    Verify PostLogin MF Portfolio Menu Navigation Without KYC
+
+# MF Portfolio Navigation Postlogin With KYC
+MF Portfolio Navigation Postlogin With KYC
+    [Tags]  TC41  Stage3  KYC  MutualFund
+    [Teardown]  Navigate To Home Page
+    Verify PostLogin Account Creation
+    Verify PAN Verifed KYC Details
+    Verify PostLogin MF Portfolio Menu Navigation With KYC  
+
+# US Stocks Portfolio Navigation Postlogin Without KYC
+US Stocks Portfolio Navigation Postlogin Without KYC
+    [Tags]  TC42  Stage3  NONKYC
+    [Teardown]  Navigate To Home Page
+    Verify PostLogin Account Creation
+    Verify PostLogin US Stocks Portflio Menu Navigation Without KYC
+
+# US Stocks Portfolio Navigation Postlogin With KYC
+US Stocks Portfolio Navigation Postlogin With KYC
+    [Tags]  TC43  Stage3  KYC
+    [Teardown]  Navigate To Home Page
+    Verify PostLogin Account Creation
+    Verify PAN Verifed KYC Details
+    Verify PostLogin US Stocks Portflio Menu Navigation With KYC  
+
+# Stocks Portfolio Navigation Postlogin Without KYC
+Stocks Portfolio Navigation Postlogin Without KYC
+    [Tags]  TC44  Stage3  NONKYC
+    [Teardown]  Navigate To Home Page
+    Verify PostLogin Account Creation
+    Verify PostLogin Stocks Portflio Menu Navigation Without KYC
+
+# Stocks Portfolio Navigation Postlogin With KYC
+Stocks Portfolio Navigation Postlogin With KYC
+    [Tags]  TC45  Equity  KYC
+    [Teardown]  Navigate To Home Page
+    Verify PostLogin Account Creation
+    Verify PAN Verifed KYC Details
+    Verify PostLogin Stocks Portflio Menu Navigation With KYC
+
+# Savesmart Portfolio Navigation Postlogin With KYC
+Savesmart Portfolio Navigation Postlogin With KYC
+    [Tags]  TC46  Stage3  KYC
+    [Teardown]  Navigate To Home Page
+    Verify PostLogin Account Creation
+    Verify PAN Verifed KYC Details
+    Verify PostLogin Savesmart Portflio Menu Navigation With KYC
+
+# Gold Portfolio Navigation Postlogin Without KYC
+Gold Portfolio Navigation Postlogin Without KYC
+    [Tags]  TC47  Stage3  NONKYC
+    [Teardown]  Navigate To Home Page
+    Verify PostLogin Account Creation
+    Verify PostLogin Gold Portfolio Menu Navigation Without KYC
+
+# Gold Portfolio Navigation Postlogin With KYC
+Gold Portfolio Navigation Postlogin With KYC
+    [Tags]  TC48  Stage3  KYC
+    [Teardown]  Navigate To Home Page
+    Verify PostLogin Account Creation
+    Verify PAN Verifed KYC Details
+    Verify PostLogin Gold Portfolio Menu Navigation With KYC
+
+# EPF Portfolio Navigation Postlogin With KYC
+EPF Portfolio Navigation Postlogin With KYC
+    [Tags]  TC49  Prod  Stage2  
+    # [Teardown]  Navigate To Home Page
+    Verify Login On Prod With Verifed KYC Account  
+    Verify PostLogin EPF Portfolio Menu Navigation With KYC
+
+# FD Portfolio Navigation Postlogin With KYC
+FD Portfolio Navigation Postlogin With KYC
+    [Tags]  TC50  Stage3  KYC  FD
+    [Teardown]  Navigate To Home Page
+    Verify PostLogin Account Creation
+    Verify PAN Verifed KYC Details
+    Verify PostLogin FD Portfolio Menu Navigation With KYC
+#---------------------End Of Portfolio-----------------------------  
