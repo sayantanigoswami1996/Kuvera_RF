@@ -481,4 +481,9 @@ MF Navigation Postlogin With SIP
     Verify User Login With Investment
     Verify PostLogin MF Navigation With SIP 
 #-------------- End of MF- User With Investment---------------------
-
+# Rewards Menu Navigation Postlogin
+Rewards Menu Navigation Postlogin
+    [Tags]  TC67  Stage3  NONKYC
+    [Teardown]  Navigate To Home Page
+    Verify PostLogin Account Creation
+    Verify PostLogin Rewards Menu Navigation 

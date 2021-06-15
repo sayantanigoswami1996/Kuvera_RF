@@ -53,6 +53,7 @@ Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/Portfolio/Por
 Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/Portfolio/Portfolio_CommonLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/SIPSTPSWPLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/SettingsLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/RewardsLocators.robot
 
 *** Keywords ***
 

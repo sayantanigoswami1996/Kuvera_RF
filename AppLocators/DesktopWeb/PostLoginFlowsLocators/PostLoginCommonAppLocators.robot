@@ -10,6 +10,7 @@ ${e_postlogin_prod_KYCVerifiedEmail} =  moolya+automation@kuvera.in
 ${e_postlogin_stocks_importPopup} =  Import stocks
 ${e_postlogin_USStocks_linkYourVestedAcc} =  Link your Vested account  
 ${e_postlogin_stage3_MFSIPAcc} =  moolya+MFSIP@kuvera.in
+${e_postlogin_copyLink} =  Code copied to clipboard!
 
 # Application Locator 'KU_<locatorName>'
 # Kuvera :: Wealth Management Simplified
@@ -92,3 +93,4 @@ ${KU_W_postlogin_learnMoreLink} =  xpath=//a[normalize-space()='Learn More']
 ${KU_W_postlogin_registrationBtn} =  xpath=//button[normalize-space()='Complete Registration']
 ${KU_W_postlogin_feature_getCoinText} =  xpath=//p[@class='m-subheading']
 ${KU_W_postlogin_feature_watchlistHeader} =  xpath=//h6[normalize-space()='Watchlist']
+${KU_W_postlogin_feature_copyLink} =  xpath=//div[@class='b-app-standard-social-options-button']//img
