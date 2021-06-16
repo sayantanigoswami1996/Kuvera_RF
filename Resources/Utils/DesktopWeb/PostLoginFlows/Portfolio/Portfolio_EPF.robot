@@ -3,7 +3,13 @@
 Verify PostLogin EPF Portfolio Menu Navigation With KYC
     Log To Console  EPF Portfolio Navigation With KYC
     Navigate To PortFolio Tab And Verify Investment Title  ${KU_W_portfolio_EPF_title}  ${e_portfolio_EPF_title}  ${KU_W_portfolio_EPF_subtitle}  ${e_portfolio_EPF_subTitle}
-    Wait And Click  ${KU_W_portfolio_EPF_title}
+    ${isElementVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_portfolio_EPF_manageEPF}
+    IF  ${isElementVisible}
+        Remove Account
+    ELSE
+        Wait And Click  ${KU_W_portfolio_EPF_title}
+    END
+    
     Verify Import EPF Popup And Enter Details
     Wait And Click  ${KU_W_postlogin_importPortfolioTab}
     Wait And Click  ${KU_W_dashboard_trackInvest_EPF}
@@ -19,9 +25,7 @@ Verify PostLogin EPF Portfolio Menu Navigation With KYC
     Wait For Element Visibility  ${KU_W_portfolio_EPF_EPFTab}
     Verify Element And Text  ${KU_W_portfolio_EPF_EPFTab}  ${e_portfolio_EPF_tab}
     Verify Page Contains Element  ${KU_W_portfolio_EPF_manageEPF}
-    Wait And Click  ${KU_W_portfolio_EPF_manageEPF}
-    Wait And Click  ${KU_W_portfolio_EPF_removeEPFAcc}
-    Wait And Click  ${KU_W_portfolio_EPF_removeEPFPopup}
+    Remove Account
 
 Verify Import EPF Popup And Enter Details
     Verify Page Contains Element  ${KU_W_portfolio_EPF_importAndTrackTitle}
@@ -32,3 +36,8 @@ Verify Import EPF Popup And Enter Details
     Input Text  ${KU_W_portfolio_EPF_UANField}  ${e_portfolio_EPF_UANNum}
     Input Text  ${KU_W_postlogin_pwdField}  ${e_portfolio_EPF_UANPwd}
     Wait And Click  ${KU_W_postlogin_submitBtn}
+
+Remove Account
+    Wait And Click  ${KU_W_portfolio_EPF_manageEPF}
+    Wait And Click  ${KU_W_portfolio_EPF_removeEPFAcc}
+    Wait And Click  ${KU_W_portfolio_EPF_removeEPFPopup}

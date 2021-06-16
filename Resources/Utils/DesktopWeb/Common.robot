@@ -51,8 +51,7 @@ Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/Portfolio/Por
 Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/Portfolio/Portfolio_EPFLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/Portfolio/Portfolio_FDLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/Portfolio/Portfolio_CommonLocators.robot
-Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/SIPSTPSWPLocators.robot
-Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/SettingsLocators.robot
+
 
 *** Keywords ***
 
@@ -60,8 +59,6 @@ Launch URL
     Run keyword If  '${ENV}' == '${e_prod}'  Open Browser  ${URL_prod}  ${BROWSER}  alias=Kuvera
     ...    ELSE IF  '${ENV}' == '${e_stage3}'  Open Browser  ${URL_stage3}  ${BROWSER}  alias=Kuvera
     ...    ELSE IF  '${ENV}' == '${e_stage2}'  Open Browser  ${URL_stage2}  ${BROWSER}  alias=Kuvera
-    ...    ELSE IF  '${ENV}' == '${e_equity}'  Open Browser  ${URL_equity}  ${BROWSER}  alias=Kuvera
-    
     Log To Console  ${ENV}
     # Maximize Browser Window
     Set Window Size  ${1920}  ${1080}
@@ -352,7 +349,7 @@ Logout From App Post Signup
 Verify Mandate Screen
     Wait For Element Visibility  ${KU_W_postlogin_mandate_doItLaterBtn}
     Element Should Be Visible  ${KU_W_postlogin_mandate_doItLaterBtn}
-    
+
 Login 
     [Arguments]  ${email}  ${pwd}
     Log To Console  Login 

@@ -8,6 +8,7 @@ Login And Verify Policy Details
 
 Verify Policy Details
     Log To Console  Policy Details
+    Sleep  6s
     Wait And Click  ${KU_W_insureLink}
     FOR  ${i}  IN RANGE  1   6
         ${isElementVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_HI_totalCoverDesc}

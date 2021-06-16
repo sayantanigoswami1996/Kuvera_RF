@@ -16,7 +16,8 @@ ${e_portfolio_mf_uploadCAS} =  Upload PDF received from Karvy or CAMS.
 ${e_portfolio_mf_CASPwd} =  1234567890
 ${e_portfolio_mf_popupDesc} =  We have successully imported all your historic transactions. You can now track them in the Portfolio page.
 ${e_portfolio_mf_updatePANDesc} =  A KYC compliant PAN is required to import your portfolio so we can correctly map them against your account.
-${e_portfolio_mf_CASPath} =  D:\\Phase4\\Kuvera_RF\\Resources\\Utils\\Files\\CAS.pdf
+${e_portfolio_mf_CASPath} =  ${CURDIR}../../Resources/Utils/Files/CAS.pdf
+
 # Application Locator 'KU_<locatorName>'
 # MF Portfolio Navigation Page
 ${KU_W_portfolio_mf_title} =  xpath=(//p[@class='tile-opt-label'])[1]

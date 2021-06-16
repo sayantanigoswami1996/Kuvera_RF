@@ -15,7 +15,7 @@ Verify Transfer Now
 Verify PreLogin Remit Page
     Wait For Element Visibility  ${KU_W_remit_Link}
     Click Element  ${KU_W_remit_Link}
-    Verify Login And Signup On Prelogin
+    Verify Login And Signup Link
     Sleep  2s
     ${isElementVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_remit_screenTitleDesc}
     Run Keyword If   ${isElementVisible}  Log To Console  Continue

@@ -161,14 +161,7 @@ ${e_activateWithBtn} =  Activate with 200
 ${e_feature_manageAccountDesc1Text} =  Add your financial advisor as a Manager to your Kuvera account and let them guide your investments.
 ${e_feature_manageAccountDesc2Text} =  You retain full access to your account. All transactions would be validated & approved by you via OTP.
 ${e_feature_addManagerBtnText} =  Add  manager
-# Postlogin 
-${e_feature_inviteManagerTitle} =  INVITE ACCOUNT MANAGER
-${e_feature_addManagerPoint1} =   Manager can view your portfolio and goals
-${e_feature_addManagerPoint2} =   Manager can place orders with OTP validation (OTP sent to your email ID)   
-${e_feature_addManagerPoint3} =   You can revoke their access to your account any time
-${e_feature_managedAccInfo} =  You Are Not Managing Anyone Else's Account\nYou can manage other investors' accounts\nWhen you get invite, those would appear here\nLearn More
-      
-      
+
 # Feature-Tax Harvesting Navigation Page Variables
 ${e_feature_th_subTitleText} =  Minimise your long term tax impact by realising up to ₹1 Lakh of Long Term Capital Gain (LTCG) every financial year with no tax.
 ${e_feature_th_subscribeBtnText} =  Activate 499 / FY
@@ -276,8 +269,6 @@ ${e_feature_cd_manageTodayBtnText} =   MANAGE TODAY
 
 # Button 
 ${KU_W_button} =  xpath=(//button[@class='button-primary'])[1]
-# Postlogin
-${KU_W_feature_getCoinText} =  xpath=//p[@class='m-subheading']
 # Loan Navigation Page
 ${KU_W_loanLink} =  xpath=//a[contains(text(),'Loan')]
 ${KU_W_loanHeaderTitle} =  xpath=//div[@class='b-header__title']
@@ -458,6 +449,9 @@ ${KU_W_feature_helpTradeSmart2Msg} =  xpath=//div[@class='b-trade-smart__help-de
 ${KU_W_feature_helpTradeSmart3Msg} =  xpath=//div[@class='b-trade-smart__help-desc']/div[3]
 ${KU_W_feature_aboutUs} =  xpath=(//ul[@class='list-unstyled']/li)[1]
 # Postlogin
+${KU_W_feature_ts_referFriend} =  xpath=//p[normalize-space()='Refer a Friend']
+${KU_W_feature_ts_buyCoins} =  xpath=(//div[@class='tile-opt-sub-label-container'])[1]
+${KU_W_feature_ts_referCoins} =  xpath=(//div[@class='tile-opt-sub-label-container'])[1]
 ${KU_W_feature_ts_coinsTitle} =  xpath=//p[contains(.,'Get 300 coins more to activate this feature.')]
 ${KU_W_feature_ts_accSetUpTitle} =  xpath=//div[contains(text(),'Account setup is not complete')]
 ${KU_W_feature_ts_accSetUpDesc} =  xpath=//div[@class='b-confirm__description']
@@ -467,44 +461,12 @@ ${KU_W_feature_ts_activeMsg} =  xpath=//div[contains(text(),'TradeSmart is activ
 # Feature-Family Account
 ${KU_W_feature_familyAccountLink} =  xpath=//a[contains(text(),'Family Account')]  
 ${KU_W_feature_fa_screenContent} =  xpath=//div[@class='b-family-account__what__des']
-# Postlogin
-${KU_W_feature_fa_coinsTitle} =  xpath=//p[contains(.,'Get 200 coins more to activate this feature.')]
 
 # Feature-ManageAccount Page
 ${KU_W_feature_manageAccountLink} =  xpath=//a[contains(text(),'Manage Account')]
 ${KU_W_feature_manageAccountDesc1} =  xpath=(//div[@class='b-manage-account__what__des'])[1]
 ${KU_W_feature_manageAccountDesc2} =  xpath=(//div[@class='b-manage-account__what__des'])[2]
-# Postlogin
-${KU_W_feature_manageAccountTitle} =  xpath=//div[normalize-space()='Family Accounts']
-${KU_W_feature_manageAccountSubTitle} =  xpath=//div[contains(text(),"Accounts you've created on Kuvera")]
-${KU_W_feature_addAccountBtn} =  xpath=(//button[@class='button-primary add-account'])[1]
-${KU_W_feature_profileName} =  xpath=//span[@class='panel-title']
-${KU_W_feature_accountType} =  xpath=//span[contains(.,'Individual Account')]
-${KU_W_feature_holderLabel} =  xpath=//div[contains(text(),'Primary Holder')]
-${KU_W_feature_valuationLabel} =  xpath=//div[normalize-space()='Valuation']
-${KU_W_feature_investmentLabel} =  xpath=//div[normalize-space()='Investment']
-${KU_W_feature_xirrLabel} =  xpath=//div[normalize-space()='XIRR']
-${KU_W_feature_haveSomeoneElseTitle} =  xpath=//span[contains(.,'Have someone else manage this account')]
-${KU_W_feature_addManagerBtn} =  xpath=//div[@class='panel-footer']//button[@class='button-primary add-account']
-${KU_W_feature_editBtn} =  xpath=(//img[@class='img-responsive'])[2]
-${KU_W_feature_deleteBtn} =  xpath=(//img[@class='img-responsive'])[1]
-${KU_W_feature_inviteManagerTitle} =  xpath=//div[contains(@class,'row add-manager-title')]
-${KU_W_feature_T&C} =  xpath=//label[contains(.,'I accept the Terms & Conditions')]
-${KU_W_feature_addMangrBtn} =  xpath=//button[normalize-space()='Add manager']
-${KU_W_feature_allowAccessMsg} =  xpath=//label[normalize-space()='Allow access to my other accounts']
-${KU_W_feature_managerMailID} =  xpath=//input[@placeholder="Enter Email ID For Manager's Kuvera Login"]
-${KU_W_feature_accountNameDets} =  xpath=//div[contains(@class,'row add-manager-text')]//p[1]
-${KU_W_feature_addManagerPoint1} =  xpath=//div[contains(@class,'row add-manager-text')]//p[2]
-${KU_W_feature_addManagerPoint2} =  xpath=//div[contains(@class,'row add-manager-text')]//p[3]
-${KU_W_feature_addManagerPoint3} =  xpath=//div[contains(@class,'row add-manager-text')]//p[4]
-${KU_W_feature_managerAddedSuccessfully} =  xpath=//div[normalize-space()='Manager Added Successfully']
-${KU_W_feature_managerAddedSuccessSubTitle} =  xpath=//div[normalize-space()='We have sent a request email. Kindly ask your account Manager to check their email']
-${KU_W_feature_managerName} =  xpath=//span[@class='manager-name']
-${KU_W_feature_managedAccountTab} =  xpath=//span[normalize-space()='Managed Account']
-${KU_W_feature_familyAccIcon} =  xpath=//div[@class='family-account-icon']
-${KU_W_feature_managedAccInfo} =  xpath=//div[@class='info-text']
-${KU_W_feature_familyAccTab} =  xpath=//span[normalize-space()='Family Account']
-${KU_W_feature_T&CCheckBox} =  xpath=//input[@class='touched dirty invalid']
+
 # Feature-TaxHarvesting Page
 ${KU_W_feature_taxHarvestingLink} =  xpath=//a[contains(text(),'Tax Harvesting')]
 ${KU_W_feature_th_screenContent} =  xpath=//p[@class='minimise-impact-text']

@@ -23,7 +23,10 @@ Verify PostLogin Gold Portfolio Menu Navigation Without KYC
     Go Back
     Verify Add Own Gold Page
     Go Back
-    Verify Buy Gold Page
+    Wait And Click  ${KU_W_portfolio_dg_buyGoldTitle}
+    Wait And Click  ${KU_W_portfolio_dg_buyAmt}
+    Sleep  1s
+    Wait And Click  ${KU_W_portfolio_dg_buyNow}
     Verify Page Contains Element  ${KU_W_portfolio_dg_PANBox}
     Wait And Click  ${KU_W_portfolio_dg_taxInvoiceClose}
     Wait And Click  ${KU_W_postlogin_yesQuit1}

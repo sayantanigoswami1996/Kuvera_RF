@@ -192,3 +192,4 @@ ${KU_W_FD_tellUsAboutYourself} =  xpath=//div[@class='b-standard-nav-nav__contai
 ${KU_W_FD_tellUsAboutYourselfDesc} =  xpath=//div[contains(text(),'A bit about your current financial situation.')]
 # Invalid PAN 
 ${KU_W_FD_invalidPAN_DOBMsg} =  xpath=//div[contains(@class,'k-description__2b3d51 k-fs14 k-mt16 k-tac')]
+

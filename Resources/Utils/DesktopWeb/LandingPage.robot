@@ -1,7 +1,3 @@
-*** Settings ***
-
-Library     SeleniumLibrary
-
 *** Keywords ***
 
 Verify PreLogin Widgets
@@ -237,7 +233,7 @@ Verify Features Widgets
     Sleep  1s
     Wait For Element Visibility  ${KU_W_sendMoney_learnMoreLink}
     Click Element  ${KU_W_sendMoney_learnMoreLink}
-    Switch To Window Verify Title And Close  ${e_sendMoneyLinkTitle}
+    Switch To Window Verify Title And Close  ${e_navigatedLinkTitle}
     Sleep  1s
 
 Verify Summary Tab Widgets

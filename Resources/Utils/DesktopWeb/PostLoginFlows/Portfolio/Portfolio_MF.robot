@@ -13,7 +13,8 @@ Verify PostLogin MF Portfolio Menu Navigation With KYC
     Wait For Element Visibility  ${KU_W_postlogin_portfolio}
     Verify Page Contains Element  ${KU_W_postlogin_portfolio}
     Verify Element And Text  ${KU_W_portfolio_mf_MFTab}  ${e_portfolio_mf_title}
-
+   
+   
 Verify PostLogin MF Portfolio Menu Navigation Without KYC
     Log To Console  MF Portfolio Navigation Without KYC
     Navigate To PortFolio Tab And Verify Investment Title  ${KU_W_portfolio_mf_title}  ${e_portfolio_mf_title}  ${KU_W_portfolio_mf_subTitle}  ${e_portfolio_mf_subTitle}   

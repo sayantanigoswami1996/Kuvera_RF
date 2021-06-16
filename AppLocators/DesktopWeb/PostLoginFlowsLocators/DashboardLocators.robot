@@ -69,4 +69,3 @@ ${KU_W_dashboard_educateChild} =  xpath=//h6[normalize-space()='Educate My Child
 ${KU_W_dashboard_anniversary} =  xpath=//h6[normalize-space()='25th Anniversary']
 ${KU_W_dashboard_retireEasy} =  xpath=//h6[normalize-space()='Retire Easy']
 ${KU_W_dashboard_saveTax} =  xpath=//h6[normalize-space()='Save Tax']
-${KU_W_dashboard_closeGoalsPopup} =  xpath=//img[@class='b-modal-heading-with-close__close']

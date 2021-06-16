@@ -6,7 +6,9 @@ Library     SeleniumLibrary
 
 Verify PreLogin Insure Page
     Click Element  ${KU_W_insureLink}
-    Verify Login And Signup On Prelogin
+    ${isLoginButtonVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_login}
+    Run Keyword If   ${isLoginButtonVisible}  Verify Login And Signup Link
+    ...    ELSE  Log To Console  Continue
     Wait For Element Visibility  ${KU_W_insureHeaderTitle}  
     Verify Element And Text  ${KU_W_insureHeaderTitle}  ${e_insure_headerTitleText} 
     Verify Element And Text  ${KU_W_insureHeaderMsg}  ${e_insure_headerMsgText}

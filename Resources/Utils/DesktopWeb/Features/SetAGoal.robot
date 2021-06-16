@@ -1,7 +1,3 @@
-*** Settings ***
-
-Library     SeleniumLibrary
-
 *** Keywords ***
 
 Verify Question Title
@@ -24,10 +20,10 @@ Verify PreLogin Set A Goal Page
     ${goal7}  Get Json Values  $.Goals.g7  Resources/TestData/Goals.json
     ${goal8}  Get Json Values  $.Goals.g8  Resources/TestData/Goals.json
 
-    
+    Click Element  ${KU_W_featureLink}
     Wait For Element Visibility  ${KU_W_feature_setAGoalLink}
     Click Element  ${KU_W_feature_setAGoalLink}
-    
+
     Wait For Element Visibility  ${KU_W_feature_sg_screenTitle}
     Verify Element And Text  ${KU_W_feature_sg_screenTitle}  ${e_feature_sg_screenTitle}
     Verify Element And Text  ${KU_W_feature_sg_screenSubTitle}  ${e_feature_sg_screenSubTitle}
@@ -80,44 +76,20 @@ Verify Recommendation And Navigation
     # View the suggested plan details 
     Wait For Element Visibility  ${KU_W_feature_sg_seeYourPlan}
     Verify Element And Text  ${KU_W_feature_sg_seeYourPlan}  ${e_feature_sg_seeYourPlan}
-    Wait And Click  ${KU_W_feature_sg_seeYourPlan}
+    Click Button  ${KU_W_feature_sg_seeYourPlan}
 
     # Choose to get the plan and verify sign up option is shown
     Wait For Element Visibility  ${KU_W_feature_sg_getThisPlan}
     Scroll Untill View  ${KU_W_feature_sg_getThisPlan}
     Verify Element And Text  ${KU_W_feature_sg_getThisPlan}  ${e_feature_sg_getThisPlan}
-    Wait And Click  ${KU_W_feature_sg_getThisPlan}
+    Click Button  ${KU_W_feature_sg_getThisPlan}
     Sleep  2s
     ${isElementVisible} =  Run Keyword And Return Status  Visibility Of Signup Page
     Run Keyword If   ${isElementVisible}  Log To Console  Continue
-    ...    ELSE  Wait And Click  ${KU_W_feature_sg_getThisPlan}
+    ...    ELSE  Click Button  ${KU_W_feature_sg_getThisPlan}
     Verify Signup Page
     Navigate To Features Goals  
 
 Visibility Of Signup Page
     Wait For Element Visibility  ${KU_W_signupPageTitle}
     Element Should Be Visible  ${KU_W_signupPageTitle}
-
-Verify Profile Page Or Add Goal Action On Pre And PostLogin
-    [Arguments]  ${profile}
-    Sleep  5s
-    ${isAddGoalVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_feature_sg_needToInvest}
-    IF  ${isAddGoalVisible}
-        Log To Console  Navigating To Add Goal Page
-        Wait And Click  ${KU_W_feature_sg_seeYourPlan}
-        Wait And Click  ${KU_W_feature_sg_getThisPlan}
-        Wait And Click  ${KU_W_featureLink}
-        Wait And Click  ${KU_W_feature_post_setAGoalLink}       
-    ELSE
-        Verify Recommendation And Navigation  ${profile}
-    END
-
-Verify Name And Age Questionnaire On PreLogin
-    [Arguments]  ${qu1}  ${qu2}
-    ${isUserNameVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_feature_sg_Q_userName}
-    IF  ${isUserNameVisible}
-        Verify Question And Enter Input  ${KU_W_feature_sg_Q_userName}  ${qu1}  ${KU_W_feature_sg_userNameTxt}  ${e_feature_sg_userName}
-        Verify Question And Enter Input  ${KU_W_feature_sg_Q_userAge}  ${qu2}  ${KU_W_feature_sg_userAgeTxt}  ${e_feature_sg1_userAge}
-    ELSE
-        Log To Console  Navigating To Third Questionnaire
-    END
