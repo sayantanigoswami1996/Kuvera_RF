@@ -290,7 +290,7 @@ MF Portfolio Navigation Postlogin With KYC
     Verify PostLogin MF Portfolio Menu Navigation With KYC  
 
 # US Stocks Portfolio Navigation Postlogin Without KYC
-US Stocks Portfolio Navigation Postlogin Without KYC  Portfolio
+US Stocks Portfolio Navigation Postlogin Without KYC Portfolio
     [Tags]  TC42  Stage3  NONKYC
     [Teardown]  Navigate To Home Page
     Verify PostLogin Account Creation
