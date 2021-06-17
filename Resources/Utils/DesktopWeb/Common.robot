@@ -35,7 +35,7 @@ Resource    ../../../AppLocators/DesktopWeb/UnauthenticatedLinks/AmazonSaveShopL
 Resource    ../../../AppLocators/DesktopWeb/UnauthenticatedLinks/GoldRushLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/UnauthenticatedLinks/DhanterasGoldOfferLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/PostLoginCommonAppLocators.robot
-Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/HealthInsurancePostLoginLocators/KYCLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/KYCLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/HealthInsurancePostLoginLocators/PlanHealthInsuranceLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/HealthInsurancePostLoginLocators/HealthInsuranceLandingPageLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/CreateAccountForPostLoginLocators.robot
