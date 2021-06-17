@@ -60,13 +60,16 @@ Launch URL
     ...    ELSE IF  '${ENV}' == '${e_stage3}'  Open Browser  ${URL_stage3}  ${BROWSER}  alias=Kuvera
     ...    ELSE IF  '${ENV}' == '${e_stage2}'  Open Browser  ${URL_stage2}  ${BROWSER}  alias=Kuvera
     Log To Console  ${ENV}
-    # Maximize Browser Window
-    Set Window Size  ${1920}  ${1080}
+    Maximize Browser Window
+    #Set Window Size  ${1920}  ${1080}
     Set Selenium Implicit Wait  6s
     Reload Page
     Kuvera Web Close Regulatory Disclosure
     Run Keyword If    '${ENV}' == '${e_prod}'  Close Hello Bar
     ...    ELSE   Log To Console  Staging
+    Set Global Variable  ${cas_filePath}  ${CURDIR}/UploadFiles/CAS.pdf
+    Log To Console  ${cas_filePath}
+
     
 Welcome Page Should Be Open
     Run Keyword And Continue On Failure  Title Should Be  ${KU_W_title}

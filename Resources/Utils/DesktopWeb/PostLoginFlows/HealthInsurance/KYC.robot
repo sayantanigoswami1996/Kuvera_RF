@@ -38,7 +38,8 @@ KYC Form Details Page
     Wait For Element Visibility  ${KU_W_KYC_addSignatureSubTitle1}
     Verify Element And Text  ${KU_W_KYC_addSignatureSubTitle1}  ${e_KYC_addSignatureSubTitle1}
     Verify Element And Text  ${KU_W_KYC_addSignatureSubTitle2}  ${e_KYC_addSignatureSubTitle2}
-    Add Signature
+    #Add Signature
+    Sleep  5s
     Wait Scroll And Click Element  ${KU_W_KYC_OKBtn}
     Click Element  ${KU_W_KYC_popupOkBtn}
     Wait And Click  ${KU_W_KYC_portfolioNameField}
