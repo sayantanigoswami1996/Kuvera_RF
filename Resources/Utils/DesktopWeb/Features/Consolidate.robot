@@ -1,3 +1,7 @@
+** Settings ***
+
+Library     SeleniumLibrary
+
 *** Keywords ***
 
 Verify PreLogin Consolidate Page

@@ -10,6 +10,7 @@ ${e_postlogin_prod_KYCVerifiedEmail} =  moolya+automation@kuvera.in
 ${e_postlogin_stocks_importPopup} =  Import stocks
 ${e_postlogin_USStocks_linkYourVestedAcc} =  Link your Vested account  
 ${e_postlogin_stage3_MFSIPAcc} =  moolya+MFSIP@kuvera.in
+${e_postlogin_copyLink} =  Code copied to clipboard!
 
 # Application Locator 'KU_<locatorName>'
 # Kuvera :: Wealth Management Simplified
@@ -82,3 +83,17 @@ ${KU_W_postlogin_saveBtn} =  xpath=//button[normalize-space()='Save']
 ${KU_W_postlogin_okaySureBtn} =  xpath=//button[normalize-space()='OK, SURE']
 ${KU_W_postlogin_chooserajaGPortfolio} =  xpath=//span[normalize-space()='Rajagopal (MF+GOLD+SS+EPF))']
 ${KU_W_postlogin_rajaGPortfolio} =  xpath=(//span[normalize-space()='Rajagopal (MF+GOLD+SS+EPF))'])[1]
+${KU_W_postlogin_feature_referFriendTitle} =  xpath=//p[normalize-space()='Refer a Friend']
+${KU_W_postlogin_feature_referCoins} =  xpath=(//div[@class='tile-opt-sub-label-container'])[1]
+${KU_W_postlogin_authorizeAccessBtn} =  xpath=//button[normalize-space()='Authorize Access']
+${KU_W_postlogin_takeMeBackLink} =  xpath=//a[normalize-space()='No, Take me back']
+${KU_W_postlogin_resendBtn} =  xpath=//button[contains(text(),'Resend')]
+${KU_W_postlogin_revokeBtn} =  xpath=//button[normalize-space()='Revoke']
+${KU_W_postlogin_learnMoreLink} =  xpath=//a[normalize-space()='Learn More']
+${KU_W_postlogin_registrationBtn} =  xpath=//button[normalize-space()='Complete Registration']
+${KU_W_postlogin_feature_getCoinText} =  xpath=//p[@class='m-subheading']
+${KU_W_postlogin_feature_watchlistHeader} =  xpath=//h6[normalize-space()='Watchlist']
+${KU_W_postlogin_feature_copyLink} =  xpath=//div[@class='b-app-standard-social-options-button']//img
+${KU_W_postlogin_inProcessTab} =  xpath=//div[normalize-space()='In process']
+${KU_W_postlogin_recentTab} =  xpath=//div[normalize-space()='Recent']
+${KU_W_postlogin_addBankBtn} =  xpath=//button[normalize-space()='ADD BANK']

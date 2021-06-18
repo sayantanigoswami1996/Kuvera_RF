@@ -70,6 +70,7 @@ Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/InvestExplore/Po_USS
 Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/InvestExplore/Po_SaveSmart.robot
 Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/InvestExplore/Po_Crypto.robot
 Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/InvestExplore/Po_DigiGold.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/InvestExplore/Po_FD.robot
 Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Portfolio/Portfolio_MF.robot
 Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Portfolio/Portfolio_Stocks.robot
 Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Portfolio/Portfolio_USStocks.robot
@@ -77,3 +78,17 @@ Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Portfolio/Portfolio_
 Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Portfolio/Portfolio_Gold.robot
 Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Portfolio/Portfolio_EPF.robot
 Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Portfolio/Portfolio_FD.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Po_Features/Po_SetAGoal.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Po_Features/Po_TradeSmart.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Po_Features/Po_FamilyAccount.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Po_Features/Po_ManageAccount.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Po_Features/Po_TaxHarvesting.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Po_Features/Po_SaveTaxes.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/SetAGoal_LeftBar.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Po_Remit.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Po_LandingPage.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Settings/DeactivateAccount.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Rewards.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Cart.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Profile/Profile.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Profile/BankAccount.robot

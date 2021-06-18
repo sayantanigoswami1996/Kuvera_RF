@@ -1,21 +1,13 @@
 *** Keywords ***
 
-Verify Subscribe Button
-    [Arguments]  ${buttonTitle}  ${buttonText}  ${coinImage}
-    Scroll Untill View  ${buttonTitle}
-    Verify Element And Text  ${buttonTitle}  ${buttonText}
-    Verify Page Contains Image  ${coinImage}
-    Click Button  ${buttonTitle}
-    Verify Login Page
-
 Verify PreLogin Tax Harvesting Page
     Wait For Element Visibility  ${KU_W_feature_taxHarvestingLink}
     Click Element  ${KU_W_feature_taxHarvestingLink}
-    Verify Login And Signup Link
+    Verify Login And Signup On Prelogin
     Wait For Element Visibility  ${KU_W_feature_th_screenTitle}   
     Verify Element And Text  ${KU_W_feature_th_screenTitle}  ${e_feature_th_TitleText} 
     Verify Element And Text  ${KU_W_feature_th_screenContent}  ${e_feature_th_subTitleText} 
-    Verify Subscribe Button  ${KU_W_button}   ${e_feature_th_subscribeBtnText}  ${KU_W_feature_th_coinImage1}
+    Verify Login On Prelogin And Refer Friend On Postlogin  ${KU_W_button}  ${e_feature_th_subscribeBtnText}  ${KU_W_feature_th_coinImage1}  ${KU_W_postlogin_feature_getCoinText}
 
     # Tax Harvesting Definition
     Scroll Untill View  ${KU_W_feature_whatIsTHTitle}
@@ -55,7 +47,7 @@ Verify PreLogin Tax Harvesting Page
     Verify Element And Text  ${KU_W_feature_th_workCardDesc2}  ${e_feature_th_workCardDescText2}
     Verify Element And Text  ${KU_W_feature_th_workCardHeading3}  ${e_feature_th_workCardTitleText3}
     Verify Element And Text  ${KU_W_feature_th_workCardDesc3}  ${e_feature_th_workCardDescText3}
-    Verify Subscribe Button  ${KU_W_feature_th_subscribe2Btn}  ${e_feature_th_subscribeBtnText}  ${KU_W_feature_th_coinImage2}
+    Verify Login On Prelogin And Refer Friend On Postlogin  ${KU_W_feature_th_subscribe2Btn}  ${e_feature_th_subscribeBtnText}  ${KU_W_feature_th_coinImage2}  ${KU_W_postlogin_feature_getCoinText}
 
     # Pricing
     Verify Element And Text  ${KU_W_feature_th_pricingTite}  ${e_feature_th_pricingTitleText}
@@ -71,4 +63,20 @@ Verify PreLogin Tax Harvesting Page
 
     # Start Harvesting Today
     Verify Element And Text  ${KU_W_feature_th_startHarvestTitle}  ${e_feature_th_startHarvestText}
-    Verify Subscribe Button  ${KU_W_feature_th_subscribe3Btn}  ${e_feature_th_subscribeBtnText}  ${KU_W_feature_th_coinImage3}
+    Verify Login On Prelogin And Refer Friend On Postlogin  ${KU_W_feature_th_subscribe3Btn}  ${e_feature_th_subscribeBtnText}  ${KU_W_feature_th_coinImage3}  ${KU_W_postlogin_feature_getCoinText}
+
+
+Verify Login On Prelogin And Refer Friend On Postlogin
+    [Arguments]  ${buttonTitle}  ${buttonText}  ${coinImage}  ${navigatedPage}
+    ${isLoginButtonVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_login}
+    IF  ${isLoginButtonVisible}
+        Scroll Untill View  ${buttonTitle}
+        Verify Element And Text  ${buttonTitle}  ${buttonText}
+        Verify Page Contains Image  ${coinImage}
+        Click Button  ${buttonTitle}
+        Verify Login Page
+    ELSE
+        Wait And Click  ${buttonTitle}
+        Verify Page Contains Element  ${navigatedPage}
+        Go Back
+    END 

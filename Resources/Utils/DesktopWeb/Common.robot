@@ -51,7 +51,11 @@ Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/Portfolio/Por
 Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/Portfolio/Portfolio_EPFLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/Portfolio/Portfolio_FDLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/Portfolio/Portfolio_CommonLocators.robot
-
+Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/SettingsLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/RewardsLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/CartLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/Profile/ProfileLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/Profile/BankAccountLocators.robot
 
 *** Keywords ***
 
@@ -59,6 +63,8 @@ Launch URL
     Run keyword If  '${ENV}' == '${e_prod}'  Open Browser  ${URL_prod}  ${BROWSER}  alias=Kuvera
     ...    ELSE IF  '${ENV}' == '${e_stage3}'  Open Browser  ${URL_stage3}  ${BROWSER}  alias=Kuvera
     ...    ELSE IF  '${ENV}' == '${e_stage2}'  Open Browser  ${URL_stage2}  ${BROWSER}  alias=Kuvera
+    ...    ELSE IF  '${ENV}' == '${e_equity}'  Open Browser  ${URL_equity}  ${BROWSER}  alias=Kuvera
+    
     Log To Console  ${ENV}
     # Maximize Browser Window
     Set Window Size  ${1920}  ${1080}
@@ -83,6 +89,10 @@ Verify Element And Text
 Verify Page Contains Element
     [Arguments]  ${element}
     Run Keyword And Continue On Failure  Page Should Contain Element  ${element}
+
+Verify Page Do Not Contain Element
+    [Arguments]  ${element}
+    Run Keyword And Continue On Failure  Page Should Not Contain Element  ${element}
 
 Verify Page Contains Image
     [Arguments]  ${image}
@@ -350,7 +360,7 @@ Logout From App Post Signup
 Verify Mandate Screen
     Wait For Element Visibility  ${KU_W_postlogin_mandate_doItLaterBtn}
     Element Should Be Visible  ${KU_W_postlogin_mandate_doItLaterBtn}
-
+    
 Login 
     [Arguments]  ${email}  ${pwd}
     Log To Console  Login 
@@ -466,6 +476,33 @@ Verify Import Now Banner
 Verify User Login With Investment
     Wait And Click  ${KU_W_login}
     Login  ${e_postlogin_stage3_MFSIPAcc}  ${e_postlogin_pwd}
+
+Verify Compelete Registration Screen For NONKYC Flow
+    [Arguments]  ${title}  ${accSetupDesc}  ${accSetupMSg}  ${button}
+    Verify Page Contains Element  ${title}
+    Verify Element And Text  ${accSetupDesc}  ${accSetupMSg}
+    Wait And Click  ${button}
+    Verify Page Contains Element  ${KU_W_KYC_PANTextField} 
+    Go Back
+
+Verify Refer Coin Page From Features
+    [Arguments]  ${coinTitle}
+    Verify Page Contains Element  ${coinTitle}
+    Verify Page Contains Element  ${KU_W_postlogin_feature_referFriendTitle}
+    Verify Page Contains Element  ${KU_W_postlogin_feature_referCoins}
+    Wait And Click  ${KU_W_postlogin_feature_referFriendTitle}
+    Wait For Element Visibility  ${KU_W_IF_inviteFriendsTitle}
+    Verify Element And Text  ${KU_W_IF_inviteFriendsTitle}  ${e_IF_inviteFriendsTitle}
+    Go Back
+    Go Back
+
+Navigate To Profile And Verify Title
+    [Arguments]  ${tab}  ${title}  ${subtitle}
+    Wait And Click  ${KU_W_ca_caretDropdown}
+    Wait And Click  ${KU_W_profile_profileLink}
+    Wait And Click  ${tab} 
+    Verify Page Contains Element  ${title}
+    Verify Page Contains Element  ${subtitle}
        
 Close Web Application
     Close All Browser

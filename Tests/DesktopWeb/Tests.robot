@@ -14,7 +14,6 @@ Suite Teardown  Close All Browsers
 # To run specific test on Stage3 : robot --variable BROWSER:headlesschrome --variable ENV:Stage3 -d Results -i TC20 Tests/DesktopWeb/Tests.robot
 
 *** Test Cases ***
-
 # Landing Page widgets verfication
 Landing Page Widgets Verification
     [Tags]  TC01  Prod  Stage3  Stage2
@@ -50,7 +49,7 @@ Invest Tiles And Widgets Navigation
 
 # Invest Mutual Fund
 Invest Mutual Fund Navigation
-    [Tags]  TC06  Prod  Stage3  Stage2
+    [Tags]  TC06  Prod  Stage3  Stage2  MutualFund
     [Teardown]  Navigate To Home Page
     Verify PreLogin Mutual Fund Landing Page
 
@@ -135,14 +134,14 @@ Dhanteras Gold Offer Navigation
 # ----------------- Post Login -----------------
 # Account Creation and Fill In KYC From Dashboard
 Create Account And Fill In KYC
-    [Tags]  TC21  Stage3
+    [Tags]  TC21  Stage3  KYC
     [Teardown]  Navigate To Home Page
     Verify PostLogin Account Creation
     Verify Fill In Of KYC Form Details
 
 # Create Account And Health Insurance End To End Flow
 Health Insurance Navigation
-    [Tags]  TC22  Stage3
+    [Tags]  TC22  Stage3  KYC
     [Teardown]  Navigate To Home Page
     Verify PostLogin Account Creation
     Verify PostLogin Insure Landing Page
@@ -151,28 +150,28 @@ Health Insurance Navigation
 
 # Complete PAN Verified KYC Navigation
 PAN Verified KYC Navigation
-    [Tags]  TC23  Stage3
+    [Tags]  TC23  Stage3  KYC
     [Teardown]  Navigate To Home Page
     Verify PostLogin Account Creation
     Verify PAN Verifed KYC Details
 
 # Complete  UnVerified KYC Navigation
 UnVerified KYC Navigation
-    [Tags]  TC24  Stage3
+    [Tags]  TC24  Stage3  KYC
     [Teardown]  Navigate To Home Page
     Verify PostLogin Account Creation
     Verify Unverifed KYC Navigation
 
 # Dashboard Widgets Navigation
 Dashboard Widgets Navigation
-    [Tags]  TC25  Stage3
+    [Tags]  TC25  Stage3  NONKYC
     [Teardown]  Navigate To Home Page
     Verify PostLogin Account Creation
     Verify PostLogin Dashboard Widgets Navigation
 
 # Top And Left Bar Navigation
 Top And Left Bar Navigation
-    [Tags]  TC26  Stage3
+    [Tags]  TC26  Stage3  NONKYC
     [Teardown]  Navigate To Home Page
     Verify PostLogin Account Creation
     Verify PostLogin Top Headers Verification
@@ -180,35 +179,35 @@ Top And Left Bar Navigation
 
 # Invite Friends Menu Navigation
 Invite Friends Menu Navigation
-    [Tags]  TC27  Stage3
+    [Tags]  TC27  Stage3  NONKYC
     [Teardown]  Navigate To Home Page
     Verify PostLogin Account Creation
     Verify PostLogin Invite Friends Menu Navigation
 
 # Manage Folio Menu Navigation Without KYC
 Manage Folio Menu Navigation Without KYC
-    [Tags]  TC28  Stage3
+    [Tags]  TC28  Stage3  NONKYC
     [Teardown]  Navigate To Home Page
     Verify PostLogin Account Creation
     Verify PostLogin Manage Folio Menu Navigation Without KYC
 
 # Manage Folio Menu Navigation With KYC
 Manage Folio Menu Navigation With KYC
-    [Tags]  TC29  Stage3
+    [Tags]  TC29  Stage3  KYC
     [Teardown]  Navigate To Home Page
     Verify PostLogin Account Creation
     Verify PostLogin Manage Folio Navigation With KYC
 
 # Reports Menu Navigation Without KYC
 Reports Menu Navigation Without KYC
-    [Tags]  TC30  Stage3
+    [Tags]  TC30  Stage3  NONKYC
     [Teardown]  Navigate To Home Page
     Verify PostLogin Account Creation
     Verify PostLogin Reports Menu Navigation Without KYC 
 
 # Reports Menu Navigation With KYC
 Reports Menu Navigation With KYC
-    [Tags]  TC31  Stage3
+    [Tags]  TC31  Stage3  KYC
     [Teardown]  Navigate To Home Page
     Verify PostLogin Account Creation
     Verify PostLogin Reports Menu Navigation With KYC 
@@ -223,7 +222,7 @@ Invest Tiles Navigation Postlogin
 
 # MF Non Transactional Navigation Postlogin 
 MF Non Transactional Navigation Postlogin
-    [Tags]  TC33  Prod  Stage2
+    [Tags]  TC33  Prod  Stage2  MutualFund
     [Teardown]  Navigate To Home Page
     Verify Login On Prod With Verifed KYC Account
     Verify PostLogin MF Menu Navigation
@@ -252,9 +251,10 @@ SaveSmart Navigation Postlogin
 
 # Crypto Navigation Postlogin 
 Crypto Navigation Postlogin
-    [Tags]  TC37  Prod  Stage2
+    [Tags]  TC37  Stage3  KYC
     [Teardown]  Navigate To Home Page
-    Verify Login On Prod With Verifed KYC Account
+    Verify PostLogin Account Creation
+    Verify PAN Verifed KYC Details
     Verify PostLogin Crypto Menu Navigation
 
 # Digital Gold SIP and Track Navigation Postlogin 
@@ -290,7 +290,7 @@ MF Portfolio Navigation Postlogin With KYC
     Verify PostLogin MF Portfolio Menu Navigation With KYC  
 
 # US Stocks Portfolio Navigation Postlogin Without KYC
-US Stocks Portfolio Navigation Postlogin Without KYC Portfolio
+US Stocks Portfolio Navigation Postlogin Without KYC
     [Tags]  TC42  Stage3  NONKYC
     [Teardown]  Navigate To Home Page
     Verify PostLogin Account Creation
@@ -357,3 +357,84 @@ FD Portfolio Navigation Postlogin With KYC
     Verify PAN Verifed KYC Details
     Verify PostLogin FD Portfolio Menu Navigation With KYC
 #---------------------End Of Portfolio-----------------------------  
+
+# Set A Goal Navigation Postlogin Under Left Bar
+Set A Goal Navigation Postlogin Under Left Bar
+    [Tags]  TC51  Stage3  KYC  ML05
+    [Teardown]  Navigate To Home Page
+    Verify PostLogin Account Creation
+    Verify PAN Verifed KYC Details
+    Verify PostLogin Set A Goal Under Left Bar
+
+# Remit Menu Navigation Postlogin
+Remit Menu Navigation Postlogin
+    [Tags]  TC52  Stage3  KYC  ML05
+    [Teardown]  Navigate To Home Page
+    Verify PostLogin Account Creation
+    Verify PAN Verifed KYC Details
+    Verify PostLogin Remit Menu Navigation 
+
+# Postlogin Menu Navigation Of Features Without KYC
+Postlogin Navigation Of Features
+    [Tags]  TC53  Stage3  NONKYC  ML05
+    [Teardown]  Navigate To Home Page
+    Verify PostLogin Account Creation
+    PostLogin Feature Sub Header Navigation Without KYC
+
+# Postlogin Navigation Of Features With KYC
+Postlogin Navigation Of Features
+    [Tags]  TC54  Stage3  KYC
+    [Teardown]  Navigate To Home Page
+    Verify PostLogin Account Creation
+    Verify PAN Verifed KYC Details
+    PostLogin Feature Sub Header Navigation With KYC
+
+# Deactivate Account
+Deactivate Signed Up Account
+    [Tags]  TC55  Stage3
+    Verify PostLogin Account Creation
+    Verify PostLogin Account Deactivation
+
+# Rewards Menu Navigation Postlogin
+Rewards Menu Navigation Postlogin
+    [Tags]  TC56  Stage3  NONKYC
+    [Teardown]  Navigate To Home Page
+    Verify PostLogin Account Creation
+    Verify PostLogin Rewards Menu Navigation 
+
+# Cart Menu Navigation Postlogin
+Cart Menu Navigation Postlogin
+    [Tags]  TC57  Stage3  NONKYC
+    [Teardown]  Navigate To Home Page
+    Verify PostLogin Account Creation
+    Verify PostLogin Cart Menu Navigation 
+
+# Profile Menu Navigation Postlogin With KYC
+Profile Menu Navigation Postlogin With KYC
+    [Tags]  TC58  Stage3  KYC
+    [Teardown]  Navigate To Home Page
+    Verify PostLogin Account Creation
+    Verify PAN Verifed KYC Details
+    Verify PostLogin Profile Menu Navigation With KYC
+
+# Profile Menu Navigation Postlogin Without KYC
+Profile Menu Navigation Postlogin Without KYC
+    [Tags]  TC59  Stage3  NONKYC
+    [Teardown]  Navigate To Home Page
+    Verify PostLogin Account Creation
+    Verify PostLogin Profile Menu Navigation Without KYC
+
+# Bank Account Menu Navigation Postlogin Without KYC
+Bank Account Navigation Postlogin Without KYC
+    [Tags]  TC60  Stage3  NONKYC
+    [Teardown]  Navigate To Home Page
+    Verify PostLogin Account Creation
+    Verify PostLogin Bank Account Menu Navigation Without KYC 
+
+# Bank Account Menu Navigation Postlogin With KYC
+Bank Account Navigation Postlogin With KYC
+    [Tags]  TC61  Stage3  KYC
+    [Teardown]  Navigate To Home Page
+    Verify PostLogin Account Creation
+    Verify PAN Verifed KYC Details
+    Verify PostLogin Bank Account Menu Navigation With KYC   

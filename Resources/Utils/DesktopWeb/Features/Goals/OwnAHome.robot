@@ -19,12 +19,11 @@ Verify Own A Home Questionnaire
     Wait For Element Visibility  ${KU_W_feature_sg_questionScreen}
     
     # Verify the questionnaires title and enter the input values
-    Verify Question And Enter Input  ${KU_W_feature_sg_Q_userName}  ${query1}  ${KU_W_feature_sg_userNameTxt}  ${e_feature_sg_userName}
-    Verify Question And Enter Input  ${KU_W_feature_sg_Q_userAge}  ${query2}  ${KU_W_feature_sg_userAgeTxt}  ${e_feature_sg1_userAge}
+    Verify Name And Age Questionnaire On PreLogin  ${query1}  ${query2}
     Verify Question And Enter Input  ${KU_W_feature_sg_Q3}  ${query3}  ${KU_W_feature_sg_homeCostTxt}  ${e_feature_sg1_cost}
     Verify Question And Enter Input  ${KU_W_feature_sg_Q4}  ${query4}  ${KU_W_feature_sg_goalDurationTxt}  ${e_feature_sg1_goalDuration}
     Verify Question Title  ${KU_W_feature_sg_Q5}  ${query5}
-    Click Button  ${KU_W_feature_sg_yes}
+    Wait Scroll And Click Element  ${KU_W_feature_sg_yes}
     Verify Question And Enter Input  ${KU_W_feature_sg_Q6}  ${query6}  ${KU_W_feature_sg_downPaymentTxt}  ${e_feature_sg1_downPayment}
     Verify Question And Enter Input  ${KU_W_feature_sg_Q7}  ${query7}  ${KU_W_feature_sg_investUpfrontTxt}  ${e_feature_sg1_investUpfront}
-    Verify Recommendation And Navigation  ${KU_W_feature_sg_married}
+    Verify Profile Page Or Add Goal Action On Pre And PostLogin  ${KU_W_feature_sg_married}
