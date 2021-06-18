@@ -2,18 +2,23 @@
 
 Verify PostLogin EPF Portfolio Menu Navigation With KYC
     Log To Console  EPF Portfolio Navigation With KYC
-    Navigate To PortFolio Tab And Verify Investment Title  ${KU_W_portfolio_EPF_title}  ${e_portfolio_EPF_title}  ${KU_W_portfolio_EPF_subtitle}  ${e_portfolio_EPF_subTitle}
+    Wait And Click  ${KU_W_postlogin_portfolioTab}
+    Sleep  5s
     ${isElementVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_portfolio_EPF_manageEPF}
     IF  ${isElementVisible}
         Remove Account
     ELSE
-        Wait And Click  ${KU_W_portfolio_EPF_title}
+        Log To Console  Enter EPF Details
     END
-    
+    Verify Page Contains Element  ${KU_W_portfolio_startInvesting}
+    Scroll Untill View  ${KU_W_portfolio_EPF_subtitle}
+    Verify Element And Text  ${KU_W_portfolio_EPF_title}  ${e_portfolio_EPF_title}  
+    Verify Element And Text  ${KU_W_portfolio_EPF_subtitle}  ${e_portfolio_EPF_subTitle}
+    Wait And Click  ${KU_W_portfolio_EPF_title}
     Verify Import EPF Popup And Enter Details
     Wait And Click  ${KU_W_postlogin_importPortfolioTab}
     Wait And Click  ${KU_W_dashboard_trackInvest_EPF}
-    FOR  ${i}  IN RANGE  1   20
+    FOR  ${i}  IN RANGE  1   40
         ${isElementVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_portfolio_EPF_manageEPF}
         IF  ${isElementVisible}
             Exit For Loop
@@ -35,9 +40,13 @@ Verify Import EPF Popup And Enter Details
     Verify Element And Text  ${KU_W_portfolio_EPF_pwdContent}  ${e_portfolio_EPF_pwdContent}
     Input Text  ${KU_W_portfolio_EPF_UANField}  ${e_portfolio_EPF_UANNum}
     Input Text  ${KU_W_postlogin_pwdField}  ${e_portfolio_EPF_UANPwd}
+    Wait And Click  ${KU_W_postlogin_checkBox}
     Wait And Click  ${KU_W_postlogin_submitBtn}
+    Verify Page Contains Element  ${KU_W_portfolio_EPF_waitingMsg}
+    Verify Page Contains Element  ${KU_W_portfolio_EPF_waitingSubMsg}
 
 Remove Account
     Wait And Click  ${KU_W_portfolio_EPF_manageEPF}
     Wait And Click  ${KU_W_portfolio_EPF_removeEPFAcc}
     Wait And Click  ${KU_W_portfolio_EPF_removeEPFPopup}
+    Verify Element And Text  ${KU_W_toastMssg}  ${e_portfolio_EPF_removeaccToastMsg}

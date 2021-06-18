@@ -52,7 +52,7 @@ Verify Upload CAS File
     Verify Element And Text  ${KU_W_portfolio_mf_uploadCASLabel}  ${e_portfolio_mf_uploadCAS}
     Verify Page Contains Element  ${KU_W_portfolio_mf_CASPwdLabel}
     Sleep  2s
-    Choose File  ${KU_W_portfolio_mf_uploadFile}  ${e_portfolio_mf_CASPath}
+    Choose File  ${KU_W_portfolio_mf_uploadFile}  ${cas_filePath}
     Sleep  3s
     Input Text  ${KU_W_postlogin_pwdField}  ${e_portfolio_mf_CASPwd}
     Wait And Click  ${KU_W_postlogin_submitBtn}

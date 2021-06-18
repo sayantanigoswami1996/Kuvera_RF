@@ -19,7 +19,7 @@ Verify PostLogin Account Creation
     Wait Scroll And Click Element  ${KU_W_signup_inviteCodeTxt}
     Input Text  ${KU_W_signup_inviteCodeTxt}  ${e_ca_inviteCode}
     Click Element  ${KU_W_ca_signupBtn}
-    Sleep  2s
+    Sleep  3s
     Enter OTP Postlogin
     Wait For Element Visibility  ${KU_W_ca_dashboardHeader}
     Verify Page Contains Element  ${KU_W_ca_dashboardHeader}

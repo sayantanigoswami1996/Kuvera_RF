@@ -44,7 +44,7 @@ Resource    ../../Resources/Utils/DesktopWeb/Features/Consolidate.robot
 Resource    ../../Resources/Utils/DesktopWeb/Footer.robot
 Resource    ../../Resources/Utils/DesktopWeb/FundHouse.robot
 Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/CreateAccountForPostLogin.robot
-Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/HealthInsurance/KYC.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/KYCFlows/KYC.robot
 Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/HealthInsurance/PlanHealthInsurance.robot
 Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/HealthInsurance/HealthInsuranceLandingPage.robot
 Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/HealthInsurance/LoginPostHealthInsuranceClaim.robot
@@ -93,3 +93,8 @@ Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Settings/DeactivateA
 Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Settings/TwoFactorAuthentication.robot
 Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/UserWithInvestment/MF.robot
 Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Rewards.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Cart.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Profile/Profile.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Profile/BankAccount.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Profile/Nominees.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Blog.robot

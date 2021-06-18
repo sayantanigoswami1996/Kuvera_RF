@@ -154,7 +154,6 @@ ${KU_W_invest_mf_subcategoryBox} =  xpath=(//div[@class='b-filter-fund__box'])[2
 ${KU_W_invest_mf_categoryName} =  xpath=(//div[@class='b-mutual-funds-explore__fund-row-industry'])[1]
 ${KU_W_invest_mf_subcategoryName} =  xpath=(//div[@class='b-mutual-funds-explore__fund-row-content-industry-wrapper']//div)[6]
 # Postlogin - In Process Tab
-${KU_W_invest_mf_inProcessTab} =  xpath=//div[normalize-space()='In process']
 ${KU_W_invest_mf_inProcessOrders} =  xpath=//h1[normalize-space()='In process orders']
 ${KU_W_invest_mf_processOrderRow} =  xpath=(//div[@class='b-order-row order-status__row'])[1]
 ${KU_W_invest_mf_boughtFundName} =  xpath=//div[@class='b-order-row__title']

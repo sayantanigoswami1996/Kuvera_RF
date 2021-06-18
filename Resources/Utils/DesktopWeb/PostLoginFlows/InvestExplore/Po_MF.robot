@@ -267,7 +267,7 @@ Verify OTP Message With 2FA Account
 
 Verify In Process Page After Placing Order
     Wait And Click  ${KU_W_postlogin_cartBtn}
-    Wait And Click  ${KU_W_invest_mf_inProcessTab} 
+    Wait And Click  ${KU_W_postlogin_inProcessTab}
     Wait For Element Visibility   ${KU_W_invest_mf_inProcessOrders}
     Verify Page Contains Element  ${KU_W_invest_mf_inProcessOrders} 
     Verify Page Contains Element  ${KU_W_invest_mf_processOrderRow} 

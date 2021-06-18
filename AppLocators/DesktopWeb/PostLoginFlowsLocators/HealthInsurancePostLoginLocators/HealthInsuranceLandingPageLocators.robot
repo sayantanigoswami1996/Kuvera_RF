@@ -1,6 +1,5 @@
 *** Variables *** 
 # Application Expected Values 'e_<variableName
-# Application Locator 'KU_<locatorName>'
 ${e_HI_missingPANTitle} =  PAN missing
 ${e_HI_missingPANSubTitle} =  Submit PAN to enable Health Protect.
 ${e_HI_premiumText} =  Premium

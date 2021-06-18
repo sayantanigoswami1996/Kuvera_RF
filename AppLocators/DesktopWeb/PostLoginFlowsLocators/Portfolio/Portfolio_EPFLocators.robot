@@ -7,6 +7,7 @@ ${e_portfolio_EPF_pwdContent} =  By not storing your password, you agree to upda
 ${e_portfolio_EPF_UANNum} =  100728131285
 ${e_portfolio_EPF_UANPwd} =  Vamsi$ruti1317@
 ${e_portfolio_EPF_tab} =  EPF
+${e_portfolio_EPF_removeaccToastMsg} =  Your EPF account has been successfully removed
 
 # Application Locator 'KU_<locatorName>'
 # Gold Portfolio Navigation Page
@@ -22,3 +23,5 @@ ${KU_W_portfolio_EPF_EPFTab} =  xpath=//div[@class='b-portfolio-tab__key b-portf
 ${KU_W_portfolio_EPF_manageEPF} =  xpath=//button[normalize-space()='Manage EPF']
 ${KU_W_portfolio_EPF_removeEPFAcc} =  xpath=//div[contains(text(),'Remove account')]
 ${KU_W_portfolio_EPF_removeEPFPopup} =  xpath=//button[normalize-space()='Remove EPF']
+${KU_W_portfolio_EPF_waitingMsg} =  xpath=//div[contains(text(),'We will notify you by email once EPF data is updated.')]
+${KU_W_portfolio_EPF_waitingSubMsg} =  xpath=//div[contains(text(),'Usually takes a few hours to update')]

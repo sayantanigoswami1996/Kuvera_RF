@@ -35,7 +35,7 @@ Resource    ../../../AppLocators/DesktopWeb/UnauthenticatedLinks/AmazonSaveShopL
 Resource    ../../../AppLocators/DesktopWeb/UnauthenticatedLinks/GoldRushLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/UnauthenticatedLinks/DhanterasGoldOfferLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/PostLoginCommonAppLocators.robot
-Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/HealthInsurancePostLoginLocators/KYCLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/KYCLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/HealthInsurancePostLoginLocators/PlanHealthInsuranceLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/HealthInsurancePostLoginLocators/HealthInsuranceLandingPageLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/CreateAccountForPostLoginLocators.robot
@@ -54,6 +54,11 @@ Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/Portfolio/Por
 Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/SIPSTPSWPLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/SettingsLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/RewardsLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/CartLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/Profile/ProfileLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/Profile/BankAccountLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/Profile/NomineesLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/BlogLocators.robot
 
 *** Keywords ***
 
@@ -71,6 +76,7 @@ Launch URL
     Kuvera Web Close Regulatory Disclosure
     Run Keyword If    '${ENV}' == '${e_prod}'  Close Hello Bar
     ...    ELSE   Log To Console  Staging
+    Set Global Variable  ${cas_filePath}  ${CURDIR}\\UploadFiles\\CAS.pdf
     
 Welcome Page Should Be Open
     Run Keyword And Continue On Failure  Title Should Be  ${KU_W_title}
@@ -492,6 +498,33 @@ Verify Refer Coin Page From Features
     Verify Element And Text  ${KU_W_IF_inviteFriendsTitle}  ${e_IF_inviteFriendsTitle}
     Go Back
     Go Back
+
+Navigate To Profile And Verify Title
+    [Arguments]  ${tab}  ${title}  ${subtitle}
+    Wait And Click  ${KU_W_ca_caretDropdown}
+    Wait And Click  ${KU_W_profile_profileLink}
+    Wait And Click  ${tab} 
+    Verify Page Contains Element  ${title}
+    Verify Page Contains Element  ${subtitle}
+
+Add KYC Without Nominees
+    Wait And Click  ${KU_W_KYC_IFSCField}
+    Input Text  ${KU_W_KYC_IFSCField}  ${e_bankAcc_IFSC}
+    Wait And Click  ${KU_W_KYC_bankAccField}
+    Input Text  ${KU_W_KYC_bankAccField}  ${e_bankAcc_accNum}
+    Wait And Click  ${KU_W_KYC_reBankAccField} 
+    Input Text  ${KU_W_KYC_reBankAccField}  ${e_bankAcc_accNum}
+    Wait And Click  ${KU_W_KYC_bankCertifyCheckBox} 
+    Wait And Click  ${KU_W_KYC_bankConfirmedCheckBox}
+
+Add Nominee Details
+    Wait And Click  ${KU_W_KYC_nomineeName} 
+    Input Text  ${KU_W_KYC_nomineeName}  ${e_KYC_nomineeName}
+    Wait And Click  ${KU_W_KYC_nomineeRelationshipField}
+    Wait And Click  ${KU_W_KYC_nomineeRelationship}
+    Enter DOB  ${KU_W_KYC_dateField}  ${e_KYC_nomineeDOB}  ${KU_W_KYC_monthField}  ${e_KYC_nomineeMOB}  ${KU_W_KYC_yearField}  ${e_KYC_nomineeYOB}
+    Wait And Click  ${KU_W_KYC_nomineeAddress} 
+    Input Text  ${KU_W_KYC_nomineeAddress}  ${e_KYC_address1Field}
        
 Close Web Application
     Close All Browser

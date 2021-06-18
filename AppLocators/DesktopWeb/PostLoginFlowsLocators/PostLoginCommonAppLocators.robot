@@ -94,3 +94,7 @@ ${KU_W_postlogin_registrationBtn} =  xpath=//button[normalize-space()='Complete 
 ${KU_W_postlogin_feature_getCoinText} =  xpath=//p[@class='m-subheading']
 ${KU_W_postlogin_feature_watchlistHeader} =  xpath=//h6[normalize-space()='Watchlist']
 ${KU_W_postlogin_feature_copyLink} =  xpath=//div[@class='b-app-standard-social-options-button']//img
+${KU_W_postlogin_inProcessTab} =  xpath=//div[normalize-space()='In process']
+${KU_W_postlogin_recentTab} =  xpath=//div[normalize-space()='Recent']
+${KU_W_postlogin_addBankBtn} =  xpath=//button[normalize-space()='ADD BANK']
+${KU_W_postlogin_updateBtn} =  xpath=//button[normalize-space()='Update']

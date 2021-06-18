@@ -1,11 +1,6 @@
 *** Variables *** 
 # Application Expected Values 'e_<variableName>'
 ${e_rewards_earnBannerTitle} =  Earn ₹201 in digital gold for each friend who invests ₹5,000 or more.
-${e_rewards_addAccNavigatedTitle} =  Invest with Your Loved Ones       
-${e_rewards_trackInvestTitle} =  Track external investment
-${e_rewards_trackInvestSubTitle} =  MF, EPF, stocks & more in one place.Take better investment decision.
-${e_rewards_newsAndAdviceTitle} =  News & advice
-${e_rewards_newsScreenTitle} =  Kuvera - Wealth Management, Simplified
 # Application Locator 'KU_<locatorName>'
 # Kuvera :: Wealth Management Simplified
 ${KU_W_rewards_link} =  xpath=//a[normalize-space()='Rewards']
@@ -56,8 +51,6 @@ ${KU_W_rewards_TSTitle} =  xpath=//h6[normalize-space()='TradeSmart']
 ${KU_W_rewards_TSImg} =  xpath=//img[@class='b-scratch-win__unlock-features--icon-tradesmart']
 ${KU_W_rewards_TSSubtitle} =  xpath=//p[text()='Switch to Direct seamlessly. Know tax and exit costs before placing a sell order.']
 ${KU_W_rewards_TSCoins} =  xpath=//div[contains(text(),'300 coins')]
-
-
 ${KU_W_rewards_FATitle} =  xpath=//h6[normalize-space()='Family account']
 ${KU_W_rewards_FAImg} =  xpath=//img[@class='b-scratch-win__unlock-features--icon-familyaccount']
 ${KU_W_rewards_FACoins} =  xpath=//div[contains(text(),'200 coins')]

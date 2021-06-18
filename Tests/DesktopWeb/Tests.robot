@@ -381,14 +381,6 @@ Set A Goal Navigation Postlogin Under Left Bar
     Verify PAN Verifed KYC Details
     Verify PostLogin Set A Goal Under Left Bar
 
-# Loan Menu Navigation Postlogin
-Loan Menu Navigation Postlogin
-    [Tags]  TC54  Stage3  KYC
-    [Teardown]  Navigate To Home Page
-    Verify PostLogin Account Creation
-    Verify PAN Verifed KYC Details
-    Verify PostLogin Loans Menu Navigation 
-
 # Remit Menu Navigation Postlogin
 Remit Menu Navigation Postlogin
     [Tags]  TC55  Stage3  KYC
@@ -481,9 +473,69 @@ MF Navigation Postlogin With SIP
     Verify User Login With Investment
     Verify PostLogin MF Navigation With SIP 
 #-------------- End of MF- User With Investment---------------------
+
 # Rewards Menu Navigation Postlogin
 Rewards Menu Navigation Postlogin
     [Tags]  TC67  Stage3  NONKYC
     [Teardown]  Navigate To Home Page
     Verify PostLogin Account Creation
     Verify PostLogin Rewards Menu Navigation 
+
+# Cart Menu Navigation Postlogin
+Cart Menu Navigation Postlogin
+    [Tags]  TC68  Stage3  NONKYC
+    [Teardown]  Navigate To Home Page
+    Verify PostLogin Account Creation
+    Verify PostLogin Cart Menu Navigation 
+
+# Profile Menu Navigation Postlogin With KYC
+Profile Menu Navigation Postlogin With KYC
+    [Tags]  TC69  Stage3  KYC
+    [Teardown]  Navigate To Home Page
+    Verify PostLogin Account Creation
+    Verify PAN Verifed KYC Details
+    Verify PostLogin Profile Menu Navigation With KYC
+
+# Profile Menu Navigation Postlogin Without KYC
+Profile Menu Navigation Postlogin Without KYC
+    [Tags]  TC70  Stage3  NONKYC
+    [Teardown]  Navigate To Home Page
+    Verify PostLogin Account Creation
+    Verify PostLogin Profile Menu Navigation Without KYC
+
+# Blog Menu Navigation Postlogin Without KYC
+Blog Menu Navigation Postlogin Without KYC
+    [Tags]  TC71  Stage3  NONKYC
+    [Teardown]  Navigate To Home Page
+    Verify PostLogin Account Creation
+    Verify PostLogin Profile Menu Navigation Without KYC 
+
+# Bank Account Menu Navigation Postlogin Without KYC
+Bank Account Navigation Postlogin Without KYC
+    [Tags]  TC72  Stage3  NONKYC
+    [Teardown]  Navigate To Home Page
+    Verify PostLogin Account Creation
+    Verify PostLogin Bank Account Menu Navigation Without KYC 
+
+# Bank Account Menu Navigation Postlogin With KYC
+Bank Account Navigation Postlogin With KYC
+    [Tags]  TC73  Stage3  KYC
+    [Teardown]  Navigate To Home Page
+    Verify PostLogin Account Creation
+    Verify PAN Verifed KYC Details
+    Verify PostLogin Bank Account Menu Navigation With KYC 
+
+# Nominees Menu Navigation Postlogin Without KYC
+Nominees Navigation Postlogin Without KYC
+    [Tags]  TC74  Stage3  NONKYC
+    [Teardown]  Navigate To Home Page
+    Verify PostLogin Account Creation
+    Verify PostLogin Nominees Menu Navigation Without KYC   
+
+# Nominees Menu Navigation Postlogin With KYC
+Nominees Navigation Postlogin With KYC
+    [Tags]  TC75  Stage3  KYC
+    [Teardown]  Navigate To Home Page
+    Verify PostLogin Account Creation
+    Verify KYC Flow Without Nominees
+    Verify PostLogin Nominees Menu Navigation With KYC   
