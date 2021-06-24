@@ -503,6 +503,30 @@ Navigate To Profile And Verify Title
     Wait And Click  ${tab} 
     Verify Page Contains Element  ${title}
     Verify Page Contains Element  ${subtitle}
+
+Add KYC Without Nominees
+    Wait And Click  ${KU_W_KYC_IFSCField}
+    Input Text  ${KU_W_KYC_IFSCField}  ${e_bankAcc_IFSC}
+    Wait And Click  ${KU_W_KYC_bankAccField}
+    Input Text  ${KU_W_KYC_bankAccField}  ${e_bankAcc_accNum}
+    Wait And Click  ${KU_W_KYC_reBankAccField} 
+    Input Text  ${KU_W_KYC_reBankAccField}  ${e_bankAcc_accNum}
+    Wait And Click  ${KU_W_KYC_bankCertifyCheckBox} 
+    Wait And Click  ${KU_W_KYC_bankConfirmedCheckBox}
+
+Add Nominee Details
+    Wait And Click  ${KU_W_KYC_nomineeName} 
+    Input Text  ${KU_W_KYC_nomineeName}  ${e_KYC_nomineeName}
+    Wait And Click  ${KU_W_KYC_nomineeRelationshipField}
+    Wait And Click  ${KU_W_KYC_nomineeRelationship}
+    Enter DOB  ${KU_W_KYC_dateField}  ${e_KYC_nomineeDOB}  ${KU_W_KYC_monthField}  ${e_KYC_nomineeMOB}  ${KU_W_KYC_yearField}  ${e_KYC_nomineeYOB}
+    Wait And Click  ${KU_W_KYC_nomineeAddress} 
+    Input Text  ${KU_W_KYC_nomineeAddress}  ${e_KYC_address1Field}
+
+Verify Account Setup Popup
+    Verify Page Contains Element  ${KU_W_postlogin_completeAccSetup}
+    Verify Page Contains Element  ${KU_W_postlogin_completeAccSetupDesc}
+    Wait And Click  ${KU_W_postlogin_OkBtn}
        
 Close Web Application
     Close All Browser
