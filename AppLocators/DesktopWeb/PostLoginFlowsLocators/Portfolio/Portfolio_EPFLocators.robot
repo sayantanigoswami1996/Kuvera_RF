@@ -25,3 +25,4 @@ ${KU_W_portfolio_EPF_removeEPFAcc} =  xpath=//div[contains(text(),'Remove accoun
 ${KU_W_portfolio_EPF_removeEPFPopup} =  xpath=//button[normalize-space()='Remove EPF']
 ${KU_W_portfolio_EPF_waitingMsg} =  xpath=//div[contains(text(),'We will notify you by email once EPF data is updated.')]
 ${KU_W_portfolio_EPF_waitingSubMsg} =  xpath=//div[contains(text(),'Usually takes a few hours to update')]
+${KU_W_portfolio_EPF_EPFPortfolioTab} =  xpath=//div[@class='b-portfolio-tab-container']//div[3]

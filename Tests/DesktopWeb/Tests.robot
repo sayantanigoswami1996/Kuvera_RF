@@ -360,7 +360,7 @@ FD Portfolio Navigation Postlogin With KYC
 
 # Set A Goal Navigation Postlogin Under Left Bar
 Set A Goal Navigation Postlogin Under Left Bar
-    [Tags]  TC51  Stage3  KYC  ML05
+    [Tags]  TC51  Stage3  KYC
     [Teardown]  Navigate To Home Page
     Verify PostLogin Account Creation
     Verify PAN Verifed KYC Details
@@ -368,7 +368,7 @@ Set A Goal Navigation Postlogin Under Left Bar
 
 # Remit Menu Navigation Postlogin
 Remit Menu Navigation Postlogin
-    [Tags]  TC52  Stage3  KYC  ML05
+    [Tags]  TC52  Stage3  KYC
     [Teardown]  Navigate To Home Page
     Verify PostLogin Account Creation
     Verify PAN Verifed KYC Details
@@ -376,7 +376,7 @@ Remit Menu Navigation Postlogin
 
 # Postlogin Menu Navigation Of Features Without KYC
 Postlogin Navigation Of Features
-    [Tags]  TC53  Stage3  NONKYC  ML05
+    [Tags]  TC53  Stage3  NONKYC
     [Teardown]  Navigate To Home Page
     Verify PostLogin Account Creation
     PostLogin Feature Sub Header Navigation Without KYC
