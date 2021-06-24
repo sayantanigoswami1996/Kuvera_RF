@@ -89,7 +89,7 @@ ${e_insure_yellowBanner} =  cover starting at\n*\nT&C apply
 ${e_remit_screenTitleDesc} =  Now invest easily through Kuvera, or send money to your loved ones. With our partner "Wise, formerly Transferwise", you can transfer money to India for the lowest-cost. It is simple and faster than any traditional provider.
 ${e_remit_transferNowBtn} =  Transer now
 ${e_remit_transferWiseCross-borderTitle} =  Making cross-border investments with Kuvera seamless and easy | Wise - Wise
-${e_remit_transferWiseSignUpTitle} =  TransferWise - Create account
+${e_remit_transferWiseSignUpTitle} =  Wise - Create account
 
 # Feature - Set a Goal
 ${e_feature_sg_screenSubTitle} =  We'll help you bring your dreams to life.
