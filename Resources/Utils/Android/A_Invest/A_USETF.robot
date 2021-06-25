@@ -11,7 +11,7 @@ Verify Android PreLogin US ETF Page
     Verify Text On Page  ${e_invest_ETF_filteredStock}
     Sleep  1s
     Verify Signup Link And Kuvera Logo
-    Verify Search Box Sort And Watchlist Button For ELSS And Stocks  ${e_invest_1Y}
-    Verify Login Page And Go Back 
-    Verify Navigation To Tabs For Stocks  ${KU_A_invest_allUSStocks}  ${KU_A_invest_USStocks_importTagTitle}  ${KU_A_invest_USStocks_watchlistTitle}
-    # Go Back
+    Verify Search Box Sort And Watchlist Button For ELSS And Stocks  ${e_invest_1Y}  ${KU_A_invest_watchlistBtn}
+    Verify Login Page And Go Back
+    Verify Navigation To Tabs For Stocks  ${KU_A_invest_allUSStocks}  ${KU_A_invest_USStocks_importTagTitle}  ${KU_A_invest_stocks_watchlistTitle}
+    Go Back

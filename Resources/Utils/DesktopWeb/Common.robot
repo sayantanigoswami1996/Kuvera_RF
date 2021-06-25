@@ -73,7 +73,7 @@ Launch URL
     Kuvera Web Close Regulatory Disclosure
     Run Keyword If    '${ENV}' == '${e_prod}'  Close Hello Bar
     ...    ELSE   Log To Console  Staging
-    Set Global Variable  ${cas_filePath}  ${CURDIR}\\UploadFiles\\CAS.pdf
+    Set Global Variable  ${cas_filePath}  ${CURDIR}//UploadFiles//CAS.pdf
     
 Welcome Page Should Be Open
     Run Keyword And Continue On Failure  Title Should Be  ${KU_W_title}

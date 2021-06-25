@@ -40,4 +40,4 @@ Verify Details Of Top Rated Tax
     Verify Text On Page  ${e_MF_navLabel}
     Verify Text On Page  ${e_MF_1YLabel}
     Verify Text On Page  ${e_MF_3YLabel}
-    Verify Page Contains Element On Android  ${KU_A_watchListBtn}
+    Verify Page Contains Element On Android  ${KU_A_stocks_saveTax_watchListBtn}

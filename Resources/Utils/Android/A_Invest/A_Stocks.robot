@@ -12,7 +12,7 @@ Verify Android PreLogin Stocks Page
     Wait And Click Element On Android  ${KU_A_invest_stocks_title}
     Sleep  1s
     Verify Signup Link And Kuvera Logo
-    Verify Search Box Sort And Watchlist Button For ELSS And Stocks  ${e_invest_1Y}
+    Verify Search Box Sort And Watchlist Button For ELSS And Stocks  ${e_invest_1Y}  ${KU_A_invest_watchlistBtn}
     Verify Login Page And Go Back 
     Verify Navigation To Tabs For Stocks  ${KU_A_invest_allStocks}  ${KU_A_invest_stocks_importTagTitle}  ${KU_A_invest_stocks_watchlistTitle}
     Sleep  1s

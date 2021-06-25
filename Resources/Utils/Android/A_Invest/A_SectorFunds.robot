@@ -14,5 +14,6 @@ Verify Android PreLogin Sector Funds Page
     Verify Signup Link And Kuvera Logo
     Verify Sort And Filter Button  ${e_invest_ELSS_topRated_investorChoiceFilter}
     Verify Presence Of Search Box WatchList Growth Button 
+    Verify Login Page And Go Back
     Verify Navigation To Tabs For Funds
     Go Back

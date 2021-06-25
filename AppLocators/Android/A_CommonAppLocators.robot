@@ -35,12 +35,12 @@ ${e_MF_allFundsLabel} =  All funds
 ${e_loginLink} =  Log in
 ${e_loginTitle} =  Login. Start Investing.
 ${e_signupTitle} =  Sign Up. Start Investing.
-${e_croreAUAVal} =  ₹ 21,000
+${e_croreAUAVal} =  ₹ 24,000
 ${e_croreAUALabel} =  Crore AUA
 ${e_goalsLabel} =  Goals
-${e_goalsVal} =  4 Lakh
+${e_goalsVal} =  5 Lakh
 ${e_transactionsLabel} =  Transactions
-${e_transactionsVal} =  2.6 Crore
+${e_transactionsVal} =  2.8 Crore
 ${e_stocksLabel} =  Stocks
 ${e_stocksSubTitle} =  Explore, Invest and track all your stock investments
 ${e_stocks_allStocksTab} =  All stocks
@@ -150,7 +150,9 @@ ${KU_A_gold_comingSoon} =  xpath=//*[@text='Coming soon: Gold gifting & delivery
 ${KU_A_gold_exploreGold} =  xpath=//*[@text='Explore gold option']
 ${KU_A_gold_gramOption} =  xpath=//*[@text='0.5 gm']
 ${KU_A_gold_screenTitle} =  xpath=//*[@text='Buy 24K 99.9% pure digital gold - easily and securely.']
-${KU_A_watchListBtn} =  xpath=//*[@text='watchlist-unselected-blue']
+${KU_A_stocks_saveTax_watchListBtn} =  xpath=(//*[@class='android.widget.Image'])[3]
+${KU_A_USStocks_watchListBtn} =  xpath=(//*[@class='android.widget.Image'])[5]
+${KU_A_MF_watchListBtn} =  xpath=(//*[@class='android.widget.Image'])[4]
 ${KU_A_MF_exploreMFBtn} =  xpath=//*[@text='Explore mutual funds']
 ${KU_A_MF_navLabel} =  xpath=//*[@text='NAV']
 ${KU_A_MF_1YLabel} =  xpath=//*[@text='1Y']
@@ -168,5 +170,5 @@ ${KU_A_inviteCodeField} =  xpath=//*[@resource-id='invite_code']
 ${KU_A_signupBlueBtn} =  xpath=//*[@resource-id='signup-btn']
 ${KU_A_signupGoogleBtn} =  xpath=//*[@resource-id='signup-btn-google']
 ${KU_A_signupFBBtn} =  xpath=//*[@resource-id='signup-btn-fb']
-${KU_A_hamburger_signupLink} =  xpath=(//*[@text='Sign up'])[3]
+${KU_A_hamburger_signupLink} =  xpath=(//*[@text='Sign up'])[2]
 ${KU_A_botCloseBtn} =  xpath=(//*[@class='android.view.View'])[13]

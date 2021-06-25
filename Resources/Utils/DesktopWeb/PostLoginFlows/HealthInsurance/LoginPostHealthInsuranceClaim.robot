@@ -17,9 +17,6 @@ Verify Policy Details
     END
     Wait For Element Visibility  ${KU_W_HI_coverTitle}
     Verify Element And Text  ${KU_W_HI_coverTitle}  ${e_HI_coverTitle}
-    Verify Element And Text  ${KU_W_HI_totalCoverDesc}  ${e_HI_totalCoverDesc}
-    Verify Element And Text  ${KU_W_HI_totalPremiumDesc}  ${e_HI_totalPremiumDesc}
-    Verify Element And Text  ${KU_W_HI_coverageRowTitle}  ${e_HI_coverageRowTitle}
     Scroll Untill View  ${KU_W_HI_policyDetails1}
     Verify Element And Text  ${KU_W_HI_policyDetails1}  ${e_HI_policyDetails1}
     Verify Page Contains Element  ${KU_W_HI_expiryDateForPolicy1}  

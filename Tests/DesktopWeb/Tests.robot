@@ -375,14 +375,14 @@ Remit Menu Navigation Postlogin
     Verify PostLogin Remit Menu Navigation 
 
 # Postlogin Menu Navigation Of Features Without KYC
-Postlogin Navigation Of Features
+Postlogin Navigation Of Features Without KYC
     [Tags]  TC53  Stage3  NONKYC
     [Teardown]  Navigate To Home Page
     Verify PostLogin Account Creation
     PostLogin Feature Sub Header Navigation Without KYC
 
 # Postlogin Navigation Of Features With KYC
-Postlogin Navigation Of Features
+Postlogin Navigation Of Features With KYC
     [Tags]  TC54  Stage3  KYC
     [Teardown]  Navigate To Home Page
     Verify PostLogin Account Creation

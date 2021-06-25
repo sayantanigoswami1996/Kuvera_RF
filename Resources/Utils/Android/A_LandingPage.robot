@@ -20,12 +20,10 @@ Verify PreLogin Landing Page Widgets
 
 PreLogin Header Navigation On Android
     ${invest}  Get Json Values On Android  $.MenuHeaders.h0  Resources/TestData/Headers.json
-    ${loans}  Get Json Values On Android  $.MenuHeaders.h1  Resources/TestData/Headers.json
     ${insure}  Get Json Values On Android  $.MenuHeaders.h2  Resources/TestData/Headers.json
     ${remit}  Get Json Values On Android  $.MenuHeaders.h3  Resources/TestData/Headers.json
     ${features}  Get Json Values On Android  $.MenuHeaders.h4  Resources/TestData/Headers.json
     
-    Run keyword If  ['${e_loansPage}'] == ${loans}  Verify Android PreLogin Loans Page
     Run keyword If  ['${e_insurePage}'] == ${insure}  Verify Android PreLogin Insure Page
     Run keyword If  ['${e_remitPage}'] == ${remit}  Verify Android PreLogin Remit Page
     ...    ELSE   Log To Console  Covered in other test
@@ -70,7 +68,7 @@ Verify Mutual Fund Widgets
     Wait And Verify Element And Text On Android  ${KU_A_MF_navLabel}  ${e_MF_navLabel}
     Wait And Verify Element And Text On Android  ${KU_A_MF_1YLabel}  ${e_MF_1YLabel}
     Wait And Verify Element And Text On Android  ${KU_A_MF_3YLabel}  ${e_MF_3YLabel}
-    Verify Watchlist Button
+    Verify Watchlist Button  ${KU_A_MF_watchListBtn}
     Swipe By Percent  85  85  30  30  9000
     Wait For Element Visibility On Android  ${KU_A_MF_exploreMFBtn}
     Verify Page Contains Element On Android  ${KU_A_MF_exploreMFBtn}
@@ -90,7 +88,7 @@ Verify Stock Widgets
     Sleep  2s
     Swipe By Percent  30  30  10  10  900
     Verify Price Year And Market Label For Stocks And USStocks
-    Verify Watchlist Button
+    Verify Watchlist Button  ${KU_A_stocks_saveTax_watchListBtn}
     Wait And Click Element On Android  ${KU_A_stocksLabel}
     Sleep  2s
     Swipe By Percent  85  85  50  50  900
@@ -113,7 +111,7 @@ Verify US Stocks Widgets
     Sleep  2s
     Swipe By Percent  30  30  10  10  900
     Verify Price Year And Market Label For Stocks And USStocks
-    Verify Watchlist Button
+    Verify Watchlist Button  ${KU_A_USStocks_watchListBtn}
     Wait And Click Element On Android  ${KU_A_USStocksLabel}
     Sleep  2s
     Swipe By Percent  85  85  30  30  900
@@ -149,8 +147,9 @@ Verify Gold Widgets
     Click On Explore Button And Verify Navigated Page  ${KU_A_gold_exploreGold}  ${KU_A_gold_screenTitle}  ${e_gold_screenTitle}   
 
 Verify Watchlist Button
-    Verify Page Contains Element On Android  ${KU_A_watchListBtn} 
-    Wait And Click Element On Android  ${KU_A_watchListBtn}
+    [Arguments]  ${watchlistBtn}
+    Verify Page Contains Element On Android  ${watchlistBtn} 
+    Wait And Click Element On Android  ${watchlistBtn}
     Verify Login Page On Android App 
 
 Verify Price Year And Market Label For Stocks And USStocks
