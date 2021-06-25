@@ -14,8 +14,8 @@ Verify Android PreLogin MF Page
     Verify Signup Link And Kuvera Logo
     Verify Sort And Filter Button  ${e_invest_MF_filter}
     Verify Presence Of Search Box WatchList Growth Button 
+    Verify Login Page And Go Back 
     Verify Navigation To Tabs For Funds
-    Go Back
     Go Back
     Wait And Click Element On Android  ${KU_A_invest_MF_title}
     FOR  ${i}  IN RANGE  1  6
@@ -67,9 +67,8 @@ Verify Mutual Fund Details Page On Android
     Go Back
 
 Verify WatchList Button Of Invest
-    Wait And Click Element On Android  ${KU_A_watchListBtn}
-    Verify Page Contains Element On Android  ${KU_A_invest_funds_watchlistTitle}
-    Go Back
+    Wait And Click Element On Android  ${KU_A_invest_MF_watchListBtn}
+    Verify Login Page And Go Back
     
 Verify AUM TER And Risk Info
     Verify Text On Page  ${e_invest_MF_AUM}

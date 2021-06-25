@@ -28,7 +28,6 @@ Verify Android PreLogin Invest Tiles
     # Bank PSU Bonds
     Verify Page Contains Element On Android  ${KU_A_invest_BankPSU_tilesTitle}
     Verify Android PreLogin Bank & PSU Bonds Page
-    Go Back
     # Digi Gold
     Verify Page Contains Element On Android  ${KU_A_invest_digiGold_imgIcon}
     Verify Page Contains Element On Android  ${KU_A_invest_digiGold_tilesTitle}
@@ -41,32 +40,26 @@ Verify Android PreLogin Invest Tiles
     Verify Page Contains Element On Android  ${KU_A_invest_US_tilesTitle}
     Verify Text On Page  ${e_invest_US_subTitle}
     Verify Android PreLogin Ultra Short Page
-    Go Back
     # Gilt Funds
     Wait And Click Element On Android  ${KU_A_invest_seekBar}
     Verify Page Contains Element On Android  ${KU_A_invest_GF_title}
     Verify Page Contains Element On Android  ${KU_A_invest_GF_subTitle}
     Verify Android PreLogin Gilt Funds Page
-    Go Back
     # ELSS Tax Saver
     Wait And Click Element On Android  ${KU_A_invest_seekBar}
-    Verify Page Contains Element On Android  ${KU_A_invest_ELSS_tilesTitle}
-    Verify Text On Page  ${e_invest_ELSS_subTitle} 
+    Verify Page Contains Element On Android  ${KU_A_invest_balancedAdvantage_tilesTitle}
     Verify Android PreLogin ELSS Tax Saver Page
-    Go Back
     # US ETF
     Wait And Click Element On Android  ${KU_A_invest_seekBar}
     Verify Page Contains Element On Android  ${KU_A_invest_ETF_tilesTitle}
     Verify Page Contains Element On Android  ${KU_A_invest_ETF_imgIcon} 
     Verify Text On Page  ${e_invest_ETF_subTitle} 
     Verify Android PreLogin US ETF Page
-    Go Back
     # Equity Index
     Wait And Click Element On Android  ${KU_A_invest_seekBar}
     Verify Page Contains Element On Android  ${KU_A_invest_EI_tilesTitle} 
     Verify Text On Page  ${e_invest_EI_subTitle}
     Verify Android PreLogin Equity Index Page
-    Go Back
     # Sector Funds
     Wait And Click Element On Android  ${KU_A_invest_seekBar}
     Sleep  2s
@@ -74,7 +67,6 @@ Verify Android PreLogin Invest Tiles
     Verify Page Contains Element On Android  ${KU_A_invest_SF_tilesTitle} 
     Verify Page Contains Element On Android  ${KU_A_invest_SF_subTitle}
     Verify Android PreLogin Sector Funds Page
-    Go Back
     # Value Funds
     Wait And Click Element On Android  ${KU_A_invest_seekBar}
     Sleep  2s
@@ -82,7 +74,6 @@ Verify Android PreLogin Invest Tiles
     Verify Page Contains Element On Android  ${KU_A_invest_VF_tilesTitle} 
     Verify Page Contains Element On Android  ${KU_A_invest_VF_subTitle}
     Verify Android PreLogin Value Funds Page
-    Go Back
     # Crypto
     Wait And Click Element On Android  ${KU_A_invest_seekBar}
     Sleep  2s
@@ -100,7 +91,6 @@ Verify Android PreLogin Invest Tiles
     Verify Page Contains Element On Android  ${KU_A_invest_52WkIndia_tilesTitle} 
     Verify Page Contains Element On Android  ${KU_A_invest_52WkIndia_subTitle}
     Verify Android PreLogin 52Wk High India Page
-    Go Back
     # 52Wk High US
     Wait And Click Element On Android  ${KU_A_invest_seekBar}
     Sleep  2s
@@ -108,9 +98,7 @@ Verify Android PreLogin Invest Tiles
     Verify Page Contains Element On Android  ${KU_A_invest_52WkUS_tilesTitle} 
     Verify Page Contains Element On Android  ${KU_A_invest_52WkUS_subTitle}
     Verify Android PreLogin 52Wk High US Page
-    Go Back
-
-
+    
 Verify Title And SubTitle Of SaveSmart
     Verify Page Contains Element On Android  ${KU_A_SS_screenTitle}
     Verify Page Contains Element On Android  ${KU_A_invest_SS_screenSubTitle}
@@ -120,11 +108,11 @@ Verify Presence Of Search Box WatchList Growth Button
     Verify Page Contains Element On Android  ${KU_A_inputField}
     Verify Text On Page  ${e_invest_growth}
     Verify Text On Page  ${e_invest_dividend}
-    Verify Page Contains Element On Android  ${KU_A_watchListBtn}
-    Wait And Click Element On Android  ${KU_A_watchListBtn}
+    Verify Page Contains Element On Android  ${KU_A_invest_watchlistBtn}
+    Wait And Click Element On Android  ${KU_A_invest_watchlistBtn}
 
 Verify Search Box Sort And Watchlist Button For ELSS And Stocks
-    [Arguments]  ${sortYear}
+    [Arguments]  ${sortYear}  ${stocks}
     Verify Page Contains Element On Android  ${KU_A_invest_sortBtn}
     Wait And Click Element On Android  ${KU_A_invest_sortBtn}
     Verify Page Contains Element On Android  ${KU_A_invest_checkmark}
@@ -132,8 +120,8 @@ Verify Search Box Sort And Watchlist Button For ELSS And Stocks
     Sleep  1s
     Wait And Click Element On Android  ${KU_A_invest_sortBtn}
     Verify Page Contains Element On Android  ${KU_A_inputField}
-    Verify Page Contains Element On Android  ${KU_A_watchListBtn}
-    Wait And Click Element On Android  ${KU_A_watchListBtn}
+    Verify Page Contains Element On Android  ${stocks}
+    Wait And Click Element On Android  ${stocks}
 
 Verify Sort And Filter Button
     [Arguments]  ${filteredFund}
@@ -167,6 +155,7 @@ Verify Watchlist Menu Details
 
 Verify Navigation To Tabs For Funds
     # WatchList
+    Wait And Click Element On Android  ${KU_A_invest_watchlistMenu}
     Verify Watchlist Menu Details  ${KU_A_invest_funds_watchlistTitle}
     # All Funds
     Wait And Click Element On Android  ${KU_A_invest_allFundsMenu}
@@ -193,7 +182,7 @@ Verify Navigation To Tabs For Funds
     # Top Searched
     Swipe By Percent  45  15  20  15  15000
     Wait And Click Element On Android  ${KU_A_invest_topSearched} 
-    Verify Page Contains Element On Android  ${KU_A_watchListBtn}
+    Verify Page Contains Element On Android  ${KU_A_invest_watchlistBtn}
     
 Verify Navigation To Tabs For Stocks
     # AllUSStocks
@@ -209,39 +198,40 @@ Verify Navigation To Tabs For Stocks
     Wait And Click Element On Android  ${KU_A_invest_gainers}
     Verify Page Contains Element On Android  ${KU_A_invest_sortBtn}
     Verify Page Contains Element On Android  ${KU_A_invest_filterBtn}
-    Verify Page Contains Element On Android  ${KU_A_watchListBtn}
+    Verify Page Contains Element On Android  ${KU_A_invest_watchlistBtn}
     # Losers
     Swipe By Percent  45  15  20  15  15000
     Wait And Click Element On Android  ${KU_A_invest_losers}
     Verify Page Contains Element On Android  ${KU_A_invest_sortBtn}
     Verify Page Contains Element On Android  ${KU_A_invest_filterBtn}
-    Verify Page Contains Element On Android  ${KU_A_watchListBtn}
+    Verify Page Contains Element On Android  ${KU_A_invest_watchlistBtn}
     # 52WHigh
     Swipe By Percent  45  15  20  15  15000
     Wait And Click Element On Android  ${KU_A_invest_52WHigh}
     Verify Page Contains Element On Android  ${KU_A_invest_sortBtn}
     Verify Page Contains Element On Android  ${KU_A_invest_filterBtn}
-    Verify Page Contains Element On Android  ${KU_A_watchListBtn}
-    Wait And Click Element On Android  ${KU_A_watchListBtn}
+    Verify Page Contains Element On Android  ${KU_A_invest_watchlistBtn}
+    Wait And Click Element On Android  ${KU_A_invest_watchlistBtn}
     Verify Login Page And Go Back
     # 52WLow
     Swipe By Percent  45  15  20  15  15000
     Wait And Click Element On Android  ${KU_A_invest_52WLow}
     Verify Page Contains Element On Android  ${KU_A_invest_sortBtn}
     Verify Page Contains Element On Android  ${KU_A_invest_filterBtn}
-    ${elementSize} =  Get Matching Xpath Count  //*[@text='watchlist-unselected-blue']
-    IF  ${elementSize}>0  
-        Verify Watchlist For 52Wk Low    
-    ELSE
+    Sleep  4s
+    ${isNoWatchlistVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_A_invest_stocks_allStocksLink}
+    IF  ${isNoWatchlistVisible}
         Wait And Click Element On Android  ${KU_A_invest_stocks_allStocksLink}
         Verify Watchlist For 52Wk Low
-        Go Back
+        Go Back    
+    ELSE
+        Verify Watchlist For 52Wk Low
     END
     
 
 Verify Watchlist For 52Wk Low
-    Verify Page Contains Element On Android  ${KU_A_watchListBtn}
-    Wait And Click Element On Android  ${KU_A_watchListBtn}
+    Verify Page Contains Element On Android  ${KU_A_invest_watchlistBtn}
+    Wait And Click Element On Android  ${KU_A_invest_watchlistBtn}
     Verify Login Page And Go Back 
     
 Verify Search Functionality
@@ -332,7 +322,7 @@ Verify Share PDF And Watchlist Icon
     # Wait Until Element Is Visible  ${KU_A_invest_downloadIcon}  timeout=90
     # Verify Page Contains Element On Android  ${KU_A_invest_downloadIcon}
     # Go Back
-    Wait And Click Element On Android  ${KU_A_watchListBtn}
+    Wait And Click Element On Android  ${KU_A_USStocks_watchListBtn}
     Verify Login Page And Go Back 
 
 Verify Buy Icon
