@@ -92,3 +92,8 @@ Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Rewards.robot
 Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Cart.robot
 Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Profile/Profile.robot
 Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Profile/BankAccount.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Profile/Nominees.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Profile/RiskProfile.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Profile/Subscriptions.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Blog.robot
+Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Coins.robot

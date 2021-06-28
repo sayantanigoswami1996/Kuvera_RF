@@ -85,7 +85,7 @@ Verify Sharing Menus
     Switch To Window Verify Title And Close  ${e_HI_twitterTitle}
     Wait And Click  ${inviteBtn}
     Wait Scroll And Click Element  ${KU_W_tc_whatsappBtn}  
-    Switch To Window Verify Title And Close  ${e_HI_whatsappTitle}
+    Switch To Window
     Wait And Click  ${inviteBtn}
     Wait Scroll And Click Element  ${KU_W_tc_telegramBtn}
     Switch To Window Verify Title And Close  ${e_HI_telegramTitle}

@@ -438,3 +438,39 @@ Bank Account Navigation Postlogin With KYC
     Verify PostLogin Account Creation
     Verify PAN Verifed KYC Details
     Verify PostLogin Bank Account Menu Navigation With KYC   
+
+# Nominees Menu Navigation Postlogin Without KYC
+Nominees Navigation Postlogin Without KYC
+    [Tags]  TC62  Stage3  NONKYC  ML05
+    [Teardown]  Navigate To Home Page
+    Verify PostLogin Account Creation
+    Verify PostLogin Nominees Menu Navigation Without KYC   
+
+# Nominees Menu Navigation Postlogin With KYC
+Nominees Navigation Postlogin With KYC
+    [Tags]  TC63  Stage3  KYC  ML05
+    [Teardown]  Navigate To Home Page
+    Verify PostLogin Account Creation
+    Verify KYC Flow Without Nominees
+    Verify PostLogin Nominees Menu Navigation With KYC  
+
+# Risk Profile Menu Navigation Postlogin Without KYC
+Risk Profile Navigation Postlogin Without KYC
+    [Tags]  TC64  Stage3  NONKYC  ML05
+    [Teardown]  Navigate To Home Page
+    Verify PostLogin Account Creation
+    Verify PostLogin Risk Profile Menu Navigation   
+
+# Subscription Menu Navigation Postlogin Without KYC
+Subscription Navigation Postlogin Without KYC
+    [Tags]  TC65  Stage3  NONKYC  ML05
+    [Teardown]  Navigate To Home Page
+    Verify PostLogin Account Creation
+    Verify PostLogin Subscription Menu Navigation   
+
+# Coins Menu Navigation Postlogin Without KYC
+Coins Navigation Postlogin Without KYC
+    [Tags]  TC66  Stage3  NONKYC  ML05
+    [Teardown]  Navigate To Home Page
+    Verify PostLogin Account Creation
+    Verify PostLogin Coins Menu Navigation

@@ -19,14 +19,7 @@ Verify PostLogin Bank Account Menu Navigation With KYC
     Go Back
     Wait And Click  ${KU_W_bankAcc_bankAccTab}
     Wait And Click  ${KU_W_postlogin_addBankBtn}
-    Wait And Click  ${KU_W_KYC_IFSCField}
-    Input Text  ${KU_W_KYC_IFSCField}  ${e_bankAcc_IFSC}
-    Wait And Click  ${KU_W_KYC_bankAccField}
-    Input Text  ${KU_W_KYC_bankAccField}  ${e_bankAcc_accNum}
-    Wait And Click  ${KU_W_KYC_reBankAccField} 
-    Input Text  ${KU_W_KYC_reBankAccField}  ${e_bankAcc_accNum}
-    Wait And Click  ${KU_W_KYC_bankCertifyCheckBox} 
-    Wait And Click  ${KU_W_KYC_bankConfirmedCheckBox}
+    Add KYC Without Nominees
     Wait And Click  ${KU_W_KYC_DONEBtn}
     Verify Page Contains Element  ${KU_W_bankAcc_secondaryBank} 
     Verify Element And Text  ${KU_W_bankAcc_secondaryBankAccount}  ${e_bankAcc_accNum2} 

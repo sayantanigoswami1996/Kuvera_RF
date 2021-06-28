@@ -17,20 +17,35 @@ Verify Policy Details
     END
     Wait For Element Visibility  ${KU_W_HI_coverTitle}
     Verify Element And Text  ${KU_W_HI_coverTitle}  ${e_HI_coverTitle}
-    Scroll Untill View  ${KU_W_HI_policyDetails1}
-    Verify Element And Text  ${KU_W_HI_policyDetails1}  ${e_HI_policyDetails1}
-    Verify Page Contains Element  ${KU_W_HI_expiryDateForPolicy1}  
-    Click Image  ${KU_W_HI_policyDocLink1}
+    Scroll Untill View  ${KU_W_HI_policyName1}
+    Verify Page Contains Element  ${KU_W_HI_healthProtectTag1}
+    Verify Page Contains Element  ${KU_W_HI_policyName1}
+    Verify Page Contains Element  ${KU_W_HI_cover1}
+    Verify Page Contains Element  ${KU_W_HI_cover1Val} 
+    Verify Page Contains Element  ${KU_W_HI_premium1}
+    Verify Page Contains Element  ${KU_W_HI_premium1Val}
+    Verify Page Contains Element  ${KU_W_HI_expiresTag1}
+    Wait And Click  ${KU_W_HI_policyDocLink1}
     Policy Document List Validation  ${e_HI_healthAssurePolicyList}
-    Scroll Untill View  ${KU_W_HI_policyDetails2}
-    Verify Element And Text  ${KU_W_HI_policyDetails2}  ${e_HI_policyDetails2}
-    Verify Page Contains Element  ${KU_W_HI_expiryDateForPolicy2}  
-    Click Image  ${KU_W_HI_policyDocLink2}
+    Scroll Untill View  ${KU_W_HI_policyName2}
+    Verify Page Contains Element  ${KU_W_HI_healthProtectTag2}
+    Verify Page Contains Element  ${KU_W_HI_policyName2}
+    Verify Page Contains Element  ${KU_W_HI_cover2}
+    Verify Page Contains Element  ${KU_W_HI_cover2Val} 
+    Verify Page Contains Element  ${KU_W_HI_premium2}
+    Verify Page Contains Element  ${KU_W_HI_premium2Val}
+    Verify Page Contains Element  ${KU_W_HI_expiresTag2}
+    Wait And Click  ${KU_W_HI_policyDocLink2}
     Policy Document List Validation  ${e_HI_healthAssurePolicyList}
-    Scroll Untill View  ${KU_W_HI_policyDetails3}
-    Verify Element And Text  ${KU_W_HI_policyDetails3}  ${e_HI_policyDetails3}
-    Verify Page Contains Element  ${KU_W_HI_expiryDateForPolicy3}  
-    Click Image  ${KU_W_HI_policyDocLink3}
+    Scroll Untill View  ${KU_W_HI_policyName3}
+    Verify Page Contains Element  ${KU_W_HI_healthProtectTag3}
+    Verify Page Contains Element  ${KU_W_HI_policyName3}
+    Verify Page Contains Element  ${KU_W_HI_cover3}
+    Verify Page Contains Element  ${KU_W_HI_cover3Val} 
+    Verify Page Contains Element  ${KU_W_HI_premium3}
+    Verify Page Contains Element  ${KU_W_HI_premium3Val}
+    Verify Page Contains Element  ${KU_W_HI_expiresTag3}
+    Wait And Click  ${KU_W_HI_policyDocLink3}
     Policy Document List Validation  ${e_HI_dailyAllowanceList}
     Verify Banner Details
 

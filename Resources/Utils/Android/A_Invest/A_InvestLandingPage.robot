@@ -218,19 +218,23 @@ Verify Navigation To Tabs For Stocks
     Wait And Click Element On Android  ${KU_A_invest_52WLow}
     Verify Page Contains Element On Android  ${KU_A_invest_sortBtn}
     Verify Page Contains Element On Android  ${KU_A_invest_filterBtn}
-    Sleep  4s
-    ${isNoWatchlistVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_A_invest_stocks_allStocksLink}
+    Sleep  2s
+    ${isNoWatchlistVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_A_invest_stocks_noStocks}
     IF  ${isNoWatchlistVisible}
+        Sleep  2s
         Wait And Click Element On Android  ${KU_A_invest_stocks_allStocksLink}
         Verify Watchlist For 52Wk Low
         Go Back    
     ELSE
+        Sleep  2s
         Verify Watchlist For 52Wk Low
     END
     
 
 Verify Watchlist For 52Wk Low
+    Wait For Element Visibility On Android  ${KU_A_invest_watchlistBtn}
     Verify Page Contains Element On Android  ${KU_A_invest_watchlistBtn}
+    Sleep  2s
     Wait And Click Element On Android  ${KU_A_invest_watchlistBtn}
     Verify Login Page And Go Back 
     
