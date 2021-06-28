@@ -97,3 +97,6 @@ ${KU_W_postlogin_feature_copyLink} =  xpath=//div[@class='b-app-standard-social-
 ${KU_W_postlogin_inProcessTab} =  xpath=//div[normalize-space()='In process']
 ${KU_W_postlogin_recentTab} =  xpath=//div[normalize-space()='Recent']
 ${KU_W_postlogin_addBankBtn} =  xpath=//button[normalize-space()='ADD BANK']
+${KU_W_postlogin_updateBtn} =  xpath=//button[normalize-space()='Update']
+${KU_W_postlogin_completeAccSetup} =  xpath=//div[contains(text(),'Complete your Acount Setup')]
+${KU_W_postlogin_completeAccSetupDesc} =  xpath=//div[normalize-space()='A valid account is required to continue. Please complete your account registration.']

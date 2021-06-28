@@ -56,6 +56,12 @@ Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/RewardsLocato
 Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/CartLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/Profile/ProfileLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/Profile/BankAccountLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/Profile/NomineesLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/Profile/RiskProfileLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/Profile/SubscriptionLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/BlogLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/CoinsLocators.robot
+
 
 *** Keywords ***
 
@@ -329,7 +335,7 @@ Verify Social Sharing Option
     Sleep  5s
     Switch To Window Verify Title And Close  ${e_HI_twitterTitle}
     Wait Scroll And Click Element  ${whatsapplink}
-    Switch To Window Verify Title And Close  ${e_HI_whatsappTitle} 
+    Switch To Window
     Wait Scroll And Click Element  ${telegramlink}
     Switch To Window Verify Title And Close  ${e_HI_telegramTitle}
     Scroll Page To Location  0   1000
