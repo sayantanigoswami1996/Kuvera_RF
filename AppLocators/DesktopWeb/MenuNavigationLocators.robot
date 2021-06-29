@@ -380,6 +380,8 @@ ${KU_W_remit_sendMoneyBtn} =  xpath=(//button[@type='button'])[3]
 ${KU_W_remit_knowMoreBtn} =  xpath=//button[@class='button-primary b-why-transferwise__btn-know-more']  
 ${KU_W_remit_calculatorTarget} =  xpath=//*[@id="tw-calculator-target"]
 ${KU_W_remit_transferNoBottomBtn} =  xpath=//button[@class='button-primary b-how__btn-transfer']
+${KU_W_remit_bannerLogo} =  xpath=//img[@class='b-transferwise-banner__img']
+${KU_W_remit_bannerTitle} =  xpath=//div[contains(text(),'Win ₹1,000 digital gold on your first transfer.')]     
 
 
 # Feature 

@@ -77,8 +77,12 @@ Verify PreLogin All Fund House Details
         ${expectedFundPhone} =  Convert To String  ${fundHousePhone}
         Scroll And Wait  ${KU_W_fh_phoneNumHeader}
         Verify Element And Text  ${KU_W_fh_phoneNumHeader}  ${e_phoneNumHeader}
-        ${actualPhoneNumber} =  Get Text  ${KU_W_fh_phoneNumber}
-        Compare Text Values  ${actualPhoneNumber}  ${expectedFundPhone}
+        IF  '${actualInvestorLoginURL}' == '${EMPTY}'  
+            Log To Console  Continue
+        ELSE  
+            ${actualPhoneNumber} =  Get Text  ${KU_W_fh_phoneNumber}
+            Compare Text Values  ${actualPhoneNumber}  ${expectedFundPhone}
+        END
 
         # Email
         ${expectedFundHouseEmail} =  Convert To String  ${fundHouseEmail}

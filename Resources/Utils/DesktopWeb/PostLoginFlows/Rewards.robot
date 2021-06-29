@@ -36,6 +36,8 @@ Verify Banner
     Verify Sharing Menus  ${KU_W_rewards_inviteAndEarnLink}
     Wait And Click  ${KU_W_postlogin_feature_copyLink}
     Verify Element And Text  ${KU_W_toastMssg}  ${e_postlogin_copyLink}
+    Verify Gold Banner  ${KU_W_rewards_goldBanner}  ${KU_W_rewards_goldBannerLogo}
+    Wait And Click  ${KU_W_rewards_rightScroll}
     Verify Page Contains Element  ${KU_W_rewards_scratchBannerTitle}
     Verify Page Contains Image  ${KU_W_rewards_scratchBannerImg}
     Wait And Click  ${KU_W_rewards_scratchAndWinLink}
