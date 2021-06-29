@@ -10,7 +10,7 @@ Verify PostLogin EPF Portfolio Menu Navigation With KYC
     ELSE
         Log To Console  Enter EPF Details
     END
-    Verify Page Contains Element  ${KU_W_portfolio_startInvesting}
+    Wait And Click  ${KU_W_portfolio_EPF_addAssetTab}
     Scroll Untill View  ${KU_W_portfolio_EPF_subtitle}
     Verify Element And Text  ${KU_W_portfolio_EPF_title}  ${e_portfolio_EPF_title}  
     Verify Element And Text  ${KU_W_portfolio_EPF_subtitle}  ${e_portfolio_EPF_subTitle}

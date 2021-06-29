@@ -533,6 +533,39 @@ Verify Account Setup Popup
     Verify Page Contains Element  ${KU_W_postlogin_completeAccSetup}
     Verify Page Contains Element  ${KU_W_postlogin_completeAccSetupDesc}
     Wait And Click  ${KU_W_postlogin_OkBtn}
+
+Verify Gold Banner
+    [Arguments]  ${bannerTitle}  ${bannerLogo}
+    Scroll Untill View  ${bannerTitle}
+    Wait For Element Visibility  ${bannerLogo}
+    Verify Page Contains Element  ${bannerLogo}
+    Verify Page Contains Element  ${bannerTitle}
+    Wait And Click  ${KU_W_postlogin_bannerKnowMoreBtn}
+    Verify Page Contains Element  ${KU_W_postlogin_howToWinGold}
+    Verify Page Contains Element  ${KU_W_postlogin_step1Desc} 
+    Verify Page Contains Element  ${KU_W_postlogin_step2Desc}
+    Verify Page Contains Element  ${KU_W_postlogin_step3Desc}
+    Verify Page Contains Element  ${KU_W_postlogin_step1}
+    Verify Page Contains Element  ${KU_W_postlogin_step2}
+    Verify Page Contains Element  ${KU_W_postlogin_step3}
+    Verify Page Contains Element  ${KU_W_postlogin_step1Logo}
+    Verify Page Contains Element  ${KU_W_postlogin_step2Logo}
+    Verify Page Contains Element  ${KU_W_postlogin_step3Logo}
+    Verify Page Contains Element  ${KU_W_postlogin_note}
+    Wait And Click  ${KU_W_postlogin_T&C}
+    Verify Page Contains Element  ${KU_W_postlogin_T&CTitle}
+    Wait For Element Visibility  ${KU_W_postlogin_T&CDesc1}
+    Verify Element And Text  ${KU_W_postlogin_T&CDesc1}  ${e_postlogin_T&CDesc1}
+    Go Back
+    ${isLoginVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_login}
+    IF  ${isLoginVisible}
+        Wait And Click  ${KU_W_postlogin_loginToWinBtn}
+        Verify Login Page 
+    ELSE
+        Wait And Click  ${KU_W_postlogin_transferAndWinBtn}
+        Sleep  3s
+        Switch To Window Verify Title And Close  ${e_remit_transferWiseCross-borderTitle}
+    END
        
 Close Web Application
     Close All Browser

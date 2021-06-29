@@ -7,10 +7,13 @@ ${e_postlogin_noActiveSIPTitle} =  You have no Active SIP. It’s easy to start 
 ${e_postlogin_emailID} =  moolya@kuvera.in 
 ${e_postlogin_pwd} =  kuveratesting123
 ${e_postlogin_prod_KYCVerifiedEmail} =  moolya+automation@kuvera.in 
+${e_postlogin_prod_NonKYCVerifiedEmail} =  moolya+auto_177@kuvera.in 
+${e_postlogin_prod_NonKYCVerifiedPwd} =  sg123456 
 ${e_postlogin_stocks_importPopup} =  Import stocks
 ${e_postlogin_USStocks_linkYourVestedAcc} =  Link your Vested account  
 ${e_postlogin_stage3_MFSIPAcc} =  moolya+MFSIP@kuvera.in
 ${e_postlogin_copyLink} =  Code copied to clipboard!
+${e_postlogin_T&CDesc1} =   Arevuk Advisory Services Pvt Ltd (“Kuvera”) and Transferwise Inc (“Transferwise”) have entered into an arrangement wherein Kuvera provides its users the ability to access and use the Transferwise website and/or mobile application for the purpose of initiating a cross border funds transfer.
 
 # Application Locator 'KU_<locatorName>'
 # Kuvera :: Wealth Management Simplified
@@ -102,3 +105,21 @@ ${KU_W_postlogin_completeAccSetup} =  xpath=//div[contains(text(),'Complete your
 ${KU_W_postlogin_viewAllLink} =  xpath=//a[normalize-space()='View all']
 ${KU_W_postlogin_botButton} =  xpath=//div[@id='faq-bot-button']
 ${KU_W_postlogin_completeAccSetupDesc} =  xpath=//div[normalize-space()='A valid account is required to continue. Please complete your account registration.']
+# Gold Banner
+${KU_W_postlogin_bannerKnowMoreBtn} =  xpath=//div[contains(text(),'Know more')]    
+${KU_W_postlogin_howToWinGold} =  xpath=//div[contains(text(),'How to win digital gold')]
+${KU_W_postlogin_step1Desc} =  xpath=//div[contains(text(),'Sign up on Wise via Kuvera on or after 12th February 2021.')]     
+${KU_W_postlogin_step2Desc} =  xpath=//div[contains(text(),'Complete your first international transfer.')]
+${KU_W_postlogin_step3Desc} =  xpath=//div[contains(text(),'Get ₹1,000 digital gold in your Kuvera account.')]
+${KU_W_postlogin_note} =  xpath=//div[contains(text(),'Note: Offer valid for Kuvera logged in users who sign up on Wise during offer period.')]
+${KU_W_postlogin_T&C} =  xpath=//div[@class='b-win-gold-content__tc']
+${KU_W_postlogin_T&CTitle} =  xpath=//h1[normalize-space()='Remit Gold offer terms and conditions']
+${KU_W_postlogin_T&CDesc1} =  xpath=(//div[@class='b-tos-win-gold-remit']//p)[1]
+${KU_W_postlogin_loginToWinBtn} =  xpath=//button[normalize-space()='Login to win']
+${KU_W_postlogin_transferAndWinBtn} =  xpath=//button[normalize-space()='Transfer and win']
+${KU_W_postlogin_step1} =  xpath=//div[normalize-space()='Step 1']
+${KU_W_postlogin_step2} =  xpath=//div[normalize-space()='Step 2']
+${KU_W_postlogin_step3} =  xpath=//div[normalize-space()='Step 3']
+${KU_W_postlogin_step1Logo} =  xpath=(//img[@class='b-win-gold-content__step__item__img__content'])[1]
+${KU_W_postlogin_step2Logo} =  xpath=(//img[@class='b-win-gold-content__step__item__img__content'])[2]
+${KU_W_postlogin_step3Logo} =  xpath=(//img[@class='b-win-gold-content__step__item__img__content'])[3]
