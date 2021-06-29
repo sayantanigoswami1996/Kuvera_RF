@@ -474,3 +474,10 @@ Coins Navigation Postlogin Without KYC
     [Teardown]  Navigate To Home Page
     Verify PostLogin Account Creation
     Verify PostLogin Coins Menu Navigation
+
+# Blog Menu Navigation Postlogin Without KYC
+Blog Menu Navigation Postlogin Without KYC
+    [Tags]  TC67  Stage3  NONKYC
+    [Teardown]  Navigate To Home Page
+    Verify PostLogin Account Creation
+    Verify PostLogin Blog Menu Navigation
