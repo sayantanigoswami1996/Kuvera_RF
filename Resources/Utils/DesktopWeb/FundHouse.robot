@@ -12,7 +12,7 @@ Verify PreLogin All Fund House Details
     ${fundHouseListCount} =  Get Element Count  xpath=//a[@class='b-fund-house__list__column__item']
     
     # Iterate and verify all fund house details 
-    FOR  ${i}  IN RANGE  1   ${fundHouseListCount}+1
+    FOR  ${i}  IN RANGE  1  ${fundHouseListCount}+1
         ${fundHouseName} =  Get Text  xpath=(//a[@class='b-fund-house__list__column__item'])[${i}]
         Log To Console  ${fundHouseName}
         Wait Scroll And Click Element  xpath=(//a[@class='b-fund-house__list__column__item'])[${i}]
@@ -77,10 +77,10 @@ Verify PreLogin All Fund House Details
         ${expectedFundPhone} =  Convert To String  ${fundHousePhone}
         Scroll And Wait  ${KU_W_fh_phoneNumHeader}
         Verify Element And Text  ${KU_W_fh_phoneNumHeader}  ${e_phoneNumHeader}
-        IF  '${actualInvestorLoginURL}' == '${EMPTY}'  
+        ${actualPhoneNumber} =  Get Text  ${KU_W_fh_phoneNumber}
+        IF  '${actualPhoneNumber}' == '${EMPTY}'  
             Log To Console  Continue
         ELSE  
-            ${actualPhoneNumber} =  Get Text  ${KU_W_fh_phoneNumber}
             Compare Text Values  ${actualPhoneNumber}  ${expectedFundPhone}
         END
 
@@ -97,8 +97,13 @@ Verify PreLogin All Fund House Details
         Verify Element And Text  ${KU_W_fh_investorLoginHeader}  ${e_investorLoginHeader}
         ${actualInvestorLoginURL} =  Get Text  ${KU_W_fh_investorLoginURL}
         Compare Text Values  ${actualInvestorLoginURL}  ${expectedFundHouseInvestorURL}
-        Run Keyword If  '${actualInvestorLoginURL}' == '${EMPTY}'  Log To Console  Continue
-        ...   ELSE  Click Link And Switch Window  ${KU_W_fh_investorLoginLink}
+        IF  '${actualInvestorLoginURL}' == '${EMPTY}'  
+            Log To Console  Continue
+        ELSE  
+            Scroll Untill View  ${KU_W_fh_investorLoginLink}
+            Sleep  2s
+            Click Link And Switch Window  ${KU_W_fh_investorLoginLink}
+        END
 
         # Funds managed 
         ${expectedFundManagedBy} =  Convert To String  ${fundManagedBy}
