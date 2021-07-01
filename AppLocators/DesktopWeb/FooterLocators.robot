@@ -6,7 +6,7 @@ ${e_footer_theTeamTitle} =  We’re on a mission to make investing simple.
 ${e_footer_whyKuvera} =  Why Kuvera
 ${e_footer_press} =  Press 
 ${e_footer_inPressTitle} =  In Press 
-${e_footer_termsOfUsageTitle} =  Terms of Use & Agreement
+${e_footer_termsOfUsageTitle} =  Terms of Use and Agreement
 ${e_footer_termsLink} =  Terms
 ${e_footer_privacyPolicy} =  Privacy Policy
 ${e_footer_fbIcon} =  Kuvera - Home | Facebook
@@ -28,7 +28,7 @@ ${KU_W_footer_whyKuvera} =  xpath=//a[contains(text(),'Why Kuvera')]
 ${KU_W_footer_press} =  xpath=//ul[@class='list-unstyled']/li[4]/a
 ${KU_W_footer_inPressTitle} =  xpath=//*[@class='b-press__recent-coverage']/h1
 ${KU_W_footer_termsLink} =  xpath=//a[contains(text(),'Terms')]
-${KU_W_footer_termsOfUsageTitle} =  xpath=//h2[@class='title']
+${KU_W_footer_termsOfUsageTitle} =  xpath=//p[.='Terms of Use and Agreement']
 ${KU_W_footer_privacyPolicyLink} =  xpath=//p[@class='links']/a[2]
 ${KU_W_footer_privacyPolicyTitle} =  xpath=//h2[@class='title text-center']
 ${KU_W_footer_fbIcon} =  xpath=//ul[@class='list-unstyled']/li[5]/a[1]
