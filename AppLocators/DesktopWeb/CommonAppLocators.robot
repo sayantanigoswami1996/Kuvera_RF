@@ -16,8 +16,8 @@ ${e_signup} =  Sign up
 ${e_signup_setPasswordLabel} =  SET A PASSWORD
 ${e_signup_mobileLabel} =  MOBILE
 ${e_signupPageTitle} =  Sign Up. Start Investing.
-${e_mfWelcomeTitle} =  Investments Simplified
-${e_mf_welcomeText} =  First free Direct Mutual Fund investing platform. Zero fees, higher returns.
+${e_mfWelcomeTitle} =  Wealth Simplified  
+${e_mf_welcomeText} =  Zero fee. Higher return.  
 ${e_mfCategory} =   Equity
 ${e_mfSubCategory} =   All
 ${e_startInvestingBtn} =  Start Investing
@@ -37,34 +37,35 @@ ${e_setAGoalLinkTitle} =  Unified goal planning or how to invest less and achiev
 ${e_sendMoneyBtn} =  Send money
 ${e_navigatedLinkTitle} =  Kuvera - Direct Mutual Funds | Stocks | FD | Gold | Insurance | Remit on Kuvera- Wealth Management Simplified
 ${e_summaryHeader} =   Earn up to 35% more in 20 years*
-${e_careTitle} =  How much do we care?
-${e_careInfoMsg} =  Our CEO, Gaurav Rastogi, invites you to share your questions, comments or feedback. Email him
-${e_adviceContent} =   Our team’s successful money management experience, applied strategies and real-time data-driven approach ensure our recommendations are rooted in reality.
+${e_careTitle} =  We care.
+${e_careInfoMsg} =  Share your comments and feedback with Gaurav (CEO).
+${e_adviceContent} =   We are data driven ex-money managers & technologists. We know how to make financial management easy.
 ${e_adviceTeam} =   More about our team
 ${e_emailLink} =  Email him
 ${e_usersLove} =  Our users love us
-${e_usersMsg} =   We revolutionized the way India invests. With your feedback we are making it even better.
-${e_earnTitle} =  Earn up to 1.5% more returns*
-${e_earnMsg} =  We pioneered commission free Direct Plan investing.\nEarn from our expertise and don't pay commission ever.
-${e_earnLearnLink} =   Learn how!
 ${e_coreAUAValue} =  ₹ 24,000
 ${e_coreAUAText} =  Crore AUA       
-${e_citiesValue} =  5 Lakh
-${e_citiesText} =   Goals
+${e_citiesValue} =  10 Lakh
+${e_citiesText} =   Investors
 ${e_transValue} =   2.8 Crore
 ${e_transText} =  Transactions
 
 ${e_stock_filterTitleText} =  Filter
 ${e_stock_filterTxt} =  Sector
 ${e_stock_subFilterTxt} =  Industry
-${e_stock_headerTxt} =  Stocks   
-${e_stock_subHeaderTxt} =  Explore, Invest and track all your stock investments
-${e_usstock_headerTxt} =  Diversify with US stocks
-${e_usstock_subHeaderTxt} =  Zero commission. Start with $10.
+${e_stock_headerTxt} =  Invest & track stocks    
+${e_stock_subHeaderTxt} =  Powered by smallcase
+${e_usstock_headerTxt} =  Diversify with US $tocks    
+${e_usstock_subHeaderTxt} =  Powered by Vested 
 ${e_ss_headerTxt} =  Start SaveSmart today 
-${e_gold_headerTxt} =  Buying gold has never been this simple!
-  
+${e_ss_welcomeTxt} =  Deposits simplified
+${e_ss_subheaderTxt} =  High return, instant liquidity
+        
+        
+${e_gold_headerTxt} =  Buy 24K 99.9% gold
+${e_gold_subheaderTxt} =  Powered by Augmont
 
+        
 #Feature-Widgets Variables
 ${e_feature_th_TitleText} =  Save up to ₹10,000 in LTCG taxes every financial year with Tax Harvesting.
 ${e_feature_ts_titleText} =  TradeSmart
@@ -120,7 +121,8 @@ ${KU_W_fund_list} =   xpath=//div[@class='b-fund-list__row b-fund-list__row--cus
 ${KU_W_loginpage_loginButton} =   xpath=//button[@class='button-primary']                        
 ${KU_W_loginButton} =   xpath=//button[@class='button-primary b-login-signup__login']
 ${KU_W_signUpButton} =  xpath=//button[@class='button-primary b-login-signup__register'] 
-${KU_W_explore_MF} =  xpath=//button[contains(text(),'Explore mutual funds')] 
+${KU_W_explore_MF_Stocks_USStocks} =  xpath=//a[contains(.,'Explore more')] 
+${KU_W_mobileFirst} =  xpath=//div[contains(text(),'Mobile First')]
 
 ${KU_W_watchlistIcon} =   xpath=(//*[local-name()='svg'])[2]
 ${KU_W_mf_mfTab} =   xpath=(//div[contains(text(),'Mutual Funds')])[1]             
@@ -134,22 +136,21 @@ ${KU_W_stock_filter} =   xpath=//div[@class='b-filter-stock__box-sector']
 ${KU_W_stock_fundList} =   xpath=//div[@class='b-explore-stocks--widget-container']
 ${KU_W_mf_stock_button} =   xpath=//div[contains(text(),'Stocks')]
 ${KU_W_stock_subFilter} =  xpath=//div[@class='b-filter-stock__box b-filter-stock--dropdown-title--disabled b-filter-stock__box--widget']
-${KU_W_stock_subHeader} =  xpath=//div[@class='b-stocks-home__text']
-${KU_W_stock_header} =  xpath=//div[@class='b-stocks-home__title']
+${KU_W_stock_usstocks_gold_subHeader} =  xpath=//div[@class='b-us-stocks-widget__introduction__detail__title2']//div[1]
+${KU_W_stock_usstocks_mf_ss_gold_header} =  xpath=//div[@class='b-us-stocks-widget__introduction__detail__title1']
+${KU_W_stock_usstocks_gold_warningMsg} =  xpath=(//div[contains(.,'This service is not part of our investment advisory.')])[11]
 
 ${KU_W_USStockButton} =  xpath=//div[contains(text(),'US stocks')]
 ${KU_W_usstock_filter} =  xpath=//div[@class='b-action-bar__filter__item__sector']
 ${KU_W_usstock_subFilter} =  xpath=//div[@class='b-action-bar__filter__item__geography__label']
 ${KU_W_usstock_fundList} =  xpath=//div[@class='b-us-stocks--widget-container']
 ${KU_W_usstock_filterTitle} =  xpath=//div[@class='b-action-bar__filter__header__label']
-${KU_W_usstock_header} =  xpath=//div[@class='b-us-stocks-widget__introduction__detail__title1']
-${KU_W_usstock_subHeader} =  xpath=//div[@class='b-us-stocks-widget__introduction__detail__sign-up']
+
 
 ${KU_W_saveSmartButton} =  xpath=//div[contains(text(),'SaveSmart')]
 ${KU_W_saveSmartTitle} =  xpath=//div[@class='b-save-smart-home__title']
 
 ${KU_W_goldButton} =  xpath=(//div[contains(text(),'Gold')])[1]
-${KU_W_goldTitle} =  xpath=//div[contains(@class,'b-gold-widget-content__title')]
 
 ${KU_W_cities_val} =  xpath=//div[@class='b-investment-count__count__cities__val']
 ${KU_W_cities_text} =   xpath=//div[@class='b-investment-count__count__cities__text']
@@ -159,8 +160,7 @@ ${KU_W_faqbot_icon} =   xpath=//div[@class='faq-bot-button faq-bot-button--show'
 ${KU_W_faqbotFrame} =  xpath=//iframe[@id='faq-bot-iframe']
 ${KU_W_faqbotCloseBanner} =  xpath=//div[@class='faq-bot-top-banner-cross']
 ${KU_W_faqbotQA1} =  xpath=(//div[@class='qa-q-item-title']/a)[1]
-${KU_W_mf_welcomeTitle} =  xpath=//div[@class='b-investment-simplified__title']
-${KU_W_mf_welcomeText} =  xpath=//div[@class='b-investment-simplified__text']
+${KU_W_mf_ss_welcomeText} =  xpath=//div[@class='b-us-stocks-widget__para']
 
 ${KU_W_ELSS_learnMoreLink} =  xpath=(//a[@class='b-feature-card__link'])[1]
 ${KU_W_ELSS_searchFundBar} =  xpath=(//div[@class='b-explore-fund__action-title'])[1]
@@ -191,10 +191,7 @@ ${KU_W_why_startInvesing} =  xpath=//button[@class='button-primary b-why-kuvera_
 
 ${KU_W_happyUsers} =   xpath=//div[@class='b-users__happy-user']
 ${KU_W_users_love} =   xpath=//div[@class='b-users__love']
-${KU_W_users_msg} =  xpath=//div[@class='b-users__message']
 ${KU_W_earn_title} =   xpath=//div[@class='b-earn__text-content__title']
-${KU_W_earn_msg} =   xpath=//div[@class='b-earn__text-content__message']
-${KU_W_earn_learnLink} =  xpath=//a[@class='b-earn__text-content__learn']
 ${KU_W_start_investButton} =   xpath=//button[@class='button-primary b-start-invest__text-content__btn']
 ${KU_W_fundHouse_title} =   xpath=//div[@class='b-fund-house__info__title1']
 ${KU_W_fundHouse_subtitle} =   xpath=//div[@class='b-fund-house__info__title2']

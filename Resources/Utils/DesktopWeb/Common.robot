@@ -202,6 +202,7 @@ Kuvera Web Logo Click
 
 Verify Google Play & Apple Store Icons
     Scroll Element Into View  ${KU_W_android_image}
+    Verify Page Contains Element  ${KU_W_mobileFirst} 
     Verify Page Contains Image  ${KU_W_android_image}
     Verify Page Contains Image  ${KU_W_apple_image}
 

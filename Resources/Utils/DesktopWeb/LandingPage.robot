@@ -62,10 +62,10 @@ PreLogin Feature Sub Header Navigation
 Verify Mutual Funds Widgets
     Wait For Element Visibility  ${KU_W_mf_mfTab}
     Click Element  ${KU_W_mf_mfTab}
-    Wait For Element Visibility  ${KU_W_mf_welcomeTitle}
+    Wait For Element Visibility  ${KU_W_stock_usstocks_mf_ss_gold_header}
     Verify Login And Signup Link
-    Verify Element And Text  ${KU_W_mf_welcomeTitle}  ${e_mfWelcomeTitle}
-    Verify Element And Text  ${KU_W_mf_welcomeText}  ${e_mf_welcomeText}
+    Verify Element And Text  ${KU_W_stock_usstocks_mf_ss_gold_header}  ${e_mfWelcomeTitle}
+    Verify Element And Text  ${KU_W_mf_ss_welcomeText}  ${e_mf_welcomeText}
     Wait For Element Visibility  ${KU_W_fund_list} 
     Verify Page Contains Element  ${KU_W_fund_list} 
     Verify Page Contains Element  ${KU_W_watchlistIcon} 
@@ -77,8 +77,8 @@ Verify Mutual Funds Widgets
     Verify Element And Text  ${KU_W_cities_text}  ${e_citiesText}
     Verify Element And Text  ${KU_W_trans_val}  ${e_transValue}
     Verify Element And Text  ${KU_W_trans_text}  ${e_transText}
-    Scroll Element Into View  ${KU_W_explore_MF}
-    Verify Page Contains Element  ${KU_W_explore_MF}
+    Scroll Element Into View  ${KU_W_explore_MF_Stocks_USStocks} 
+    Verify Page Contains Element  ${KU_W_explore_MF_Stocks_USStocks} 
     Verify Google Play & Apple Store Icons
     Verify Presence Of FAQBOT Icon
     
@@ -86,25 +86,36 @@ Verify Stock Widgets
     Wait For Element Visibility  ${KU_W_mf_stock_button}
     Click Element  ${KU_W_mf_stock_button}
     Verify Presence Of Fundlist And WatchList Icon  ${KU_W_stock_fundList}  ${KU_W_watchlistIcon}
-    Verify Element And Text  ${KU_W_stock_header}  ${e_stock_headerTxt}
-    Verify Element And Text  ${KU_W_stock_subHeader}   ${e_stock_subHeaderTxt} 
+    Verify Element And Text  ${KU_W_stock_usstocks_mf_ss_gold_header}  ${e_stock_headerTxt}
+    Verify Element And Text  ${KU_W_stock_usstocks_gold_subHeader}   ${e_stock_subHeaderTxt} 
+    Verify Page Contains Element  ${KU_W_stock_usstocks_gold_warningMsg} 
+    Scroll Element Into View  ${KU_W_explore_MF_Stocks_USStocks} 
+    Verify Page Contains Element  ${KU_W_explore_MF_Stocks_USStocks}
 
 Verify US Stock Widgets
     Wait For Element Visibility  ${KU_W_USStockButton}
     Click Element  ${KU_W_USStockButton}
     Verify Presence Of Fundlist And WatchList Icon  ${KU_W_usstock_fundList}  ${KU_W_watchlistIcon} 
-    Verify Element And Text  ${KU_W_usstock_header}  ${e_usstock_headerTxt}
-    Verify Element And Text  ${KU_W_usstock_subHeader}  ${e_usstock_subHeaderTxt} 
+    Verify Element And Text  ${KU_W_stock_usstocks_mf_ss_gold_header}  ${e_usstock_headerTxt}
+    Verify Element And Text  ${KU_W_stock_usstocks_gold_subHeader}  ${e_usstock_subHeaderTxt}
+    Verify Page Contains Element  ${KU_W_stock_usstocks_gold_warningMsg}
+    Scroll Element Into View  ${KU_W_explore_MF_Stocks_USStocks} 
+    Verify Page Contains Element  ${KU_W_explore_MF_Stocks_USStocks} 
 
 Verify Save Smart Widgets
     Wait For Element Visibility  ${KU_W_saveSmartButton}
     Click Element  ${KU_W_saveSmartButton}
     Verify Element And Text  ${KU_W_saveSmartTitle}  ${e_ss_headerTxt} 
+    Verify Element And Text  ${KU_W_stock_usstocks_mf_ss_gold_header}  ${e_ss_welcomeTxt}
+    Verify Element And Text  ${KU_W_mf_ss_welcomeText}  ${e_ss_subheaderTxt}
+
 
 Verify Gold Widgets
     Wait For Element Visibility  ${KU_W_goldButton}
     Click Element  ${KU_W_goldButton}
-    Verify Element And Text  ${KU_W_goldTitle}  ${e_gold_headerTxt} 
+    Verify Element And Text  ${KU_W_stock_usstocks_mf_ss_gold_header}  ${e_gold_headerTxt} 
+    Verify Element And Text  ${KU_W_stock_usstocks_gold_subHeader}  ${e_gold_subheaderTxt}
+    Verify Page Contains Element  ${KU_W_stock_usstocks_gold_warningMsg} 
 
 Verify Features Widgets
     # Tax Saver
@@ -249,15 +260,10 @@ Verify Summary Tab Widgets
     Verify Page Contains Link  ${KU_W_advice_team}  ${e_careTitle}
     Scroll Element Into View  ${KU_W_why_startInvesing}
     # Below 'Start investing' should be changed to ${e_startInvestingBtn} once bug is fixed
-    Verify Element And Text  ${KU_W_why_startInvesing}     Start investing 
+    Verify Element And Text  ${KU_W_why_startInvesing}  Start investing 
     Verify Page Contains Element  ${KU_W_happyUsers}            
     Scroll Element Into View  ${KU_W_users_love}
-    Verify Element And Text  ${KU_W_users_love}  ${e_usersLove}
-    Verify Element And Text  ${KU_W_users_msg}  ${e_usersMsg}
-    Verify Element And Text  ${KU_W_earn_title}  ${e_earnTitle} 
-    Scroll Element Into View  ${KU_W_earn_msg}
-    Verify Element And Text  ${KU_W_earn_msg}  ${e_earnMsg} 
-    Verify Element And Text  ${KU_W_earn_learnLink}  ${e_earnLearnLink} 
+    Verify Element And Text  ${KU_W_users_love}  ${e_usersLove} 
     Scroll Element Into View  ${KU_W_start_investButton}
     Verify Element And Text  ${KU_W_start_investButton}  ${e_startInvestingBtn}
 
