@@ -27,6 +27,12 @@ ${e_SC_hospitalInCity3} =  253
 ${e_SC_hospitalInCity4} =  144
 ${e_SC_hospitalInCity5} =  564
 ${e_SC_searchedCityName} =  Trichy
+# Prod - City List
+${e_SC_cityNameProd2} =  Ahmedabad
+${e_SC_cityNameProd4} =  Chennai
+${e_SC_hospitalInCityProd1} =  30
+${e_SC_hospitalInCityProd2} =  112
+${e_SC_hospitalInCityProd4} =  317
 
 # Build Your  Coverage
 ${e_BYC_buildCoverageTitle} =  Build your coverage
@@ -196,6 +202,11 @@ ${KU_W_SC_searchBox} =  xpath=//input[@placeholder='Type city name']
 ${KU_W_SC_searchedCity} =  xpath=//div[@class='b-city-list__row']
 ${KU_W_SC_viewPlanBtn} =  xpath=//button[contains(text(),'View Plan')]
 ${KU_W_SC_OtherAddBtn} =  xpath=//div[contains(text(),'Other')]
+# City Name - Prod
+${KU_W_SC_cityName6} =  xpath=(//div[@class='b-add-ciy__container__cities-row__text'])[6]
+${KU_W_SC_cityName7} =  xpath=(//div[@class='b-add-ciy__container__cities-row__text'])[7]
+${KU_W_SC_hospitalInCity6} =  xpath=(//div[@class='b-add-ciy__container__cities-row__text b-add-ciy__container__cashless-hsopital-number'])[6]
+${KU_W_SC_hospitalInCity7} =  xpath=(//div[@class='b-add-ciy__container__cities-row__text b-add-ciy__container__cashless-hsopital-number'])[7]
 
 # Build Your Coverage
 ${KU_W_BYC_noRentPolicy} =  xpath=(//div[@class='b-policy-feature__title'])[1]

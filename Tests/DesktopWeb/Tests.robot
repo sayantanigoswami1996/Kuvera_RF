@@ -20,7 +20,7 @@ Landing Page Widgets Verification
     [Teardown]  Navigate To Home Page
     Verify PreLogin Widgets
 
-# Header navigation - Insure, Loans, Remit
+# Header navigation - Insure,Remit
 Header Navigation
     [Tags]  TC02  Prod  Stage3  Stage2
     [Teardown]  Navigate To Home Page
@@ -508,7 +508,7 @@ Blog Menu Navigation Postlogin Without KYC
     [Tags]  TC71  Stage3  NONKYC
     [Teardown]  Navigate To Home Page
     Verify PostLogin Account Creation
-    Verify PostLogin Profile Menu Navigation Without KYC 
+    Verify PostLogin Blog Menu Navigation
 
 # Bank Account Menu Navigation Postlogin Without KYC
 Bank Account Navigation Postlogin Without KYC
@@ -538,4 +538,25 @@ Nominees Navigation Postlogin With KYC
     [Teardown]  Navigate To Home Page
     Verify PostLogin Account Creation
     Verify KYC Flow Without Nominees
-    Verify PostLogin Nominees Menu Navigation With KYC   
+    Verify PostLogin Nominees Menu Navigation With KYC  
+
+# Risk Profile Menu Navigation Postlogin Without KYC
+Risk Profile Navigation Postlogin Without KYC
+    [Tags]  TC76  Stage3  NONKYC
+    [Teardown]  Navigate To Home Page
+    Verify PostLogin Account Creation
+    Verify PostLogin Risk Profile Menu Navigation   
+
+# Subscription Menu Navigation Postlogin Without KYC
+Subscription Navigation Postlogin Without KYC
+    [Tags]  TC77  Stage3  NONKYC
+    [Teardown]  Navigate To Home Page
+    Verify PostLogin Account Creation
+    Verify PostLogin Subscription Menu Navigation   
+
+# Coins Menu Navigation Postlogin Without KYC
+Coins Navigation Postlogin Without KYC
+    [Tags]  TC78  Stage3  NONKYC
+    [Teardown]  Navigate To Home Page
+    Verify PostLogin Account Creation
+    Verify PostLogin Coins Menu Navigation

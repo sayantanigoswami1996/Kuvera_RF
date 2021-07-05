@@ -1,9 +1,13 @@
 *** Variables *** 
 # Application Expected Values 'e_<variableName>'
-${e_blog_earnBannerTitle} =  Earn ₹201 in digital gold for each friend who invests ₹5,000 or more.
+
+${e_blog_faqbotQA1} =  How do I get started on Kuvera?
 # Application Locator 'KU_<locatorName>'
 # Kuvera :: Wealth Management Simplified
-${KU_W_blog_blogLogo} =  xpath=//div[@class='b-blog-empty-item']//img
-${KU_W_blog_blogMsg} =  xpath=//div[contains(text(),'No order(s) in your blog')]
-${KU_W_blog_exploreFundsLink} =  xpath=//div[normalize-space()='Explore funds']
-${KU_W_blog_recentMsg} =  xpath=//div[contains(text(),'You do not have any recent transaction.')]
+${KU_W_blog_link} =  xpath=//a[normalize-space()='Blog']
+${KU_W_blog_blogTitle} =  xpath=//h1[normalize-space()='Your Investment Magazine']
+${KU_W_blog_allLink} =  xpath=//a[normalize-space()='All']
+${KU_W_blog_popularLink} =  xpath=//a[normalize-space()='Popular']
+${KU_W_blog_categoriesLink} =  xpath=//a[normalize-space()='Categories']
+${KU_W_blog_newAdviceBlog1} =  xpath=//div[@class='b-news-and-advice b-dashboard__desktop--section-top-separator']//li[1]//div[1]//img[1]
+${KU_W_blog_newAdviceBlog2} =  xpath=//div[contains(text(),'Fair and friendly health insurance is here!')]

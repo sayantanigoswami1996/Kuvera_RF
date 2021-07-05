@@ -58,7 +58,12 @@ Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/CartLocators.
 Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/Profile/ProfileLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/Profile/BankAccountLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/Profile/NomineesLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/Profile/RiskProfileLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/Profile/SubscriptionLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/BlogLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/CoinsLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/SanityFlow/McxtraLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/SanityFlow/SetupMandateLocators.robot
 
 *** Keywords ***
 
@@ -77,6 +82,8 @@ Launch URL
     Run Keyword If    '${ENV}' == '${e_prod}'  Close Hello Bar
     ...    ELSE   Log To Console  Staging
     Set Global Variable  ${cas_filePath}  ${CURDIR}\\UploadFiles\\CAS.pdf
+    Set Global Variable  ${policy_filePath}  ${CURDIR}\\UploadFiles\\image.png
+    Set Global Variable  ${mandate_filePath}  ${CURDIR}\\UploadFiles\\mandate.jpg
     
 Welcome Page Should Be Open
     Run Keyword And Continue On Failure  Title Should Be  ${KU_W_title}
@@ -377,6 +384,10 @@ Verify Login On Prod With Verifed KYC Account
     Wait And Click  ${KU_W_login}
     Login  ${e_postlogin_prod_KYCVerifiedEmail}  ${e_postlogin_pwd}
 
+Verify Login On Prod With Verifed NonKYC Account
+    Wait And Click  ${KU_W_login}
+    Login  ${e_postlogin_prod_NonKYCVerifiedEmail}  ${e_postlogin_prod_NonKYCVerifiedPwd}
+
 Verify Registration Page Postlogin 
     [Arguments]  ${KYCMsg}  ${registrationBtn_link}
     Verify Page Contains Element  ${KU_W_postlogin_pageTitle} 
@@ -525,6 +536,46 @@ Add Nominee Details
     Enter DOB  ${KU_W_KYC_dateField}  ${e_KYC_nomineeDOB}  ${KU_W_KYC_monthField}  ${e_KYC_nomineeMOB}  ${KU_W_KYC_yearField}  ${e_KYC_nomineeYOB}
     Wait And Click  ${KU_W_KYC_nomineeAddress} 
     Input Text  ${KU_W_KYC_nomineeAddress}  ${e_KYC_address1Field}
+
+Verify Account Setup Popup
+    Verify Page Contains Element  ${KU_W_postlogin_completeAccSetup}
+    Verify Page Contains Element  ${KU_W_postlogin_completeAccSetupDesc}
+    Wait And Click  ${KU_W_postlogin_OkBtn}
+
+Verify Gold Banner
+    [Arguments]  ${bannerTitle}  ${bannerLogo}
+    Verify Page Contains Element  ${bannerLogo}
+    Verify Page Contains Element  ${bannerTitle}
+    Wait And Click  ${KU_W_postlogin_bannerKnowMoreBtn}
+    Verify Page Contains Element  ${KU_W_postlogin_howToWinGold}
+    Verify Page Contains Element  ${KU_W_postlogin_step1Desc} 
+    Verify Page Contains Element  ${KU_W_postlogin_step2Desc}
+    Verify Page Contains Element  ${KU_W_postlogin_step3Desc}
+    Verify Page Contains Element  ${KU_W_postlogin_step1}
+    Verify Page Contains Element  ${KU_W_postlogin_step2}
+    Verify Page Contains Element  ${KU_W_postlogin_step3}
+    Verify Page Contains Element  ${KU_W_postlogin_step1Logo}
+    Verify Page Contains Element  ${KU_W_postlogin_step2Logo}
+    Verify Page Contains Element  ${KU_W_postlogin_step3Logo}
+    Verify Page Contains Element  ${KU_W_postlogin_note}
+    Wait And Click  ${KU_W_postlogin_T&C}
+    Verify Page Contains Element  ${KU_W_postlogin_T&CTitle}
+    Wait For Element Visibility  ${KU_W_postlogin_T&CDesc1}
+    Verify Element And Text  ${KU_W_postlogin_T&CDesc1}  ${e_postlogin_T&CDesc1}
+    Go Back
+    ${isLoginVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_login}
+    IF  ${isLoginVisible}
+        Wait And Click  ${KU_W_postlogin_loginToWinBtn}
+        Verify Login Page 
+    ELSE
+        Wait And Click  ${KU_W_postlogin_transferAndWinBtn}
+        Sleep  3s
+        Switch To Window Verify Title And Close  ${e_remit_transferWiseCross-borderTitle}
+    END
+
+Verify Page Title
+    [Arguments]  ${element}
+    Run Keyword And Continue On Failure  Title Should Be  ${element}
        
 Close Web Application
     Close All Browser

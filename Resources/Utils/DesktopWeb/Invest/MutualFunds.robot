@@ -88,7 +88,7 @@ Verify Mutual Fund Details Page
         Wait Scroll And Click Element  ${KU_W_invest_mf_addToCartButton}
         Verify Element And Text  ${KU_W_toastMssg}  ${e_invest_mf_orderToCartMsg}
         Wait And Click  ${KU_W_postlogin_cartBtn}
-        Wait And Click  ${KU_W_invest_mf_SIPDelIcon}
+        Wait And Click  ${KU_W_invest_mf_lumpDelIcon}
         Wait And Click  ${KU_W_postlogin_yesDeleteBtn}
         Go Back
     END 

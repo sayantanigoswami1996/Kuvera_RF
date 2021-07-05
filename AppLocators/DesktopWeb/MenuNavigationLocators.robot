@@ -89,8 +89,8 @@ ${e_insure_yellowBanner} =  cover starting at\n*\nT&C apply
 ${e_remit_screenTitleDesc} =  Now invest easily through Kuvera, or send money to your loved ones. With our partner "Wise, formerly Transferwise", you can transfer money to India for the lowest-cost. It is simple and faster than any traditional provider.
 ${e_remit_transferNowBtn} =  Transer now
 ${e_remit_transferWiseCross-borderTitle} =  Making cross-border investments with Kuvera seamless and easy | Wise - Wise
-${e_remit_transferWiseSignUpTitle} =  TransferWise - Create account
-
+${e_remit_transferWiseSignUpTitle} =  Wise - Create account
+    
 # Feature - Set a Goal
 ${e_feature_sg_screenSubTitle} =  We'll help you bring your dreams to life.
 ${e_feature_sg_content} =  Setting a financial goal is the first step to making your dreams a reality. Investing regularly is the next. We make it really simple for you, and we’re with you every step of the way. Simply choose your goal to get started.
@@ -363,6 +363,8 @@ ${KU_W_insure_saveTaxTitle} =  xpath=(//div[@class='b-health-insurance-landing__
 ${KU_W_insure_saveTaxSubTitle} =  xpath=(//div[@class='b-health-insurance-landing__insurance-brief--subheading'])[3]
 ${KU_W_insure_healthCoverTitle} =  xpath=//div[@class='b-health-insurance-landing__healthcare-cover--wrapper']/div 
 ${KU_W_insure_checkPremiumBtn2} =  xpath=(//button[@class='button-primary'])[2]
+# Mcxtra
+${KU_W_insure_groupHealth} =  xpath=//h6[normalize-space()='Group health']
 
 # Remit Page    
 ${KU_W_remit_Link} =  xpath=//a[contains(text(),'Remit')]
@@ -380,6 +382,8 @@ ${KU_W_remit_sendMoneyBtn} =  xpath=(//button[@type='button'])[3]
 ${KU_W_remit_knowMoreBtn} =  xpath=//button[@class='button-primary b-why-transferwise__btn-know-more']  
 ${KU_W_remit_calculatorTarget} =  xpath=//*[@id="tw-calculator-target"]
 ${KU_W_remit_transferNoBottomBtn} =  xpath=//button[@class='button-primary b-how__btn-transfer']
+${KU_W_remit_bannerLogo} =  xpath=//img[@class='b-transferwise-banner__img']
+${KU_W_remit_bannerTitle} =  xpath=//div[contains(text(),'Win ₹1,000 digital gold on your first transfer.')] 
 
 
 # Feature 

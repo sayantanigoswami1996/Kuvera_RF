@@ -1,6 +1,3 @@
-*** Settings ***
-Library     SeleniumLibrary
-
 *** Keywords ***
 
 Verify Transfer Now
@@ -26,6 +23,7 @@ Verify PreLogin Remit Page
     Wait For Element Visibility  ${KU_W_remit_screenTitleDesc}
     Verify Element And Text  ${KU_W_remit_screenTitleDesc}  ${e_remit_screenTitleDesc}
     Verify Transfer Now  ${KU_W_remit_transferNowTopBtn}
+    Verify Gold Banner  ${KU_W_remit_bannerLogo}  ${KU_W_remit_bannerTitle}
     Scroll Untill View  ${KU_W_remit_whyTransferWise}
     Scroll Untill View  ${KU_W_remit_knowMoreBtn}
     @{actualListItems} =  Get WebElements  ${KU_W_remit_whyTransferWiseList}
@@ -41,4 +39,4 @@ Verify PreLogin Remit Page
     Switch To Window Verify Title And Close  ${e_remit_transferWiseSignUpTitle}
     Sleep  2s
     Scroll Untill View  ${KU_W_remit_transferNoBottomBtn}
-    Verify Transfer Now  ${KU_W_remit_transferNoBottomBtn}
+    Verify Transfer Now  ${KU_W_remit_transferNoBottomBtn}    

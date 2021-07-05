@@ -22,20 +22,24 @@ Verify Presence Of Fundlist And WatchList Icon
 
 PreLogin Header Navigation
     ${invest}  Get Json Values  $.MenuHeaders.h0  Resources/TestData/Headers.json
-    ${loans}  Get Json Values  $.MenuHeaders.h1  Resources/TestData/Headers.json
-    ${insure}  Get Json Values  $.MenuHeaders.h2  Resources/TestData/Headers.json
-    ${remit}  Get Json Values  $.MenuHeaders.h3  Resources/TestData/Headers.json
-    ${features}  Get Json Values  $.MenuHeaders.h4  Resources/TestData/Headers.json
+    ${insure}  Get Json Values  $.MenuHeaders.h1  Resources/TestData/Headers.json
+    ${remit}  Get Json Values  $.MenuHeaders.h2  Resources/TestData/Headers.json
+    ${features}  Get Json Values  $.MenuHeaders.h3  Resources/TestData/Headers.json
     ${elem} =  Get Element Count  ${KU_W_headers}
 
     FOR  ${j}  IN RANGE  1  ${elem}+1
         ${headers} =  Get Text  xpath=//div[@class='b-header__content__middle']/a[${j}]
         Log to console  ${headers}
-        Run keyword If  ['${headers}'] == ${invest}  Log To Console  Covered in other test
-        ...    ELSE IF  ['${headers}'] == ${loans}   Verify PreLogin Loans Page
-        ...    ELSE IF  ['${headers}'] == ${insure}  Verify PreLogin Insure Page
-        ...    ELSE IF  ['${headers}'] == ${remit}  Verify PreLogin Remit Page
-        ...    ELSE   Log To Console  Covered in other test
+        IF  ['${headers}'] == ${invest}  
+            Log To Console  Covered in other test
+        ELSE IF  ['${headers}'] == ${insure}  
+            Click Insure Link
+            Verify PreLogin Insure Page
+        ELSE IF  ['${headers}'] == ${remit}  
+            Verify PreLogin Remit Page
+        ELSE   
+            Log To Console  Covered in other test
+        END
     END
 
 PreLogin Feature Sub Header Navigation

@@ -42,8 +42,6 @@ Verify Explore Section
     Verify Investments Navigation  ${KU_W_crypto_titlefromExplore}  ${KU_W_crypto_tabName}
     # Insure
     Verify Investments Navigation  ${KU_W_dashboard_insure}  ${KU_W_insureHeaderTitle}
-    # Loan
-    Verify Investments Navigation  ${KU_W_dashboard_loan}  ${KU_W_loanHeaderTitle}
     # Remit
     Verify Investments Navigation  ${KU_W_dashboard_remit}  ${KU_W_remit_screenTitle}
     

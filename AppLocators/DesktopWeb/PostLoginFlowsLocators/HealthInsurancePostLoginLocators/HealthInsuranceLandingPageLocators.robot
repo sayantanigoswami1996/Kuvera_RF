@@ -1,5 +1,6 @@
 *** Variables *** 
 # Application Expected Values 'e_<variableName
+# Application Locator 'KU_<locatorName>'
 ${e_HI_missingPANTitle} =  PAN missing
 ${e_HI_missingPANSubTitle} =  Submit PAN to enable Health Protect.
 ${e_HI_premiumText} =  Premium
@@ -13,13 +14,13 @@ ${e_HI_endorsementLink} =  Endorsement wording
 ${e_HI_policyWordingLink} =  Policy wording                  
 ${e_HI_generalExclusionLink} =  General exclusions                    
 ${e_HI_cashlessHospitalLink} =  List of cashless hospitals
-${e_HI_coverTitle} =  Covers
+${e_HI_coverTitle} =  Policies
 ${e_HI_totalCoverDesc} =  Total cover\n₹10.0 L + ₹2.0 K Daily cash
 ${e_HI_totalPremiumDesc} =  Total premium/Y\n₹8,620 
 ${e_HI_coverageRowTitle} =  Coverage breakdown\nExpires on\nPolicy documents
-${e_HI_policyDetails1} =  Health Assure Base\nCover\n₹3.0 L\nPremium\n₹6.3 K
-${e_HI_policyDetails2} =  Health Assure Super Top Up\nCover\n₹7.0 L\nPremium\n₹1.3 K
-${e_HI_policyDetails3} =  Daily Cash Allowance\nCover\n₹2.0 K / day\nPremium\n₹999
+${e_HI_policyDetails1} =  Group health\nBharti AXA Health Assure Base\nCover\n₹3.0 L\nPremium\n₹6.3 K\nExpires on\n23 Jun 22
+${e_HI_policyDetails2} =  Group health\nBharti AXA Health Assure Super Top Up\nCover\n₹7.0 L\nPremium\n₹1.3 K\nExpires on\n23 Jun 22
+${e_HI_policyDetails3} =  Group health\nBharti AXA Daily Cash Allowance\nCover\n₹2.0 K / day\nPremium\n₹999\nExpires on\n23 Jun 22
 ${e_HI_expiryDateForPolicy} =  24 Jan 2022
 ${e_HI_bannerDesc} =  Get ₹50L health cover starting at ₹900 p.m. T&C apply\nSecure your loved ones today.
 ${e_HI_facebookTitle} =  Facebook
@@ -56,9 +57,9 @@ ${KU_W_HI_coverTitle} =  xpath=//div[@class='b-kuvera-protect-template__title']
 ${KU_W_HI_totalCoverDesc} =  xpath=//div[@class='b-health-premium-summary__total-cover']
 ${KU_W_HI_totalPremiumDesc} =  xpath=//div[@class='b-health-premium-summary__total-premimum']
 ${KU_W_HI_coverageRowTitle} =  xpath=//div[@class='b-health-protect-row__content-titles']
-${KU_W_HI_policyDetails1} =  xpath=(//div[@class='b-health-protect-row__coverage-breakdown'])[2]
-${KU_W_HI_policyDetails2} =  xpath=(//div[@class='b-health-protect-row__coverage-breakdown'])[3]
-${KU_W_HI_policyDetails3} =  xpath=(//div[@class='b-health-protect-row__coverage-breakdown'])[4]
+${KU_W_HI_policyDetails1} =  xpath=(//div[@class='b-health-protect-row__coverage-breakdown'])[1]
+${KU_W_HI_policyDetails2} =  xpath=(//div[@class='b-health-protect-row__coverage-breakdown'])[2]
+${KU_W_HI_policyDetails3} =  xpath=(//div[@class='b-health-protect-row__coverage-breakdown'])[3]
 ${KU_W_HI_expiryDateForPolicy1} =  xpath=(//div[@class='b-health-protect-row__expiry'])[1]
 ${KU_W_HI_expiryDateForPolicy2} =  xpath=(//div[@class='b-health-protect-row__expiry'])[2]
 ${KU_W_HI_expiryDateForPolicy3} =  xpath=(//div[@class='b-health-protect-row__expiry'])[3]

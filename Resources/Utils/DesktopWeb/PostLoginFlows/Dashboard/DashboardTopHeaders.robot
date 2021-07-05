@@ -6,7 +6,6 @@ Verify PostLogin Top Headers Verification
     Verify Page Contains Element  ${KU_W_investLink}
     Verify Page Contains Element  ${KU_W_insureLink}
     Verify Page Contains Element  ${KU_W_remit_Link}
-    Verify Page Contains Element  ${KU_W_loanLink}
     Verify Page Contains Element  ${KU_W_featureLink}
     Wait And Click  ${KU_W_featureLink}
     Sleep  2s

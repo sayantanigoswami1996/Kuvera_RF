@@ -1,10 +1,9 @@
 {
     "MenuHeaders":{
         "h0":"Invest",
-        "h1":"Loans",
-        "h2":"Insure",
-        "h3":"Remit",
-        "h4": { "fsh0":"Set a goal",
+        "h1":"Insure",
+        "h2":"Remit",
+        "h3": { "fsh0":"Set a goal",
                 "fsh1":"TradeSmart",
                 "fsh2":"Family Account",
                 "fsh3":"Manage Account",

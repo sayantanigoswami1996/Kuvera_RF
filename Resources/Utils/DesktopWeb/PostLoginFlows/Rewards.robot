@@ -36,6 +36,8 @@ Verify Banner
     Verify Sharing Menus  ${KU_W_rewards_inviteAndEarnLink}
     Wait And Click  ${KU_W_postlogin_feature_copyLink}
     Verify Element And Text  ${KU_W_toastMssg}  ${e_postlogin_copyLink}
+    Verify Gold Banner  ${KU_W_rewards_goldBanner}  ${KU_W_rewards_goldBannerLogo}
+    Wait And Click  ${KU_W_rewards_rightScroll}
     Verify Page Contains Element  ${KU_W_rewards_scratchBannerTitle}
     Verify Page Contains Image  ${KU_W_rewards_scratchBannerImg}
     Wait And Click  ${KU_W_rewards_scratchAndWinLink}
@@ -85,7 +87,7 @@ Verify Sharing Menus
     Switch To Window Verify Title And Close  ${e_HI_twitterTitle}
     Wait And Click  ${inviteBtn}
     Wait Scroll And Click Element  ${KU_W_tc_whatsappBtn}  
-    Switch To Window Verify Title And Close  ${e_HI_whatsappTitle}
+    Switch To Window
     Wait And Click  ${inviteBtn}
     Wait Scroll And Click Element  ${KU_W_tc_telegramBtn}
     Switch To Window Verify Title And Close  ${e_HI_telegramTitle}

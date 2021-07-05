@@ -17,8 +17,6 @@ ${KU_W_nominees_nomineeUpdatedSubtitle} =  xpath=//div[normalize-space()='Nomine
 ${KU_W_nominees_afterNomineeSet} =  xpath=//div[contains(text(),'You have set following nominee(s), for your investments')]
 ${KU_W_nominees_nomineeName} =  xpath=//h1[normalize-space()='Nominee']
 ${KU_W_nominees_nomineeNameLabel} =  xpath=//div[normalize-space()='NOMINEE NAME']
-
-
 ${KU_W_nominees_DOBLabel} =  xpath=//div[normalize-space()='DOB']
 ${KU_W_nominees_afterNomineeSet} =  xpath=//div[contains(text(),'You have set following nominee(s), for your investments')]
 ${KU_W_nominees_nomineeDOB} =  xpath=//div[contains(text(),'08/09/1965')]
