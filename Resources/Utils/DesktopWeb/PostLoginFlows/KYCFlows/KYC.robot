@@ -19,16 +19,8 @@ KYC Form Details Page
     Input Text  ${KU_W_KYC_address1Field}  ${e_KYC_address1Field}
     Wait Scroll And Click Element  ${KU_W_KYC_address2Field}
     Input Text  ${KU_W_KYC_address2Field}  ${e_KYC_address2Field}
-    Wait Scroll And Click Element  ${KU_W_KYC_cityField}
-    Input Text  ${KU_W_KYC_cityField}  ${e_HI_cityField}
     Wait Scroll And Click Element  ${KU_W_HI_pincodeField} 
     Input Text  ${KU_W_HI_pincodeField}   ${e_HI_pincodeField}
-    Click Element  ${KU_W_KYC_countryField}
-    Input Text  ${KU_W_KYC_countrySearchBar}  ${e_KYC_countryField}
-    Click Element  ${KU_W_KYC_countryDropdownList}
-    Wait Scroll And Click Element  ${KU_W_KYC_stateField} 
-    Input Text  ${KU_W_KYC_stateField}  ${e_HI_stateField} 
-    Click Element  ${KU_W_HI_state_cityDropdownList}
     Wait Scroll And Click Element  ${KU_W_KYC_gender}
     Wait Scroll And Click Element  ${KU_W_KYC_maritalStatus}
     Wait Scroll And Click Element  ${KU_W_KYC_taxReturnFiling}
@@ -43,7 +35,7 @@ KYC Form Details Page
     Click Element  ${KU_W_KYC_popupOkBtn}
     Wait And Click  ${KU_W_KYC_portfolioNameField}
     Input Text  ${KU_W_KYC_portfolioNameField}  ${e_KYC_portfolioNameField}
-    Wait Scroll And Click Element  ${KU_W_KYC_confirmBtn}
+    Wait Scroll And Click Element  ${KU_W_postlogin_confirmBtn}
     
 Add Signature
     Mouse Over  ${KU_W_KYC_canvasSpace}

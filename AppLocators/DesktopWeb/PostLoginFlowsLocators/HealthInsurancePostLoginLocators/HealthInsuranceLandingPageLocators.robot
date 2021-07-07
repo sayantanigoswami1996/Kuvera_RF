@@ -40,7 +40,6 @@ ${KU_W_HI_missingPANSubTitle} =  xpath=//div[@class='b-insurance__subtitle b-ins
 ${KU_W_HI_missingPANOkayBtn} =  xpath=//div[@class='b-insurance-confirm-modal__btn--okay']
 ${KU_W_HI_pageTitle} =  xpath=//div[@class='b-insurance__title']
 ${KU_W_HI_pincodeField} =  xpath=//input[@id='pincode']
-${KU_W_HI_state_cityDropdownList} =  xpath=(//ul[@class='dropdown-menu']//li)[1]
 ${KU_W_HI_phoneNum_usernameLabel} =  xpath=(//label[@class='b-text-field__label'])[1]
 ${KU_W_HI_documentLinkCloseBtn} =  xpath=//div[@class='modal-content-desktop']//img[@alt='close-btn-img']
 ${KU_W_HI_dropdownIndicator} =  xpath=//img[@class='indicator-alignment']

@@ -194,9 +194,9 @@ Mcxtra Menu Navigation Postlogin
     Verify Login On Prod With Verifed KYC Account
     Verify PostLogin Prod Mcxtra Menu Navigation
 
-# SetupMandate Menu Navigation Postlogin
-SetupMandate Menu Navigation Postlogin
+# Reports Menu Navigation Postlogin
+Reports Menu Navigation Postlogin
     [Tags]  TC28  Prod  KYC
     [Teardown]  Navigate To Home Page
     Verify Login On Prod With Verifed KYC Account
-    Verify PostLogin Prod Mandate Menu Navigation
+    Verify PostLogin Reports Menu Navigation With KYC

@@ -393,6 +393,9 @@ Verify Registration Page Postlogin
     Verify Page Contains Element  ${KU_W_postlogin_pageTitle} 
     Verify Element And Text  ${KU_W_postlogin_completeKYCMsg}  ${KYCMsg}
     Verify Page Contains Element  ${registrationBtn_link}
+    Wait And Click  ${registrationBtn_link}
+    Verify Element And Text  ${KU_W_KYC_PANLabel}  ${e_KYC_PANLabel}
+    Go Back
 
 Verify Login And Signup On Prelogin
     ${isLoginButtonVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_login}

@@ -9,11 +9,9 @@ Verify PostLogin MF Portfolio Menu Navigation With KYC
     Verify Navigation To Explore Funds And Import Tab  ${KU_W_portfolio_mf_exploreFunds}  ${KU_W_portfolio_mf_allFundsTitle}  ${e_portfolio_mf_allFundsText}  ${KU_W_portfolio_importFolioTitle}  ${KU_W_invest_mf_importExternalFunds}  ${e_invest_mf_importExternalFunds}
     Verify Import MF Portfolio
     Verify Upload CAS File
-    Wait And Click  ${KU_W_postlogin_portfolioTab}
-    Wait For Element Visibility  ${KU_W_postlogin_portfolio}
-    Verify Page Contains Element  ${KU_W_postlogin_portfolio}
-    Verify Element And Text  ${KU_W_portfolio_mf_MFTab}  ${e_portfolio_mf_title}
-
+    Verify Portfolio Tab
+    Verify Dashboard Tab
+    
 Verify PostLogin MF Portfolio Menu Navigation Without KYC
     Log To Console  MF Portfolio Navigation Without KYC
     Navigate To PortFolio Tab And Verify Investment Title  ${KU_W_portfolio_mf_title}  ${e_portfolio_mf_title}  ${KU_W_portfolio_mf_subTitle}  ${e_portfolio_mf_subTitle}   
@@ -62,3 +60,51 @@ Verify Upload CAS File
     Verify Element And Text  ${KU_W_portfolio_mf_importedInvestDesc}  ${e_portfolio_mf_popupDesc}
     Wait And Click  ${KU_W_postlogin_OkBtn}
     Verify Page Contains Element  ${KU_W_portfolio_mf_mailID}
+
+Verify Portfolio Tab
+    Wait And Click  ${KU_W_postlogin_portfolioTab}
+    Wait For Element Visibility  ${KU_W_postlogin_portfolio}
+    Verify Page Contains Element  ${KU_W_postlogin_portfolio}
+    Verify Element And Text  ${KU_W_portfolio_mf_MFTab}  ${e_portfolio_mf_title}
+    Verify Page Contains Element  ${KU_W_portfolio_mf_totalValueLabel}
+    Verify Page Contains Element  ${KU_W_portfolio_mf_investedLabel} 
+    Verify Page Contains Element  ${KU_W_portfolio_mf_1DayReturnLabel}
+    Verify Page Contains Element  ${KU_W_portfolio_mf_currentReturnLabel}
+    Verify Page Contains Element  ${KU_W_portfolio_mf_numOfFundsLabel}
+    Sleep  2s
+    Wait And Click  ${KU_W_portfolio_mf_manageFundsBtn}
+    Verify Page Contains Element  ${KU_W_portfolio_mf_investDropdownBtn}
+    Verify Page Contains Element  ${KU_W_portfolio_mf_redeemBtn}
+    Verify Page Contains Element  ${KU_W_portfolio_mf_switchLabel}
+    Verify Page Contains Element  ${KU_W_portfolio_mf_tagGoalsLabel}
+    Verify Page Contains Element  ${KU_W_portfolio_mf_importPortfolioLabel}
+    Verify Page Contains Element  ${KU_W_portfolio_mf_downloadReportBtn}
+    Wait And Click  ${KU_W_portfolio_mf_downloadReportBtn}
+    Wait And Click  ${KU_W_portfolio_mf_CSVBtn}
+    
+Verify Dashboard Tab
+    Reload Page
+    Wait And Click  ${KU_W_postlogin_dasboardTab}
+    Verify Page Contains Element  ${KU_W_portfolio_mf_investDashboardLabel}
+    Verify Page Contains Element  ${KU_W_portfolio_mf_MFDashboardLabel}
+    Verify Page Contains Element  ${KU_W_portfolio_mf_allTimeReturnLabel}
+    Verify Page Contains Element  ${KU_W_portfolio_mf_oneDayReturnLabel}
+    Verify Page Contains Element  ${KU_W_portfolio_mf_allTimeReturnVal}
+    Verify Page Contains Element  ${KU_W_portfolio_mf_MFInvestedVal}
+    Wait And Click  ${KU_W_portfolio_mf_MFInvestedVal}
+    Verify Element And Text  ${KU_W_portfolio_mf_MFTab}  ${e_portfolio_mf_title}
+    Verify Page Contains Element  ${KU_W_portfolio_mf_totalValueLabel}
+    Go Back
+    Verify Page Contains Element  ${KU_W_portfolio_mf_allTimeReturnPer}
+    Verify Page Contains Element  ${KU_W_portfolio_mf_oneDayReturnVal}
+    Verify Page Contains Element  ${KU_W_portfolio_mf_oneDayReturnPer}
+    Wait And Click  ${KU_W_portfolio_mf_XIRRBtn}
+    Verify Page Contains Element  ${KU_W_portfolio_mf_allTimeReturnTitle}
+    Verify Page Contains Element  ${KU_W_portfolio_mf_allTimeReturnSubtitle}
+    Verify Page Contains Element  ${KU_W_portfolio_mf_XIRRLabel}
+    Verify Page Contains Element  ${KU_W_portfolio_mf_XIRRDesc}
+    Verify Page Contains Element  ${KU_W_portfolio_mf_ABS}
+    Verify Page Contains Element  ${KU_W_portfolio_mf_ABSDesc}
+    Wait And Click  ${KU_W_portfolio_mf_closeXIRR}
+    Wait And Click  ${KU_W_portfolio_mf_addIcon} 
+    Verify Page Contains Element  ${KU_W_portfolio_mf_addAssetTitle}
