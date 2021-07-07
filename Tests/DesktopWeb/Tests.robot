@@ -196,6 +196,7 @@ Manage Folio Menu Navigation With KYC
     [Tags]  TC29  Stage3  KYC
     [Teardown]  Navigate To Home Page
     Verify PostLogin Account Creation
+    Verify PAN Verifed KYC Details
     Verify PostLogin Manage Folio Navigation With KYC
 
 # Reports Menu Navigation Without KYC
@@ -210,6 +211,7 @@ Reports Menu Navigation With KYC
     [Tags]  TC31  Stage3  KYC
     [Teardown]  Navigate To Home Page
     Verify PostLogin Account Creation
+    Verify PAN Verifed KYC Details
     Verify PostLogin Reports Menu Navigation With KYC 
 
 #---------------------------Invest--------------------------------------------
