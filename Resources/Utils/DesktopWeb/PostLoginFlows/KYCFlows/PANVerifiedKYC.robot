@@ -11,7 +11,7 @@ Confirm Account Details Page
     # Tell Us About Yourself
     Verify Page Contains Element  ${KU_W_KYC_tellUsAboutYourself}
     Verify Page Contains Element  ${KU_W_KYC_tellUsAboutYourselfDesc}
-    Wait Scroll And Click Element  ${KU_W_postlogin_continueBtn} 
+    Wait Scroll And Click Element  ${KU_W_postlogin_continue} 
 
 Link Bank Account
     [Arguments]  ${bankCertifyText}
@@ -19,6 +19,7 @@ Link Bank Account
     # Bank Account Details
     Verify Page Contains Element  ${KU_W_KYC_linkBankAccTitle}
     Verify Element And Text  ${KU_W_KYC_pageSubTitle}  ${e_KYC_linkBankAccDesc}
+    Verify Page Contains Element  ${KU_W_KYC_accTypeLabel}
     Verify Element And Text  ${KU_W_KYC_IFSCLabel}  ${e_KYC_IFSCLabel}
     Wait And Click  ${KU_W_KYC_IFSCField}
     Input Text  ${KU_W_KYC_IFSCField}  ${e_KYC_IFSc} 
@@ -43,7 +44,7 @@ Link Bank Account
         Wait And Click  ${KU_W_KYC_addNomineeCheckBox}
     END
     Add Nominee Details
-    Wait And Click  ${KU_W_KYC_DONEBtn}
+    Wait And Click  ${KU_W_postlogin_continue}
     Verify Element And Text  ${KU_W_KYC_confirmationTitle}  ${e_KYC_accountSetupTitle} 
     Verify Element And Text  ${KU_W_KYC_confirmationSubTitle}  ${e_KYC_accountSetupSubTitle}
     Sleep  3s
