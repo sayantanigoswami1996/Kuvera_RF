@@ -286,7 +286,7 @@ MF Portfolio Navigation Postlogin Without KYC
 # MF Portfolio Navigation Postlogin With KYC
 MF Portfolio Navigation Postlogin With KYC
     [Tags]  TC41  Stage3  KYC  MutualFund
-    # [Teardown]  Navigate To Home Page
+    [Teardown]  Navigate To Home Page
     Verify PostLogin Account Creation
     Verify PAN Verifed KYC Details
     Verify PostLogin MF Portfolio Menu Navigation With KYC  
