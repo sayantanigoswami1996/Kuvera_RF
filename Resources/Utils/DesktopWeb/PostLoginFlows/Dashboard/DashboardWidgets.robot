@@ -42,8 +42,6 @@ Verify Explore Section
     Verify Investments Navigation  ${KU_W_USStocks}  ${KU_W_dashboard_allUSStocks}
     # SaveSmart
     Verify Investments Navigation  ${KU_W_saveSmart}  ${KU_W_ss_screenTitle}
-    # Crypto
-    Verify Investments Navigation  ${KU_W_crypto_titlefromExplore}  ${KU_W_crypto_tabName}
     # Insure
     Verify Investments Navigation  ${KU_W_dashboard_insure}  ${KU_W_insureHeaderTitle}
     # Remit
