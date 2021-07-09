@@ -10,7 +10,7 @@ ${e_invest_giltFundsSubText} =  Invest in govt bonds. Zero credit risk, but have
 ${e_invest_ultraShortTitleText} =  Ultra-short
 ${e_invest_ultraShortSubText} =  Park money for the short term
 ${e_invest_bank&PSUTitleText} =  Bank & PSU bonds
-${e_invest_balancedAdvantageTitleText} =   Balanced advantage
+${e_invest_balancedAdvantageTitleText} =  New Funds (NFO)
 ${e_invest_USETFTitleText} =   US ETF
 ${e_invest_equityIndexTitleText} =  Equity index
 ${e_invest_sectorFundsTitleText} =   Sector funds 
@@ -139,6 +139,13 @@ ${KU_W_invest_52WkHighIndia_fundlist} =  xpath=//div[@class='b-stocks-explore__s
 ${KU_W_invest_US_ETF_stocklist} =  xpath=//div[@class='b-stock-item b-stock-items__content__item']
 ${KU_W_invest_performanceChart_chartList} =  xpath=(//div[contains(@class,'b-period-option_item')])
 ${KU_W_invest_compareWithOther_chartList} =  xpath=//img[@class='b-app-standard-table__sort b-app-standard-table__sort--asc']
+${KU_W_invest_growth} =  xpath=//div[normalize-space()='Growth']
+${KU_W_invest_dividend} =  xpath=//div[normalize-space()='Dividend']
+${KU_W_invest_openEnded} =  xpath=//div[normalize-space()='Open Ended']
+${KU_W_invest_closeEnded} =  xpath=//div[normalize-space()='Close Ended']
+${KU_W_invest_startDateLabel} =  xpath=(//div[contains(text(),'Start date')])[1]
+${KU_W_invest_endDateLabel} =  xpath=(//div[contains(text(),'End date')])[1]
+${KU_W_invest_minInvestmentLabel} =  xpath=(//div[contains(text(),'Min. investment')])[1]
 # Postlogin
 ${KU_W_invest_bannerText} =  xpath=//span[@class='b-banner-text']
 ${KU_W_invest_importNow} =  xpath=//span[text()='Import now >']

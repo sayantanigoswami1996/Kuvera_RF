@@ -36,10 +36,10 @@ Verify PreLogin Invest Tiles
     Wait For Element Visibility  ${KU_W_bank&PSUBondsTitle} 
     Verify Element And Text  ${KU_W_bank&PSUBondsTitle}  ${e_invest_bank&PSUTitleText}
     Verify PreLogin Bank And PSU Bonds Landing Page
-    # Balanced Advantage
+    # New Fund ( NFO)
     Wait For Element Visibility  ${KU_W_balancedAdvantageTitle}
     Verify Element And Text  ${KU_W_balancedAdvantageTitle}  ${e_invest_balancedAdvantageTitleText}
-    Verify PreLogin Balanced Advantage Landing Page
+    Verify PreLogin New Funds Landing Page
     # Digital Gold
     Wait For Element Visibility  ${KU_W_digitalGoldTitle}
     Verify Page Contains Element  ${KU_W_digitalGoldTitle}
