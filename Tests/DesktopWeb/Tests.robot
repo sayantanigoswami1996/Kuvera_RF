@@ -246,7 +246,7 @@ US Stocks Non Transactional Navigation Postlogin
 # SaveSmart Navigation Postlogin 
 SaveSmart Navigation Postlogin
     [Tags]  TC36  Stage3  KYC
-    [Teardown]  Navigate To Home Page
+    # [Teardown]  Navigate To Home Page
     Verify PostLogin Account Creation
     Verify PAN Verifed KYC Details
     Verify PostLogin SaveSmart Menu Navigation

@@ -128,3 +128,13 @@ ${KU_W_postlogin_step3Logo} =  xpath=(//img[@class='b-win-gold-content__step__it
 ${KU_W_postlogin_importBtn} =  xpath=//button[normalize-space()='Import']
 ${KU_W_postlogin_retryBtn} =  xpath=//button[normalize-space()='Retry']
 ${KU_W_postlogin_policiesTab} =  xpath=//div[contains(text(),'Policies')]
+# Dashboard
+${KU_W_postlogin_db_investDashboardLabel} =  xpath=//div[@class='b-tab-with-background disable-browser-text-select b-tabs-with-background__tab-container--item b-tab-with-background--active']
+${KU_W_postlogin_db_featureDashboardLabel} =  xpath=//div[contains(@class,'b-dark-tab disable-browser-text-select b-basic-tabs__tab-container__item b-dark-tab--active')]
+${KU_W_postlogin_db_allTimeReturnLabel} =  xpath=//div[normalize-space()='All-time return']
+${KU_W_postlogin_db_oneDayReturnLabel} =  xpath=//div[contains(text(),'1D return')]
+${KU_W_postlogin_db_allTimeReturnVal} =  xpath=//body/div[@id='app']/div[@class='b-template template container-fluid override-container-fluid app-view__pos-adjust']/div[@class='full-height main-section mainbar']/div/div/div[@class='k-pb40 b-dashboard__desktop']/div[@class='k-mt44-d']/div[@class='b-dashboard-summary-card k-mb48-d']/div[@class='b-tabs-with-background']/div[@class='b-asset-card-container k-mt32-m k-mt56-d']/div[@class='b-asset-card']/div[@class='b-asset-card__value-container']/div[@class='b-asset-card__return-container']/div[@class='b-return-tile b-asset-card__return--first']/div[@class='b-return-tile__container']/div[1]
+${KU_W_postlogin_db_oneDayReturnVal} =  xpath=//div[@class='b-return-tile']//div[@class='b-return-tile__container']//div[1]
+${KU_W_postlogin_db_oneDayReturnPer} =  xpath=//div[contains(@class,'b-return-tile__percentage theme-2')]
+${KU_W_postlogin_db_addIcon} =  xpath=//div[@class='k-ml24 k-mt2 k-mt4-m k-cursor--pointer k-pr24-m']//*[local-name()='svg']
+${KU_W_postlogin_db_addAssetTitle} =  xpath=//div[contains(text(),'Add an Asset')]

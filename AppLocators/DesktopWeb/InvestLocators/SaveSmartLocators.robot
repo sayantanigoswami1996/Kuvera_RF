@@ -91,3 +91,6 @@ ${KU_W_ss_savesmartTitle} =  xpath=//div[.='SaveSmart']
 ${KU_W_ss_disabledSaveNowBtn} =  xpath=//button[@class='button-primary b-save-now__btn-save button-primary-disabled']
 ${KU_W_ss_5000AmtBtn} =  xpath=//div[@class='b-helper-buttons']//div[2]
 ${KU_W_ss_saveNow} =  xpath=//button[normalize-space()='Save Now']
+# Dashboard
+${KU_W_ss_allTimeReturnPer} =  xpath=//div[@class='b-return-tile__percentage']
+${KU_W_ss_investedVal} =  xpath=//div[@class='b-current-value-tile__value']

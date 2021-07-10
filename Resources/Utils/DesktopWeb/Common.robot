@@ -579,6 +579,16 @@ Verify Gold Banner
 Verify Page Title
     [Arguments]  ${element}
     Run Keyword And Continue On Failure  Title Should Be  ${element}
+
+Verify Features On Dashboard After Investment
+    Verify Page Contains Element  ${KU_W_postlogin_db_investDashboardLabel}
+    Verify Page Contains Element  ${KU_W_postlogin_db_featureDashboardLabel}
+    Verify Page Contains Element  ${KU_W_postlogin_db_allTimeReturnLabel}
+    Verify Page Contains Element  ${KU_W_postlogin_db_oneDayReturnLabel}
+    Verify Page Contains Element  ${KU_W_postlogin_db_allTimeReturnVal}
+    Wait And Click  ${KU_W_postlogin_db_addIcon} 
+    Verify Page Contains Element  ${KU_W_postlogin_db_addAssetTitle}
+    Go Back
        
 Close Web Application
     Close All Browser

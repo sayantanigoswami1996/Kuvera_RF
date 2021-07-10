@@ -85,19 +85,15 @@ Verify Portfolio Tab
 Verify Dashboard Tab
     Reload Page
     Wait And Click  ${KU_W_postlogin_dasboardTab}
-    Verify Page Contains Element  ${KU_W_portfolio_mf_investDashboardLabel}
-    Verify Page Contains Element  ${KU_W_portfolio_mf_MFDashboardLabel}
-    Verify Page Contains Element  ${KU_W_portfolio_mf_allTimeReturnLabel}
-    Verify Page Contains Element  ${KU_W_portfolio_mf_oneDayReturnLabel}
-    Verify Page Contains Element  ${KU_W_portfolio_mf_allTimeReturnVal}
+    Verify Features On Dashboard After Investment
     Verify Page Contains Element  ${KU_W_portfolio_mf_MFInvestedVal}
     Wait And Click  ${KU_W_portfolio_mf_MFInvestedVal}
     Verify Element And Text  ${KU_W_portfolio_mf_MFTab}  ${e_portfolio_mf_title}
     Verify Page Contains Element  ${KU_W_portfolio_mf_totalValueLabel}
     Go Back
     Verify Page Contains Element  ${KU_W_portfolio_mf_allTimeReturnPer}
-    Verify Page Contains Element  ${KU_W_portfolio_mf_oneDayReturnVal}
-    Verify Page Contains Element  ${KU_W_portfolio_mf_oneDayReturnPer}
+    Verify Page Contains Element  ${KU_W_postlogin_db_oneDayReturnVal}
+    Verify Page Contains Element  ${KU_W_postlogin_db_oneDayReturnPer}
     Wait And Click  ${KU_W_portfolio_mf_XIRRBtn}
     Verify Page Contains Element  ${KU_W_portfolio_mf_allTimeReturnTitle}
     Verify Page Contains Element  ${KU_W_portfolio_mf_allTimeReturnSubtitle}
@@ -106,5 +102,3 @@ Verify Dashboard Tab
     Verify Page Contains Element  ${KU_W_portfolio_mf_ABS}
     Verify Page Contains Element  ${KU_W_portfolio_mf_ABSDesc}
     Wait And Click  ${KU_W_portfolio_mf_closeXIRR}
-    Wait And Click  ${KU_W_portfolio_mf_addIcon} 
-    Verify Page Contains Element  ${KU_W_portfolio_mf_addAssetTitle}
