@@ -97,3 +97,8 @@ Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Profile/RiskProfile.
 Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Profile/Subscriptions.robot
 Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Blog.robot
 Resource    ../../Resources/Utils/DesktopWeb/PostLoginFlows/Coins.robot
+Resource    ../../Resources/Utils/DesktopWeb/Sanity/BuySIPLumpsum_MF.robot
+Resource    ../../Resources/Utils/DesktopWeb/Sanity/Invest_Savesmart.robot
+Resource    ../../Resources/Utils/DesktopWeb/Sanity/HealthInsurance.robot
+Resource    ../../Resources/Utils/DesktopWeb/Sanity/Mcxtra.robot
+Resource    ../../Resources/Utils/DesktopWeb/Sanity/SetupMandate.robot

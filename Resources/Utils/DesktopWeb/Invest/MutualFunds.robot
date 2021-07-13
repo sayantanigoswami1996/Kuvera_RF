@@ -20,8 +20,17 @@ Verify PreLogin Mutual Fund Landing Page
     FOR  ${i}  IN RANGE  1  6
         @{mutualFundName} =  Get Json Values  $.MutualFunds.f${i}  Resources/TestData/MutualFunds.json 
         Log To Console  ${mutualFundName}
-        Search Fund and Verify  ${mutualFundName}
-        Run Keyword If    ${mutualFundName} == ['${e_invest_mf_dividendFundName}']  Click Element  ${KU_W_invest_mf_growthDividendButton}
+        ${mutualFdString} =  Convert To String  ${mutualFundName}
+        ${mf_stock1} =  Replace String  ${mutualFdString}  ['  ${EMPTY}
+        ${mf_stockN} =  Replace String  ${mf_stock1}  ']  ${EMPTY}
+        Search Fund and Verify  ${mf_stockN}
+        Sleep  3s
+        ${isElementVisible} =  Run Keyword And Return Status  Element Should Be Visible  ${KU_W_invest_mf_noResultsFound}
+        IF  ${isElementVisible}
+            Wait And Click  ${KU_W_invest_mf_growthDividendButton}
+        ELSE
+            Log To Console  Continue With Growth Fund
+        END
         Verify Mutual Fund Details Page  ${KU_W_invest_mf_fundName}
     END
     Go Back
@@ -88,7 +97,7 @@ Verify Mutual Fund Details Page
         Wait Scroll And Click Element  ${KU_W_invest_mf_addToCartButton}
         Verify Element And Text  ${KU_W_toastMssg}  ${e_invest_mf_orderToCartMsg}
         Wait And Click  ${KU_W_postlogin_cartBtn}
-        Wait And Click  ${KU_W_invest_mf_SIPDelIcon}
+        Wait And Click  ${KU_W_invest_mf_lumpDelIcon}
         Wait And Click  ${KU_W_postlogin_yesDeleteBtn}
         Go Back
     END 

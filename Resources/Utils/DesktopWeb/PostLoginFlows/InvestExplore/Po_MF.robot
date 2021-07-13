@@ -200,7 +200,10 @@ Verify Buying SIP And Lumpsum Together
 Search For MF 
     @{mutualFundName} =  Get Json Values  $.MutualFunds.f2  Resources/TestData/MutualFunds.json 
     Log To Console  ${mutualFundName}
-    Search Fund and Verify  ${mutualFundName} 
+    ${mutualFdString} =  Convert To String  ${mutualFundName}
+    ${mf_stock1} =  Replace String  ${mutualFdString}  ['  ${EMPTY}
+    ${mf_stockN} =  Replace String  ${mf_stock1}  ']  ${EMPTY}
+    Search Fund and Verify  ${mf_stockN}
     Sleep  1s
     Wait And Click  ${KU_W_invest_mf_fundName}
 
@@ -293,3 +296,19 @@ Verify In Process Page After Placing Order
     Verify Element And Text  ${KU_W_invest_mf_paymentMode}  ${e_invest_mf_paymentMode} 
     Verify Element And Text  ${KU_W_invest_mf_bankName}  ${e_invest_mf_bankName}
     Verify Page Contains Element  ${KU_W_invest_mf_navDateMsg}
+
+Verify Nifty Graphs
+    # Graph Validation with Nifty
+    Verify Page Contains Element  ${KU_W_invest_mf_V/STitle}
+    Wait And Click  ${KU_W_invest_mf_dropdownIcon} 
+    ${niftyGraphCount} =  Get Element Count  ${KU_W_invest_mf_niftyGraphDropdownList} 
+    FOR  ${k}  IN RANGE  1  ${niftyGraphCount}+1
+        Wait And Click  xpath=(//div[@class='b-mf-sector-filter__option'])[${k}]
+        FOR  ${j}  IN RANGE  1  6
+            Sleep  3s
+            Wait And Click  xpath=(//div[contains(@class,'b-period-option_item')])[${j}]
+            Verify Page Contains Element  ${KU_W_invest_mf_performaceCart}
+            Verify Page Contains Element  ${KU_W_invest_mf_performanceRateCount}
+        END
+    Wait And Click  ${KU_W_invest_mf_dropdownIcon} 
+    END

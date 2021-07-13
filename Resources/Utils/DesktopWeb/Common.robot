@@ -61,6 +61,8 @@ Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/Profile/RiskP
 Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/Profile/SubscriptionLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/BlogLocators.robot
 Resource    ../../../AppLocators/DesktopWeb/PostLoginFlowsLocators/CoinsLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/SanityFlow/McxtraLocators.robot
+Resource    ../../../AppLocators/DesktopWeb/SanityFlow/SetupMandateLocators.robot
 
 
 *** Keywords ***
@@ -80,6 +82,9 @@ Launch URL
     Run Keyword If    '${ENV}' == '${e_prod}'  Close Hello Bar
     ...    ELSE   Log To Console  Staging
     Set Global Variable  ${cas_filePath}  ${CURDIR}//UploadFiles//CAS.pdf
+    Set Global Variable  ${policy_filePath}  ${CURDIR}//UploadFiles//image.png
+    Set Global Variable  ${mandate_filePath}  ${CURDIR}//UploadFiles//mandate.jpg
+
     
 Welcome Page Should Be Open
     Run Keyword And Continue On Failure  Title Should Be  ${KU_W_title}
@@ -202,7 +207,6 @@ Kuvera Web Logo Click
 
 Verify Google Play & Apple Store Icons
     Scroll Element Into View  ${KU_W_android_image}
-    Verify Page Contains Element  ${KU_W_mobileFirst} 
     Verify Page Contains Image  ${KU_W_android_image}
     Verify Page Contains Image  ${KU_W_apple_image}
 
@@ -354,7 +358,7 @@ Logout
 Check Mandate Screen
     ${ismandateVisible} =  Run Keyword And Return Status  Verify Mandate Screen
     IF  ${ismandateVisible}
-        Wait And Click  ${KU_W_postlogin_mandate_doItLaterBtn}
+        Wait And Click  ${KU_W_postlogin_mandate_closeMandate}
     ELSE
         Log To Console  Continue without mandate
     END 
@@ -365,8 +369,8 @@ Logout From App Post Signup
     Logout
     
 Verify Mandate Screen
-    Wait For Element Visibility  ${KU_W_postlogin_mandate_doItLaterBtn}
-    Element Should Be Visible  ${KU_W_postlogin_mandate_doItLaterBtn}
+    Wait For Element Visibility  ${KU_W_postlogin_mandate_authenticateMandate}
+    Element Should Be Visible  ${KU_W_postlogin_mandate_authenticateMandate}
     
 Login 
     [Arguments]  ${email}  ${pwd}
@@ -380,6 +384,10 @@ Login
 Verify Login On Prod With Verifed KYC Account
     Wait And Click  ${KU_W_login}
     Login  ${e_postlogin_prod_KYCVerifiedEmail}  ${e_postlogin_pwd}
+
+Verify Login On Prod With Verifed NonKYC Account
+    Wait And Click  ${KU_W_login}
+    Login  ${e_postlogin_prod_NonKYCVerifiedEmail}  ${e_postlogin_prod_NonKYCVerifiedPwd}
 
 Verify Registration Page Postlogin 
     [Arguments]  ${KYCMsg}  ${registrationBtn_link}
@@ -571,6 +579,22 @@ Verify Gold Banner
         Sleep  3s
         Switch To Window Verify Title And Close  ${e_remit_transferWiseCross-borderTitle}
     END
+
+Verify Page Title
+    [Arguments]  ${element}
+    Run Keyword And Continue On Failure  Title Should Be  ${element}
+
+Verify Features On Dashboard After Investment
+    Verify Page Contains Element  ${KU_W_postlogin_db_investDashboardLabel}
+    Verify Page Contains Element  ${KU_W_postlogin_db_featureDashboardLabel}
+    Verify Page Contains Element  ${KU_W_postlogin_db_allTimeReturnLabel}
+    Wait For Element Visibility  ${KU_W_postlogin_db_oneDayReturnLabel}
+    Verify Page Contains Element  ${KU_W_postlogin_db_oneDayReturnLabel}
+    Verify Page Contains Element  ${KU_W_postlogin_db_allTimeReturnVal}
+    Verify Page Contains Element  ${KU_W_postlogin_db_oneDayReturnPer}
+    Wait And Click  ${KU_W_postlogin_db_addIcon} 
+    Verify Page Contains Element  ${KU_W_postlogin_db_addAssetTitle}
+    Go Back
        
 Close Web Application
     Close All Browser

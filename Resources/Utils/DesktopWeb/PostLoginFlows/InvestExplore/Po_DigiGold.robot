@@ -32,7 +32,7 @@ Verify PostLogin Digi Gold Buy And Sell Menu Navigation
         Wait And Click  ${KU_W_ca_caretDropdown}
         Wait And Click  ${KU_W_postlogin_rajaGPortfolio}
         Sleep  5s
-        Wait And Click  ${KU_W_postlogin_mandate_doItLaterBtn}
+        Wait And Click  ${KU_W_postlogin_mandate_closeMandate}
     END
     Navigate To Invest Page And Verify Explore Options  ${KU_W_digitalGold}  ${e_invest_digGold}
     Verify Buy Section
@@ -170,7 +170,8 @@ Verify Order Summary Page
     Verify Page Contains Element  ${KU_W_dg_congratsSubText} 
     Wait And Click  ${KU_W_postlogin_continue}
     Verify Element And Text  ${KU_W_postlogin_portfolio}  ${e_postlogin_portfolioTitle}
-
+    Verify Gold Data On Portfolio
+    
 Add Bank Account
     Scroll Untill View  ${KU_W_dg_addBankAcc}
     Wait And Click  ${KU_W_dg_addBankAcc}
@@ -220,7 +221,9 @@ Verify Adding Five Bank Account And Quit Of Buying SIP
     # Unselect Frame
     Wait And Click  ${KU_W_postlogin_yesQuitBtn}
     Verify Element And Text  ${KU_W_postlogin_portfolio}  ${e_postlogin_portfolioTitle}
+    Verify Gold Data On Portfolio
     
+
 Verify Track Section Postlogin
     Wait And Click  ${KU_W_dg_trackTab}
     Verify Page Contains Element  ${KU_W_dg_addTrackTitle}
@@ -231,6 +234,10 @@ Verify Track Section Postlogin
     Wait And Click  ${KU_W_dg_updateToTrack}
     Verify Element And Text  ${KU_W_toastMssg}  ${e_invest_trackToastMsg}
     Verify Page Contains Element  ${KU_W_dg_externalGoldTitle}
+    Verify Gold Data On Dashboard
+    Verify Quant Data
+    Wait And Click  ${KU_W_postlogin_portfolioTab}
+    Verify Gold Data On Portfolio
     # Delete Externally Bought Gold
     Navigate To Invest Page And Verify Explore Options  ${KU_W_digitalGold}  ${e_invest_digGold}
     Wait And Click  ${KU_W_dg_trackTab}
@@ -263,6 +270,9 @@ Verify Buying Of Gold
     Verify Payment With Net Banking  ${e_invest_merchantDesc}
     Wait And Click  ${KU_W_postlogin_continue} 
     Verify Element And Text  ${KU_W_postlogin_portfolio}  ${e_postlogin_portfolioTitle}
+    Verify Gold Data On Portfolio
+    Verify Gold Data On Dashboard
+    Verify Quant Data
     Navigate To Invest Page And Verify Explore Options  ${KU_W_digitalGold}  ${e_invest_digGold}
 
 Verify Transaction With Moolya Account
@@ -283,3 +293,34 @@ Verify Transaction With Moolya Account
     Wait And Click  ${KU_W_postlogin_continue}
     Wait For Element Visibility  ${KU_W_postlogin_portfolio}
     Verify Element And Text  ${KU_W_postlogin_portfolio}  ${e_postlogin_portfolioTitle}
+    Verify Gold Data On Portfolio
+    Verify Gold Data On Dashboard
+
+Verify Gold Data On Dashboard
+    Wait And Click  ${KU_W_postlogin_homeTab}
+    Verify Page Contains Element  ${KU_W_postlogin_db_investDashboardLabel}
+    Verify Page Contains Element  ${KU_W_postlogin_db_oneDayReturnLabel}
+    Verify Page Contains Element  ${KU_W_dg_oneDayReturnVal} 
+    Verify Page Contains Element  ${KU_W_dg_oneDayPerVal}
+    Verify Page Contains Element  ${KU_W_dg_goldMenu}   
+    Wait And Click  ${KU_W_postlogin_db_addIcon} 
+    Verify Page Contains Element  ${KU_W_postlogin_db_addAssetTitle}
+    Go Back 
+    Wait And Click  ${KU_W_postlogin_db_investedVal}
+    Verify Page Contains Element  ${KU_W_postlogin_portfolio} 
+    Go Back 
+
+Verify Quant Data
+    Verify Page Contains Element  ${KU_W_dg_quantLabel}
+    Verify Page Contains Element  ${KU_W_dg_quantVal}
+
+Verify Gold Data On Portfolio
+    Verify Page Contains Element  ${KU_W_dg_goldPortfolioMenu}
+    Verify Page Contains Element  ${KU_W_dg_totalVal}
+    Verify Page Contains Element  ${KU_W_dg_totalValLabel}
+    Verify Page Contains Element  ${KU_W_dg_qauntPortfolioLabel}
+    Verify Page Contains Element  ${KU_W_dg_sellRateLabel} 
+    Verify Page Contains Element  ${KU_W_dg_sellRateVal}
+    Verify Page Contains Element  ${KU_W_dg_qauntPortfolioVal}
+    Verify Page Contains Element  ${KU_W_dg_oneDayReturnPortfolioVal}
+    Verify Page Contains Element  ${KU_W_dg_oneDayReturnPortfolioLabel}

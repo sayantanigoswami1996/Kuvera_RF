@@ -363,6 +363,8 @@ ${KU_W_insure_saveTaxTitle} =  xpath=(//div[@class='b-health-insurance-landing__
 ${KU_W_insure_saveTaxSubTitle} =  xpath=(//div[@class='b-health-insurance-landing__insurance-brief--subheading'])[3]
 ${KU_W_insure_healthCoverTitle} =  xpath=//div[@class='b-health-insurance-landing__healthcare-cover--wrapper']/div 
 ${KU_W_insure_checkPremiumBtn2} =  xpath=(//button[@class='button-primary'])[2]
+# Mcxtra
+${KU_W_insure_groupHealth} =  xpath=//h6[normalize-space()='Group health']
 
 # Remit Page    
 ${KU_W_remit_Link} =  xpath=//a[contains(text(),'Remit')]

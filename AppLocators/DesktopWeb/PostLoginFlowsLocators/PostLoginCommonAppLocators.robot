@@ -7,6 +7,7 @@ ${e_postlogin_noActiveSIPTitle} =  You have no Active SIP. It’s easy to start 
 ${e_postlogin_emailID} =  moolya@kuvera.in 
 ${e_postlogin_pwd} =  kuveratesting123
 ${e_postlogin_prod_KYCVerifiedEmail} =  moolya+automationKYC@kuvera.in 
+${e_postlogin_prod_KYCVerifiedEmailForMcxtra} =  moolya+automation@kuvera.in 
 ${e_postlogin_prod_NonKYCVerifiedEmail} =  moolya+auto_177@kuvera.in 
 ${e_postlogin_prod_NonKYCVerifiedPwd} =  sg123456 
 ${e_postlogin_stocks_importPopup} =  Import stocks
@@ -30,7 +31,7 @@ ${KU_W_postlogin_homeTab} =  xpath=//a[normalize-space()='Home']
 ${KU_W_postlogin_appStoreBtn} =  xpath=//div[@class='b-app-standard-modal']//div[2]//a[1]//img[1]
 ${KU_W_postlogin_playStoreBtn} =  xpath=//div[@class='b-download-app-links-container']//div[1]//a[1]//img[1]
 ${KU_W_postlogin_portfolio} =  xpath=//div[@class='b-portfolio-header__title']
-${KU_W_postlogin_dasboardTab} =  xpath=//a[contains(text(),'Dashboard')]
+${KU_W_postlogin_dasboardTab} =  xpath=//a[normalize-space()='Dashboard']
 ${KU_W_postlogin_portfolioTab} =  xpath=//a[normalize-space()='Portfolio']
 ${KU_W_postlogin_rewardsTab} =  xpath=//a[contains(text(),'Rewards')]
 ${KU_W_postlogin_blogTab} =  xpath=//a[contains(text(),'Blog')]
@@ -81,6 +82,8 @@ ${KU_W_postlogin_inProcessTag} =  xpath=(//div[@class='b-order-row__tag'])[2]
 ${KU_W_postlogin_clearFiltersBtn} =  xpath=//button[normalize-space()='Clear filters']
 ${KU_W_postlogin_USStocks_linkYourVestedAcc} =  xpath=//div[@class='b-input__content__col1__title']
 ${KU_W_postlogin_mandate_doItLaterBtn} =  xpath=//p[contains(.,'Do it later')]
+${KU_W_postlogin_mandate_authenticateMandate} =  xpath=//h1[contains(text(),'Authenticate Mandate')]
+${KU_W_postlogin_mandate_closeMandate} =  xpath=//img[@class='b-mandate-file-upload__close k-cursor--pointer']
 ${KU_W_postlogin_okThanksBtn} =  xpath=//button[normalize-space()='OK, THANKS']
 ${KU_W_postlogin_saveBtn} =  xpath=//button[normalize-space()='Save']
 ${KU_W_postlogin_okaySureBtn} =  xpath=//button[normalize-space()='OK, SURE']
@@ -106,6 +109,8 @@ ${KU_W_postlogin_viewAllLink} =  xpath=//a[normalize-space()='View all']
 ${KU_W_postlogin_botButton} =  xpath=//div[@id='faq-bot-button']
 ${KU_W_postlogin_completeAccSetupDesc} =  xpath=//div[normalize-space()='A valid account is required to continue. Please complete your account registration.']
 # Gold Banner
+${KU_W_postlogin_bannerLogo} =  xpath=//img[@class='b-transferwise-banner__img']
+${KU_W_postlogin_bannerTitle} =  xpath=//div[contains(text(),'Win ₹1,000 digital gold on your first transfer.')]     
 ${KU_W_postlogin_bannerKnowMoreBtn} =  xpath=//div[contains(text(),'Know more')]    
 ${KU_W_postlogin_howToWinGold} =  xpath=//div[contains(text(),'How to win digital gold')]
 ${KU_W_postlogin_step1Desc} =  xpath=//div[contains(text(),'Sign up on Wise via Kuvera on or after 12th February 2021.')]     
@@ -123,4 +128,17 @@ ${KU_W_postlogin_step3} =  xpath=//div[normalize-space()='Step 3']
 ${KU_W_postlogin_step1Logo} =  xpath=(//img[@class='b-win-gold-content__step__item__img__content'])[1]
 ${KU_W_postlogin_step2Logo} =  xpath=(//img[@class='b-win-gold-content__step__item__img__content'])[2]
 ${KU_W_postlogin_step3Logo} =  xpath=(//img[@class='b-win-gold-content__step__item__img__content'])[3]
+${KU_W_postlogin_importBtn} =  xpath=//button[normalize-space()='Import']
 ${KU_W_postlogin_retryBtn} =  xpath=//button[normalize-space()='Retry']
+${KU_W_postlogin_policiesTab} =  xpath=//div[contains(text(),'Policies')]
+# Dashboard
+${KU_W_postlogin_db_investDashboardLabel} =  xpath=//div[@class='b-tab-with-background disable-browser-text-select b-tabs-with-background__tab-container--item b-tab-with-background--active']
+${KU_W_postlogin_db_featureDashboardLabel} =  xpath=//div[contains(@class,'b-dark-tab disable-browser-text-select b-basic-tabs__tab-container__item b-dark-tab--active')]
+${KU_W_postlogin_db_allTimeReturnLabel} =  xpath=//div[normalize-space()='All-time return']
+${KU_W_postlogin_db_oneDayReturnLabel} =  xpath=//div[contains(text(),'1D return')]
+${KU_W_postlogin_db_allTimeReturnVal} =  xpath=//body/div[@id='app']/div[@class='b-template template container-fluid override-container-fluid app-view__pos-adjust']/div[@class='full-height main-section mainbar']/div/div/div[@class='k-pb40 b-dashboard__desktop']/div[@class='k-mt44-d']/div[@class='b-dashboard-summary-card k-mb48-d']/div[@class='b-tabs-with-background']/div[@class='b-asset-card-container k-mt32-m k-mt56-d']/div[@class='b-asset-card']/div[@class='b-asset-card__value-container']/div[@class='b-asset-card__return-container']/div[@class='b-return-tile b-asset-card__return--first']/div[@class='b-return-tile__container']/div[1]
+${KU_W_postlogin_db_oneDayReturnVal} =  xpath=//div[@class='b-return-tile']//div[@class='b-return-tile__container']//div[1]
+${KU_W_postlogin_db_oneDayReturnPer} =  xpath=//div[contains(@class,'b-return-tile__percentage theme-2')]
+${KU_W_postlogin_db_addIcon} =  xpath=//div[@class='k-ml24 k-mt2 k-mt4-m k-cursor--pointer k-pr24-m']//*[local-name()='svg']
+${KU_W_postlogin_db_addAssetTitle} =  xpath=//div[contains(text(),'Add an Asset')]
+${KU_W_postlogin_db_investedVal} =  xpath=//div[@class='b-current-value-tile__value']

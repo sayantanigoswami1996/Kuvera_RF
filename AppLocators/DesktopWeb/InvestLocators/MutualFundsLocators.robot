@@ -3,8 +3,8 @@ ${e_invest_mf_lumpsumAmountLabel} =  Lumpsum amount
 ${e_invest_mf_sipAmountLabel} =  SIP amount
 ${e_invest_mf_defaultSort} =  1Y
 ${e_invest_mf_sipAmount} =  6000
-${e_invest_mf_dividendFundName} =  Tata Digital India Dividend Reinvest Direct Plan
-${e_invest_mf_lumpsumAmount} =  50000
+${e_invest_mf_dividendFundName} =  Tata Digital India IDCW Reinvest Direct Plan
+${e_invest_mf_lumpsumAmount} =  20000
 ${e_invest_mf_addFundPopupHeader} =  Search and add fund
 ${e_invest_mf_bannerText} =  Import your MFs and switch to Direct. Start saving commissions.
 ${e_invest_mf_importExternalFunds} =  Import external mutual funds
@@ -39,7 +39,7 @@ ${e_invest_mf_edit_bankDets} =  HDFC | xxxx5384\nBILL PAY MANDATE
 # Mutual Fund
 ${KU_W_invest_mf_fundName} =  xpath=(//div[@class='b-mutual-funds-explore__name-wrapper'])/a[1]
 ${KU_W_invest_mf_searchBar} =  xpath=//*[@class='b-search-fund__text-field']
-${KU_W_invest_mf_growthDividendButton} =  xpath=//div[@class='b-standard-switch__label']
+${KU_W_invest_mf_growthDividendButton} =  xpath=(//div[@class='b-standard-switch__label'])[1]
 ${KU_W_invest_mf_watchlistButton} =  xpath=//div[@class='b-mf-basic-info__watchlist']
 ${KU_W_invest_mf_searchFundsLabel} =  xpath=//div[contains(text(),'Search funds')]
 ${KU_W_invest_mf_sortByLabel} =  xpath=//div[normalize-space()='Sort by']
@@ -119,6 +119,7 @@ ${KU_W_invest_mf_selectBox} =  xpath=//button[normalize-space()='Select']
 ${KU_W_invest_mf_setOneClickBtn} =  xpath=//div[text()='Set OneClick']
 ${KU_W_invest_mf_continueToOrderBtn} =  xpath=//div[text()='Continue to order']
 ${KU_W_invest_mf_placeOrdersBtn} =  xpath=//button[normalize-space()='Place Orders']
+${KU_W_invest_mf_confirmOrder} =  xpath=//div[contains(text(),'Confirm order')]
 ${KU_W_invest_mf_continueBtn} =  xpath=//button[normalize-space()='Continue Payment']
 ${KU_W_invest_mf_cartTitle} =  xpath=//div[contains(text(),'MF cart')]
 ${KU_W_invest_mf_defaultDate} =  xpath=//div[@class='b-fund-type-tile__next-sip']
@@ -133,7 +134,8 @@ ${KU_W_invest_mf_minSIPVal} =  xpath=(//div[@class='b-mf-widget__minimum'])[1]
 ${KU_W_invest_mf_lumpsum_SIPVal} =  xpath=(//div[@class='b-input-currency']//div)[2]
 ${KU_W_invest_mf_payAmt} =  xpath=(//div[@class='cart-total__amount'])[2]
 ${KU_W_invest_mf_lumpsumDelIcon} =  xpath=(//div[@class='b-fund-type-tile__remove k-cursor--pointer'])[2]
-${KU_W_invest_mf_SIPDelIcon} =  xpath=(//div[@class='b-fund-type-tile__remove k-cursor--pointer'])[1]
+${KU_W_invest_mf_SIPDelIcon} =  xpath=(//div[contains(@class,'k-cursor--pointer')]//img)[2]
+${KU_W_invest_mf_lumpDelIcon} =  xpath=(//div[contains(@class,'k-cursor--pointer')]//img)[1]
 ${KU_W_invest_mf_delFund} =  xpath=//div[contains(text(),'Delete fund')]
 ${KU_W_invest_mf_delFundDesc} =  xpath=//div[contains(text(),'Are you sure you wish to delete this order from your cart?')]
 ${KU_W_invest_mf_SIPInputAmt} =  xpath=(//div[@class='b-mf-widget__input-text-field-container'])[1]
@@ -262,3 +264,4 @@ ${KU_W_invest_mf_skip_sipDateField} =  xpath=(//div[@class='b-transfer-detail__d
 ${KU_W_invest_mf_skip_nextInstallmentText} =  xpath=/div[@class='b-transfer-details__skip-info']
 ${KU_W_invest_mf_categoryList} =  xpath=//div[@class='b-fund-category-filter__option']
 ${KU_W_invest_mf_subcategoryList} =  xpath=//div[@class='b-fund-category-filter__label']
+${KU_W_invest_mf_noResultsFound} =  xpath=//div[contains(text(),'No results')]

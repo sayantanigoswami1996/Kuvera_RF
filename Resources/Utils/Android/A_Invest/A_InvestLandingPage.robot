@@ -45,10 +45,10 @@ Verify Android PreLogin Invest Tiles
     Verify Page Contains Element On Android  ${KU_A_invest_GF_title}
     Verify Page Contains Element On Android  ${KU_A_invest_GF_subTitle}
     Verify Android PreLogin Gilt Funds Page
-    # ELSS Tax Saver
+    # NFO
     Wait And Click Element On Android  ${KU_A_invest_seekBar}
-    Verify Page Contains Element On Android  ${KU_A_invest_balancedAdvantage_tilesTitle}
-    Verify Android PreLogin ELSS Tax Saver Page
+    Verify Page Contains Element On Android  ${KU_A_invest_nfo_tilesTitle}
+    Verify Android PreLogin NFO Page
     # US ETF
     Wait And Click Element On Android  ${KU_A_invest_seekBar}
     Verify Page Contains Element On Android  ${KU_A_invest_ETF_tilesTitle}
