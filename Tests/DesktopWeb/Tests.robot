@@ -483,3 +483,11 @@ Blog Menu Navigation Postlogin Without KYC
     [Teardown]  Navigate To Home Page
     Verify PostLogin Account Creation
     Verify PostLogin Blog Menu Navigation
+
+# Buying Multiple Funds Of MF
+Buying Multiple Funds Of MF
+    [Tags]  TC68  Stage3  KYC  MutualFund
+    [Teardown]  Navigate To Home Page
+    Verify PostLogin Account Creation
+    Verify PAN Verifed KYC Details
+    Verify Buying Multiple Funds Of MF

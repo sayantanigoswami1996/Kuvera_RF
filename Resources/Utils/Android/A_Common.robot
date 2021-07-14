@@ -145,10 +145,11 @@ Verify Login Page And Go Back
     Go Back
 
 Verify Widgets And Title
-    [Arguments]  ${label}  ${labelText}  ${title}  ${titleText}
-    Wait And Verify Element And Text On Android  ${label}  ${labelText}
+    [Arguments]  ${label}  ${title}  ${subtitle}
     Wait And Click Element On Android  ${label}
-    Wait And Verify Element And Text On Android  ${title}  ${titleText}
+    Wait For Element Visibility On Android  ${title}
+    Verify Page Contains Element On Android  ${title}
+    Verify Page Contains Element On Android  ${subtitle}
 
 Wait Until Page Contains Text
     [Arguments]  ${text}

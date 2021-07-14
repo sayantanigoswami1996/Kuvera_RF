@@ -35,15 +35,13 @@ ${e_MF_allFundsLabel} =  All funds
 ${e_loginLink} =  Log in
 ${e_loginTitle} =  Login. Start Investing.
 ${e_signupTitle} =  Sign Up. Start Investing.
-${e_croreAUAVal} =  ₹ 24,000
+${e_croreAUAVal} =  ₹ 25,000
 ${e_croreAUALabel} =  Crore AUA
 ${e_goalsLabel} =  Goals
-${e_goalsVal} =  5 Lakh
+${e_goalsVal} =  11 Lakh
 ${e_transactionsLabel} =  Transactions
 ${e_transactionsVal} =  2.8 Crore
-${e_stocksLabel} =  Stocks
 ${e_stocksSubTitle} =  Explore, Invest and track all your stock investments
-${e_stocks_allStocksTab} =  All stocks
 ${e_USStocksLabel} =  US stocks
 ${e_USStocksTitle} =  Diversify with US stocks
 ${e_USStocksSubTitle1} =  Powered by
@@ -96,36 +94,39 @@ ${KU_A_hamburgerMenu} =  xpath=//*[@text='hamburger-menu']
 ${KU_A_signupLink} =  xpath=//*[@text='Sign up']
 ${KU_A_MFLabel} =  xpath=//*[@text='Mutual Funds']
 ${KU_A_MFTitle} =  xpath=//*[@text='Investments Simplified']
-${KU_A_MFSubTitle} =  xpath=//*[@text='First free direct mutual fund investing platform zero fees, higher returns.']
+${KU_A_MFSubTitle} =  xpath=//*[@text='Zero fee. Higher return.']
 ${KU_A_loginLink} =  xpath=//*[@text='Log in']
 ${KU_A_loginTitle} =  xpath=//*[@text='Login. Start Investing.']
 ${KU_A_signupTitle} =  xpath=//*[@text='Sign Up. Start Investing.']
 ${KU_A_signupBtn} =  xpath=(//*[@text='Sign up'])[2]
 ${KU_A_croreAUALabel} =  xpath=//*[@text='Crore AUA']
-${KU_A_goalsLabel} =  xpath=//*[@text='Goals']
+${KU_A_investorLabel} =  xpath=//*[@text='Investors']
 ${KU_A_transactionsLabel} =  xpath=//*[@text='Transactions']
 ${KU_A_stocksLabel} =  xpath=//*[@text='Stocks']
-${KU_A_stocksTitle} =  xpath=(//*[@text='Stocks'])[1]
 ${KU_A_US_stocks_priceLabel} =  xpath=//*[@text='Price']
 ${KU_A_US_stocks_yearLabel} =  xpath=//*[@text='1Y']
 ${KU_A_US_stocks_mktCapLabel} =  xpath=//*[@text='Mkt cap']
-${KU_A_stocks_exploreStocksBtn} =  xpath=//*[@text='Explore stocks']
+${KU_A_exploreMoreBtn} =  xpath=//*[@text='Explore more ']
 ${KU_A_stocks_allStocksTab} =  xpath=//*[@text='All stocks']
+${KU_A_warningText} =  xpath=//*[@text='This service is not part of our investment advisory.']
 ${KU_A_stocksImg} =  xpath=//*[@text='stocks-ill']
-${KU_A_stocksSubTitle} =  xpath=//*[@text='Explore, Invest and track all your stock investments']
+${KU_A_featureTitle} =  xpath=//*[@text='Wealth Simplified']
+${KU_A_stocksSubTitle} =  xpath=//*[@text='Powered by smallcase']
 ${KU_A_USStocksLabel} =  xpath=//*[@text='US stocks']
 ${KU_A_USStocksTitle} =  xpath=//*[@text='Diversify with US stocks']
-${KU_A_USStocksSubTitle1} =  xpath=//*[@text='Powered by']
+${KU_A_USStocksSubTitle} =  xpath=//*[@text='Powered by Vested']
 ${KU_A_USStocks_vestedImg} =  xpath=//*[@text='vested-dark-logo-full']
 ${KU_A_USStocksSubTitle2} =  xpath=//*[@text='Zero commission. Start with $10.']
 ${KU_A_USStocks_startTodayBtn} =  xpath=//*[@text='Start today']
 ${KU_A_USStocks_exploreBtn} =  xpath=(//*[@class='android.widget.Button'])[2]
 ${KU_A_USStocks_allUSStocksTab} =  xpath=//*[@text='All US stocks']
 ${KU_A_USStocks_imgIcon} =  xpath=//*[@text='i-stock-explore']
+${KU_A_SS_imgIcon} =  xpath=//*[@text='save-smart-widget-content']
+${KU_A_MF_imgIcon} =  xpath=//*[@text='intro-ill']
+${KU_A_gold_ImgIcon} =  xpath=//*[@text='gold-product-main-illustration']
 ${KU_A_USStocks_exploreUSStocksBtn} =  xpath=//*[@text='Explore US stocks']
 ${KU_A_savesmartLabel} =  xpath=//*[@text='SaveSmart']
-${KU_A_savesmartTitle} =  xpath=//*[@text='Best deposit account in India!']
-${KU_A_savesmartSubTitle} =  xpath=//*[@text='Higher returns, instant withdrawal, better than any savings account.']
+${KU_A_savesmartSubTitle} =  xpath=//*[@text='High return, instant liquidity']
 ${KU_A_SS_startSaveSmart} =  xpath=//*[@text='Start SaveSmart today']
 ${KU_A_inputField} =  xpath=//*[@class='android.widget.EditText']
 ${KU_A_SS_exploreSSBtn} =  xpath=//*[@text='Explore SaveSmart']
@@ -133,8 +134,8 @@ ${KU_A_SS_screenTitle} =  xpath=//*[@text='The smart way to save!']
 ${KU_A_button} =  xpath=//*[@class='android.widget.Button']
 ${KU_A_gold_buyNowBtn} =  xpath=//android.widget.Button[@text='Buy Now']
 ${KU_A_goldLabel} =  xpath=//*[@text='Gold']
-${KU_A_goldTitle} =  xpath=//*[@text='Buying gold has never been this simple!']
-${KU_A_goldSubTitle} =  xpath=//*[@text='Buy and sell 24K 99.9% pure digital gold - easily and securely.']
+${KU_A_goldTitle} =  xpath=//*[@text='Buy 24K 99.9% gold']
+${KU_A_goldSubTitle} =  xpath=//*[@text='Powered by Augmont']
 ${KU_A_gold_buyRateLabel} =  xpath=//*[@text='Live Buy Rate']
 ${KU_A_gold_purityLabel} =  xpath=//*[@text='Purity']
 ${KU_A_gold_partnerLabel} =  xpath=//*[@text='Partner']

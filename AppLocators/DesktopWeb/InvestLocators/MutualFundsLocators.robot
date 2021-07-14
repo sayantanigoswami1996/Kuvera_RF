@@ -265,3 +265,11 @@ ${KU_W_invest_mf_skip_nextInstallmentText} =  xpath=/div[@class='b-transfer-deta
 ${KU_W_invest_mf_categoryList} =  xpath=//div[@class='b-fund-category-filter__option']
 ${KU_W_invest_mf_subcategoryList} =  xpath=//div[@class='b-fund-category-filter__label']
 ${KU_W_invest_mf_noResultsFound} =  xpath=//div[contains(text(),'No results')]
+# Buying Multiple Funds
+${KU_W_invest_mf_addOneClick} =  xpath=//div[@id='create']//span[@class='sub-title-add-mandate']
+${KU_W_invest_mf_setOneClick} =  xpath=//button[normalize-space()='Set OneClick']
+${KU_W_invest_mf_placeOrders} =  xpath=//button[normalize-space()='Place Orders']
+${KU_W_invest_mf_fund1} =  xpath=//a[contains(text(),'Axis Bluechip Growth Direct Plan')]
+${KU_W_invest_mf_fund1InProcessTag} =  xpath=(//div[@class='b-order-row__tag b-order-row__neutral-tag'])[1]
+${KU_W_invest_mf_fund2} =  xpath=(//a[contains(text(),'Mirae Asset Hybrid Equity Growth Direct Plan')])[2]
+${KU_W_invest_mf_fund2InProcessTag} =  xpath=(//div[@class='b-order-row__tag b-order-row__neutral-tag'])[2]
