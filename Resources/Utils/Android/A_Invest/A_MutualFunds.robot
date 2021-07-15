@@ -80,7 +80,7 @@ Verify AUM TER And Risk Info
     Verify Text On Page  ${e_invest_MF_risk}
     Wait And Click Element On Android  ${KU_A_invest_riskInfoImg}
     Go Back
-
+    
 Verify Invest Now Button
     [Arguments]  ${FName}
     Wait And Click Element On Android  ${KU_A_invest_MF_investNowBtn}
