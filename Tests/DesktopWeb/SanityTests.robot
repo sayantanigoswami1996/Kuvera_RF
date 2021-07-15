@@ -159,36 +159,29 @@ SaveSmart Navigation Postlogin
     Verify PostLogin Prod SaveSmart Menu Navigation
 
 #-------------------Portfolio---------------------------------------------
-# EPF Portfolio Navigation Postlogin With KYC
-EPF Portfolio Navigation Postlogin With KYC
-    [Tags]  TC23  Prod  KYC  Sanity
-    [Teardown]  Navigate To Home Page
-    Verify Login On Prod With Verifed KYC Account  
-    Verify PostLogin EPF Portfolio Menu Navigation With KYC
-
 # Remit Menu Navigation Postlogin
 Remit Menu Navigation Postlogin
-    [Tags]  TC24  Prod  KYC  Sanity
+    [Tags]  TC23  Prod  KYC  Sanity
     [Teardown]  Navigate To Home Page
     Verify Login On Prod With Verifed KYC Account
     Verify PostLogin Remit Menu Navigation 
 
 # Rewards Menu Navigation Postlogin
 Rewards Menu Navigation Postlogin
-    [Tags]  TC25  Prod  NONKYC  Sanity
+    [Tags]  TC24  Prod  NONKYC  Sanity
     [Teardown]  Navigate To Home Page
     Verify Login On Prod With Verifed NonKYC Account
     Verify PostLogin Rewards Menu Navigation 
 
 # Mcxtra Menu Navigation Postlogin
 Mcxtra Menu Navigation Postlogin
-    [Tags]  TC26  Prod  KYC  Sanity
+    [Tags]  TC25  Prod  KYC  Sanity
     [Teardown]  Navigate To Home Page
     Verify PostLogin Prod Mcxtra Menu Navigation
 
 # Reports Menu Navigation Postlogin
 Reports Menu Navigation Postlogin
-    [Tags]  TC27  Prod  KYC  Sanity
+    [Tags]  TC26  Prod  KYC  Sanity
     [Teardown]  Navigate To Home Page
     Verify Login On Prod With Verifed KYC Account
     Verify PostLogin Reports Menu Navigation With KYC

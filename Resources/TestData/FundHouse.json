@@ -397,38 +397,49 @@
         "fh36investorlogin":"TAURUS investors can login here.",
         "fh36fundmanaged":"Funds managed by TAURUS"
         },
+        "TRUST":{
+        "fh37name":"TRUST MUTUAL FUND",
+        "fh37header":"TRUST Mutual Fund is sponsored by Trust Investment Advisors Private Limited (TIAPL) one of the group company of TRUST Group. We endeavour to bring a structured investment approach by deploying Limited Active Methodology in portfolio creation and shall gradually offer complete suite of products. TRUST AMC is the investment manager to the schemes of TRUST Mutual Fund. The Board and the Team at TRUST AMC comprise of seasoned professionals with rich experience in Financial Services and Mutual Fund industry.",
+        "fh37RTA":"Karvy",
+        "fh37website":"https://www.trustmf.com",
+        "fh37address":"801, Naman Center, G Block, Bandra Kurla Complex, Bandra (East), Mumbai 400 051",
+        "fh37phone":"022-62746000",
+        "fh37email":"info@trustmf.com",
+        "fh37investorlogin":"TRUST investors can login here.",
+        "fh37fundmanaged":"Funds managed by TRUST "
+        },
         "UNION":{
-        "fh37name":"UNION MUTUAL FUND",
-        "fh37header":"Union KBC Asset Management Company Private Limited (the AMC) offers approved investment funds, open-ended equity funds and other structured products, so as to bridge the gap of investor's financial needs. The AMC will leverage on KBC Asset Management's expertise in the global fund markets and KBC Asset Management's Joint Support Model with Union Bank of India’s unrivalled brand value, knowledge of their customers and extensive network, which will represent the perfect blend of ingredients to create a strong asset management business in India.",
-        "fh37RTA":"CAMS (Computer Age Management Services)",
-        "fh37website":"http://www.unionmf.com/",
-        "fh37address":"Unit No. 503, 5th Floor, Leela Business Park, Andheri Kurla Road, Andheri (East) Mumbai - 400059",
-        "fh37phone":"022-24833300",
-        "fh37email":"investorcare@unionmf.com",
-        "fh37investorlogin":"Union investors can login here.",
-        "fh37fundmanaged":"Funds managed by Union"
+        "fh38name":"UNION MUTUAL FUND",
+        "fh38header":"Union KBC Asset Management Company Private Limited (the AMC) offers approved investment funds, open-ended equity funds and other structured products, so as to bridge the gap of investor's financial needs. The AMC will leverage on KBC Asset Management's expertise in the global fund markets and KBC Asset Management's Joint Support Model with Union Bank of India’s unrivalled brand value, knowledge of their customers and extensive network, which will represent the perfect blend of ingredients to create a strong asset management business in India.",
+        "fh38RTA":"CAMS (Computer Age Management Services)",
+        "fh38website":"http://www.unionmf.com/",
+        "fh38address":"Unit No. 503, 5th Floor, Leela Business Park, Andheri Kurla Road, Andheri (East) Mumbai - 400059",
+        "fh38phone":"022-24833300",
+        "fh38email":"investorcare@unionmf.com",
+        "fh38investorlogin":"Union investors can login here.",
+        "fh38fundmanaged":"Funds managed by Union"
         },
         "UTI":{
-        "fh38name":"UTI MUTUAL FUND",
-        "fh38header":"UTI AMC, India’s most trusted Wealth creators and always has the interest of its investors in its heart. UTI AMC has completed 50 years as India’s leading Financial service institution and was a sole vehicle of capital market investment for Indian Citizens till the early 90’s. The institution has shown great resilience and has grown from strength to strength overcoming economic turbulence and global turnarounds. UTI has contributed immensely to industrial and capital growth in the Indian market. It has led transformative initiatives like developmental financial institutions, rural outreach programs and financial products and services. UTI AMC has assets under management across different businesses which include domestic mutual fund, Portfolio Management Services, International business, Retirement Solutions, Venture Funds and Alternative Investment assets.",
-        "fh38RTA":"Karvy",
-        "fh38website":"https://www.utimf.com/",
-        "fh38address":"UTI Towers, Gn Block, Bandra Kurla Complex, Bandra East, Mumbai 400051",
-        "fh38phone":"022-66786666",
-        "fh38email":"service@uti.co.in",
-        "fh38investorlogin":"UTI investors can login here.",
-        "fh38fundmanaged":"Funds managed by UTI"
+        "fh39name":"UTI MUTUAL FUND",
+        "fh39header":"UTI AMC, India’s most trusted Wealth creators and always has the interest of its investors in its heart. UTI AMC has completed 50 years as India’s leading Financial service institution and was a sole vehicle of capital market investment for Indian Citizens till the early 90’s. The institution has shown great resilience and has grown from strength to strength overcoming economic turbulence and global turnarounds. UTI has contributed immensely to industrial and capital growth in the Indian market. It has led transformative initiatives like developmental financial institutions, rural outreach programs and financial products and services. UTI AMC has assets under management across different businesses which include domestic mutual fund, Portfolio Management Services, International business, Retirement Solutions, Venture Funds and Alternative Investment assets.",
+        "fh39RTA":"Karvy",
+        "fh39website":"https://www.utimf.com/",
+        "fh39address":"UTI Towers, Gn Block, Bandra Kurla Complex, Bandra East, Mumbai 400051",
+        "fh39phone":"022-66786666",
+        "fh39email":"service@uti.co.in",
+        "fh39investorlogin":"UTI investors can login here.",
+        "fh39fundmanaged":"Funds managed by UTI"
         },
         "YES":{
-        "fh39name":"YES MUTUAL FUND",
-        "fh39header":"YES ASSET Management (India) Limited, a fully owned subsidiary of YES BANK, will seek to build a strong Mutual Fund Franchise to provide a complete suite of financial products to all its investors.YES Asset Management, driven by the motto \"Experience our Expertise\", combines your interests and our relentless endeavours to bring out the optimum solutions for you.YES Asset Management has been set up with an investor centric approach, simplifying investors’ wealth creation goals through knowledge-based investment practices and prudent risk management.",
-        "fh39RTA":"CAMS (Computer Age Management Services)",
-        "fh39website":"https://www.yesbank.in/personal-banking/yes-individual/wealth-management/mutual-funds",
-        "fh39address":"602 B, 6th Floor, Indiabulls Finance Centre, Senapati Bapat Marg, Elphinstone (West), Mumbai 400013",
-        "fh39phone":"022-40827600",
-        "fh39email":"clientservice@yesamc.in",
-        "fh39investorlogin":"YES investors can login here.",
-        "fh39fundmanaged":"Funds managed by YES"
+        "fh40name":"YES MUTUAL FUND",
+        "fh340header":"YES ASSET Management (India) Limited, a fully owned subsidiary of YES BANK, will seek to build a strong Mutual Fund Franchise to provide a complete suite of financial products to all its investors.YES Asset Management, driven by the motto \"Experience our Expertise\", combines your interests and our relentless endeavours to bring out the optimum solutions for you.YES Asset Management has been set up with an investor centric approach, simplifying investors’ wealth creation goals through knowledge-based investment practices and prudent risk management.",
+        "fh40TA":"CAMS (Computer Age Management Services)",
+        "fh40website":"https://www.yesbank.in/personal-banking/yes-individual/wealth-management/mutual-funds",
+        "fh40address":"602 B, 6th Floor, Indiabulls Finance Centre, Senapati Bapat Marg, Elphinstone (West), Mumbai 400013",
+        "fh40phone":"022-40827600",
+        "fh40email":"clientservice@yesamc.in",
+        "fh40investorlogin":"YES investors can login here.",
+        "fh40fundmanaged":"Funds managed by YES"
         }
     
 

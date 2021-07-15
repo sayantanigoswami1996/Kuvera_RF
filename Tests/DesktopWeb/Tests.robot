@@ -49,7 +49,7 @@ Invest Tiles And Widgets Navigation
 
 # Invest Mutual Fund
 Invest Mutual Fund Navigation
-    [Tags]  TC06  Prod  Stage3  Stage2  MutualFund
+    [Tags]  TC06  Prod  Stage3  Stage2  MutualFundProd
     [Teardown]  Navigate To Home Page
     Verify PreLogin Mutual Fund Landing Page
 
@@ -224,7 +224,7 @@ Invest Tiles Navigation Postlogin
 
 # MF Non Transactional Navigation Postlogin 
 MF Non Transactional Navigation Postlogin
-    [Tags]  TC33  Prod  Stage2  MutualFund
+    [Tags]  TC33  Prod  Stage2  MutualFundProd
     [Teardown]  Navigate To Home Page
     Verify Login On Prod With Verifed KYC Account
     Verify PostLogin MF Menu Navigation
@@ -278,14 +278,14 @@ Digital Gold Buy and Sell Navigation Postlogin
 #----------------------Portfolios-------------------------------------
 # MF Portfolio Navigation Postlogin Without KYC
 MF Portfolio Navigation Postlogin Without KYC
-    [Tags]  TC40  Stage3  NONKYC  MutualFund
+    [Tags]  TC40  Stage3  NONKYC  MutualFundStage
     [Teardown]  Navigate To Home Page
     Verify PostLogin Account Creation
     Verify PostLogin MF Portfolio Menu Navigation Without KYC
 
 # MF Portfolio Navigation Postlogin With KYC
 MF Portfolio Navigation Postlogin With KYC
-    [Tags]  TC41  Stage3  KYC  MutualFund
+    [Tags]  TC41  Stage3  KYC  MutualFundStage
     [Teardown]  Navigate To Home Page
     Verify PostLogin Account Creation
     Verify PAN Verifed KYC Details
@@ -486,7 +486,7 @@ Blog Menu Navigation Postlogin Without KYC
 
 # Buying Multiple Funds Of MF
 Buying Multiple Funds Of MF
-    [Tags]  TC68  Stage3  KYC  MutualFund
+    [Tags]  TC68  Stage3  KYC  MutualFundStage
     [Teardown]  Navigate To Home Page
     Verify PostLogin Account Creation
     Verify PAN Verifed KYC Details
