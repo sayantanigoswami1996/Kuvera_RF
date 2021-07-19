@@ -7,6 +7,7 @@ ${e_postlogin_noActiveSIPTitle} =  You have no Active SIP. It’s easy to start 
 ${e_postlogin_emailID} =  moolya@kuvera.in 
 ${e_postlogin_pwd} =  kuveratesting123
 ${e_postlogin_prod_KYCVerifiedEmail} =  moolya+automationKYC@kuvera.in 
+${e_postlogin_prod_sanityKYCVerifiedEmail} =  moolya+sanityautomationKYC@kuvera.in 
 ${e_postlogin_prod_KYCVerifiedEmailForMcxtra} =  moolya+automation@kuvera.in 
 ${e_postlogin_prod_NonKYCVerifiedEmail} =  moolya+auto_177@kuvera.in 
 ${e_postlogin_prod_NonKYCVerifiedPwd} =  sg123456 

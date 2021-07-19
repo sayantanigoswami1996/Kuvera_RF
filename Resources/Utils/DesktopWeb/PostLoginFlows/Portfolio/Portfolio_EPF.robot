@@ -40,6 +40,11 @@ Verify PostLogin EPF Portfolio Menu Navigation With KYC
     END
     Wait For Element Visibility  ${KU_W_portfolio_EPF_EPFTab}
     Verify Element And Text  ${KU_W_portfolio_EPF_EPFTab}  ${e_portfolio_EPF_tab}
+    Wait And Click  ${KU_W_portfolio_EPF_companyName}
+    Wait For Element Visibility  ${KU_W_portfolio_EPF_companyName}
+    Verify Page Contains Element  ${KU_W_portfolio_EPF_companyName}
+    Wait And Click  ${KU_W_portfolio_EPF_downloadBtn}
+    Wait And Click  ${KU_W_portfolio_EPF_closeIcon}
     Verify Page Contains Element  ${KU_W_portfolio_EPF_manageEPF}
     Remove Account
 

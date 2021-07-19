@@ -385,6 +385,10 @@ Verify Login On Prod With Verifed KYC Account
     Wait And Click  ${KU_W_login}
     Login  ${e_postlogin_prod_KYCVerifiedEmail}  ${e_postlogin_pwd}
 
+Verify Login On Prod Sanity With Verifed KYC Account
+    Wait And Click  ${KU_W_login}
+    Login  ${e_postlogin_prod_sanityKYCVerifiedEmail}  ${e_ca_pwd}
+
 Verify Login On Prod With Verifed NonKYC Account
     Wait And Click  ${KU_W_login}
     Login  ${e_postlogin_prod_NonKYCVerifiedEmail}  ${e_postlogin_prod_NonKYCVerifiedPwd}

@@ -113,7 +113,7 @@ Top And Left Bar Navigation
 MF Non Transactional Navigation Postlogin
     [Tags]  TC16  Prod  KYC  MutualFund  Sanity
     [Teardown]  Navigate To Home Page
-    Verify Login On Prod With Verifed KYC Account
+    Verify Login On Prod Sanity With Verifed KYC Account
     Verify PostLogin MF Menu Navigation
 
 # MF Transactional Navigation Until Cart Without KYC
@@ -127,35 +127,35 @@ MF Transactional Navigation Until Cart Without KYC
 MF Transactional Navigation Until Cart With KYC
     [Tags]  TC18  Prod  KYC  MutualFund  Sanity
     [Teardown]  Navigate To Home Page
-    Verify Login On Prod With Verifed KYC Account
+    Verify Login On Prod Sanity With Verifed KYC Account
     Verify PostLogin Prod MF Invest Menu Navigation With KYC
 
 # Stocks Non Transactional Navigation Postlogin 
 Stocks Non Transactional Navigation Postlogin
     [Tags]  TC19  Prod  KYC  Sanity
     [Teardown]  Navigate To Home Page
-    Verify Login On Prod With Verifed KYC Account
+    Verify Login On Prod Sanity With Verifed KYC Account
     Verify PostLogin Stocks Menu Navigation
 
 # US Stocks Non Transactional Navigation Postlogin 
 US Stocks Non Transactional Navigation Postlogin
     [Tags]  TC20  Prod  KYC  Sanity
     [Teardown]  Navigate To Home Page
-    Verify Login On Prod With Verifed KYC Account
+    Verify Login On Prod Sanity With Verifed KYC Account
     Verify PostLogin US Stocks Menu Navigation
 
 # Crypto Navigation Postlogin 
 Crypto Navigation Postlogin
     [Tags]  TC21  Prod  KYC  Sanity
     [Teardown]  Navigate To Home Page
-    Verify Login On Prod With Verifed KYC Account
+    Verify Login On Prod Sanity With Verifed KYC Account
     Verify PostLogin Crypto Menu Navigation
 
 # SaveSmart Navigation Postlogin 
 SaveSmart Navigation Postlogin
     [Tags]  TC22  Prod  KYC  Sanity
     [Teardown]  Navigate To Home Page
-    Verify Login On Prod With Verifed KYC Account
+    Verify Login On Prod Sanity With Verifed KYC Account
     Verify PostLogin Prod SaveSmart Menu Navigation
 
 #-------------------Portfolio---------------------------------------------
@@ -163,7 +163,7 @@ SaveSmart Navigation Postlogin
 Remit Menu Navigation Postlogin
     [Tags]  TC23  Prod  KYC  Sanity
     [Teardown]  Navigate To Home Page
-    Verify Login On Prod With Verifed KYC Account
+    Verify Login On Prod Sanity With Verifed KYC Account
     Verify PostLogin Remit Menu Navigation 
 
 # Rewards Menu Navigation Postlogin
@@ -183,5 +183,5 @@ Mcxtra Menu Navigation Postlogin
 Reports Menu Navigation Postlogin
     [Tags]  TC26  Prod  KYC  Sanity
     [Teardown]  Navigate To Home Page
-    Verify Login On Prod With Verifed KYC Account
+    Verify Login On Prod Sanity With Verifed KYC Account
     Verify PostLogin Reports Menu Navigation With KYC

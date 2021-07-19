@@ -28,4 +28,5 @@ Verify PostLogin Account Creation
     Click Element  ${KU_W_ca_OTPField}
     Input Text  ${KU_W_ca_OTPField}  ${e_ca_OTP}
     Click Element  ${KU_W_ca_submitOTPBtn}
+    Wait For Element Visibility  ${KU_W_ca_dashboardHeader}
     Verify Page Contains Element  ${KU_W_ca_dashboardHeader}

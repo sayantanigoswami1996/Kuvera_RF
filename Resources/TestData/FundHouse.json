@@ -406,7 +406,7 @@
         "fh37phone":"022-62746000",
         "fh37email":"info@trustmf.com",
         "fh37investorlogin":"TRUST investors can login here.",
-        "fh37fundmanaged":"Funds managed by TRUST "
+        "fh37fundmanaged":"Funds managed by TRUST"
         },
         "UNION":{
         "fh38name":"UNION MUTUAL FUND",
@@ -432,8 +432,8 @@
         },
         "YES":{
         "fh40name":"YES MUTUAL FUND",
-        "fh340header":"YES ASSET Management (India) Limited, a fully owned subsidiary of YES BANK, will seek to build a strong Mutual Fund Franchise to provide a complete suite of financial products to all its investors.YES Asset Management, driven by the motto \"Experience our Expertise\", combines your interests and our relentless endeavours to bring out the optimum solutions for you.YES Asset Management has been set up with an investor centric approach, simplifying investors’ wealth creation goals through knowledge-based investment practices and prudent risk management.",
-        "fh40TA":"CAMS (Computer Age Management Services)",
+        "fh40header":"YES ASSET Management (India) Limited, a fully owned subsidiary of YES BANK, will seek to build a strong Mutual Fund Franchise to provide a complete suite of financial products to all its investors.YES Asset Management, driven by the motto \"Experience our Expertise\", combines your interests and our relentless endeavours to bring out the optimum solutions for you.YES Asset Management has been set up with an investor centric approach, simplifying investors’ wealth creation goals through knowledge-based investment practices and prudent risk management.",
+        "fh40RTA":"CAMS (Computer Age Management Services)",
         "fh40website":"https://www.yesbank.in/personal-banking/yes-individual/wealth-management/mutual-funds",
         "fh40address":"602 B, 6th Floor, Indiabulls Finance Centre, Senapati Bapat Marg, Elphinstone (West), Mumbai 400013",
         "fh40phone":"022-40827600",
