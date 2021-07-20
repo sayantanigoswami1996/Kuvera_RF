@@ -60,6 +60,10 @@ ${e_invest_sellAmtVal} =  5000
 ${e_invest_sellAmtVal1} =  0.1
 ${e_invest_bankAccField} =  123456789
 ${e_invest_merchantDesc} =  Buy Gold
+# SIP
+${e_invest_editSIPMsg} =  The SIP has been successfully edited.
+${e_invest_stopSIPMsg} =  The SIP is stopped.You can restart it anytime.
+
 
 # Application Locator 'KU_<locatorName>'
 # Digital Gold Navigation Page
@@ -220,4 +224,25 @@ ${KU_W_dg_sellRateVal} =  xpath=(//p[@class='b-d-cumulative-gold-row__total-box-
 ${KU_W_dg_sellRateLabel} =  xpath=(//p[@class='b-d-cumulative-gold-row__total-box-heading'])[3]
 ${KU_W_dg_oneDayReturnPortfolioVal} =  xpath=(//p[contains(@class,'b-d-cumulative-gold-row__total-box-value b-d-cumulative-gold-row__total-box-value')])[2]
 ${KU_W_dg_oneDayReturnPortfolioLabel} =  xpath=//p[normalize-space()='1 Day Return']
+
+# Edit and Stop SIP
 ${KU_W_dg_goldBoughtOnKuvera} =  xpath=//span[normalize-space()='Gold (Bought on Kuvera)']
+${KU_W_dg_SIPPageTitle} =  xpath=//div[@class='b-transactions__gold-title--text']
+${KU_W_dg_SIPBoughtTab} =  xpath=//div[contains(text(),'SIPs')]
+${KU_W_dg_modifyMenu} =  xpath=//div[contains(text(),'Modify')]
+${KU_W_dg_editMenu} =  xpath=//div[@class='b-modify-sip-desktop__content__edit']
+${KU_W_dg_skipAPayment} =  xpath=//div[contains(text(),'Skip A Payment')]
+${KU_W_dg_stop} =  xpath=//div[@class='b-modify-sip-desktop__content__stop']
+${KU_W_dg_editSIPTitle} =  xpath=(//div[contains(text(),'Edit Gold SIP plan')])[2]
+${KU_W_dg_editSIPDesc} =  xpath=//div[contains(text(),'Update your monthly SIP amount and date according to your convenience.')]
+${KU_W_dg_enterAmountTitle} =  xpath=//div[contains(text(),'Enter monthly SIP Amount')]
+${KU_W_dg_SIPAmtField} =  xpath=//input[@type='number']
+${KU_W_dg_editSIPDate} =  xpath=//div[contains(text(),'20')]
+${KU_W_dg_editedSIPAmt} =  xpath=//div[contains(text(),'₹5,000')]
+${KU_W_dg_stopSIPTitle} =  xpath=//div[contains(text(),'Sure you want to Stop SIP?')]
+${KU_W_dg_stopSIPDesc} =  xpath=//div[contains(text(),'Your SIP of amount ₹ 5,000 will be stopped.')]
+${KU_W_dg_stopSIPBtn} =  xpath=//button[normalize-space()='Stop']
+${KU_W_dg_stopSIPTag} =  xpath=//span[contains(text(),'Stopped')]
+${KU_W_dg_stopSIPInfoIcon} =  xpath=//img[@class='b-order-summary__info-ques-icon']
+${KU_W_dg_goldBoughtOnKuvera} =  xpath=//span[normalize-space()='Gold (Bought on Kuvera)']
+

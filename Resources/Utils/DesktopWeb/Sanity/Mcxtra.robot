@@ -5,30 +5,13 @@ Verify PostLogin Prod Mcxtra Menu Navigation
     Wait And Click  ${KU_W_login}
     Login  ${e_postlogin_prod_KYCVerifiedEmailForMcxtra}  ${e_postlogin_pwd}
     Check Mandate Screen
-    Verify Group Health Banner
-    Verify Why Us
     Verify Explore More
     Verify Import Policy Popup
     Verify Claim Assist Popup
     Verify Policy imported
     
-Verify Group Health Banner
-    Sleep  4s
-    Wait And Click  ${KU_W_insureLink}
-    Wait For Element Visibility  ${KU_W_insure_groupHealth}
-    Verify Page Contains Element  ${KU_W_insure_groupHealth}
-    Verify Page Contains Element  ${KU_W_mcxtra_bannerTitle}
-    Verify Page Contains Element  ${KU_W_mcxtra_knowMore}
-    Verify Page Contains Image  ${KU_W_mcxtra_logo}
-
-Verify Why Us
-    Verify Page Contains Element  ${KU_W_mcxtra_whyUs}
-    Verify Page Contains Element  ${KU_W_mcxtra_whyUsPoint1}
-    Verify Element And Text  ${KU_W_mcxtra_whyUsPoint2}  ${e_mcxtra_whyUsPoint2}
-    Verify Page Contains Element  ${KU_W_mcxtra_insuranceForEveryoneLogo} 
-    Verify Page Contains Element  ${KU_W_mcxtra_yearRoundSupportLogo}
-
 Verify Explore More
+    Wait And Click  ${KU_W_insureLink}
     Verify Page Contains Element  ${KU_W_mcxtra_exploreMore}  
     Verify Page Contains Element  ${KU_W_mcxtra_importPolicy} 
     Verify Page Contains Element  ${KU_W_mcxtra_claimAssist}  
@@ -46,8 +29,8 @@ Verify Claim Assist Popup
     Verify Page Contains Element  ${KU_W_mcxtra_regularUpdatesDesc}
     Verify Page Contains Element  ${KU_W_mcxtra_useForAllPolicies}
     Verify Page Contains Element  ${KU_W_mcxtra_useForAllPoliciesDesc}
-    Verify Page Contains Element  ${KU_W_mcxtra_warningMsg}
-    Wait And Click  ${KU_W_mcxtra_checkBoxT&C}
+    Wait And Click  ${KU_W_mcxtra_T&C}
+    Switch To Window Verify Title And Close  ${e_mcxtra_T&CTitle}
     Wait And Click  ${KU_W_mcxtra_payNow}
     Verify Page Contains Element  ${KU_W_mcxtra_confirmContactNum}
     Verify Page Contains Element  ${KU_W_mcxtra_weWillCallYou}

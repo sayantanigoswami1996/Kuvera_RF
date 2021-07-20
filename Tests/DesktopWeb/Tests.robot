@@ -491,3 +491,19 @@ Buying Multiple Funds Of MF
     Verify PostLogin Account Creation
     Verify PAN Verifed KYC Details
     Verify Buying Multiple Funds Of MF
+
+# Edit And Stop Gold SIP
+Edit And Stop Gold SIP
+    [Tags]  TC69  Stage3  KYC
+    [Teardown]  Navigate To Home Page
+    Verify PostLogin Account Creation
+    Verify PAN Verifed KYC Details
+    Verify PostLogin Edit And Stop Gold SIP
+
+# Rewards Through Signup
+Rewards Through Signup
+    [Tags]  TC70  Stage3  NONKYC
+    [Teardown]  Navigate To Home Page
+    Verify PostLogin Account Creation
+    Verify PAN Verifed KYC Details
+    Verify PostLogin Rewards Earned Through Signup

@@ -9,6 +9,7 @@ ${e_mcxtra_forPolicyDesc3} =  - Download the policy using the unique number from
 ${e_mcxtra_cashlessPolicyDesc1} =  - Check your email history for the policy documents and the cashless card details. 
 ${e_mcxtra_cashlessPolicyDesc2} =  - If the insurer uses a third party provider for cashless card, visit the third party website download the card using your policy number.
 ${e_mcxtra_policyDeleteToastMsg} =  The policy has been successfully deleted. 
+${e_mcxtra_T&CTitle} =  Mcxtra | 24x7 Emergency Assistance Service App | Secured Policy Vault Management
 # Application Locator 'KU_<locatorName>'
 # Kuvera :: Wealth Management Simplified
 ${KU_W_mcxtra_bannerTitle} =  xpath=//p[contains(.,'₹50L cover starting at ₹900 per month.')]
@@ -22,13 +23,14 @@ ${KU_W_mcxtra_yearRoundSupportLogo} =  xpath=//div[@class='b-why-us__container']
 ${KU_W_mcxtra_exploreMore} =  xpath=//div[contains(text(),'Explore more')]
 ${KU_W_mcxtra_importPolicy} =  xpath=//span[normalize-space()='Import policy']
 ${KU_W_mcxtra_claimAssist} =  xpath=//span[normalize-space()='Claims assist']
-${KU_W_mcxtra_importPolicyLogo} =  xpath=//div[@class='k-pl24 k-pt24 k-pb16-m k-pb24-d blue-container b-insure-landing--explore b-insure-landing__action k-mt40-d k-mb56-d']//div[1]//div[1]//img[1]
-${KU_W_mcxtra_claimAssistLogo} =  xpath=//div[@class='k-flex b-action-container--option-container k-scrollbar--hide']//div[2]//div[1]//img[1]
+${KU_W_mcxtra_importPolicyLogo} =  xpath=(//div[@class='b-std-inline-tile--img k-flex k-aic']//img)[1]
+${KU_W_mcxtra_claimAssistLogo} =  xpath=(//div[@class='b-std-inline-tile--img k-flex k-aic']//img)[2]
 ${KU_W_mcxtra_CAlogo} =  xpath=//img[@class='k-mr16']
 ${KU_W_mcxtra_CATitle} =  xpath=//h6[normalize-space()='Claims assist']
 ${KU_W_mcxtra_poweredBy} =  xpath=//span[contains(normalize-space(),'Powered by')]
 ${KU_W_mcxtra_whyUsPoint2} =  xpath=(//p[@class='k-fs13 k-lh1D7 k-fc--primary'])[2]
 ${KU_W_mcxtra_priceTag} =  xpath=//span[contains(normalize-space(),'399/Yr')]
+${KU_W_mcxtra_T&C} =  xpath=//span[normalize-space()='Terms and Conditions']
 ${KU_W_mcxtra_endToEndAssistance} =  xpath=//h6[normalize-space()='End-to-end assistance']
 ${KU_W_mcxtra_endToEndAssistanceDesc} =  xpath=//p[contains(text(),'Get personalized assistance from filing a claim to settlement.')]
 ${KU_W_mcxtra_regularUpdates} =  xpath=//h6[normalize-space()='Regular updates']
@@ -58,6 +60,7 @@ ${KU_W_mcxtra_GSTVal} =  xpath=//div[contains(text(),'71.82')]
 ${KU_W_mcxtra_payableBreakup} =  xpath=(//div[contains(text(),'Total payable')])[2]
 ${KU_W_mcxtra_amountBreakup} =  xpath=(//div[contains(text(),'399')])[2]
 ${KU_W_mcxtra_close} =  xpath=//img[@class='b-standard-nav-nav__close-img k-asc k-cursor--pointer']
+${KU_W_mcxtra_claimAssistClose} =  xpath=//img[@class='b-claim-assist-service__close']
 ${KU_W_mcxtra_importPolicyTitle} =  xpath=(//span[contains(.,'Import policy')])[2]
 ${KU_W_mcxtra_importPolicyPointer1} =  xpath=//h6[normalize-space()='Convenient and Easy Access']
 ${KU_W_mcxtra_importPolicyPoint1Desc} =  xpath=//p[contains(normalize-space(),'One point easy access to all your insurance policies.')]

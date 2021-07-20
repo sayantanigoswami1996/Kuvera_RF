@@ -38,3 +38,4 @@ ${KU_W_IF_T&C8SubPoint1} =  xpath=//div[@class='b-terms-and-cond__text-container
 ${KU_W_IF_T&C8SubPoint2} =  xpath=//div[@class='b-terms-and-cond__text-container']//div[8]//li[2]
 ${KU_W_IF_T&C8SubPoint3} =  xpath=//div[@class='b-terms-and-cond__text-container']//div[8]//li[3]
 ${KU_W_IF_T&C8SubPoint4} =  xpath=//div[@class='b-terms-and-cond__text-container']//div[8]//li[4]
+${KU_W_IF_referralCode} =  xpath=//code[@id='referral_code']

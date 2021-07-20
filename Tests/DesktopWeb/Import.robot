@@ -103,3 +103,5 @@ Resource    ../../Resources/Utils/DesktopWeb/Sanity/Invest_Savesmart.robot
 Resource    ../../Resources/Utils/DesktopWeb/Sanity/HealthInsurance.robot
 Resource    ../../Resources/Utils/DesktopWeb/Sanity/Mcxtra.robot
 Resource    ../../Resources/Utils/DesktopWeb/Sanity/SetupMandate.robot
+Resource    ../../Resources/Utils/DesktopWeb/Sanity/Edit_StopGoldSIP.robot
+Resource    ../../Resources/Utils/DesktopWeb/Sanity/RewardsThroughSignup.robot

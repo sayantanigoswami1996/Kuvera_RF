@@ -108,6 +108,7 @@ ${KU_W_postlogin_updateBtn} =  xpath=//button[normalize-space()='Update']
 ${KU_W_postlogin_completeAccSetup} =  xpath=//div[contains(text(),'Complete your Acount Setup')]
 ${KU_W_postlogin_viewAllLink} =  xpath=//a[normalize-space()='View all']
 ${KU_W_postlogin_botButton} =  xpath=//div[@id='faq-bot-button']
+${KU_W_postlogin_signUpLink} =  xpath=//a[normalize-space()='Sign up']
 ${KU_W_postlogin_completeAccSetupDesc} =  xpath=//div[normalize-space()='A valid account is required to continue. Please complete your account registration.']
 # Gold Banner
 ${KU_W_postlogin_bannerLogo} =  xpath=//img[@class='b-transferwise-banner__img']
