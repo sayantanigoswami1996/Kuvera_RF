@@ -89,11 +89,11 @@ Verify Footer Section
     [Teardown]  Navigate To Home Page
     Verify PreLogin Footer
 
-# Fund House Details
-All Fund House Details Navigation
-    [Tags]  TC13  Prod  Stage3  Stage2
-    [Teardown]  Navigate To Home Page
-    Verify PreLogin All Fund House Details
+# # Fund House Details
+# All Fund House Details Navigation
+#     [Tags]  TC13  Prod  Stage3  Stage2
+#     [Teardown]  Navigate To Home Page
+#     Verify PreLogin All Fund House Details
 
 # ----------------- Unauthenticated Links -----------------
 # Unauthenticated Links - Liquid Fund

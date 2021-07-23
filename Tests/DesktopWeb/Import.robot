@@ -105,3 +105,4 @@ Resource    ../../Resources/Utils/DesktopWeb/Sanity/Mcxtra.robot
 Resource    ../../Resources/Utils/DesktopWeb/Sanity/SetupMandate.robot
 Resource    ../../Resources/Utils/DesktopWeb/Sanity/Edit_StopGoldSIP.robot
 Resource    ../../Resources/Utils/DesktopWeb/Sanity/RewardsThroughSignup.robot
+Resource    ../../Resources/Utils/DesktopWeb/Sanity/StocksPortfolio.robot

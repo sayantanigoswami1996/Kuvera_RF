@@ -185,3 +185,10 @@ Reports Menu Navigation Postlogin
     [Teardown]  Navigate To Home Page
     Verify Login On Prod Sanity With Verifed KYC Account
     Verify PostLogin Reports Menu Navigation With KYC
+
+# Stocks Portfolio Navigation Postlogin
+Stocks Portfolio Navigation Postlogin
+    [Tags]  TC27  Prod  KYC  Sanity
+    [Teardown]  Navigate To Home Page
+    Verify Login On Prod Sanity With Verifed KYC Account
+    Verify PostLogin Prod Stocks Portfolio Menu Navigation
